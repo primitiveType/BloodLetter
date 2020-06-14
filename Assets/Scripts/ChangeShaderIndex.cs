@@ -59,7 +59,6 @@ public class ChangeShaderIndex : MonoBehaviour
         var resultingAngle = (angle + offset);
         // Debug.Log(resultingAngle);
         var index = (resultingAngle / 360f) * Max;
-        var answer = Max - index;
-        return answer; //invert because rotation direction is wrong
+        return index;
     }
 }

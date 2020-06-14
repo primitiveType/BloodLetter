@@ -62,9 +62,8 @@ public class AnimationMaterialPropertyBlock
         set => alphaMap = value;
     }
 
-    public MaterialPropertyBlock GetMaterialPropertyBlock()
+    public MaterialPropertyBlock GetMaterialPropertyBlock(MaterialPropertyBlock block)
     {
-        var block = new MaterialPropertyBlock();
         block.SetInt(RowsProperty, Rows);
         block.SetInt(ColumnsProperty, Columns);
         block.SetInt(NumFramesProperty, NumFrames);

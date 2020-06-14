@@ -50,13 +50,8 @@ public class AnimationMaterialDictionary : ScriptableObject
         }
     }
 
-    public MaterialPropertyBlock GetPropertyBlock(string modelName, string animationName)
-    {
-        return PropertyBlocksByModelAnimation.First(item => item.AnimationName == $"{modelName}_{animationName}")
-            .GetMaterialPropertyBlock();
-    }
 
-    public MaterialPropertyBlock GetPropertyBlock(string key)
+    public MaterialPropertyBlock GetPropertyBlock(MaterialPropertyBlock propertyBlock, string key)
     {
         var block = PropertyBlocksByModelAnimation.FirstOrDefault(item => item.AnimationName == key);
         if (block == null)
@@ -65,6 +60,6 @@ public class AnimationMaterialDictionary : ScriptableObject
             return null;
         }
 
-        return block.GetMaterialPropertyBlock();
+        return block.GetMaterialPropertyBlock(propertyBlock);
     }
 }

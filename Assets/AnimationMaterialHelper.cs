@@ -42,7 +42,9 @@ public class AnimationMaterialHelper : MonoBehaviour
     public void AnimationStarted(string animationName)
     {
         // Debug.Log($"{animationName} started!");
-        var block = _dictionary.GetPropertyBlock(animationName);
+        MaterialPropertyBlock block = new MaterialPropertyBlock();
+        MyRenderer.GetPropertyBlock(block);
+        _dictionary.GetPropertyBlock(block, animationName);
         
         MyRenderer.SetPropertyBlock(block);
         var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
