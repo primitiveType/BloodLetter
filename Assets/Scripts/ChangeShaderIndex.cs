@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,12 +44,12 @@ public class ChangeShaderIndex : MonoBehaviour
     {
         var camPosition = new Vector3(mainCam.transform.position.x, 0, mainCam.transform.position.z);
         var myPosition = new Vector3(transform.position.x, 0, transform.position.z);
-        Vector3 camDirection = Vector3.Normalize(camPosition - myPosition);
+        Vector3 camDirection = Vector3.Normalize(myPosition - camPosition);
         // Debug.DrawLine(transform.position, transform.position + camDirection);
         // Debug.Log("CamDirection" + camDirection);
 
         // Debug.Log(camDirection);
-        float angle = Vector3.SignedAngle(transform.forward, camDirection, Vector3.up);
+        float angle = Vector3.SignedAngle( camDirection, transform.forward,Vector3.up);
 //        Debug.Log(angle);
 
         //half of one perspective rotation
@@ -59,6 +60,7 @@ public class ChangeShaderIndex : MonoBehaviour
         var resultingAngle = (angle + offset);
         // Debug.Log(resultingAngle);
         var index = (resultingAngle / 360f) * Max;
+        index = Max - index;
         return index;
     }
 }

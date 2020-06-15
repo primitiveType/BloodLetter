@@ -16,21 +16,30 @@ public class ProjectileInfo : MonoBehaviour
             Debug.Log("shoot");
             Ray ray = new Ray(playerPosition, playerDirection * 100);
             Debug.DrawRay(playerPosition, playerDirection * 100, Color.blue, 10);
-            //TODO:multiple raycast
-            if (Physics.Raycast(ray, out RaycastHit hit, 1000, LayerMask.GetMask("Enemy"),
-                QueryTriggerInteraction.Collide))
-            {
-                var hitCoord = hit.textureCoord;
-                // Debug.Log($"hit {hit.textureCoord} ");
 
-                DamagedByProjectile damaged = hit.collider.GetComponent<DamagedByProjectile>();
-                if (damaged && damaged.OnShot(hitCoord))
+            bool isDone = false;
+            while (!isDone)
+            {
+                if (Physics.Raycast(ray, out RaycastHit hit, 1000, LayerMask.GetMask("Enemy"),
+                    QueryTriggerInteraction.Collide))
                 {
-                    var hitEffect = Instantiate(OnHitPrefab, damaged.transform, true);
-                    
-                    float adjustmentDistance = -.01f;
-                    
-                    hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+                    var hitCoord = hit.textureCoord;
+                    // Debug.Log($"hit {hit.textureCoord} ");
+
+                    DamagedByProjectile damaged = hit.collider.GetComponent<DamagedByProjectile>();
+                    if (damaged && damaged.OnShot(hitCoord))
+                    {
+                        isDone = true;
+                        var hitEffect = Instantiate(OnHitPrefab, damaged.transform, true);
+
+                        float adjustmentDistance = -.01f;
+
+                        hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+                    }
+                    else
+                    {
+                        ray.origin = hit.point + (hit.normal * .01f);
+                    }
                 }
             }
         }
