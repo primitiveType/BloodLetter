@@ -9,5 +9,7 @@ AnimatorOverrideController:
   m_Name: CHIMERA_LEGACY_Animator_Controller
   m_Controller: {fileID: 9100000, guid: a320a0382fbad4c439f3d9e63075a585, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 5255807e14a5ab349a3d298af299827b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f691152153854224dbd5ef31817d8f05, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: f691152153854224dbd5ef31817d8f05, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5ae8626a25dea0744accc274e0182e57, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5ae8626a25dea0744accc274e0182e57, type: 2}

@@ -57,7 +57,8 @@ public class AnimationMaterialHelper : MonoBehaviour
                      pxPerMeter;
         materialGameObject.transform.localScale =
             new Vector3((float) width, (float) height, 1);
-        materialGameObject.transform.localPosition = new Vector3(0, height / 2, 0);
+        float yFudge = .25f;
+        materialGameObject.transform.localPosition = new Vector3(0, (height / 2) - yFudge, 0);
     }
 
     /// <summary>
@@ -74,7 +75,7 @@ public class AnimationMaterialHelper : MonoBehaviour
         Texture2DArray tex = (Texture2DArray) (block).GetTexture(Alpha);
         int totalWidth = tex.width;
         int totalHeight = tex.height;
-        int perspective = block.GetInt(Perspective);
+        int perspective = Mathf.Clamp(block.GetInt(Perspective), 0, 7);//it's actually possible to get back 8 from this which is invalid.
         int frame = block.GetInt(Frame);
         
 

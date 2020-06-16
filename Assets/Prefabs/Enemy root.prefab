@@ -84,6 +84,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Agent: {fileID: 6392817097388422497}
   Target: {fileID: 0}
+  AggroRange: 4
+  DeAggroRange: 15
 --- !u!1 &8171493255988436123
 GameObject:
   m_ObjectHideFlags: 0

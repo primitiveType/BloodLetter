@@ -20,8 +20,7 @@ public class ProjectileInfo : MonoBehaviour
             bool isDone = false;
             while (!isDone)
             {
-                if (Physics.Raycast(ray, out RaycastHit hit, 1000, LayerMask.GetMask("Enemy"),
-                    QueryTriggerInteraction.Collide))
+                if (Physics.Raycast(ray, out RaycastHit hit, 1000))
                 {
                     var hitCoord = hit.textureCoord;
                     // Debug.Log($"hit {hit.textureCoord} ");
@@ -32,14 +31,22 @@ public class ProjectileInfo : MonoBehaviour
                         isDone = true;
                         var hitEffect = Instantiate(OnHitPrefab, damaged.transform, true);
 
-                        float adjustmentDistance = -.01f;
+                        float adjustmentDistance = -.1f;
 
                         hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
                     }
-                    else
+                    else if(hit.collider.gameObject.layer != LayerMask.NameToLayer("Default"))
                     {
                         ray.origin = hit.point + (hit.normal * .01f);
                     }
+                    else
+                    {
+                        isDone = true;
+                    }
+                }
+                else
+                {
+                    isDone = true;
                 }
             }
         }
