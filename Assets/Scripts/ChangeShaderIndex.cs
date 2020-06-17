@@ -40,27 +40,36 @@ public class ChangeShaderIndex : MonoBehaviour
         // transform.LookAt(mainCam.transform);
     }
 
+    //DRAGONS HERE
     private float GetFacingIndex()
     {
-        var camPosition = new Vector3(mainCam.transform.position.x, 0, mainCam.transform.position.z);
-        var myPosition = new Vector3(transform.position.x, 0, transform.position.z);
+        //perspective 0 is front facing.
+        //moving clockwise, numbers go up to 7
+        var camTransform = mainCam.transform;
+        var camPosition3 = camTransform.position;
+        var camPosition = new Vector3(camPosition3.x, 0, camPosition3.z);
+        var position = transform.position;
+        var myPosition = new Vector3(position.x, 0, position.z);
         Vector3 camDirection = Vector3.Normalize(myPosition - camPosition);
-        // Debug.DrawLine(transform.position, transform.position + camDirection);
+        Debug.DrawLine(position, position + camDirection);
         // Debug.Log("CamDirection" + camDirection);
 
         // Debug.Log(camDirection);
-        float angle = Vector3.SignedAngle( camDirection, transform.forward,Vector3.up);
-//        Debug.Log(angle);
-
-        //half of one perspective rotation
-        var halfStep = 360f / 16f;
-        //offset to account for baked-in spritesheet rotation
-        var offset = 180;
-        //the angle after accounting for offsets
-        var resultingAngle = (angle + offset);
-        // Debug.Log(resultingAngle);
-        var index = (resultingAngle / 360f) * Max;
+        var halfStep = 22.5F;
+        float angle = Vector3.SignedAngle( camDirection, transform.forward, Vector3.up) + 180 - halfStep ;
+        //if offsetting it caused it to be negative or more than 360, shift it to account.
+        if (angle < 0)
+        {
+            angle = (360) + angle;
+        }
+        else
+        {
+            angle = angle % 360;
+        }
+        //we now have the 0-360 angle where 0 and 360 are facing the player
+        var index = (angle / 360f) * Max;
         index = Max - index;
         return index;
     }
+
 }
