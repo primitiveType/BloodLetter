@@ -5,9 +5,16 @@ using UnityEngine;
 public class DamagedByProjectile : MonoBehaviour
 {
     [SerializeField] private AnimationMaterialHelper MaterialHelper;
+    [SerializeField] private EnemyEvents Events;
 
     public bool OnShot(Vector2 textureCoord)
     {
-        return MaterialHelper.QueryAlpha(textureCoord);
+        if (MaterialHelper.QueryAlpha(textureCoord))
+        {
+            Events.OnShot();
+            return true;
+        }
+
+        return false;
     }
 }
