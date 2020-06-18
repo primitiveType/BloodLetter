@@ -13,7 +13,6 @@ public class ProjectileInfo : MonoBehaviour
     {
         if (Hitscan)
         {
-            Debug.Log("shoot");
             Ray ray = new Ray(playerPosition, playerDirection * 100);
             Debug.DrawRay(playerPosition, playerDirection * 100, Color.blue, 10);
 
@@ -22,6 +21,12 @@ public class ProjectileInfo : MonoBehaviour
             {
                 if (Physics.Raycast(ray, out RaycastHit hit, 1000))
                 {
+                    var hitLayer = hit.collider.gameObject.layer;
+                    if (hitLayer != LayerMask.NameToLayer("Enemy"))
+                    {
+                        isDone = true;
+                    }
+
                     var hitCoord = hit.textureCoord;
                     // Debug.Log($"hit {hit.textureCoord} ");
 
@@ -31,13 +36,13 @@ public class ProjectileInfo : MonoBehaviour
                         isDone = true;
                         var hitEffect = Instantiate(OnHitPrefab, damaged.transform, true);
 
-                        float adjustmentDistance = -.1f;
+                        float adjustmentDistance = .1f;
 
                         hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
                     }
-                    else if(hit.collider.gameObject.layer != LayerMask.NameToLayer("Default"))
+                    else if(hitLayer != LayerMask.NameToLayer("Default"))
                     {
-                        ray.origin = hit.point + (hit.normal * .01f);
+                        ray.origin = hit.point + (hit.normal * -.01f);
                     }
                     else
                     {

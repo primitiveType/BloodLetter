@@ -28,7 +28,15 @@ public class ChangeShaderIndex : MonoBehaviour
     {
     }
 
-    // Update is called once per frame
+    private void Update()
+    {
+        if (Application.isEditor && !Application.isPlaying)
+        {
+            FixedUpdate();
+        }
+    }
+
+
     void FixedUpdate()
     {
         // float index = MyRenderer.GetFloat(Perspective);
@@ -56,7 +64,7 @@ public class ChangeShaderIndex : MonoBehaviour
 
         // Debug.Log(camDirection);
         var halfStep = 22.5F;
-        float angle = Vector3.SignedAngle( camDirection, transform.forward, Vector3.up) + 180 - halfStep ;
+        float angle = Vector3.SignedAngle( camDirection, transform.forward, Vector3.up) + 180 + halfStep ;
         //if offsetting it caused it to be negative or more than 360, shift it to account.
         if (angle < 0)
         {
@@ -68,7 +76,6 @@ public class ChangeShaderIndex : MonoBehaviour
         }
         //we now have the 0-360 angle where 0 and 360 are facing the player
         var index = (angle / 360f) * Max;
-        index = Max - index;
         return index;
     }
 

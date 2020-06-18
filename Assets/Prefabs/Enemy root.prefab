@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &847258852847000055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7877181442286923358}
+  - component: {fileID: 6182658784827558151}
+  m_Layer: 8
+  m_Name: Flip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7877181442286923358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847258852847000055}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8171493255988436116}
+  m_Father: {fileID: 8171493255443565341}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!114 &6182658784827558151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847258852847000055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24aa1697d3c28e748a0083b00080796d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8171493255443565340
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +75,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8171493255988436116}
+  - {fileID: 7877181442286923358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,9 +143,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a967d973e6a9f424ca879cf1b0ed4d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepClip: {fileID: 8300000, guid: 79de256383fc3d54499e16a90fedd7e7, type: 3}
-  hurtClip: {fileID: 8300000, guid: 17c0653dcbb3d9642940c8cd7128f238, type: 3}
-  attackClip: {fileID: 8300000, guid: d0d42bc8c98476646a7b88be93b1948f, type: 3}
+  stepClip:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  hurtClip:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  attackClip:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8171493255988436123
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +168,6 @@ GameObject:
   - component: {fileID: 8171493255988436119}
   - component: {fileID: 8171493255988436118}
   - component: {fileID: 8171493255988436113}
-  - component: {fileID: 5029060325294561395}
   - component: {fileID: 8336314595322558068}
   - component: {fileID: 283178594518141799}
   - component: {fileID: 5629367456324301700}
@@ -135,11 +187,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8171493255988436123}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8171493255443565341}
+  m_Father: {fileID: 7877181442286923358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8171493255988436112
@@ -222,18 +274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
   materialGameObject: {fileID: 8171493255988436123}
---- !u!114 &5029060325294561395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8171493255988436123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24aa1697d3c28e748a0083b00080796d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &8336314595322558068
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -274,9 +314,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a967d973e6a9f424ca879cf1b0ed4d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepClip: {fileID: 8300000, guid: 79de256383fc3d54499e16a90fedd7e7, type: 3}
-  hurtClip: {fileID: 8300000, guid: 17c0653dcbb3d9642940c8cd7128f238, type: 3}
-  attackClip: {fileID: 8300000, guid: d0d42bc8c98476646a7b88be93b1948f, type: 3}
+  stepClip:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  hurtClip:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  attackClip:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6510712830491665609
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,20 @@ void AdditionalLightsAngle_float(float3 WorldNormal, float3 WorldPos, out float 
         Light light = GetAdditionalLight(i, WorldPos);
         cosAngle += dot(WorldNormal, light.direction);
     }
-    #endif
+        float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+
+             Light mainLight = GetMainLight(shadowCoord);
+                 cosAngle = dot(WorldNormal, mainLight.direction);
+
+        #endif
+
+    
+   /* Direction = mainLight.direction;
+    Color = mainLight.color;
+    DistanceAtten = mainLight.distanceAttenuation;
+    ShadowAtten = mainLight.shadowAttenuation;
+    */
+
 }
 
 void AdditionalLightsAngle_half(half3 WorldNormal, half3 WorldPos, out half cosAngle){
@@ -28,7 +41,19 @@ void AdditionalLightsAngle_half(half3 WorldNormal, half3 WorldPos, out half cosA
         Light light = GetAdditionalLight(i, WorldPos);
         cosAngle += dot(WorldNormal, light.direction);
     }   
-     #endif
+              float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+
+     Light mainLight = GetMainLight(shadowCoord);
+         cosAngle = dot(WorldNormal, mainLight.direction);
+
+         #endif
+
+  
+   /* Direction = mainLight.direction;
+    Color = mainLight.color;
+    DistanceAtten = mainLight.distanceAttenuation;
+    ShadowAtten = mainLight.shadowAttenuation;
+    */
 
 }
 #endif
