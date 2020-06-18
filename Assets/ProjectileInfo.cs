@@ -8,6 +8,8 @@ public class ProjectileInfo : MonoBehaviour
     public bool Piercing;
     public GameObject OnHitPrefab;
     public GameObject ProjectilePrefab;
+    [SerializeField] private float m_Damage;
+    public float Damage => m_Damage;
 
     public void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection)
     {
@@ -31,7 +33,7 @@ public class ProjectileInfo : MonoBehaviour
                     // Debug.Log($"hit {hit.textureCoord} ");
 
                     DamagedByProjectile damaged = hit.collider.GetComponent<DamagedByProjectile>();
-                    if (damaged && damaged.OnShot(hitCoord))
+                    if (damaged && damaged.OnShot(hitCoord, this))
                     {
                         isDone = true;
                         var hitEffect = Instantiate(OnHitPrefab, damaged.transform, true);
@@ -40,7 +42,7 @@ public class ProjectileInfo : MonoBehaviour
 
                         hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
                     }
-                    else if(hitLayer != LayerMask.NameToLayer("Default"))
+                    else if (hitLayer != LayerMask.NameToLayer("Default"))
                     {
                         ray.origin = hit.point + (hit.normal * -.01f);
                     }
