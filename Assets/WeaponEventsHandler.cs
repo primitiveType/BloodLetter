@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WeaponEventsHandler : MonoBehaviour
 {
-    public ProjectileInfo ProjectileInfo;
+    [SerializeField]public ProjectileInfoBase ProjectileInfo;
 
     public WeaponSoundInfo SoundInfo;
     private void Update()

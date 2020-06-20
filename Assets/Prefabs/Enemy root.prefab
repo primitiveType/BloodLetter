@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847258852847000055}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 0.11581059, z: -0, w: 0.9932713}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 8171493255443565343}
   - component: {fileID: 6392817097388422497}
   - component: {fileID: 6726504917568226269}
-  - component: {fileID: 3825170390325336182}
   m_Layer: 8
   m_Name: Enemy root
   m_TagString: Untagged
@@ -107,7 +106,7 @@ NavMeshAgent:
   m_Acceleration: 1000
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 5
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -129,32 +128,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Agent: {fileID: 6392817097388422497}
   Target: {fileID: 0}
-  AggroRange: 4
-  DeAggroRange: 15
---- !u!114 &3825170390325336182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8171493255443565340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a967d973e6a9f424ca879cf1b0ed4d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stepClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  hurtClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  attackClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  m_Health: 10
+  AggroRange: 6
+  DeAggroRange: 20
+  AttackCooldown: 2
+  Attack:
+    Range: 2
+    Radius: 2
+  m_Events: {fileID: 6510712830491665609}
 --- !u!1 &8171493255988436123
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +169,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8171493255988436123}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.725, z: 0}
+  m_LocalScale: {x: 10.9, y: 3.95, z: 1}
   m_Children: []
   m_Father: {fileID: 7877181442286923358}
   m_RootOrder: 0
@@ -204,7 +185,7 @@ Animator:
   m_GameObject: {fileID: 8171493255988436123}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 7f1582e3734dd8e4ba4c232ba9f3efb3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -267,7 +248,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8171493255988436123}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca97479e2f793794b80901123a180646, type: 3}
   m_Name: 
@@ -301,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaterialHelper: {fileID: 8171493255988436113}
-  Events: {fileID: 0}
+  Events: {fileID: 6510712830491665609}
 --- !u!114 &5629367456324301700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,18 +295,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a967d973e6a9f424ca879cf1b0ed4d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepClip:
+  stepClips:
+  - {fileID: 8300000, guid: d3c598914439a5a4f8f1e4ccc1ffb2d1, type: 3}
+  hurtClips:
+  - {fileID: 8300000, guid: 17c0653dcbb3d9642940c8cd7128f238, type: 3}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  hurtClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  attackClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  attackClips:
+  - {fileID: 8300000, guid: 1e05ff307604d9a45a4b77749d7bd5de, type: 3}
+  deathClips:
+  - {fileID: 8300000, guid: 35c56eb00559bfa4b8590511b91ae59c, type: 3}
 --- !u!114 &6510712830491665609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sounds: {fileID: 5629367456324301700}
-  Source: {fileID: 0}
+  Source: {fileID: 5504141266115027280}
 --- !u!82 &5504141266115027280
 AudioSource:
   m_ObjectHideFlags: 0

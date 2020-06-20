@@ -1,17 +1,22 @@
 ﻿using System.Diagnostics;
+using System.Numerics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
-public class ProjectileInfo : MonoBehaviour
+
+public class ProjectileInfo : ProjectileInfoBase
 {
     public bool Hitscan;
     public bool Piercing;
     public GameObject OnHitPrefab;
+    public GameObject OnHitWallPrefab;
     public GameObject ProjectilePrefab;
     [SerializeField] private float m_Damage;
     public float Damage => m_Damage;
 
-    public void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection)
+    public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection)
     {
         if (Hitscan)
         {
@@ -48,6 +53,14 @@ public class ProjectileInfo : MonoBehaviour
                     }
                     else
                     {
+                        var hitRotation = Quaternion.LookRotation(-hit.normal);
+                        var hitEffect = Instantiate(OnHitWallPrefab, hit.collider.transform.position, hitRotation, hit.transform );
+
+                        float adjustmentDistance = .001f;
+
+                        hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+                        
+                        // hitEffect.transform.localRotation = hitRotation;
                         isDone = true;
                     }
                 }

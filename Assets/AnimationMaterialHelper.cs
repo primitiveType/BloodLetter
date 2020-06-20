@@ -69,33 +69,53 @@ public class AnimationMaterialHelper : MonoBehaviour
                          pxPerMeter;
             materialGameObject.transform.localScale =
                 new Vector3((float) width, (float) height, 1);
-            float yFudge = .25f;
+            float yFudge = .01f;
             materialGameObject.transform.localPosition = new Vector3(0, (height / 2) - yFudge, 0);
         }
     }
 
-
+    private MaterialPropertyBlock cachedPropertyBlock;
+    private string AnimationUsedForLastAlphaCheck;
+    private Texture2DArray cachedAlpha;
+    private Color[] cachedAlphaPixels;
     /// <summary>
     /// returns true if the coordinate is alpha > .5f for the current anim frame
     /// </summary>
     /// <returns></returns>
     public bool QueryAlpha(Vector2 textureCoord)
     {
-        MaterialPropertyBlock block = new MaterialPropertyBlock();
-        MyRenderer.GetPropertyBlock(block);
+        int perspective;
+        if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
+        {
+            cachedPropertyBlock = new MaterialPropertyBlock();
+            MyRenderer.GetPropertyBlock(cachedPropertyBlock);
+            Debug.Log("getting texture array for alpha check");
+            AnimationUsedForLastAlphaCheck = CurrentAnimation;
+            cachedAlpha = (Texture2DArray) (cachedPropertyBlock).GetTexture(Alpha);
+            
+            perspective =
+                Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
+                    7); //it's actually possible to get back 8 from this which is invalid.
+            cachedAlphaPixels = cachedAlpha.GetPixels(perspective);
+        }
+        else
+        {
+            Debug.Log("Reusing texture array");
+            perspective =
+                Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
+                    7); //it's actually possible to get back 8 from this which is invalid.
+        }
+
+        
 
 
-        Texture2DArray tex = (Texture2DArray) (block).GetTexture(Alpha);
-        int totalWidth = tex.width;
-        int totalHeight = tex.height;
-        int perspective =
-            Mathf.Clamp(block.GetInt(Perspective), 0,
-                7); //it's actually possible to get back 8 from this which is invalid.
-        int frame = block.GetInt(Frame);
+        int totalWidth = cachedAlpha.width;
+        int totalHeight = cachedAlpha.height;
+        int frame = cachedPropertyBlock.GetInt(Frame);
 
 
-        int rows = block.GetInt(Rows);
-        int columns = block.GetInt(Columns);
+        int rows = cachedPropertyBlock.GetInt(Rows);
+        int columns = cachedPropertyBlock.GetInt(Columns);
         float frameWidth = (float) totalWidth / columns;
         float frameHeight = (float) totalHeight / rows;
         int numFrames = rows * columns; //includes "blank" frames purposefully
@@ -115,18 +135,14 @@ public class AnimationMaterialHelper : MonoBehaviour
 
         int xPos = Mathf.FloorToInt(pixelCoord.x);
         int yPos = Mathf.FloorToInt(pixelCoord.y);
-        int index = (yPos * tex.width) + xPos;
+        int index = (yPos * cachedAlpha.width) + xPos;
         //.GetPixel( , );
-        Color[] colors = tex.GetPixels(perspective);
-        if (index > colors.Count())
+        if (index > cachedAlphaPixels.Count())
         {
             Debug.LogError("index out of range!");
         }
 
-        Color color = colors[index];
-        var numTransparent = colors.Count(c => c.r < .5f);
-        // Debug.Log(
-        //     $"{colors[0].ToString()} vs {colors[colors.Length - 2].ToString()}.Hit color {color.ToString()} on frame {frame} at coords {xPos}x{yPos}. {numTransparent}/{colors.Count()} pixels were alpha.");
+        Color color = cachedAlphaPixels[index];
         return color.r > .5f;
     }
 }

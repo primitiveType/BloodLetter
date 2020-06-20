@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6777145677616992349}
-  - component: {fileID: 6777145677616992354}
+  - component: {fileID: 793953572406270968}
   m_Layer: 0
   m_Name: ShotgunProjectileInfo
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6777145677616992354
+--- !u!114 &793953572406270968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,12 +40,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6777145677616992355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6798b62e9c334716b1a87da70b5a76cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b74017042454af69cf9fa32246eb206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hitscan: 1
-  Piercing: 0
-  OnHitPrefab: {fileID: 7917214635672765982, guid: deb8983ad7b1f274f99256e5ee06a94b,
+  projectileInfo: {fileID: 1693377125502948229, guid: 9cbe9b3b1a9eff148b1a5500d9e01ec5,
     type: 3}
-  ProjectilePrefab: {fileID: 0}
-  m_Damage: 3
+  degreesScatter: 0.05
+  numProjectiles: 10

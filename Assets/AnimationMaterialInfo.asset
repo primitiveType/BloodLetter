@@ -13,6 +13,48 @@ MonoBehaviour:
   m_Name: AnimationMaterialInfo
   m_EditorClassIdentifier: 
   PropertyBlocksByModelAnimation:
+  - rows: 2
+    columns: 3
+    animationName: CHIMERA_LEGACY_turn90Left
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 4cb014472e772e7418e610ebfaccd0ca, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b5d6774c6a45cf144abfad2c1aa89b77, type: 2}
+    alphaMap: {fileID: 18700000, guid: ca6e34a1d30492a43bd1b2a1e43f8372, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: CHIMERA_LEGACY_turn90Left_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 8a21f2cbaa51d9243a87f87c70c7ff66, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1d2235b6cbb28794f807f13c06c01d75, type: 2}
+    alphaMap: {fileID: 18700000, guid: 494cab3c648dcdb40b637522e549eaa1, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: CHIMERA_LEGACY_turn90Right
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: f7b3fa2a7c27bcd4bb2879030d4f41cd, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c8fa675007d182343bd2628a5e36407e, type: 2}
+    alphaMap: {fileID: 18700000, guid: f2156738186a6534296524c07e6bf024, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: CHIMERA_LEGACY_turn90Right_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 0b3e354d55651044f8975755d61fb995, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 889d14d93916e1d42b196d276261c58f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 70c1f7ac38fd68b4c8d5ca654291ff97, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: CHIMERA_LEGACY_walk
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: e0f0978c96d06d244baff8d035613e0d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d3838b91f5fad464681c5114a1ae0a17, type: 2}
+    alphaMap: {fileID: 18700000, guid: d41aa66355c45d443a762e56c0f4f5b9, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: CHIMERA_LEGACY_walk_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 2f556ab795182d34f8f3c1307134261f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3dba453002c38594793faa6157a2122b, type: 2}
+    alphaMap: {fileID: 0}
   - rows: 1
     columns: 1
     animationName: CHIMERA_LEGACY_TPose
@@ -167,45 +209,780 @@ MonoBehaviour:
     normalMap: {fileID: 18700000, guid: 7806e618c9fa12c498017f4a5da15c94, type: 2}
     diffuseMap: {fileID: 18700000, guid: e889d7aaed90d3b4bb13ab40865a08a6, type: 2}
     alphaMap: {fileID: 18700000, guid: a1ef553aad717144fbf7648f631eebda, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: EVIL_WATCHER_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 584517ed54aaddd4d941b8444c6d6e5d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5b0878403ffdf6c42ad61d42ba07bf17, type: 2}
+    alphaMap: {fileID: 18700000, guid: 25426c4cb13c2af4bb2226b844dba7ad, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: DARKNESS_SPIDER_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 39862e820fb7ce940b1fd43f47286fd0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e62d3c47438405b40bfa977becc96859, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3a3196e32ac19434b81ce82ae6ca3057, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_Bite
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: 66b2782e4ec2cea4cbb1f36cb53e4a53, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 39fdd2b881efef6489ad2336f1c8d307, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3dd57fa65a3a64f47ba0c4e5508d9f94, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: DARKNESS_SPIDER_LEGACY_Bite3HitCombo
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 1781e72dbf7cf1a488cb46c7f220179b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: cda3f49cae1624c438a115863f5c1359, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5c6312dd887143e42878eb3df15af238, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_crawlBiteThreat
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: ec77297b2408fc64e910bc3c0e96300e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 850a5152cde79134fb2897926d99438f, type: 2}
+    alphaMap: {fileID: 18700000, guid: a54422fda5997ed49959cd97e9b5d9d1, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: 54d2eac2cbe126a489150621d76fe552, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 4bdb9066d80bbe841a7f102c100602eb, type: 2}
+    alphaMap: {fileID: 18700000, guid: f8f38d6c84e9ba34d8468004232a6404, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_crawlNormal
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: c5e44cd3d43b6924f9a5c4a60c46a453, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a2b620b80de8f78489e91025f71106cc, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0090c1015a016764e8f629c40fcacc2f, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_crawlNormal_RM
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: 148f5b05d6ce9f844936110cd4eb9a52, type: 2}
+    diffuseMap: {fileID: 18700000, guid: abbfa32d04c4c5740a44bd6337c00672, type: 2}
+    alphaMap: {fileID: 18700000, guid: eb21ff9b379bf894898160eac18a9142, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_crawlThreat
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: 18040e5fa6f244042bd4f4639abccf22, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0ed74e072d1cfdd4b90f48237dde0cb9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 03803b08e73c4d744bb9787eb45937d9, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_crawlThreat_RM
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: 096facabc11e7024f9fcc5a03cfc9919, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 84cc2c879f3e71141808af2fc54234f9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 57da67db8e2ddf74c86c496317b5b1f0, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: fe42811d9ecbe9d4ca65e622e9138ad6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ca2a2ef4900a0114098751d29a3d8a30, type: 2}
+    alphaMap: {fileID: 18700000, guid: db22d37298ee2e64a8597888c3cd73b5, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: dead39c8500af2f4d877bf318137699f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d0ebdd291b162e14c940fe6e6d04188a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 13dd14441a479304dbcaeaf3d6ee1975, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: DARKNESS_SPIDER_LEGACY_deathNormal
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 0c1bae891e2f42f44bcaa89e1b358c6d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9d56f991d263f38469d4d6f5e35751b1, type: 2}
+    alphaMap: {fileID: 18700000, guid: 632bd8d9af364084083e78224351cf5e, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: DARKNESS_SPIDER_LEGACY_deathThreat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 5872cf6c18479c14b8c6f7fffd25ab1a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3d6129071573d6f49b09798542bf6333, type: 2}
+    alphaMap: {fileID: 18700000, guid: bfb1a741ded39bd4bb4ad2b7091e7e4b, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: ec08685b38f38944a9758534c49de70d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a1121e6a8ce9d024486183ff9f01a668, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8f40b0a5dd49b0446803e4e72069a46a, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: 0d41f67dbd5973941be050fc4cfd1e20, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 986665f4806456f4ca02ec5501875745, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4b86342d85948514b9e296fcf77e9ea4, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: DARKNESS_SPIDER_LEGACY_idleNormal
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: 6914d17403f30c94dacc1832892b8445, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ec2379cc085701140ac01b3d74ac311a, type: 2}
+    alphaMap: {fileID: 18700000, guid: af29024315afd8e4596cb2d9d04c00d5, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: DARKNESS_SPIDER_LEGACY_idleThreat
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: fd067b996cb19f44da1b49afe29e76a4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d179a0bc3d977a144843abb0dd0c4460, type: 2}
+    alphaMap: {fileID: 18700000, guid: b98b97311dd8ad14f9290f0ba742691b, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: DARKNESS_SPIDER_LEGACY_jumpBiteNormal
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: a281f5b4f309ec649bbac4fa2978c52b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 23acb916ee4ef7849bfdff8c9ec63ea8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 287c5e7a1f7006144a3dfc9b746606c4, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 424628953fb5ce343b7a1ea10fa93d34, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 84c94328579f81f4cb3be7667ca03e89, type: 2}
+    alphaMap: {fileID: 18700000, guid: 89504678acbad264c856eff157f21473, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: DARKNESS_SPIDER_LEGACY_jumpBiteThreat
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: b31c307a0a814674dbc2a968fe71ec65, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 909d5fa3edc230b4abaa599a798a254e, type: 2}
+    alphaMap: {fileID: 18700000, guid: c2eaf7d32a3391b43a441a73e9e789a6, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 894d597c451bc2148914be515d63fe09, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0a63f04e6276d8e40977f908b4836d1e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 79b990c8c1a0ed440a972d63525ed68e, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal
+    numFrames: 2
+    normalMap: {fileID: 18700000, guid: 798245e8a028c164b8efb776ff2cef61, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0c71c9cffcf84a64391e813f10458ffd, type: 2}
+    alphaMap: {fileID: 18700000, guid: f44b7a1a40e70d54cb0390f6a34c1d94, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat
+    numFrames: 2
+    normalMap: {fileID: 18700000, guid: 7881cae7e9f9bd349976f790a47eee7b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 32e48752d1703244aa29c5f7d8215ea5, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8a4a1f3a23030654ab851efc2b908476, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: GHOUL_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 0527d7fdd70be444e964ca723f8296d2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ad47e79e01d562044a7687f3424380bd, type: 2}
+    alphaMap: {fileID: 18700000, guid: cecda56ef06a8b04b8549870521605c1, type: 2}
   - rows: 2
     columns: 3
-    animationName: CHIMERA_LEGACY_turn90Left
+    animationName: GHOUL_LEGACY_attack1
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: 4cb014472e772e7418e610ebfaccd0ca, type: 2}
-    diffuseMap: {fileID: 18700000, guid: b5d6774c6a45cf144abfad2c1aa89b77, type: 2}
-    alphaMap: {fileID: 18700000, guid: ca6e34a1d30492a43bd1b2a1e43f8372, type: 2}
+    normalMap: {fileID: 18700000, guid: ddcc80ccdb0e89d4cb597c2572b0aaff, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 54d1d27540045cc43950f2fc26f9233d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 513d72322cff8e34a937574e88595ab8, type: 2}
   - rows: 2
     columns: 3
-    animationName: CHIMERA_LEGACY_turn90Left_RM
+    animationName: GHOUL_LEGACY_attack1Forward
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: 8a21f2cbaa51d9243a87f87c70c7ff66, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 1d2235b6cbb28794f807f13c06c01d75, type: 2}
-    alphaMap: {fileID: 18700000, guid: 494cab3c648dcdb40b637522e549eaa1, type: 2}
+    normalMap: {fileID: 18700000, guid: 2d3be0d105e330f4891547bb6b7e6020, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 04454535b7bc57e47863523b28318abb, type: 2}
+    alphaMap: {fileID: 18700000, guid: e97baebe2d9fe1847aa99c14245ac5c3, type: 2}
   - rows: 2
     columns: 3
-    animationName: CHIMERA_LEGACY_turn90Right
+    animationName: GHOUL_LEGACY_attack1Forward_RM
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: f7b3fa2a7c27bcd4bb2879030d4f41cd, type: 2}
-    diffuseMap: {fileID: 18700000, guid: c8fa675007d182343bd2628a5e36407e, type: 2}
-    alphaMap: {fileID: 18700000, guid: f2156738186a6534296524c07e6bf024, type: 2}
+    normalMap: {fileID: 18700000, guid: 09f08410b7e8a3f48bd9838961fb48c5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: cf828efee15a029499b32186ca8a7da5, type: 2}
+    alphaMap: {fileID: 18700000, guid: d7f6c1231026edb499beb6371644fe29, type: 2}
   - rows: 2
     columns: 3
-    animationName: CHIMERA_LEGACY_turn90Right_RM
+    animationName: GHOUL_LEGACY_attack2
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: 0b3e354d55651044f8975755d61fb995, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 889d14d93916e1d42b196d276261c58f, type: 2}
-    alphaMap: {fileID: 18700000, guid: 70c1f7ac38fd68b4c8d5ca654291ff97, type: 2}
+    normalMap: {fileID: 18700000, guid: ad97eba51ca91004a9cab631c2e3fb6b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 91b679dd835684d4cb5e56fdfe2957a9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 346b4603093b30c42a1adc25c34e64ac, type: 2}
   - rows: 2
     columns: 3
-    animationName: CHIMERA_LEGACY_walk
+    animationName: GHOUL_LEGACY_attack2Forward
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: e0f0978c96d06d244baff8d035613e0d, type: 2}
-    diffuseMap: {fileID: 18700000, guid: d3838b91f5fad464681c5114a1ae0a17, type: 2}
-    alphaMap: {fileID: 18700000, guid: d41aa66355c45d443a762e56c0f4f5b9, type: 2}
+    normalMap: {fileID: 18700000, guid: d98844721b5fc3e4e8af0413e34f80f9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ff7142a704c0ea144a7da64ff88e383e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5f7ad465c67ae10459a55c1f351da0c4, type: 2}
   - rows: 2
     columns: 3
-    animationName: CHIMERA_LEGACY_walk_RM
+    animationName: GHOUL_LEGACY_attack2Forward_RM
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: 2f556ab795182d34f8f3c1307134261f, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 3dba453002c38594793faa6157a2122b, type: 2}
-    alphaMap: {fileID: 18700000, guid: 82bd80e9107ca4541aa7cec3644a38a4, type: 2}
+    normalMap: {fileID: 18700000, guid: 3fa5dde4fb151d24a812d300f0cb6f82, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 150afdc65280fcd4ca9cca5dec18dd25, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0561c53425f18664daa9417c3c5fa66b, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack2HitCombo
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: d8e04f2fe9b37ca45bfd0992e3c0afcf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 078b3ff0afd0adf479ba09318348f3eb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 702e9d4011e267041b8f0143ec5617c2, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack2HitComboForward
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 970278f123de7c949a4bae0ddfc63140, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1a782dc55b82c7f4bba2a2ea09bb38cd, type: 2}
+    alphaMap: {fileID: 18700000, guid: b2554a2489955ca4f8a3295f9e37e6ca, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack2HitComboForward_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: e425fec77b651f541868af8105300d7c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b8e8e152f1adbd64398b12e8ce53d653, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4a54cb615af4be1478a90adc3d498d17, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: GHOUL_LEGACY_attack2HitComboToGrabBite
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 2d2019ed7c5f2374dbaa52e0bd4621d0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0692c849b87de2241b1361ffd8d59dfe, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5f56ba8da4e716945a641f574398fb44, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: GHOUL_LEGACY_attack2HitComboToGrabBiteForward
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 3b16920f058a8ce42b529e4fc2cca08b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 82120b84417dc114d85b71458d81ff73, type: 2}
+    alphaMap: {fileID: 18700000, guid: 773cefaf4b7b94042be2907ab70b2cf6, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_RM
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 404e70724bfe7ba419f8bd40c96e0848, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 19338188cc2e9b841a5dabaf006ee567, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0e4492c3d6cfdb8438dbd3a5145a449e, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: GHOUL_LEGACY_death
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: b5881842921025d4ea6e34dd51356faf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7e3a0721dc978c7459e0059a02865fb2, type: 2}
+    alphaMap: {fileID: 18700000, guid: fe75b8e1e266d854a942aa483f1d7386, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GHOUL_LEGACY_getHit1
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 1b55750789c23c44fa0480ff5d4fdc93, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c61e8ca9a87bb954fae756dd5d05d4fb, type: 2}
+    alphaMap: {fileID: 18700000, guid: c5781cc890662ba4a94a089e84eaddb7, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GHOUL_LEGACY_getHit2
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: dbedcd3630e211149b32f57288d14cae, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5275d55e301545f41a35131ad6bcd9f8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1852e4b806582d04aa9bcdda1515cd1e, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_grabBite
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: 3412f02bb64226d42ae063099d843d06, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2d49f84d1fdbcf34f9a8b48000f80894, type: 2}
+    alphaMap: {fileID: 18700000, guid: b35f14a247423704fb68ed3953eb7bb0, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: GHOUL_LEGACY_idle
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: 0dce477fc463bc749852397dcde64a3c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 61ab46a20ae585e4490eab3fd4dbc7c4, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3382f4c695abd4c47b700dc48371db8d, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_jumpattack
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 3d0a28c52fb634f4ba5baa9c9e213ae6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d39458104703037479b3ba90c5ab63d8, type: 2}
+    alphaMap: {fileID: 18700000, guid: f6b3b2c3377e0ea42a98f8de8f5992d0, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_jumpattack_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: fa4c7a3ec8b728d48afb509f88f75003, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ea1159c12b9d4d946ada0536791c38b9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 47569430ea848544a90a3d6645fa9b11, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_jumpBackwards
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: f3551bafe2f035b4ba48e8948770a0a9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bb135e03723b0824ca53d67a59421c31, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4de087d26ce7e094ca3b4c473f3476fa, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_jumpBackwards_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 4b22ed3975362304e95dc4726299c780, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 96b8f46feadca9444ae003978718c08f, type: 2}
+    alphaMap: {fileID: 18700000, guid: f78ea977461492c4b949e1c87d1af3e6, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_jumpForward
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: e9afcf22f4626794ea2a3f27daec6a04, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bbdb68cae0f53164fb0d85d7308e7f8e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1bcd9fc80731dd847bce9f6408747071, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_jumpForward_RM
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: 6b2430c06430eaf4ea84d4227aa5e043, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 13c6193b055002d4f9cfe1f90e774734, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9e5826f4dfcbab044a1a6c1cdbb2922b, type: 2}
+  - rows: 3
+    columns: 3
+    animationName: GHOUL_LEGACY_jumpGrabBite
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: f104b7793d7c94a43960a238f3a4daef, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d51c83d3e1cb0bf45969211e2cca3341, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2289f40a1903a0d4ab2605856dd083bf, type: 2}
+  - rows: 3
+    columns: 3
+    animationName: GHOUL_LEGACY_jumpGrabBite_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 9a57f916de26f434d97d7bb0535b7b26, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 336e395cbfea23a41bfed0dadc4742d9, type: 2}
+    alphaMap: {fileID: 18700000, guid: b386d8a1319c81f4eade69aaed962604, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GHOUL_LEGACY_run
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: c9b2ce964dfdd524085d32e2be1b0a30, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 03dde54634d221344b4587494f0fa1df, type: 2}
+    alphaMap: {fileID: 18700000, guid: 29db9000103e71048aec16dfe46ef89c, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GHOUL_LEGACY_run_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: fcee1461f40720249adbeed62a040bcd, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 862d450f9a06b39409ecfe0fb1605dba, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3c8282e9b4406d24aabaad4298c2fed0, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_strafeLeft
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: d9a43a0ac18d1d34aabdc43c30c05caf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a8d0310ef993bb74f9579857fabd40bb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9ce17588752d994458c691843facd2a4, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_strafeLeft_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 808da97c168e8ad4c9dfe2a5f1afe003, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b41c87025eccd064e9bb91b9976d778b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3704a1ba1024872488d15afb97277163, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_strafeRight
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: f860bdc9cfa41ce49ab07a5dd7a9de25, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ef345cdeae76be84ba708ab24917b49f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 33e690145da4a2544b61cc1fd47089a6, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_strafeRight_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: bccca417187791b4997959cc0fc37238, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 860b0ac30dd43394a86ec0c2ceb9678d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 310b9291a61539640b15c79c597e9a1b, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_walk
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 5e450b7c6e983374d9053c2d87c5f5b0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 36b4cb411d6a2064290915210a663373, type: 2}
+    alphaMap: {fileID: 18700000, guid: 81eda0860808a6347a305344cde94f43, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_walk_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 2eff6375288018e4ba710ce1a97d0480, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a87431e6d23f94143a0c65756556e6c2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0a5028bca4885c24da07aabb61c08e4b, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: GIANT_RAT_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: f8be3ede96cce4245b5204c1d4a82333, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ce20d3128c9c38142a172c039b4c2df7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 698512b828269da41b2c80db577c125d, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GIANT_RAT_LEGACY_death
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 5f50630e450334c47a7007500e3f681a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: de80bb33c4d782343975498b1ab6fe22, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3664e5799c3801a4ca91448ddc423024, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_dodgeBackwards
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: a3900362468ec9e47a57da870b6be4f4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 99e4a4a2925906747a754ca82b93d412, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3479d009f3622b24d9b424db45a9eb61, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_dodgeBackwards_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: f5bd6497eb4a3f5459da67214b30b639, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 30d8451aa7cbec0488424cbfe49a3e80, type: 2}
+    alphaMap: {fileID: 18700000, guid: 694fa11af68fbe14cb76f58c2e548249, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_dodgeLeft
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: bd4dd592abd55a44ab3846239d6da01b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3e410b33e0c0be444b4e3727d8026c4e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4330a7fdef04c084499c9bc33c2b1220, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_dodgeLeft_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 6e31b860cb4fa764488722d961d7aa25, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 4027abde85d8fba4194f6d901d5dced0, type: 2}
+    alphaMap: {fileID: 18700000, guid: 58b81e10204e96a49bd617d078845212, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_dodgeRight
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: f97fc8ee8e217bb4697791c13899b84f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d413337d09a8b584fa567781077143ff, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0c72266fe0c2a12409889cbbb2c0ebc6, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_dodgeRight_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: ebf19bb63b1adaa429bf118277d8b312, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 56d2b7aeb600c0e408f64c28be0d54e9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7b075644494c94049abfb4c470a53083, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_getHitFront
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: a46efa60daf419541951595b6f70fbb0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 57a62e79bee0fbc48bd2065f3d9d5bb5, type: 2}
+    alphaMap: {fileID: 18700000, guid: faf5d1fe9efaf3e4fa25dfda1c09c37e, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_getHitLeft
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 71da5561a1cc56345a65a8ad7453550f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 42eb7d9fab21f5241a925e779ee20b77, type: 2}
+    alphaMap: {fileID: 18700000, guid: badc9ed0b3fce4b499c3cb64daebae6e, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_getHitRight
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: a45796feee726b5429c2a672ded1dd41, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 617632ee1d3dec94cbc6cafdaaba44c9, type: 2}
+    alphaMap: {fileID: 18700000, guid: e908a9bf6051f8e4f90c2914f7a22123, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: GIANT_RAT_LEGACY_idle
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: b0de00e7c7cdd2e48b4e198c24671efa, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b06a528724c3d7e4f88910367a143e99, type: 2}
+    alphaMap: {fileID: 18700000, guid: bfd98fdd769983f47b1e94177c7468a6, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_jumpBite
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: f54e9cae7340c8e40a8999686c3fc8d2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1d5b8b6236b2a024eb9cc0697ab2ada9, type: 2}
+    alphaMap: {fileID: 18700000, guid: c8defe48e252749479667f0fde7f6a09, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: GIANT_RAT_LEGACY_jumpBite_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: cbebafddf9c3e4e45a126849e08a3c0f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d660571e97ac525418c45c9480ccb68c, type: 2}
+    alphaMap: {fileID: 18700000, guid: c62190d77ad5f044499df51f962d0da9, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: GIANT_RAT_LEGACY_run
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: 1f8f115bbdea15f42957558c34a2cbd7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b9f4d434985fbf041a243fffd7279e36, type: 2}
+    alphaMap: {fileID: 18700000, guid: f148f09144950f34b9db1b968b404932, type: 2}
+  - rows: 1
+    columns: 3
+    animationName: GIANT_RAT_LEGACY_run_RM
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: 9aac0de6282de244684f12b37561493b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e1be58756fe433f4aa7739e42ab18230, type: 2}
+    alphaMap: {fileID: 18700000, guid: 026a1b9352f9eb24591b6709e0a6980c, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: GIANT_RAT_LEGACY_taunt
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: 6e02a6c16ccc9f64b879e928533ad0c7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 63e5eb281a4af05468a6239cd09965cd, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4508dfc1c6c3b434888b14fc418585a4, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GIANT_RAT_LEGACY_walk
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 678910d1183e2314f80589d3aaa11655, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1ea1ab1be72f2bc4f8b1123918c92678, type: 2}
+    alphaMap: {fileID: 18700000, guid: f7b8e66d6b96cea4bb29d45b4e2d175a, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GIANT_RAT_LEGACY_walk_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 381b9c8d36e17c14589d43c3cc0587c6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b91341f60b8117b4483829304b71a702, type: 2}
+    alphaMap: {fileID: 18700000, guid: 75ff08558f967a64f8d54351cbd98298, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: VAMPIRE_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 6b5009de9f84bbe4dbcc66eac5048498, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e6904ecfcf33dfa499b9e9005b092c69, type: 2}
+    alphaMap: {fileID: 18700000, guid: 49cdbc685a9564d4a82520a924a6ec5e, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: VAMPIRE_LEGACY_clawsAttack2HitCombo
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 815b155cc16b15b4497d0c21af495d49, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b98181f48498240439c2216106bfe01b, type: 2}
+    alphaMap: {fileID: 18700000, guid: b5cfa79a9d8cf4d4e9e33947d8e94bcd, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: VAMPIRE_LEGACY_clawsAttack2HitComboForward
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 0dec328641fdfd142b8ec637f76c0071, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 949bd445090eaab459444a0f3a2f01cd, type: 2}
+    alphaMap: {fileID: 18700000, guid: b7d59e52ee2da854495f5a0938c200da, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: VAMPIRE_LEGACY_clawsAttack2HitComboForward_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: ed8ca49c35e6c86498fe0bae2811dba2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f13d8dc248cba534e994089a4f5c3655, type: 2}
+    alphaMap: {fileID: 18700000, guid: cb9e6dff8d341064ba9da5683c5ba965, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: VAMPIRE_LEGACY_clawsAttack2HitComboForwardToGrabBite
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 780ae0d93284e044eb13bbb4f2848ad4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a3cab3a6f8a36384fb1982ef9b79f0b9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4ee68ae51cd2ef440b119d78a70e99e7, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: VAMPIRE_LEGACY_clawsAttack2HitComboForwardToGrabBite_RM
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 80243575afe6b3a4296373adb229d50c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c6c5cfaf06cb83d418996c7367640eaa, type: 2}
+    alphaMap: {fileID: 18700000, guid: b24ccd211c4a9134295d702d1306acda, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: VAMPIRE_LEGACY_clawsAttack2HitComboToGrabBite
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 2dd3133b036180345b3f56bad4c84019, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 6303900562a77ea4aa2c48315339c3cc, type: 2}
+    alphaMap: {fileID: 18700000, guid: e937aaa2c6595294fbff075996127523, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_clawsAttackLeft
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 38ddb28dc3e7e104b9a0458cf9633efa, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 01c30dd5a6d67a9439c6b68c276b8e87, type: 2}
+    alphaMap: {fileID: 18700000, guid: cb21dea4bcdf7e14389c941b55824d22, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_clawsAttackLeftForward
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: b28a5cd1a8ce7f84c9b03c897517525a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c2a421bdbe1656c4c93cc9679ce515f1, type: 2}
+    alphaMap: {fileID: 18700000, guid: c7d9d8ea1f982914388cd743e5b9e777, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_clawsAttackLeftForward_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: b1c3266dabe530c47acfdbcad42f9bb5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9549c3bc55bd4984b9d4a61bc65c3013, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7d83678f318f19049b4e345d5cca26a4, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_clawsAttackRight
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 830aaa2e7a9ade64eacfc46b9c12eee1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: aadb85bc7ea9a6946a880372c7929cdc, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8db7614f38da9c54cb35599a607e9b46, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_clawsAttackRightForward
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 095b56c3debe9cf4190e55489779cfd9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9d1f2f78338d6c84d9cf7f7e2ed05249, type: 2}
+    alphaMap: {fileID: 18700000, guid: b7b9aa18aa71f3c4fb09291933c82a83, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_clawsAttackRightForward_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 1cf538b7d59887745a1c48c9e8acfbcb, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3b8dad5c3cd3f4e4280d78ac232c0e14, type: 2}
+    alphaMap: {fileID: 18700000, guid: 91f39d63375bd9e4ca5048f83b76e841, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: VAMPIRE_LEGACY_death
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 355001e9c65c2d14880207bfa42e1162, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 102a445ed46891347898c3ccdadb5d49, type: 2}
+    alphaMap: {fileID: 18700000, guid: fa6a72d1e5b37a142a375f3da00cde0d, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: VAMPIRE_LEGACY_getHit1
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: fb473903f5382f14c86ba741551e8ceb, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0efa410bf2ebc8b429186b0fac679b66, type: 2}
+    alphaMap: {fileID: 18700000, guid: 287e42544ba9ada459108a647ee88af7, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: VAMPIRE_LEGACY_getHit2
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: ed08675e26f59634dac2029c8133e195, type: 2}
+    diffuseMap: {fileID: 18700000, guid: fbc280275e59dfd438af64dc095efc7e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 088e93a2bc3d98a469e12d33a35feb70, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: VAMPIRE_LEGACY_idleBreathe
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: bc2b6d1d978e4514e891b62dd36bd285, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 6478200eda3b3f44c9a6062b6c7739b3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2353e2c332328f34a829633b31c6638a, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_jumpBackwards
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 7054aca4a54e11e4b83b27a76126008f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e492e3ea1a6cd8643b2e6ad3e35a7717, type: 2}
+    alphaMap: {fileID: 18700000, guid: d1f68b412d077f74791b7aff5155a561, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_jumpBackwards_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 36deebc7301ca414e82723d1d16d3f17, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 35e1e4d7509b2f742b89a55938093a34, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3b7f1cb1e58852e4683fde1f40938c7d, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: VAMPIRE_LEGACY_jumpclawsAttack
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 98523621076cba949bed0af5caeeb638, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d61b45def6f6aba48a4265cb56906fc1, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8e2b445626290784dbe588296b37b4fd, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: VAMPIRE_LEGACY_jumpclawsAttack_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 1a41da15b42d4464ea26fa02c0e18404, type: 2}
+    diffuseMap: {fileID: 18700000, guid: fd2c7971671085e4e8e683347e7e849a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 11d6d312918998b41b2960d1e21dbd56, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_jumpForward
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: 75c3322b8328a274eb3233b6f48fe390, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 83202b27b9c4028489449d741b19fb96, type: 2}
+    alphaMap: {fileID: 18700000, guid: f76c5f422e0a694469be21b3b4b46b3b, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_jumpForward_RM
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: 6955e0c658496c94bbf87f96af340614, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 86ab73f06b53efa418ff345346f0e4ec, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8c9959b4a0d0dd940959cde72f3012db, type: 2}
+  - rows: 3
+    columns: 3
+    animationName: VAMPIRE_LEGACY_jumpGrabBite
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 37ba307c7017c9340a122c8264ca36f1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: cb7d7640f04d7f24e9940e0ed2ba600b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1fc0ab00df35471438e9353556a9128a, type: 2}
+  - rows: 3
+    columns: 3
+    animationName: VAMPIRE_LEGACY_jumpGrabBite_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 68c5cd718d5de1542b7b4a3801734329, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f0e73f7808b569345ac24241f978c1aa, type: 2}
+    alphaMap: {fileID: 18700000, guid: c6873a0fd095a164d9b000b027c66a2c, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: VAMPIRE_LEGACY_run
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: ab83f73c4415c074baeb0c831213c4d6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d2aef596f48856f47a3e3f689a4c41ba, type: 2}
+    alphaMap: {fileID: 18700000, guid: 320ece9c3f1bd2e42ac2574262b19800, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: VAMPIRE_LEGACY_run_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: dc04628842378644badbd0351c3daa13, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8da5a38b61702454d8e7ec47d5b2c3a4, type: 2}
+    alphaMap: {fileID: 18700000, guid: b0ced16cd3f9b1f4296bb16b910d48e8, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_standGrabBite
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: b5aff086c8b49f842b1d5a5d84ae1e7e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 664fba4a39460274ebacb801089105b4, type: 2}
+    alphaMap: {fileID: 18700000, guid: abab676119b336a4391a420cc68ae2b7, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_strafeLeft
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 3a2df78abb2385a4e854309d5c3ea411, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1cb125f3a54cba24288577cc56355444, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0176d9ea742a12f4e99cab0c88fc1bb6, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_strafeLeft_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: d3eae605f87d15f49b9d8900f9ebb0d7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ca020c405a5fbbd48bb3d79987a505f7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0e06bee027b6a5947bc59bd6a01cf2d2, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_strafeRight
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 27abfdb2b07b65d4d86fe04e3723aa15, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e27cdef4309f9f34b95fa4f56c622cdf, type: 2}
+    alphaMap: {fileID: 18700000, guid: 53a8c4f796c106543bcf0adcf04534f1, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_strafeRight_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 93e42030eb558b244971867601cc86af, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 06431ea9e739d2f459ad661192b34a98, type: 2}
+    alphaMap: {fileID: 18700000, guid: b8e3b815245181240a6ddeaf00dd7f0a, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_walk
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: e01c9c50c7055184b9713f649c3e5c26, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ad96e2edca4337a4c9909fe847f92700, type: 2}
+    alphaMap: {fileID: 18700000, guid: df0a99e6331715f4dbccc000599454ba, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: VAMPIRE_LEGACY_walk_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 766f3d17882ab6f4b8ee09858f7f852f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 74db80302afc63b4ca541b36c5503d58, type: 2}
+    alphaMap: {fileID: 18700000, guid: 08bab9d391d4de547b349575aa735b0c, type: 2}

@@ -18,9 +18,10 @@ public class EnemyMovement : MonoBehaviour
         set => m_isAggro = value && IsAlive;
     }
 
-    public bool IsAlive => Health > 0;
+    public bool IsAlive { get; set; } = true;
 
     [SerializeField] private float m_Health;
+
 
     public float Health
     {
@@ -28,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
         set
         {
             m_Health = value;
-            if (m_Health <= 0)
+            if (m_Health <= 0 && IsAlive)
             {
                 Die();
             }
@@ -37,8 +38,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void Die()
     {
+        IsAlive = false;
         Events.OnDeath();
-        Animator.SetBool(IsDead, true);
         IsAggro = false;
     }
 
@@ -46,7 +47,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float DeAggroRange;
     [SerializeField] private float AttackCooldown;
 
-    [SerializeField] private List<AttackData> Attacks;
+    [SerializeField] private AttackData Attack;
 
     //TODO:move animation state constants into new file?
     private static readonly int Moving = Animator.StringToHash("Moving");
@@ -57,9 +58,9 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Events.OnStepEvent += OnStepped;
-        Events.OnShotEvent += OnShot;
-        Events.OnAttackEvent += OnAttack;
+        Events.OnStepEvent += OnEnemyStepped;
+        Events.OnShotEvent += OnEnemyShot;
+        Events.OnAttackEvent += OnEnemyAttack;
         Animator = GetComponentInChildren<Animator>();
         if (Agent && Target)
         {
@@ -69,21 +70,25 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void OnAttack(object sender, OnAttackEventArgs args)
+    private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
+        Attack.DoAttack(Target);
     }
 
-    private void OnShot(object sender, OnShotEventArgs args)
+    private void OnEnemyShot(object sender, OnShotEventArgs args)
     {
         IsAggro = true;
         Health -= args.ProjectileInfo.Damage;
     }
 
-    private void OnStepped(object sender, OnStepEventArgs args)
+    private void OnEnemyStepped(object sender, OnStepEventArgs args)
     {
     }
 
     public EnemyEvents Events => m_Events;
+
+    private float LastAttackTimeStamp;
+    private static readonly int Attacking = Animator.StringToHash("Attacking");
 
     void Update()
     {
@@ -104,8 +109,25 @@ public class EnemyMovement : MonoBehaviour
 
         Agent.isStopped = !IsAggro;
 
+        if (Time.time - LastAttackTimeStamp > AttackCooldown)
+        {
+            TryAttack();
+        }
+
         UpdateAnimationStates();
     }
+
+    private void TryAttack()
+    {
+        if (Attack.Range >= Vector3.Distance(transform.position, Target.position))
+            //should probably also raycast for line of sight , move this code into the Attack class
+        {
+            //Attack.DoAttack(Target);
+            Animator.SetBool(Attacking, true);
+            LastAttackTimeStamp = Time.time;
+        }
+    }
+    
 
 
     private void UpdateAnimationStates()
@@ -118,23 +140,34 @@ public class EnemyMovement : MonoBehaviour
         {
             Animator.SetBool(Moving, false);
         }
+
+        Animator.SetBool(IsDead, !IsAlive); //kinda dumb rofl
     }
 
     private void OnDestroy()
     {
-        Events.OnStepEvent -= OnStepped;
-        Events.OnShotEvent -= OnShot;
-        Events.OnAttackEvent -= OnAttack;
+        Events.OnStepEvent -= OnEnemyStepped;
+        Events.OnShotEvent -= OnEnemyShot;
+        Events.OnAttackEvent -= OnEnemyAttack;
     }
 }
 
-internal class AttackData //first pass
+[Serializable]
+public class AttackData //first pass
 {
     public float Range;
     public float Radius;
 
-    public void DoAttack()
+    private Collider[] hitResults = new Collider[10];
+
+    public void DoAttack(Transform target)
     {
-        // Physics.check
+        var size = Physics.OverlapSphereNonAlloc(target.position, Radius, hitResults, LayerMask.GetMask("Player"),
+            QueryTriggerInteraction.Collide);
+
+        for (int i = 0; i < size; i++)
+        {
+            Debug.Log($"Hit {hitResults[i]}");
+        }
     }
 }
