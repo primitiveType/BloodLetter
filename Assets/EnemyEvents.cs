@@ -8,6 +8,7 @@ public class EnemyEvents : MonoBehaviour
     public event OnDeathEvent OnDeathEvent;
     [SerializeField] private EnemySounds Sounds;
     [SerializeField] private AudioSource Source;
+    public event OnAggroEvent OnAggroEvent;
 
     public void OnShot(ProjectileInfo projectileInfo)
     {//TODO: this should probably set an animator bool that fires an event
@@ -28,6 +29,17 @@ public class EnemyEvents : MonoBehaviour
     {
         OnDeathEvent?.Invoke(this, new OnDeathEventArgs());
     }
+
+    public void OnAggro()
+    {
+        OnAggroEvent?.Invoke(this, new OnAggroEventArgs());
+    }
+}
+
+public delegate void OnAggroEvent(object sender, OnAggroEventArgs args);
+
+public class OnAggroEventArgs
+{
 }
 
 public delegate void OnDeathEvent(object sender, OnDeathEventArgs args);

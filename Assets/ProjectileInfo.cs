@@ -26,10 +26,10 @@ public class ProjectileInfo : ProjectileInfoBase
             bool isDone = false;
             while (!isDone)
             {
-                if (Physics.Raycast(ray, out RaycastHit hit, 1000))
+                if (Physics.Raycast(ray, out RaycastHit hit, 1000, ~LayerMask.GetMask("Enemy")))
                 {
                     var hitLayer = hit.collider.gameObject.layer;
-                    if (hitLayer != LayerMask.NameToLayer("Enemy"))
+                    if (hitLayer != LayerMask.NameToLayer("EnemyRaycast"))
                     {
                         isDone = true;
                     }

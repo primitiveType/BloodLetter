@@ -7,15 +7,25 @@ using UnityEngine.Serialization;
 
 public class EnemySounds : MonoBehaviour
 {
-    [FormerlySerializedAs("stepClip")] [SerializeField] private List<AudioClip> stepClips;
-    [FormerlySerializedAs("hurtClip")] [SerializeField] private List<AudioClip> hurtClips;
-    [FormerlySerializedAs("attackClip")] [SerializeField] private List<AudioClip> attackClips;
-    [FormerlySerializedAs("attackClip")] [SerializeField] private List<AudioClip> deathClips;
+    [SerializeField] private List<AudioClip> aggroClips;
+
+    [FormerlySerializedAs("stepClip")] [SerializeField]
+    private List<AudioClip> stepClips;
+
+    [FormerlySerializedAs("hurtClip")] [SerializeField]
+    private List<AudioClip> hurtClips;
+
+    [FormerlySerializedAs("attackClip")] [SerializeField]
+    private List<AudioClip> attackClips;
+
+    [FormerlySerializedAs("attackClip")] [SerializeField]
+    private List<AudioClip> deathClips;
 
     public AudioClip StepClip => stepClips.Random();
     public AudioClip HurtClip => hurtClips.Random();
     public AudioClip AttackClip => attackClips.Random();
     public AudioClip DeathClip => deathClips.Random();
+    public AudioClip AggroClip => aggroClips.Random();
 
     private AudioSource StepSource { get; set; }
     private AudioSource HurtSource { get; set; }
@@ -30,9 +40,26 @@ public class EnemySounds : MonoBehaviour
         Events.OnShotEvent += OnEnemyShot;
         Events.OnAttackEvent += OnEnemyAttack;
         Events.OnDeathEvent += OnEnemyDeath;
-        StepSource = gameObject.AddComponent<AudioSource>();
-        HurtSource = gameObject.AddComponent<AudioSource>();
-        AttackSource = gameObject.AddComponent<AudioSource>();
+        Events.OnAggroEvent += OnEnemyAggro;
+        StepSource = CreateAudioSource();
+        HurtSource = CreateAudioSource();
+        AttackSource = CreateAudioSource();
+    }
+
+    private AudioSource CreateAudioSource()
+    {
+        var source = gameObject.AddComponent<AudioSource>();
+        source.spatialize = true;
+        source.spatialBlend = 1;
+        return source;
+    }
+
+    private void OnEnemyAggro(object sender, OnAggroEventArgs args)
+    {
+        if (!HurtSource.isPlaying)
+        {
+            HurtSource.PlayOneShot(AggroClip);
+        }
     }
 
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)
@@ -46,7 +73,7 @@ public class EnemySounds : MonoBehaviour
 
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
-        AttackSource.PlayOneShot(AttackClip);//todo: only play if player hit by it?
+        AttackSource.PlayOneShot(AttackClip); //todo: only play if player hit by it?
     }
 
     private void OnEnemyShot(object sender, OnShotEventArgs args)
@@ -62,14 +89,16 @@ public class EnemySounds : MonoBehaviour
 
     private void OnDestroy()
     {
-       DetachEvents();
+        DetachEvents();
     }
 
     private void DetachEvents()
     {
         Events.OnStepEvent -= OnEnemyStepped;
         Events.OnShotEvent -= OnEnemyShot;
-        Events.OnAttackEvent -= OnEnemyAttack; 
+        Events.OnAttackEvent -= OnEnemyAttack;
+        Events.OnDeathEvent -= OnEnemyDeath;
+        Events.OnAggroEvent -= OnEnemyAggro;
     }
 }
 
@@ -77,6 +106,11 @@ public static class ListExtensions
 {
     public static T Random<T>(this List<T> list)
     {
+        if (list.Count == 0)
+        {
+            return default(T);
+        }
+
         int index = UnityEngine.Random.Range(0, list.Count());
         return list[index];
     }

@@ -1,0 +1,1 @@
+﻿public delegate void PlayerShootEvent(object sender, PlayerShootEventArgs args);

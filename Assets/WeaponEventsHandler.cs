@@ -15,6 +15,7 @@ public class WeaponEventsHandler : MonoBehaviour
         var transform1 = this.transform;
         ProjectileInfo.TriggerShoot(transform1.position, transform1.forward);
         SoundInfo.OnShoot();
+        Toolbox.PlayerEvents.PlayerShoot();
     }
 
     public void Reload()

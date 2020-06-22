@@ -25,7 +25,7 @@ public class AnimationMaterialHelper : MonoBehaviour
 
     private void Awake()
     {
-        MyRenderer.material = new Material(MyRenderer.sharedMaterial);
+        // MyRenderer.material = new Material(MyRenderer.sharedMaterial);
     }
 
 
@@ -40,6 +40,7 @@ public class AnimationMaterialHelper : MonoBehaviour
             if (animator != null)
             {
                 var modelName = animator.runtimeAnimatorController.name.Replace("_Animator_Controller", "");
+                modelName = modelName.Replace("_Animator", "");
                 var animationName = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
                 AnimationStarted($"{modelName}_{animationName}");
             }
