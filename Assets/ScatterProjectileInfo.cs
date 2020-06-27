@@ -2,11 +2,11 @@
 
 public class ScatterProjectileInfo : ProjectileInfoBase
 {
-    [SerializeField] private ProjectileInfo projectileInfo;
+    [SerializeField] private HitscanProjectileInfo projectileInfo;
     [SerializeField] private float degreesScatter;
     [SerializeField] private int numProjectiles;
 
-    public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection)
+    public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
     {
         //assume up vector is y axis
         for (int i = 0; i < numProjectiles; i++)
@@ -16,12 +16,12 @@ public class ScatterProjectileInfo : ProjectileInfoBase
             var z = Random.Range(-degreesScatter, degreesScatter);
             var position = playerDirection +
                            new Vector3(x, y, z);
-            projectileInfo.TriggerShoot(playerPosition, position);
+            projectileInfo.TriggerShoot(playerPosition, position, ownerType);
         }
     }
 }
 
 public abstract class ProjectileInfoBase : MonoBehaviour
 {
-    public abstract void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection);
+    public abstract void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType);
 }

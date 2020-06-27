@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerEvents : MonoBehaviour
 {
     public event PlayerShootEvent PlayerShootEvent;
+    public event PlayerInteractEvent PlayerInteractEvent;
 
     private void Awake()
     {
@@ -15,5 +16,22 @@ public class PlayerEvents : MonoBehaviour
     public void PlayerShoot()
     {
         PlayerShootEvent?.Invoke(this, new PlayerShootEventArgs());
+    }
+
+    public void PlayerInteract(IInteractable target)
+    {
+        PlayerInteractEvent?.Invoke(this, new PlayerInteractEventArgs(target));
+    }
+}
+
+public delegate void PlayerInteractEvent(object sender, PlayerInteractEventArgs args);
+
+public class PlayerInteractEventArgs
+{
+    public IInteractable Target { get; }
+
+    public PlayerInteractEventArgs(IInteractable target)
+    {
+        Target = target;
     }
 }

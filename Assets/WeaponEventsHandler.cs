@@ -13,7 +13,7 @@ public class WeaponEventsHandler : MonoBehaviour
     public void Shoot()
     {
         var transform1 = this.transform;
-        ProjectileInfo.TriggerShoot(transform1.position, transform1.forward);
+        ProjectileInfo.TriggerShoot(transform1.position, transform1.forward, EntityType.Player);
         SoundInfo.OnShoot();
         Toolbox.PlayerEvents.PlayerShoot();
     }

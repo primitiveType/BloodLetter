@@ -10,7 +10,7 @@ public class EnemyEvents : MonoBehaviour
     [SerializeField] private AudioSource Source;
     public event OnAggroEvent OnAggroEvent;
 
-    public void OnShot(ProjectileInfo projectileInfo)
+    public void OnShot(HitscanProjectileInfo projectileInfo)
     {//TODO: this should probably set an animator bool that fires an event
         OnShotEvent?.Invoke(this, new OnShotEventArgs(projectileInfo));
     }
@@ -64,10 +64,10 @@ public delegate void OnShotEvent(object sender, OnShotEventArgs args);
 
 public class OnShotEventArgs
 {
-    public ProjectileInfo ProjectileInfo { get; }
+    public HitscanProjectileInfo HitscanProjectileInfo { get; }
 
-    public OnShotEventArgs(ProjectileInfo projectileInfo)
+    public OnShotEventArgs(HitscanProjectileInfo projectileInfo)
     {
-        ProjectileInfo = projectileInfo;
+        HitscanProjectileInfo = projectileInfo;
     }
 }

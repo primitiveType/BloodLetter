@@ -40,7 +40,6 @@ public class EnemyMovement : MonoBehaviour
                 Events.OnAggro();
             }
 
-                Debug.Log($"Aggro {IsAggro}");
         }
     }
 
@@ -99,7 +98,7 @@ public class EnemyMovement : MonoBehaviour
     private void OnEnemyShot(object sender, OnShotEventArgs args)
     {
         IsAggro = true;
-        Health -= args.ProjectileInfo.Damage;
+        Health -= args.HitscanProjectileInfo.Damage;
     }
 
     private void OnEnemyStepped(object sender, OnStepEventArgs args)

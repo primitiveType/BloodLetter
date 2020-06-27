@@ -7,7 +7,7 @@ public class DamagedByProjectile : MonoBehaviour
     [SerializeField] private AnimationMaterialHelper MaterialHelper;
     [SerializeField] private EnemyEvents Events;
 
-    public bool OnShot(Vector2 textureCoord, ProjectileInfo projectileInfo)
+    public bool OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
     {
         if (MaterialHelper.QueryAlpha(textureCoord))
         {

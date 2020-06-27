@@ -1,31 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Elevator : MonoBehaviour
 {
     public float speed;
-    [SerializeField] private Transform BottomTarget;
+    [FormerlySerializedAs("BottomTarget")] [SerializeField] private Transform StartTarget;
 
-    [SerializeField] private Transform TopTarget;
+    [FormerlySerializedAs("TopTarget")] [SerializeField] private Transform EndTarget;
 
     [SerializeField] private Rigidbody rigidbody;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(Move(TopTarget));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    [SerializeField] private float delay = 2f;
+    [SerializeField] private bool returns = true;
 
     private IEnumerator Move(Transform target)
     {
-
-        Vector3 start = rigidbody.position;
+        Vector3 start = rigidbody.transform.position;
+        // Vector3 start = transform.position;
         var targetPosition = target.position;
         float distance = Vector3.Distance(start, targetPosition);
         float t = 0;
@@ -34,20 +27,39 @@ public class Elevator : MonoBehaviour
         while (t < 1f)
         {
             var currentTarget = Vector3.Lerp(start, targetPosition, t);
-            rigidbody.MovePosition(currentTarget);
+            rigidbody.transform.position = currentTarget;
+            // rigidbody.MovePosition(currentTarget);
             yield return null;
             t += (Time.deltaTime) / (distance / speed);
         }
 
-        rigidbody.position = targetPosition;
-        yield return new WaitForSeconds(2f);
-        if (target == TopTarget)
+        rigidbody.transform.position = targetPosition;
+
+        // rigidbody.position = targetPosition;
+    }
+
+    private Coroutine MoveCR;
+
+    public void Trigger()
+    {
+        if (MoveCR != null)
+            StopCoroutine(MoveCR);
+
+        MoveCR = StartCoroutine(TriggerCr());
+    }
+
+    private IEnumerator TriggerCr()
+    {
+        Transform target = EndTarget;
+        Transform returnTarget = StartTarget;
+
+        yield return Move(target);
+
+        if (returns)
         {
-            StartCoroutine(Move(BottomTarget));
+            yield return new WaitForSeconds(delay);
+
+            yield return Move(returnTarget);
         }
-        else
-        {
-            StartCoroutine(Move(TopTarget));
-        }
-    } 
+    }
 }
