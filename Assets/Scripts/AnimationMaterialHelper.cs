@@ -37,7 +37,7 @@ public class AnimationMaterialHelper : MonoBehaviour
             //no null ref, no null ref, stop!
             CurrentAnimation = "";
             var animator = materialGameObject.GetComponent<Animator>();
-            if (animator != null)
+            if (animator != null && animator.isInitialized)
             {
                 var modelName = animator.runtimeAnimatorController.name.Replace("_Animator_Controller", "");
                 modelName = modelName.Replace("_Animator", "");
