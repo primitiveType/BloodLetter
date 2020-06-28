@@ -4,6 +4,7 @@ public class Toolbox : MonoBehaviour
 {
     public static PlayerEvents PlayerEvents { get; private set; }
     public static Transform PlayerTransform { get; private set; }
+    public static Transform PlayerHeadTransform { get; private set; }
     
     public static PlayerInventory PlayerInventory { get; private set; }
 
@@ -15,6 +16,11 @@ public class Toolbox : MonoBehaviour
     public static void SetPlayerTransform(Transform transform)
     {
         PlayerTransform = transform;
+    }
+    
+    public static void SetPlayerHeadTransform(Transform transform)
+    {
+        PlayerHeadTransform = transform;
     }
 
     public static void SetPlayerInventory(PlayerInventory inventory)

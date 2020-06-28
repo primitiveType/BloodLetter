@@ -5,7 +5,7 @@ using Debug = UnityEngine.Debug;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
-public class HitscanProjectileInfo : ProjectileInfoBase
+public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
 {
     public bool Piercing;
     public GameObject OnHitPrefab;
@@ -32,7 +32,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase
                     var hitCoord = hit.textureCoord;
                     // Debug.Log($"hit {hit.textureCoord} ");
 
-                    DamagedByProjectile damaged = hit.collider.GetComponent<DamagedByProjectile>();
+                    DamagedByHitscanProjectile damaged = hit.collider.GetComponent<DamagedByHitscanProjectile>();
                     if (damaged && damaged.OnShot(hitCoord, this))
                     {
                         isDone = true;
@@ -65,6 +65,11 @@ public class HitscanProjectileInfo : ProjectileInfoBase
                 }
             }
         
+    }
+
+    public float GetDamage(ActorHealth hitActor)
+    {
+        return Damage;
     }
 }
 

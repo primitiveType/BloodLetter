@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ExplodeOnCollide : MonoBehaviour
 {
-
+    [SerializeField] private GameObject SpawnOnCollide;
     private void OnCollisionEnter(Collision other)
     {
         Explode();
@@ -13,8 +13,11 @@ public class ExplodeOnCollide : MonoBehaviour
         {
             Debug.Log("Hit enemy!");
         }
-        else
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            Debug.Log("Hit Player!");
+        }
+        else{
             Debug.Log("Hit environment!");
         }
     }
@@ -23,9 +26,8 @@ public class ExplodeOnCollide : MonoBehaviour
 
     private void Explode()
     {
-        var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.transform.position = transform.position;
         Destroy(gameObject);
-        
+        var spawned = Instantiate(SpawnOnCollide);
+        spawned.transform.position = transform.position;
     }
 }

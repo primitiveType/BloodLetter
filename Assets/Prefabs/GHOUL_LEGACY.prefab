@@ -10,7 +10,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.38
+  m_Radius: 0.5
   m_Height: 1.88
   m_Direction: 1
   m_Center: {x: 0, y: 0.95, z: 0}
@@ -21,6 +21,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 467093247551489786, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Health
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 467093247551489786, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_MaxHealth
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719011904598006074, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: AttackProjectile
+      value: 
+      objectReference: {fileID: 3999468812405218162, guid: c2abc22dc803abe48b8bd9f109db6417,
+        type: 3}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: hurtClips.Array.size
@@ -89,12 +110,12 @@ PrefabInstance:
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.03680892
+      value: -0.7686367
       objectReference: {fileID: 0}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99932235
+      value: 0.6396856
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255443565340, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

@@ -21,6 +21,5 @@ public class WeaponEventsHandler : MonoBehaviour
     public void Reload()
     {
         SoundInfo.OnReload();
-
     }
 }

@@ -10,7 +10,8 @@ public class ProjectileInfo : ProjectileInfoBase
         projectile.layer = ownerType == EntityType.Player
             ? LayerMask.NameToLayer("PlayerProjectile")
             : LayerMask.NameToLayer("EnemyProjectile");
-        projectile.transform.position = playerPosition + (playerDirection * .1f);
+        projectile.transform.position = playerPosition + (playerDirection * .25f);
         projectile.transform.forward = playerDirection;
     }
+
 }

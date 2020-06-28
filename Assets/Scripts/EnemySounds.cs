@@ -31,11 +31,11 @@ public class EnemySounds : MonoBehaviour
     private AudioSource HurtSource { get; set; }
     private AudioSource AttackSource { get; set; } //I don't think its smart to have this many sources.
 
-    private EnemyEvents Events;
+    private ActorEvents Events;
 
     private void Start()
     {
-        Events = GetComponent<EnemyEvents>();
+        Events = GetComponent<ActorEvents>();
         Events.OnStepEvent += OnEnemyStepped;
         Events.OnShotEvent += OnEnemyShot;
         Events.OnAttackEvent += OnEnemyAttack;

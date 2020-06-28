@@ -2,7 +2,7 @@
 using System.Diagnostics.Tracing;
 using UnityEngine;
 
-public class PlayerEvents : MonoBehaviour
+public class PlayerEvents : ActorEvents
 {
     public event PlayerShootEvent PlayerShootEvent;
     public event PlayerInteractEvent PlayerInteractEvent;
