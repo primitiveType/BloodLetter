@@ -986,3 +986,164 @@ MonoBehaviour:
     normalMap: {fileID: 18700000, guid: 766f3d17882ab6f4b8ee09858f7f852f, type: 2}
     diffuseMap: {fileID: 18700000, guid: 74db80302afc63b4ca541b36c5503d58, type: 2}
     alphaMap: {fileID: 18700000, guid: 08bab9d391d4de547b349575aa735b0c, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: Assault_Rifle_01_FPSController_TPose
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: ea491a52db276d44e9b09cb1765169da, type: 2}
+    diffuseMap: {fileID: 2800000, guid: b91dccd95769be84ea9c739f7a1830ff, type: 2}
+    alphaMap: {fileID: 2800000, guid: 76a416f8845614c49ad759d7fa1f8ae9, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: Assault_Rifle_01_FPSController_aim_fire@assault_rifle_01
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: dc95d40e06563ad4a97fa2a25910e219, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 461845b913dae1d40b68110b19082ae5, type: 2}
+    alphaMap: {fileID: 2800000, guid: 5eff11bb020433b4ab96be772742a906, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: Assault_Rifle_01_FPSController_aim_in@assault_rifle_01
+    numFrames: 2
+    normalMap: {fileID: 2800000, guid: 5aa7be2352459fc418436d73673561b5, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 767e6d8c88c7c7b47a8483ddf07e6b44, type: 2}
+    alphaMap: {fileID: 2800000, guid: 53b364d3ea42b914caae22416c11120a, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: Assault_Rifle_01_FPSController_aim_out@assault_rifle_01
+    numFrames: 2
+    normalMap: {fileID: 2800000, guid: 7a2304a4fccf5424abb4c1a5c6e19630, type: 2}
+    diffuseMap: {fileID: 2800000, guid: d348dd9164e710448ba89a227838163b, type: 2}
+    alphaMap: {fileID: 2800000, guid: b869ade5cdda55f418613b20580b3020, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: Assault_Rifle_01_FPSController_fire@assault_rifle_01
+    numFrames: 4
+    normalMap: {fileID: 2800000, guid: 3ff5e92d055e3ee46b74d93dd8891de3, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 853bc9e8f3b0b7643a455c62fb00254c, type: 2}
+    alphaMap: {fileID: 2800000, guid: c437bdf6d1b72494cbb10e49af8b62d6, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: Assault_Rifle_01_FPSController_grenade_throw@assault_rifle_01
+    numFrames: 6
+    normalMap: {fileID: 2800000, guid: 33a2d84539053ee4a86dc88737770334, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 687c9f5803d49aa4a97ff329b4d22add, type: 2}
+    alphaMap: {fileID: 2800000, guid: 14ffbc7cadb34d9429cdd119558d47fc, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: Assault_Rifle_01_FPSController_holster_weapon@assault_rifle_01
+    numFrames: 2
+    normalMap: {fileID: 2800000, guid: 8cc58a3f49e2b72418321f7751ad8c0e, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 6b2fe8591858fcd48a1b9003d2458636, type: 2}
+    alphaMap: {fileID: 2800000, guid: 149431cea1e25b743bf96a947417fd16, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: Assault_Rifle_01_FPSController_idle@assault_rifle_01
+    numFrames: 10
+    normalMap: {fileID: 2800000, guid: 1f45c127d775ccf4aacb55c003abaa11, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 1f7823efa65d7384a98f238455f06c95, type: 2}
+    alphaMap: {fileID: 2800000, guid: 869b4800c9d728d4b8dc3f3b3dd6148d, type: 2}
+  - rows: 4
+    columns: 6
+    animationName: Assault_Rifle_01_FPSController_inspect_weapon@assault_rifle_01
+    numFrames: 22
+    normalMap: {fileID: 2800000, guid: dba96fc5a36f3d94ea4a625714f7d2da, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 9978dbb744e2ba94095a566cf203065c, type: 2}
+    alphaMap: {fileID: 2800000, guid: 4be9327743d463e4c88c2d7a86394fd5, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: Assault_Rifle_01_FPSController_knife_attack_1@assault_rifle_01
+    numFrames: 12
+    normalMap: {fileID: 2800000, guid: 123cb0d113e5d4c4088fdfa1aa3600f8, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 44e46f2d22fc52a49b1c8b40bcfcae83, type: 2}
+    alphaMap: {fileID: 2800000, guid: 9c18cfbb28dbe4845bf4aa803a0e79f3, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: Assault_Rifle_01_FPSController_knife_attack_2@assault_rifle_01
+    numFrames: 5
+    normalMap: {fileID: 2800000, guid: f630ed24d84ad1249bfd4b6c5aec3da8, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 63460bcf3a27d3b40b78352d31fc3e97, type: 2}
+    alphaMap: {fileID: 2800000, guid: d6c1f0c3f4e9f6f48ba0f3805580bbc5, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: Assault_Rifle_01_FPSController_reload_ammo_left@assault_rifle_01
+    numFrames: 11
+    normalMap: {fileID: 2800000, guid: 09324808fa9ba344ba90b3ce54a96058, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f97bf817bc515cc468050dbe6ea1b13f, type: 2}
+    alphaMap: {fileID: 2800000, guid: 3f82ca28919e0454fa65110f44729ea2, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: Assault_Rifle_01_FPSController_reload_out_of_ammo@assault_rifle_01
+    numFrames: 15
+    normalMap: {fileID: 2800000, guid: 0e6697e75609e7a4b9c32a474b951823, type: 2}
+    diffuseMap: {fileID: 2800000, guid: ca58fa8686f6e2844aa49d9253be2cd2, type: 2}
+    alphaMap: {fileID: 2800000, guid: 2e7abc5ce9244cb4085edaf6209b8078, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: Assault_Rifle_01_FPSController_run@assault_rifle_01
+    numFrames: 4
+    normalMap: {fileID: 2800000, guid: 349e6634d5a50aa41a47a3cbb28c6272, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 93236a68e0a06854d9a7d275a8acbdb2, type: 2}
+    alphaMap: {fileID: 2800000, guid: e216fe8f6217971488f523047b540add, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: Assault_Rifle_01_FPSController_take_out_weapon@assault_rifle_01
+    numFrames: 7
+    normalMap: {fileID: 2800000, guid: 345170f24e5fcfd448e6fa516b1cf7e5, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 2253b7d368f1ce64a8bc4188e69d10b9, type: 2}
+    alphaMap: {fileID: 2800000, guid: c8f771484bc25c44c9abb890bac185ba, type: 2}
+  - rows: 2
+    columns: 2
+    animationName: Assault_Rifle_01_FPSController_walk@assault_rifle_01
+    numFrames: 4
+    normalMap: {fileID: 2800000, guid: 941edc45280fe284296c095d17a0fdaf, type: 2}
+    diffuseMap: {fileID: 2800000, guid: fd4105db83fd4cf4f843ea7b728b1ae5, type: 2}
+    alphaMap: {fileID: 2800000, guid: ffe6342e74d14974891ad2701ab199f3, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: Camera_TPose
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: 5995dc1f1b4f78245986770308c61c34, type: 2}
+    diffuseMap: {fileID: 2800000, guid: d9faa39064565564e92a7814fd6c9dc5, type: 2}
+    alphaMap: {fileID: 2800000, guid: b6109e8ea51cdd840aa2aa757ec41e20, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: Camera_Attack
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: 1d1aed009018d42439c78de5b0b95685, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 866595e9865e749479091c9d5fd39239, type: 2}
+    alphaMap: {fileID: 2800000, guid: a1b3e4732ec40f547abbb254261fce91, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: RingStaff_TPose
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: 8efad4e096e6694438c74de2a904b9e1, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 786b9def69eb2af4eaeb8e592dd40dc0, type: 2}
+    alphaMap: {fileID: 2800000, guid: 40fe893944bd7b4438fcc8494382f526, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: RingStaff_Attack
+    numFrames: 2
+    normalMap: {fileID: 2800000, guid: 9b78439b3de5b154984fcb80b816f057, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f4735ffe4238d9441a673871b6394d93, type: 2}
+    alphaMap: {fileID: 2800000, guid: 25dd2773facfd98429db387189b6c04c, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: RingStaff_AttackStart
+    numFrames: 2
+    normalMap: {fileID: 2800000, guid: bd92e9cd187b4b24cabe565a3d321687, type: 2}
+    diffuseMap: {fileID: 2800000, guid: dd0d3e88c193b474baf74725c970f638, type: 2}
+    alphaMap: {fileID: 2800000, guid: c6218a0f686218f45959ef12e36ed8d3, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: RingStaff_Idle long
+    numFrames: 2
+    normalMap: {fileID: 2800000, guid: 2e0a737b0c55eaa49a36e1caf19e0d04, type: 2}
+    diffuseMap: {fileID: 2800000, guid: e79f62dd48f6c2548b7bf01162d84d6d, type: 2}
+    alphaMap: {fileID: 2800000, guid: 3f88d763a1f5ce14bbf9d6f49362658b, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: RingStaff_Idle
+    numFrames: 2
+    normalMap: {fileID: 2800000, guid: 8916b30a89b7d3f4cb468617baf6a4d9, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f48f3b32f0e69fc4882dfe9550730537, type: 2}
+    alphaMap: {fileID: 2800000, guid: 13bd9ab2093b6bd4481e93dc26554c7e, type: 2}

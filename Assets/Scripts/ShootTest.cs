@@ -10,31 +10,29 @@ public class ShootTest : MonoBehaviour
 
     [SerializeField] private float cooldown;
 
-    private PlayerInventory Inventory;
-
-    [SerializeField] private AmmoType AmmoType;
-    [SerializeField] private int AmmoUsed = 1;
-    
     private float shootTimestamp = -100;
+    private static readonly int Shooting = Animator.StringToHash("Shooting");
+
+    private UsesAmmo UsesAmmo;
 
     // Start is called before the first frame update
     void Start()
     {
-        _animator = GetComponent<Animator>();
-        Inventory = Toolbox.PlayerInventory;
+        _animator = GetComponentInChildren<Animator>();
+        UsesAmmo = GetComponent<UsesAmmo>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!Input.GetMouseButton(0) || !CanShoot())
         {
-            if (CanShoot())
-            {
-                _animator.SetTrigger(Shoot);
-                Inventory.UseAmmo(AmmoType, AmmoUsed);
-            }
+            _animator.SetBool(Shooting, false);
+            return;
         }
+
+        _animator.SetBool(Shooting, true);
+        // Inventory.UseAmmo(AmmoType, AmmoUsed);//this should not be here
     }
 
     private bool CanShoot()
@@ -44,6 +42,6 @@ public class ShootTest : MonoBehaviour
 
     private bool HasAmmo()
     {
-        return Inventory.GetAmmoAmount(AmmoType) > 0;
+        return UsesAmmo.HasAmmo();
     }
 }

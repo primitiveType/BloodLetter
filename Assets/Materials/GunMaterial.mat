@@ -34,11 +34,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Alpha:
-        m_Texture: {fileID: 2800000, guid: e805093c8134cb64db30f55ce2e56e6d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 869b4800c9d728d4b8dc3f3b3dd6148d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Normals:
-        m_Texture: {fileID: 2800000, guid: 56d61dca811de7340bfe1f2007063d6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1f45c127d775ccf4aacb55c003abaa11, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Textures:
@@ -58,7 +58,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 409cbddedf84ec548aa03cdc471f81d4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1f7823efa65d7384a98f238455f06c95, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -79,7 +79,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Columns: 4
-    - Frame: 89.4
+    - Frame: 1.36
     - FrameHeight: 200
     - FrameWidth: 200
     - NumFrames: 10

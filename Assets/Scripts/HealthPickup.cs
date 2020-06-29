@@ -14,6 +14,6 @@ public class HealthPickup : Pickup<ActorHealth>
 
     protected override void PickupItem()
     {
-        throw new NotImplementedException();
+        currentActor.Heal(HealAmount);
     }
 }

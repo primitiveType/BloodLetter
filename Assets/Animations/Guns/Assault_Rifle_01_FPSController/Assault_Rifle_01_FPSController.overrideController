@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Assault_Rifle_01_FPSController
+  m_Controller: {fileID: 9100000, guid: aa93b4737b9b16840987d1f4309f45b5, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c8a92fce8c3bf9a4d8dcfd3ec7fefce9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 639d0bb8362382145b22b53570b0382c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4872c3419be25ca40ae75419f58fae68, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 56aa2624da50bdc4e8c04401fcabcd76, type: 2}

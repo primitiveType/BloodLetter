@@ -49,6 +49,8 @@ public class AnimationMaterialHelper : MonoBehaviour
 
     private string CurrentAnimation { get; set; }
 
+    public bool resize = true;
+
     public void AnimationStarted(string animationName)
     {
         if (animationName != CurrentAnimation)
@@ -60,18 +62,21 @@ public class AnimationMaterialHelper : MonoBehaviour
             _dictionary.GetPropertyBlock(block, animationName);
 
             MyRenderer.SetPropertyBlock(block);
-            var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
+            if (resize)
+            {
+                var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
 
-            var meshMultiplier = 1f;
+                var meshMultiplier = 1f;
 
-            var width = (float) meshMultiplier * block.GetInt(AnimationMaterialPropertyBlock.FrameWidthProperty) /
-                        pxPerMeter;
-            var height = (float) meshMultiplier * block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
-                         pxPerMeter;
-            materialGameObject.transform.localScale =
-                new Vector3((float) width, (float) height, 1);
-            float yFudge = .01f;
-            materialGameObject.transform.localPosition = new Vector3(0, (height / 2) - yFudge, 0);
+                var width = (float) meshMultiplier * block.GetInt(AnimationMaterialPropertyBlock.FrameWidthProperty) /
+                            pxPerMeter;
+                var height = (float) meshMultiplier * block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
+                             pxPerMeter;
+                materialGameObject.transform.localScale =
+                    new Vector3((float) width, (float) height, 1);
+                float yFudge = .01f;
+                materialGameObject.transform.localPosition = new Vector3(0, (height / 2) - yFudge, 0);
+            }
         }
     }
 
