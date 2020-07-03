@@ -46,9 +46,9 @@ public class ActorEvents : MonoBehaviour
         OnHealthChangedEvent?.Invoke(this, new OnHealthChangedEventArgs(amount, isHealing));
     }
 
-    public void OnAmmoChanged(int newValue, AmmoType type)
+    public void OnAmmoChanged(int oldValue, int newValue, AmmoType type)
     {
-        OnAmmoChangedEvent?.Invoke(this, new OnAmmoChangedEventArgs(newValue, type));
+        OnAmmoChangedEvent?.Invoke(this, new OnAmmoChangedEventArgs(oldValue, newValue, type));
     }
 }
 
@@ -56,13 +56,15 @@ public delegate void OnAmmoChangedEvent(object sender, OnAmmoChangedEventArgs ar
 
 public class OnAmmoChangedEventArgs
 {
-    public OnAmmoChangedEventArgs(int newValue, AmmoType type)
+    public OnAmmoChangedEventArgs(int oldValue, int newValue, AmmoType type)
     {
         NewValue = newValue;
+        OldValue = oldValue;
         Type = type;
     }
 
     public int NewValue { get; }
+    public int OldValue { get; }
     public AmmoType Type { get; }
 }
 

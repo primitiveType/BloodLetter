@@ -4,7 +4,7 @@ using UnityEngine;
 public class WeaponEventsHandler : MonoBehaviour
 {
     [SerializeField]public ProjectileInfoBase ProjectileInfo;
-
+    [SerializeField] private Transform BarrelTransform;
     public WeaponSoundInfo SoundInfo;
     private void Update()
     {
@@ -13,7 +13,7 @@ public class WeaponEventsHandler : MonoBehaviour
     public void Shoot()
     {
         var transform1 = this.transform;
-        ProjectileInfo.TriggerShoot(transform1.position, transform1.forward, EntityType.Player);
+        ProjectileInfo.TriggerShoot(BarrelTransform.position, transform1.forward, EntityType.Player);
         SoundInfo.OnShoot();
         Toolbox.PlayerEvents.PlayerShoot();
     }

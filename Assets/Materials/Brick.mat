@@ -8,20 +8,24 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Brick
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 71ef44e4145871647aab14a30fa33a8e,
+    type: 3}
   m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - Albedo:
         m_Texture: {fileID: 2800000, guid: f3a54662291082b46a60e337e487e8af, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Emission_Map:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Normal:
@@ -74,6 +78,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelScale: 9.37
+    - Quantize: 256
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1

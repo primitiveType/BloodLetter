@@ -61,7 +61,7 @@ public class PlayerInventory : MonoBehaviour
         Ammo[type] = Mathf.CeilToInt(Mathf.Clamp((float) Ammo[type] + amount, 0, (float) GetMaxAmmoAmount(type)));
         if (Ammo[type] != prevAmount)
         {
-            Events.OnAmmoChanged(Ammo[type], type);
+            Events.OnAmmoChanged(prevAmount, Ammo[type], type);
         }
     }
 
@@ -73,7 +73,8 @@ public class PlayerInventory : MonoBehaviour
 
 public enum AmmoType
 {
-    Shotgun
+    Shotgun,
+    Mana
 }
 
 public interface IInventoryItem
