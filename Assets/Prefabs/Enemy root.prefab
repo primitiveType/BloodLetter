@@ -54,6 +54,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1719011904598006074}
   - component: {fileID: 3929751026080770742}
+  - component: {fileID: 678540891885456008}
+  - component: {fileID: 7486875836196438498}
   m_Layer: 8
   m_Name: Attack root
   m_TagString: Untagged
@@ -90,6 +92,36 @@ MonoBehaviour:
   m_Events: {fileID: 6510712830491665609}
   AttackCooldown: 3
   AttackProjectile: {fileID: 0}
+  m_animator: {fileID: 8171493255988436112}
+  VisibilityHandler: {fileID: 678540891885456008}
+--- !u!114 &678540891885456008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866908215882061170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae88e089cfc540f09cefbd6347c3c366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7486875836196438498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866908215882061170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70db34b636d44611898f3c694e40a0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisibilityHandler: {fileID: 678540891885456008}
+  m_Events: {fileID: 6510712830491665609}
+  AggroRange: 10
+  EarshotAggroRange: 40
   m_animator: {fileID: 8171493255988436112}
 --- !u!1 &8171493255443565340
 GameObject:
@@ -176,12 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Agent: {fileID: 6392817097388422497}
-  AggroRange: 6
-  EarshotAggroRange: 20
-  Attack:
-    Radius: 2
-    Range: 2
-  DeAggroRange: 20
+  AggroHandler: {fileID: 7486875836196438498}
   m_Events: {fileID: 6510712830491665609}
   Target: {fileID: 0}
 --- !u!114 &467093247551489786
@@ -198,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events: {fileID: 6510712830491665609}
   m_Health: 1
+  m_MaxHealth: 0
 --- !u!1 &8171493255988436123
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
   materialGameObject: {fileID: 8171493255988436123}
+  resize: 1
+  reposition: 1
 --- !u!64 &8336314595322558068
 MeshCollider:
   m_ObjectHideFlags: 0

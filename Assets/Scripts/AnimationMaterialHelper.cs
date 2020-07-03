@@ -50,6 +50,7 @@ public class AnimationMaterialHelper : MonoBehaviour
     private string CurrentAnimation { get; set; }
 
     public bool resize = true;
+    public bool reposition = true;
 
     public void AnimationStarted(string animationName)
     {
@@ -62,20 +63,24 @@ public class AnimationMaterialHelper : MonoBehaviour
             _dictionary.GetPropertyBlock(block, animationName);
 
             MyRenderer.SetPropertyBlock(block);
+
+
             if (resize)
             {
                 var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
 
-                var meshMultiplier = 1f;
-
-                var width = (float) meshMultiplier * block.GetInt(AnimationMaterialPropertyBlock.FrameWidthProperty) /
+                var width = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameWidthProperty) /
                             pxPerMeter;
-                var height = (float) meshMultiplier * block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
+                var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
                              pxPerMeter;
                 materialGameObject.transform.localScale =
                     new Vector3((float) width, (float) height, 1);
+            }
+
+            if (reposition)
+            {
                 float yFudge = .01f;
-                materialGameObject.transform.localPosition = new Vector3(0, (height / 2) - yFudge, 0);
+                materialGameObject.transform.localPosition = new Vector3(0, (materialGameObject.transform.localScale.y / 2) - yFudge, 0);
             }
         }
     }
@@ -84,6 +89,7 @@ public class AnimationMaterialHelper : MonoBehaviour
     private string AnimationUsedForLastAlphaCheck;
     private Texture2DArray cachedAlpha;
     private Color[] cachedAlphaPixels;
+
     /// <summary>
     /// returns true if the coordinate is alpha > .5f for the current anim frame
     /// </summary>
@@ -98,7 +104,7 @@ public class AnimationMaterialHelper : MonoBehaviour
             Debug.Log("getting texture array for alpha check");
             AnimationUsedForLastAlphaCheck = CurrentAnimation;
             cachedAlpha = (Texture2DArray) (cachedPropertyBlock).GetTexture(Alpha);
-            
+
             perspective =
                 Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
                     7); //it's actually possible to get back 8 from this which is invalid.
@@ -111,8 +117,6 @@ public class AnimationMaterialHelper : MonoBehaviour
                 Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
                     7); //it's actually possible to get back 8 from this which is invalid.
         }
-
-        
 
 
         int totalWidth = cachedAlpha.width;

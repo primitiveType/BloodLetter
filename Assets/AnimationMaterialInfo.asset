@@ -1182,3 +1182,31 @@ MonoBehaviour:
     normalMap: {fileID: 2800000, guid: 6ad752dfa7fa9ac478dba602efbd6313, type: 2}
     diffuseMap: {fileID: 2800000, guid: 95483fb66097d5d4190539b860a9d434, type: 2}
     alphaMap: {fileID: 2800000, guid: 47837195f2ba4274087342f8d39ded55, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: ceiling chain_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 0c86ffe754afbd14fa6372999e9a33bf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 70fb2ccbe5f634e4aaed531705b88553, type: 2}
+    alphaMap: {fileID: 18700000, guid: 590125cf1fb21954eb9eb0b5586d4d5f, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: ceiling chain_WaitOneSecond
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 8ae8f8aa722ae314aa12ea0c6a9b8c39, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c56f10f26b0570b4385cb391273e9ec7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9aa65d5a963242d469eefcdf372b9ffc, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: Chandelier_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 2c37353b0f0d4e74eb3264fe0f7f1570, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7d788fc2170825d44a1f7c20a71f248d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3fd102fc7f087fb4494a695be001fe33, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: Chandelier_WaitOneSecond
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: e943829cf1d0a134486c2d8f7f98998d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 174cde43b959ca84da2382db5f73ce41, type: 2}
+    alphaMap: {fileID: 18700000, guid: 43217425f62606a4fba6c7990df1494d, type: 2}

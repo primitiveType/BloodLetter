@@ -12,7 +12,6 @@ public class MonsterAttackComponent : MonoBehaviour
     }
 
     private Transform Target { get; set; }
-    private Transform TargetCollider { get; set; }
     private Transform MonsterTransform { get; set; }
 
     private float LastAttackTimeStamp { get; set; }
@@ -22,6 +21,8 @@ public class MonsterAttackComponent : MonoBehaviour
 
     [SerializeField] private ProjectileInfoBase AttackProjectile;
     [SerializeField] private Animator m_animator;
+
+    [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
 
     public ActorEvents Events
     {
@@ -33,7 +34,6 @@ public class MonsterAttackComponent : MonoBehaviour
     {
         Events.OnAttackEvent += OnEnemyAttack;
         Target = Toolbox.PlayerHeadTransform;
-        TargetCollider = Toolbox.PlayerTransform;
         MonsterTransform = transform;
     }
 
@@ -47,7 +47,7 @@ public class MonsterAttackComponent : MonoBehaviour
 
     public void Update()
     {
-        if (!(Time.time - LastAttackTimeStamp > AttackCooldown) || !CanSeePlayer())
+        if (!(Time.time - LastAttackTimeStamp > AttackCooldown) || !VisibilityHandler.CanSeePlayer())
         {
             Animator.SetBool(Attacking, false);
             return;
@@ -57,25 +57,7 @@ public class MonsterAttackComponent : MonoBehaviour
         LastAttackTimeStamp = Time.time;
     }
 
-    private bool CanSeePlayer()
-    {
-        var angle = Vector3.Dot(Target.position - MonsterTransform.position, MonsterTransform.forward);
-        if (angle < 0) //if monster isn't facing player
-        {
-            return false;
-        }
 
-        //might want to offset monster position so they can see over low walls, etc.
-        Ray ray = new Ray(MonsterTransform.position, Target.position - MonsterTransform.position);
-        Debug.DrawRay(ray.origin, ray.direction, Color.red, 5f);
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, 100, LayerMask.GetMask("Player", "Default")))
-        {
-            return hitInfo.transform == TargetCollider;
-        }
-
-
-        return false;
-    }
 
     private void OnDestroy()
     {
