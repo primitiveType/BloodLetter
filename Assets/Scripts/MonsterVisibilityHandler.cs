@@ -36,7 +36,7 @@ public class MonsterVisibilityHandler : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction, Color.red, 5f);
         if (Physics.Raycast(ray, out RaycastHit hitInfo, 100, LayerMask.GetMask("Player", "Default")))
         {
-            m_CanSeePlayer =  hitInfo.transform == TargetCollider;
+           return  m_CanSeePlayer =  hitInfo.transform == TargetCollider;
         }
 
 

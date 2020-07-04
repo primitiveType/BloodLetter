@@ -31,6 +31,7 @@ public class ShootTest : MonoBehaviour
             return;
         }
 
+        shootTimestamp = Time.time;
         _animator.SetBool(Shooting, true);
         // Inventory.UseAmmo(AmmoType, AmmoUsed);//this should not be here
     }

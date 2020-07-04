@@ -119,6 +119,31 @@ void AdditionalLights_float(float3 SpecColor, float Smoothness, float3 WorldPosi
     Specular = specularColor;
 }
 
+void TotalAttenuatedLightColor_float(float3 WorldPosition, out float3 LightColor)
+{
+    LightColor = 0;
+#ifndef SHADERGRAPH_PREVIEW
+    int pixelLightCount = GetAdditionalLightsCount();
+    for (int i = 0; i < pixelLightCount; ++i)
+    {
+        Light light = GetAdditionalLight(i, WorldPosition);
+        float3 attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+        LightColor += attenuatedLightColor;
+    }
+    
+         #if SHADOWS_SCREEN
+            float4 clipPos = TransformWorldToHClip(WorldPos);
+            float4 shadowCoord = ComputeScreenPos(clipPos);
+        #else
+            float4 shadowCoord = TransformWorldToShadowCoord(WorldPosition);
+        #endif
+      Light mainLight = GetMainLight(shadowCoord);
+                    float3 attenuatedLightColor = mainLight.color * (mainLight.distanceAttenuation * mainLight.shadowAttenuation);
+
+        LightColor += attenuatedLightColor;
+#endif
+}
+
 void AdditionalLights_half(half3 SpecColor, half Smoothness, half3 WorldPosition, half3 WorldNormal, half3 WorldView, out half3 Diffuse, out half3 Specular, out half ShadowAtten)
 {
     half3 diffuseColor = 0;

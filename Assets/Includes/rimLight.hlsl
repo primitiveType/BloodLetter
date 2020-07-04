@@ -10,9 +10,10 @@ float TakeClosestToValue(float first, float second, float value)
     }
     return first;
 }
-void AdditionalLightsAngle_float(float3 WorldNormal, float3 WorldPos, out float cosAngle){
+void AdditionalLightsAngle_float(float3 WorldNormal, float3 WorldPos, out float cosAngle, out float distanceAttenuation){
     WorldNormal = normalize(WorldNormal);
-        cosAngle = 1;
+    distanceAttenuation = 0;
+        cosAngle = .5;
         #ifndef SHADERGRAPH_PREVIEW
 
     int pixelLightCount = GetAdditionalLightsCount();
@@ -20,14 +21,21 @@ void AdditionalLightsAngle_float(float3 WorldNormal, float3 WorldPos, out float 
     {
         Light light = GetAdditionalLight(i, WorldPos);
         float tempCos = dot(TransformWorldToObject(WorldNormal), TransformWorldToObject(light.direction));
-        cosAngle = TakeClosestToValue(tempCos, cosAngle, -.5);
-   
+        if(light.distanceAttenuation > distanceAttenuation){
+                cosAngle = TakeClosestToValue(tempCos, cosAngle, -.5);
+
+        distanceAttenuation  = light.distanceAttenuation;
+}        
     }   
      float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
-
      Light mainLight = GetMainLight(shadowCoord);
-     cosAngle = TakeClosestToValue(dot(TransformWorldToObject(WorldNormal), TransformWorldToObject(mainLight.direction)) , cosAngle, -.5);
 
+if(mainLight.distanceAttenuation > distanceAttenuation){
+
+
+     cosAngle = TakeClosestToValue(dot(TransformWorldToObject(WorldNormal), TransformWorldToObject(mainLight.direction)) , cosAngle, -.5);
+     distanceAttenuation = mainLight.distanceAttenuation;
+}
      #endif
 
    /* Direction = mainLight.direction;
