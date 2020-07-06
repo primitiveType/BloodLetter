@@ -4,6 +4,8 @@ public class AmmoPickup : Pickup<PlayerInventory>
 {
     [SerializeField] private AmmoType Type;
     [SerializeField] private int Amount;
+    protected override string toastMessage => $"Picked up {Amount} {Type.ToString()} Ammo";
+
     protected override bool CanBePickedUp()
     {
         return currentActor.GetAmmoAmount(Type) < currentActor.GetMaxAmmoAmount(Type);

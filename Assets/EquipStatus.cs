@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class EquipStatus : MonoBehaviour
 {
+    [FormerlySerializedAs("WeaponId")] [SerializeField] private WeaponId m_WeaponId;
     [SerializeField] private WeaponEventsHandler Events;
- 
+
+    public WeaponId WeaponId => m_WeaponId;
     private Vector3 EquippedPosition => new Vector3(0,0,0);
     private Vector3 UnequippedPosition => new Vector3(0,-1,0);
     private float TimeToLerp = .2f;
@@ -17,11 +20,16 @@ public class EquipStatus : MonoBehaviour
     [SerializeField] private Animator Animator;
     private static readonly int Equipped = Animator.StringToHash("Equipped");
 
-    public void Awake()
+    public void Start()
     {
         TransformToLerp = transform;
+        Toolbox.Instance.PlayerEvents.OnWeaponsChangedEvent += PlayerEventsOnOnWeaponsChangedEvent;
     }
 
+    public bool CanEquip()
+    {
+        return Toolbox.Instance.PlayerInventory.HasWeapon(m_WeaponId);
+    }
     public IEnumerator Equip()
     {
         IsEquipped = true;
@@ -56,4 +64,16 @@ public class EquipStatus : MonoBehaviour
 
     }
     
+    private void PlayerEventsOnOnWeaponsChangedEvent(object sender, OnWeaponsChangedEventArgs args)
+    {
+        if ((args.NewValue ^ args.OldValue) == WeaponId)
+        {
+            Toolbox.Instance.EquipThing(this);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        Toolbox.Instance.PlayerEvents.OnWeaponsChangedEvent += PlayerEventsOnOnWeaponsChangedEvent;
+    }
 }

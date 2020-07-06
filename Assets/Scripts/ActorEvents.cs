@@ -11,6 +11,7 @@ public class ActorEvents : MonoBehaviour
     [SerializeField] private AudioSource Source;
     public event OnAggroEvent OnAggroEvent;
     public event OnAmmoChangedEvent OnAmmoChangedEvent;
+    public event OnWeaponsChangedEvent OnWeaponsChangedEvent;
 
     /// <summary>
     /// Should really be called "OnDamaged"
@@ -50,6 +51,25 @@ public class ActorEvents : MonoBehaviour
     {
         OnAmmoChangedEvent?.Invoke(this, new OnAmmoChangedEventArgs(oldValue, newValue, type));
     }
+    
+    public void OnWeaponsChanged(WeaponId oldValue, WeaponId newValue)
+    {
+        OnWeaponsChangedEvent?.Invoke(this, new OnWeaponsChangedEventArgs(oldValue, newValue));
+    }
+}
+
+public delegate void OnWeaponsChangedEvent(object sender, OnWeaponsChangedEventArgs args);
+
+public class OnWeaponsChangedEventArgs
+{
+    public OnWeaponsChangedEventArgs(WeaponId oldValue, WeaponId newValue)
+    {
+        NewValue = newValue;
+        OldValue = oldValue;
+    }
+
+    public WeaponId NewValue { get; }
+    public WeaponId OldValue { get; }
 }
 
 public delegate void OnAmmoChangedEvent(object sender, OnAmmoChangedEventArgs args);

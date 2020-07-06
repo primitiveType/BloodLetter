@@ -7,6 +7,8 @@ public class HealthPickup : Pickup<ActorHealth>
 {
     [SerializeField] private float HealAmount;
 
+    protected override string toastMessage => $"Pickep up {HealAmount} Health";
+
     protected override bool CanBePickedUp()
     {
         return !currentActor.IsFullHealth && currentActor.IsAlive;

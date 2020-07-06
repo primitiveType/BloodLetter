@@ -9,6 +9,8 @@ public class PlayerInventory : MonoBehaviour
 
     private Dictionary<AmmoType, int> Ammo { get; } = new Dictionary<AmmoType, int>();
 
+    [SerializeField] private WeaponId Weapons;
+
     private void Awake()
     {
         Toolbox.Instance.SetPlayerInventory(this);
@@ -20,6 +22,23 @@ public class PlayerInventory : MonoBehaviour
     {
         return Items.ToList();
     }
+
+    public void GetWeapon(WeaponId weapon)
+    {
+        var prevValue = Weapons;
+        Weapons |= weapon;
+
+        if (prevValue != Weapons)
+        {
+            Events.OnWeaponsChanged(prevValue, Weapons);
+        }
+    }
+
+    public bool HasWeapon(WeaponId weapon)
+    {
+        return Weapons.HasFlag(weapon);
+    }
+    
 
     public void AddItem(IInventoryItem toAdd)
     {

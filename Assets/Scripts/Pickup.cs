@@ -6,6 +6,8 @@ public abstract class Pickup<T> : MonoBehaviour where T : Component
     private Collider currentCollider;
     protected T currentActor;
 
+    protected abstract string toastMessage { get; }
+
     private void Awake()
     {
         gameObject.layer = LayerMask.NameToLayer("Pickup");
@@ -21,6 +23,11 @@ public abstract class Pickup<T> : MonoBehaviour where T : Component
 
         if (currentActor != null && CanBePickedUp())
         {
+            if (toastMessage != null)
+            {
+                ToastHandler.Instance.PopToast(toastMessage);
+            }
+
             PickupItem();
             Destroy(gameObject);
         }
