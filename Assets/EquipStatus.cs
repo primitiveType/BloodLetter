@@ -17,7 +17,7 @@ public class EquipStatus : MonoBehaviour
     [SerializeField] private Animator Animator;
     private static readonly int Equipped = Animator.StringToHash("Equipped");
 
-    public void Start()
+    public void Awake()
     {
         TransformToLerp = transform;
     }
@@ -34,6 +34,11 @@ public class EquipStatus : MonoBehaviour
         IsEquipped = false;
         Animator.SetBool(Equipped, IsEquipped);
         yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, UnequippedPosition));
+    }
+
+    public void UnEquipInstant()
+    {
+        TransformToLerp.localPosition = UnequippedPosition;
     }
 
     private IEnumerator LerpPosition(Vector3 startPosition, Vector3 endPosition)

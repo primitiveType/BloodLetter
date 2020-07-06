@@ -7,6 +7,7 @@ public class UsesAmmo : MonoBehaviour
     [SerializeField] private int AmmoUsed = 1;
     private PlayerInventory Inventory;
     private PlayerEvents Events;
+    [SerializeField] private EquipStatus EquipStatus;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class UsesAmmo : MonoBehaviour
 
     private void OnPlayerShoot(object sender, PlayerShootEventArgs playerShootEventArgs)
     {
-        if (isActiveAndEnabled)//hope this is good enough for now!
+        if (isActiveAndEnabled && EquipStatus.IsEquipped)//hope this is good enough for now!    
         {
             Inventory.UseAmmo(AmmoType, AmmoUsed);
         }

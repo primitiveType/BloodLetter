@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Numerics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
@@ -12,14 +14,22 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     public GameObject OnHitWallPrefab;
     [SerializeField] private float m_Damage;
     public float Damage => m_Damage;
+    private static List<int> m_EnvironmentLayers;
+
+    private static List<int> EnvironmentLayers =>
+        m_EnvironmentLayers != null ? m_EnvironmentLayers : m_EnvironmentLayers = new List<int>()
+    {
+        LayerMask.NameToLayer("Default"),
+        LayerMask.NameToLayer("Interactable")
+    };
 
     public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
     {
            Ray ray = new Ray(playerPosition, playerDirection * Range);
             Debug.DrawRay(playerPosition, playerDirection * Range, Color.blue, 10);
-            LayerMask layerToCheck = ownerType == EntityType.Player
-                ? LayerMask.GetMask("EnemyRaycast")
-                : LayerMask.GetMask("Player");
+            int layerToCheck = ownerType == EntityType.Player
+                ? LayerMask.NameToLayer("EnemyRaycast")
+                : LayerMask.NameToLayer("Player");
             
             bool isDone = false;
             while (!isDone)
@@ -27,7 +37,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 if (Physics.Raycast(ray, out RaycastHit hit, Range, ~LayerMask.GetMask("Enemy")))
                 {
                     var hitLayer = hit.collider.gameObject.layer;
-                    if (hitLayer != layerToCheck)
+                    if (hitLayer != layerToCheck || hit.transform == null)
                     {
                         isDone = true;
                     }
@@ -39,30 +49,26 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     if (damaged != null && damaged.OnShot(hitCoord, this))
                     {
                         isDone = true;
-                        var hitEffect = Instantiate(OnHitPrefab, damaged.transform, true);
+                        var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
 
                         float adjustmentDistance = .1f;
 
                         hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
                     }
-                    else if (hitLayer != LayerMask.NameToLayer("Default"))
+                    else if(!EnvironmentLayers.Contains(hitLayer))
                     {
                         ray.origin = hit.point + (hit.normal * -.01f);
                     }
                     else if(OnHitWallPrefab)
                     {
                         var hitRotation = Quaternion.LookRotation(-hit.normal);
-                        var hitEffect = Instantiate(OnHitWallPrefab, hit.collider.transform.position, hitRotation, hit.transform );
+                        var hitEffect = GameObject.Instantiate(OnHitWallPrefab, hit.collider.transform.position, hitRotation, hit.transform );
 
                         float adjustmentDistance = .001f;
 
                         hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
                         
                         // hitEffect.transform.localRotation = hitRotation;
-                        isDone = true;
-                    }
-                    else
-                    {
                         isDone = true;
                     }
                 }

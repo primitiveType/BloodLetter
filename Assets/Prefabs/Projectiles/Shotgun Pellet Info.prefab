@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6798b62e9c334716b1a87da70b5a76cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Range: 100
+  m_MinRange: 0
   Piercing: 0
   OnHitPrefab: {fileID: 7917214635672765982, guid: deb8983ad7b1f274f99256e5ee06a94b,
     type: 3}

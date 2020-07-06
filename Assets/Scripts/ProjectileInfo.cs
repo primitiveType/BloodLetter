@@ -6,7 +6,7 @@ public class ProjectileInfo : ProjectileInfoBase
 
     public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
     {
-        var projectile = Instantiate(ProjectilePrefab);
+        var projectile = GameObject.Instantiate(ProjectilePrefab);
         projectile.layer = ownerType == EntityType.Player
             ? LayerMask.NameToLayer("PlayerProjectile")
             : LayerMask.NameToLayer("EnemyProjectile");
