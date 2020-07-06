@@ -17,8 +17,8 @@ public class AmmoText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Inventory = Toolbox.PlayerInventory;
-        Events = Toolbox.PlayerEvents;
+        Inventory = Toolbox.Instance.PlayerInventory;
+        Events = Toolbox.Instance.PlayerEvents;
         Events.OnAmmoChangedEvent += AmmoChanged;
         IsDirty = true;
     }

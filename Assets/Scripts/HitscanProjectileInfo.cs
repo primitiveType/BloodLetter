@@ -15,16 +15,19 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
 
     public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
     {
-           Ray ray = new Ray(playerPosition, playerDirection * 100);
-            Debug.DrawRay(playerPosition, playerDirection * 100, Color.blue, 10);
-
+           Ray ray = new Ray(playerPosition, playerDirection * Range);
+            Debug.DrawRay(playerPosition, playerDirection * Range, Color.blue, 10);
+            LayerMask layerToCheck = ownerType == EntityType.Player
+                ? LayerMask.GetMask("EnemyRaycast")
+                : LayerMask.GetMask("Player");
+            
             bool isDone = false;
             while (!isDone)
             {
-                if (Physics.Raycast(ray, out RaycastHit hit, 1000, ~LayerMask.GetMask("Enemy")))
+                if (Physics.Raycast(ray, out RaycastHit hit, Range, ~LayerMask.GetMask("Enemy")))
                 {
                     var hitLayer = hit.collider.gameObject.layer;
-                    if (hitLayer != LayerMask.NameToLayer("EnemyRaycast"))
+                    if (hitLayer != layerToCheck)
                     {
                         isDone = true;
                     }
@@ -32,8 +35,8 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     var hitCoord = hit.textureCoord;
                     // Debug.Log($"hit {hit.textureCoord} ");
 
-                    DamagedByHitscanProjectile damaged = hit.collider.GetComponent<DamagedByHitscanProjectile>();
-                    if (damaged && damaged.OnShot(hitCoord, this))
+                    IDamagedByHitscanProjectile damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
+                    if (damaged != null && damaged.OnShot(hitCoord, this))
                     {
                         isDone = true;
                         var hitEffect = Instantiate(OnHitPrefab, damaged.transform, true);
@@ -46,7 +49,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     {
                         ray.origin = hit.point + (hit.normal * -.01f);
                     }
-                    else
+                    else if(OnHitWallPrefab)
                     {
                         var hitRotation = Quaternion.LookRotation(-hit.normal);
                         var hitEffect = Instantiate(OnHitWallPrefab, hit.collider.transform.position, hitRotation, hit.transform );
@@ -56,6 +59,10 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                         hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
                         
                         // hitEffect.transform.localRotation = hitRotation;
+                        isDone = true;
+                    }
+                    else
+                    {
                         isDone = true;
                     }
                 }

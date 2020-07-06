@@ -10,8 +10,8 @@ public class UsesAmmo : MonoBehaviour
 
     private void Start()
     {
-        Inventory = Toolbox.PlayerInventory;
-        Events = Toolbox.PlayerEvents;
+        Inventory = Toolbox.Instance.PlayerInventory;
+        Events = Toolbox.Instance.PlayerEvents;
         Events.PlayerShootEvent += OnPlayerShoot;
     }
 

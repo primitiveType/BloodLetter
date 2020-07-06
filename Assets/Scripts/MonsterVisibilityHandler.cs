@@ -11,8 +11,8 @@ public class MonsterVisibilityHandler : MonoBehaviour
 
     private void Start()
     {
-        Target = Toolbox.PlayerHeadTransform;
-        TargetCollider = Toolbox.PlayerTransform;
+        Target = Toolbox.Instance.PlayerHeadTransform;
+        TargetCollider = Toolbox.Instance.PlayerTransform;
         MonsterTransform = transform;
     }
 

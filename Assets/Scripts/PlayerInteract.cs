@@ -9,9 +9,9 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private PlayerEvents PlayerEvents;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        Toolbox.SetPlayerHeadTransform(this.transform);
+        Toolbox.Instance.SetPlayerHeadTransform(this.transform);
     }
 
     // Update is called once per frame

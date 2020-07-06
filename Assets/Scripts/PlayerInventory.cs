@@ -11,7 +11,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Awake()
     {
-        Toolbox.SetPlayerInventory(this);
+        Toolbox.Instance.SetPlayerInventory(this);
     }
 
     private List<IKey> Keys { get; } = new List<IKey>();

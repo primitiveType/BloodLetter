@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Events: {fileID: 6510712830491665609}
-  AttackCooldown: 3
-  AttackProjectile: {fileID: 0}
+  m_Attacks: []
+  m_AttackCooldown: 3
   m_animator: {fileID: 8171493255988436112}
   VisibilityHandler: {fileID: 678540891885456008}
 --- !u!114 &678540891885456008
@@ -388,13 +388,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aggroClips: []
-  stepClips:
-  - {fileID: 8300000, guid: d3c598914439a5a4f8f1e4ccc1ffb2d1, type: 3}
+  stepClips: []
   hurtClips:
   - {fileID: 8300000, guid: 17c0653dcbb3d9642940c8cd7128f238, type: 3}
   - {fileID: 0}
-  attackClips:
-  - {fileID: 8300000, guid: 1e05ff307604d9a45a4b77749d7bd5de, type: 3}
+  attackClips: []
   deathClips:
   - {fileID: 8300000, guid: 35c56eb00559bfa4b8590511b91ae59c, type: 3}
 --- !u!114 &6510712830491665609

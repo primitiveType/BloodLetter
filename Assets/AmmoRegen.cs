@@ -17,8 +17,8 @@ public class AmmoRegen : MonoBehaviour
 
     private void Start()
     {
-        Inventory = Toolbox.PlayerInventory;
-        Toolbox.PlayerEvents.OnAmmoChangedEvent += PlayerEventsOnOnAmmoChangedEvent;
+        Inventory = Toolbox.Instance.PlayerInventory;
+        Toolbox.Instance.PlayerEvents.OnAmmoChangedEvent += PlayerEventsOnOnAmmoChangedEvent;
         Inventory.GainAmmo(TypeToRegen, 1000);
 
         secondsPerRegen = 1f / RegenPerSecond;
@@ -50,6 +50,6 @@ public class AmmoRegen : MonoBehaviour
 
     private void OnDestroy()
     {
-        Toolbox.PlayerEvents.OnAmmoChangedEvent -= PlayerEventsOnOnAmmoChangedEvent;
+        Toolbox.Instance.PlayerEvents.OnAmmoChangedEvent -= PlayerEventsOnOnAmmoChangedEvent;
     }
 }

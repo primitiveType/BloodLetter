@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6777145677616992349}
   - component: {fileID: 3999468812405218162}
   m_Layer: 0
-  m_Name: TestProjectileInfo
+  m_Name: Flesh Bomb ProjectileInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8235b5ea9184a7bb2ac806d5d9ce93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 5479396050471731650, guid: e6020e7bb0d44354e98258e5a6b2e5d9,
+  m_Range: 1000
+  ProjectilePrefab: {fileID: 5479396050471731650, guid: 3add20fdbc229c6449a7fdb976cd5358,
     type: 3}

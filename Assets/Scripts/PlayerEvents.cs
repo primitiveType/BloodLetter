@@ -9,8 +9,8 @@ public class PlayerEvents : ActorEvents
 
     private void Awake()
     {
-        Toolbox.SetPlayerEvents(this);
-        Toolbox.SetPlayerTransform(transform);
+        Toolbox.Instance.SetPlayerEvents(this);
+        Toolbox.Instance.SetPlayerTransform(transform);
     }
 
     public void PlayerShoot()

@@ -49,11 +49,11 @@ public class EnemyAggroHandler : MonoBehaviour
 
     private void Start()
     {
-        Toolbox.PlayerEvents.PlayerShootEvent += OnPlayerShoot;
+        Toolbox.Instance.PlayerEvents.PlayerShootEvent += OnPlayerShoot;
         Events.OnShotEvent += OnEnemyShot;
         Events.OnDeathEvent += OnEnemyDeath;
 
-        Target = Toolbox.PlayerTransform;
+        Target = Toolbox.Instance.PlayerTransform;
     }
 
     private void Update()

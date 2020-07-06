@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootTest : MonoBehaviour
 {
-    private Animator _animator;
+    [SerializeField]private Animator _animator;
 
     private static readonly int Shoot = Animator.StringToHash("Shoot");
 
@@ -18,7 +18,7 @@ public class ShootTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _animator = GetComponentInChildren<Animator>();
+        //_animator = GetComponentInChildren<Animator>();
         UsesAmmo = GetComponent<UsesAmmo>();
     }
 

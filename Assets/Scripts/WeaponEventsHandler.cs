@@ -15,11 +15,16 @@ public class WeaponEventsHandler : MonoBehaviour
         var transform1 = this.transform;
         ProjectileInfo.TriggerShoot(BarrelTransform.position, BarrelTransform.forward, EntityType.Player);
         SoundInfo.OnShoot();
-        Toolbox.PlayerEvents.PlayerShoot();
+        Toolbox.Instance.PlayerEvents.PlayerShoot();
     }
 
     public void Reload()
     {
         SoundInfo.OnReload();
+    }
+
+    void OnEnable()
+    {
+        Debug.Log("Enabled    ");
     }
 }

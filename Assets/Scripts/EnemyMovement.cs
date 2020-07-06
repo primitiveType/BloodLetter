@@ -35,7 +35,7 @@ public class EnemyMovement : MonoBehaviour
         Events.OnAttackEvent += OnEnemyAttack;
         Events.OnDeathEvent += OnEnemyDeath;
         Animator = GetComponentInChildren<Animator>();
-        Target = Toolbox.PlayerTransform;
+        Target = Toolbox.Instance.PlayerTransform;
         if (Agent && Target)
         {
             Agent.isStopped = true;
