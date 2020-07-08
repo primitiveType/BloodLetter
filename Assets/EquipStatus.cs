@@ -20,7 +20,7 @@ public class EquipStatus : MonoBehaviour
     [SerializeField] private Animator Animator;
     private static readonly int Equipped = Animator.StringToHash("Equipped");
 
-    public void Start()
+    public void Awake()
     {
         TransformToLerp = transform;
         Toolbox.Instance.PlayerEvents.OnWeaponsChangedEvent += PlayerEventsOnOnWeaponsChangedEvent;

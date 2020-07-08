@@ -1807,6 +1807,76 @@ MonoBehaviour:
     alphaMap: {fileID: 2800000, guid: c4b058c542e6e8f4fad769b55cb6a4cf, type: 2}
   - rows: 1
     columns: 1
+    animationName: pkup_ammo_mgun_lg_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: bea658c5109582c43bf2d3b2f3995eea, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a92865ac08b6bce4a88be709d5138193, type: 2}
+    alphaMap: {fileID: 18700000, guid: c329b80aca7628341bebe9ea24b10582, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: pkup_ammo_nade_lg_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 7fcd62132ba3e8648b7ba3f919b80e65, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 30366198164bde54bb88ea9702815c7b, type: 2}
+    alphaMap: {fileID: 18700000, guid: fa4a32c799a40324f8f674254b9ad861, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: pkup_ammo_mgun_sm_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 50ddc4f9105fcb54fa6023cf7833427e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8a6b674cef67709499f730f599cf9be8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3a9426df95663064484f57816b068772, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: pkup_ammo_nade_sm_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: e8b938d6ed442124aa860438d3d30f7a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 52dc90765e9ec714380416baeb221f42, type: 2}
+    alphaMap: {fileID: 18700000, guid: 068400d7a1c468240b745597c9226e56, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: pkup_ammo_rckt_lg_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 11a050629fcae2847bc900e1c35cea3e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ba592bcbca4371b44963428b8aab7434, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3c8efa33d7402834ca56d61332e191b6, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: pkup_ammo_rckt_sm_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: bcfe58850bf918e4ba5355c88d648da1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 08868a681f5abd3479f79e4295c15183, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5d631fcde1132994584ef8c253d2d8b8, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: pkup_ammo_sgun_lg_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: d5a3b095b284c664fbd2d8e56f7f3461, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 4d31ce77a15908d49acf0d3b0cf173d6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7fd50417ddf74b54f810334e7625af49, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: pkup_ammo_sgun_sm_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: f96aca4eabc831d45a24af91c4885b57, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 90b26450217c59b458db2a44852e5a2f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4a69a83eae139334a849fd5260dbb495, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: FirstAidKit_White_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 32b98be3cdddc664ebfd4c34e034344d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9adcb6e2473462549872be9e0ef25c73, type: 2}
+    alphaMap: {fileID: 18700000, guid: 324155cb8dec48f4eaf53bb8498d5418, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: FirstAidKit_Biohazard_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 5f6caa9554658c941a3b242fcaf5aec1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 99560ea303f14f645afe55810a8fd22a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 40f85db2a8b2374468a83cb4aad15265, type: 2}
+  - rows: 1
+    columns: 1
     animationName: Shotgun_TPose
     numFrames: 1
     normalMap: {fileID: 2800000, guid: bd5526e5aabb34d4b8c82f6484eda91e, type: 2}
@@ -1826,3 +1896,10 @@ MonoBehaviour:
     normalMap: {fileID: 2800000, guid: 98acb960b12133b4da4662ed8ab2713b, type: 2}
     diffuseMap: {fileID: 2800000, guid: 02985c8482d5fd3478b97330a5b31a6b, type: 2}
     alphaMap: {fileID: 2800000, guid: 8e5e17c6b1d5bc741bd5a34983768fe1, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: Shotgun pickup_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 83a5c1994c947e7498a3d7b4a9b4aa37, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b4f40f3e96b50a141a072240ece9a573, type: 2}
+    alphaMap: {fileID: 18700000, guid: 404751d522c11e241ae197061363db3e, type: 2}
