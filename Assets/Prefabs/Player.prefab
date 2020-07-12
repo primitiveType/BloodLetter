@@ -212,7 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileInfo: {fileID: 0}
+  ProjectileInfo: {fileID: 793953572406270968, guid: 4f227dac77328ef458d14325a5441d1d,
+    type: 3}
   BarrelTransform: {fileID: 7118814582898653110}
   SoundInfo: {fileID: 1651348172}
 --- !u!1 &386397863
@@ -439,6 +440,7 @@ RectTransform:
   m_Children:
   - {fileID: 1645885075}
   - {fileID: 1384391182905695415}
+  - {fileID: 1406024427}
   m_Father: {fileID: 1111293053}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -528,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &528020357
 Transform:
   m_ObjectHideFlags: 0
@@ -557,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92535ab19d52c94a9a883b2fb637f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
+  _animator: {fileID: 1187914153}
   cooldown: 0.4
 --- !u!114 &528020358
 MonoBehaviour:
@@ -697,9 +699,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b15db789563e54db4976f6329bb9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EquipKey: 0
-  Equippable: {fileID: 0}
-  equipOnStart: 0
+  EquipKey: 49
+  Equippable: {fileID: 1669245840}
+  equipOnStart: 1
 --- !u!114 &1669245840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_WeaponId: 0
   Events: {fileID: 1187914151}
   Animator: {fileID: 1187914153}
 --- !u!1 &673588820
@@ -825,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812513434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.658}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0.658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 113260225}
@@ -926,8 +929,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileInfo: {fileID: 0}
-  BarrelTransform: {fileID: 386397864}
+  ProjectileInfo: {fileID: 3999468812405218162, guid: f10db0f09440bc2408749590faeec5f8,
+    type: 3}
+  BarrelTransform: {fileID: 7118814582898653110}
   SoundInfo: {fileID: 1693454664}
 --- !u!1 &1027849402
 GameObject:
@@ -940,7 +944,7 @@ GameObject:
   - component: {fileID: 1027849403}
   - component: {fileID: 1027849404}
   m_Layer: 5
-  m_Name: New Sprite
+  m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -955,7 +959,7 @@ Transform:
   m_GameObject: {fileID: 1027849402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.31}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 7118814582697065352}
   m_RootOrder: 0
@@ -1000,7 +1004,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1247,9 +1251,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileInfo: {fileID: 0}
-  BarrelTransform: {fileID: 442213178}
+  ProjectileInfo: {fileID: 1693377125502948229, guid: 9cbe9b3b1a9eff148b1a5500d9e01ec5,
+    type: 3}
+  BarrelTransform: {fileID: 7118814582898653110}
   SoundInfo: {fileID: 528020358}
+--- !u!1 &1406024426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406024427}
+  - component: {fileID: 1406024428}
+  - component: {fileID: 1406024429}
+  m_Layer: 5
+  m_Name: toast messages
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1406024427
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406024426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 505395253}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 171.34827}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1406024428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406024426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 5
+    m_Right: 0
+    m_Top: 5
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+--- !u!114 &1406024429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406024426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75e56bc2eb14514eb1fb7ab936bfb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toastPrefab: {fileID: 11616406193128472, guid: b9ea61a37670a26458af9935bafbbbf0,
+    type: 3}
 --- !u!1 &1448022913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1374,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1486,7 +1567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92535ab19d52c94a9a883b2fb637f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
+  _animator: {fileID: 321424114}
   cooldown: 0.4
 --- !u!114 &1651348172
 MonoBehaviour:
@@ -1641,6 +1722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_WeaponId: 1
   Events: {fileID: 321424112}
   Animator: {fileID: 321424114}
 --- !u!1 &1693454661
@@ -1656,13 +1738,15 @@ GameObject:
   - component: {fileID: 1693454664}
   - component: {fileID: 1693454663}
   - component: {fileID: 1693454665}
+  - component: {fileID: 14563026}
+  - component: {fileID: 14563027}
   m_Layer: 5
   m_Name: Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1693454662
 Transform:
   m_ObjectHideFlags: 0
@@ -1691,7 +1775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92535ab19d52c94a9a883b2fb637f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
+  _animator: {fileID: 812513438}
   cooldown: 0
 --- !u!114 &1693454664
 MonoBehaviour:
@@ -1818,7 +1902,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AmmoType: 1
   AmmoUsed: 1
-  EquipStatus: {fileID: 0}
+  EquipStatus: {fileID: 14563026}
+--- !u!114 &14563026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693454661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_WeaponId: 2
+  Events: {fileID: 812513440}
+  Animator: {fileID: 812513438}
+--- !u!114 &14563027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693454661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b15db789563e54db4976f6329bb9bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EquipKey: 51
+  Equippable: {fileID: 14563026}
+  equipOnStart: 0
 --- !u!1 &2094691042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,13 +1976,13 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.9756115, b: 0.8443396, a: 1}
-  m_Intensity: 1
+  m_Intensity: 5
   m_Range: 10.456242
   m_SpotAngle: 142.7559
   m_InnerSpotAngle: 81.35521
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2051,7 +2165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f0e4628c1f168478e47222b2d65096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmmoType: 1
+  AmmoType: 0
   Text: {fileID: 783807823625216927}
 --- !u!1 &7118814581306319293
 GameObject:
@@ -2557,6 +2671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Events: {fileID: 7118814582858810751}
+  Weapons: 0
 --- !u!114 &1991182489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2781,13 +2896,13 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 255.83
+  m_Intensity: 5
   m_Range: 19.26
   m_SpotAngle: 97.04056
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3025,11 +3140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 1e5c742accdc1824fb01f98f446fa63c, type: 3}
       propertyPath: m_Intensity
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 1e5c742accdc1824fb01f98f446fa63c, type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 1e5c742accdc1824fb01f98f446fa63c, type: 3}
       propertyPath: m_Color.g
@@ -3045,7 +3160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 1e5c742accdc1824fb01f98f446fa63c, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 1e5c742accdc1824fb01f98f446fa63c, type: 3}
       propertyPath: IntensityLight

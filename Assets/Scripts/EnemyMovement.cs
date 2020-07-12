@@ -42,6 +42,8 @@ public class EnemyMovement : MonoBehaviour
             Agent.SetDestination(Target.position);
             Agent.updateRotation = true;
         }
+        Toolbox.Instance.AddEnemy(Health);
+        
     }
 
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)
@@ -84,7 +86,6 @@ public class EnemyMovement : MonoBehaviour
         else
             Animator.SetBool(Moving, false);
 
-        Animator.SetBool(IsDead, !Health.IsAlive); //kinda dumb rofl
     }
 
     private void OnDestroy()

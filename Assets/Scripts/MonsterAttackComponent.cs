@@ -10,7 +10,7 @@ public class MonsterAttackComponent : MonoBehaviour
 
     [SerializeField] private List<ProjectileInfoBase> m_Attacks;
 
-    
+
     public float AttackCooldown => m_AttackCooldown;
 
     [SerializeField] private float m_AttackCooldown = 3f;
@@ -59,7 +59,6 @@ public class MonsterAttackComponent : MonoBehaviour
 
     public void Update()
     {
-        
         if (!(Time.time - LastAttackTimeStamp > AttackCooldown) || !VisibilityHandler.CanSeePlayer())
         {
             Animator.SetBool(Attacking, false);
@@ -77,8 +76,11 @@ public class MonsterAttackComponent : MonoBehaviour
                 LastAttackTimeStamp = Time.time;
                 break;
             }
+            else
+            {
+                Animator.SetBool(Attacking, false);
+            }
         }
-        
     }
 
 

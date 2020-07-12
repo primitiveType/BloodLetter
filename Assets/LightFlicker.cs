@@ -19,12 +19,6 @@ public class LightFlicker : MonoBehaviour {
         StartCoroutine (Flashing ());
     }
 
-    // Update is called once per frame
-    void Update () {
-
-    }
-
-
     IEnumerator Flashing(){
         while (true) {
             yield return new WaitForSeconds (Random.Range(minFlickerTime,maxFlickerTime));

@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 20fe1d5d6d5b254409bf162571916c4b, type: 2}
+  - {fileID: 2100000, guid: cc200114719656a4c843e83b0f1ad8ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2292,7 +2292,7 @@ GameObject:
   - component: {fileID: 2130202049827485844}
   - component: {fileID: 135812724694329235}
   m_Layer: 0
-  m_Name: projectile
+  m_Name: flesh projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7107,8 +7107,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 20fe1d5d6d5b254409bf162571916c4b, type: 2}
-  - {fileID: 2100000, guid: 20fe1d5d6d5b254409bf162571916c4b, type: 2}
+  - {fileID: 2100000, guid: cc200114719656a4c843e83b0f1ad8ce, type: 2}
+  - {fileID: 2100000, guid: cc200114719656a4c843e83b0f1ad8ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

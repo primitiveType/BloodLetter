@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -9,7 +10,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private PlayerEvents PlayerEvents;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Toolbox.Instance.SetPlayerHeadTransform(this.transform);
     }

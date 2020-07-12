@@ -6,6 +6,8 @@ public abstract class Pickup<T> : MonoBehaviour where T : Component
     private Collider currentCollider;
     protected T currentActor;
 
+    public bool toast = true;
+
     protected abstract string toastMessage { get; }
 
     private void Awake()
@@ -23,7 +25,7 @@ public abstract class Pickup<T> : MonoBehaviour where T : Component
 
         if (currentActor != null && CanBePickedUp())
         {
-            if (toastMessage != null)
+            if (toastMessage != null && toast)
             {
                 ToastHandler.Instance.PopToast(toastMessage);
             }

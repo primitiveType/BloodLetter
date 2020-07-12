@@ -27,17 +27,20 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     {
            Ray ray = new Ray(playerPosition, playerDirection * Range);
             Debug.DrawRay(playerPosition, playerDirection * Range, Color.blue, 10);
-            int layerToCheck = ownerType == EntityType.Player
+            int layerToCheckForDamage = ownerType == EntityType.Player
                 ? LayerMask.NameToLayer("EnemyRaycast")
                 : LayerMask.NameToLayer("Player");
+
+            //always ignore this one, since its the enemy collider which we don't use for raycasts
+            int raycastMask = ~LayerMask.GetMask("Enemy");
             
             bool isDone = false;
             while (!isDone)
             {
-                if (Physics.Raycast(ray, out RaycastHit hit, Range, ~LayerMask.GetMask("Enemy")))
+                if (Physics.Raycast(ray, out RaycastHit hit, Range, raycastMask ))
                 {
                     var hitLayer = hit.collider.gameObject.layer;
-                    if (hitLayer != layerToCheck || hit.transform == null)
+                    if (hitLayer != layerToCheckForDamage || hit.transform == null)
                     {
                         isDone = true;
                     }
