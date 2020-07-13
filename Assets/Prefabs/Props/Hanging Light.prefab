@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 5189588656098688804, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9865047
+      value: 0.8821053
       objectReference: {fileID: 0}
     - target: {fileID: 5189588656098688804, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.16373295
+      value: -0.4710524
       objectReference: {fileID: 0}
     - target: {fileID: 5189588656214282923, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
@@ -33,25 +33,60 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 4.9
       objectReference: {fileID: 0}
-    - target: {fileID: 5189588656658228077, guid: 6fef409cbfd883b4da577ecfd6afea1e,
-        type: 3}
-      propertyPath: m_Name
-      value: Hanging Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189588656658228078, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+    - target: {fileID: 5189588656214282935, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5189588656513619965, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189588656513619965, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.203
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189588656513619965, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189588656513619966, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.89015245
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189588656513619966, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6084906
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189588656513619966, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 75.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189588656658228077, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_Name
+      value: Hanging Light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189588656658228078, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.99634
+      objectReference: {fileID: 0}
     - target: {fileID: 5189588656658228078, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 8.62
       objectReference: {fileID: 0}
     - target: {fileID: 5189588656658228078, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 9.0847435
       objectReference: {fileID: 0}
     - target: {fileID: 5189588656658228078, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}

@@ -8,7 +8,10 @@ public class SimpleMaterialHelper : AnimationMaterialHelper
     // Start is called before the first frame update
     void Start()
     {
-        AnimationStarted(InfoName);//HACKY
+        if (!string.IsNullOrEmpty(InfoName))
+        {
+            AnimationStarted(InfoName); //HACKY
+        }
     }
 
    

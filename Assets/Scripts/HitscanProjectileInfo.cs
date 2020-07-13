@@ -31,6 +31,8 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 ? LayerMask.NameToLayer("EnemyRaycast")
                 : LayerMask.NameToLayer("Player");
 
+            layerToCheckForDamage |= LayerMask.NameToLayer($"Destructible");
+
             //always ignore this one, since its the enemy collider which we don't use for raycasts
             int raycastMask = ~LayerMask.GetMask("Enemy");
             
@@ -39,8 +41,8 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
             {
                 if (Physics.Raycast(ray, out RaycastHit hit, Range, raycastMask ))
                 {
-                    var hitLayer = hit.collider.gameObject.layer;
-                    if (hitLayer != layerToCheckForDamage || hit.transform == null)
+                    int hitLayer = hit.collider.gameObject.layer;
+                    if (((hitLayer & layerToCheckForDamage) == 0) || hit.transform == null)
                     {
                         isDone = true;
                     }

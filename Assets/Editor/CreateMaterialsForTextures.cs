@@ -18,7 +18,7 @@ public class CreateMaterialsForTextures : Editor
         "_NORM_A",
         "_NORM_B",
         "_normal",
-        "_NRM"
+        "_NRM",
     };
 
     private static List<string> ColorSuffixes = new List<string>
@@ -27,7 +27,8 @@ public class CreateMaterialsForTextures : Editor
         "_COLOR_A",
         "_COLOR_B",
         "_COLOR_C",
-        "_basecolor"
+        "_basecolor",
+        "_FRAMEBUFFER"
     };
 
     [MenuItem("Tools/CreateMaterialsForTextures")]
