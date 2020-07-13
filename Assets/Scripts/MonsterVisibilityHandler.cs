@@ -34,7 +34,7 @@ public class MonsterVisibilityHandler : MonoBehaviour
         //might want to offset monster position so they can see over low walls, etc.
         Ray ray = new Ray(MonsterTransform.position, Target.position - MonsterTransform.position);
         Debug.DrawRay(ray.origin, ray.direction, Color.red, 5f);
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, 100, LayerMask.GetMask("Player", "Default")))
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, 100, LayerMask.GetMask("Player", "Default", "Interactable", "Hazard", "Destructible")))
         {
            return  m_CanSeePlayer =  hitInfo.transform == TargetCollider;
         }

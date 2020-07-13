@@ -32,6 +32,7 @@ public class MonsterAttackComponent : MonoBehaviour
     [SerializeField] private Animator m_animator;
 
     [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
+    [SerializeField] private EnemyAggroHandler AggroHandler;
 
     private ProjectileInfoBase CurrentAttack { get; set; }
 
@@ -59,7 +60,7 @@ public class MonsterAttackComponent : MonoBehaviour
 
     public void Update()
     {
-        if (!(Time.time - LastAttackTimeStamp > AttackCooldown) || !VisibilityHandler.CanSeePlayer())
+        if (!(Time.time - LastAttackTimeStamp > AttackCooldown) || !VisibilityHandler.CanSeePlayer() || !AggroHandler.IsAggro)
         {
             Animator.SetBool(Attacking, false);
             return;

@@ -10,14 +10,14 @@ public class Elevator : MonoBehaviour
 
     [FormerlySerializedAs("TopTarget")] [SerializeField] private Transform EndTarget;
 
-    [SerializeField] private Rigidbody rigidbody;
+    [FormerlySerializedAs("rigidbody")] [SerializeField] private Transform elevator;
 
     [SerializeField] private float delay = 2f;
     [SerializeField] private bool returns = true;
 
     private IEnumerator Move(Transform target)
     {
-        Vector3 start = rigidbody.transform.position;
+        Vector3 start = elevator.transform.position;
         // Vector3 start = transform.position;
         var targetPosition = target.position;
         float distance = Vector3.Distance(start, targetPosition);
@@ -27,13 +27,13 @@ public class Elevator : MonoBehaviour
         while (t < 1f)
         {
             var currentTarget = Vector3.Lerp(start, targetPosition, t);
-            rigidbody.transform.position = currentTarget;
+            elevator.transform.position = currentTarget;
             // rigidbody.MovePosition(currentTarget);
             yield return null;
             t += (Time.unscaledDeltaTime) / (distance / speed);
         }
 
-        rigidbody.transform.position = targetPosition;
+        elevator.transform.position = targetPosition;
 
         // rigidbody.position = targetPosition;
     }

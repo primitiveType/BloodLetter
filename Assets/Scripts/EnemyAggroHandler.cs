@@ -59,7 +59,7 @@ public class EnemyAggroHandler : MonoBehaviour
     private void Update()
     {
         m_distance = Vector3.Distance(Target.transform.position, transform.position);
-        if (m_distance > AggroRange) IsAggro = true;
+        if (m_distance < AggroRange) IsAggro = true;
     }
 
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)
