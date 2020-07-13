@@ -47,7 +47,7 @@ public class SC_MovingPlatform : MonoBehaviour
         {
             if (moveDirection.magnitude > 0.01f)
             {
-                moveDirection = Vector3.Lerp(moveDirection, Vector3.zero, Time.deltaTime);
+                moveDirection = Vector3.Lerp(moveDirection, Vector3.zero, Time.unscaledDeltaTime);
                 controller.Move(moveDirection);
             }
         }

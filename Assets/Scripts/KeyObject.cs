@@ -3,17 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyObject : MonoBehaviour 
+public class KeyObject : Pickup<PlayerInventory>
 {
     [SerializeField] private KeyType KeyType;
+    protected override string toastMessage => $"Picked up the {KeyType} Key!";
 
-    private void OnTriggerEnter(Collider other)
+    protected override bool CanBePickedUp()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.GetComponent<PlayerInventory>().AddKey(new Key(KeyType));
-            Destroy(gameObject);
-        }
+        return true;
+    }
+
+    protected override void PickupItem()
+    {
+        currentActor.AddKey(new Key(KeyType));
     }
 }
 

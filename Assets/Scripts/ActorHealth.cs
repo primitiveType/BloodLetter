@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Networking.Match;
 
 public class ActorHealth : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ActorHealth : MonoBehaviour
 
     [SerializeField] private float m_Health;
     [SerializeField] private float m_MaxHealth;
+    [SerializeField] private ActorArmor m_Armor;
     private static readonly int IsDead = Animator.StringToHash("IsDead");
 
     private Animator Animator { get; set; }
@@ -64,7 +66,14 @@ public class ActorHealth : MonoBehaviour
 
     private void OnEnemyShot(object sender, OnShotEventArgs args)
     {
-        Health -= args.ProjectileInfo.GetDamage(this);
+        var baseDamage = args.ProjectileInfo.GetDamage(this);
+        var resultingDamage = baseDamage;
+        if (m_Armor)
+        {
+            resultingDamage = m_Armor.TakeDamage(baseDamage);
+        }
+
+        Health -= resultingDamage;
         UpdateAnimatorStates();
     }
 

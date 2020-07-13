@@ -30,7 +30,7 @@ public class Elevator : MonoBehaviour
             rigidbody.transform.position = currentTarget;
             // rigidbody.MovePosition(currentTarget);
             yield return null;
-            t += (Time.deltaTime) / (distance / speed);
+            t += (Time.unscaledDeltaTime) / (distance / speed);
         }
 
         rigidbody.transform.position = targetPosition;

@@ -33,10 +33,10 @@ public class LightBreathe : MonoBehaviour
                 t += Time.deltaTime * Frequency;
             }
 
-            while (t <= 0)
+            while (t >= 0)
             {
                 yield return null;
-                testLight.intensity = Mathf.Lerp(startIntensity + (ChangeAmount), startIntensity, t);
+                testLight.intensity = Mathf.Lerp(startIntensity, startIntensity + (ChangeAmount), t);
                 t -= Time.deltaTime * Frequency;
             }
         }

@@ -11,6 +11,8 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     public Transform PlayerHeadTransform { get; private set; }
 
     public PlayerInventory PlayerInventory { get; private set; }
+    public float TimestopTimeStamp { get; set; } = -15;
+    public float TimestopDuration { get; } = 15;
 
     private EquipStatus CurrentEquip; //will have to make changes if you can later equip multiple things
     private static Toolbox s_instance;
@@ -18,6 +20,11 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     private void Awake()
     {
         DontDestroyOnLoad(this);
+    }
+
+    public bool TimeIsStopped()
+    {
+        return TimestopTimeStamp + TimestopDuration > Time.unscaledTime;
     }
 
     public void EquipThing(EquipStatus thing)
@@ -90,5 +97,10 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     {
         Secrets.Clear();
         Enemies.Clear();
+    }
+
+    private void Update()
+    {
+        Time.timeScale = TimeIsStopped() ? 0f : 1f;
     }
 }
