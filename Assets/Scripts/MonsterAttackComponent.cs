@@ -63,6 +63,10 @@ public class MonsterAttackComponent : MonoBehaviour
         if (!(Time.time - LastAttackTimeStamp > AttackCooldown) || !VisibilityHandler.CanSeePlayer() || !AggroHandler.IsAggro)
         {
             Animator.SetBool(Attacking, false);
+            if (!AggroHandler.IsAggro)
+            {
+                LastAttackTimeStamp = Time.time;//hack to add delay when aggro'd
+            }
             return;
         }
 

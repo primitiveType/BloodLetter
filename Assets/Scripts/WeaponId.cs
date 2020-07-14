@@ -3,7 +3,7 @@
 [Flags]
 public enum WeaponId
 {
-    Pistol,
-    Shotgun,
-    Staff
+    Pistol = 0x0001,
+    Shotgun = 0x0010,
+    Staff = 0x0100
 }

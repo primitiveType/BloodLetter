@@ -15,14 +15,14 @@ public class EquipStatus : MonoBehaviour
     private float TimeToLerp = .2f;
     public bool IsEquipped { get; private set; }
 
-    private Transform TransformToLerp { get; set; }
+    private Transform TransformToLerp => m_transformToLerp != null ? m_transformToLerp : m_transformToLerp = transform;
 
     [SerializeField] private Animator Animator;
+    private Transform m_transformToLerp;
     private static readonly int Equipped = Animator.StringToHash("Equipped");
 
-    public void Awake()
+    public void Start()
     {
-        TransformToLerp = transform;
         Toolbox.Instance.PlayerEvents.OnWeaponsChangedEvent += PlayerEventsOnOnWeaponsChangedEvent;
     }
 
@@ -74,6 +74,6 @@ public class EquipStatus : MonoBehaviour
 
     private void OnDestroy()
     {
-        Toolbox.Instance.PlayerEvents.OnWeaponsChangedEvent += PlayerEventsOnOnWeaponsChangedEvent;
+        Toolbox.Instance.PlayerEvents.OnWeaponsChangedEvent -= PlayerEventsOnOnWeaponsChangedEvent;
     }
 }
