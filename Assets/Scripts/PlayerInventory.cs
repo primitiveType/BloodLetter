@@ -92,7 +92,7 @@ public class PlayerInventory : MonoBehaviour
 
 public enum AmmoType
 {
-    Shotgun,
+    Lead,
     Mana
 }
 

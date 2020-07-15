@@ -4,6 +4,7 @@ public class ActorEvents : MonoBehaviour
 {
     public event OnShotEvent OnShotEvent;
     public event OnHealthChangedEvent OnHealthChangedEvent;
+    public event OnArmorChangedEvent OnArmorChangedEvent;
     public event OnStepEvent OnStepEvent;
     public event OnAttackEvent OnAttackEvent;
     public event OnDeathEvent OnDeathEvent;
@@ -46,6 +47,11 @@ public class ActorEvents : MonoBehaviour
     {
         OnHealthChangedEvent?.Invoke(this, new OnHealthChangedEventArgs(amount, isHealing));
     }
+    
+    public void OnArmorChanged()
+    {
+        OnArmorChangedEvent?.Invoke(this, new OnArmorChangedEventArgs());
+    }
 
     public void OnAmmoChanged(int oldValue, int newValue, AmmoType type)
     {
@@ -56,6 +62,12 @@ public class ActorEvents : MonoBehaviour
     {
         OnWeaponsChangedEvent?.Invoke(this, new OnWeaponsChangedEventArgs(oldValue, newValue));
     }
+}
+
+public delegate void OnArmorChangedEvent(object sender, OnArmorChangedEventArgs args);
+
+public class OnArmorChangedEventArgs
+{
 }
 
 public delegate void OnWeaponsChangedEvent(object sender, OnWeaponsChangedEventArgs args);
