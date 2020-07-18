@@ -14,6 +14,7 @@ public class PlayerInventory : MonoBehaviour
     private void Awake()
     {
         Toolbox.Instance.SetPlayerInventory(this);
+        GainAmmo(AmmoType.Lead, 40);
     }
 
     private List<IKey> Keys { get; } = new List<IKey>();

@@ -27,11 +27,28 @@ public class EnemySounds : MonoBehaviour
     public AudioClip DeathClip => deathClips.Random();
     public AudioClip AggroClip => aggroClips.Random();
 
-    private AudioSource StepSource { get; set; }
-    private AudioSource HurtSource { get; set; }
-    private AudioSource AttackSource { get; set; } //I don't think its smart to have this many sources.
+    private AudioSource StepSource
+    {
+        get => m_stepSource;
+        set => m_stepSource = value;
+    }
+
+    private AudioSource HurtSource
+    {
+        get => m_hurtSource;
+        set => m_hurtSource = value;
+    }
+
+    private AudioSource AttackSource
+    {
+        get => m_attackSource;
+        set => m_attackSource = value;
+    } //I don't think its smart to have this many sources.
 
     private ActorEvents Events;
+    [SerializeField] private AudioSource m_stepSource;
+    [SerializeField] private AudioSource m_hurtSource;
+    [SerializeField] private AudioSource m_attackSource;
 
     private void Start()
     {
@@ -41,16 +58,36 @@ public class EnemySounds : MonoBehaviour
         Events.OnAttackEvent += OnEnemyAttack;
         Events.OnDeathEvent += OnEnemyDeath;
         Events.OnAggroEvent += OnEnemyAggro;
-        StepSource = CreateAudioSource();
-        HurtSource = CreateAudioSource();
-        AttackSource = CreateAudioSource();
+
+
+        if (!StepSource)
+        {
+            StepSource = CreateAudioSource();
+        }
+
+        if (!HurtSource)
+        {
+            HurtSource = CreateAudioSource();
+        }
+
+        if (!AttackSource)
+        {
+            AttackSource = CreateAudioSource();
+        }
+    }
+
+    private IEnumerable GetSources()
+    {
+        yield return StepSource;
+        yield return HurtSource;
+        yield return AttackSource;
     }
 
     private AudioSource CreateAudioSource()
     {
         var source = gameObject.AddComponent<AudioSource>();
         source.spatialize = true;
-        source.spatialBlend = 1;
+        source.spatialBlend = .75f;
         return source;
     }
 

@@ -11,7 +11,7 @@ public class AnimationMaterialDictionary : ScriptableObject
     [SerializeField] private List<AnimationMaterialPropertyBlock> PropertyBlocksByModelAnimation;
 
     public static readonly int NumPixelsPerMeter = 20;
-    
+    #if UNITY_EDITOR
     public void AddPropertyBlock(Texture2DArray diffuse, Texture2DArray alpha, Texture2DArray normals, string modelName,
         string animationName, int columns, int rows, int numFrames)
     {
@@ -50,6 +50,8 @@ public class AnimationMaterialDictionary : ScriptableObject
         }
     }
 
+    #endif
+    
 
     public MaterialPropertyBlock GetPropertyBlock(MaterialPropertyBlock propertyBlock, string key)
     {

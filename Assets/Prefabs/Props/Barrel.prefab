@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7988276051306822542}
   - component: {fileID: 8438815936896135815}
   - component: {fileID: 7846383323932889817}
+  - component: {fileID: 7103510766080425948}
   m_Layer: 17
   m_Name: Colliders
   m_TagString: Untagged
@@ -109,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cffa2920b081465590aa63841f533a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sounds: {fileID: 0}
+  Sounds: {fileID: 7103510766080425948}
   Source: {fileID: 0}
 --- !u!114 &8438815936896135815
 MonoBehaviour:
@@ -138,6 +139,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Events: {fileID: 7988276051306822542}
   Animator: {fileID: 7068729471902486531}
+--- !u!114 &7103510766080425948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526728281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a967d973e6a9f424ca879cf1b0ed4d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aggroClips: []
+  stepClips: []
+  hurtClips: []
+  attackClips: []
+  deathClips:
+  - {fileID: 8300000, guid: 93778bb30875a8948a749c7a5c61a078, type: 3}
+  - {fileID: 8300000, guid: e3f039c2811356d45abb77ab8ab7c002, type: 3}
+  - {fileID: 8300000, guid: b1dcf2698d0962f4f861e5780e06424f, type: 3}
 --- !u!1 &7068729471902486529
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +328,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9170311773039887693}
-  m_LocalRotation: {x: -0, y: -0.99606246, z: -0, w: 0.08865515}
+  m_LocalRotation: {x: -0, y: -0.9935193, z: -0, w: 0.11366312}
   m_LocalPosition: {x: 0.000043028514, y: -0.0019291043, z: 0.00021644472}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:

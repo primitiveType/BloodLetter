@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class LevelEndUi : MonoBehaviour
 {
+    public Text YouDiedText;
+
     public Text EnemiesText;
 
     public Text SecretsText;
@@ -20,6 +22,7 @@ public class LevelEndUi : MonoBehaviour
         Toolbox.Instance.GetEnemyStatus(out int totalEnemies, out int deadEnemies);
         Toolbox.Instance.GetSecretStatus(out int totalSecrets, out int foundSecrets);
 
+        YouDiedText.gameObject.SetActive(Toolbox.Instance.IsPlayerDead);
         EnemiesText.text = $"Enemies Killed : {deadEnemies}/{totalEnemies}";
         SecretsText.text = $"Secrets Found : {foundSecrets}/{totalSecrets}";
         ContinueButton.onClick.AddListener(LoadNextLevel);

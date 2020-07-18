@@ -51,6 +51,22 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     public void SetPlayerEvents(PlayerEvents events)
     {
         PlayerEvents = events;
+        PlayerEvents.OnDeathEvent -= PlayerEventsOnOnDeathEvent;
+        PlayerEvents.OnDeathEvent += PlayerEventsOnOnDeathEvent;
+    }
+
+    public bool IsPlayerDead { get; private set; }
+
+    private void PlayerEventsOnOnDeathEvent(object sender, OnDeathEventArgs args)
+    {
+        IsPlayerDead = true;
+        StartCoroutine(EndLevelAfterTwoSeconds());
+    }
+
+    private IEnumerator EndLevelAfterTwoSeconds()
+    {
+        yield return new WaitForSeconds(2);
+        LevelManager.Instance.EndLevel();
     }
 
     public void SetPlayerTransform(Transform transform)
@@ -95,6 +111,7 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
 
     public void CleanupForNextLevel()
     {
+        IsPlayerDead = false;
         Secrets.Clear();
         Enemies.Clear();
     }

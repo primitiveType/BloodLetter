@@ -26,10 +26,14 @@ public class PlayerInteract : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hit, 1000, LayerMask.GetMask($"Interactable")))
             {
-                IInteractable interactable = hit.collider.GetComponent<IInteractable>();
-                interactable?.Interact();
+                var interactables = hit.collider.GetComponentsInChildren<IInteractable>();
 
-                PlayerEvents.PlayerInteract(interactable);
+                foreach (var interactable in interactables)
+                {
+                    interactable?.Interact();
+                    PlayerEvents.PlayerInteract(interactable);
+                }
+
             }
         }
     }
