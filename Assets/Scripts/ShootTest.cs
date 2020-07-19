@@ -43,6 +43,10 @@ public class ShootTest : MonoBehaviour
 
     private bool HasAmmo()
     {
+        if (!UsesAmmo)
+        {
+            return true;
+        }
         return UsesAmmo.HasAmmo();
     }
 }

@@ -39,11 +39,14 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
             yield break;
         }
 
+        var prev = CurrentEquip != null ? CurrentEquip.WeaponId : 0;
+        
         if (CurrentEquip != null)
         {
             yield return StartCoroutine(CurrentEquip.UnEquip());
         }
 
+        PlayerEvents.OnEquippedWeaponChanged(prev, thing.WeaponId);
         yield return StartCoroutine(thing.Equip());
         CurrentEquip = thing;
     }

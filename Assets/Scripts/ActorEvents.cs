@@ -13,6 +13,7 @@ public class ActorEvents : MonoBehaviour
     public event OnAggroEvent OnAggroEvent;
     public event OnAmmoChangedEvent OnAmmoChangedEvent;
     public event OnWeaponsChangedEvent OnWeaponsChangedEvent;
+    public event OnEquippedWeaponChangedEvent OnEquippedWeaponChangedEvent;
 
     /// <summary>
     /// Should really be called "OnDamaged"
@@ -62,6 +63,25 @@ public class ActorEvents : MonoBehaviour
     {
         OnWeaponsChangedEvent?.Invoke(this, new OnWeaponsChangedEventArgs(oldValue, newValue));
     }
+
+    public void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue)
+    {
+        OnEquippedWeaponChangedEvent?.Invoke(this, new OnEquippedWeaponChangedEventArgs(oldValue, newValue));
+    }
+}
+
+public delegate void OnEquippedWeaponChangedEvent(object sender, OnEquippedWeaponChangedEventArgs args);
+
+public class OnEquippedWeaponChangedEventArgs
+{
+    public OnEquippedWeaponChangedEventArgs(WeaponId oldValue, WeaponId newValue)
+    {
+        NewValue = newValue;
+        OldValue = oldValue;
+    }
+
+    public WeaponId NewValue { get; }
+    public WeaponId OldValue { get; }
 }
 
 public delegate void OnArmorChangedEvent(object sender, OnArmorChangedEventArgs args);

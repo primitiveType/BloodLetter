@@ -12,12 +12,17 @@ public class WeaponEventsHandler : MonoBehaviour
 
     public void Shoot()
     {
-        var transform1 = this.transform;
         ProjectileInfo.TriggerShoot(BarrelTransform.position, BarrelTransform.forward, EntityType.Player);
         SoundInfo.OnShoot();
         Toolbox.Instance.PlayerEvents.PlayerShoot();
     }
 
+    public void Idle()
+    {
+        SoundInfo.OnIdle();
+
+    }
+    
     public void Reload()
     {
         SoundInfo.OnReload();

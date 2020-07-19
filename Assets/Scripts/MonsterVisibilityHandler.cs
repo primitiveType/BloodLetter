@@ -4,7 +4,12 @@ public class MonsterVisibilityHandler : MonoBehaviour
 {   
     private Transform Target { get; set; }
 
-    private Transform MonsterTransform { get; set; }
+    private Transform MonsterTransform
+    {
+        get => m_monsterTransform;
+        set => m_monsterTransform = value;
+    }
+
     private Transform TargetCollider { get; set; }
 
     private bool m_CanSeePlayer;
@@ -13,22 +18,32 @@ public class MonsterVisibilityHandler : MonoBehaviour
     {
         Target = Toolbox.Instance.PlayerHeadTransform;
         TargetCollider = Toolbox.Instance.PlayerTransform;
-        MonsterTransform = transform;
+        //MonsterTransform = transform;
     }
 
     private int lastFrameCheck;
     private int checkFrequency = 2;
-    
-    public bool CanSeePlayer()
+    [SerializeField]private Transform m_monsterTransform;
+
+    public bool CanSeePlayer(bool ignoreDirection = false, bool forceCheck = false)
     {
-        if (Time.frameCount < lastFrameCheck + checkFrequency) return m_CanSeePlayer;
-       
+        if (!forceCheck)
+        {
+            if (Time.frameCount < lastFrameCheck + checkFrequency) return m_CanSeePlayer;
+        }
+
         lastFrameCheck = Time.frameCount;
 
-        var angle = Vector3.Dot(Target.position - MonsterTransform.position, MonsterTransform.forward);
-        if (angle < 0) //if monster isn't facing player
+        if (!ignoreDirection)
         {
-            m_CanSeePlayer =  false;
+            var direction = ((MonsterTransform.position - Target.position).normalized);
+            Debug.Log(direction);
+            var angle = Vector3.Dot(direction, MonsterTransform.forward);
+            Debug.Log(angle);
+            if (angle > 0) //if monster isn't facing player
+            {
+                return m_CanSeePlayer = false;
+            }
         }
 
         //might want to offset monster position so they can see over low walls, etc.

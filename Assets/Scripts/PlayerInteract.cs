@@ -18,7 +18,7 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             var transform1 = transform;
             Ray ray = new Ray(transform1.position, transform1.forward * interactDistance);
@@ -38,6 +38,7 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 }
+
 
 public interface IInteractable
 {
