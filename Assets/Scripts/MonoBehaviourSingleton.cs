@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class MonoBehaviourSingleton<T> : MonoBehaviour where T : Object 
+public abstract class MonoBehaviourSingleton<T> : MonoBehaviour where T : MonoBehaviourSingleton<T> 
 {
     private static T s_instance;
 
@@ -16,5 +16,10 @@ public abstract class MonoBehaviourSingleton<T> : MonoBehaviour where T : Object
             return s_instance;
         }
         private set { s_instance = value; }
+    }
+
+    protected virtual void Awake()
+    {
+        Instance = this as T;
     }
 }

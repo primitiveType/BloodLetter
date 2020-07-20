@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 
 public class SecretArea : MonoBehaviour
 {
@@ -18,11 +19,15 @@ public class SecretArea : MonoBehaviour
         {
             return;
         }
+        Profiler.BeginSample("Secret trigger");
 
         if (other.CompareTag("Player"))
         {
             ToastHandler.Instance.PopToast("Found Secret!");
             WasFound = true;
         }
+
+        Profiler.EndSample(); //Secret trigger
+
     }
 }

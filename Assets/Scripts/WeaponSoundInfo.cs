@@ -54,6 +54,10 @@ public class WeaponSoundInfo : MonoBehaviour
 
     public void OnIdle()
     {
+        if (!Source.enabled)
+        {
+            return;
+        }
         if (IdleSound && LoopIdleSound)
         {
             Source.clip = IdleSound;

@@ -37,9 +37,9 @@ public class MonsterVisibilityHandler : MonoBehaviour
         if (!ignoreDirection)
         {
             var direction = ((MonsterTransform.position - Target.position).normalized);
-            Debug.Log(direction);
+            // Debug.Log(direction);
             var angle = Vector3.Dot(direction, MonsterTransform.forward);
-            Debug.Log(angle);
+            // Debug.Log(angle);
             if (angle > 0) //if monster isn't facing player
             {
                 return m_CanSeePlayer = false;

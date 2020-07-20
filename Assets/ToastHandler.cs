@@ -4,16 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ToastHandler : MonoBehaviour
+public class ToastHandler : MonoBehaviourSingleton<ToastHandler>
 {
     [SerializeField] private Text toastPrefab;
-
-    public static ToastHandler Instance { get; private set; }
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     public void PopToast(string message)
     {
