@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -6,14 +7,25 @@ using UnityEngine.Serialization;
 public class Elevator : MonoBehaviour
 {
     public float speed;
-    [FormerlySerializedAs("BottomTarget")] [SerializeField] private Transform StartTarget;
 
-    [FormerlySerializedAs("TopTarget")] [SerializeField] private Transform EndTarget;
+    [FormerlySerializedAs("BottomTarget")] [SerializeField]
+    private Transform StartTarget;
 
-    [FormerlySerializedAs("rigidbody")] [SerializeField] private Transform elevator;
+    [FormerlySerializedAs("TopTarget")] [SerializeField]
+    private Transform EndTarget;
+
+    [FormerlySerializedAs("rigidbody")] [SerializeField]
+    private Transform elevator;
+
+    private AudioSource audiosource;
 
     [SerializeField] private float delay = 2f;
     [SerializeField] private bool returns = true;
+
+    private void Start()
+    {
+        audiosource = GetComponent<AudioSource>();
+    }
 
     private IEnumerator Move(Transform target)
     {
@@ -30,7 +42,7 @@ public class Elevator : MonoBehaviour
             elevator.transform.position = currentTarget;
             // rigidbody.MovePosition(currentTarget);
             yield return null;
-            t += (Time.unscaledDeltaTime) / (distance / speed);
+            t += (Time.deltaTime) / (distance / speed);
         }
 
         elevator.transform.position = targetPosition;
@@ -50,6 +62,8 @@ public class Elevator : MonoBehaviour
 
     private IEnumerator TriggerCr()
     {
+        EnableAudio(true);
+
         Transform target = EndTarget;
         Transform returnTarget = StartTarget;
 
@@ -57,9 +71,22 @@ public class Elevator : MonoBehaviour
 
         if (returns)
         {
+            EnableAudio(false);
+
             yield return new WaitForSeconds(delay);
+            EnableAudio(true);
 
             yield return Move(returnTarget);
+        }
+
+        EnableAudio(false);
+    }
+
+    private void EnableAudio(bool value)
+    {
+        if (audiosource)
+        {
+            audiosource.enabled = value;
         }
     }
 }

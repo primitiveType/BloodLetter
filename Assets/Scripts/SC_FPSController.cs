@@ -55,11 +55,11 @@ public class SC_FPSController : MonoBehaviour
         // as an acceleration (ms^-2)
         if (!characterController.isGrounded)
         {
-            moveDirection.y -= gravity * Time.unscaledDeltaTime;
+            moveDirection.y -= gravity * Time.deltaTime;
         }
 
         // Move the controller
-        characterController.Move(moveDirection * Time.unscaledDeltaTime);
+        characterController.Move(moveDirection * Time.deltaTime);
 
         // Player and Camera rotation
         if (canMove)

@@ -31,10 +31,16 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 ? LayerMask.NameToLayer("EnemyRaycast")
                 : LayerMask.NameToLayer("Player");
 
+            
             layerToCheckForDamage |= LayerMask.NameToLayer($"Destructible");
 
             //always ignore this one, since its the enemy collider which we don't use for raycasts
             int raycastMask = ~LayerMask.GetMask("Enemy");
+
+            if (ownerType == EntityType.Player)
+            {//HACK to make player unable to shoot their feet lol
+                raycastMask &= ~LayerMask.GetMask("Player");
+            }
             
             bool isDone = false;
             while (!isDone)
