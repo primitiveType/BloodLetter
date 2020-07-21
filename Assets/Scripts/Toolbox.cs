@@ -29,16 +29,22 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
 
     public void EquipThing(EquipStatus thing)
     {
-        Instance.StartCoroutine(EquipThingCR(thing));
+        if (!equipping)
+        {
+            Instance.StartCoroutine(EquipThingCR(thing));
+        }
     }
 
+    private bool equipping;
     private IEnumerator EquipThingCR(EquipStatus thing)
     {
+        
         if (CurrentEquip == thing || !thing.CanEquip())
         {
             yield break;
         }
 
+        equipping = true;
         var prev = CurrentEquip != null ? CurrentEquip.WeaponId : 0;
         
         if (CurrentEquip != null)
@@ -49,6 +55,7 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
         PlayerEvents.OnEquippedWeaponChanged(prev, thing.WeaponId);
         yield return StartCoroutine(thing.Equip());
         CurrentEquip = thing;
+        equipping = false;
     }
 
     public void SetPlayerEvents(PlayerEvents events)

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -36,8 +37,21 @@ public class SC_FPSController : MonoBehaviour
         Vector3 right = transform.TransformDirection(Vector3.right);
         // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
+
+        float vert = Input.GetAxis("Vertical");
+        float horz = Input.GetAxis("Horizontal");
+
+        Vector2 movedir = new Vector2(vert, horz);
+        float targetSpeed = isRunning ? runningSpeed : walkingSpeed;
+        movedir *= targetSpeed;
+        if (movedir.magnitude > targetSpeed)
+        {
+            movedir = movedir.normalized * targetSpeed;
+        }
+        float curSpeedX = canMove ? movedir.x : 0;
+        float curSpeedY = canMove ? movedir.y : 0;
+
+
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
