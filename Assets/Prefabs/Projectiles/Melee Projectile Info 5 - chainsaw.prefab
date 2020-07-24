@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3793866244328430090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5695412908502243444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6460380401524d7281d86b90583327d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Range: 3
+  m_MinRange: 0
+  Piercing: 0
+  OnHitPrefab: {fileID: 7917214635672765982, guid: deb8983ad7b1f274f99256e5ee06a94b,
+    type: 3}
+  OnHitWallPrefab: {fileID: 0}
+  m_Damage: 5
 --- !u!1001 &1227065744569403415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,5 +102,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Melee Projectile Info 5 - chainsaw
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4166030634176468978, guid: 9fb4b3f24ad4ebd4cb51ce03ca158a28, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9fb4b3f24ad4ebd4cb51ce03ca158a28, type: 3}
+--- !u!1 &5695412908502243444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6777145677616992355, guid: 9fb4b3f24ad4ebd4cb51ce03ca158a28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1227065744569403415}
+  m_PrefabAsset: {fileID: 0}

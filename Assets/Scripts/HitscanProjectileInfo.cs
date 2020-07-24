@@ -22,26 +22,17 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         LayerMask.NameToLayer("Default"),
         LayerMask.NameToLayer("Interactable")
     };
+    
+    
 
-    public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
+    public override void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, EntityType ownerType)
     {
-           Ray ray = new Ray(playerPosition, playerDirection * Range);
-            Debug.DrawRay(playerPosition, playerDirection * Range, Color.blue, 10);
-            int layerToCheckForDamage = ownerType == EntityType.Player
-                ? LayerMask.NameToLayer("EnemyRaycast")
-                : LayerMask.NameToLayer("Player");
+           Ray ray = new Ray(ownerPosition, ownerDirection * Range);
+            Debug.DrawRay(ownerPosition, ownerDirection * Range, Color.blue, 10);
+            var layerToCheckForDamage = GetLayerToCheckForDamage(ownerType);
 
-            
-            layerToCheckForDamage |= LayerMask.NameToLayer($"Destructible");
+            var raycastMask = GetRaycastMask(ownerType);
 
-            //always ignore this one, since its the enemy collider which we don't use for raycasts
-            int raycastMask = ~LayerMask.GetMask("Enemy");
-
-            if (ownerType == EntityType.Player)
-            {//HACK to make player unable to shoot their feet lol
-                raycastMask &= ~LayerMask.GetMask("Player");
-            }
-            
             bool isDone = false;
             while (!isDone)
             {
@@ -89,6 +80,33 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 }
             }
         
+    }
+    
+    
+
+    protected static int GetRaycastMask(EntityType ownerType)
+    {
+        //always ignore this one, since its the enemy collider which we don't use for raycasts
+        int raycastMask = ~LayerMask.GetMask("Enemy");
+
+        if (ownerType == EntityType.Player)
+        {
+            //HACK to make player unable to shoot their feet lol
+            raycastMask &= ~LayerMask.GetMask("Player");
+        }
+
+        return raycastMask;
+    }
+
+    protected static int GetLayerToCheckForDamage(EntityType ownerType)
+    {
+        int layerToCheckForDamage = ownerType == EntityType.Player
+            ? LayerMask.NameToLayer("EnemyRaycast")
+            : LayerMask.NameToLayer("Player");
+
+
+        layerToCheckForDamage |= LayerMask.NameToLayer($"Destructible");
+        return layerToCheckForDamage;
     }
 
     public float GetDamage(ActorHealth hitActor)

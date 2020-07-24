@@ -13,10 +13,17 @@ public class PlayerDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscan
         Events.OnShot(projectileInfo);
         return true;
     }
+
+    public bool OnShot(HitscanProjectileInfo projectileInfo)
+    {
+        Events.OnShot(projectileInfo);
+        return true;
+    }
 }
 
 public interface IDamagedByHitscanProjectile 
 {
     bool OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo);
+    bool OnShot(HitscanProjectileInfo projectileInfo);
     Transform transform { get; }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = System.Random;
 
 
 public class MonsterAttackComponent : MonoBehaviour
@@ -14,6 +15,7 @@ public class MonsterAttackComponent : MonoBehaviour
     public float AttackCooldown => m_AttackCooldown;
 
     [SerializeField] private float m_AttackCooldown = 3f;
+    [SerializeField] private float m_AttackCooldownVariance = 1.5f;
     private List<ProjectileInfoBase> Attacks { get; set; }
 
     private Animator Animator
@@ -65,7 +67,7 @@ public class MonsterAttackComponent : MonoBehaviour
             Animator.SetBool(Attacking, false);
             if (!AggroHandler.IsAggro)
             {
-                LastAttackTimeStamp = Time.time;//hack to add delay when aggro'd
+                ResetAttackTimeStamp();//hack to add delay when aggro'd
             }
             return;
         }
@@ -78,7 +80,7 @@ public class MonsterAttackComponent : MonoBehaviour
             {
                 CurrentAttack = attack;
                 Animator.SetBool(Attacking, true);
-                LastAttackTimeStamp = Time.time;
+                ResetAttackTimeStamp();
                 break;
             }
             else
@@ -86,6 +88,12 @@ public class MonsterAttackComponent : MonoBehaviour
                 Animator.SetBool(Attacking, false);
             }
         }
+    }
+
+    private void ResetAttackTimeStamp()
+    {
+        LastAttackTimeStamp = Time.time + UnityEngine.Random.Range(0, m_AttackCooldownVariance);
+
     }
 
 

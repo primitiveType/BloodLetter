@@ -4,6 +4,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
 {
     public void EndLevel()
     {
+        Timer.Instance.PauseTimer();
         SceneManager.LoadScene("LevelEnd");
     }
 
@@ -15,5 +16,6 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     public void StartNextLevel()
     {
         SceneManager.LoadScene("ProBuilderScene");
+        Timer.Instance.StartTimer();
     }
 }

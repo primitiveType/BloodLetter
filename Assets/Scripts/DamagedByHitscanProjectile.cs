@@ -17,4 +17,10 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
         Events.OnShot(projectileInfo);
         return true;
     }
+
+    public bool OnShot(HitscanProjectileInfo projectileInfo)
+    {
+        Events.OnShot(projectileInfo);
+        return true;
+    }
 }

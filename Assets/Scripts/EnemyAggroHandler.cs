@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class EnemyAggroHandler : MonoBehaviour
 {
@@ -31,8 +33,12 @@ public class EnemyAggroHandler : MonoBehaviour
             {
                 Events.OnAggro();
             }
+
+            PreAggro = value;//if un-aggro'd, reset this
         }
     }
+
+    private bool PreAggro { get; set; }
 
     private void OnPlayerShoot(object sender, PlayerShootEventArgs args)
     {
@@ -43,9 +49,26 @@ public class EnemyAggroHandler : MonoBehaviour
 
         if (VisibilityHandler.CanSeePlayer(true, true))
         {
-            IsAggro = true;
+            SetAggro();
         }
     }
+
+    private void SetAggro()
+    {
+        if (!PreAggro)
+        {
+            PreAggro = true;
+            StartCoroutine(AggroAfterRandomDelay());
+        }
+    }
+
+    private float AggroDelayVariance = 1f;
+    private IEnumerator AggroAfterRandomDelay()
+    {
+        yield return new WaitForSeconds(Random.Range(0, AggroDelayVariance));
+        IsAggro = true;
+    }
+
 
     private void Start()
     {
@@ -59,7 +82,7 @@ public class EnemyAggroHandler : MonoBehaviour
     private void Update()
     {
         m_distance = Vector3.Distance(Target.transform.position, transform.position);
-        if (m_distance < AggroRange && VisibilityHandler.CanSeePlayer()) IsAggro = true;
+        if (m_distance < AggroRange && VisibilityHandler.CanSeePlayer()) SetAggro();
     }
 
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)

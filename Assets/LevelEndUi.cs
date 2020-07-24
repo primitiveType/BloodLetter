@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class LevelEndUi : MonoBehaviour
 {
     public Text YouDiedText;
 
+    public Text TimeText;
+
     public Text EnemiesText;
 
     public Text SecretsText;
@@ -18,7 +21,12 @@ public class LevelEndUi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TimeSpan test;
+        test = Timer.Instance.GetTime();
+        TimeText.text = $"{Mathf.FloorToInt((float)test.TotalMinutes).ToString()}:{test.Seconds:00}";
+
         CursorLockManager.Instance.Unlock();
+
         Toolbox.Instance.GetEnemyStatus(out int totalEnemies, out int deadEnemies);
         Toolbox.Instance.GetSecretStatus(out int totalSecrets, out int foundSecrets);
 
