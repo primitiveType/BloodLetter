@@ -20,6 +20,7 @@ public class Elevator : MonoBehaviour
     private AudioSource audiosource;
 
     [SerializeField] private float delay = 2f;
+    [SerializeField] private float predelay = 0f;
     [SerializeField] private bool returns = true;
 
     private void Start()
@@ -29,6 +30,7 @@ public class Elevator : MonoBehaviour
 
     private IEnumerator Move(Transform target)
     {
+        
         Vector3 start = elevator.transform.position;
         // Vector3 start = transform.position;
         var targetPosition = target.position;
@@ -62,6 +64,7 @@ public class Elevator : MonoBehaviour
 
     private IEnumerator TriggerCr()
     {
+        yield return new WaitForSeconds(predelay);
         EnableAudio(true);
 
         Transform target = EndTarget;

@@ -28,7 +28,7 @@ public class PlayerInteract : MonoBehaviour
             Ray ray = new Ray(transform1.position, transform1.forward * interactDistance);
             Debug.DrawRay(transform1.position, transform1.forward * interactDistance, Color.blue, 10);
 
-            if (Physics.Raycast(ray, out RaycastHit hit, 1000, LayerMask.GetMask($"Interactable")))
+            if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, LayerMask.GetMask($"Interactable")))
             {
                 var interactables = hit.collider.GetComponentsInChildren<IInteractable>();
                 foundOne = interactables.Any();

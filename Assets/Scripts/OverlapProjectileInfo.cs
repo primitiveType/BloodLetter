@@ -20,10 +20,10 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
 
             var hit = hits[i];
             int hitLayer = hit.gameObject.layer;
-            if (((hitLayer & layerToCheckForDamage) == 0) || hit.transform == null)
-            {
-                isDone = true;
-            }
+            // if (((hitLayer & layerToCheckForDamage) == 0))
+            // {
+            //     //isDone = true;
+            // }
 
             // Debug.Log($"hit {hit.textureCoord} ");
 

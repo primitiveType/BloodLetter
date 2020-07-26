@@ -7,21 +7,17 @@ using UnityEngine.UI;
 public class ToastHandler : MonoBehaviourSingleton<ToastHandler>
 {
     [SerializeField] private Text toastPrefab;
+    [SerializeField] private int max;
 
     public void PopToast(string message)
     {
+        if (transform.childCount >= max)
+        {
+            Destroy(transform.GetChild(0).gameObject);
+        }
+
         var toast = Instantiate(toastPrefab, transform);
         toast.text = message;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

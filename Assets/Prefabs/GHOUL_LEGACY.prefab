@@ -108,7 +108,7 @@ PrefabInstance:
         type: 3}
       propertyPath: aggroClips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 4ce2afae967de5c4b8b8f981ac0439d1, type: 3}
+      objectReference: {fileID: 8300000, guid: 8614cfa8fd4bd4041a4b1926db8cdd0f, type: 3}
     - target: {fileID: 6392817097388422497, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Speed
@@ -127,12 +127,12 @@ PrefabInstance:
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9991308
+      value: 0.9992213
       objectReference: {fileID: 0}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.04168542
+      value: 0.03945622
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255443565340, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
