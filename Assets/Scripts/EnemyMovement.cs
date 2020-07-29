@@ -19,6 +19,7 @@ public class EnemyMovement : MonoBehaviour
 
 
     [SerializeField] private Transform Target;
+    [SerializeField] private bool isFlying;
     private Animator Animator { get; set; }
 
     private ActorHealth m_Health;
@@ -71,7 +72,20 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Agent && Target) Agent.SetDestination(Target.position);
+        if (Agent && Target)
+        {
+            Agent.SetDestination(Target.position);
+            if (isFlying)
+            {
+                var transform1 = transform;
+
+                float prevY = transform1.position.y;
+                Agent.baseOffset += prevY - Target.position.y;
+                //transform1.position = new Vector3(transform1.position.x, Target.position.y, transform1.position.z);
+                Agent.Raycast(transform1.position, out NavMeshHit hit);
+                Agent.baseOffset = hit.distance;
+            }
+        }
 
         Agent.isStopped = !IsAggro;
 
