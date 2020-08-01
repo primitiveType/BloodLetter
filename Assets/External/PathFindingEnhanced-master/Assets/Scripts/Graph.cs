@@ -169,26 +169,28 @@ public class Graph {
     }
     public List<List<Node>> FindPath(PathFindingMethod method, Vector3 source, List<Vector3> destinations, Octree space, H h = null) {
         List<Node> sourceNeighbors = null;
-        //if (space.Find(source).blocked) return new List<List<Node>>();
+        var nearestOpenSource = space.FindNearestOpen(source);
         if (type == GraphType.CENTER) {
-            sourceNeighbors = space.FindCorrespondingCenterGraphNode(source);
+            sourceNeighbors = space.FindCorrespondingCenterGraphNode(nearestOpenSource.center);
         } else if (type == GraphType.CORNER) {
-            sourceNeighbors = space.FindBoundingCornerGraphNodes(source);
+            sourceNeighbors = space.FindBoundingCornerGraphNodes(nearestOpenSource.center);
         } else if (type == GraphType.CROSSED) {
-            sourceNeighbors = space.FindBoundingCrossedGraphNodes(source);
+            sourceNeighbors = space.FindBoundingCrossedGraphNodes(nearestOpenSource.center);
         }
-        Node tempSourceNode = AddTemporaryNode(source, sourceNeighbors);
+        Node tempSourceNode = AddTemporaryNode(nearestOpenSource.center, sourceNeighbors);
         List<Node> tempDestinationNodes = new List<Node>();
         foreach (Vector3 destination in destinations) {
             List<Node> destinationNeighbors = null;
+            var nearestOpenDest = space.FindNearestOpen(destination);
+
             if (type == GraphType.CENTER) {
-                destinationNeighbors = space.FindCorrespondingCenterGraphNode(destination);
+                destinationNeighbors = space.FindCorrespondingCenterGraphNode(nearestOpenDest.center);
             } else if (type == GraphType.CORNER) {
-                destinationNeighbors = space.FindBoundingCornerGraphNodes(destination);
+                destinationNeighbors = space.FindBoundingCornerGraphNodes(nearestOpenDest.center);
             } else if (type == GraphType.CROSSED) {
-                destinationNeighbors = space.FindBoundingCrossedGraphNodes(destination);
+                destinationNeighbors = space.FindBoundingCrossedGraphNodes(nearestOpenDest.center);
             }
-            tempDestinationNodes.Add(AddTemporaryNode(destination, destinationNeighbors));
+            tempDestinationNodes.Add(AddTemporaryNode(nearestOpenDest.center, destinationNeighbors));
         }
         List<List<Node>> result = FindPath(method, tempSourceNode, tempDestinationNodes, space, h);
         RemoveTemporaryNodes();

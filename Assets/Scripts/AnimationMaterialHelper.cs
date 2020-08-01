@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 [ExecuteAlways]
@@ -41,7 +42,14 @@ public class AnimationMaterialHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Application.isEditor && !Application.isPlaying)
+        #if UNITY_EDITOR
+        if (EditorApplication.isPaused)
+        {
+            return;
+        }
+        #endif
+        
+        if (Application.isEditor && !Application.isPlaying )
         {
             //no null ref, no null ref, stop!
             CurrentAnimation = "";

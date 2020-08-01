@@ -32,6 +32,8 @@ public class ChangeShaderIndex : MonoBehaviour
     {
         if (Application.isEditor && !Application.isPlaying)
         {
+            if (Camera.current)
+                mainCam = Camera.current.transform;
             FixedUpdate();
         }
     }
@@ -51,10 +53,13 @@ public class ChangeShaderIndex : MonoBehaviour
     //DRAGONS HERE
     private float GetFacingIndex()
     {
+        if (mainCam == null)
+        {
+            return 0;
+        }
         //perspective 0 is front facing.
         //moving clockwise, numbers go up to 7
-        var camTransform = mainCam.transform;
-        var camPosition3 = camTransform.position;
+        var camPosition3 = mainCam.position;
         var camPosition = new Vector3(camPosition3.x, 0, camPosition3.z);
         var position = transform.position;
         var myPosition = new Vector3(position.x, 0, position.z);

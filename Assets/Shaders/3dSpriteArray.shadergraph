@@ -206,12 +206,6 @@
             "typeInfo": {
                 "fullName": "UnityEditor.Graphing.Edge"
             },
-            "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 1,\n        \"m_NodeGUIDSerialized\": \"ea5c161c-4889-4629-b6dd-e6af1f8f577d\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": 0,\n        \"m_NodeGUIDSerialized\": \"7b321ad0-d6be-4c18-9221-33f3b3164a9d\"\n    }\n}"
-        },
-        {
-            "typeInfo": {
-                "fullName": "UnityEditor.Graphing.Edge"
-            },
             "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 0,\n        \"m_NodeGUIDSerialized\": \"b94d467a-e0ae-4092-b2ad-7eb12328506a\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": 1353347173,\n        \"m_NodeGUIDSerialized\": \"27708fc5-cd10-463e-a525-a1440776c9a7\"\n    }\n}"
         },
         {
@@ -290,12 +284,6 @@
             "typeInfo": {
                 "fullName": "UnityEditor.Graphing.Edge"
             },
-            "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 1,\n        \"m_NodeGUIDSerialized\": \"ea5c161c-4889-4629-b6dd-e6af1f8f577d\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": 4,\n        \"m_NodeGUIDSerialized\": \"87eac809-5c2e-44c3-9201-59cd698a3e03\"\n    }\n}"
-        },
-        {
-            "typeInfo": {
-                "fullName": "UnityEditor.Graphing.Edge"
-            },
             "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 5,\n        \"m_NodeGUIDSerialized\": \"27708fc5-cd10-463e-a525-a1440776c9a7\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": 7,\n        \"m_NodeGUIDSerialized\": \"7b321ad0-d6be-4c18-9221-33f3b3164a9d\"\n    }\n}"
         },
         {
@@ -303,6 +291,18 @@
                 "fullName": "UnityEditor.Graphing.Edge"
             },
             "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 0,\n        \"m_NodeGUIDSerialized\": \"9f69a461-d1c2-430f-8ad2-9b8c75f75a71\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": -351435264,\n        \"m_NodeGUIDSerialized\": \"ea5c161c-4889-4629-b6dd-e6af1f8f577d\"\n    }\n}"
+        },
+        {
+            "typeInfo": {
+                "fullName": "UnityEditor.Graphing.Edge"
+            },
+            "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 1,\n        \"m_NodeGUIDSerialized\": \"27708fc5-cd10-463e-a525-a1440776c9a7\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": 4,\n        \"m_NodeGUIDSerialized\": \"87eac809-5c2e-44c3-9201-59cd698a3e03\"\n    }\n}"
+        },
+        {
+            "typeInfo": {
+                "fullName": "UnityEditor.Graphing.Edge"
+            },
+            "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 1,\n        \"m_NodeGUIDSerialized\": \"ea5c161c-4889-4629-b6dd-e6af1f8f577d\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": 0,\n        \"m_NodeGUIDSerialized\": \"7b321ad0-d6be-4c18-9221-33f3b3164a9d\"\n    }\n}"
         }
     ],
     "m_PreviewData": {

@@ -10,41 +10,53 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     private PathfindingHandle PathfindingHandle { get; set; }
 
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private bool debug;
     [SerializeField] private ActorEvents Events;
+    [SerializeField] private float VelocityUpdateInterval = .2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        PathfindingHandle = OctreeManager.Instance.StartPathfindingToPlayer(gameObject);
-        DrawPath();
+        PathfindingHandle = OctreeManager.Instance.StartPathfindingToPlayer(transform);
+        PathfindingHandle.NeedsUpdate = false;
+        PathfindingHandle.UpdatedEvent += PathfindingHandleOnUpdatedEvent;
+        if (debug)
+        {
+            PathfindingHandle.DrawPath();
+        }
+
         myObjectTransform = transform;
+        Events.OnAggroEvent -= EventsOnOnAggroEvent;
+        Events.OnAggroEvent += EventsOnOnAggroEvent;
         Events.OnDeathEvent -= EventsOnOnDeathEvent;
         Events.OnDeathEvent += EventsOnOnDeathEvent;
+        StartCoroutine(UpdateCR());
+    }
+
+    private void PathfindingHandleOnUpdatedEvent(object sender, PathfindingHandleUpdatedArgs args)
+    {
+        Debug.Log("my path was updated!");
+        pathIndex = PathfindingHandle.CurrentPath.Count - 1;
+    }
+
+    private void EventsOnOnAggroEvent(object sender, OnAggroEventArgs args)
+    {
+        PathfindingHandle.NeedsUpdate = true;
     }
 
     private void EventsOnOnDeathEvent(object sender, OnDeathEventArgs args)
     {
         enabled = false;
+        PathfindingHandle.Dispose();
     }
 
     private void OnDestroy()
     {
         Events.OnDeathEvent -= EventsOnOnDeathEvent;
+        Events.OnAggroEvent -= EventsOnOnAggroEvent;
     }
 
-    private void DrawPath()
-    {
-        for (int i = 0; i < PathfindingHandle.CurrentPath.Count; i++)
-        {
-            if (i == 0)
-            {
-                continue;
-            }
-
-            Debug.DrawLine(PathfindingHandle.CurrentPath[i].center, PathfindingHandle.CurrentPath[i - 1].center,
-                Color.magenta, 10);
-        }
-    }
+  
 
 
     int pathIndex = 0;
@@ -55,43 +67,71 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     private Vector3 positionOffset = Vector3.up;
     private Vector3 myPosition => myObjectTransform.position + positionOffset;
 
-    private void Update()
+    private Vector3 lastDesiredVelocity;
+    private IEnumerator UpdateCR()
     {
-        if (updateRotation)
+        while (true)
         {
-            var rot = myObjectTransform.rotation.eulerAngles;
-            myObjectTransform.LookAt(PathfindingHandle.CurrentPath[pathIndex].center, Vector3.up);
-            myObjectTransform.rotation = Quaternion.Euler(rot.x, myObjectTransform.rotation.eulerAngles.y, rot.z);
-        }
-        
-        if (Vector3.Distance(myPosition, PathfindingHandle.CurrentPath.Last().center) <=
-            stoppingDistance)
-        {
-            rb.velocity = Vector3.zero;
-            return;
-        }
+            yield return new WaitForSeconds(VelocityUpdateInterval);
 
-
-        var myDesiredLocation = PathfindingHandle.CurrentPath[pathIndex].center;
-        rb.velocity = Vector3.Lerp((myDesiredLocation - myPosition).normalized * MaxSpeed,
-            rb.velocity, .5f);
-
-        if (Vector3.Distance(myPosition, myDesiredLocation) < distanceErr)
-        {
-            // My object reach the of path
-
-            pathIndex += moveTowards ? 1 : -1; // My next location in the path
-            if (pathIndex <= 0 || pathIndex >= PathfindingHandle.CurrentPath.Count)
+            if (isStopped)
             {
-                // stop doing the above because the player reach the end of the path
-                rb.velocity = Vector3.zero;
+                continue;
             }
-        }
+            if (!enabled)
+            {
+                continue;
+            } 
 
-       
+            if (PathfindingHandle == null || !PathfindingHandle.IsValid)
+            {
+                continue;
+            }
+            myDesiredLocation = PathfindingHandle.CurrentPath[pathIndex].center;
+
+            if (Vector3.Distance(myPosition, myDesiredLocation) < distanceErr)
+            {
+                // My object reach the of path
+
+                pathIndex --; // My next location in the path
+                if (pathIndex <= 0 || pathIndex >= PathfindingHandle.CurrentPath.Count)
+                {
+                    // stop doing the above because the player reach the end of the path
+                    rb.velocity = Vector3.zero;
+                }
+            }
+            if (updateRotation)
+            {
+                var rot = myObjectTransform.rotation.eulerAngles;
+                myObjectTransform.LookAt(PathfindingHandle.CurrentPath[pathIndex].center, Vector3.up);
+                myObjectTransform.rotation = Quaternion.Euler(rot.x, myObjectTransform.rotation.eulerAngles.y, rot.z);
+            }
+
+            if (Vector3.Distance(myPosition, PathfindingHandle.CurrentPath.Last().center) <=
+                stoppingDistance)
+            {
+                rb.velocity = Vector3.zero;
+                continue;
+            }
+
+
+            myDesiredLocation = PathfindingHandle.CurrentPath[pathIndex].center;
+            var prevLocation = pathIndex < PathfindingHandle.CurrentPath.Count - 2 ? PathfindingHandle.CurrentPath[pathIndex - 1].center : myPosition;
+            var desiredVelocity = ((myDesiredLocation) - prevLocation).normalized * MaxSpeed;
+            rb.velocity = desiredVelocity;
+            // Vector3.Lerp(desiredVelocity,
+            // lastDesiredVelocity, .5f);
+
+            lastDesiredVelocity = desiredVelocity;
+
+            Debug.DrawLine(rb.transform.position + rb.velocity.normalized, rb.transform.position);
+
+
+        }
     }
 
     public float MaxSpeed;
+    private Vector3 myDesiredLocation;
     public bool isStopped { get; set; }
     public bool updateRotation { get; set; }
     public Vector3 velocity => rb.velocity;

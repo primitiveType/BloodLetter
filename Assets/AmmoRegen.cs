@@ -50,6 +50,9 @@ public class AmmoRegen : MonoBehaviour
 
     private void OnDestroy()
     {
-        Toolbox.Instance.PlayerEvents.OnAmmoChangedEvent -= PlayerEventsOnOnAmmoChangedEvent;
+        if (Toolbox.Instance?.PlayerEvents != null) 
+        {
+            Toolbox.Instance.PlayerEvents.OnAmmoChangedEvent -= PlayerEventsOnOnAmmoChangedEvent;
+        }
     }
 }

@@ -138,6 +138,10 @@ public class Octree
         return Find(PositionToIndex(p));
     }
 
+    public OctreeNode FindNearestOpen(Vector3 p)
+    {
+        return Find(PositionToIndex(p));
+    }
     public bool IsBlocked(int[] gridIndex, bool outsideIsBlocked = false, bool doublePrecision = false)
     {
         int xi = gridIndex[0];

@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Alpha:
-        m_Texture: {fileID: 18700000, guid: ea84992c27c6df9498dbae06f3133234, type: 2}
+        m_Texture: {fileID: 18700000, guid: ae84876c7b2b274408d2cb59b2c6bef7, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - BloodTex:
@@ -73,6 +73,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_738E186A_Texture_1:
+        m_Texture: {fileID: 2800000, guid: dba96fc5a36f3d94ea4a625714f7d2da, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -81,7 +85,7 @@ Material:
     - Aspect: 1
     - BloodAmount: 0
     - Columns: 5
-    - Frame: 12
+    - Frame: 5
     - FrameHeight: 0
     - FrameWidth: 14.93
     - NumFrames: 20

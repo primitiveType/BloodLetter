@@ -1,91 +1,22 @@
-﻿// using System;
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-// using UnityEngine.UIElements;
-//
-// public class DynamicOctreeBounds : MonoBehaviour
-// {
-// 	[SerializeField] private Collider _collider;
-//
-// 	private void Start()
-// 	{
-// 		if (!_collider)
-// 		{
-// 			_collider = GetComponent<Collider>();
-// 			if (!_collider)
-// 			{
-// 				_collider = gameObject.AddComponent<BoxCollider>();
-// 			}
-// 		}
-// 	
-// 	}
-//
-// 	private void Update()
-// 	{
-// 		OctreeManager.Instance.Add();
-// 	}
-// }
-// public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
-// {
-// 	private BoundsOctree<GameObject> boundsTree;
-//
-// 	[SerializeField] private BoxCollider Levelbounds;
-//     // Start is called before the first frame update
-//     void Start()
-//     {
-// 	    boundsTree = new BoundsOctree<GameObject>(150, transform.position, 1, 1);
-// 	    var colliders = Physics.OverlapBox(Levelbounds.center, Levelbounds.size / 2f, Quaternion.identity);
-// 	    foreach (var other in colliders)
-// 	    {
-// 			Add(other.gameObject, other.bounds);
-// 	    }
-//     }
-//
-//     public void Add(GameObject go, Bounds bounds)
-//     {
-// 	    boundsTree.Add(go, bounds);
-//     }
-//
-//     // Update is called once per frame
-//     void Update()
-//     {
-//         
-//     }
-//     
-//     void OnDrawGizmos() {
-//     	boundsTree.DrawAllBounds(); // Draw node boundaries
-//     	boundsTree.DrawAllObjects(); // Draw object boundaries
-//     	boundsTree.DrawCollisionChecks(); // Draw the last *numCollisionsToSave* collision check boundaries
-//     
-//     	
-//     }
-// }
-
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.ExceptionServices;
-using CodingEssentials;
 using CodingEssentials.Trees;
-using Unity.Entities;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 
 public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
 {
     // private NonSparseOctree<IOctreeObject> Octree { get; set; }
 
+    [SerializeField] private bool debug;
+
     public GameObject Scene;
+    [field: SerializeField] public float UpdateInterval { get; } = 1f;
 
     [FormerlySerializedAs("desiredSize")] public float desiredUnitSize = 1; //meters
-
-    private void OnDrawGizmos()
-    {
-        // if(Octree != null) Octree.DebugDraw();
-    }
 
     private World staticWorld;
     private World dynamicWorld;
@@ -97,77 +28,115 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
         float size = Math.Max(Math.Max(colSize.x, colSize.y), colSize.z);
         var maxLevel = Mathf.Log(size / desiredUnitSize, 2);
         var maxLevelInt = Mathf.CeilToInt(maxLevel);
-        staticWorld = new World(Scene, size, this.transform.position, maxLevelInt, 1, true, Graph.GraphType.CENTER,
+        staticWorld = new World(Scene, size, this.transform.position, maxLevelInt, 0, true, Graph.GraphType.CENTER,
             true);
 
-        //staticWorld.space.DisplayVoxels(maxLevelInt);
-        // Octree = new NonSparseOctree<IOctreeObject>(1, new Vector3(minsize,minsize,minsize), col.bounds);
-        //    var colliders = Physics.OverlapBox(col.center, col.size / 2f, Quaternion.identity);
-        // foreach (var other in colliders)
-        //    {
-        //        if (other.isTrigger) continue;
-        //        
-        //        var oo = other.GetOrAddComponent<OctreeObject>();
-        //        Octree.Add(oo);
-        //    }
-    }
 
-    // List<Vector3> currentV1 = null;
-    // List<List<Vector3>> currentV2 = null;
-
-    public void TestPathFinding(Vector3 start, List<Vector3> dest)
-    {
-        Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
-        float totalLength = 0;
-        float startTime = Time.realtimeSinceStartup;
-        var paths = staticWorld
-            .spaceGraph //TODO: consider using the one that takes a list of source-dest. check performance
-            .FindPath(method, start, dest, staticWorld.space);
-
-        if (paths == null)
+        if (debug)
         {
-            return;
+            staticWorld.DisplayVoxels();
         }
 
-        foreach (var path in paths)
+    }
+
+    private void Start()
+    {
+        DefaultPathFindingTarget = Toolbox.Instance.PlayerHeadTransform;
+        StartCoroutine(PathfindingTick());
+
+    }
+
+    // public void TestPathFinding(Vector3 start, List<Vector3> dest)
+    // {
+    //     Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
+    //     float totalLength = 0;
+    //     float startTime = Time.realtimeSinceStartup;
+    //     var paths = staticWorld
+    //         .spaceGraph //TODO: consider using the one that takes a list of source-dest. check performance
+    //         .FindPath(method, start, dest, staticWorld.space);
+    //
+    //     if (paths == null)
+    //     {
+    //         return;
+    //     }
+    //
+    //     foreach (var path in paths)
+    //     {
+    //         for (int i = 0; i < path.Count; i++)
+    //         {
+    //             if (i == 0)
+    //             {
+    //                 continue;
+    //             }
+    //
+    //             Debug.DrawLine(path[i].center, path[i - 1].center, Color.magenta, 10);
+    //         }
+    //     }
+    // }
+
+    List<PathfindingHandle> HandlesToUpdate = new List<PathfindingHandle>();
+    private IEnumerator PathfindingTick()
+    {
+        int count = 0;
+        while (true)
         {
-            for (int i = 0; i < path.Count; i++)
+            count = 0;
+            HandlesToUpdate.Clear();
+            CachedDestinationsList.Clear();
+
+            //currently assumes everything is pathfinding toward the player
+            foreach (var pathfinder in currentPathfinders)
             {
-                if (i == 0)
+                if (pathfinder.NeedsUpdate)
                 {
-                    continue;
+                    pathfinder._pathIndex = count++;
+                    CachedDestinationsList.Add(pathfinder.Finder.transform.position);
                 }
 
-                Debug.DrawLine(path[i].center, path[i - 1].center, Color.magenta, 10);
+                if (debug)
+                {
+                    pathfinder.DrawPath();
+                }
             }
-        }
-    }
+            UpdatePathfindingHandles();
+            foreach (var pathfinder in currentPathfinders)
+            {
+                if (pathfinder.NeedsUpdate)
+                {
+                    pathfinder.IsValid = true;
+                    pathfinder.Updated();
+                }
+            }
 
-    private void PathfindingTick()
-    {
-        //currently assumes everything is pathfinding toward the player
-        foreach (var pathfinder in currentPathfinders)
-        {
-            UpdatePathfindingHandle(pathfinder);
+            yield return new WaitForSeconds(UpdateInterval);
         }
     }
 
     private List<PathfindingHandle> currentPathfinders = new List<PathfindingHandle>();
 
-    private void UpdatePathfindingHandle(PathfindingHandle handle)
+    private List<Vector3> CachedDestinationsList = new List<Vector3>();
+    private List<List<Node>> Paths;
+
+    public List<Node> GetPathForIndex(int index)
     {
-        Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
-        float totalLength = 0;
-        handle.CurrentPath = staticWorld
-            .spaceGraph //TODO: consider using the one that takes a list of source-dest. check performance
-            .FindPath(method, handle.Finder.transform.position, handle.Target.transform.position, staticWorld.space);
+        return Paths?[index];
     }
 
-    public PathfindingHandle StartPathfindingToPlayer(GameObject pathfinder)
+    private void UpdatePathfindingHandles()
     {
-        var handle = new PathfindingHandle(pathfinder, Toolbox.Instance.PlayerTransform.gameObject);
+        Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
+        // handle.CurrentPath
+        Paths = staticWorld
+            .spaceGraph //TODO: consider using the one that takes a list of source-dest. check performance
+            .FindPath(method, DefaultPathFindingTarget.transform.position, CachedDestinationsList, staticWorld.space);
+    }
+
+    public Transform DefaultPathFindingTarget { get; private set; }
+
+    public PathfindingHandle StartPathfindingToPlayer(Transform pathfinder)
+    {
+        var handle = new PathfindingHandle(pathfinder, currentPathfinders.Count);
         currentPathfinders.Add(handle);
-        UpdatePathfindingHandle(handle);
         return handle;
     }
 
@@ -175,178 +144,58 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
     {
         currentPathfinders.Remove(handle);
     }
-
-
 }
 
 public class PathfindingHandle : IDisposable
 {
-    public readonly GameObject Finder;
-    public readonly GameObject Target;
-    public List<Node> CurrentPath { get; set; }
+    public bool NeedsUpdate { get; set; } = true;
+    public readonly Transform Finder;
+    private Transform Target => OctreeManager.Instance.DefaultPathFindingTarget;
+    public bool IsValid { get; set; }
+    public List<Node> CurrentPath => OctreeManager.Instance.GetPathForIndex(_pathIndex);
+    public int _pathIndex;
 
-    public PathfindingHandle(GameObject finder, GameObject target)
+
+    public event PathfindingHandleUpdated UpdatedEvent;
+    
+    public PathfindingHandle(Transform finder, int pathIndex)
     {
         Finder = finder;
-        Target = target;
     }
 
     public void Dispose()
     {
         OctreeManager.Instance.RemovePathfinder(this);
     }
-}
 
-public class NonSparseOctree<T> : Octree<T> where T : class, IOctreeObject
-{
-    private Vector3 CellSize { get; }
-
-    public NonSparseOctree(int maxObjects, Vector3 cellSize, Bounds bounds) : base(maxObjects, cellSize, bounds)
+    public void DrawPath()
     {
-        CellSize = cellSize;
-        SubdivideUntilCellSizeValid();
-    }
-
-    public NonSparseOctree(int maxObjects, int mergeThreshold, Vector3 cellSize, Bounds bounds) : base(maxObjects,
-        mergeThreshold, cellSize, bounds)
-    {
-        CellSize = cellSize;
-        SubdivideUntilCellSizeValid();
-    }
-
-    private void SubdivideUntilCellSizeValid()
-    {
-        if (Bounds.size.x > CellSize.x || Bounds.size.y > CellSize.y || Bounds.size.z > CellSize.z)
+        Debug.DrawLine(Finder.position, Target.position, Color.green);
+        if (CurrentPath == null)
         {
-            Split();
+            return;
         }
-    }
 
-    protected override void Split()
-    {
-        var c = TreeBounds.center;
-        var size = TreeBounds.extents;
-        var half = size / 2;
-        Cells = new SpatialTree<T, Bounds>[8];
-        Cells[0] = new NonSparseOctree<T>(MaxObjects, MergeThreshold, CellSize,
-            new Bounds(c + new Vector3(half.x, half.y, half.z), size));
-        Cells[1] = new NonSparseOctree<T>(MaxObjects, MergeThreshold, CellSize,
-            new Bounds(c + new Vector3(-half.x, half.y, half.z), size));
-        Cells[2] = new NonSparseOctree<T>(MaxObjects, MergeThreshold, CellSize,
-            new Bounds(c + new Vector3(half.x, -half.y, half.z), size));
-        Cells[3] = new NonSparseOctree<T>(MaxObjects, MergeThreshold, CellSize,
-            new Bounds(c + new Vector3(-half.x, -half.y, half.z), size));
-        Cells[4] = new NonSparseOctree<T>(MaxObjects, MergeThreshold, CellSize,
-            new Bounds(c + new Vector3(half.x, half.y, -half.z), size));
-        Cells[5] = new NonSparseOctree<T>(MaxObjects, MergeThreshold, CellSize,
-            new Bounds(c + new Vector3(-half.x, half.y, -half.z), size));
-        Cells[6] = new NonSparseOctree<T>(MaxObjects, MergeThreshold, CellSize,
-            new Bounds(c + new Vector3(half.x, -half.y, -half.z), size));
-        Cells[7] = new NonSparseOctree<T>(MaxObjects, MergeThreshold, CellSize,
-            new Bounds(c + new Vector3(-half.x, -half.y, -half.z), size));
-    }
-}
-
-public class Path<Node> : IEnumerable<Node>
-{
-    public Node LastStep { get; private set; }
-    public Path<Node> PreviousSteps { get; private set; }
-    public double TotalCost { get; private set; }
-
-    private Path(Node lastStep, Path<Node> previousSteps, double totalCost)
-    {
-        LastStep = lastStep;
-        PreviousSteps = previousSteps;
-        TotalCost = totalCost;
-    }
-
-    public Path(Node start) : this(start, null, 0)
-    {
-    }
-
-    public Path<Node> AddStep(Node step, double stepCost)
-    {
-        return new Path<Node>(step, this, TotalCost + stepCost);
-    }
-
-    public IEnumerator<Node> GetEnumerator()
-    {
-        for (Path<Node> p = this; p != null; p = p.PreviousSteps)
-            yield return p.LastStep;
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
-}
-
-public interface IHasNeighbours<N>
-{
-    IEnumerable<N> Neighbours { get; }
-}
-
-
-public class AStar
-{
-    public static Path<Node> FindPath<Node>(
-        Node start,
-        Node destination,
-        Func<Node, Node, double> distance,
-        Func<Node, double> estimate)
-        where Node : IHasNeighbours<Node>
-    {
-        var closed = new HashSet<Node>();
-        var queue = new PriorityQueue<double, Path<Node>>();
-        queue.Enqueue(0, new Path<Node>(start));
-        while (!queue.IsEmpty)
+        for (int i = 0; i < CurrentPath.Count; i++)
         {
-            var path = queue.Dequeue();
-            if (closed.Contains(path.LastStep))
-                continue;
-            if (path.LastStep.Equals(destination))
-                return path;
-            closed.Add(path.LastStep);
-            foreach (Node n in path.LastStep.Neighbours)
+            if (i == 0)
             {
-                double d = distance(path.LastStep, n);
-                var newPath = path.AddStep(n, d);
-                queue.Enqueue(newPath.TotalCost + estimate(n), newPath);
+                continue;
             }
-        }
 
-        return null;
+            Debug.DrawLine(CurrentPath[i].center, CurrentPath[i - 1].center,
+                Color.magenta, 10);
+        }
+    }
+
+    public void Updated()
+    {
+        UpdatedEvent?.Invoke(this, new PathfindingHandleUpdatedArgs());
     }
 }
 
-class PriorityQueue<P, V>
+public delegate void PathfindingHandleUpdated(object sender, PathfindingHandleUpdatedArgs args);
+
+public class PathfindingHandleUpdatedArgs
 {
-    private SortedDictionary<P, Queue<V>> list = new SortedDictionary<P, Queue<V>>();
-
-    public void Enqueue(P priority, V value)
-    {
-        Queue<V> q;
-        if (!list.TryGetValue(priority, out q))
-        {
-            q = new Queue<V>();
-            list.Add(priority, q);
-        }
-
-        q.Enqueue(value);
-    }
-
-    public V Dequeue()
-    {
-        // will throw if there isn’t any first element!
-        var pair = list.First();
-        var v = pair.Value.Dequeue();
-        if (pair.Value.Count == 0) // nothing left of the top priority.
-            list.Remove(pair.Key);
-        return v;
-    }
-
-    public bool IsEmpty
-    {
-        get { return !list.Any(); }
-    }
 }
