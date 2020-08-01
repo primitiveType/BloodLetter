@@ -747,7 +747,6 @@ public class OctreeNode
     public OctreeNode parent;
     public OctreeNode[,,] children;
     public bool blocked = false;
-    public bool dynamicBlocked = false;
     public bool containsBlocked = false;
 
     public float size

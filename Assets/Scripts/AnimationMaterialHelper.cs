@@ -19,6 +19,9 @@ public class AnimationMaterialHelper : MonoBehaviour
     private static readonly int Rows = Shader.PropertyToID("Rows");
     private static readonly int Frame = Shader.PropertyToID("Frame");
 
+    [SerializeField] private Transform anchorTransform;
+    [SerializeField] private Collider anchorTransformCollider;
+
     private Renderer MyRenderer =>
         m_MyRenderer != null ? m_MyRenderer : m_MyRenderer = materialGameObject.GetComponent<Renderer>();
 
@@ -26,6 +29,12 @@ public class AnimationMaterialHelper : MonoBehaviour
     private void Awake()
     {
         // MyRenderer.material = new Material(MyRenderer.sharedMaterial);
+        if (anchorTransform == null)
+        {
+            anchorTransform = materialGameObject.transform;
+        }
+
+
     }
 
 
@@ -73,14 +82,19 @@ public class AnimationMaterialHelper : MonoBehaviour
                             pxPerMeter;
                 var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
                              pxPerMeter;
-                materialGameObject.transform.localScale =
+                anchorTransform.localScale =
                     new Vector3((float) width, (float) height, 1);
             }
 
             if (reposition)
             {
                 float yFudge = .01f;
-                materialGameObject.transform.localPosition = new Vector3(0, (materialGameObject.transform.localScale.y / 2) - yFudge, 0);
+                if (anchorTransformCollider)
+                {
+                    yFudge = anchorTransformCollider.bounds.size.y / 2f;
+                }
+
+                anchorTransform.localPosition = new Vector3(0, (anchorTransform.localScale.y / 2) - yFudge, 0);
             }
         }
     }
@@ -97,7 +111,7 @@ public class AnimationMaterialHelper : MonoBehaviour
     public bool QueryAlpha(Vector2 textureCoord)
     {
         int perspective;
-        if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
+        // if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
         {
             cachedPropertyBlock = new MaterialPropertyBlock();
             MyRenderer.GetPropertyBlock(cachedPropertyBlock);
@@ -110,13 +124,13 @@ public class AnimationMaterialHelper : MonoBehaviour
                     7); //it's actually possible to get back 8 from this which is invalid.
             cachedAlphaPixels = cachedAlpha.GetPixels(perspective);
         }
-        else
-        {
-            Debug.Log("Reusing texture array");
-            perspective =
-                Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
-                    7); //it's actually possible to get back 8 from this which is invalid.
-        }
+        // else
+        // {
+        //     Debug.Log("Reusing texture array");
+        //     perspective =
+        //         Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
+        //             7); //it's actually possible to get back 8 from this which is invalid.
+        // }
 
 
         int totalWidth = cachedAlpha.width;

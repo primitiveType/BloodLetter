@@ -97,12 +97,10 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
         float size = Math.Max(Math.Max(colSize.x, colSize.y), colSize.z);
         var maxLevel = Mathf.Log(size / desiredUnitSize, 2);
         var maxLevelInt = Mathf.CeilToInt(maxLevel);
-        staticWorld = new World(Scene, size, this.transform.position, maxLevelInt, 0, true, Graph.GraphType.CENTER,
+        staticWorld = new World(Scene, size, this.transform.position, maxLevelInt, 1, true, Graph.GraphType.CENTER,
             true);
-        dynamicWorld = new World(Scene, size, this.transform.position, maxLevelInt, 0, true, Graph.GraphType.CENTER,
-            false);
 
-        staticWorld.space.DisplayVoxels(maxLevelInt);
+        //staticWorld.space.DisplayVoxels(maxLevelInt);
         // Octree = new NonSparseOctree<IOctreeObject>(1, new Vector3(minsize,minsize,minsize), col.bounds);
         //    var colliders = Physics.OverlapBox(col.center, col.size / 2f, Quaternion.identity);
         // foreach (var other in colliders)
@@ -117,12 +115,12 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
     // List<Vector3> currentV1 = null;
     // List<List<Vector3>> currentV2 = null;
 
-    public void TestPathFinding(Vector3 start, Vector3 dest)
+    public void TestPathFinding(Vector3 start, List<Vector3> dest)
     {
         Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
         float totalLength = 0;
         float startTime = Time.realtimeSinceStartup;
-        List<Node> paths = staticWorld
+        var paths = staticWorld
             .spaceGraph //TODO: consider using the one that takes a list of source-dest. check performance
             .FindPath(method, start, dest, staticWorld.space);
 
@@ -131,33 +129,71 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
             return;
         }
 
-        for (int i = 0; i < paths.Count; i++)
+        foreach (var path in paths)
         {
-            if (i == 0)
+            for (int i = 0; i < path.Count; i++)
             {
-                continue;
-            }
+                if (i == 0)
+                {
+                    continue;
+                }
 
-            Debug.DrawLine(paths[i].center, paths[i - 1].center, Color.magenta, 10);
+                Debug.DrawLine(path[i].center, path[i - 1].center, Color.magenta, 10);
+            }
         }
     }
 
-
-    // public void UpdateTree(IOctreeObject obj, Bounds bounds)
-    // {
-    //     Octree.Update(obj, bounds);
-    //     
-    // }
-
-    // public ISpatialTree<IOctreeObject, Bounds> FindSharedRoot(IOctreeObject first, IOctreeObject second)
-    // {
-    //     var val = Octree.FindSharedRoot(first, second);
-    //     return val;
-    // }
-    public void UpdateDynamic(Bounds colliderBounds)
+    private void PathfindingTick()
     {
-        var node = staticWorld.space.Find(colliderBounds.center);
-        node.dynamicBlocked = true;
+        //currently assumes everything is pathfinding toward the player
+        foreach (var pathfinder in currentPathfinders)
+        {
+            UpdatePathfindingHandle(pathfinder);
+        }
+    }
+
+    private List<PathfindingHandle> currentPathfinders = new List<PathfindingHandle>();
+
+    private void UpdatePathfindingHandle(PathfindingHandle handle)
+    {
+        Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
+        float totalLength = 0;
+        handle.CurrentPath = staticWorld
+            .spaceGraph //TODO: consider using the one that takes a list of source-dest. check performance
+            .FindPath(method, handle.Finder.transform.position, handle.Target.transform.position, staticWorld.space);
+    }
+
+    public PathfindingHandle StartPathfindingToPlayer(GameObject pathfinder)
+    {
+        var handle = new PathfindingHandle(pathfinder, Toolbox.Instance.PlayerTransform.gameObject);
+        currentPathfinders.Add(handle);
+        UpdatePathfindingHandle(handle);
+        return handle;
+    }
+
+    public void RemovePathfinder(PathfindingHandle handle)
+    {
+        currentPathfinders.Remove(handle);
+    }
+
+
+}
+
+public class PathfindingHandle : IDisposable
+{
+    public readonly GameObject Finder;
+    public readonly GameObject Target;
+    public List<Node> CurrentPath { get; set; }
+
+    public PathfindingHandle(GameObject finder, GameObject target)
+    {
+        Finder = finder;
+        Target = target;
+    }
+
+    public void Dispose()
+    {
+        OctreeManager.Instance.RemovePathfinder(this);
     }
 }
 

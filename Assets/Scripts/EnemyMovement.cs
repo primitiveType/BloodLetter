@@ -1,7 +1,6 @@
 ﻿using System;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.AI;
 
 
 public class EnemyMovement : MonoBehaviour
@@ -10,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
     private static readonly int Moving = Animator.StringToHash("Moving");
     private static readonly int IsDead = Animator.StringToHash("IsDead");
 
-    [SerializeField] private NavMeshAgent Agent;
+    [SerializeField] private INavigationAgent Agent;
 
     [SerializeField] private EnemyAggroHandler AggroHandler;
 
@@ -20,9 +19,15 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private Transform Target;
     [SerializeField] private bool isFlying;
-    private Animator Animator { get; set; }
+
+    private Animator Animator
+    {
+        get => _animator;
+        set => _animator = value;
+    }
 
     private ActorHealth m_Health;
+    [SerializeField] private Animator _animator;
 
     public ActorHealth Health => m_Health != null ? m_Health : m_Health = GetComponent<ActorHealth>();
 
@@ -31,29 +36,27 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
+        Agent = GetComponent<INavigationAgent>();
         Events.OnAggroEvent += OnEnemyAggro;
         Events.OnStepEvent += OnEnemyStepped;
         Events.OnAttackEvent += OnEnemyAttack;
         Events.OnDeathEvent += OnEnemyDeath;
-        Animator = GetComponentInChildren<Animator>();
+        if (Animator == null)
+            Animator = GetComponentInChildren<Animator>();
         Target = Toolbox.Instance.PlayerTransform;
-        if (Agent && Target)
+        if (Agent != null && Target)
         {
             Agent.isStopped = true;
             Agent.SetDestination(Target.position);
             Agent.updateRotation = true;
         }
+
         Toolbox.Instance.AddEnemy(Health);
-        
     }
 
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)
     {
-        Collider col = GetComponent<Collider>();
-        if (col)
-        {
-            col.enabled = false;
-        }
+        gameObject.layer = LayerMask.NameToLayer("DeadEnemy");
     }
 
     private void OnEnemyAggro(object sender, OnAggroEventArgs args)
@@ -72,22 +75,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Agent && Target)
+        if (Agent != null && Target)
         {
             Agent.SetDestination(Target.position);
-            if (isFlying)
-            {
-                var transform1 = transform;
 
-                float prevY = transform1.position.y;
-                Agent.baseOffset += prevY - Target.position.y;
-                //transform1.position = new Vector3(transform1.position.x, Target.position.y, transform1.position.z);
-                Agent.Raycast(transform1.position, out NavMeshHit hit);
-                Agent.baseOffset = hit.distance;
-            }
+            Agent.isStopped = !IsAggro;
         }
-
-        Agent.isStopped = !IsAggro;
 
 
         UpdateAnimationStates();
@@ -99,7 +92,6 @@ public class EnemyMovement : MonoBehaviour
             Animator.SetBool(Moving, true);
         else
             Animator.SetBool(Moving, false);
-
     }
 
     private void OnDestroy()

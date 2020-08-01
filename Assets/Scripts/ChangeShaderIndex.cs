@@ -15,13 +15,13 @@ public class ChangeShaderIndex : MonoBehaviour
     private Renderer MyRenderer =>
         m_MyRenderer != null ? m_MyRenderer : m_MyRenderer = materialGameObject.GetComponent<Renderer>();
 
-    private Camera mainCam;
+    private Transform mainCam;
     private static readonly int Perspective = Shader.PropertyToID("Perspective");
 
     // Start is called before the first frame update
     void Start()
     {
-        mainCam = Camera.main;
+        mainCam = Toolbox.Instance.PlayerHeadTransform;
     }
 
     public void TestFunction(string testParam)

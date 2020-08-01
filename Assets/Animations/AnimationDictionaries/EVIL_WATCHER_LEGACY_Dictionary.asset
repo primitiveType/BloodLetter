@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: EVIL_WATCHER_LEGACY_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: EVIL_WATCHER_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 584517ed54aaddd4d941b8444c6d6e5d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5b0878403ffdf6c42ad61d42ba07bf17, type: 2}
+    alphaMap: {fileID: 18700000, guid: 25426c4cb13c2af4bb2226b844dba7ad, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: EVIL_WATCHER_LEGACY_attack1
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 5433bb469bb7e60479829e871e8a1a04, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5d5babac13e859c449c2ce8fac35c9c9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9ad5a69bcc5daff4e87d15db99d62146, type: 2}
+  - rows: 3
+    columns: 3
+    animationName: EVIL_WATCHER_LEGACY_attack2
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 95ed39411df39a74ba127c10c3206e99, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 40bc6f27dcdf13f408aa3d1fd948bde7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 94a27a1a273df09438ff535a265bf573, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: EVIL_WATCHER_LEGACY_dashForward
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 2fd0f439dee9a4a49a12cef2b6b2e896, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9bcfb067eb1d58840a47b24ac18b3a1e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9f7d73a2940cf284d8d9ac0fcd6e72a6, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: EVIL_WATCHER_LEGACY_death
+    numFrames: 14
+    normalMap: {fileID: 18700000, guid: 92103a5f959c7fa40a1943d68b219853, type: 2}
+    diffuseMap: {fileID: 18700000, guid: dffb360c32476e045a38d03bc2b2e240, type: 2}
+    alphaMap: {fileID: 18700000, guid: cbf038b7bc8c3af4890af689924f707c, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: EVIL_WATCHER_LEGACY_getHit
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 2fbc4ed4c61b628469516ae3e8a8fe03, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d2e806c4e63371c47a6b8db0f1db9df5, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2b5a507988c21754f85eee77f005a94c, type: 2}
+  - rows: 7
+    columns: 9
+    animationName: EVIL_WATCHER_LEGACY_idleLookAround
+    numFrames: 60
+    normalMap: {fileID: 18700000, guid: 3d01f6d424deceb4eb8eac9f1277453f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 827fa113fa721084e8e121fb1bf7f627, type: 2}
+    alphaMap: {fileID: 18700000, guid: 510155109fc53ec4288d5daad611147d, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: EVIL_WATCHER_LEGACY_moveForward
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: f459530728c450644a318395610b552c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7266a280d08032040bf72b0843815d86, type: 2}
+    alphaMap: {fileID: 18700000, guid: ae84876c7b2b274408d2cb59b2c6bef7, type: 2}
+  - rows: 4
+    columns: 5
+    animationName: EVIL_WATCHER_LEGACY_sleep
+    numFrames: 20
+    normalMap: {fileID: 18700000, guid: 1e241a7899d8ada47a53d919484aea88, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 4322b2e8317a43b4e9d75bd8e1304015, type: 2}
+    alphaMap: {fileID: 18700000, guid: 49c5814466beffb47a212e580f328f18, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: EVIL_WATCHER_LEGACY_strafeLeft
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 5d481045d3c6b164d915ff15ab95fefb, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f5fd1ce18064dab45a255b22d6b8b3e3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2c985ee0a7e1a5f409cb1f827fb00324, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: EVIL_WATCHER_LEGACY_strafeRight
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 21c9a86d06f041c40b4ca5071fc1f7ec, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7765807cbfa212b458f9c9c644690e08, type: 2}
+    alphaMap: {fileID: 18700000, guid: eb0d4b2645d646848a75dd82713bb6a2, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: EVIL_WATCHER_LEGACY_wakeUp
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 7cf2fc88d849e9848b2dbf8ccc880e4d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 05ee629ef37ab7241afb6cb01f2f1cd1, type: 2}
+    alphaMap: {fileID: 18700000, guid: b454b3a1e28e252429d7426899c215a7, type: 2}

@@ -11,9 +11,14 @@ public class ActorHealth : MonoBehaviour
     [SerializeField] private float m_Health;
     [SerializeField] private float m_MaxHealth;
     [SerializeField] private ActorArmor m_Armor;
+    [SerializeField] private Animator _animator;
     private static readonly int IsDead = Animator.StringToHash("IsDead");
 
-    private Animator Animator { get; set; }
+    private Animator Animator
+    {
+        get => _animator;
+        set => _animator = value;
+    }
 
     public float Health
     {
@@ -51,7 +56,11 @@ public class ActorHealth : MonoBehaviour
 
     private void Start()
     {
-        Animator = GetComponentInChildren<Animator>();
+        if (Animator == null)
+        {
+            Animator = GetComponentInChildren<Animator>();
+        }
+
         UpdateAnimatorStates();
         Events.OnShotEvent += OnEnemyShot;
     }

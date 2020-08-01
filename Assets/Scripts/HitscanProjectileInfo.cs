@@ -39,7 +39,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 if (Physics.Raycast(ray, out RaycastHit hit, Range, raycastMask ))
                 {
                     int hitLayer = hit.collider.gameObject.layer;
-                    if (((hitLayer & layerToCheckForDamage) == 0) || hit.transform == null)
+                    if (((hitLayer & layerToCheckForDamage) == layerToCheckForDamage) || hit.transform == null)
                     {
                         isDone = true;
                     }

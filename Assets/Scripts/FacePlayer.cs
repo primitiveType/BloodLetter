@@ -5,11 +5,11 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class FacePlayer : MonoBehaviour
 {
-    private Camera ToFace;
+    private Transform ToFace;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        ToFace = Camera.main;
+        ToFace = Toolbox.Instance.PlayerHeadTransform;
         FaceThePlayer();
     }
 
@@ -21,7 +21,8 @@ public class FacePlayer : MonoBehaviour
 
     private void FaceThePlayer()
     {
-        var position = new Vector3(ToFace.transform.position.x, this.transform.position.y, ToFace.transform.position.z);
+        var playerPosition = ToFace.position;
+        var position = new Vector3(playerPosition.x, this.transform.position.y, playerPosition.z);
         transform.LookAt(position);
     }
 }
