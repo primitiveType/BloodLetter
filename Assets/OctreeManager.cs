@@ -151,8 +151,9 @@ public class PathfindingHandle : IDisposable
     public bool NeedsUpdate { get; set; } = true;
     public readonly Transform Finder;
     private Transform Target => OctreeManager.Instance.DefaultPathFindingTarget;
-    public bool IsValid { get; set; }
-    public List<Node> CurrentPath => OctreeManager.Instance.GetPathForIndex(_pathIndex);
+    public bool IsValid { get; set; } = false;
+    private static List<Node> EmptyList = new List<Node>();
+    public List<Node> CurrentPath => IsValid ? OctreeManager.Instance.GetPathForIndex(_pathIndex) : EmptyList;
     public int _pathIndex;
 
 
@@ -160,6 +161,7 @@ public class PathfindingHandle : IDisposable
     
     public PathfindingHandle(Transform finder, int pathIndex)
     {
+        
         Finder = finder;
     }
 
@@ -170,7 +172,8 @@ public class PathfindingHandle : IDisposable
 
     public void DrawPath()
     {
-        Debug.DrawLine(Finder.position, Target.position, Color.green);
+        Debug.DrawLine(Finder.position, Finder.position + Vector3.up, Color.green);
+        Debug.DrawLine(Target.position, Target.position + Vector3.up, Color.red);
         if (CurrentPath == null)
         {
             return;
@@ -178,13 +181,22 @@ public class PathfindingHandle : IDisposable
 
         for (int i = 0; i < CurrentPath.Count; i++)
         {
+            Color color = Color.magenta;
             if (i == 0)
             {
                 continue;
             }
+            else if (i == CurrentPath.Count - 1)
+            {
+                color = Color.red;
+            }
+            else if (i == 1)
+            {
+                color = Color.green;
+            }
 
             Debug.DrawLine(CurrentPath[i].center, CurrentPath[i - 1].center,
-                Color.magenta, 10);
+                color, 10);
         }
     }
 

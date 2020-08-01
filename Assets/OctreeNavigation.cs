@@ -36,7 +36,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     private void PathfindingHandleOnUpdatedEvent(object sender, PathfindingHandleUpdatedArgs args)
     {
         Debug.Log("my path was updated!");
-        pathIndex = PathfindingHandle.CurrentPath.Count - 1;
+        PathIndex = PathfindingHandle.CurrentPath.Count - 1;
     }
 
     private void EventsOnOnAggroEvent(object sender, OnAggroEventArgs args)
@@ -56,8 +56,6 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
         Events.OnAggroEvent -= EventsOnOnAggroEvent;
     }
 
-  
-
 
     int pathIndex = 0;
     bool moveTowards = true; // or -1 if backwards
@@ -68,46 +66,50 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     private Vector3 myPosition => myObjectTransform.position + positionOffset;
 
     private Vector3 lastDesiredVelocity;
+
+    private void Update()
+    {
+        if (!ShouldPathfind())
+        {
+            return;
+        }
+        myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
+
+        if (Vector3.Distance(myPosition, myDesiredLocation) < distanceErr)
+        {
+            // My object reach the of path
+
+            PathIndex--; // My next location in the path
+        }
+    }
+
     private IEnumerator UpdateCR()
     {
         while (true)
         {
             yield return new WaitForSeconds(VelocityUpdateInterval);
 
-            if (isStopped)
+            if (!ShouldPathfind())
             {
                 continue;
             }
-            if (!enabled)
-            {
-                continue;
-            } 
 
-            if (PathfindingHandle == null || !PathfindingHandle.IsValid)
+            if (PathIndex < 0 || PathIndex > PathfindingHandle.CurrentPath.Count)
             {
                 continue;
             }
-            myDesiredLocation = PathfindingHandle.CurrentPath[pathIndex].center;
 
-            if (Vector3.Distance(myPosition, myDesiredLocation) < distanceErr)
-            {
-                // My object reach the of path
+            myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
 
-                pathIndex --; // My next location in the path
-                if (pathIndex <= 0 || pathIndex >= PathfindingHandle.CurrentPath.Count)
-                {
-                    // stop doing the above because the player reach the end of the path
-                    rb.velocity = Vector3.zero;
-                }
-            }
+
             if (updateRotation)
             {
                 var rot = myObjectTransform.rotation.eulerAngles;
-                myObjectTransform.LookAt(PathfindingHandle.CurrentPath[pathIndex].center, Vector3.up);
+                myObjectTransform.LookAt(PathfindingHandle.CurrentPath[PathIndex].center, Vector3.up);
                 myObjectTransform.rotation = Quaternion.Euler(rot.x, myObjectTransform.rotation.eulerAngles.y, rot.z);
             }
 
-            if (Vector3.Distance(myPosition, PathfindingHandle.CurrentPath.Last().center) <=
+            if (Vector3.Distance(myPosition, PathfindingHandle.CurrentPath.First().center) <=
                 stoppingDistance)
             {
                 rb.velocity = Vector3.zero;
@@ -115,8 +117,10 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
             }
 
 
-            myDesiredLocation = PathfindingHandle.CurrentPath[pathIndex].center;
-            var prevLocation = pathIndex < PathfindingHandle.CurrentPath.Count - 2 ? PathfindingHandle.CurrentPath[pathIndex - 1].center : myPosition;
+            myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
+            var prevLocation = PathIndex > PathfindingHandle.CurrentPath.Count - 2
+                ? myPosition
+                : PathfindingHandle.CurrentPath[PathIndex - 1].center;
             var desiredVelocity = ((myDesiredLocation) - prevLocation).normalized * MaxSpeed;
             rb.velocity = desiredVelocity;
             // Vector3.Lerp(desiredVelocity,
@@ -124,10 +128,28 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
 
             lastDesiredVelocity = desiredVelocity;
 
-            Debug.DrawLine(rb.transform.position + rb.velocity.normalized, rb.transform.position);
-
-
+            Debug.DrawLine(rb.transform.position + rb.velocity.normalized, rb.transform.position, Color.blue, 10);
         }
+    }
+
+    private bool ShouldPathfind()
+    {
+        if (isStopped)
+        {
+            return false;
+        }
+
+        if (!enabled)
+        {
+            return false;
+        }
+
+        if (PathfindingHandle == null || !PathfindingHandle.IsValid)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     public float MaxSpeed;
@@ -135,6 +157,12 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     public bool isStopped { get; set; }
     public bool updateRotation { get; set; }
     public Vector3 velocity => rb.velocity;
+
+    public int PathIndex
+    {
+        get => pathIndex;
+        set => pathIndex = Mathf.Clamp(value, 0, Int32.MaxValue);
+    }
 
     public void SetDestination(Vector3 targetPosition)
     {
