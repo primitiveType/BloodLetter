@@ -10,6 +10,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     private PathfindingHandle PathfindingHandle { get; set; }
 
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private Transform pathfindingAnchor;
     [SerializeField] private bool debug;
     [SerializeField] private ActorEvents Events;
     [SerializeField] private float VelocityUpdateInterval = .2f;
@@ -35,8 +36,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
 
     private void PathfindingHandleOnUpdatedEvent(object sender, PathfindingHandleUpdatedArgs args)
     {
-        Debug.Log("my path was updated!");
-        PathIndex = PathfindingHandle.CurrentPath.Count - 1;
+        PathIndex = PathfindingHandle.CurrentPath.Count - 2;//ignore the first one
     }
 
     private void EventsOnOnAggroEvent(object sender, OnAggroEventArgs args)
@@ -62,7 +62,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     Transform myObjectTransform;
     float distanceErr = .1f; // this should probably be half node size
     float stoppingDistance = 1f;
-    private Vector3 positionOffset = Vector3.up;
+    private Vector3 positionOffset = Vector3.down * .5f;
     private Vector3 myPosition => myObjectTransform.position + positionOffset;
 
     private Vector3 lastDesiredVelocity;
@@ -118,15 +118,13 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
 
 
             myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
-            var prevLocation = PathIndex > PathfindingHandle.CurrentPath.Count - 2
-                ? myPosition
-                : PathfindingHandle.CurrentPath[PathIndex - 1].center;
+            var prevLocation = myPosition;
             var desiredVelocity = ((myDesiredLocation) - prevLocation).normalized * MaxSpeed;
             rb.velocity = desiredVelocity;
             // Vector3.Lerp(desiredVelocity,
             // lastDesiredVelocity, .5f);
 
-            lastDesiredVelocity = desiredVelocity;
+            // lastDesiredVelocity = desiredVelocity;
 
             Debug.DrawLine(rb.transform.position + rb.velocity.normalized, rb.transform.position, Color.blue, 10);
         }

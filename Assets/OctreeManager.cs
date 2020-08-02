@@ -5,6 +5,7 @@ using System.Linq;
 using CodingEssentials.Trees;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.Serialization;
 
 public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
@@ -125,10 +126,13 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
     private void UpdatePathfindingHandles()
     {
         Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
+        Profiler.BeginSample("FindPath");
         // handle.CurrentPath
         Paths = staticWorld
             .spaceGraph //TODO: consider using the one that takes a list of source-dest. check performance
             .FindPath(method, DefaultPathFindingTarget.transform.position, CachedDestinationsList, staticWorld.space);
+        Profiler.EndSample();//("FindPath");
+
     }
 
     public Transform DefaultPathFindingTarget { get; private set; }
