@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine.Profiling;
 
 
 public class Octree
@@ -55,7 +57,8 @@ public class Octree
     public void BuildFromGameObject(GameObject gameObject, float normalExpansion = 0, bool recursive = true,
         bool staticFlag = true)
     {
-        if (gameObject.isStatic == staticFlag && gameObject.GetComponent<MeshFilter>() != null)
+        bool isStatic = gameObject.GetComponent<Static>();
+        if ( isStatic == staticFlag && gameObject.GetComponent<MeshFilter>() != null)
         {
             Mesh mesh = Object.Instantiate(gameObject.GetComponent<MeshFilter>().mesh);
             if (mesh != null)
@@ -142,33 +145,50 @@ public class Octree
     {
         return Find(PositionToIndex(p));
     }
+
     public bool IsBlocked(int[] gridIndex, bool outsideIsBlocked = false, bool doublePrecision = false)
     {
-        int xi = gridIndex[0];
-        int yi = gridIndex[1];
-        int zi = gridIndex[2];
-        if (doublePrecision)
-        {
-            xi /= 2;
-            yi /= 2;
-            zi /= 2;
-        }
+        Profiler.BeginSample("IsBlocked");
+            int xi = gridIndex[0];
+            int yi = gridIndex[1];
+            int zi = gridIndex[2];
+            if (doublePrecision)
+            {
+                xi /= 2;
+                yi /= 2;
+                zi /= 2;
+            }
 
-        int t = 1 << maxLevel;
-        if (xi >= t || xi < 0 || yi >= t || yi < 0 || zi >= t || zi < 0) return outsideIsBlocked;
-        OctreeNode current = root;
-        for (int l = 0; l < maxLevel; l++)
-        {
-            t >>= 1;
-            if (!current.containsBlocked) return false;
-            if (current.children == null) return current.blocked;
-            current = current.children[xi / t, yi / t, zi / t];
-            xi %= t;
-            yi %= t;
-            zi %= t;
-        }
+            int t = 1 << maxLevel;
+            if (xi >= t || xi < 0 || yi >= t || yi < 0 || zi >= t || zi < 0)
+            {
+                Profiler.EndSample();
 
-        return current.blocked;
+                return outsideIsBlocked;
+            }
+            OctreeNode current = root;
+            for (int l = 0; l < maxLevel; l++)
+            {
+                t >>= 1;
+                if (!current.containsBlocked)
+                {
+                    Profiler.EndSample();
+                    return false;
+                }
+
+                if (current.children == null)
+                {
+                    Profiler.EndSample();
+                    return current.blocked;
+                }
+                current = current.children[xi / t, yi / t, zi / t];
+                xi %= t;
+                yi %= t;
+                zi %= t;
+            }
+
+            Profiler.EndSample();
+            return current.blocked;
     }
 
     public void Divide(Vector3 p, bool markAsBlocked = false)
@@ -200,159 +220,207 @@ public class Octree
         root.DivideTriangleUntilLevel(p1, p2, p3, maxLevel, markAsBlocked);
     }
 
+    private int[,] p = new int[2, 3];
+    private int[] d = new int[3];
+    private int[] sign = new int[3];
+    private int[] f = new int[2];
+    private int[] pBlock = new int[3];
+    private Vector3 p1g;
+    private Vector3 p2g;
+
     public bool LineOfSight(Vector3 p1, Vector3 p2, bool outsideIsBlocked = false, bool doublePrecision = false)
     {
-        Vector3 p1g = (p1 - corner) / cellSize;
-        Vector3 p2g = (p2 - corner) / cellSize;
-        if (doublePrecision)
+        bool sight = false;
+        using (new ProfilerSample("Line of sight"))
         {
-            p1g *= 2;
-            p2g *= 2;
-        }
+            Profiler.BeginSample("setup");
+            p1g = (p1 - corner) / cellSize;
+            p2g = (p2 - corner) / cellSize;
+            if (doublePrecision)
+            {
+                p1g *= 2;
+                p2g *= 2;
+            }
 
-        int[,] p = new int[2, 3];
-        int[] d = new int[3];
-        int[] sign = new int[3];
-        int[] f = new int[2];
+            ResetVariables();
+
+            for (int i = 0; i < 3; i++)
+            {
+                //FloorToIntSnap(p1g[i], out p[0, i]);
+                //FloorToIntSnap(p2g[i], out p[1, i]);
+                p[0, i] = Mathf.RoundToInt(p1g[i]);
+                p[1, i] = Mathf.RoundToInt(p2g[i]);
+                d[i] = p[1, i] - p[0, i];
+                if (d[i] < 0)
+                {
+                    d[i] = -d[i];
+                    sign[i] = -1;
+                }
+                else
+                {
+                    sign[i] = 1;
+                }
+            }
+
+            pBlock[0] = p[0, 0] + (sign[0] - 1) / 2;
+            pBlock[1] = p[0, 1] + (sign[1] - 1) / 2;
+            pBlock[2] = p[0, 2] + (sign[2] - 1) / 2;
+
+            int longAxis;
+            if (d[0] >= d[1] && d[0] >= d[2]) longAxis = 0;
+            else if (d[1] >= d[2]) longAxis = 1;
+            else longAxis = 2;
+            if (d[longAxis] == 0) return true;
+            int axis0 = (longAxis + 1) % 3;
+            int axis1 = (longAxis + 2) % 3;
+
+            Profiler.EndSample(); //setup
+            using (new ProfilerSample("while"))
+            {
+                while (p[0, longAxis] != p[1, longAxis])
+                {
+                    f[0] += d[axis0];
+                    f[1] += d[axis1];
+                    if (f[0] >= d[longAxis] && f[1] < d[longAxis])
+                    {
+                        using (new ProfilerSample("first if"))
+                        {
+                            f[0] -= d[longAxis];
+                            if (d[axis1] != 0)
+                            {
+                                if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
+                            }
+                            else
+                            {  
+                                sight = false;
+                                pBlock[axis1] -= 1;
+                                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                                pBlock[axis1] += 1;
+                                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                                if (!sight) return false;
+                            }
+
+                            p[0, axis0] += sign[axis0];
+                            pBlock[axis0] += sign[axis0];
+                        }
+                    }
+                    else if (f[1] >= d[longAxis] && f[0] < d[longAxis])
+                    {
+                        using (new ProfilerSample("second if"))
+                        {
+                            f[1] -= d[longAxis];
+                            if (d[axis0] != 0)
+                            {
+                                if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
+                            }
+                            else
+                            {
+                                sight = false;
+                                pBlock[axis0] -= 1;
+                                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                                pBlock[axis0] += 1;
+                                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                                if (!sight) return false;
+                            }
+
+                            p[0, axis1] += sign[axis1];
+                            pBlock[axis1] += sign[axis1];
+                        }
+                    }
+                    else if (f[0] >= d[longAxis] && f[1] >= d[longAxis])
+                    {
+                        using (new ProfilerSample("third if"))
+                        {
+                            f[0] -= d[longAxis];
+                            f[1] -= d[longAxis];
+                            if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
+                            int det = f[0] * d[axis1] - f[1] * d[axis0];
+                            if (det > 0)
+                            {
+                                pBlock[axis0] += sign[axis0];
+                                if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
+                                pBlock[axis1] += sign[axis1];
+                            }
+                            else if (det < 0)
+                            {
+                                pBlock[axis1] += sign[axis1];
+                                if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
+                                pBlock[axis0] += sign[axis0];
+                            }
+                            else
+                            {
+                                pBlock[axis0] += sign[axis0];
+                                pBlock[axis1] += sign[axis1];
+                            }
+
+                            p[0, axis0] += sign[axis0];
+                            p[0, axis1] += sign[axis1];
+                        }
+                    }
+
+                    using (new ProfilerSample("last ifs"))
+
+                    {
+                        if (f[0] != 0 && f[1] != 0 && IsBlocked(pBlock, outsideIsBlocked, doublePrecision))
+                            return false;
+                        if (d[axis0] == 0 && d[axis1] != 0)
+                        {
+                            sight = false;
+                            pBlock[axis0] -= 1;
+                            if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                            pBlock[axis0] += 1;
+                            if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                            if (!sight) return false;
+                        }
+                        else if (d[axis0] != 0 && d[axis1] == 0)
+                        {
+                            sight = false;
+                            pBlock[axis1] -= 1;
+                            if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                            pBlock[axis1] += 1;
+                            if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                            if (!sight) return false;
+                        }
+                        else if (d[axis0] == 0 && d[axis1] == 0)
+                        {
+                            sight = false;
+                            pBlock[axis0] -= 1;
+                            if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                            pBlock[axis1] -= 1;
+                            if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                            pBlock[axis0] += 1;
+                            if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                            pBlock[axis1] += 1;
+                            if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
+                            if (!sight) return false;
+                        }
+
+                        p[0, longAxis] += sign[longAxis];
+                        pBlock[longAxis] += sign[longAxis];
+                    }
+                }
+            }
+
+            return true;
+        }
+    }
+
+    private void ResetVariables()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            f[i] = 0;
+            for (int j = 0; j < 3; j++)
+            {
+                p[i, j] = 0;
+            }
+        }
 
         for (int i = 0; i < 3; i++)
         {
-            //FloorToIntSnap(p1g[i], out p[0, i]);
-            //FloorToIntSnap(p2g[i], out p[1, i]);
-            p[0, i] = Mathf.RoundToInt(p1g[i]);
-            p[1, i] = Mathf.RoundToInt(p2g[i]);
-            d[i] = p[1, i] - p[0, i];
-            if (d[i] < 0)
-            {
-                d[i] = -d[i];
-                sign[i] = -1;
-            }
-            else
-            {
-                sign[i] = 1;
-            }
+            d[i] = 0;
+            sign[i] = 0;
         }
-
-        int[] pBlock = {p[0, 0] + (sign[0] - 1) / 2, p[0, 1] + (sign[1] - 1) / 2, p[0, 2] + (sign[2] - 1) / 2};
-
-        int longAxis;
-        if (d[0] >= d[1] && d[0] >= d[2]) longAxis = 0;
-        else if (d[1] >= d[2]) longAxis = 1;
-        else longAxis = 2;
-        if (d[longAxis] == 0) return true;
-        int axis0 = (longAxis + 1) % 3;
-        int axis1 = (longAxis + 2) % 3;
-
-        while (p[0, longAxis] != p[1, longAxis])
-        {
-            f[0] += d[axis0];
-            f[1] += d[axis1];
-            if (f[0] >= d[longAxis] && f[1] < d[longAxis])
-            {
-                f[0] -= d[longAxis];
-                if (d[axis1] != 0)
-                {
-                    if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
-                }
-                else
-                {
-                    bool sight = false;
-                    pBlock[axis1] -= 1;
-                    if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                    pBlock[axis1] += 1;
-                    if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                    if (!sight) return false;
-                }
-
-                p[0, axis0] += sign[axis0];
-                pBlock[axis0] += sign[axis0];
-            }
-            else if (f[1] >= d[longAxis] && f[0] < d[longAxis])
-            {
-                f[1] -= d[longAxis];
-                if (d[axis0] != 0)
-                {
-                    if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
-                }
-                else
-                {
-                    bool sight = false;
-                    pBlock[axis0] -= 1;
-                    if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                    pBlock[axis0] += 1;
-                    if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                    if (!sight) return false;
-                }
-
-                p[0, axis1] += sign[axis1];
-                pBlock[axis1] += sign[axis1];
-            }
-            else if (f[0] >= d[longAxis] && f[1] >= d[longAxis])
-            {
-                f[0] -= d[longAxis];
-                f[1] -= d[longAxis];
-                if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
-                int det = f[0] * d[axis1] - f[1] * d[axis0];
-                if (det > 0)
-                {
-                    pBlock[axis0] += sign[axis0];
-                    if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
-                    pBlock[axis1] += sign[axis1];
-                }
-                else if (det < 0)
-                {
-                    pBlock[axis1] += sign[axis1];
-                    if (IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
-                    pBlock[axis0] += sign[axis0];
-                }
-                else
-                {
-                    pBlock[axis0] += sign[axis0];
-                    pBlock[axis1] += sign[axis1];
-                }
-
-                p[0, axis0] += sign[axis0];
-                p[0, axis1] += sign[axis1];
-            }
-
-            if (f[0] != 0 && f[1] != 0 && IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) return false;
-            if (d[axis0] == 0 && d[axis1] != 0)
-            {
-                bool sight = false;
-                pBlock[axis0] -= 1;
-                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                pBlock[axis0] += 1;
-                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                if (!sight) return false;
-            }
-            else if (d[axis0] != 0 && d[axis1] == 0)
-            {
-                bool sight = false;
-                pBlock[axis1] -= 1;
-                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                pBlock[axis1] += 1;
-                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                if (!sight) return false;
-            }
-            else if (d[axis0] == 0 && d[axis1] == 0)
-            {
-                bool sight = false;
-                pBlock[axis0] -= 1;
-                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                pBlock[axis1] -= 1;
-                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                pBlock[axis0] += 1;
-                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                pBlock[axis1] += 1;
-                if (!IsBlocked(pBlock, outsideIsBlocked, doublePrecision)) sight = true;
-                if (!sight) return false;
-            }
-
-            p[0, longAxis] += sign[longAxis];
-            pBlock[longAxis] += sign[longAxis];
-        }
-
-        return true;
     }
 
     private bool FloorToIntSnap(float n, out int i, float epsilon = 0.001f)
@@ -745,9 +813,11 @@ public class Octree
 
 public class OctreeNode
 {
+    //dont ser, after deser, set tree
     public Octree tree;
     public int level;
     public int[] index;
+    //dont serialize. after deser, recurse and set parent ref
     public OctreeNode parent;
     public OctreeNode[,,] children;
     public bool blocked = false;

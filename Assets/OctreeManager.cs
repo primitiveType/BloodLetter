@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using CodingEssentials.Trees;
+using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Profiling;
@@ -29,10 +31,12 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
         float size = Math.Max(Math.Max(colSize.x, colSize.y), colSize.z);
         var maxLevel = Mathf.Log(size / desiredUnitSize, 2);
         var maxLevelInt = Mathf.CeilToInt(maxLevel);
-        staticWorld = new World(Scene, size, this.transform.position, maxLevelInt, 0, true, Graph.GraphType.CENTER,
+        staticWorld = new World(Scene, size, this.transform.position, maxLevelInt, 0, true, Graph.GraphType.CORNER,
             true);
 
 
+        string test = JsonConvert.SerializeObject(staticWorld);
+        File.WriteAllText("c://test.json", test);
         if (debug)
         {
             staticWorld.DisplayVoxels();

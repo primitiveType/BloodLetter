@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CodingEssentials;
 using UnityEngine;
+using UnityEngine.Profiling;
 
 public class OctreeNavigation : MonoBehaviour, INavigationAgent
 {
@@ -31,12 +32,11 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
         Events.OnAggroEvent += EventsOnOnAggroEvent;
         Events.OnDeathEvent -= EventsOnOnDeathEvent;
         Events.OnDeathEvent += EventsOnOnDeathEvent;
-        StartCoroutine(UpdateCR());
     }
 
     private void PathfindingHandleOnUpdatedEvent(object sender, PathfindingHandleUpdatedArgs args)
     {
-        PathIndex = PathfindingHandle.CurrentPath.Count - 2;//ignore the first one
+        PathIndex = PathfindingHandle.CurrentPath.Count - 2; //ignore the first one
     }
 
     private void EventsOnOnAggroEvent(object sender, OnAggroEventArgs args)
@@ -73,6 +73,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
         {
             return;
         }
+
         myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
 
         if (Vector3.Distance(myPosition, myDesiredLocation) < distanceErr)
@@ -83,51 +84,43 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
         }
     }
 
-    private IEnumerator UpdateCR()
+    private void FixedUpdate()
     {
-        while (true)
+        if (!ShouldPathfind())
         {
-            yield return new WaitForSeconds(VelocityUpdateInterval);
-
-            if (!ShouldPathfind())
-            {
-                continue;
-            }
-
-            if (PathIndex < 0 || PathIndex > PathfindingHandle.CurrentPath.Count)
-            {
-                continue;
-            }
-
-            myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
-
-
-            if (updateRotation)
-            {
-                var rot = myObjectTransform.rotation.eulerAngles;
-                myObjectTransform.LookAt(PathfindingHandle.CurrentPath[PathIndex].center, Vector3.up);
-                myObjectTransform.rotation = Quaternion.Euler(rot.x, myObjectTransform.rotation.eulerAngles.y, rot.z);
-            }
-
-            if (Vector3.Distance(myPosition, PathfindingHandle.CurrentPath.First().center) <=
-                stoppingDistance)
-            {
-                rb.velocity = Vector3.zero;
-                continue;
-            }
-
-
-            myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
-            var prevLocation = myPosition;
-            var desiredVelocity = ((myDesiredLocation) - prevLocation).normalized * MaxSpeed;
-            rb.velocity = desiredVelocity;
-            // Vector3.Lerp(desiredVelocity,
-            // lastDesiredVelocity, .5f);
-
-            // lastDesiredVelocity = desiredVelocity;
-
-            Debug.DrawLine(rb.transform.position + rb.velocity.normalized, rb.transform.position, Color.blue, 10);
+            return;
         }
+
+        if (PathIndex < 0 || PathIndex > PathfindingHandle.CurrentPath.Count)
+        {
+            return;
+        }
+
+        myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
+
+
+        if (updateRotation)
+        {
+            var rot = myObjectTransform.rotation.eulerAngles;
+            myObjectTransform.LookAt(PathfindingHandle.CurrentPath[PathIndex].center, Vector3.up);
+            myObjectTransform.rotation = Quaternion.Euler(rot.x, myObjectTransform.rotation.eulerAngles.y, rot.z);
+        }
+
+        if (Vector3.Distance(myPosition, PathfindingHandle.CurrentPath.First().center) <=
+            stoppingDistance)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        }
+
+
+        myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
+        var prevLocation = myPosition;
+        var desiredVelocity = ((myDesiredLocation) - prevLocation).normalized * MaxSpeed;
+        rb.velocity = desiredVelocity;
+
+
+        //  Debug.DrawLine(rb.transform.position + rb.velocity.normalized, rb.transform.position, Color.blue, 10);
     }
 
     private bool ShouldPathfind()
@@ -154,7 +147,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     private Vector3 myDesiredLocation;
     public bool isStopped { get; set; }
     public bool updateRotation { get; set; }
-    public Vector3 velocity => rb.velocity;
+     public Vector3 velocity => rb.velocity;
 
     public int PathIndex
     {
@@ -165,5 +158,18 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     public void SetDestination(Vector3 targetPosition)
     {
         //Do nothing for now. We alays use the player as the target for now.
+    }
+}
+
+public class ProfilerSample : IDisposable
+{
+    public ProfilerSample(string name)
+    {
+        Profiler.BeginSample(name);
+    }
+
+    public void Dispose()
+    {
+        Profiler.EndSample();
     }
 }
