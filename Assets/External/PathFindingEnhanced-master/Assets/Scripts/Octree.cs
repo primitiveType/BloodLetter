@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine.Profiling;
 
@@ -8,7 +9,7 @@ using UnityEngine.Profiling;
 public class Octree
 {
     public int maxLevel;
-    public Vector3 corner;
+    public SerializableVector3 corner;
     public float size;
 
     public float cellSize
@@ -91,6 +92,40 @@ public class Octree
                 if (gameObject.transform.GetChild(i).gameObject.activeInHierarchy)
                 {
                     BuildFromGameObject(gameObject.transform.GetChild(i).gameObject, normalExpansion, recursive,
+                        staticFlag);
+                }
+            }
+        }
+    }
+    public void BuildFromGameObjectPlaymode(GameObject gameObject, float normalExpansion = 0, bool recursive = true,
+        bool staticFlag = true)
+    {
+        bool isStatic = gameObject.GetComponent<Static>();
+        if ( isStatic == staticFlag)
+        {
+            BoxCollider box = gameObject.GetComponent<BoxCollider>();
+            
+            if (box != null)
+            {
+                DivideBox(box.bounds, true);
+            }
+            else
+            {
+                MeshRenderer rend = gameObject.GetComponent<MeshRenderer>();
+                if (rend)
+                {
+                    DivideBox(rend.bounds, true);
+                }
+            }
+        }
+
+        if (recursive)
+        {
+            for (int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                if (gameObject.transform.GetChild(i).gameObject.activeInHierarchy)
+                {
+                    BuildFromGameObjectPlaymode(gameObject.transform.GetChild(i).gameObject, normalExpansion, recursive,
                         staticFlag);
                 }
             }
@@ -218,6 +253,11 @@ public class Octree
     public void DivideTriangle(Vector3 p1, Vector3 p2, Vector3 p3, bool markAsBlocked = false)
     {
         root.DivideTriangleUntilLevel(p1, p2, p3, maxLevel, markAsBlocked);
+    }
+    
+    public void DivideBox(Bounds bounds, bool markAsBlocked = false)
+    {
+        root.DivideBoxUntilLevel(bounds, maxLevel, markAsBlocked);
     }
 
     private int[,] p = new int[2, 3];
@@ -814,10 +854,12 @@ public class Octree
 public class OctreeNode
 {
     //dont ser, after deser, set tree
+    [JsonIgnore]
     public Octree tree;
     public int level;
     public int[] index;
     //dont serialize. after deser, recurse and set parent ref
+    [JsonIgnore]
     public OctreeNode parent;
     public OctreeNode[,,] children;
     public bool blocked = false;
@@ -828,6 +870,7 @@ public class OctreeNode
         get { return tree.size / (1 << level); }
     }
 
+    [JsonIgnore]
     public Vector3 center
     {
         get { return corners(0) + (size / 2) * Vector3.one; }
@@ -998,6 +1041,25 @@ public class OctreeNode
                 for (int yi = 0; yi < 2; yi++)
                 for (int zi = 0; zi < 2; zi++)
                     children[xi, yi, zi].DivideTriangleUntilLevel(p1, p2, p3, maxLevel, markAsBlocked);
+            }
+            else
+            {
+                blocked = blocked || markAsBlocked;
+            }
+        }
+    }
+    public void DivideBoxUntilLevel(Bounds box,  int maxLevel, bool markAsBlocked = false)
+    {
+        if (box.Intersects(new Bounds(center, new Vector3(size, size, size))))
+        {
+            containsBlocked = containsBlocked || markAsBlocked;
+            if (level < maxLevel)
+            {
+                CreateChildren();
+                for (int xi = 0; xi < 2; xi++)
+                for (int yi = 0; yi < 2; yi++)
+                for (int zi = 0; zi < 2; zi++)
+                    children[xi, yi, zi].DivideBoxUntilLevel(box, maxLevel, markAsBlocked);
             }
             else
             {

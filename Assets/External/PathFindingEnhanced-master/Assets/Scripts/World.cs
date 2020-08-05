@@ -8,7 +8,7 @@ public class World {
 
     public World(GameObject scene, float size, Vector3 center, int maxLevel, float normalExtension, bool progressive = true,Graph.GraphType type = Graph.GraphType.CENTER,  bool staticObjects = true ) {
         space = progressive ? new ProgressiveOctree(size, center - Vector3.one * size / 2, maxLevel) : new Octree(size, center - Vector3.one * size / 2, maxLevel);
-        space.BuildFromGameObject(scene, normalExtension, true, staticObjects);
+        space.BuildFromGameObjectPlaymode(scene, normalExtension, true, staticObjects);
         spaceGraph = 
             type == Graph.GraphType.CENTER ? space.ToCenterGraph() :
             type == Graph.GraphType.CORNER ? space.ToCornerGraph() : space.ToCrossedGraph();

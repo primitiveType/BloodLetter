@@ -813,6 +813,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -957,7 +962,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38358
+  m_Name: pb_Mesh155266
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1120,7 +1125,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36944
+  m_Name: pb_Mesh153896
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1283,7 +1288,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36030
+  m_Name: pb_Mesh153058
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1512,6 +1517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1566,7 +1576,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35838
+  m_Name: pb_Mesh152824
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1794,6 +1804,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -3097,7 +3112,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36566
+  m_Name: pb_Mesh153556
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3260,7 +3275,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36282
+  m_Name: pb_Mesh153326
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3423,7 +3438,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35808
+  m_Name: pb_Mesh152812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5776,6 +5791,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -7197,7 +7217,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38278
+  m_Name: pb_Mesh155106
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7588,6 +7608,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -8182,6 +8207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -9500,6 +9530,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -9619,6 +9654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -9740,6 +9780,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -9794,7 +9839,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37578
+  m_Name: pb_Mesh154416
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10031,7 +10076,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36042
+  m_Name: pb_Mesh153086
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10814,7 +10859,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36352
+  m_Name: pb_Mesh153388
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11042,6 +11087,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -13322,6 +13372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -14225,6 +14280,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -14279,7 +14339,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36536
+  m_Name: pb_Mesh153538
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14442,7 +14502,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37942
+  m_Name: pb_Mesh154736
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14670,6 +14730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -15101,6 +15166,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -15318,7 +15388,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35756
+  m_Name: pb_Mesh152752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15857,6 +15927,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -15911,7 +15986,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35780
+  m_Name: pb_Mesh152776
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16504,7 +16579,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36644
+  m_Name: pb_Mesh153606
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17163,6 +17238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -17283,6 +17363,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -17337,7 +17422,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37796
+  m_Name: pb_Mesh154590
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17810,7 +17895,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38090
+  m_Name: pb_Mesh154876
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17973,7 +18058,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37172
+  m_Name: pb_Mesh154004
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18248,6 +18333,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -18465,7 +18555,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35554
+  m_Name: pb_Mesh152368
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19046,6 +19136,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -19355,7 +19450,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38078
+  m_Name: pb_Mesh154854
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20858,7 +20953,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38346
+  m_Name: pb_Mesh155254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21800,6 +21895,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -21854,7 +21954,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38762
+  m_Name: pb_Mesh155594
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22017,7 +22117,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35940
+  m_Name: pb_Mesh152950
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22490,7 +22590,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37496
+  m_Name: pb_Mesh154334
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22653,7 +22753,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37430
+  m_Name: pb_Mesh154290
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26014,6 +26114,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -26910,7 +27015,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37894
+  m_Name: pb_Mesh154674
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27448,6 +27553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -28170,6 +28280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -29318,7 +29433,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37654
+  m_Name: pb_Mesh154462
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29547,6 +29662,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -29580,12 +29700,12 @@ PrefabInstance:
     - target: {fileID: 6286949481692996875, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7777816
+      value: 0.9208442
       objectReference: {fileID: 0}
     - target: {fileID: 6286949481692996875, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.62853473
+      value: -0.38993073
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dccecb3b54f6990418d28b15f5123e44, type: 3}
@@ -30074,7 +30194,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38916
+  m_Name: pb_Mesh155714
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30302,6 +30422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -32333,7 +32458,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38370
+  m_Name: pb_Mesh155280
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32659,7 +32784,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38726
+  m_Name: pb_Mesh155558
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32887,6 +33012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -33372,7 +33502,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35792
+  m_Name: pb_Mesh152794
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33877,7 +34007,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38880
+  m_Name: pb_Mesh155670
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34514,7 +34644,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35542
+  m_Name: pb_Mesh152340
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34677,7 +34807,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36340
+  m_Name: pb_Mesh153366
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34906,6 +35036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -34939,12 +35074,12 @@ PrefabInstance:
     - target: {fileID: 6286949481692996875, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7874041
+      value: 0.9256411
       objectReference: {fileID: 0}
     - target: {fileID: 6286949481692996875, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.61643714
+      value: -0.3784027
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dccecb3b54f6990418d28b15f5123e44, type: 3}
@@ -35357,6 +35492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -35476,6 +35616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}
@@ -35998,7 +36143,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36748
+  m_Name: pb_Mesh153692
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36226,6 +36371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406602299321237577, guid: dccecb3b54f6990418d28b15f5123e44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406602299849856961, guid: dccecb3b54f6990418d28b15f5123e44,
         type: 3}

@@ -3,8 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using CodingEssentials.Trees;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Profiling;
@@ -35,20 +38,21 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
             true);
 
 
-        string test = JsonConvert.SerializeObject(staticWorld);
-        File.WriteAllText("c://test.json", test);
+        // string test = JsonConvert.SerializeObject(staticWorld);
+
+        // string path = Path.Combine(Application.dataPath, "test.json");
+        // File.WriteAllText(path, test);
+        // Debug.Log($"wrote test json to {path}");
         if (debug)
         {
             staticWorld.DisplayVoxels();
         }
-
     }
 
     private void Start()
     {
         DefaultPathFindingTarget = Toolbox.Instance.PlayerHeadTransform;
         StartCoroutine(PathfindingTick());
-
     }
 
     // public void TestPathFinding(Vector3 start, List<Vector3> dest)
@@ -80,6 +84,7 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
     // }
 
     List<PathfindingHandle> HandlesToUpdate = new List<PathfindingHandle>();
+
     private IEnumerator PathfindingTick()
     {
         int count = 0;
@@ -103,15 +108,23 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
                     pathfinder.DrawPath();
                 }
             }
-            UpdatePathfindingHandles();
-            foreach (var pathfinder in currentPathfinders)
-            {
-                if (pathfinder.NeedsUpdate)
+
+            var targetPos = DefaultPathFindingTarget.transform.position;
+            Task.Run(() =>
                 {
-                    pathfinder.IsValid = true;
-                    pathfinder.Updated();
+                    UpdatePathfindingHandles(targetPos);
+
+                    foreach (var pathfinder in currentPathfinders)
+                    {
+                        if (pathfinder.NeedsUpdate)
+                        {
+                            pathfinder.IsValid = true;
+                            pathfinder.Updated();
+                        }
+                    }
                 }
-            }
+            );
+
 
             yield return new WaitForSeconds(UpdateInterval);
         }
@@ -127,16 +140,15 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
         return Paths?[index];
     }
 
-    private void UpdatePathfindingHandles()
+    private void UpdatePathfindingHandles(Vector3 targetPosition)
     {
         Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
         Profiler.BeginSample("FindPath");
         // handle.CurrentPath
         Paths = staticWorld
             .spaceGraph //TODO: consider using the one that takes a list of source-dest. check performance
-            .FindPath(method, DefaultPathFindingTarget.transform.position, CachedDestinationsList, staticWorld.space);
-        Profiler.EndSample();//("FindPath");
-
+            .FindPath(method, targetPosition , CachedDestinationsList, staticWorld.space);
+        Profiler.EndSample(); //("FindPath");
     }
 
     public Transform DefaultPathFindingTarget { get; private set; }
@@ -166,10 +178,9 @@ public class PathfindingHandle : IDisposable
 
 
     public event PathfindingHandleUpdated UpdatedEvent;
-    
+
     public PathfindingHandle(Transform finder, int pathIndex)
     {
-        
         Finder = finder;
     }
 
