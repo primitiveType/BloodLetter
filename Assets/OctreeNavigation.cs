@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using CodingEssentials;
 using UnityEngine;
 using UnityEngine.Profiling;
@@ -11,7 +12,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     private PathfindingHandle PathfindingHandle { get; set; }
 
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private Transform pathfindingAnchor;
+    //[SerializeField] private Transform pathfindingAnchor;
     [SerializeField] private bool debug;
     [SerializeField] private ActorEvents Events;
     [SerializeField] private float VelocityUpdateInterval = .2f;
@@ -87,6 +88,11 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     private void FixedUpdate()
     {
         if (!ShouldPathfind())
+        {
+            return;
+        }
+
+        if (PathfindingHandle._pathIndex < 0)
         {
             return;
         }

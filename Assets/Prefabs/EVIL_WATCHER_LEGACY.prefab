@@ -7,6 +7,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 85344337, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366465993453371, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.68997437
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366465993453371, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72383386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035573511071129073, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.54999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035573511071129073, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035573511071129073, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035573511071129076, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: anchorTransformCollider
+      value: 
+      objectReference: {fileID: 6284724316174862945}
     - target: {fileID: 2035573511599213176, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,5 +99,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY
       objectReference: {fileID: 0}
+    - target: {fileID: 8586748755918169904, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
+--- !u!135 &6284724316174862945 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 85344337, guid: 81e1d6095514fe0469c6694925d7feaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6284724316257552944}
+  m_PrefabAsset: {fileID: 0}

@@ -315,6 +315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
   materialGameObject: {fileID: 321424110}
+  anchorTransform: {fileID: 0}
+  anchorTransformCollider: {fileID: 0}
   resize: 0
   reposition: 0
 --- !u!114 &321424112
@@ -1049,6 +1051,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
   materialGameObject: {fileID: 812513434}
+  anchorTransform: {fileID: 0}
+  anchorTransformCollider: {fileID: 0}
   resize: 0
   reposition: 0
 --- !u!114 &812513440
@@ -1116,7 +1120,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1749,6 +1753,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
   materialGameObject: {fileID: 1187914149}
+  anchorTransform: {fileID: 0}
+  anchorTransformCollider: {fileID: 0}
   resize: 0
   reposition: 0
 --- !u!114 &1187914151
@@ -1843,6 +1849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toastPrefab: {fileID: 11616406193128472, guid: b9ea61a37670a26458af9935bafbbbf0,
     type: 3}
+  max: 6
 --- !u!1 &1448022913
 GameObject:
   m_ObjectHideFlags: 0
@@ -3971,6 +3978,7 @@ MonoBehaviour:
   m_Health: 100
   m_MaxHealth: 100
   m_Armor: {fileID: 2092636035}
+  _animator: {fileID: 0}
 --- !u!114 &1991182490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4117,7 +4125,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 260375
+    m_Bits: 522519
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4395,7 +4403,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
