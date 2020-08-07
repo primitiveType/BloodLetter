@@ -1,27 +1,23 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Elevator : MonoBehaviour
+public class ThreeStageElevator : MonoBehaviour
 {
     public float speed;
 
-    [FormerlySerializedAs("BottomTarget")] [SerializeField]
-    private Transform StartTarget;
+    [SerializeField] private Transform StartTarget;
 
-    [FormerlySerializedAs("TopTarget")] [SerializeField]
-    private Transform EndTarget;
+    [SerializeField] private Transform EndTarget;
+    [SerializeField] private Transform MiddleTarget;
 
     [FormerlySerializedAs("rigidbody")] [SerializeField]
     private Transform elevator;
 
     private AudioSource audiosource;
 
-    [SerializeField] private float delay = 2f;
     [SerializeField] private float predelay = 0f;
-    [SerializeField] private bool returns = true;
 
     private void Start()
     {
@@ -46,45 +42,67 @@ public class Elevator : MonoBehaviour
         {
             var currentTarget = Vector3.Lerp(start, targetPosition, t);
             elevator.transform.position = currentTarget;
-            // rigidbody.MovePosition(currentTarget);
             yield return null;
             t += (Time.deltaTime) / (distance / speed);
         }
 
         elevator.transform.position = targetPosition;
-
-        // rigidbody.position = targetPosition;
     }
 
     private Coroutine MoveCR;
 
-    public void Trigger()
+    private void MoveToTransform(Transform target)
     {
         if (MoveCR != null)
+        {
+            EnableAudio(false);
             StopCoroutine(MoveCR);
+        }
 
-        MoveCR = StartCoroutine(TriggerCr());
+        MoveCR = StartCoroutine(TriggerCr(target));
     }
 
-    private IEnumerator TriggerCr()
+    public void MoveToStart()
+    {
+        MoveToTransform(StartTarget);
+    }
+    
+    public void MoveTo(ElevatorState state)
+    {
+        switch (state)
+        {
+            case ElevatorState.Start:
+                MoveToStart();
+                break;
+            case ElevatorState.Middle:
+                MoveToMiddle();
+                break;
+            case ElevatorState.End:
+                MoveToEnd();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(state), state, null);
+        }
+    }
+
+
+    public void MoveToMiddle()
+    {
+        MoveToTransform(MiddleTarget);
+    }
+
+    public void MoveToEnd()
+    {
+        MoveToTransform(EndTarget);
+    }
+
+    private IEnumerator TriggerCr(Transform target)
     {
         yield return new WaitForSeconds(predelay);
         EnableAudio(true);
 
-        Transform target = EndTarget;
-        Transform returnTarget = StartTarget;
 
         yield return Move(target);
-
-        if (returns)
-        {
-            EnableAudio(false);
-
-            yield return new WaitForSeconds(delay);
-            EnableAudio(true);
-
-            yield return Move(returnTarget);
-        }
 
         EnableAudio(false);
     }

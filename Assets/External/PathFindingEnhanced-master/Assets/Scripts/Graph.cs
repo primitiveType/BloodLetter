@@ -1,18 +1,16 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using C5;
-using Newtonsoft.Json;
 using UnityEngine.Profiling;
 
 public class Node
 {
     public int index;
     public int connectIndex = 0;
-    public List<Arc> arcs; //TODO change this to use indices
-    public SerializableVector3 center;
+    public List<Arc> arcs;//TODO change this to use indices
+    public Vector3 center;
 
     public Node(Vector3 _center, int _index)
     {
@@ -24,21 +22,20 @@ public class Node
 
 public class Arc
 {
-    // public Node from, to;
-    public int from, to;
+    public Node from, to;
     public float distance;
 
     public Arc(Node _from, Node _to)
     {
-        from = _from.index;
-        to = _to.index;
-        distance = ((Vector3)_from.center - _to.center).magnitude;
+        from = _from;
+        to = _to;
+        distance = (from.center - to.center).magnitude;
     }
 
     public Arc(Node _from, Node _to, float _distance)
     {
-        from = _from.index;
-        to = _to.index;
+        from = _from;
+        to = _to;
         distance = _distance;
     }
 }
@@ -69,10 +66,9 @@ public class NodeFComparer : IComparer<NodeInfo>
 public class Graph
 {
     //serialize
-    [DataMember] public List<Node> nodes;
-
+    public List<Node> nodes;
     //dont serialize
-    [JsonIgnore] public List<Node> temporaryNodes;
+    public List<Node> temporaryNodes;
 
     public enum GraphType
     {
@@ -122,10 +118,10 @@ public class Graph
                     Node next = toSet.Dequeue();
                     foreach (Arc arc in next.arcs)
                     {
-                        if (nodes[arc.to].connectIndex != current)
+                        if (arc.to.connectIndex != current)
                         {
-                            nodes[arc.to].connectIndex = current;
-                            toSet.Enqueue(nodes[arc.to]);
+                            arc.to.connectIndex = current;
+                            toSet.Enqueue(arc.to);
                         }
                     }
                 }
@@ -146,7 +142,7 @@ public class Graph
             {
                 newNode.arcs.Add(new Arc(newNode, neighbor));
                 neighbor.arcs.Add(new Arc(neighbor, newNode));
-                float d2 = ((Vector3)neighbor.center - newNode.center).sqrMagnitude;
+                float d2 = (neighbor.center - newNode.center).sqrMagnitude;
                 if (d2 < minDist2)
                 {
                     newNode.connectIndex = neighbor.connectIndex;
@@ -165,15 +161,15 @@ public class Graph
             foreach (Arc arc in node.arcs)
             {
                 List<Arc> originalArcs = new List<Arc>();
-                foreach (Arc neighborArc in nodes[arc.to].arcs)
+                foreach (Arc neighborArc in arc.to.arcs)
                 {
-                    if (neighborArc.to >= 0) //negative indices are temp nodes
+                    if (neighborArc.to != node)
                     {
                         originalArcs.Add(neighborArc);
                     }
                 }
 
-                nodes[arc.to].arcs = originalArcs;
+                arc.to.arcs = originalArcs;
             }
 
             node.arcs.Clear();
@@ -186,7 +182,7 @@ public class Graph
 
     public float estimatedCost(Node from, Node to)
     {
-        return ((Vector3)from.center - to.center).magnitude;
+        return (from.center - to.center).magnitude;
     }
 
     public List<Node> Backtrack(NodeInfo node)
@@ -338,12 +334,12 @@ public class Graph
                 foreach (Arc a in current.arcs)
                 {
                     NodeInfo successor;
-                    if (!infoTable.TryGetValue(a.to, out successor))
+                    if (!infoTable.TryGetValue(a.to.index, out successor))
                     {
-                        successor = new NodeInfo(nodes[a.to]);
+                        successor = new NodeInfo(a.to);
                         successor.g = float.MaxValue;
                         successor.h = h(successor, destination);
-                        infoTable[a.to] = successor;
+                        infoTable[a.to.index] = successor;
                     }
 
                     if (!successor.closed)
@@ -448,13 +444,13 @@ public class Graph
                 foreach (Arc a in current.arcs)
                 {
                     NodeInfo successor;
-                    if (!infoTable.TryGetValue(a.to, out successor))
+                    if (!infoTable.TryGetValue(a.to.index, out successor))
                     {
                         newNodeCount++;
-                        successor = new NodeInfo(nodes[a.to]);
+                        successor = new NodeInfo(a.to);
                         successor.g = float.MaxValue;
                         successor.h = h(successor, destination);
-                        infoTable[a.to] = successor;
+                        infoTable[a.to.index] = successor;
                     }
 
                     if (!successor.closed)
@@ -468,7 +464,7 @@ public class Graph
                             parent = parent.parent;
                         }
 
-                        float gNew = parent.g + ((Vector3)successor.center - parent.center).magnitude;
+                        float gNew = parent.g + (successor.center - parent.center).magnitude;
                         if (successor.g > gNew)
                         {
                             successor.parent = parent;
@@ -607,7 +603,7 @@ public class Graph
                 if (current.parent != null && !space.LineOfSight(current.parent.center, current.center, false,
                     type == GraphType.CENTER))
                 {
-                    Profiler.EndSample(); //if check
+                    Profiler.EndSample();//if check
 
                     NodeInfo realParent = null;
                     float realg = float.MaxValue;
@@ -617,9 +613,9 @@ public class Graph
                     {
                         NodeInfo tempParent;
                         float tempg;
-                        if (infoTable.TryGetValue(a.to, out tempParent) && tempParent.closed)
+                        if (infoTable.TryGetValue(a.to.index, out tempParent) && tempParent.closed)
                         {
-                            tempg = tempParent.g + ((Vector3)current.center - tempParent.center).magnitude;
+                            tempg = tempParent.g + (current.center - tempParent.center).magnitude;
                             if (tempg < realg)
                             {
                                 realParent = tempParent;
@@ -627,8 +623,7 @@ public class Graph
                             }
                         }
                     }
-
-                    Profiler.EndSample(); //foreach arc 1
+                    Profiler.EndSample();//foreach arc 1
 
                     current.parent = realParent;
                     current.g = realg;
@@ -644,14 +639,13 @@ public class Graph
                 foreach (Arc a in current.arcs)
                 {
                     NodeInfo successor;
-                    if (!infoTable.TryGetValue(a.to, out successor))
+                    if (!infoTable.TryGetValue(a.to.index, out successor))
                     {
                         newNodeCount++;
-                        var refNode = a.to >= 0 ? nodes[a.to] : temporaryNodes.First(n=>n.index == a.to);
-                        successor = new NodeInfo(refNode);
+                        successor = new NodeInfo(a.to);
                         successor.g = float.MaxValue;
                         successor.h = h(successor, destination);
-                        infoTable[a.to] = successor;
+                        infoTable[a.to.index] = successor;
                     }
 
                     if (!successor.closed)
@@ -659,7 +653,7 @@ public class Graph
                         float g_old = successor.g;
                         // ComputeCost
                         NodeInfo parent = current.parent == null ? current : current.parent;
-                        float gNew = parent.g + ((Vector3)successor.center - parent.center).magnitude;
+                        float gNew = parent.g + (successor.center - parent.center).magnitude;
                         if (successor.g > gNew)
                         {
                             successor.parent = parent;
@@ -676,8 +670,8 @@ public class Graph
                         }
                     }
                 }
+                Profiler.EndSample();//foreach arc 2
 
-                Profiler.EndSample(); //foreach arc 2
             }
 
             Profiler.EndSample(); //while loop

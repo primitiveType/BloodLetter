@@ -267,7 +267,7 @@ public class Main : MonoBehaviour {
         float result = 0;
         Node prev = path[0];
         for (int i = 1; i < path.Count; i++) {
-            result += ((Vector3)path[i].center - prev.center).magnitude;
+            result += (path[i].center - prev.center).magnitude;
             prev = path[i];
         }
         return result;

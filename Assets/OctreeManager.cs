@@ -18,6 +18,7 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
     // private NonSparseOctree<IOctreeObject> Octree { get; set; }
 
     [SerializeField] private bool debug;
+    [SerializeField] private bool debugVoxels;
 
     public GameObject Scene;
     [field: SerializeField] public float UpdateInterval { get; } = 1f;
@@ -34,7 +35,7 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
         float size = Math.Max(Math.Max(colSize.x, colSize.y), colSize.z);
         var maxLevel = Mathf.Log(size / desiredUnitSize, 2);
         var maxLevelInt = Mathf.CeilToInt(maxLevel);
-        staticWorld = new World(Scene, size, this.transform.position, maxLevelInt, 0, true, Graph.GraphType.CORNER,
+        staticWorld = new World(Scene, size, Scene.transform.position + col.center, maxLevelInt, 0, true, Graph.GraphType.CORNER,
             true);
 
 
@@ -43,7 +44,7 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
         // string path = Path.Combine(Application.dataPath, "test.json");
         // File.WriteAllText(path, test);
         // Debug.Log($"wrote test json to {path}");
-        if (debug)
+        if (debugVoxels)
         {
             staticWorld.DisplayVoxels();
         }
@@ -55,7 +56,7 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
         StartCoroutine(PathfindingTick());
     }
 
-    // public void TestPathFinding(Vector3 start, List<Vector3> dest)
+    // public void TestPathFinding(Vector3 start, Lelist<Vector3> dest)
     // {
     //     Graph.PathFindingMethod method = staticWorld.spaceGraph.LazyThetaStar;
     //     float totalLength = 0;
@@ -97,6 +98,8 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
             //currently assumes everything is pathfinding toward the player
             foreach (var pathfinder in currentPathfinders)
             {
+                pathfinder._pathIndex = -1;
+                pathfinder.IsValid = false;
                 if (pathfinder.NeedsUpdate)
                 {
                     pathfinder._pathIndex = count++;

@@ -37,7 +37,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
 
     private void PathfindingHandleOnUpdatedEvent(object sender, PathfindingHandleUpdatedArgs args)
     {
-        PathIndex = PathfindingHandle.CurrentPath.Count - 2; //ignore the first one
+        CurrentNodeIndex = PathfindingHandle.CurrentPath.Count - 2; //ignore the first one
     }
 
     private void EventsOnOnAggroEvent(object sender, OnAggroEventArgs args)
@@ -58,7 +58,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     }
 
 
-    int pathIndex = 0;
+    int currentNodeIndex = 0;
     bool moveTowards = true; // or -1 if backwards
     Transform myObjectTransform;
     float distanceErr = .1f; // this should probably be half node size
@@ -75,13 +75,13 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
             return;
         }
 
-        myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
+        myDesiredLocation = PathfindingHandle.CurrentPath[CurrentNodeIndex].center;
 
         if (Vector3.Distance(myPosition, myDesiredLocation) < distanceErr)
         {
             // My object reach the of path
 
-            PathIndex--; // My next location in the path
+            CurrentNodeIndex--; // My next location in the path
         }
     }
 
@@ -92,23 +92,14 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
             return;
         }
 
-        if (PathfindingHandle._pathIndex < 0)
-        {
-            return;
-        }
 
-        if (PathIndex < 0 || PathIndex > PathfindingHandle.CurrentPath.Count)
-        {
-            return;
-        }
-
-        myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
+        myDesiredLocation = PathfindingHandle.CurrentPath[CurrentNodeIndex].center;
 
 
         if (updateRotation)
         {
             var rot = myObjectTransform.rotation.eulerAngles;
-            myObjectTransform.LookAt(PathfindingHandle.CurrentPath[PathIndex].center, Vector3.up);
+            myObjectTransform.LookAt(PathfindingHandle.CurrentPath[CurrentNodeIndex].center, Vector3.up);
             myObjectTransform.rotation = Quaternion.Euler(rot.x, myObjectTransform.rotation.eulerAngles.y, rot.z);
         }
 
@@ -120,7 +111,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
         }
 
 
-        myDesiredLocation = PathfindingHandle.CurrentPath[PathIndex].center;
+        myDesiredLocation = PathfindingHandle.CurrentPath[CurrentNodeIndex].center;
         var prevLocation = myPosition;
         var desiredVelocity = ((myDesiredLocation) - prevLocation).normalized * MaxSpeed;
         rb.velocity = desiredVelocity;
@@ -145,6 +136,13 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
         {
             return false;
         }
+        
+        
+        if (PathfindingHandle._pathIndex < 0)
+        {
+            return false;
+        }
+
 
         return true;
     }
@@ -155,10 +153,10 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     public bool updateRotation { get; set; }
      public Vector3 velocity => rb.velocity;
 
-    public int PathIndex
+    public int CurrentNodeIndex
     {
-        get => pathIndex;
-        set => pathIndex = Mathf.Clamp(value, 0, Int32.MaxValue);
+        get => currentNodeIndex;
+        set => currentNodeIndex = Mathf.Clamp(value, 0, Int32.MaxValue);
     }
 
     public void SetDestination(Vector3 targetPosition)

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine.Profiling;
 
@@ -9,7 +8,7 @@ using UnityEngine.Profiling;
 public class Octree
 {
     public int maxLevel;
-    public SerializableVector3 corner;
+    public Vector3 corner;
     public float size;
 
     public float cellSize
@@ -854,12 +853,10 @@ public class Octree
 public class OctreeNode
 {
     //dont ser, after deser, set tree
-    [JsonIgnore]
     public Octree tree;
     public int level;
     public int[] index;
     //dont serialize. after deser, recurse and set parent ref
-    [JsonIgnore]
     public OctreeNode parent;
     public OctreeNode[,,] children;
     public bool blocked = false;
@@ -870,7 +867,6 @@ public class OctreeNode
         get { return tree.size / (1 << level); }
     }
 
-    [JsonIgnore]
     public Vector3 center
     {
         get { return corners(0) + (size / 2) * Vector3.one; }

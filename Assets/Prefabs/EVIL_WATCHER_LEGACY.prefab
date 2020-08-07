@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 85344337, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
       propertyPath: m_Radius
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 85344337, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2366465993453371, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
       propertyPath: m_LocalRotation.y
