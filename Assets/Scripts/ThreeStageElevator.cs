@@ -26,7 +26,13 @@ public class ThreeStageElevator : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(StartTarget.transform.position, EndTarget.transform.position);
+        var color = Gizmos.color;
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(elevator.position, .5f);
+        Gizmos.DrawLine(StartTarget.transform.position, MiddleTarget.transform.position);
+        Gizmos.color = Color.gray;
+        Gizmos.DrawLine(MiddleTarget.transform.position, EndTarget.transform.position);
+        Gizmos.color = Gizmos.color;
     }
 
     private IEnumerator Move(Transform target)

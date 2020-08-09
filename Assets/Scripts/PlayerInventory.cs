@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -17,8 +18,9 @@ public class PlayerInventory : MonoBehaviour
         GainAmmo(AmmoType.Lead, 40);
     }
 
-    private List<IKey> Keys { get; } = new List<IKey>();
 
+    private KeyType currentKeys { get; set; }
+    
     public List<IInventoryItem> GetItems()
     {
         return Items.ToList();
@@ -48,12 +50,12 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddKey(IKey toAdd)
     {
-        Keys.Add(toAdd);
+        currentKeys |= toAdd.KeyType;
     }
 
     public bool HasKey(KeyType keyType)
     {
-        return Keys.Count(key => key.KeyType == keyType) > 0;
+        return currentKeys.HasFlag(keyType);
     }
 
     public int GetAmmoAmount(AmmoType type)
@@ -106,9 +108,11 @@ public interface IKey : IInventoryItem
     KeyType KeyType { get; }
 }
 
+[Flags]
 public enum KeyType
 {
-    Blue,
-    Red,
-    Yellow
+    None = 0x0000,
+    Blue = 0x0001,
+    Red = 0x0010,
+    Yellow = 0x0100
 }
