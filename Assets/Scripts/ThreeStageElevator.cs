@@ -43,12 +43,12 @@ public class ThreeStageElevator : MonoBehaviour
         float distance = Vector3.Distance(start, targetPosition);
         float t = 0;
 
-        yield return null;
+        yield return new WaitForFixedUpdate();
         while (t < 1f)
         {
             var currentTarget = Vector3.Lerp(start, targetPosition, t);
             elevator.transform.position = currentTarget;
-            yield return null;
+            yield return new WaitForFixedUpdate();
             t += (Time.deltaTime) / (distance / speed);
         }
 

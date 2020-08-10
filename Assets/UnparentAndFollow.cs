@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnparentAndFollow : MonoBehaviour
 {
-    private Transform toFollow;
+    [SerializeField]private Transform toFollow;
     private Transform myTransform;
     void Awake()
     {
