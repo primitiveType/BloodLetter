@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnableGravityOnDeath : MonoBehaviour
 {
-    [SerializeField] private ActorEvents Events;
+    [SerializeField] private IActorEvents Events;
 
     private Rigidbody rb;
     // Start is called before the first frame update

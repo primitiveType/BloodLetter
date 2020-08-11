@@ -7,7 +7,7 @@ using Random = System.Random;
 
 public class MonsterAttackComponent : MonoBehaviour
 {
-    [SerializeField] private ActorEvents m_Events;
+    [SerializeField] private IActorEvents m_Events;
 
     [SerializeField] private List<ProjectileInfoBase> m_Attacks;
 
@@ -38,7 +38,7 @@ public class MonsterAttackComponent : MonoBehaviour
 
     private ProjectileInfoBase CurrentAttack { get; set; }
 
-    public ActorEvents Events
+    public IActorEvents Events
     {
         get => m_Events;
         set => m_Events = value;

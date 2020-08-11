@@ -13,16 +13,16 @@ public class DotVolume : MonoBehaviour, IDamageSource
     [SerializeField] private float TicksPerSecond = 1;
 
     private float SecondsPerTick => 1f / TicksPerSecond;
+
     private void OnTriggerEnter(Collider other)
     {
-   
     }
 
 
     private bool TryAddTrigger(Collider other)
     {
-        var actor = other.GetComponent<ActorEvents>();
-        if (actor && !TargetsByTime.ContainsKey(other))
+        var actor = other.GetComponent<IActorEvents>();
+        if (actor != null && !TargetsByTime.ContainsKey(other))
         {
             TargetsByTime.Add(other, 0);
             return true;
@@ -30,18 +30,19 @@ public class DotVolume : MonoBehaviour, IDamageSource
 
         return false;
     }
+
     private void OnTriggerStay(Collider other)
     {
         if (!TargetsByTime.ContainsKey(other) && !TryAddTrigger(other))
         {
             return;
         }
-        
+
         TargetsByTime[other] += Time.deltaTime;
-        if (TargetsByTime[other] > SecondsPerTick )
+        if (TargetsByTime[other] > SecondsPerTick)
         {
             TargetsByTime[other] -= SecondsPerTick;
-            var actor = other.GetComponent<ActorEvents>();
+            var actor = other.GetComponent<IActorEvents>();
             actor.OnShot(this);
         }
     }

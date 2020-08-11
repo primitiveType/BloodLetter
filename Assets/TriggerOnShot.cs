@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TriggerOnShot : MonoBehaviour
 {
-    [SerializeField] private ActorEvents Events;
+    [SerializeField] private IActorEvents Events;
     [SerializeField] private Animator Animator;
     private static readonly int Trigger = Animator.StringToHash("Trigger");
 

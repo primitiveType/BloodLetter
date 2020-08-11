@@ -9,7 +9,7 @@ public class AmmoText : MonoBehaviour
     [SerializeField] private AmmoType AmmoType;
     [SerializeField] private Text Text;
 
-    private ActorEvents Events;
+    private IActorEvents Events;
     private PlayerInventory Inventory;
 
     private bool IsDirty { get; set; }

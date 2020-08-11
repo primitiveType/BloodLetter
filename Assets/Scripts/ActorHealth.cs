@@ -4,8 +4,7 @@ using UnityEngine.Networking.Match;
 
 public class ActorHealth : MonoBehaviour
 {
-    [SerializeField] private ActorEvents m_Events;
-    public ActorEvents Events => m_Events;
+    public IActorEvents Events => ActorRoot.ActorEvents;
     public bool IsAlive { get; set; } = true;
 
     [SerializeField] private float m_Health;
@@ -14,6 +13,8 @@ public class ActorHealth : MonoBehaviour
     [SerializeField] private Animator _animator;
     private static readonly int IsDead = Animator.StringToHash("IsDead");
 
+    private ActorRoot ActorRoot { get; set; }
+    
     private Animator Animator
     {
         get => _animator;
@@ -56,6 +57,7 @@ public class ActorHealth : MonoBehaviour
 
     private void Start()
     {
+        ActorRoot = GetComponentInParent<ActorRoot>();
         if (Animator == null)
         {
             Animator = GetComponentInChildren<Animator>();

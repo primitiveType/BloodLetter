@@ -2,7 +2,7 @@
 
 public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjectile
 {
-    [SerializeField] private ActorEvents Events;
+    [SerializeField] private IActorEvents Events;
 
     public bool OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
     {

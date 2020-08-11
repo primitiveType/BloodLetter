@@ -9,6 +9,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
     [SerializeField] private float DamageAmount;
 
     [SerializeField] private float Force;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,19 +17,15 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
         foreach (Collider collider in hitObjects)
         {
             Debug.Log($"hit {collider.name}");
-            var damaged = collider.GetComponent<ActorEvents>();
+            var damaged = collider.GetComponent<IActorEvents>();
             if (collider.attachedRigidbody)
             {
                 var direction = collider.transform.position - transform.position;
                 collider.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
             }
 
-            if (damaged)
-            {
-                damaged.OnShot(this);
-            }
+            damaged?.OnShot(this);
         }
-        
     }
 
     private void OnDrawGizmos()

@@ -7,9 +7,9 @@ public class EnemyAggroHandler : MonoBehaviour
     [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
     private bool m_isAggro;
     private static readonly int Aggro = Animator.StringToHash("IsAggro");
-    [SerializeField] private ActorEvents m_Events;
-    public ActorEvents Events => m_Events;
+    public IActorEvents Events => m_Events;
 
+    private ActorRoot ActorRoot { get; set; }
     private Animator Animator
     {
         get => m_animator;
@@ -19,7 +19,6 @@ public class EnemyAggroHandler : MonoBehaviour
     [SerializeField] private float AggroRange;
     [SerializeField] private float EarshotAggroRange = 20;
     private float m_distance;
-    [SerializeField] private Animator m_animator;
 
     public bool IsAggro
     {

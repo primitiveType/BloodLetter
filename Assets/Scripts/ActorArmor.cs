@@ -2,7 +2,7 @@
 
 public class ActorArmor : MonoBehaviour
 {
-    [SerializeField] private ActorEvents Events;
+    [SerializeField] private IActorEvents Events;
     [SerializeField] private float m_RemainingArmor;
     private float reduc = .5f;
 

@@ -45,14 +45,14 @@ public class EnemySounds : MonoBehaviour
         set => m_attackSource = value;
     } //I don't think its smart to have this many sources.
 
-    private ActorEvents Events;
+    private IActorEvents Events;
     [SerializeField] private AudioSource m_stepSource;
     [SerializeField] private AudioSource m_hurtSource;
     [SerializeField] private AudioSource m_attackSource;
 
     private void Start()
     {
-        Events = GetComponent<ActorEvents>();
+        Events = GetComponent<IActorEvents>();
         Events.OnStepEvent += OnEnemyStepped;
         Events.OnShotEvent += OnEnemyShot;
         Events.OnAttackEvent += OnEnemyAttack;

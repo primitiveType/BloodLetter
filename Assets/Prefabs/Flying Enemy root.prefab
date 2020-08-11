@@ -110,6 +110,7 @@ MonoBehaviour:
   _dictionary: {fileID: 11400000, guid: 9bf213797b0b56a4f9ab086804d8efbf, type: 2}
   materialGameObject: {fileID: 2035573511071129086}
   anchorTransform: {fileID: 2035573511071129073}
+  anchorTransformCollider: {fileID: 0}
   resize: 1
   reposition: 1
 --- !u!64 &2227521996726269713
@@ -160,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd5d14e65bead04ba72bfb8fa0cf52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toFollow: {fileID: 0}
 --- !u!54 &8586748755918169904
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -176,21 +178,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &7452109238931835366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035573511599213177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed598d796f4a46540b73679ddca36635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 8586748755918169904}
-  Events: {fileID: 3964157586184250796}
-  MaxSpeed: 10
 --- !u!135 &85344337
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -217,6 +204,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Events: {fileID: 3964157586184250796}
+--- !u!114 &7452109238931835366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035573511599213177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed598d796f4a46540b73679ddca36635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8586748755918169904}
+  debug: 0
+  Events: {fileID: 3964157586184250796}
+  VelocityUpdateInterval: 0.2
+  MaxSpeed: 10
 --- !u!1001 &7879388949366833509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262,7 +266,7 @@ PrefabInstance:
     - target: {fileID: 8171493255443565340, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Name
-      value: EVIL_WATCHER_LEGACY
+      value: Flying Enemy root
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255443565341, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -352,6 +356,7 @@ PrefabInstance:
     - {fileID: 8336314595322558068, guid: eea32565a61265b468d20f6c14e5a122, type: 3}
     - {fileID: 283178594518141799, guid: eea32565a61265b468d20f6c14e5a122, type: 3}
     - {fileID: 8171493255988436118, guid: eea32565a61265b468d20f6c14e5a122, type: 3}
+    - {fileID: 4068027032379591258, guid: eea32565a61265b468d20f6c14e5a122, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eea32565a61265b468d20f6c14e5a122, type: 3}
 --- !u!1 &2035573511599213177 stripped
 GameObject:

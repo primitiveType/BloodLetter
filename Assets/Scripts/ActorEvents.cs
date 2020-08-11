@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class ActorEvents : MonoBehaviour
+
+public class ActorEvents : MonoBehaviour, IActorEvents
 {
     public event OnShotEvent OnShotEvent;
     public event OnHealthChangedEvent OnHealthChangedEvent;
@@ -20,7 +21,8 @@ public class ActorEvents : MonoBehaviour
     /// </summary>
     /// <param name="projectileInfo"></param>
     public void OnShot(IDamageSource projectileInfo)
-    {//TODO: this should probably set an animator bool that fires an event
+    {
+        //TODO: this should probably set an animator bool that fires an event
         OnShotEvent?.Invoke(this, new OnShotEventArgs(projectileInfo));
     }
 
@@ -48,7 +50,7 @@ public class ActorEvents : MonoBehaviour
     {
         OnHealthChangedEvent?.Invoke(this, new OnHealthChangedEventArgs(amount, isHealing));
     }
-    
+
     public void OnArmorChanged()
     {
         OnArmorChangedEvent?.Invoke(this, new OnArmorChangedEventArgs());
@@ -58,7 +60,7 @@ public class ActorEvents : MonoBehaviour
     {
         OnAmmoChangedEvent?.Invoke(this, new OnAmmoChangedEventArgs(oldValue, newValue, type));
     }
-    
+
     public void OnWeaponsChanged(WeaponId oldValue, WeaponId newValue)
     {
         OnWeaponsChangedEvent?.Invoke(this, new OnWeaponsChangedEventArgs(oldValue, newValue));
@@ -174,4 +176,3 @@ public interface IDamageSource
 {
     float GetDamage(ActorHealth actorToDamage);
 }
-

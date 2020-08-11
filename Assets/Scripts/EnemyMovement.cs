@@ -13,8 +13,7 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private EnemyAggroHandler AggroHandler;
 
-    [SerializeField] private ActorEvents m_Events;
-    public ActorEvents Events => m_Events;
+    public IActorEvents Events { get; private set; }
 
 
     [SerializeField] private Transform Target;
@@ -37,6 +36,11 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         Agent = GetComponent<INavigationAgent>();
+        if (Events == null)
+        {
+            Events = GetComponentInChildren<IActorEvents>();
+        }
+
         Events.OnAggroEvent += OnEnemyAggro;
         Events.OnStepEvent += OnEnemyStepped;
         Events.OnAttackEvent += OnEnemyAttack;

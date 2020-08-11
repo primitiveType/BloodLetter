@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HealthText : MonoBehaviour
 {
-    [SerializeField]private ActorEvents Events;
+    [SerializeField]private IActorEvents Events;
     [SerializeField] private ActorHealth Health;
     [SerializeField] private Text Text;
 

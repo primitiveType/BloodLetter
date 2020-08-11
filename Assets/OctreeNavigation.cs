@@ -14,7 +14,7 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     [SerializeField] private Rigidbody rb;
     //[SerializeField] private Transform pathfindingAnchor;
     [SerializeField] private bool debug;
-    [SerializeField] private ActorEvents Events;
+    [SerializeField] private IActorEvents Events;
     [SerializeField] private float VelocityUpdateInterval = .2f;
 
     // Start is called before the first frame update
