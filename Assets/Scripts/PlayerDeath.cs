@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    [SerializeField] private IActorEvents Events;
+    [SerializeField] private PlayerEvents Events;
     [SerializeField] private MonoBehaviour ToDisable;
     // Start is called before the first frame update
     void Start()

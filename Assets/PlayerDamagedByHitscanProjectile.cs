@@ -8,22 +8,26 @@ public class PlayerDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscan
 {
     [SerializeField] private PlayerEvents Events;
 
-    public bool OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
+    public bool IsHit(Vector2 textureCoord)
     {
-        Events.OnShot(projectileInfo);
         return true;
     }
 
-    public bool OnShot(HitscanProjectileInfo projectileInfo)
+    public void OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
     {
         Events.OnShot(projectileInfo);
-        return true;
+    }
+
+    public void OnShot(HitscanProjectileInfo projectileInfo)
+    {
+        Events.OnShot(projectileInfo);
     }
 }
 
-public interface IDamagedByHitscanProjectile 
+public interface IDamagedByHitscanProjectile
 {
-    bool OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo);
-    bool OnShot(HitscanProjectileInfo projectileInfo);
+    bool IsHit(Vector2 textureCoord);
+    void OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo);
+    void OnShot(HitscanProjectileInfo projectileInfo);
     Transform transform { get; }
 }

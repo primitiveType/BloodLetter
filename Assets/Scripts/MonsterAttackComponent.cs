@@ -38,14 +38,12 @@ public class MonsterAttackComponent : MonoBehaviour
 
     private ProjectileInfoBase CurrentAttack { get; set; }
 
-    public IActorEvents Events
-    {
-        get => m_Events;
-        set => m_Events = value;
-    }
+    private ActorRoot ActorRoot { get; set; }
+    public IActorEvents Events => ActorRoot.ActorEvents;
 
     private void Start()
     {
+        ActorRoot = GetComponentInParent<ActorRoot>();
         Attacks = m_Attacks.OrderBy(a => a.Range).ToList();
         Events.OnAttackEvent += OnEnemyAttack;
         Target = Toolbox.Instance.PlayerHeadTransform;

@@ -16,20 +16,20 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
         ActorRoot = GetComponentInParent<ActorRoot>();
     }
 
-    public virtual bool OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
+    public bool IsHit(Vector2 textureCoord)
     {
-        if (!MaterialHelper.QueryAlpha(textureCoord))
-        {
-            return false;
-        }
-
-        Events.OnShot(projectileInfo);
-        return true;
+        return MaterialHelper.QueryAlpha(textureCoord);
     }
 
-    public bool OnShot(HitscanProjectileInfo projectileInfo)
+
+
+    public virtual void OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
     {
         Events.OnShot(projectileInfo);
-        return true;
+    }
+
+    public void OnShot(HitscanProjectileInfo projectileInfo)
+    {
+        Events.OnShot(projectileInfo);
     }
 }

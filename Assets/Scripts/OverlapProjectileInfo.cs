@@ -28,8 +28,9 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
             // Debug.Log($"hit {hit.textureCoord} ");
 
             IDamagedByHitscanProjectile damaged = hit.GetComponent<IDamagedByHitscanProjectile>();
-            if (damaged != null && damaged.OnShot( this))
+            if (damaged != null )
             {
+                damaged.OnShot(this);
                 isDone = true;
                 var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ArmorText : MonoBehaviour
 {
-    [SerializeField] private IActorEvents Events;
+    [SerializeField] private PlayerEvents Events;
 
   
     [SerializeField]

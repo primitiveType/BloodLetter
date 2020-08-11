@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class EnableGravityOnDeath : MonoBehaviour
 {
-    [SerializeField] private IActorEvents Events;
+    private IActorEvents Events => ActorRoot.ActorEvents;
 
+    private ActorRoot ActorRoot { get; set; }
     private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
+        ActorRoot = GetComponentInParent<ActorRoot>();
         rb = GetComponent<Rigidbody>();
         Events.OnDeathEvent += EventsOnOnDeathEvent;
     }

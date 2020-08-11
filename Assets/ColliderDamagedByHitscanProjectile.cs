@@ -4,15 +4,18 @@ public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitsc
 {
     [SerializeField] private IActorEvents Events;
 
-    public bool OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
+    public bool IsHit(Vector2 textureCoord)
     {
-        Events.OnShot(projectileInfo);
         return true;
     }
 
-    public bool OnShot(HitscanProjectileInfo projectileInfo)
+    public void OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
     {
         Events.OnShot(projectileInfo);
-        return true;
+    }
+
+    public void OnShot(HitscanProjectileInfo projectileInfo)
+    {
+        Events.OnShot(projectileInfo);
     }
 }

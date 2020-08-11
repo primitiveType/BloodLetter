@@ -14,12 +14,14 @@ public class OctreeNavigation : MonoBehaviour, INavigationAgent
     [SerializeField] private Rigidbody rb;
     //[SerializeField] private Transform pathfindingAnchor;
     [SerializeField] private bool debug;
-    [SerializeField] private IActorEvents Events;
+    private IActorEvents Events => ActorRoot.ActorEvents;
     [SerializeField] private float VelocityUpdateInterval = .2f;
 
+    private ActorRoot ActorRoot { get; set; }
     // Start is called before the first frame update
     void Start()
     {
+        ActorRoot = GetComponentInParent<ActorRoot>();
         PathfindingHandle = OctreeManager.Instance.StartPathfindingToPlayer(transform);
         PathfindingHandle.NeedsUpdate = false;
         PathfindingHandle.UpdatedEvent += PathfindingHandleOnUpdatedEvent;

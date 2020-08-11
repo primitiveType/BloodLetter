@@ -5,6 +5,7 @@ using System.Numerics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
 public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
@@ -17,72 +18,89 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     private static List<int> m_EnvironmentLayers;
 
     private static List<int> EnvironmentLayers =>
-        m_EnvironmentLayers != null ? m_EnvironmentLayers : m_EnvironmentLayers = new List<int>()
-    {
-        LayerMask.NameToLayer("Default"),
-        LayerMask.NameToLayer("Interactable")
-    };
-    
-    
+        m_EnvironmentLayers != null
+            ? m_EnvironmentLayers
+            : m_EnvironmentLayers = new List<int>()
+            {
+                LayerMask.NameToLayer("Default"),
+                LayerMask.NameToLayer("Interactable")
+            };
+
 
     public override void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, EntityType ownerType)
     {
-           Ray ray = new Ray(ownerPosition, ownerDirection * Range);
-            Debug.DrawRay(ownerPosition, ownerDirection * Range, Color.blue, 10);
-            var layerToCheckForDamage = GetLayerToCheckForDamage(ownerType);
+        var damaged = GetHitObject(ownerPosition, ownerDirection, ownerType, out RaycastHit hit);
+        if (damaged != null)
+        {
+            damaged.OnShot(hit.textureCoord, this);
+            var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
+            float adjustmentDistance = .1f;
+            hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+        }
+    }
 
-            var raycastMask = GetRaycastMask(ownerType);
 
-            bool isDone = false;
-            while (!isDone)
+    protected IDamagedByHitscanProjectile GetHitObject(Vector3 ownerPosition, Vector3 ownerDirection,
+        EntityType ownerType, out RaycastHit hit)
+    {
+        Ray ray = new Ray(ownerPosition, ownerDirection * Range);
+        Debug.DrawRay(ownerPosition, ownerDirection * Range, Color.blue, 10);
+        var layerToCheckForDamage = GetLayerToCheckForDamage(ownerType);
+
+        var raycastMask = GetRaycastMask(ownerType);
+
+        bool isDone = false;
+        hit = new RaycastHit();
+
+        while (!isDone)
+        {
+            if (Physics.Raycast(ray, out hit, Range, raycastMask))
             {
-                if (Physics.Raycast(ray, out RaycastHit hit, Range, raycastMask ))
+                int hitLayer = hit.collider.gameObject.layer;
+                if (((hitLayer & layerToCheckForDamage) == layerToCheckForDamage) || hit.transform == null)
                 {
-                    int hitLayer = hit.collider.gameObject.layer;
-                    if (((hitLayer & layerToCheckForDamage) == layerToCheckForDamage) || hit.transform == null)
-                    {
-                        isDone = true;
-                    }
+                    isDone = true;
+                }
 
-                    var hitCoord = hit.textureCoord;
-                    // Debug.Log($"hit {hit.textureCoord} ");
+                var hitCoord = hit.textureCoord;
+                // Debug.Log($"hit {hit.textureCoord} ");
 
-                    IDamagedByHitscanProjectile damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
-                    if (damaged != null && damaged.OnShot(hitCoord, this))
-                    {
-                        isDone = true;
-                        var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
+                IDamagedByHitscanProjectile damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
+                if (damaged != null && damaged.IsHit(hitCoord))
+                {
+                    return damaged;
+                }
+                else if (!EnvironmentLayers.Contains(hitLayer))
+                {
+                    ray.origin = hit.point + (hit.normal * -.01f);
+                }
+                else if (OnHitWallPrefab)
+                {
+                    var hitRotation = Quaternion.LookRotation(-hit.normal);
+                    var hitEffect = GameObject.Instantiate(OnHitWallPrefab, hit.collider.transform.position,
+                        hitRotation, hit.transform);
 
-                        float adjustmentDistance = .1f;
+                    float adjustmentDistance = .001f;
 
-                        hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
-                    }
-                    else if(!EnvironmentLayers.Contains(hitLayer))
-                    {
-                        ray.origin = hit.point + (hit.normal * -.01f);
-                    }
-                    else if(OnHitWallPrefab)
-                    {
-                        var hitRotation = Quaternion.LookRotation(-hit.normal);
-                        var hitEffect = GameObject.Instantiate(OnHitWallPrefab, hit.collider.transform.position, hitRotation, hit.transform );
+                    hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
 
-                        float adjustmentDistance = .001f;
-
-                        hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
-                        
-                        // hitEffect.transform.localRotation = hitRotation;
-                        isDone = true;
-                    }
+                    // hitEffect.transform.localRotation = hitRotation;
+                    isDone = true;
                 }
                 else
                 {
                     isDone = true;
                 }
             }
-        
+            else
+            {
+                isDone = true;
+            }
+        }
+
+        return null;
     }
-    
-    
+
 
     protected static int GetRaycastMask(EntityType ownerType)
     {

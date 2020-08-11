@@ -6,7 +6,7 @@ public class UnparentAndFollow : MonoBehaviour
 {
     [SerializeField]private Transform toFollow;
     private Transform myTransform;
-    void Awake()
+    void Start()
     {
         myTransform = transform;
         toFollow = myTransform.parent;

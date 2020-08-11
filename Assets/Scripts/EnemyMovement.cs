@@ -13,11 +13,12 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private EnemyAggroHandler AggroHandler;
 
-    public IActorEvents Events { get; private set; }
+    public IActorEvents Events => ActorRoot.ActorEvents;
 
 
     [SerializeField] private Transform Target;
     [SerializeField] private bool isFlying;
+    private ActorRoot ActorRoot { get; set; }
 
     private Animator Animator
     {
@@ -35,11 +36,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
+        ActorRoot = GetComponentInParent<ActorRoot>();
         Agent = GetComponent<INavigationAgent>();
-        if (Events == null)
-        {
-            Events = GetComponentInChildren<IActorEvents>();
-        }
 
         Events.OnAggroEvent += OnEnemyAggro;
         Events.OnStepEvent += OnEnemyStepped;

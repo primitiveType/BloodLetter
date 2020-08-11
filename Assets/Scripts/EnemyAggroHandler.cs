@@ -7,14 +7,10 @@ public class EnemyAggroHandler : MonoBehaviour
     [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
     private bool m_isAggro;
     private static readonly int Aggro = Animator.StringToHash("IsAggro");
-    public IActorEvents Events => m_Events;
+    public IActorEvents Events => ActorRoot.ActorEvents;
 
     private ActorRoot ActorRoot { get; set; }
-    private Animator Animator
-    {
-        get => m_animator;
-        set => m_animator = value;
-    }
+    private Animator Animator => ActorRoot.Animator;
 
     [SerializeField] private float AggroRange;
     [SerializeField] private float EarshotAggroRange = 20;
@@ -33,7 +29,7 @@ public class EnemyAggroHandler : MonoBehaviour
                 Events.OnAggro();
             }
 
-            PreAggro = value;//if un-aggro'd, reset this
+            PreAggro = value; //if un-aggro'd, reset this
         }
     }
 
@@ -62,6 +58,7 @@ public class EnemyAggroHandler : MonoBehaviour
     }
 
     private float AggroDelayVariance = 1f;
+
     private IEnumerator AggroAfterRandomDelay()
     {
         yield return new WaitForSeconds(Random.Range(0, AggroDelayVariance));
@@ -71,6 +68,7 @@ public class EnemyAggroHandler : MonoBehaviour
 
     private void Start()
     {
+        ActorRoot = GetComponentInParent<ActorRoot>();
         Toolbox.Instance.PlayerEvents.PlayerShootEvent += OnPlayerShoot;
         Events.OnShotEvent += OnEnemyShot;
         Events.OnDeathEvent += OnEnemyDeath;
