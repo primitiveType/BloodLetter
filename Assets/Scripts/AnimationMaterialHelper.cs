@@ -57,6 +57,7 @@ public class AnimationMaterialHelper : MonoBehaviour
             if (animator != null && animator.isInitialized)
             {
                 var modelName = animator.runtimeAnimatorController.name.Replace("_Animator_Controller", "");
+                modelName = modelName.Replace("_variant", "");
                 modelName = modelName.Replace("_Animator", "");
                 var animationName = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
                 AnimationStarted($"{modelName}_{animationName}");

@@ -1,0 +1,330 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: OAK_TREE_ENT_LEGACY_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: OAK_TREE_ENT_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 94cffcc0be581794fa6c4da147f3fdea, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 44cdd4f3fb1ac9248b6b2a73190895fa, type: 2}
+    alphaMap: {fileID: 18700000, guid: 21e494729e18af54b9a57d19fd578cf3, type: 2}
+  - rows: 4
+    columns: 5
+    animationName: OAK_TREE_ENT_LEGACY_attack3HitCombo
+    numFrames: 17
+    normalMap: {fileID: 18700000, guid: 96490ae81ac345046918924acacca4b4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 24d136c20248d644081bb10dfbaef877, type: 2}
+    alphaMap: {fileID: 18700000, guid: d0f24d5b83b855e43a18835231c94f97, type: 2}
+  - rows: 4
+    columns: 5
+    animationName: OAK_TREE_ENT_LEGACY_attack3HitComboForward
+    numFrames: 17
+    normalMap: {fileID: 18700000, guid: 5cced944cc5c4b04494f1d84a2e91555, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0ebeb31a4a707da46993d44fbd6d1b56, type: 2}
+    alphaMap: {fileID: 18700000, guid: 63528d780fe9b944c99c80cfec520842, type: 2}
+  - rows: 4
+    columns: 5
+    animationName: OAK_TREE_ENT_LEGACY_attack3HitComboForward_RM
+    numFrames: 17
+    normalMap: {fileID: 18700000, guid: 9261a8af6dc53e640a4bc37a2dc81f60, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a2653272f4cbc8f44be22856d7e29552, type: 2}
+    alphaMap: {fileID: 18700000, guid: d188fe55d888e344c9c28836072617b8, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttack2HitCombo
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: d3f22ac1564921d4c815df7c21829161, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 592d4efa46bfe344e95bbc942009fd90, type: 2}
+    alphaMap: {fileID: 18700000, guid: 727c4087168083047b2b628442883d7b, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttack2HitComboForward
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: f488d2bf3dd9c00459a7694d9e4c10e3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d5de7775efde51b499f2c063ced2137e, type: 2}
+    alphaMap: {fileID: 18700000, guid: e680b4271b606d0469e61cf32ef6eb09, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttack2HitComboForward_RM
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: c46e2c018ed0ab04086e7695bd1e069b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: edb337e9237d57b4293091c7d00b05a9, type: 2}
+    alphaMap: {fileID: 18700000, guid: bf969a4ecfc815e4aa4a45372b1c54d7, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttackL
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: f3f05ac542606544f9450bc3bb0b8272, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 03d9f37de93fd6442a79a99d4a21aeef, type: 2}
+    alphaMap: {fileID: 18700000, guid: 43c2fd3eb430cdc4994f476a0ded4942, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttackLForward
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 9c251a9e85e665a4989b01d0cb479e61, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ae8bb763f971a244a8db3a5078192c2c, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2bbd4854fc1c7474b97499146a7eefe5, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttackLForward_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: b9dc1a7d9b142ed4eaf3130bc8313480, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9bf168f3fef547549971d216c4c9a100, type: 2}
+    alphaMap: {fileID: 18700000, guid: f41db43d51e033143aab9fb1defaefbe, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttackR
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 16f3b5a9a742ba341a278af144435e9a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 580dd79edfc00cd468b4a844fa26dcd9, type: 2}
+    alphaMap: {fileID: 18700000, guid: f7df58f5da1ab334fa5144525f881129, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttackRForward
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: a0dbaaab4dd48e14ea7fb0132255f541, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 67c1a22ff8b25f84a8dfce1d1c3e2d5d, type: 2}
+    alphaMap: {fileID: 18700000, guid: e4dbfd29a653da74c9620979ebd59b23, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_clawsAttackRForward_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: f428592c3f373a740b9d5b4c49196e2e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b1fe22298d1fecd4884784e19ac38755, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8ba1726f987875247aabaa04142a3376, type: 2}
+  - rows: 4
+    columns: 5
+    animationName: OAK_TREE_ENT_LEGACY_death
+    numFrames: 18
+    normalMap: {fileID: 18700000, guid: 4504057614872834dbdda08d79b92751, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9be9be92b8a019c4e820b8c7b530384d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6fb9eb0c372f38b49a25a383d2cfa16d, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_getHit1
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 753bd4ebefb8c354fb70273e5b8a208d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1be1bf481985c7543a78c5a6c6cb413a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 073f9341695a38d40a0b13fdb9edc2ff, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_getHit2
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 81936cd3317345745a36956435da32aa, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1972cbf35f029c247ac102e41c7c1eb6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 934bd74e5630910439c03824ca05310b, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_getHitHoldRock1
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 3cfe87463facb4345a50a25daf41693d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 70ae8a2511fe11349a27335f6e844986, type: 2}
+    alphaMap: {fileID: 18700000, guid: e8de0ae670acf7e488caf46970d244a8, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_getHitHoldRock2
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 6b5e643ae2c06cb4fafa6763e49deb25, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8917fd70778e4d645b26979ce10084b5, type: 2}
+    alphaMap: {fileID: 18700000, guid: e328c67ce1ee2334e866afd7cc44c442, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: OAK_TREE_ENT_LEGACY_hide1
+    numFrames: 2
+    normalMap: {fileID: 18700000, guid: dece78b990f988445a31a1b3ed6413e0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ee4b79b4f12e2224ea8f54fd41643531, type: 2}
+    alphaMap: {fileID: 18700000, guid: fc031d2e50c51e04c979527cf8232337, type: 2}
+  - rows: 1
+    columns: 2
+    animationName: OAK_TREE_ENT_LEGACY_hide2
+    numFrames: 2
+    normalMap: {fileID: 18700000, guid: 3646328cbbadbed4f90f79d94c71e3b9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 31600ff222bb37a419b4760c7e6cc1a9, type: 2}
+    alphaMap: {fileID: 18700000, guid: da6e5cf0a783e0f44b8918ca7c4c8c1b, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_idleBreathe
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: eb9ae9514d0ef764e8eed4b43e11aaca, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 537477f8e95d2094ab0c14f6c8d43bae, type: 2}
+    alphaMap: {fileID: 18700000, guid: 19692b8594b1cf043ba4f5d46e16fa7d, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_idleBreatheHoldRock
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: a208b57a40caff046b2a5b06c7074015, type: 2}
+    diffuseMap: {fileID: 18700000, guid: cf56e8ac50561524b9b8292dad93227a, type: 2}
+    alphaMap: {fileID: 18700000, guid: ce46d481dcfa0b045bc9806f4ff476ae, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_pickUpRock
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 2af0af6d7a58d3c44a2b205e2d001a1b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7a58e98fa8729ac44bcf68ae44b9cc21, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6ba7c46033ec8d1438735b08865004d1, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_stompAttack
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 7ba9edded7e2a0f44becc5bcaf475953, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e1717bd20e83c7d458e60b4eaa2f7912, type: 2}
+    alphaMap: {fileID: 18700000, guid: 07c1e8aa8b348ab4e8cce9c0bba325a9, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_throwRock
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 862b3e39764bfbd4b91d1b6f09b0ee5d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 74a1f2a6fea10694b8a7269b117f65a6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 202ac8196cf958f499b57a8efe5569d2, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnLeft90
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 5743597aa93b1284299f1000b8cffdf7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: acf0753f9098dea41b13f3c70b91469d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 460f83dd7ed9f284298602f5f8b12446, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnLeft90_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 6162d07ca30950a42bace9e93b9bd03b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 917278529a8726b4fb12116c4fdc6318, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1605249590da3b543b627a33a4b0b273, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnLeft90ClawsAttack
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 5bb7bb15bb986004aaf6d731020c8c3a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: cda52037acfa58d4ab604299d9b94922, type: 2}
+    alphaMap: {fileID: 18700000, guid: 359f4fa9e0d939548bfe2e700db8cba9, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnLeft90ClawsAttack_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 394fa5ec69743464aa66f0e7c983a638, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 06cf5fd66745d174382cc96bf0e05a60, type: 2}
+    alphaMap: {fileID: 18700000, guid: 54bfc72e686fe2d44af6b1044059fae4, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnLeft90HoldRock
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: c42077b949476cf4db391bce63c6c6cf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a9febf85d4a0bc5498e50c386c884605, type: 2}
+    alphaMap: {fileID: 18700000, guid: 93099461c724c3d47ab08c9cfbcdbc23, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnLeft90HoldRock_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: dcb02eb797628a440b4b752c35e1ee70, type: 2}
+    diffuseMap: {fileID: 18700000, guid: fde15a5d4c19af944bb69d886a13dfc7, type: 2}
+    alphaMap: {fileID: 18700000, guid: ba1c0c72f9dd3394497d69d52c1c2b01, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_turnLeft90StompAttack
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 4d3fb01fe931f7a4095e4d811acb79b9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2778fc870b18ae44283ceb048c9b7f53, type: 2}
+    alphaMap: {fileID: 18700000, guid: 368df703a30557544af308211be8c245, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_turnLeft90StompAttack_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 0918e7c190e55c54c984618f7f2a7840, type: 2}
+    diffuseMap: {fileID: 18700000, guid: dc6f4d00d793958479b08dce5927eb03, type: 2}
+    alphaMap: {fileID: 18700000, guid: 58bcf14eac253e146b133162fe446c11, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnRight90
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 5465e24644251574eabe391c9bbdff70, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 886f26f6d44840748a3d504613b4485a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 04e0d8655801db643addc21c8903aa87, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnRight90_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 77da5af1dde37674fb0c6af53ce92df1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e986a4d818552c447a8a54f9168e9fb4, type: 2}
+    alphaMap: {fileID: 18700000, guid: 76e0c2a4b4187cf46b63a03bf119e7a9, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnRight90ClawsAttack
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: ea044dfe89f32b24cb201dc8b40deff5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9c5c067f291f4874cadc3093edccc38d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8cad98a83b34bb344913e1f8780649c6, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnRight90ClawsAttack_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 99255ba5c271c6b439f0e5f7b6576fb5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f72d0c022381d224bb1d7a651c60c46c, type: 2}
+    alphaMap: {fileID: 18700000, guid: 24b307291e9ddde489ed80b0383be0e3, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnRight90HoldRock
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 15538611326053a4ea3d98aea2e289f6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 71825c7245118d044bf9d19281f78167, type: 2}
+    alphaMap: {fileID: 18700000, guid: b78e2394ab881dc4cbee86a98186cf0b, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_turnRight90HoldRock_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 5706df0d4ca865c4da31c27d1b9fadb7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 94f7359658d04524ba80c02745a540b2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 602c50e96d3318b4ca1df032a23d69f1, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_turnRight90StompAttack
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: ccb70aec26d28c64fb6b9b1e7a3dcf37, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a1535d588006ecc4387f35444e28f6a0, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9b9be107d5448114aa6575fa3effc9a1, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: OAK_TREE_ENT_LEGACY_turnRight90StompAttack_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: a7015998d57f86b48bbbee483eb3704e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: cbf53de85a4f2ae4e82bd4ce535f1836, type: 2}
+    alphaMap: {fileID: 18700000, guid: 48174113f9653fc4c90fb9a71de4a5f2, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_walk
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: c647f6120093b90499f9695561cffe2d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 613a65a48b944a14db8d5683f3f8c165, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4313519728efdad40bdd9d14854e6942, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_walk_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 6ba10f8e21602e5428fe681b1ebad5fc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 50fc5e27ec3ff194991cecd83ee9e415, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0a06da069cc165a479b6b902ef2c604f, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_walkHoldRock
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: e0e38e252c58e064882813733ff5f4f4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: da9767aad7963b249ae61a9b8a9c476e, type: 2}
+    alphaMap: {fileID: 18700000, guid: de86a27efef75b341be46df2321cd846, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: OAK_TREE_ENT_LEGACY_walkHoldRock_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: aacb843a538ed2649b5a774cdacceaf5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: aeedd930cb11628449fd1dcbeb4832a6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4fb4021eb786160408d64f4249c2fec0, type: 2}
