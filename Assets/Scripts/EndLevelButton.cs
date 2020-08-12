@@ -1,8 +1,6 @@
-﻿using UnityEngine;
-
-public class EndLevelButton : MonoBehaviour, IInteractable
+﻿public class EndLevelButton : BaseInteractable, IInteractable
 {
-    public void Interact()
+    protected override void DoInteraction()
     {
         LevelManager.Instance.EndLevel();
     }

@@ -2,20 +2,14 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ThreeStageElevatorButton : MonoBehaviour, IInteractable
+public class ThreeStageElevatorButton : BaseInteractable, IInteractable
 {
     [SerializeField] private List<ThreeStageElevator> Elevators;
 
     [SerializeField] private ElevatorState state;
-    [SerializeField] private KeyType RequiredKeys;
 
-    public void Interact()
+    protected override void DoInteraction()
     {
-        if (!Toolbox.Instance.PlayerInventory.HasKey(RequiredKeys))
-        {
-            ToastHandler.Instance.PopToast($"{RequiredKeys} Key Required!");
-            return;
-        }
         foreach (var elevator in Elevators)
         {
             elevator.MoveTo(state);
