@@ -53,8 +53,8 @@ public class MonsterAttackComponent : MonoBehaviour
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
         Vector3 position = MonsterTransform.position;
-        CurrentAttack.TriggerShoot(position, Target.position - position,
-            EntityType.Enemy);
+        CurrentAttack.TriggerShoot(MonsterTransform, Target.position - position,
+            EntityType.Enemy, ActorRoot);
     }
 
 

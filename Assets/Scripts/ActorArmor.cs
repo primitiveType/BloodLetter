@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ActorArmor : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class ActorArmor : MonoBehaviour
     public float MaxArmor => 100;
 
     public float CurrentArmor => m_RemainingArmor;
+
+    private void Start()
+    {
+        Events = GetComponent<IActorEvents>();
+    }
 
     public float TakeDamage(float baseDamage)
     {

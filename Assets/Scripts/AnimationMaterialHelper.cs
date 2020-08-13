@@ -120,7 +120,7 @@ public class AnimationMaterialHelper : MonoBehaviour
     public bool QueryAlpha(Vector2 textureCoord)
     {
         int perspective;
-        // if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
+         if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
         {
             cachedPropertyBlock = new MaterialPropertyBlock();
             MyRenderer.GetPropertyBlock(cachedPropertyBlock);
@@ -133,13 +133,13 @@ public class AnimationMaterialHelper : MonoBehaviour
                     7); //it's actually possible to get back 8 from this which is invalid.
             cachedAlphaPixels = cachedAlpha.GetPixels(perspective);
         }
-        // else
-        // {
-        //     Debug.Log("Reusing texture array");
-        //     perspective =
-        //         Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
-        //             7); //it's actually possible to get back 8 from this which is invalid.
-        // }
+        else
+        {
+            Debug.Log("Reusing texture array");
+            perspective =
+                Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
+                    7); //it's actually possible to get back 8 from this which is invalid.
+        }
 
 
         int totalWidth = cachedAlpha.width;

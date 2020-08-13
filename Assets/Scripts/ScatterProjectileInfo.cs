@@ -20,4 +20,9 @@ public class ScatterProjectileInfo : ProjectileInfoBase
         }
     }
 
+    public override void TriggerShoot(Transform owner, Vector3 direction, EntityType ownerType, ActorRoot actorRoot)
+    {
+        TriggerShoot(owner.position, direction, ownerType);
+    }
+
 }

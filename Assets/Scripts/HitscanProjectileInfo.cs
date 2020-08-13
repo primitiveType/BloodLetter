@@ -39,6 +39,19 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         }
     }
 
+    public override void TriggerShoot(Transform owner, Vector3 direction, EntityType ownerType, ActorRoot actorRoot)
+    {
+        var damaged = GetHitObject(ownerPosition, ownerDirection, ownerType, out RaycastHit hit);
+        
+        if (damaged != null)
+        {
+            damaged.OnShot(hit.textureCoord, this);
+            var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
+            float adjustmentDistance = .1f;
+            hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+        }
+    }
+
 
     protected IDamagedByHitscanProjectile GetHitObject(Vector3 ownerPosition, Vector3 ownerDirection,
         EntityType ownerType, out RaycastHit hit)
@@ -52,10 +65,13 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         bool isDone = false;
         hit = new RaycastHit();
 
+        int maxChecks = 10;
+        int checks = 0;
         while (!isDone)
         {
             if (Physics.Raycast(ray, out hit, Range, raycastMask))
             {
+                checks++;
                 int hitLayer = hit.collider.gameObject.layer;
                 if (((hitLayer & layerToCheckForDamage) == layerToCheckForDamage) || hit.transform == null)
                 {
@@ -88,6 +104,11 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     isDone = true;
                 }
                 else
+                {
+                    isDone = true;
+                }
+
+                if (checks > maxChecks)//HACK
                 {
                     isDone = true;
                 }

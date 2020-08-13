@@ -8,6 +8,13 @@ public class UnparentAndFollow : MonoBehaviour
     private Transform myTransform;
     void Start()
     {
+        StartCoroutine(ReparentCR());
+    }
+
+    private IEnumerator ReparentCR()
+    {
+        yield return null;
+        
         myTransform = transform;
         toFollow = myTransform.parent;
         myTransform.parent = null;

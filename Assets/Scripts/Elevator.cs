@@ -30,6 +30,7 @@ public class Elevator : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.DrawWireSphere(elevator.position, .5f);
         Gizmos.DrawLine(StartTarget.transform.position, EndTarget.transform.position);
     }
 
