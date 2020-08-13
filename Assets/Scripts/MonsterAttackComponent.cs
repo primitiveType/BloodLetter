@@ -53,20 +53,21 @@ public class MonsterAttackComponent : MonoBehaviour
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
         Vector3 position = MonsterTransform.position;
-        CurrentAttack.TriggerShoot(MonsterTransform, Target.position - position,
-            EntityType.Enemy, ActorRoot);
+        CurrentAttack.TriggerShoot(MonsterTransform, Target.position - position, ActorRoot);
     }
 
 
     public void Update()
     {
-        if (!(Time.time - LastAttackTimeStamp > AttackCooldown) || !VisibilityHandler.CanSeePlayer() || !AggroHandler.IsAggro)
+        if (!(Time.time - LastAttackTimeStamp > AttackCooldown) || !VisibilityHandler.CanSeePlayer() ||
+            !AggroHandler.IsAggro)
         {
             Animator.SetBool(Attacking, false);
             if (!AggroHandler.IsAggro)
             {
-                ResetAttackTimeStamp();//hack to add delay when aggro'd
+                ResetAttackTimeStamp(); //hack to add delay when aggro'd
             }
+
             return;
         }
 
@@ -91,7 +92,6 @@ public class MonsterAttackComponent : MonoBehaviour
     private void ResetAttackTimeStamp()
     {
         LastAttackTimeStamp = Time.time + UnityEngine.Random.Range(0, m_AttackCooldownVariance);
-
     }
 
 

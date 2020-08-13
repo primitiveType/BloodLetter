@@ -27,10 +27,10 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
             };
 
 
-    public override void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, EntityType ownerType)
+    public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot)
     {
-        var damaged = GetHitObject(ownerPosition, ownerDirection, ownerType, out RaycastHit hit);
-        if (damaged != null)
+        var damaged = GetHitObject(ownerPosition, ownerDirection, actorRoot, out RaycastHit hit);
+        if (damaged != null && damaged != ownerRoot.HitscanCollider)
         {
             damaged.OnShot(hit.textureCoord, this);
             var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
@@ -39,28 +39,22 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         }
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, EntityType ownerType, ActorRoot actorRoot)
+    private ActorRoot ownerRoot;
+    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
     {
-        var damaged = GetHitObject(ownerPosition, ownerDirection, ownerType, out RaycastHit hit);
-        
-        if (damaged != null)
-        {
-            damaged.OnShot(hit.textureCoord, this);
-            var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
-            float adjustmentDistance = .1f;
-            hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
-        }
+        ownerRoot = actorRoot;
+        TriggerShoot(owner.position, direction, actorRoot);
     }
 
 
     protected IDamagedByHitscanProjectile GetHitObject(Vector3 ownerPosition, Vector3 ownerDirection,
-        EntityType ownerType, out RaycastHit hit)
+        ActorRoot actorRoot, out RaycastHit hit)
     {
         Ray ray = new Ray(ownerPosition, ownerDirection * Range);
         Debug.DrawRay(ownerPosition, ownerDirection * Range, Color.blue, 10);
-        var layerToCheckForDamage = GetLayerToCheckForDamage(ownerType);
+        var layerToCheckForDamage = GetLayerToCheckForDamage(actorRoot.EntityType);
 
-        var raycastMask = GetRaycastMask(ownerType);
+        var raycastMask = GetRaycastMask(actorRoot.EntityType);
 
         bool isDone = false;
         hit = new RaycastHit();
@@ -71,26 +65,31 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         {
             if (Physics.Raycast(ray, out hit, Range, raycastMask))
             {
+                bool potentialHit = false;
                 checks++;
                 int hitLayer = hit.collider.gameObject.layer;
-                if (((hitLayer & layerToCheckForDamage) == layerToCheckForDamage) || hit.transform == null)
+                if ((hitLayer | layerToCheckForDamage) == layerToCheckForDamage)
                 {
-                    isDone = true;
+                    potentialHit = true;
                 }
 
-                var hitCoord = hit.textureCoord;
-                // Debug.Log($"hit {hit.textureCoord} ");
-
-                IDamagedByHitscanProjectile damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
-                if (damaged != null && damaged.IsHit(hitCoord))
+                if (potentialHit)//we hit something that can be damaged, but could be self
                 {
-                    return damaged;
+                    var hitCoord = hit.textureCoord;
+                    IDamagedByHitscanProjectile damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
+                    if (damaged != null && damaged != actorRoot.HitscanCollider && damaged.IsHit(hitCoord))
+                    {
+                        return damaged;
+                    }
                 }
-                else if (!EnvironmentLayers.Contains(hitLayer))
+                
+                //if we got here, the raycast was not considered a hit on something that can be damaged.
+                
+                if (!EnvironmentLayers.Contains(hitLayer))//we didn't hit the environment, so keep moving forward
                 {
                     ray.origin = hit.point + (hit.normal * -.01f);
                 }
-                else if (OnHitWallPrefab)
+                else if (OnHitWallPrefab)//we did hit the environment, spawn a hit visual and quit.
                 {
                     var hitRotation = Quaternion.LookRotation(-hit.normal);
                     var hitEffect = GameObject.Instantiate(OnHitWallPrefab, hit.collider.transform.position,
@@ -103,7 +102,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     // hitEffect.transform.localRotation = hitRotation;
                     isDone = true;
                 }
-                else
+                else//not sure this ever happens?
                 {
                     isDone = true;
                 }
@@ -113,7 +112,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     isDone = true;
                 }
             }
-            else
+            else//we hit nothing. stop raycasting.
             {
                 isDone = true;
             }

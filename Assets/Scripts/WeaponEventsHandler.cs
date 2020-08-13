@@ -6,14 +6,10 @@ public class WeaponEventsHandler : MonoBehaviour
     [SerializeField] public ProjectileInfoBase ProjectileInfo;
     [SerializeField] private Transform BarrelTransform;
     public WeaponSoundInfo SoundInfo;
-
-    private void Update()
-    {
-    }
-
+    
     public void Shoot()
     {
-        ProjectileInfo.TriggerShoot(BarrelTransform, BarrelTransform.forward, EntityType.Player);
+        ProjectileInfo.TriggerShoot(BarrelTransform, BarrelTransform.forward, Toolbox.Instance.PlayerRoot);
         SoundInfo.OnShoot();
         Toolbox.Instance.PlayerEvents.PlayerShoot();
     }

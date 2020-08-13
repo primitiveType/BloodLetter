@@ -15,6 +15,8 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
 
     private EquipStatus CurrentEquip; //will have to make changes if you can later equip multiple things
     private static Toolbox s_instance;
+    
+    public PlayerRoot PlayerRoot { get; private set; }
 
     private void Awake()
     {
@@ -128,5 +130,10 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     private void Update()
     {
         Time.timeScale = TimeIsStopped() ? 0f : 1f;
+    }
+
+    public void SetPlayerRoot(PlayerRoot playerRoot)
+    {
+        PlayerRoot = playerRoot;
     }
 }

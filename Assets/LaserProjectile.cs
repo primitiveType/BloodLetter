@@ -9,10 +9,9 @@ public class LaserProjectile : HitscanProjectileInfo
     
     [SerializeField] private float duration;
 
-    public override void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, EntityType ownerType)
+    public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, EntityType ownerType)
     {
         
-        OwnerType = ownerType;
         var magnitude = .25f;//adjust to change how much it sweeps
 
         var slope = new Vector3(Random.Range(0, magnitude), Random.Range(0, magnitude ), Random.Range(0, magnitude));
@@ -24,14 +23,15 @@ public class LaserProjectile : HitscanProjectileInfo
         RaycastAndStuff();
     }
 
+    private ActorRoot ActorRoot { get; set; }
     private void Start()
     {
         transform.localPosition = Vector3.zero;
+        ActorRoot = GetComponentInParent<ActorRoot>();
         
         TriggerShoot(transform.position, transform.forward, EntityType.Enemy);
     }
 
-    public EntityType OwnerType { get; set; } = EntityType.Enemy;
     private Vector3 TargetDirectionMod { get; set; }
     private Vector3 SweepStart { get; set; }
     private Vector3 SweepEnd { get; set; }
@@ -67,7 +67,7 @@ public class LaserProjectile : HitscanProjectileInfo
         var position = transform.position;
         var direction = TargetDirectionMod;
         Debug.DrawLine(position, position + direction);
-        var damaged = GetHitObject(position, direction, OwnerType, out RaycastHit hit);
+        var damaged = GetHitObject(position, direction, ActorRoot , out RaycastHit hit);
         if (damaged != null)
         {
             damaged.OnShot(hit.textureCoord, this);

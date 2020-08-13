@@ -6,7 +6,7 @@ public class ScatterProjectileInfo : ProjectileInfoBase
     [SerializeField] private float degreesScatter;
     [SerializeField] private int numProjectiles;
 
-    public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
+    public void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, ActorRoot actorRoot)
     {
         //assume up vector is y axis
         for (int i = 0; i < numProjectiles; i++)
@@ -16,13 +16,13 @@ public class ScatterProjectileInfo : ProjectileInfoBase
             var z = Random.Range(-degreesScatter, degreesScatter);
             var position = playerDirection +
                            new Vector3(x, y, z);
-            projectileInfo.TriggerShoot(playerPosition, position, ownerType);
+            projectileInfo.TriggerShoot(playerPosition, position, actorRoot);
         }
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, EntityType ownerType, ActorRoot actorRoot)
+    public override void TriggerShoot(Transform owner, Vector3 direction,  ActorRoot actorRoot)
     {
-        TriggerShoot(owner.position, direction, ownerType);
+        TriggerShoot(owner.position, direction, actorRoot);
     }
 
 }

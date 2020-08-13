@@ -3,13 +3,14 @@
 public class OverlapProjectileInfo : HitscanProjectileInfo
 {
     private Collider[] hits = new Collider[4];
-    public override void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, EntityType ownerType)
+    public override void TriggerShoot(Transform owner, Vector3 direction,  ActorRoot actorRoot)
     {
-        Debug.DrawLine(ownerPosition, ownerDirection);
-        var layerToCheckForDamage = GetLayerToCheckForDamage(ownerType);
+        var ownerPosition = owner.position;
+        Debug.DrawLine(ownerPosition, direction);
+        var layerToCheckForDamage = GetLayerToCheckForDamage(actorRoot.EntityType);
 
-        var raycastMask = GetRaycastMask(ownerType);
-        var size = Physics.OverlapSphereNonAlloc(ownerPosition+ownerDirection, 1, hits, raycastMask);
+        var raycastMask = GetRaycastMask(actorRoot.EntityType);
+        var size = Physics.OverlapSphereNonAlloc(ownerPosition+direction, 1, hits, raycastMask);
         bool isDone = false;
         for (int i = 0; i < size; i++)
         {
@@ -36,17 +37,17 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
 
                 float adjustmentDistance = .1f;
 
-                hitEffect.transform.position = hit.ClosestPoint(ownerPosition) + (ownerDirection * adjustmentDistance);
+                hitEffect.transform.position = hit.ClosestPoint(ownerPosition) + (direction * adjustmentDistance);
             }
             else if(OnHitWallPrefab)
             {
-                var hitRotation = Quaternion.LookRotation(-ownerDirection);
+                var hitRotation = Quaternion.LookRotation(-direction);
                 var transform1 = hit.transform;
                 var hitEffect = GameObject.Instantiate(OnHitWallPrefab, transform1.position, hitRotation, transform1 );
 
                 float adjustmentDistance = .001f;
 
-                hitEffect.transform.position = hit.ClosestPoint(ownerPosition) + (ownerDirection * adjustmentDistance);
+                hitEffect.transform.position = hit.ClosestPoint(ownerPosition) + (direction * adjustmentDistance);
                 
             }
         }

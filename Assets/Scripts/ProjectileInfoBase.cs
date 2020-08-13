@@ -7,6 +7,6 @@ public abstract class ProjectileInfoBase : MonoBehaviour
 
     public float MinRange => m_MinRange;
     public float Range => m_Range;
-    public abstract void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType);
-    public abstract void TriggerShoot(Transform owner, Vector3 direction, EntityType ownerType, ActorRoot actorRoot);
+    //public abstract void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType);
+    public abstract void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot);
 }

@@ -4,11 +4,6 @@ public class ProjectileInfo : ProjectileInfoBase
 {
     public GameObject ProjectilePrefab;
 
-    public override void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
-    {
-        CreateProjectile(playerPosition, playerDirection, ownerType);
-    }
-
     private GameObject CreateProjectile(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
     {
         var projectile = GameObject.Instantiate(ProjectilePrefab);
@@ -20,9 +15,9 @@ public class ProjectileInfo : ProjectileInfoBase
         return projectile;
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, EntityType ownerType, ActorRoot actorRoot)
+    public override void TriggerShoot(Transform owner, Vector3 direction,  ActorRoot actorRoot)
     {
-        var proj = CreateProjectile(owner.position, direction, ownerType);
+        var proj = CreateProjectile(owner.position, direction, actorRoot.EntityType);
         proj.transform.SetParent(owner);
     }
 }
