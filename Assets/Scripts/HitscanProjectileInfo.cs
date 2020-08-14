@@ -15,18 +15,10 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     public GameObject OnHitWallPrefab;
     [SerializeField] private float m_Damage;
     public float Damage => m_Damage;
-    private static List<int> m_EnvironmentLayers;
 
-    private static List<int> EnvironmentLayers =>
-        m_EnvironmentLayers != null
-            ? m_EnvironmentLayers
-            : m_EnvironmentLayers = new List<int>()
-            {
-                LayerMask.NameToLayer("Default"),
-                LayerMask.NameToLayer("Interactable")
-            };
-
-
+    protected static LayerMask EnvironmentLayers =>
+        LayerMask.GetMask("Default", "Interactable");
+        
     public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot)
     {
         var damaged = GetHitObject(ownerPosition, ownerDirection, actorRoot, out RaycastHit hit);
@@ -40,6 +32,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     }
 
     private ActorRoot ownerRoot;
+
     public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
     {
         ownerRoot = actorRoot;
@@ -68,12 +61,12 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 bool potentialHit = false;
                 checks++;
                 int hitLayer = hit.collider.gameObject.layer;
-                if ((hitLayer | layerToCheckForDamage) == layerToCheckForDamage)
+                if ((1 << hitLayer & layerToCheckForDamage) != 0)
                 {
                     potentialHit = true;
                 }
 
-                if (potentialHit)//we hit something that can be damaged, but could be self
+                if (potentialHit) //we hit something that can be damaged, but could be self
                 {
                     var hitCoord = hit.textureCoord;
                     IDamagedByHitscanProjectile damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
@@ -82,14 +75,14 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                         return damaged;
                     }
                 }
-                
+
                 //if we got here, the raycast was not considered a hit on something that can be damaged.
-                
-                if (!EnvironmentLayers.Contains(hitLayer))//we didn't hit the environment, so keep moving forward
+
+                if ((1 << hitLayer & EnvironmentLayers) == 0) //we didn't hit the environment, so keep moving forward
                 {
                     ray.origin = hit.point + (hit.normal * -.01f);
                 }
-                else if (OnHitWallPrefab)//we did hit the environment, spawn a hit visual and quit.
+                else if (OnHitWallPrefab) //we did hit the environment, spawn a hit visual and quit.
                 {
                     var hitRotation = Quaternion.LookRotation(-hit.normal);
                     var hitEffect = GameObject.Instantiate(OnHitWallPrefab, hit.collider.transform.position,
@@ -102,17 +95,17 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     // hitEffect.transform.localRotation = hitRotation;
                     isDone = true;
                 }
-                else//not sure this ever happens?
+                else //not sure this ever happens?
                 {
                     isDone = true;
                 }
 
-                if (checks > maxChecks)//HACK
+                if (checks > maxChecks) //HACK
                 {
                     isDone = true;
                 }
             }
-            else//we hit nothing. stop raycasting.
+            else //we hit nothing. stop raycasting.
             {
                 isDone = true;
             }
@@ -136,15 +129,13 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         return raycastMask;
     }
 
-    protected static int GetLayerToCheckForDamage(EntityType ownerType)
+    protected static LayerMask GetLayerToCheckForDamage(EntityType ownerType)
     {
-        int layerToCheckForDamage = ownerType == EntityType.Player
-            ? LayerMask.NameToLayer("EnemyRaycast")
-            : LayerMask.NameToLayer("Player");
+        string actorLayer = ownerType == EntityType.Player
+            ? "EnemyRaycast"
+            : "Player";
 
-
-        layerToCheckForDamage |= LayerMask.NameToLayer($"Destructible");
-        return layerToCheckForDamage;
+        return LayerMask.GetMask("Destructible", actorLayer);
     }
 
     public float GetDamage(ActorHealth hitActor)
