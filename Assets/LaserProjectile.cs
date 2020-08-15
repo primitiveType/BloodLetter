@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using C5;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,29 +11,71 @@ public class LaserProjectile : HitscanProjectileInfo
     [SerializeField] private AudioSource HitAudio;
 
     [SerializeField] private float duration;
+    [SerializeField] private float sweepMagnitude;
+    [SerializeField] private bool updateTargetContinous;
+    [SerializeField] private Transform ForwardTransform;
+
+    private bool Active { get; set; }
+
+    private void SetActive(bool active)
+    {
+        Active = active;
+        m_Line.enabled = Active;
+        if (!Active)
+        {
+            HitPoint.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            HitAudio.enabled = false;
+        }
+    }
 
     public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, EntityType ownerType)
     {
-        var magnitude = .25f; //adjust to change how much it sweeps
+        t = 0;
 
-        var slope = new Vector3(Random.Range(0, magnitude), Random.Range(0, magnitude), Random.Range(0, magnitude));
-        var point = ownerDirection;
+        UpdateAim();
+        RaycastAndStuff();
+        SetActive(true);
+    }
+
+    private void UpdateAim()
+    {
+        var slope = new Vector3(Random.Range(0, sweepMagnitude), Random.Range(0, sweepMagnitude),
+            Random.Range(0, sweepMagnitude));
+        var point = Owner.forward;
         var start = (point - slope).normalized;
         var end = (point + (slope / 2f)).normalized;
         SweepStart = start;
         SweepEnd = end;
-        RaycastAndStuff();
+    }
+
+    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
+    {
+        ActorRoot = actorRoot;
+        Owner = owner;
+        TriggerShoot();
+    }
+
+    private void TriggerShoot()
+    {
+        TriggerShoot(Owner.position, Owner.forward, ActorRoot.EntityType);
     }
 
     private ActorRoot ActorRoot { get; set; }
 
+    private Transform Owner { get; set; }
+
     private void Start()
     {
-        transform.localPosition = Vector3.zero;
-        ActorRoot = GetComponentInParent<ActorRoot>();
+        Application.onBeforeRender += OnPreRender;
+        // transform.localPosition = Vector3.zero;
+        //ActorRoot = GetComponentInParent<ActorRoot>();
+        //
+        // TriggerShoot(transform.position, transform.forward, EntityType.Enemy);
+    }
 
-        TriggerShoot(transform.position, transform.forward, EntityType.Enemy);
-        StartCoroutine(UpdateCr());
+    private void OnDestroy()
+    {
+        Application.onBeforeRender -= OnPreRender;
     }
 
     private Vector3 TargetDirectionMod { get; set; }
@@ -42,31 +85,24 @@ public class LaserProjectile : HitscanProjectileInfo
 
     private float t;
 
-    private IEnumerator UpdateCr()
+    private void Update()
     {
-        while (t < duration)
+        if (t < duration && Active)
         {
+            if (updateTargetContinous)
+            {
+                UpdateAim();
+            }
             var fakeT = EasingFunction.Linear(0, 1, t / duration);
             t += Time.deltaTime;
 
             TargetDirectionMod = Vector3.Lerp(SweepStart, SweepEnd, fakeT);
             var position = transform.position;
-
-            m_Line.SetPositions(new Vector3[] {position, hitPoint});
-            yield return null;
         }
-
-        HitPoint.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-        HitAudio.enabled = false;
-
-        m_Line.enabled = false;
-
-        while (t < duration + 10)
+        else
         {
-            yield return null;
+            SetActive(false);
         }
-
-        Destroy(gameObject);
     }
 
     private void FixedUpdate()
@@ -76,7 +112,8 @@ public class LaserProjectile : HitscanProjectileInfo
             return;
         }
 
-        RaycastAndStuff();
+        if (Active)
+            RaycastAndStuff();
     }
 
     private void RaycastAndStuff()
@@ -119,5 +156,10 @@ public class LaserProjectile : HitscanProjectileInfo
         HitPoint.transform.position = hit.point;
         //HitPoint.transform.rotation = Quaternion.LookRotation(hit.normal);
         hitPoint = hit.point;
+    }
+
+    void OnPreRender()
+    {
+        //m_Line.SetPositions(new Vector3[] {transform.position, transform.position + (ForwardTransform.forward * 10)});
     }
 }

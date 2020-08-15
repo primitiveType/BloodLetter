@@ -315,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
   materialGameObject: {fileID: 321424110}
-  anchorTransform: {fileID: 0}
+  anchorTransform: {fileID: 321424111}
   anchorTransformCollider: {fileID: 0}
   resize: 0
   reposition: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
   materialGameObject: {fileID: 812513434}
-  anchorTransform: {fileID: 0}
+  anchorTransform: {fileID: 812513435}
   anchorTransformCollider: {fileID: 0}
   resize: 0
   reposition: 0
@@ -1753,7 +1753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
   materialGameObject: {fileID: 1187914149}
-  anchorTransform: {fileID: 0}
+  anchorTransform: {fileID: 1187914150}
   anchorTransformCollider: {fileID: 0}
   resize: 0
   reposition: 0
@@ -3500,6 +3500,7 @@ Transform:
   - {fileID: 7118814581306319292}
   - {fileID: 1111293053}
   - {fileID: 1448022914}
+  - {fileID: 7118814582697065352}
   m_Father: {fileID: 7118814582858810737}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3732,13 +3733,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7118814582697065353}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1027849403}
   - {fileID: 3180858941864728954}
-  m_Father: {fileID: 7118814582858810737}
-  m_RootOrder: 3
+  m_Father: {fileID: 7118814582178681173}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &7118814582697065365
 Camera:
@@ -3857,7 +3858,6 @@ Transform:
   - {fileID: 7118814582569127635}
   - {fileID: 7118814583263391616}
   - {fileID: 7118814582178681173}
-  - {fileID: 7118814582697065352}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -3974,7 +3974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9fe46237834743887439fde2335e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Events: {fileID: 7118814582858810751}
   m_Health: 100
   m_MaxHealth: 100
   m_Armor: {fileID: 2092636035}
@@ -4060,7 +4059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6630c8230843e0bf2456c6b6cbb235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Events: {fileID: 7118814582858810751}
   m_RemainingArmor: 20
 --- !u!1 &7118814582898653111
 GameObject:

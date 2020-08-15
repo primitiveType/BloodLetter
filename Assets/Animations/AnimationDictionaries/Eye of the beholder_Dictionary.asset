@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: Eye of the beholder_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: Eye of the beholder_TPose
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: 1f3692c8989bf3e4b8d261c03bd9c786, type: 2}
+    diffuseMap: {fileID: 2800000, guid: bbc76e2dcdda10342af8e15887b98b04, type: 2}
+    alphaMap: {fileID: 2800000, guid: 6929cd9d6b72ac94e949d94f0c802df9, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: Eye of the beholder_Idle
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: 34309a996a7f672428d8f21f7f15db72, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 0e8065e229746fa45ba9214720bed3a6, type: 2}
+    alphaMap: {fileID: 2800000, guid: 4609a9c4dfc4a224290c9126a3dbae76, type: 2}
+  - rows: 1
+    columns: 1
+    animationName: Eye of the beholder_Shoot
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: fa4f41e5e933d594cbef7adf8a94b97d, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f693f7742cd2df749b8b3f53a60c5758, type: 2}
+    alphaMap: {fileID: 2800000, guid: 8bf92b59b8f4f6948ac97ec25955c4ed, type: 2}
