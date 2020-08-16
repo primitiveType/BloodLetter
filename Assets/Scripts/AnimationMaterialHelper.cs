@@ -23,6 +23,8 @@ public class AnimationMaterialHelper : MonoBehaviour
     [SerializeField] private Transform anchorTransform;
     [SerializeField] private Collider anchorTransformCollider;
 
+    
+    [SerializeField] private float yFudge = .01f;
     private Renderer MyRenderer =>
         m_MyRenderer != null ? m_MyRenderer : m_MyRenderer = materialGameObject.GetComponent<Renderer>();
 
@@ -97,7 +99,6 @@ public class AnimationMaterialHelper : MonoBehaviour
 
             if (reposition)
             {
-                float yFudge = .01f;
                 if (anchorTransformCollider)
                 {
                     yFudge = anchorTransformCollider.bounds.size.y / 2f;
