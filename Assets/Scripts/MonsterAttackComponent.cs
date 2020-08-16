@@ -11,6 +11,7 @@ public class MonsterAttackComponent : MonoBehaviour
 
     [SerializeField] private List<ProjectileInfoBase> m_Attacks;
 
+    [SerializeField] private bool CooldownStartsOnAggro = true;
 
     public float AttackCooldown => m_AttackCooldown;
 
@@ -27,7 +28,7 @@ public class MonsterAttackComponent : MonoBehaviour
     private Transform Target { get; set; }
     private Transform MonsterTransform { get; set; }
 
-    private float LastAttackTimeStamp { get; set; }
+    private float LastAttackTimeStamp { get; set; } = Single.NegativeInfinity;
 
     private static readonly int Attacking = Animator.StringToHash("Attacking");
 
@@ -63,7 +64,7 @@ public class MonsterAttackComponent : MonoBehaviour
             !AggroHandler.IsAggro)
         {
             Animator.SetBool(Attacking, false);
-            if (!AggroHandler.IsAggro)
+            if (!AggroHandler.IsAggro && CooldownStartsOnAggro)
             {
                 ResetAttackTimeStamp(); //hack to add delay when aggro'd
             }

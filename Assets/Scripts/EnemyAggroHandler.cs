@@ -57,7 +57,7 @@ public class EnemyAggroHandler : MonoBehaviour
         }
     }
 
-    private float AggroDelayVariance = 1f;
+    [SerializeField] private float AggroDelayVariance = 1f;
 
     private IEnumerator AggroAfterRandomDelay()
     {
