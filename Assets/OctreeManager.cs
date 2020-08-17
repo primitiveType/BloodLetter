@@ -121,7 +121,7 @@ public class OctreeManager : MonoBehaviourSingleton<OctreeManager>
                     {
                         if (pathfinder.NeedsUpdate)
                         {
-                            pathfinder.IsValid = true;
+                            pathfinder.IsValid = pathfinder.CurrentPath != null;
                             pathfinder.Updated();
                         }
                     }

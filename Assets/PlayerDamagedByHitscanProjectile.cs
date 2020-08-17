@@ -22,6 +22,10 @@ public class PlayerDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscan
     {
         Events.OnShot(projectileInfo);
     }
+    public void SetEnabled(bool enabled)
+    {
+        this.enabled = enabled;
+    }
 }
 
 public interface IDamagedByHitscanProjectile
@@ -30,4 +34,5 @@ public interface IDamagedByHitscanProjectile
     void OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo);
     void OnShot(HitscanProjectileInfo projectileInfo);
     Transform transform { get; }
+    void SetEnabled(bool enabled);
 }

@@ -45,7 +45,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Attacks.Array.data[0]
       value: 
-      objectReference: {fileID: 1914280846007995813, guid: 1b76d5a1d764699459d052c193a56f8b,
+      objectReference: {fileID: 5702602787954038606, guid: 918f6094fb3f2144092c45a96f8ee216,
         type: 3}
     - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -115,7 +115,7 @@ PrefabInstance:
     - target: {fileID: 8171493255443565340, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Name
-      value: OAK_TREE_ENT_LEGACY (1)
+      value: OAK_TREE_ENT_LEGACY
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255443565341, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

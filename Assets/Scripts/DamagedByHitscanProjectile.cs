@@ -21,7 +21,10 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
         return MaterialHelper.QueryAlpha(textureCoord);
     }
 
-
+    public void SetEnabled(bool enabled)
+    {
+        this.enabled = enabled;
+    }
 
     public virtual void OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
     {

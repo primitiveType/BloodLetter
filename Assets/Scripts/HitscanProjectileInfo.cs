@@ -21,6 +21,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         
     public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot)
     {
+        ownerRoot = actorRoot;
         var damaged = GetHitObject(ownerPosition, ownerDirection, actorRoot, out RaycastHit hit);
         if (damaged != null && damaged != ownerRoot.HitscanCollider)
         {

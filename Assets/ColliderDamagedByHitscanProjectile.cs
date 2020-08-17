@@ -18,4 +18,9 @@ public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitsc
     {
         Events.OnShot(projectileInfo);
     }
+
+    public void SetEnabled(bool enabled)
+    {
+        this.enabled = enabled;
+    }
 }

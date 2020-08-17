@@ -23,8 +23,11 @@ public class UnparentAndFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myTransform.position = toFollow.position;
-        myTransform.rotation = toFollow.rotation;
-        myTransform.localScale = toFollow.lossyScale;
+        if (toFollow)
+        {
+            myTransform.position = toFollow.position;
+            myTransform.rotation = toFollow.rotation;
+            myTransform.localScale = toFollow.lossyScale;
+        }
     }
 }

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1554,12 +1554,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sounds: {fileID: 2117750145}
   Source: {fileID: 2117750144}
---- !u!120 &265799918 stripped
-LineRenderer:
-  m_CorrespondingSourceObject: {fileID: 5674723493020333631, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-    type: 3}
-  m_PrefabInstance: {fileID: 978080164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &271071414
 Mesh:
   m_ObjectHideFlags: 0
@@ -5897,14 +5891,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 466393407, guid: 6419bd3b232a61c4fb858ef4dc107a03, type: 3}
-      propertyPath: SecondsWaitAfterUseAmmo
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 505395253, guid: 6419bd3b232a61c4fb858ef4dc107a03, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1645885075, guid: 6419bd3b232a61c4fb858ef4dc107a03, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -5965,11 +5951,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2701789535915301915, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-        type: 3}
-      propertyPath: ProjectileInfo
-      value: 
-      objectReference: {fileID: 1006489981}
     - target: {fileID: 2967762041413897099, guid: 6419bd3b232a61c4fb858ef4dc107a03,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -6195,11 +6176,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8456412394596063949, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8975180908580263672, guid: 6419bd3b232a61c4fb858ef4dc107a03,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -6220,8 +6196,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7599297246077356080, guid: 6419bd3b232a61c4fb858ef4dc107a03, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6419bd3b232a61c4fb858ef4dc107a03, type: 3}
 --- !u!43 &995872220
 Mesh:
@@ -6569,49 +6544,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sounds: {fileID: 2084400122}
   Source: {fileID: 2084400121}
---- !u!198 &1003235254 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8456412394324740430, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-    type: 3}
-  m_PrefabInstance: {fileID: 978080164}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1003235255 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8456412394906156903, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-    type: 3}
-  m_PrefabInstance: {fileID: 978080164}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1006489978 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4130240567496591673, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-    type: 3}
-  m_PrefabInstance: {fileID: 978080164}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1006489981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006489978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 060ad65889961c642809a1837fa1e107, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Range: 100
-  m_MinRange: 10
-  Piercing: 0
-  OnHitPrefab: {fileID: 0}
-  OnHitWallPrefab: {fileID: 0}
-  m_Damage: 1
-  m_Line: {fileID: 265799918}
-  HitPoint: {fileID: 1003235254}
-  HitAudio: {fileID: 1003235255}
-  duration: 0.1
-  sweepMagnitude: 0
-  updateTargetContinous: 1
-  ForwardTransform: {fileID: 1169116073}
 --- !u!4 &1018535046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4232846190491368923, guid: 09ec2542d35b8774b9bfd64377d0a9be,
@@ -7663,12 +7595,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sounds: {fileID: 1485229124}
   Source: {fileID: 1485229123}
---- !u!4 &1169116073 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 386397864, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-    type: 3}
-  m_PrefabInstance: {fileID: 978080164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1186548164
 Mesh:
   m_ObjectHideFlags: 0
