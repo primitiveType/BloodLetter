@@ -13,6 +13,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actorEventsImplementation: {fileID: 320905210}
+--- !u!114 &134714299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406602299321237577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07222ed8e3ed02a4487de3f15d895868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RaycastDistance: 5
+  MaxRotationSpeed: 720
+  BreakDistance: 15
+  AimForBreakDistance: 1
+  MaxAcceleration: 0.1
+  _maxSpeed: 50
 --- !u!114 &320905210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,11 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2366465993453371, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.49004218
+      value: -0.16617598
       objectReference: {fileID: 0}
     - target: {fileID: 2366465993453371, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.87169874
+      value: 0.98609614
       objectReference: {fileID: 0}
     - target: {fileID: 774495334747848839, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
@@ -93,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 2035573511599213176, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.71
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2035573511599213176, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
@@ -156,6 +174,11 @@ PrefabInstance:
       propertyPath: CooldownStartsOnAggro
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7220290378544368621, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: _degreesVisibility
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 7719807846743558047, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
       propertyPath: m_Health
@@ -183,7 +206,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3964157586184250796, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
+    - {fileID: 7452109238931835366, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
+--- !u!1 &5406602299321237577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2035573511599213177, guid: 81e1d6095514fe0469c6694925d7feaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6284724316257552944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!135 &6284724316174862945 stripped
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 85344337, guid: 81e1d6095514fe0469c6694925d7feaa,

@@ -13,6 +13,7 @@ public class ActorRoot : MonoBehaviour
     public IDamagedByHitscanProjectile HitscanCollider { get; private set; }
 
     public EnemyAggroHandler AggroHandler { get; private set; }
+    public MonsterVisibilityHandler VisibilityHandler { get; private set; }
 
     public virtual EntityType EntityType => EntityType.Enemy;
 
@@ -23,6 +24,7 @@ public class ActorRoot : MonoBehaviour
         AnimationMaterialHelper = GetComponentInChildren<AnimationMaterialHelper>();
         HitscanCollider = GetComponentInChildren<IDamagedByHitscanProjectile>();
         AggroHandler = GetComponentInChildren<EnemyAggroHandler>();
+        VisibilityHandler = GetComponentInChildren<MonsterVisibilityHandler>();
     }
 
     // Update is called once per frame

@@ -4,15 +4,16 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private KeyType RequiredKeys;
 
-    public void Interact()
+    public bool Interact()
     {
         if (!Toolbox.Instance.PlayerInventory.HasKey(RequiredKeys))
         {
             ToastHandler.Instance.PopToast($"{RequiredKeys} Key Required!");
-            return;
+            return false;
         }
         DoInteraction();
+        return DoInteraction();
     }
 
-    protected abstract void DoInteraction();
+    protected abstract bool DoInteraction();
 }

@@ -31,14 +31,13 @@ public class PlayerInteract : MonoBehaviour
             if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, LayerMask.GetMask($"Interactable")))
             {
                 var interactables = hit.collider.GetComponentsInChildren<IInteractable>();
-                foundOne = interactables.Any();
 
+                foundOne = true;
                 foreach (var interactable in interactables)
                 {
-                    interactable?.Interact();
+                    foundOne &= interactable.Interact();
                     PlayerEvents.PlayerInteract(interactable);
                 }
-
             }
 
             if (!foundOne)
@@ -52,5 +51,5 @@ public class PlayerInteract : MonoBehaviour
 
 public interface IInteractable
 {
-    void Interact();
+    bool Interact();
 }

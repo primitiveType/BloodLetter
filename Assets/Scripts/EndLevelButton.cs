@@ -1,7 +1,8 @@
 ﻿public class EndLevelButton : BaseInteractable, IInteractable
 {
-    protected override void DoInteraction()
+    protected override bool DoInteraction()
     {
         LevelManager.Instance.EndLevel();
+        return true;
     }
 }

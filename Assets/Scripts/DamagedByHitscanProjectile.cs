@@ -18,6 +18,11 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
 
     public bool IsHit(Vector2 textureCoord)
     {
+        if (!enabled)
+        {
+            return false;
+        }
+
         return MaterialHelper.QueryAlpha(textureCoord);
     }
 

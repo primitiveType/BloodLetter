@@ -95,6 +95,10 @@ public class Elevator : MonoBehaviour
         if (audiosource)
         {
             audiosource.enabled = value;
+            if (value && !audiosource.isPlaying)
+            {
+                audiosource.Play();
+            }
         }
     }
 }

@@ -1,20 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class ThreeStageElevatorButton : BaseInteractable, IInteractable
 {
-    [SerializeField] private List<ThreeStageElevator> Elevators;
+    [SerializeField] private InteractableKey key;
+    //[SerializeField] private List<ThreeStageElevator> Elevators;
 
     [SerializeField] private ElevatorState state;
 
-    protected override void DoInteraction()
+    protected override bool DoInteraction()
     {
-        foreach (var elevator in Elevators)
-        {
-            elevator.MoveTo(state);
-        }
+        ThreeStageElevatorIdService.Instance.TriggerAll(key, state);
+
+        return true;
     }
+}
+
+public enum InteractableKey
+{
+    Blue,
+    Yellow,
+    Red,
+    Hazard,
+    Plywood
 }
 
 

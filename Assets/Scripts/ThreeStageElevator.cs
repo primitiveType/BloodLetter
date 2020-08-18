@@ -5,6 +5,8 @@ using UnityEngine.Serialization;
 
 public class ThreeStageElevator : MonoBehaviour
 {
+    [SerializeField] private InteractableKey Key;
+
     public float speed;
 
     [SerializeField] private Transform StartTarget;
@@ -22,6 +24,7 @@ public class ThreeStageElevator : MonoBehaviour
     private void Start()
     {
         audiosource = GetComponent<AudioSource>();
+        ThreeStageElevatorIdService.Instance.RegisterInteractable(this, Key);
     }
 
     private void OnDrawGizmos()
@@ -118,6 +121,10 @@ public class ThreeStageElevator : MonoBehaviour
         if (audiosource)
         {
             audiosource.enabled = value;
+            if (value && !audiosource.isPlaying)
+            {
+                audiosource.Play();
+            }
         }
     }
 }

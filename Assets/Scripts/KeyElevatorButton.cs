@@ -5,11 +5,13 @@ using UnityEngine;
 public class KeyElevatorButton : ElevatorButton
 {
    [SerializeField] private KeyType KeyType;
-   public override void Interact()
+   public override bool Interact()
    {
       if (Toolbox.Instance.PlayerInventory.HasKey(KeyType))
       {
-         base.Interact();
+         return base.Interact();
       }
+
+      return false;
    }
 }

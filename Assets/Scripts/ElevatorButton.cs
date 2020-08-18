@@ -7,9 +7,10 @@ public class ElevatorButton : MonoBehaviour, IInteractable
 {
     [SerializeField] private Elevator Elevator;
 
-    public virtual void Interact()
+    public virtual bool Interact()
     {
         Elevator.Trigger();
-        //play sounds
+        return true;
+        //play button sounds
     }
 }
