@@ -25,12 +25,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07222ed8e3ed02a4487de3f15d895868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RaycastDistance: 5
   MaxRotationSpeed: 720
   BreakDistance: 15
   AimForBreakDistance: 1
   MaxAcceleration: 0.1
   _maxSpeed: 50
+--- !u!114 &1772278497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406602299321237577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa35ae5173284bf39b1d535908c249bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RaycastDistance: 5
+  NumRaysPerAxis: 5
 --- !u!114 &320905210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,11 +75,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2366465993453371, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.16617598
+      value: 0.739167
       objectReference: {fileID: 0}
     - target: {fileID: 2366465993453371, guid: 81e1d6095514fe0469c6694925d7feaa, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98609614
+      value: 0.6735223
       objectReference: {fileID: 0}
     - target: {fileID: 774495334747848839, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
@@ -101,7 +114,7 @@ PrefabInstance:
     - target: {fileID: 2035573511599213176, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2035573511599213176, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
@@ -111,7 +124,7 @@ PrefabInstance:
     - target: {fileID: 2035573511599213176, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 2035573511599213176, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
