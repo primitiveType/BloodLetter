@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1171328965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3810395185089219850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8172e27cef4e70a639ab20e5acd0bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _actorEventsImplementation: {fileID: 320905210}
 --- !u!114 &134714299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRotationSpeed: 720
-  BreakDistance: 15
+  BreakDistance: 10
   AimForBreakDistance: 1
   MaxAcceleration: 0.1
   _maxSpeed: 50
@@ -44,6 +31,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RaycastDistance: 5
   NumRaysPerAxis: 5
+--- !u!114 &1171328965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3810395185089219850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8172e27cef4e70a639ab20e5acd0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actorEventsImplementation: {fileID: 320905210}
 --- !u!114 &320905210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +171,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: EVIL_WATCHER_LEGACY
       objectReference: {fileID: 0}
+    - target: {fileID: 2227521996726269713, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853012995145573912, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: AfterUnparentAction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853012995145573912, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: AfterUnparentAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853012995145573912, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: AfterUnparentAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853012995145573912, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: AfterUnparentAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5406602299849856962}
+    - target: {fileID: 3853012995145573912, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: AfterUnparentAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853012995145573912, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: AfterUnparentAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853012995145573912, guid: 81e1d6095514fe0469c6694925d7feaa,
+        type: 3}
+      propertyPath: AfterUnparentAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6615912356786695123, guid: 81e1d6095514fe0469c6694925d7feaa,
         type: 3}
       propertyPath: m_Attacks.Array.size
@@ -260,6 +300,12 @@ AudioSource:
 --- !u!1 &5406602299849856974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2035573511071129086, guid: 81e1d6095514fe0469c6694925d7feaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6284724316257552944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5406602299849856962 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2035573511071129074, guid: 81e1d6095514fe0469c6694925d7feaa,
     type: 3}
   m_PrefabInstance: {fileID: 6284724316257552944}
   m_PrefabAsset: {fileID: 0}

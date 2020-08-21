@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: Invuln pickup_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: Invuln pickup_TPose
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: 1fe5629e457f9d448b9cf6f50145335c, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 0d7861606006bc646bf22dde0d20478d, type: 2}
+    alphaMap: {fileID: 2800000, guid: 6a6e210d9a5a4fc4eb43cdf7e9765cba, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: Invuln pickup_Take 001
+    numFrames: 10
+    normalMap: {fileID: 2800000, guid: eea03c855be4a1d4fb51fa55d081ec3e, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f680dae57cb1dc847b881b43bcb810c6, type: 2}
+    alphaMap: {fileID: 2800000, guid: 23cf77b7cda9c8f48b32507b1c85a870, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: Invuln pickup_custom beat
+    numFrames: 11
+    normalMap: {fileID: 2800000, guid: 887d0f5e3c4d6d84f93939b92813b6dc, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 4fa6107dbb42c38469b5b633897c5d09, type: 2}
+    alphaMap: {fileID: 2800000, guid: f8cb49ef74617ce4b88d6c6620e56444, type: 2}

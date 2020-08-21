@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,14 +14,30 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     public float TimestopTimeStamp { get; set; } = -15;
     public float TimestopDuration { get; } = 15;
 
-    private EquipStatus CurrentEquip; //will have to make changes if you can later equip multiple things
     private static Toolbox s_instance;
     
     public PlayerRoot PlayerRoot { get; private set; }
-
+    
     private void Awake()
     {
+        
         DontDestroyOnLoad(this);
+        LevelManager.Instance.LevelBegin += OnLevelBegin;
+        LevelManager.Instance.LevelEnd += OnLevelEnd;
+    }
+
+    private void OnLevelEnd(object sender, LevelEndEventArgs args)
+    {
+        if (args.Success)
+        {
+        }
+    }
+
+    private void OnLevelBegin(object sender, LevelBeginEventArgs args)
+    {
+        IsPlayerDead = false;
+        Secrets.Clear();
+        Enemies.Clear();
     }
 
     public bool TimeIsStopped()
@@ -28,42 +45,19 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
         return TimestopTimeStamp + TimestopDuration > Time.unscaledTime;
     }
 
-    public void EquipThing(EquipStatus thing)
-    {
-        if (!equipping)
-        {
-            Instance.StartCoroutine(EquipThingCR(thing));
-        }
-    }
-
-    private bool equipping;
-    private IEnumerator EquipThingCR(EquipStatus thing)
-    {
-        
-        if (CurrentEquip == thing || !thing.CanEquip())
-        {
-            yield break;
-        }
-
-        equipping = true;
-        var prev = CurrentEquip != null ? CurrentEquip.WeaponId : 0;
-        
-        if (CurrentEquip != null)
-        {
-            yield return StartCoroutine(CurrentEquip.UnEquip());
-        }
-
-        PlayerEvents.OnEquippedWeaponChanged(prev, thing.WeaponId);
-        yield return StartCoroutine(thing.Equip());
-        CurrentEquip = thing;
-        equipping = false;
-    }
+ 
 
     public void SetPlayerEvents(PlayerEvents events)
     {
         PlayerEvents = events;
         PlayerEvents.OnDeathEvent -= PlayerEventsOnOnDeathEvent;
         PlayerEvents.OnDeathEvent += PlayerEventsOnOnDeathEvent;
+    }
+
+    private void OnDestroy()
+    {
+        LevelManager.Instance.LevelBegin -= OnLevelBegin;
+        LevelManager.Instance.LevelEnd -= OnLevelEnd;
     }
 
     public bool IsPlayerDead { get; private set; }
@@ -76,8 +70,10 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
 
     private IEnumerator EndLevelAfterTwoSeconds()
     {
+        var ppHandle = PostProcessingManager.Instance.EnableDeathEffect();
         yield return new WaitForSeconds(2);
-        LevelManager.Instance.EndLevel();
+        ppHandle.Dispose();
+        LevelManager.Instance.EndLevel(false);
     }
 
     public void SetPlayerTransform(Transform transform)
@@ -120,20 +116,25 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
         deadEnemies = Enemies.Count(enemy => !enemy.IsAlive);
     }
 
-    public void CleanupForNextLevel()
-    {
-        IsPlayerDead = false;
-        Secrets.Clear();
-        Enemies.Clear();
-    }
 
     private void Update()
     {
-        Time.timeScale = TimeIsStopped() ? 0f : 1f;
+        //Time.timeScale = TimeIsStopped() ? 0f : 1f;
     }
 
     public void SetPlayerRoot(PlayerRoot playerRoot)
     {
         PlayerRoot = playerRoot;
     }
+}
+
+public delegate void LevelEndEvent(object sender, LevelEndEventArgs args);
+
+public class LevelEndEventArgs
+{
+    public LevelEndEventArgs(bool success)
+    {
+        Success = success;
+    }
+    public bool Success { get; set; }
 }

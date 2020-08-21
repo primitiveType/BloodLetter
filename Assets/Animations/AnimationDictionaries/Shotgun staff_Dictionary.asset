@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: Shotgun staff_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: Shotgun Staff_TPose
+    numFrames: 1
+    normalMap: {fileID: 2800000, guid: f823c86a27f97ae4c92a3ed7ed22b822, type: 3}
+    diffuseMap: {fileID: 2800000, guid: 7caaf106026bafb43b95850bdbac1800, type: 3}
+    alphaMap: {fileID: 2800000, guid: 2740e3a0e47597c4b931493223c2ba73, type: 3}
+  - rows: 1
+    columns: 2
+    animationName: Shotgun staff_Shoot
+    numFrames: 2
+    normalMap: {fileID: 2800000, guid: 16dd7294a8de37e45954a092500a8d06, type: 2}
+    diffuseMap: {fileID: 2800000, guid: e64ef3585bf58bf409e38a30e8b675ac, type: 2}
+    alphaMap: {fileID: 2800000, guid: 06d5fcd433dadb04ca6f33cee6431810, type: 2}

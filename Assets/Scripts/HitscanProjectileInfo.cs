@@ -18,7 +18,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
 
     protected static LayerMask EnvironmentLayers =>
         LayerMask.GetMask("Default", "Interactable");
-        
+
     public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot)
     {
         ownerRoot = actorRoot;
@@ -26,13 +26,19 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         if (damaged != null && damaged != ownerRoot.HitscanCollider)
         {
             damaged.OnShot(hit.textureCoord, this);
-            var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
+            var hitEffect = CreateHitEffect(OnHitPrefab, damaged.transform, hit);
             float adjustmentDistance = .1f;
             hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
         }
     }
 
-    private ActorRoot ownerRoot;
+    protected virtual GameObject CreateHitEffect(GameObject prefab, Transform parent, RaycastHit hit)
+    {
+        var hitEffect = GameObject.Instantiate(prefab, parent, true);
+        return hitEffect;
+    }
+
+    protected ActorRoot ownerRoot;
 
     public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
     {
@@ -86,8 +92,9 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 else if (OnHitWallPrefab) //we did hit the environment, spawn a hit visual and quit.
                 {
                     var hitRotation = Quaternion.LookRotation(-hit.normal);
-                    var hitEffect = GameObject.Instantiate(OnHitWallPrefab, hit.collider.transform.position,
-                        hitRotation, hit.transform);
+
+                    var hitEffect = CreateHitEffect(OnHitWallPrefab, hit.collider.transform, hit);
+                    hitEffect.transform.rotation = hitRotation;
 
                     float adjustmentDistance = .001f;
 

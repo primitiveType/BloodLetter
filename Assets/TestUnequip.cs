@@ -14,21 +14,26 @@ public class TestUnequip : MonoBehaviour
     {
         if (Input.GetKeyDown(EquipKey))
         {
-            Toolbox.Instance.EquipThing(Equippable);
+            Toolbox.Instance.PlayerInventory.EquipThing(Equippable);
         }
     }
 
     void Start()
     {
+        WeaponId savedWeapon = SaveState.Instance.SaveData.InventoryData.EquippedWeapon;
+        if (savedWeapon != 0)
+        {
+            equipOnStart = (SaveState.Instance.SaveData.InventoryData.EquippedWeapon == Equippable.WeaponId);
+        }
+
         if (equipOnStart)
         {
-            Toolbox.Instance.EquipThing(Equippable);
+            Toolbox.Instance.PlayerInventory.EquipThing(Equippable);
         }
         else
         {
             Equippable.UnEquipInstant();
         }
-        
     }
 
 

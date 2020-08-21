@@ -19,7 +19,6 @@ public class AmmoRegen : MonoBehaviour
     {
         Inventory = Toolbox.Instance.PlayerInventory;
         Toolbox.Instance.PlayerEvents.OnAmmoChangedEvent += PlayerEventsOnOnAmmoChangedEvent;
-        Inventory.GainAmmo(TypeToRegen, 1000);
 
         secondsPerRegen = 1f / RegenPerSecond;
     }

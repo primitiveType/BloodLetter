@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class TriggerOnShot : MonoBehaviour
 {
-    [SerializeField] private IActorEvents Events;
+    private IActorEvents Events;
     [SerializeField] private Animator Animator;
     private static readonly int Trigger = Animator.StringToHash("Trigger");
 
     private void Start()
     {
+        Events = GetComponent<IActorEvents>();
         Events.OnShotEvent += EventsOnOnShotEvent;
     }
 

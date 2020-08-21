@@ -9,7 +9,12 @@ public class ActorArmor : MonoBehaviour
 
     public float MaxArmor => 100;
 
-    public float CurrentArmor => m_RemainingArmor;
+
+    public float CurrentArmor
+    {
+        get => m_RemainingArmor;
+        set => m_RemainingArmor = value;
+    }
 
     private void Start()
     {
@@ -18,6 +23,12 @@ public class ActorArmor : MonoBehaviour
 
     public float TakeDamage(float baseDamage)
     {
+        var invulnerable = GetComponent<Invulnerable>();
+        if (invulnerable)
+        {
+            return 0;
+        }
+
         var prevValue = m_RemainingArmor;
         //var maxDamageBeforeReduction = m_RemainingArmor / reduc;
         var amountReduced = Mathf.Min(baseDamage * reduc, m_RemainingArmor);

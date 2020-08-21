@@ -34,6 +34,7 @@ public class AmmoText : MonoBehaviour
         if (IsDirty)
         {
             Text.text = $"{AmmoType} : {Inventory.GetAmmoAmount(AmmoType)} / {Inventory.GetMaxAmmoAmount(AmmoType)}";
+            IsDirty = false;
         }
     }
 

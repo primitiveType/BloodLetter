@@ -68,7 +68,7 @@ public class EquipStatus : MonoBehaviour
     {
         if ((args.NewValue ^ args.OldValue) == WeaponId)
         {
-            Toolbox.Instance.EquipThing(this);
+            Toolbox.Instance.PlayerInventory.EquipThing(this);
         }
     }
 

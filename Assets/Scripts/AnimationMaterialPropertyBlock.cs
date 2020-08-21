@@ -67,7 +67,11 @@ public class AnimationMaterialPropertyBlock
         block.SetInt(RowsProperty, Rows);
         block.SetInt(ColumnsProperty, Columns);
         block.SetInt(NumFramesProperty, NumFrames);
-        block.SetTexture(NormalsProperty, NormalMap);
+        if (NormalMap != null)
+        {
+            block.SetTexture(NormalsProperty, NormalMap);
+        }
+
         block.SetTexture(AlphaProperty, AlphaMap);
         block.SetTexture(TexturesProperty, DiffuseMap);
         block.SetInt(FrameWidthProperty, diffuseMap.width / columns);

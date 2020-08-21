@@ -2,7 +2,7 @@
 {
     protected override bool DoInteraction()
     {
-        LevelManager.Instance.EndLevel();
+        LevelManager.Instance.EndLevel(true);
         return true;
     }
 }

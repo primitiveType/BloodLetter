@@ -94,10 +94,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9fe46237834743887439fde2335e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Events: {fileID: 7988276051306822542}
   m_Health: 1
   m_MaxHealth: 1
   m_Armor: {fileID: 0}
+  _animator: {fileID: 0}
 --- !u!114 &7988276051306822542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095c4052b087444bb9f9d06f444ddd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Events: {fileID: 7988276051306822542}
 --- !u!114 &7846383323932889817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b327046070b2d34dbca72b16f7f8e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Events: {fileID: 7988276051306822542}
   Animator: {fileID: 7068729471902486531}
 --- !u!114 &7103510766080425948
 MonoBehaviour:
@@ -173,6 +171,7 @@ GameObject:
   - component: {fileID: 7068729471902486530}
   - component: {fileID: 7068729471902486531}
   - component: {fileID: 7068729471902486532}
+  - component: {fileID: 3978648304492631337}
   m_Layer: 17
   m_Name: Barrel
   m_TagString: Untagged
@@ -228,6 +227,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionPrefab: {fileID: 6962804858628054579, guid: 576d95cd40f225d4cb3bb3485e6941d5,
     type: 3}
+--- !u!114 &3978648304492631337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7068729471902486529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb63487f92c5b294aa4d543dfdc4b196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7068729472678613370
 GameObject:
   m_ObjectHideFlags: 0

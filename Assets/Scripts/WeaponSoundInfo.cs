@@ -21,7 +21,10 @@ public class WeaponSoundInfo : MonoBehaviour
 
     private void OnDestroy()
     {
-        Toolbox.Instance.PlayerEvents.OnEquippedWeaponChangedEvent -= PlayerEventsOnOnWeaponsChangedEvent;
+        if (Toolbox.Instance != null && Toolbox.Instance.PlayerEvents != null)
+        {
+            Toolbox.Instance.PlayerEvents.OnEquippedWeaponChangedEvent -= PlayerEventsOnOnWeaponsChangedEvent;
+        }
     }
 
     private void PlayerEventsOnOnWeaponsChangedEvent(object sender, OnEquippedWeaponChangedEventArgs args)

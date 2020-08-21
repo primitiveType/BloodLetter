@@ -11,10 +11,15 @@ public class ActorHealth : MonoBehaviour
     [SerializeField] private float m_MaxHealth;
     [SerializeField] private ActorArmor m_Armor;
     [SerializeField] private Animator _animator;
+    private ActorRoot _actorRoot;
     private static readonly int IsDead = Animator.StringToHash("IsDead");
 
-    private ActorRoot ActorRoot { get; set; }
-    
+    private ActorRoot ActorRoot
+    {
+        get => _actorRoot != null ? _actorRoot  : (_actorRoot = GetComponentInParent<ActorRoot>());
+        set => _actorRoot = value;
+    }
+
     private Animator Animator
     {
         get => _animator;

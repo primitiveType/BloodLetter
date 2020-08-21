@@ -26,6 +26,5 @@ public class WeaponEventsHandler : MonoBehaviour
 
     void OnEnable()
     {
-        Debug.Log("Enabled    ");
     }
 }

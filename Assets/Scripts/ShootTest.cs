@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ShootTest : MonoBehaviour
@@ -13,18 +14,22 @@ public class ShootTest : MonoBehaviour
     private float shootTimestamp = -100;
     private static readonly int Shooting = Animator.StringToHash("Shooting");
 
-    private UsesAmmo UsesAmmo;
+    private List<UsesAmmo> UsesAmmo;
 
     // Start is called before the first frame update
     void Start()
     {
         //_animator = GetComponentInChildren<Animator>();
-        UsesAmmo = GetComponent<UsesAmmo>();
+        UsesAmmo = GetComponents<UsesAmmo>().ToList();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale <= 0)
+        {
+            return;
+        }
         if (!Input.GetMouseButton(0) || !CanShoot())
         {
             _animator.SetBool(Shooting, false);
@@ -43,10 +48,12 @@ public class ShootTest : MonoBehaviour
 
     private bool HasAmmo()
     {
-        if (!UsesAmmo)
+        bool hasAmmo = true;
+        foreach (var usesAmmo in UsesAmmo)
         {
-            return true;
+            hasAmmo &= usesAmmo.HasAmmo();
         }
-        return UsesAmmo.HasAmmo();
+        
+        return hasAmmo;
     }
 }
