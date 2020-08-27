@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toast: 1
   ArmorAmount: 5
+  canOverheal: 1
 --- !u!1001 &5269147532907239683
 PrefabInstance:
   m_ObjectHideFlags: 0

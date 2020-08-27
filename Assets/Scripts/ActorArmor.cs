@@ -8,6 +8,7 @@ public class ActorArmor : MonoBehaviour
     private float reduc = .5f;
 
     public float MaxArmor => 100;
+    public float OverhealMaxArmor => 100;
 
 
     public float CurrentArmor
@@ -47,10 +48,10 @@ public class ActorArmor : MonoBehaviour
         return m_RemainingArmor >= MaxArmor;
     }
 
-    public void GainArmor(float amount)
+    public void GainArmor(float amount, bool canOverheal)
     {
         var prevValue = m_RemainingArmor;
-        m_RemainingArmor = Mathf.Clamp(m_RemainingArmor + amount, 0, MaxArmor);
+        m_RemainingArmor = Mathf.Clamp(m_RemainingArmor + amount, 0,  canOverheal ? OverhealMaxArmor : MaxArmor);
         if (prevValue != m_RemainingArmor)
         {
             Events.OnArmorChanged();

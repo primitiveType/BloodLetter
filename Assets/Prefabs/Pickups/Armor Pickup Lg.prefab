@@ -82,5 +82,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armor Pickup Lg
       objectReference: {fileID: 0}
+    - target: {fileID: 5796356485565832084, guid: 845ef223be15e88408df6cd0cff0b120,
+        type: 3}
+      propertyPath: canOverheal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796356485565832084, guid: 845ef223be15e88408df6cd0cff0b120,
+        type: 3}
+      propertyPath: ArmorAmount
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 845ef223be15e88408df6cd0cff0b120, type: 3}

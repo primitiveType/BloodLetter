@@ -9,6 +9,7 @@ public class ActorHealth : MonoBehaviour
 
     [SerializeField] private float m_Health;
     [SerializeField] private float m_MaxHealth;
+    [SerializeField] private float m_OverhealMaxHealth;
     [SerializeField] private ActorArmor m_Armor;
     [SerializeField] private Animator _animator;
     private ActorRoot _actorRoot;
@@ -16,7 +17,7 @@ public class ActorHealth : MonoBehaviour
 
     private ActorRoot ActorRoot
     {
-        get => _actorRoot != null ? _actorRoot  : (_actorRoot = GetComponentInParent<ActorRoot>());
+        get => _actorRoot != null ? _actorRoot : (_actorRoot = GetComponentInParent<ActorRoot>());
         set => _actorRoot = value;
     }
 
@@ -34,12 +35,6 @@ public class ActorHealth : MonoBehaviour
             var prevHealth = m_Health;
             m_Health = value;
             if (m_Health <= 0 && IsAlive) Die();
-
-            if (m_Health > MaxHealth)
-            {
-                m_Health = MaxHealth;
-            }
-
             var diff = Math.Abs(m_Health - prevHealth);
 
             if (diff <= float.Epsilon)
@@ -56,6 +51,13 @@ public class ActorHealth : MonoBehaviour
         get => m_MaxHealth;
         set => m_MaxHealth = value;
     }
+
+    public float OverhealMaxHealth
+    {
+        get => m_OverhealMaxHealth;
+        set => m_OverhealMaxHealth = value;
+    }
+
 
     public bool IsFullHealth => Math.Abs(MaxHealth - Health) <= float.Epsilon;
 
@@ -105,9 +107,12 @@ public class ActorHealth : MonoBehaviour
         Events.OnDeath();
     }
 
-    public void Heal(float amount)
+    public void Heal(float amount, bool canOverheal = false)
     {
-        Health += amount;
+        var newHealth = Health;
+        newHealth = Mathf.Clamp(newHealth + amount, 0, canOverheal ? OverhealMaxHealth : MaxHealth);
+
+        Health = newHealth;
         UpdateAnimatorStates();
     }
 }

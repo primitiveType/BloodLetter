@@ -1,8 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjectile
 {
     [SerializeField] private IActorEvents Events;
+
+    private void Start()
+    {
+        if (Events == null)
+        {
+            Events = GetComponent<IActorEvents>();
+        }
+    }
 
     public bool IsHit(Vector2 textureCoord)
     {

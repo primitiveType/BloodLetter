@@ -6,6 +6,7 @@ using UnityEngine;
 public class HealthPickup : Pickup<ActorHealth>
 {
     [SerializeField] private float HealAmount;
+    [SerializeField] private bool CanOverheal;
 
     protected override string toastMessage => $"Pickep up {HealAmount} Health";
 
@@ -16,6 +17,6 @@ public class HealthPickup : Pickup<ActorHealth>
 
     protected override void PickupItem()
     {
-        currentActor.Heal(HealAmount);
+        currentActor.Heal(HealAmount, CanOverheal);
     }
 }

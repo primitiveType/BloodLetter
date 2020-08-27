@@ -5688,6 +5688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Health: 100
   m_MaxHealth: 100
+  m_OverhealMaxHealth: 200
   m_Armor: {fileID: 2092636035}
   _animator: {fileID: 0}
 --- !u!114 &1991182490
