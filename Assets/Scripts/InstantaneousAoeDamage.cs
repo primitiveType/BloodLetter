@@ -33,8 +33,9 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
         Gizmos.DrawWireSphere(transform.position, Radius);
     }
 
-    public float GetDamage(ActorHealth actorToDamage)
+  
+    public Damage GetDamage(ActorHealth hitActor)
     {
-        return DamageAmount;
+        return new Damage(DamageAmount, DamageType.Attack);
     }
 }

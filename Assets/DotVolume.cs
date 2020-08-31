@@ -14,11 +14,6 @@ public class DotVolume : MonoBehaviour, IDamageSource
 
     private float SecondsPerTick => 1f / TicksPerSecond;
 
-    private void OnTriggerEnter(Collider other)
-    {
-    }
-
-
     private bool TryAddTrigger(Collider other)
     {
         var actor = other.GetComponent<IActorEvents>();
@@ -31,13 +26,34 @@ public class DotVolume : MonoBehaviour, IDamageSource
         return false;
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        TryAddTrigger(other.collider);
+    }
+
     private void OnTriggerStay(Collider other)
     {
-        if (!TargetsByTime.ContainsKey(other) && !TryAddTrigger(other))
+        if (!IsDirectlyAbove(other))
+        {//we are standing on a platform
+            if (TargetsByTime.ContainsKey(other))
+            {
+                //player isn't just jumping, they are in a safe zone. remove them from consideration
+                TargetsByTime.Remove(other);
+            }
+            return;
+        }
+
+        if (IsGroundedOn(other))
+        {//we are standing on the hazard
+            TryAddTrigger(other);
+        }
+        
+        if (!(TargetsByTime.ContainsKey(other)))
         {
             return;
         }
 
+        //Player is standing on hazard or jumping around on it
         TargetsByTime[other] += Time.deltaTime;
         if (TargetsByTime[other] > SecondsPerTick)
         {
@@ -49,11 +65,41 @@ public class DotVolume : MonoBehaviour, IDamageSource
 
     private void OnTriggerExit(Collider other)
     {
-        //TargetsByTime.Remove(other);
+        if (TargetsByTime.ContainsKey(other))
+        {
+            TargetsByTime.Remove(other);
+        }
     }
 
-    public float GetDamage(ActorHealth actorToDamage)
+    public Damage GetDamage(ActorHealth actorToDamage)
     {
-        return Damage;
+        return new Damage(Damage, DamageType.Hazard);
+    }
+
+    private bool IsDirectlyAbove(Collider other)
+    {
+        Physics.Raycast(other.transform.position, Vector3.down, out var hit, LayerMask.GetMask("Default", "Hazard"));
+        if (hit.collider.gameObject == this.gameObject)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool IsGroundedOn(Collider other)
+    {
+        var bounds = other.bounds;
+        Vector3 origin = new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);;
+        Physics.Raycast(origin, Vector3.down, out var hit, LayerMask.GetMask("Default", "Hazard"));
+        if (hit.collider.gameObject != this.gameObject)
+        {
+            return false;
+        }
+
+        if (hit.distance > .1f) //that's a heck of an assumption
+            return false;
+
+        return true;
     }
 }

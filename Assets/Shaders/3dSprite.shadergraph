@@ -28,19 +28,19 @@
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"34dc7967-9189-4db9-ba1c-d67218497eb1\"\n    },\n    \"m_Name\": \"Rows\",\n    \"m_DefaultReferenceName\": \"Vector1_6ED4D45A\",\n    \"m_OverrideReferenceName\": \"Rows\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 3.0,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 1.0\n    }\n}"
+            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"34dc7967-9189-4db9-ba1c-d67218497eb1\"\n    },\n    \"m_Name\": \"Rows\",\n    \"m_DefaultReferenceName\": \"Vector1_6ED4D45A\",\n    \"m_OverrideReferenceName\": \"Rows\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 1.0,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 1.0\n    }\n}"
         },
         {
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"d699edc9-a321-4135-a65a-aba96560839a\"\n    },\n    \"m_Name\": \"Columns\",\n    \"m_DefaultReferenceName\": \"Vector1_7D43F567\",\n    \"m_OverrideReferenceName\": \"Columns\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 4.0,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 1.0\n    }\n}"
+            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"d699edc9-a321-4135-a65a-aba96560839a\"\n    },\n    \"m_Name\": \"Columns\",\n    \"m_DefaultReferenceName\": \"Vector1_7D43F567\",\n    \"m_OverrideReferenceName\": \"Columns\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 1.0,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 1.0\n    }\n}"
         },
         {
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"16b667a7-a3bf-4649-a859-0b4bf079f51c\"\n    },\n    \"m_Name\": \"NumFrames\",\n    \"m_DefaultReferenceName\": \"Vector1_4C841CCA\",\n    \"m_OverrideReferenceName\": \"NumFrames\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 10.0,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 1.0\n    }\n}"
+            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"16b667a7-a3bf-4649-a859-0b4bf079f51c\"\n    },\n    \"m_Name\": \"NumFrames\",\n    \"m_DefaultReferenceName\": \"Vector1_4C841CCA\",\n    \"m_OverrideReferenceName\": \"NumFrames\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 1.0,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 1.0\n    }\n}"
         },
         {
             "typeInfo": {

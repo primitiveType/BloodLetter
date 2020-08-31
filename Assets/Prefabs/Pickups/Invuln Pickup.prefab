@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toast: 1
+  damageToIgnore: -1
+  toastString: Picked Up a Bloodless Heart!
 --- !u!1001 &704343598297886986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 8938549416118754574, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_Name
-      value: Invuln Pickup (5)
+      value: Invuln Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2832319209844191510, guid: 840132d33d5f54540a847823e764d2fd, type: 3}

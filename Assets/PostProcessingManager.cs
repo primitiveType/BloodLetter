@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManager>
 {
     [SerializeField] private Volume Invuln;
+    [SerializeField] private Volume GasMask;
     [SerializeField] private Volume Damage;
     [SerializeField] private Volume Death;
 
@@ -23,6 +24,11 @@ public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManage
     {
         return EnableEffect(Invuln);
     }
+    public IPostProcessHandle EnableGasMaskEffect()
+    {
+        return EnableEffect(GasMask);
+    }
+
     
     public IPostProcessHandle EnableDamagedEffect(float weight)
     {

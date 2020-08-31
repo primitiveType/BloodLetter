@@ -18,6 +18,7 @@ public class CreateMaterialsForTextures : Editor
         "_NORM_A",
         "_NORM_B",
         "_normal",
+        "_Normal_0000",
         "_NRM",
     };
 
@@ -28,7 +29,8 @@ public class CreateMaterialsForTextures : Editor
         "_COLOR_B",
         "_COLOR_C",
         "_basecolor",
-        "_FRAMEBUFFER"
+        "_FRAMEBUFFER",
+        "_FrameBuffer_0000"
     };
 
     [MenuItem("Tools/CreateMaterialsForTextures")]
@@ -52,7 +54,7 @@ public class CreateMaterialsForTextures : Editor
                 string colorSuffix = null;
                 foreach (var suffix in ColorSuffixes)
                 {
-                    if (baseFilename.EndsWith(suffix))
+                    if (baseFilename.Contains(suffix))
                     {
                         colorSuffix = suffix;
                     }

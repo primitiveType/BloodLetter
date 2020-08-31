@@ -59,7 +59,8 @@ public class ActorHealth : MonoBehaviour
     }
 
 
-    public bool IsFullHealth => Math.Abs(MaxHealth - Health) <= float.Epsilon;
+    public bool IsFullHealth => MaxHealth - Health <= float.Epsilon;
+    public bool IsFullOverHealth => OverhealMaxHealth - Health <= float.Epsilon;
 
 
     private void Start()
@@ -85,7 +86,7 @@ public class ActorHealth : MonoBehaviour
     private void OnEnemyShot(object sender, OnShotEventArgs args)
     {
         var baseDamage = args.ProjectileInfo.GetDamage(this);
-        var resultingDamage = baseDamage;
+        var resultingDamage = baseDamage.Amount;
         if (m_Armor)
         {
             resultingDamage = m_Armor.TakeDamage(baseDamage);
@@ -109,6 +110,10 @@ public class ActorHealth : MonoBehaviour
 
     public void Heal(float amount, bool canOverheal = false)
     {
+        if (Health >= MaxHealth && !canOverheal)
+        {
+            return;
+        }
         var newHealth = Health;
         newHealth = Mathf.Clamp(newHealth + amount, 0, canOverheal ? OverhealMaxHealth : MaxHealth);
 

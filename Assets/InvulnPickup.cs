@@ -2,22 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using CodingEssentials;
+using UnityEngine;
 
 public class InvulnPickup : Pickup<PlayerRoot>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private DamageType damageToIgnore;
+    [SerializeField] private string toastString;
+    protected override string toastMessage => toastString;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    protected override string toastMessage => "Pickup up limited Invulnerability!";
     protected override bool CanBePickedUp()
     {
         return true;
@@ -25,6 +17,7 @@ public class InvulnPickup : Pickup<PlayerRoot>
 
     protected override void PickupItem()
     {
-        currentActor.Armor.gameObject.AddComponent<Invulnerable>();
+        var invuln = currentActor.Armor.gameObject.AddComponent<Invulnerable>();
+        invuln.DamageToIgnore = damageToIgnore;
     }
 }

@@ -175,6 +175,7 @@ Transform:
   - {fileID: 565338861}
   - {fileID: 585631434}
   - {fileID: 192835217}
+  - {fileID: 5033538543585357335}
   m_Father: {fileID: 5883707740076942863}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -191,8 +192,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invuln: {fileID: 565338860}
+  GasMask: {fileID: 6732390210970848109}
   Damage: {fileID: 585631435}
   Death: {fileID: 192835218}
+--- !u!1 &5223053834312349842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5033538543585357335}
+  - component: {fileID: 6732390210970848109}
+  m_Layer: 0
+  m_Name: GasMask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5033538543585357335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223053834312349842}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 524.4509, y: 812.9499, z: 5.388397}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1625358333}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6732390210970848109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223053834312349842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: f8dbcc7656590404980d6f645241f9d5, type: 2}
 --- !u!1 &5883707739652251202
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,8 +487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _saveData:
     _inventoryData:
-      EquippedWeapon: 0
-      Weapons: 0
+      EquippedWeapon: 1
+      Weapons: 1
       Ammo:
         m_keys: 
         m_values: 

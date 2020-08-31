@@ -12,7 +12,18 @@ public class HealthPickup : Pickup<ActorHealth>
 
     protected override bool CanBePickedUp()
     {
-        return !currentActor.IsFullHealth && currentActor.IsAlive;
+        if (!currentActor.IsAlive)
+        {
+            return false;
+        }
+
+        if (CanOverheal)
+        {
+            return !currentActor.IsFullOverHealth;
+        }
+        
+        
+        return !currentActor.IsFullHealth ;
     }
 
     protected override void PickupItem()

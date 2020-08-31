@@ -22,10 +22,14 @@ public class PlayerDamagedEffect : MonoBehaviour
     private void OnHealthChangedEvent(object sender, OnHealthChangedEventArgs args)
     {
         ppHandle?.SetWeight(ratio);
+        if (args.IsHealing)
+        {
+            return;
+        }
+
         if (FlashCoroutine != null)
         {
             StopCoroutine(FlashCoroutine);
-            
         }
 
         FlashCoroutine = StartCoroutine(FlashCr());
@@ -40,7 +44,7 @@ public class PlayerDamagedEffect : MonoBehaviour
         float time = Time.time;
         float t = 0;
         float dest = ratio;
-        float start = Mathf.Clamp01( dest + .5f);
+        float start = Mathf.Clamp01(dest + .5f);
         while (t <= duration)
         {
             ppHandle?.SetWeight(Mathf.Lerp(start, dest, t / duration));

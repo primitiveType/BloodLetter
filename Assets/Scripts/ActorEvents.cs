@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
 public class ActorEvents : MonoBehaviour, IActorEvents
@@ -174,5 +175,24 @@ public class OnShotEventArgs
 
 public interface IDamageSource
 {
-    float GetDamage(ActorHealth actorToDamage);
+    Damage GetDamage(ActorHealth actorToDamage);
+}
+
+public struct Damage
+{
+    public float Amount { get; set; }
+    public DamageType Type { get; set; }
+
+    public Damage(float amount, DamageType type)
+    {
+        Amount = amount;
+        Type = type;
+    }
+}
+
+[Flags]
+public enum DamageType
+{
+    Attack = 0x001,
+    Hazard = 0x010
 }

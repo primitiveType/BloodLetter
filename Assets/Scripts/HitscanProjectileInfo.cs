@@ -63,7 +63,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         int checks = 0;
         while (!isDone)
         {
-            if (Physics.Raycast(ray, out hit, Range, raycastMask))
+            if (Physics.Raycast(ray, out hit, Range, raycastMask, QueryTriggerInteraction.Collide))
             {
                 bool potentialHit = false;
                 checks++;
@@ -146,9 +146,9 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         return LayerMask.GetMask("Destructible", actorLayer);
     }
 
-    public float GetDamage(ActorHealth hitActor)
+    public Damage GetDamage(ActorHealth hitActor)
     {
-        return Damage;
+        return new Damage(Damage, DamageType.Attack);
     }
 }
 

@@ -22,17 +22,19 @@ public class ActorArmor : MonoBehaviour
         Events = GetComponent<IActorEvents>();
     }
 
-    public float TakeDamage(float baseDamage)
+    public float TakeDamage(Damage baseDamage)
     {
+        float amount = baseDamage.Amount;
         var invulnerable = GetComponent<Invulnerable>();
         if (invulnerable)
         {
             return 0;
         }
+        
 
         var prevValue = m_RemainingArmor;
         //var maxDamageBeforeReduction = m_RemainingArmor / reduc;
-        var amountReduced = Mathf.Min(baseDamage * reduc, m_RemainingArmor);
+        var amountReduced = Mathf.Min(amount * reduc, m_RemainingArmor);
         m_RemainingArmor = Mathf.Clamp(m_RemainingArmor - amountReduced, 0, 100);
 
         if (prevValue != m_RemainingArmor)
@@ -40,7 +42,7 @@ public class ActorArmor : MonoBehaviour
             Events.OnArmorChanged();
         }
 
-        return baseDamage - amountReduced;
+        return amount - amountReduced;
     }
 
     public bool IsFull()

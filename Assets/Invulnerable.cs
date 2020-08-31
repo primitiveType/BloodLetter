@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class Invulnerable : MonoBehaviour
 {
+    [SerializeField] private DamageType damageToIgnore;
+
+    public DamageType DamageToIgnore
+    {
+        get => damageToIgnore;
+        set => damageToIgnore = value;
+    }
+
     private float timestamp;
     [SerializeField] private float duration = 5;
     private IPostProcessHandle ppHandle;
-    public void Awake()
+
+    public void Start()
     {
         timestamp = Time.time;
-        ppHandle = PostProcessingManager.Instance.EnableInvulnEffect();
+        if (DamageToIgnore.HasFlag(DamageType.Attack))
+        {
+            ppHandle = PostProcessingManager.Instance.EnableInvulnEffect();
+        }
+        else if (damageToIgnore.HasFlag(DamageType.Hazard))
+        {
+            ppHandle = PostProcessingManager.Instance.EnableGasMaskEffect();
+        }
     }
 
     private void Update()
