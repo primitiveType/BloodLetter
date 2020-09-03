@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4553103361551022308
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3208500742725023557, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: ArmorAmount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208500742725023557, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: canOverheal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1977468
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 163.91452
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433944, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324934229423433948, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_Name
+      value: Armor Pickup Suit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857556490648078386, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c50c470366a5f6f42af0c57cfd453665, type: 2}
+    - target: {fileID: 8879078424938195810, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9999962
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030844314954478212, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99961334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030844314954478212, guid: ba5f0f884570e68408fb51bd438447c6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.027805608
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba5f0f884570e68408fb51bd438447c6, type: 3}
