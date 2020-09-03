@@ -2,4 +2,4 @@
 using UnityEngine.Rendering;
 
 [Serializable]
-public class AmmoDictionary : SerializableDictionary<AmmoType, int>{}
+public class AmmoDictionary : SerializableDictionary<AmmoType, float>{}

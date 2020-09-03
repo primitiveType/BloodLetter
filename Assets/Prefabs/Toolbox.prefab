@@ -491,7 +491,7 @@ MonoBehaviour:
       Weapons: 1
       Ammo:
         m_keys: 
-        m_values: 
+        m_values: []
     _playerHealth: 111
     _playerArmor: 11
   _newGameSaveData:
@@ -500,7 +500,9 @@ MonoBehaviour:
       Weapons: 1
       Ammo:
         m_keys: 0000000001000000
-        m_values: 2800000000000000
+        m_values:
+        - 40
+        - 0
     _playerHealth: 100
     _playerArmor: 0
 --- !u!114 &1248142936
@@ -689,5 +691,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IntroAudioSource: {fileID: 5883707740720520999}
   m_MainAudioSource: {fileID: 5883707739652251200}
-  introClip: {fileID: 8300000, guid: 9b902fa2edd73af4087e4f9ec477caac, type: 3}
-  mainClip: {fileID: 8300000, guid: 77318a204548dfa4cbbcb25da97f2545, type: 3}
+  introClip: {fileID: 8300000, guid: 699d033ad8b581449b89a5f50c8de35e, type: 3}
+  mainClip: {fileID: 8300000, guid: 3ce1844df32b08a408509864a2b5f56d, type: 3}

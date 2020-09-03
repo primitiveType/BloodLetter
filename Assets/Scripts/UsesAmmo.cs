@@ -4,7 +4,7 @@ public class UsesAmmo : MonoBehaviour
 {
 
     [SerializeField] private AmmoType AmmoType;
-    [SerializeField] private int AmmoUsed = 1;
+    [SerializeField] private float AmmoUsed = 1;
     private PlayerInventory Inventory;
     private PlayerEvents Events;
     [SerializeField] private EquipStatus EquipStatus;

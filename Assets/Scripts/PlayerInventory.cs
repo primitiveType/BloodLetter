@@ -74,13 +74,13 @@ public class PlayerInventory : MonoBehaviour
         return currentKeys.HasFlag(keyType);
     }
 
-    public int GetAmmoAmount(AmmoType type)
+    public float GetAmmoAmount(AmmoType type)
     {
-        InventoryData.Ammo.TryGetValue(type, out int ammo);
+        InventoryData.Ammo.TryGetValue(type, out float ammo);
         return ammo;
     }
 
-    public void UseAmmo(AmmoType type, int amount)
+    public void UseAmmo(AmmoType type, float amount)
     {
         ChangeAmmoAmount(type, -amount);
     }
@@ -90,14 +90,14 @@ public class PlayerInventory : MonoBehaviour
         ChangeAmmoAmount(type, amount);
     }
 
-    private void ChangeAmmoAmount(AmmoType type, int amount)
+    private void ChangeAmmoAmount(AmmoType type, float amount)
     {
-        if (!InventoryData.Ammo.TryGetValue(type, out int prevAmount))
+        if (!InventoryData.Ammo.TryGetValue(type, out float prevAmount))
         {
             InventoryData.Ammo.Add(type, 0);
         }
-        InventoryData.Ammo[type] = Mathf.CeilToInt(Mathf.Clamp((float) InventoryData.Ammo[type] + amount, 0, (float) GetMaxAmmoAmount(type)));
-        if (InventoryData.Ammo[type] != prevAmount)
+        InventoryData.Ammo[type] = Mathf.Clamp((float) InventoryData.Ammo[type] + amount, 0, GetMaxAmmoAmount(type));
+        if (Math.Abs(InventoryData.Ammo[type] - prevAmount) > float.Epsilon)
         {
             Events.OnAmmoChanged(prevAmount, InventoryData.Ammo[type], type);
         }

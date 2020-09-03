@@ -9817,8 +9817,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2760128639162428901}
   - component: {fileID: 4295198983490076356}
+  - component: {fileID: 2533533264107058295}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9944,3 +9945,19 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &2533533264107058295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755158725574057020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487b6f4fe5e91c44b9f107c92a0f4918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toChange: {fileID: 0}
+  OffsetToAdd: {x: 0.01, y: 0.01}
+  TimeStep: 0.01
+  ShaderPropertyId: UvOffset

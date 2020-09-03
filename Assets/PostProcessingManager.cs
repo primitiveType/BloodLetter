@@ -16,6 +16,7 @@ public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManage
     protected override void Awake()
     {
         HandlesPerEffect.Add(Invuln, 0);
+        HandlesPerEffect.Add(GasMask, 0);
         HandlesPerEffect.Add(Damage, 0);
         HandlesPerEffect.Add(Death, 0);
     }

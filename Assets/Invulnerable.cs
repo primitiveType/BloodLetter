@@ -13,7 +13,7 @@ public class Invulnerable : MonoBehaviour
     }
 
     private float timestamp;
-    [SerializeField] private float duration = 5;
+    [SerializeField] private float duration = 30;
     private IPostProcessHandle ppHandle;
 
     public void Start()

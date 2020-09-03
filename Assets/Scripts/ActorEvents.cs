@@ -57,7 +57,7 @@ public class ActorEvents : MonoBehaviour, IActorEvents
         OnArmorChangedEvent?.Invoke(this, new OnArmorChangedEventArgs());
     }
 
-    public void OnAmmoChanged(int oldValue, int newValue, AmmoType type)
+    public void OnAmmoChanged(float oldValue, float newValue, AmmoType type)
     {
         OnAmmoChangedEvent?.Invoke(this, new OnAmmoChangedEventArgs(oldValue, newValue, type));
     }
@@ -111,15 +111,15 @@ public delegate void OnAmmoChangedEvent(object sender, OnAmmoChangedEventArgs ar
 
 public class OnAmmoChangedEventArgs
 {
-    public OnAmmoChangedEventArgs(int oldValue, int newValue, AmmoType type)
+    public OnAmmoChangedEventArgs(float oldValue, float newValue, AmmoType type)
     {
         NewValue = newValue;
         OldValue = oldValue;
         Type = type;
     }
 
-    public int NewValue { get; }
-    public int OldValue { get; }
+    public float NewValue { get; }
+    public float OldValue { get; }
     public AmmoType Type { get; }
 }
 

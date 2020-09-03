@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1289667624184674189}
   - component: {fileID: 5538412704776290732}
   - component: {fileID: 6619670246701083051}
+  - component: {fileID: 6838196388207910797}
   m_Layer: 0
   m_Name: Staff projectile Explosion
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 3
   DamageAmount: 20
-  Force: 1
+  Force: 15
 --- !u!198 &1289667624184674189
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4784,8 +4785,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dca5e192caf667e41ade9664469c34c5, type: 2}
-  - {fileID: 2100000, guid: dca5e192caf667e41ade9664469c34c5, type: 2}
+  - {fileID: 2100000, guid: d247e5def8ad2b04795597a5a3fc778e, type: 2}
+  - {fileID: 2100000, guid: d247e5def8ad2b04795597a5a3fc778e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4842,3 +4843,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeAlive: 2
+--- !u!135 &6838196388207910797
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962804858628054579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}

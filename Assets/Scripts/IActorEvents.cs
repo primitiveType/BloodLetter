@@ -23,7 +23,7 @@
     void OnAggro();
     void OnHealthChanged(float amount, bool isHealing = false);
     void OnArmorChanged();
-    void OnAmmoChanged(int oldValue, int newValue, AmmoType type);
+    void OnAmmoChanged(float oldValue, float newValue, AmmoType type);
     void OnWeaponsChanged(WeaponId oldValue, WeaponId newValue);
     void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue);
 }

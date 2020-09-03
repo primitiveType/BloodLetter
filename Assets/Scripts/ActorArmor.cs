@@ -26,7 +26,7 @@ public class ActorArmor : MonoBehaviour
     {
         float amount = baseDamage.Amount;
         var invulnerable = GetComponent<Invulnerable>();
-        if (invulnerable)
+        if (invulnerable && invulnerable.DamageToIgnore.HasFlag(baseDamage.Type))
         {
             return 0;
         }

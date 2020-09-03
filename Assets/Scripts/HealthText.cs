@@ -25,7 +25,7 @@ public class HealthText : MonoBehaviour
     {
         if (IsDirty)
         {
-            Text.text = $"{Health.Health} / {Health.MaxHealth}";
+            Text.text = $"{Mathf.FloorToInt(Health.Health)} / {Mathf.FloorToInt(Health.MaxHealth)}";
         }
     }
 

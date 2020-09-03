@@ -54,7 +54,7 @@ public class EnemySounds : MonoBehaviour
     {
         Events = GetComponent<IActorEvents>();
         Events.OnStepEvent += OnEnemyStepped;
-        Events.OnShotEvent += OnEnemyShot;
+        Events.OnHealthChangedEvent += OnEnemyDamaged;
         Events.OnAttackEvent += OnEnemyAttack;
         Events.OnDeathEvent += OnEnemyDeath;
         Events.OnAggroEvent += OnEnemyAggro;
@@ -113,8 +113,10 @@ public class EnemySounds : MonoBehaviour
         AttackSource.PlayOneShot(AttackClip); //todo: only play if player hit by it?
     }
 
-    private void OnEnemyShot(object sender, OnShotEventArgs args)
+    private void OnEnemyDamaged(object sender, OnHealthChangedEventArgs args)
     {
+        if (args.IsHealing)
+            return;
         HurtSource.clip = HurtClip;
         HurtSource.Play();
     }
@@ -132,7 +134,7 @@ public class EnemySounds : MonoBehaviour
     private void DetachEvents()
     {
         Events.OnStepEvent -= OnEnemyStepped;
-        Events.OnShotEvent -= OnEnemyShot;
+        Events.OnHealthChangedEvent -= OnEnemyDamaged;
         Events.OnAttackEvent -= OnEnemyAttack;
         Events.OnDeathEvent -= OnEnemyDeath;
         Events.OnAggroEvent -= OnEnemyAggro;

@@ -99,7 +99,7 @@ public class ActorEventsMediator : MonoBehaviour, IActorEvents
         _actorEventsImplementation.OnArmorChanged();
     }
 
-    public void OnAmmoChanged(int oldValue, int newValue, AmmoType type)
+    public void OnAmmoChanged(float oldValue, float newValue, AmmoType type)
     {
         _actorEventsImplementation.OnAmmoChanged(oldValue, newValue, type);
     }
