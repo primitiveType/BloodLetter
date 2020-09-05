@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Mime;
+using E7.Introloop;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -62,6 +63,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
 
         Timer.Instance.PauseTimer();
         LevelEnd?.Invoke(this, new LevelEndEventArgs(success));
+        IntroloopPlayer.Instance.Stop();
         SceneManager.LoadScene("LevelEnd");
     }
 

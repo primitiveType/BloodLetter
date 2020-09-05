@@ -6,14 +6,22 @@ using UnityEngine;
 
 public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjectile
 {
+    [SerializeField] private ActorRoot _actorRoot;
     private AnimationMaterialHelper MaterialHelper => ActorRoot.AnimationMaterialHelper;
     private IActorEvents Events => ActorRoot.ActorEvents;
 
-    private ActorRoot ActorRoot { get; set; }
+    private ActorRoot ActorRoot
+    {
+        get => _actorRoot;
+        set => _actorRoot = value;
+    }
 
     private void Start()
     {
-        ActorRoot = GetComponentInParent<ActorRoot>();
+        if (ActorRoot == null)
+        {
+            ActorRoot = GetComponentInParent<ActorRoot>();
+        }
     }
 
     public bool IsHit(Vector2 textureCoord)

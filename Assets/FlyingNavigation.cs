@@ -19,7 +19,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     void Start()
     {
         Steering = GetComponent<FlyingSteeringComponent>();
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponentInParent<Rigidbody>();
         myTransform = transform;
         ActorRoot = GetComponentInParent<ActorRoot>();
     }
@@ -56,7 +56,9 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
     private void HandleVelocity(Vector3 dest)
     {
-        if (Vector3.Distance(myTransform.position, dest) <= BreakDistance)
+        bool currentlyHasVision = ActorRoot.VisibilityHandler.CanSeePlayer();
+
+        if (currentlyHasVision && Vector3.Distance(myTransform.position, dest) <= BreakDistance)
         {
             TrySetVelocity(Vector3.zero);
         }
@@ -96,7 +98,11 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
             tValue *= diffRatio;
         }
 
-        myTransform.forward = Vector3.Slerp(myTransform.forward, targetLook, tValue);
+        var forward = myTransform.forward;
+        var newY = Vector3.Slerp(forward, targetLook, tValue).y;
+        forward = new Vector3(forward.x, newY, forward.z);
+        myTransform.forward = forward;
+    //    myTransform.rotation = Quaternion.Euler(0, myTransform.rotation.y, 0 );//HACK
     }
 
     public float MaxSpeed

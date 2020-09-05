@@ -7,7 +7,6 @@ public class EnemyMovement : MonoBehaviour
 {
     //TODO:move animation state constants into new file?
     private static readonly int Moving = Animator.StringToHash("Moving");
-    private static readonly int IsDead = Animator.StringToHash("IsDead");
 
     [SerializeField] private INavigationAgent Agent;
 
@@ -17,7 +16,6 @@ public class EnemyMovement : MonoBehaviour
 
 
     [SerializeField] private Transform Target;
-    [SerializeField] private bool isFlying;
     private ActorRoot ActorRoot { get; set; }
 
     private Animator Animator
@@ -37,7 +35,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         ActorRoot = GetComponentInParent<ActorRoot>();
-        Agent = GetComponent<INavigationAgent>();
+        Agent = ActorRoot.Navigation;
 
         Events.OnAggroEvent += OnEnemyAggro;
         Events.OnStepEvent += OnEnemyStepped;

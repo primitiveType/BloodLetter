@@ -1,4 +1,5 @@
 ﻿using System;
+using CodingEssentials;
 using UnityEngine;
 
 public abstract class Pickup<T> : MonoBehaviour where T : Component
@@ -10,9 +11,12 @@ public abstract class Pickup<T> : MonoBehaviour where T : Component
 
     protected abstract string toastMessage { get; }
 
+    private AudioSource audioSource;
+
     private void Awake()
     {
         gameObject.layer = LayerMask.NameToLayer("Pickup");
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -30,9 +34,16 @@ public abstract class Pickup<T> : MonoBehaviour where T : Component
                 ToastHandler.Instance.PopToast(toastMessage);
             }
 
+            PlaySound();
             PickupItem();
             Destroy(gameObject);
         }
+    }
+
+    private void PlaySound()
+    {
+        if (audioSource)
+            audioSource.Play();
     }
 
     protected abstract bool CanBePickedUp();

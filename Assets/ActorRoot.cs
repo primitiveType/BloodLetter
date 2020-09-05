@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
+﻿
 using UnityEngine;
 
 public class ActorRoot : MonoBehaviour
@@ -18,8 +16,8 @@ public class ActorRoot : MonoBehaviour
     public ActorArmor Armor { get; private set; }
 
     public virtual EntityType EntityType => EntityType.Enemy;
-    
-    
+    public INavigationAgent Navigation { get; set; }
+
 
     void Awake()
     {
@@ -31,6 +29,7 @@ public class ActorRoot : MonoBehaviour
         VisibilityHandler = GetComponentInChildren<MonsterVisibilityHandler>();
         Health = GetComponentInChildren<ActorHealth>();
         Armor = GetComponentInChildren<ActorArmor>();
+        Navigation = GetComponentInChildren<INavigationAgent>();
     }
 
     // Update is called once per frame

@@ -1,5 +1,4 @@
-﻿using UnityEditor.Rendering.PostProcessing;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ChainHitscanProjectileInfo : HitscanProjectileInfo
 {
