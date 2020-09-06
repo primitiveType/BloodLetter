@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 public class PlayerRoot : ActorRoot
 {
     public override EntityType EntityType => EntityType.Player;
@@ -21,6 +20,7 @@ public class PlayerRoot : ActorRoot
     {
         Health.Health = SaveState.Instance.SaveData.PlayerHealth;
         Armor.CurrentArmor = SaveState.Instance.SaveData.PlayerArmor;
+        CursorLockManager.Instance.Lock();
     }
 
     private void OnDestroy()

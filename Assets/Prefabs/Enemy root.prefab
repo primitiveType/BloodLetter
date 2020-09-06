@@ -130,7 +130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6866908215882061170}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.15772153, z: -0.050000004}
+  m_LocalPosition: {x: 0, y: 1.18, z: -0.050000004}
   m_LocalScale: {x: 0.09174311, y: 0.25316456, z: 1}
   m_Children: []
   m_Father: {fileID: 8171493255988436116}
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisibilityHandler: {fileID: 678540891885456008}
   AggroRange: 30
-  EarshotAggroRange: 40
+  EarshotAggroRange: 50
   AggroDelayVariance: 0.5
 --- !u!1 &8171493255443565340
 GameObject:

@@ -10,29 +10,47 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
 
     [SerializeField] private float Force;
 
-    // Start is called before the first frame update
-    // void Start()
-    // {
-    //     var hitObjects = Physics.OverlapSphere(transform.position, Radius, ~LayerMask.NameToLayer("Default"));
-    //     foreach (Collider collider in hitObjects)
-    //     {
-    //         Debug.Log($"hit {collider.name}");
-    //         var damaged = collider.GetComponent<IActorEvents>();
-    //         if (collider.attachedRigidbody)
-    //         {
-    //             var direction = collider.transform.position - transform.position;
-    //             collider.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
-    //         }
-    //
-    //         damaged?.OnShot(this);
-    //     }
-    // }
-    
+    [SerializeField] private float Duration = 1f;
+
+    private float startTime;
+    private void Start()
+    {
+        startTime = Time.time;
+        var overlapObjects = Physics.OverlapSphere(transform.position, Radius, ~LayerMask.NameToLayer("Default"));
+        foreach (Collider collider in overlapObjects)
+        {
+            if (hitObjects.Contains(collider))
+            {
+                continue;
+            }
+        
+            hitObjects.Add(collider);
+            
+            Debug.Log($"hit {collider.name}");
+            var damaged = collider.GetComponent<IActorEvents>();
+            if (collider.attachedRigidbody)
+            {
+                var direction = collider.transform.position - transform.position;
+                collider.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
+            }
+        
+            damaged?.OnShot(this);
+        }
+    }
+
+    private void Update()
+    {
+        if (Time.time > startTime + Duration)
+        {
+            this.enabled = false;
+        }
+    }
+
     private List<Collider> hitObjects = new List<Collider>();
 
     private void OnTriggerEnter(Collider other)
     {
-        if (hitObjects.Contains(other))
+        if (!enabled || hitObjects.Contains(other))
         {
             return;
         }
@@ -40,7 +58,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
         hitObjects.Add(other);
         
         Debug.Log($"hit {other.name}");
-        var damaged = other.GetComponent<IActorEvents>();
+        var damaged = other.GetComponentInChildren<IActorEvents>();
         if (other.attachedRigidbody)
         {
             var direction = other.transform.position - transform.position;

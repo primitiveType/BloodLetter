@@ -3,7 +3,7 @@
 public class WeaponPickup : Pickup<PlayerInventory>
 {
     [SerializeField] private WeaponId WeaponId;
-    protected override string toastMessage => $"Picked up the {WeaponId.ToString()} !";
+    protected override string toastMessage => $"Picked up the {GetWeaponName(WeaponId)} !";
 
     protected override bool CanBePickedUp()
     {
@@ -13,5 +13,15 @@ public class WeaponPickup : Pickup<PlayerInventory>
     protected override void PickupItem()
     {
         currentActor.GetWeapon(WeaponId);
+    }
+
+    private string GetWeaponName(WeaponId id)
+    {
+        if (id == WeaponId.Staff)
+        {
+            return "Taipala Staff";
+        }
+
+        return WeaponId.ToString();
     }
 }

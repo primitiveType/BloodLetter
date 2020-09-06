@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6726295802849478165}
   - component: {fileID: 115979589318912338}
   - component: {fileID: 8048990536416520220}
+  - component: {fileID: 386722193316702245}
   m_Layer: 0
   m_Name: Flesh bomb explosion
   m_TagString: Untagged
@@ -4867,3 +4868,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &386722193316702245
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962804858628054579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}

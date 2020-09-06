@@ -45,7 +45,6 @@ public class MonsterVisibilityHandler : MonoBehaviour
             var direction = ((MonsterTransform.position - Target.position).normalized);
             // Debug.Log(direction);
             var angle = Vector3.Dot(direction, MonsterTransform.forward);
-             Debug.Log(angle);
             
             if (angle > (DegreesVisibility / 180f) -1) //if monster isn't facing player
             {
@@ -58,7 +57,7 @@ public class MonsterVisibilityHandler : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction, Color.red, 5f);
         if (Physics.Raycast(ray, out RaycastHit hitInfo, 100, LayerMask.GetMask("Player", "Default", "Interactable", "Hazard", "Destructible")))
         {
-            Debug.Log(hitInfo.transform.name);
+           // Debug.Log(hitInfo.transform.name);
             m_CanSeePlayer =  hitInfo.transform == TargetCollider;
            if (m_CanSeePlayer)
            {

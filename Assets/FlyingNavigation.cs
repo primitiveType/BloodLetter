@@ -9,7 +9,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     private FlyingSteeringComponent Steering { get; set; }
     private ActorRoot ActorRoot { get; set; }
 
-    private Transform myTransform;
+    [SerializeField]private Transform myTransform;
 
     private Rigidbody rb;
 
@@ -99,8 +99,9 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         }
 
         var forward = myTransform.forward;
-        var newY = Vector3.Slerp(forward, targetLook, tValue).y;
-        forward = new Vector3(forward.x, newY, forward.z);
+        forward = Vector3.Slerp(forward, targetLook, tValue);
+       
+        //forward = new Vector3(forward.x, newY, forward.z);
         myTransform.forward = forward;
     //    myTransform.rotation = Quaternion.Euler(0, myTransform.rotation.y, 0 );//HACK
     }

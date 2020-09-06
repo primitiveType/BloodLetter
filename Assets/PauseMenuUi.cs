@@ -10,14 +10,14 @@ public class PauseMenuUi : MonoBehaviour
     {
         menuParent.SetActive(true);
         Time.timeScale = 0;
-        Cursor.lockState = CursorLockMode.None;
+       CursorLockManager.Instance.Unlock();
     }
 
     public void Unpause()
     {
         menuParent.SetActive(false);
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
+        CursorLockManager.Instance.Lock();
 
     }
 
@@ -39,5 +39,13 @@ public class PauseMenuUi : MonoBehaviour
                 Pause();
             }
         }
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            CursorLockManager.Instance.Unlock();
+        }
+
+        #endif
+        
     }
 }

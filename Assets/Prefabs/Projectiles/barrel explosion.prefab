@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6962804858628054580}
   - component: {fileID: 115979589318912338}
+  - component: {fileID: 5460727409768576122}
+  - component: {fileID: 3425376379481355449}
   m_Layer: 0
   m_Name: barrel explosion
   m_TagString: Untagged
@@ -43,6 +45,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75663a7118504bd4abfd96c7694d78d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 5
+  Radius: 2
   DamageAmount: 40
-  Force: 30
+  Force: 1
+  Duration: 111
+--- !u!135 &5460727409768576122
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962804858628054579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3425376379481355449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962804858628054579}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e9f7922edcf2543a40c1ed28353e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeAlive: 0.1
