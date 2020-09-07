@@ -102,6 +102,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172a598f250cdbc4f8e890cab638e437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2552845680951995274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361890597492146672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa35ae5173284bf39b1d535908c249bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RaycastDistance: 5
+  NumRaysPerAxis: 5
 --- !u!114 &6835221132979595863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,20 +134,6 @@ MonoBehaviour:
   MaxAcceleration: 0.1
   myTransform: {fileID: 7361890597492146673}
   _maxSpeed: 50
---- !u!114 &2552845680951995274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361890597492146672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa35ae5173284bf39b1d535908c249bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RaycastDistance: 5
-  NumRaysPerAxis: 5
 --- !u!1001 &1678797764554132204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 7486875836196438498, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: AggroDelayVariance
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

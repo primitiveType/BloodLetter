@@ -1,9 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 public class ThreeStageElevatorIdService : MonoBehaviourSingleton<ThreeStageElevatorIdService>
 {
     
     private Dictionary<InteractableKey, List<ThreeStageElevator>> Elevators = new Dictionary<InteractableKey, List<ThreeStageElevator>>();
+
+    private void Start()
+    {
+        LevelManager.Instance.LevelBegin += InstanceOnLevelBegin;
+    }
+
+    private void InstanceOnLevelBegin(object sender, LevelBeginEventArgs args)
+    {
+        Elevators.Clear();
+    }
+
     public void RegisterInteractable(ThreeStageElevator interactbale, InteractableKey key)
     {
         if (!Elevators.ContainsKey(key))

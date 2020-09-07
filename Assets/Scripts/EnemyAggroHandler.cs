@@ -21,6 +21,7 @@ public class EnemyAggroHandler : MonoBehaviour
         get => m_isAggro;
         set
         {
+            Initialize();
             bool prevAggro = IsAggro;
             m_isAggro = value;
             Animator.SetBool(Aggro, IsAggro);
@@ -66,14 +67,28 @@ public class EnemyAggroHandler : MonoBehaviour
     }
 
 
-    private void Start()
+    private bool isInitialized;
+
+    private void Initialize()
     {
+        if (isInitialized)
+        {
+            return;
+        }
+
+        isInitialized = true;
+
         ActorRoot = GetComponentInParent<ActorRoot>();
         Toolbox.Instance.PlayerEvents.PlayerShootEvent += OnPlayerShoot;
         Events.OnShotEvent += OnEnemyShot;
         Events.OnDeathEvent += OnEnemyDeath;
 
         Target = Toolbox.Instance.PlayerTransform;
+    }
+
+    private void Start()
+    {
+        Initialize();
     }
 
     private void Update()

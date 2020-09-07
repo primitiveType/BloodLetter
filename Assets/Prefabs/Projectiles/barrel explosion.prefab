@@ -48,7 +48,7 @@ MonoBehaviour:
   Radius: 2
   DamageAmount: 40
   Force: 1
-  Duration: 111
+  Duration: 0.1
 --- !u!135 &5460727409768576122
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6962804858628054579}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66e9f7922edcf2543a40c1ed28353e28, type: 3}
   m_Name: 

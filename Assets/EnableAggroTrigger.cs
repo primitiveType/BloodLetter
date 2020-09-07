@@ -14,6 +14,8 @@ public class EnableAggroTrigger : PlayerTrigger
         {
             actorRoot.HitscanCollider.SetEnabled(true);
             actorRoot.AggroHandler.enabled = true;
+            actorRoot.AggroHandler.IsAggro = true;
         }
+        
     }
 }
