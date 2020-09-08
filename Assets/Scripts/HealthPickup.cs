@@ -1,29 +1,20 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HealthPickup : Pickup<ActorHealth>
 {
-    [SerializeField] private float HealAmount;
     [SerializeField] private bool CanOverheal;
+    [SerializeField] private float HealAmount;
 
     protected override string toastMessage => $"Pickep up {HealAmount} Health";
 
     protected override bool CanBePickedUp()
     {
-        if (!currentActor.IsAlive)
-        {
-            return false;
-        }
+        if (!currentActor.IsAlive) return false;
 
-        if (CanOverheal)
-        {
-            return !currentActor.IsFullOverHealth;
-        }
-        
-        
-        return !currentActor.IsFullHealth ;
+        if (CanOverheal) return !currentActor.IsFullOverHealth;
+
+
+        return !currentActor.IsFullHealth;
     }
 
     protected override void PickupItem()

@@ -1,24 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
     [SerializeField] private PlayerEvents Events;
+
     [SerializeField] private MonoBehaviour ToDisable;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Events.OnDeathEvent += EventsOnOnDeathEvent;
     }
 
     private void EventsOnOnDeathEvent(object sender, OnDeathEventArgs args)
     {
-        ToDisable.enabled = (false);
+        ToDisable.enabled = false;
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         Events.OnDeathEvent -= EventsOnOnDeathEvent;
     }

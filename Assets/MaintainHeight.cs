@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MaintainHeight : MonoBehaviour
 {
     private float worldHeight;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         worldHeight = transform.position.y;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         var myTransform = transform;
         var position = myTransform.position;

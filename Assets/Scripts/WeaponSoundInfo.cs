@@ -1,13 +1,12 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WeaponSoundInfo : MonoBehaviour
 {
-    [SerializeField] private bool LoopShootSound;
-    [SerializeField] private bool LoopIdleSound;
-    [SerializeField] private AudioClip ShootSound;
-    [SerializeField] private AudioClip ReloadSound;
     [SerializeField] private AudioClip IdleSound;
+    [SerializeField] private bool LoopIdleSound;
+    [SerializeField] private bool LoopShootSound;
+    [SerializeField] private AudioClip ReloadSound;
+    [SerializeField] private AudioClip ShootSound;
 
     [SerializeField] private AudioSource Source;
 
@@ -22,9 +21,7 @@ public class WeaponSoundInfo : MonoBehaviour
     private void OnDestroy()
     {
         if (Toolbox.Instance != null && Toolbox.Instance.PlayerEvents != null)
-        {
             Toolbox.Instance.PlayerEvents.OnEquippedWeaponChangedEvent -= PlayerEventsOnOnWeaponsChangedEvent;
-        }
     }
 
     private void PlayerEventsOnOnWeaponsChangedEvent(object sender, OnEquippedWeaponChangedEventArgs args)
@@ -38,10 +35,7 @@ public class WeaponSoundInfo : MonoBehaviour
         {
             Source.clip = ShootSound;
             Source.loop = true;
-            if (!Source.isPlaying)
-            {
-                Source.Play();
-            }
+            if (!Source.isPlaying) Source.Play();
         }
         else
         {
@@ -57,18 +51,12 @@ public class WeaponSoundInfo : MonoBehaviour
 
     public void OnIdle()
     {
-        if (!Source.enabled)
-        {
-            return;
-        }
+        if (!Source.enabled) return;
         if (IdleSound && LoopIdleSound)
         {
             Source.clip = IdleSound;
             Source.loop = true;
-            if (!Source.isPlaying)
-            {
-                Source.Play();
-            }
+            if (!Source.isPlaying) Source.Play();
         }
         else
         {

@@ -1,23 +1,27 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using System.Collections;
 using UnityEngine;
-
 
 public class EnemyMovement : MonoBehaviour
 {
     //TODO:move animation state constants into new file?
     private static readonly int Moving = Animator.StringToHash("Moving");
+    [SerializeField] private Animator _animator;
 
     [SerializeField] private INavigationAgent Agent;
 
     [SerializeField] private EnemyAggroHandler AggroHandler;
+    private Coroutine AttackRoutine;
+    private readonly float attackTime = .5f;
 
-    public IActorEvents Events => ActorRoot.ActorEvents;
+
+    private bool isAttacking;
+
+    private ActorHealth m_Health;
 
 
     [SerializeField] private Transform Target;
+
+    public IActorEvents Events => ActorRoot.ActorEvents;
     private ActorRoot ActorRoot { get; set; }
 
     private Animator Animator
@@ -25,9 +29,6 @@ public class EnemyMovement : MonoBehaviour
         get => _animator;
         set => _animator = value;
     }
-
-    private ActorHealth m_Health;
-    [SerializeField] private Animator _animator;
 
     public ActorHealth Health => m_Health != null ? m_Health : m_Health = GetComponent<ActorHealth>();
 
@@ -65,17 +66,9 @@ public class EnemyMovement : MonoBehaviour
     {
     }
 
-
-    private bool isAttacking;
-    private float attackTime = .5f;
-    private Coroutine AttackRoutine;
-
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
-        if (AttackRoutine != null)
-        {
-            StopCoroutine(AttackRoutine);
-        }
+        if (AttackRoutine != null) StopCoroutine(AttackRoutine);
 
         AttackRoutine = StartCoroutine(AttackTimerCR());
     }

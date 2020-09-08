@@ -7,9 +7,6 @@ public class InteractableZone : PlayerTrigger
     protected override void Trigger(Collider other)
     {
         triggered = true;
-        foreach (var interactable in GetComponents<IInteractable>())
-        {
-            interactable.Interact();
-        }
+        foreach (var interactable in GetComponents<IInteractable>()) interactable.Interact();
     }
 }

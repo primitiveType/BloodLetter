@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TriggerOnShot : MonoBehaviour
 {
-    private IActorEvents Events;
-    [SerializeField] private Animator Animator;
     private static readonly int Trigger = Animator.StringToHash("Trigger");
+    [SerializeField] private Animator Animator;
+    private IActorEvents Events;
 
     private void Start()
     {

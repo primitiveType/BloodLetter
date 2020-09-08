@@ -2,21 +2,36 @@
 
 public class FlyingNavigation : MonoBehaviour, INavigationAgent
 {
-    [SerializeField] private float MaxRotationSpeed = 1f;
-    [SerializeField] private float BreakDistance = 1f;
+    [SerializeField] private float _maxSpeed;
     [SerializeField] private bool AimForBreakDistance = true;
+    [SerializeField] private float BreakDistance = 1f;
     [SerializeField] private float MaxAcceleration = 1f;
+    [SerializeField] private float MaxRotationSpeed = 1f;
+
+    [SerializeField] private Transform myTransform;
+
+    private Rigidbody rb;
     private FlyingSteeringComponent Steering { get; set; }
     private ActorRoot ActorRoot { get; set; }
 
-    [SerializeField]private Transform myTransform;
+    public Vector3 TargetPosition { get; private set; }
 
-    private Rigidbody rb;
+    public float MaxSpeed
+    {
+        get => _maxSpeed;
+        set => _maxSpeed = value;
+    }
 
-    [SerializeField] private float _maxSpeed;
+    public bool isStopped { get; set; }
+    public bool updateRotation { get; set; }
+    public Vector3 velocity => rb.velocity;
+
+    public void SetDestination(Vector3 targetPosition)
+    {
+    }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Steering = GetComponent<FlyingSteeringComponent>();
         rb = GetComponentInParent<Rigidbody>();
@@ -26,17 +41,14 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
     private void FixedUpdate()
     {
-        if (!ActorRoot.VisibilityHandler.LastSeenPosition.HasValue)
-        {
-            return;
-        }
+        if (!ActorRoot.VisibilityHandler.LastSeenPosition.HasValue) return;
 
-        bool currentlyHasVision = ActorRoot.VisibilityHandler.CanSeePlayer();
+        var currentlyHasVision = ActorRoot.VisibilityHandler.CanSeePlayer();
 
         var prevLocation = myTransform.position;
 
         Vector3 dest;
-        Vector3 lookDest = ActorRoot.VisibilityHandler.LastSeenPosition.Value;
+        var lookDest = ActorRoot.VisibilityHandler.LastSeenPosition.Value;
         if (AimForBreakDistance && currentlyHasVision)
         {
             var offset = (prevLocation - ActorRoot.VisibilityHandler.LastSeenPosition.Value).normalized * BreakDistance;
@@ -52,11 +64,9 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         HandleVelocity(dest);
     }
 
-    public Vector3 TargetPosition { get; private set; }
-
     private void HandleVelocity(Vector3 dest)
     {
-        bool currentlyHasVision = ActorRoot.VisibilityHandler.CanSeePlayer();
+        var currentlyHasVision = ActorRoot.VisibilityHandler.CanSeePlayer();
 
         if (currentlyHasVision && Vector3.Distance(myTransform.position, dest) <= BreakDistance)
         {
@@ -74,13 +84,9 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     {
         var diff = Vector3.Distance(rb.velocity, newVelocity);
         if (diff > MaxAcceleration)
-        {
-            rb.velocity = Vector3.Lerp(rb.velocity, newVelocity, (MaxAcceleration / diff));
-        }
+            rb.velocity = Vector3.Lerp(rb.velocity, newVelocity, MaxAcceleration / diff);
         else
-        {
             rb.velocity = newVelocity;
-        }
     }
 
     private void HandleRotation(Vector3 targetDestination)
@@ -89,7 +95,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         var targetLook = (targetDestination - prevLocation).normalized;
         var angleBetween = Vector3.Angle(targetLook, myTransform.forward);
         var tValue = Time.deltaTime;
-        var maxRotationsThisframe = MaxRotationSpeed * (tValue);
+        var maxRotationsThisframe = MaxRotationSpeed * tValue;
         var maxDegreesThisFrame = maxRotationsThisframe * 360f;
         if (angleBetween > maxDegreesThisFrame)
         {
@@ -100,29 +106,15 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
         var forward = myTransform.forward;
         forward = Vector3.Slerp(forward, targetLook, tValue);
-       
+
         //forward = new Vector3(forward.x, newY, forward.z);
         myTransform.forward = forward;
-    //    myTransform.rotation = Quaternion.Euler(0, myTransform.rotation.y, 0 );//HACK
-    }
-
-    public float MaxSpeed
-    {
-        get => _maxSpeed;
-        set => _maxSpeed = value;
+        //    myTransform.rotation = Quaternion.Euler(0, myTransform.rotation.y, 0 );//HACK
     }
 
 
     // Update is called once per frame
-    void Update()
-    {
-    }
-
-    public bool isStopped { get; set; }
-    public bool updateRotation { get; set; }
-    public Vector3 velocity => rb.velocity;
-
-    public void SetDestination(Vector3 targetPosition)
+    private void Update()
     {
     }
 }

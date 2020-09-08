@@ -1,28 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-
 public class SC_FPSController : MonoBehaviour
 {
-    public float walkingSpeed = 7.5f;
-    public float runningSpeed = 11.5f;
-    public float jumpSpeed = 8.0f;
+    [HideInInspector] public bool canMove = true;
+
+    private CharacterController characterController;
     public float gravity = 20.0f;
-    public Camera playerCamera;
+    public float jumpSpeed = 8.0f;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
+    private Vector3 moveDirection = Vector3.zero;
+    public Camera playerCamera;
+    private float rotationX;
+    public float runningSpeed = 11.5f;
+    public float walkingSpeed = 7.5f;
 
-    CharacterController characterController;
-    Vector3 moveDirection = Vector3.zero;
-    float rotationX = 0;
-
-    [HideInInspector]
-    public bool canMove = true;
-
-    void Start()
+    private void Start()
     {
         characterController = GetComponent<CharacterController>();
         // Lock cursor
@@ -30,47 +24,37 @@ public class SC_FPSController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void Update()
+    private void Update()
     {
         // We are grounded, so recalculate move direction based on axes
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
+        var forward = transform.TransformDirection(Vector3.forward);
+        var right = transform.TransformDirection(Vector3.right);
         // Press Left Shift to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        var isRunning = Input.GetKey(KeyCode.LeftShift);
 
-        float vert = Input.GetAxis("Vertical");
-        float horz = Input.GetAxis("Horizontal");
+        var vert = Input.GetAxis("Vertical");
+        var horz = Input.GetAxis("Horizontal");
 
-        Vector2 movedir = new Vector2(vert, horz);
-        float targetSpeed = isRunning ? runningSpeed : walkingSpeed;
+        var movedir = new Vector2(vert, horz);
+        var targetSpeed = isRunning ? runningSpeed : walkingSpeed;
         movedir *= targetSpeed;
-        if (movedir.magnitude > targetSpeed)
-        {
-            movedir = movedir.normalized * targetSpeed;
-        }
-        float curSpeedX = canMove ? movedir.x : 0;
-        float curSpeedY = canMove ? movedir.y : 0;
+        if (movedir.magnitude > targetSpeed) movedir = movedir.normalized * targetSpeed;
+        var curSpeedX = canMove ? movedir.x : 0;
+        var curSpeedY = canMove ? movedir.y : 0;
 
 
-        float movementDirectionY = moveDirection.y;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+        var movementDirectionY = moveDirection.y;
+        moveDirection = forward * curSpeedX + right * curSpeedY;
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
-        {
             moveDirection.y = jumpSpeed;
-        }
         else
-        {
             moveDirection.y = movementDirectionY;
-        }
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
-        if (!characterController.isGrounded)
-        {
-            moveDirection.y -= gravity * Time.deltaTime;
-        }
+        if (!characterController.isGrounded) moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);

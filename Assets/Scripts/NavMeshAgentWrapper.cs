@@ -6,11 +6,6 @@ public class NavMeshAgentWrapper : MonoBehaviour, INavigationAgent
 {
     private NavMeshAgent NavMeshAgent;
 
-    private void Awake()
-    {
-        NavMeshAgent = GetComponent<NavMeshAgent>();
-    }
-
 
     public bool isStopped
     {
@@ -33,5 +28,10 @@ public class NavMeshAgentWrapper : MonoBehaviour, INavigationAgent
     public void SetDestination(Vector3 targetPosition)
     {
         NavMeshAgent.SetDestination(targetPosition);
+    }
+
+    private void Awake()
+    {
+        NavMeshAgent = GetComponent<NavMeshAgent>();
     }
 }

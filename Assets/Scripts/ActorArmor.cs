@@ -1,11 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ActorArmor : MonoBehaviour
 {
     [SerializeField] private IActorEvents Events;
     [SerializeField] private float m_RemainingArmor;
-    private float reduc = .5f;
+    private readonly float reduc = .5f;
 
     public float MaxArmor => 100;
     public float OverhealMaxArmor => 100;
@@ -24,23 +23,17 @@ public class ActorArmor : MonoBehaviour
 
     public float TakeDamage(Damage baseDamage)
     {
-        float amount = baseDamage.Amount;
+        var amount = baseDamage.Amount;
         var invulnerable = GetComponent<Invulnerable>();
-        if (invulnerable && invulnerable.DamageToIgnore.HasFlag(baseDamage.Type))
-        {
-            return 0;
-        }
-        
+        if (invulnerable && invulnerable.DamageToIgnore.HasFlag(baseDamage.Type)) return 0;
+
 
         var prevValue = m_RemainingArmor;
         //var maxDamageBeforeReduction = m_RemainingArmor / reduc;
         var amountReduced = Mathf.Min(amount * reduc, m_RemainingArmor);
         m_RemainingArmor = Mathf.Clamp(m_RemainingArmor - amountReduced, 0, 100);
 
-        if (prevValue != m_RemainingArmor)
-        {
-            Events.OnArmorChanged();
-        }
+        if (prevValue != m_RemainingArmor) Events.OnArmorChanged();
 
         return amount - amountReduced;
     }
@@ -53,10 +46,7 @@ public class ActorArmor : MonoBehaviour
     public void GainArmor(float amount, bool canOverheal)
     {
         var prevValue = m_RemainingArmor;
-        m_RemainingArmor = Mathf.Clamp(m_RemainingArmor + amount, 0,  canOverheal ? OverhealMaxArmor : MaxArmor);
-        if (prevValue != m_RemainingArmor)
-        {
-            Events.OnArmorChanged();
-        }
+        m_RemainingArmor = Mathf.Clamp(m_RemainingArmor + amount, 0, canOverheal ? OverhealMaxArmor : MaxArmor);
+        if (prevValue != m_RemainingArmor) Events.OnArmorChanged();
     }
 }

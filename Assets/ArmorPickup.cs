@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ArmorPickup : Pickup<ActorArmor>
 {
@@ -8,8 +6,10 @@ public class ArmorPickup : Pickup<ActorArmor>
     [SerializeField] private bool canOverheal;
 
     protected override string toastMessage => $"Picked up {ArmorAmount} Armor.";
+
     protected override bool CanBePickedUp()
-    {//check for max armor
+    {
+        //check for max armor
         return !currentActor.IsFull();
     }
 

@@ -2,8 +2,8 @@
 
 public class AmmoPickup : Pickup<PlayerInventory>
 {
-    [SerializeField] private AmmoType Type;
     [SerializeField] private int Amount;
+    [SerializeField] private AmmoType Type;
     protected override string toastMessage => $"Picked up {Amount} {Type.ToString()}";
 
     protected override bool CanBePickedUp()

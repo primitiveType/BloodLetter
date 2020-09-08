@@ -1,0 +1,1 @@
+﻿public delegate void OnHealthChangedEvent(object sender, OnHealthChangedEventArgs args);

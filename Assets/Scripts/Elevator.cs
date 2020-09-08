@@ -1,27 +1,26 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class Elevator : MonoBehaviour
 {
-    public float speed;
+    private AudioSource audiosource;
 
-    [FormerlySerializedAs("BottomTarget")] [SerializeField]
-    private Transform StartTarget;
-
-    [FormerlySerializedAs("TopTarget")] [SerializeField]
-    private Transform EndTarget;
+    [SerializeField] private float delay = 2f;
 
     [FormerlySerializedAs("rigidbody")] [SerializeField]
     private Transform elevator;
 
-    private AudioSource audiosource;
+    [FormerlySerializedAs("TopTarget")] [SerializeField]
+    private Transform EndTarget;
 
-    [SerializeField] private float delay = 2f;
-    [SerializeField] private float predelay = 0f;
+    private Coroutine MoveCR;
+    [SerializeField] private float predelay;
     [SerializeField] private bool returns = true;
+    public float speed;
+
+    [FormerlySerializedAs("BottomTarget")] [SerializeField]
+    private Transform StartTarget;
 
     private void Start()
     {
@@ -36,10 +35,10 @@ public class Elevator : MonoBehaviour
 
     private IEnumerator Move(Transform target)
     {
-        Vector3 start = elevator.transform.position;
+        var start = elevator.transform.position;
         // Vector3 start = transform.position;
         var targetPosition = target.position;
-        float distance = Vector3.Distance(start, targetPosition);
+        var distance = Vector3.Distance(start, targetPosition);
         float t = 0;
 
         yield return null;
@@ -49,15 +48,13 @@ public class Elevator : MonoBehaviour
             elevator.transform.position = currentTarget;
             // rigidbody.MovePosition(currentTarget);
             yield return null;
-            t += (Time.deltaTime) / (distance / speed);
+            t += Time.deltaTime / (distance / speed);
         }
 
         elevator.transform.position = targetPosition;
 
         // rigidbody.position = targetPosition;
     }
-
-    private Coroutine MoveCR;
 
     public void Trigger()
     {
@@ -72,8 +69,8 @@ public class Elevator : MonoBehaviour
         yield return new WaitForSeconds(predelay);
         EnableAudio(true);
 
-        Transform target = EndTarget;
-        Transform returnTarget = StartTarget;
+        var target = EndTarget;
+        var returnTarget = StartTarget;
 
         yield return Move(target);
 

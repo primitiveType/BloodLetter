@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 public class ThreeStageElevatorButton : BaseInteractable, IInteractable
 {
@@ -16,21 +13,4 @@ public class ThreeStageElevatorButton : BaseInteractable, IInteractable
 
         return true;
     }
-}
-
-public enum InteractableKey
-{
-    Blue,
-    Yellow,
-    Red,
-    Hazard,
-    Plywood
-}
-
-
-public enum ElevatorState
-{
-    Start,
-    Middle,
-    End
 }

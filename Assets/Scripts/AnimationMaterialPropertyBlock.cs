@@ -4,14 +4,6 @@ using UnityEngine;
 [Serializable]
 public class AnimationMaterialPropertyBlock
 {
-    [SerializeField] private int rows;
-    [SerializeField] private int columns;
-    [SerializeField] private string animationName;
-    [SerializeField] private int numFrames;
-    [SerializeField] private Texture normalMap;
-    [SerializeField] private Texture diffuseMap;
-    [SerializeField] private Texture alphaMap;
-    [SerializeField] private float normalizedGroundPosition;
     public static readonly int RowsProperty = Shader.PropertyToID("Rows");
     public static readonly int FrameWidthProperty = Shader.PropertyToID("FrameWidth");
     public static readonly int FrameHeightProperty = Shader.PropertyToID("FrameHeight");
@@ -21,6 +13,14 @@ public class AnimationMaterialPropertyBlock
     public static readonly int TexturesProperty = Shader.PropertyToID("Textures");
     public static readonly int AlphaProperty = Shader.PropertyToID("Alpha");
     public static readonly int NormalsProperty = Shader.PropertyToID("Normals");
+    [SerializeField] private Texture alphaMap;
+    [SerializeField] private string animationName;
+    [SerializeField] private int columns;
+    [SerializeField] private Texture diffuseMap;
+    [SerializeField] private float normalizedGroundPosition;
+    [SerializeField] private Texture normalMap;
+    [SerializeField] private int numFrames;
+    [SerializeField] private int rows;
 
     public int Rows
     {
@@ -75,10 +75,7 @@ public class AnimationMaterialPropertyBlock
         block.SetInt(RowsProperty, Rows);
         block.SetInt(ColumnsProperty, Columns);
         block.SetInt(NumFramesProperty, NumFrames);
-        if (NormalMap != null)
-        {
-            block.SetTexture(NormalsProperty, NormalMap);
-        }
+        if (NormalMap != null) block.SetTexture(NormalsProperty, NormalMap);
 
         block.SetFloat(GroundPositionProperty, NormalizedGroundPosition);
         block.SetTexture(AlphaProperty, AlphaMap);

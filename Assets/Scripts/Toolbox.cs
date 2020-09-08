@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class Toolbox : MonoBehaviourSingleton<Toolbox>
 {
+    private static Toolbox s_instance;
+    private readonly List<ActorHealth> Enemies = new List<ActorHealth>(); //clear this out between levels
+
+    private readonly List<SecretArea> Secrets = new List<SecretArea>(); //clear this out between levels
     public PlayerEvents PlayerEvents { get; private set; }
     public Transform PlayerTransform { get; private set; }
     public Transform PlayerHeadTransform { get; private set; }
@@ -14,13 +17,12 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     public float TimestopTimeStamp { get; set; } = -15;
     public float TimestopDuration { get; } = 15;
 
-    private static Toolbox s_instance;
-    
     public PlayerRoot PlayerRoot { get; private set; }
-    
+
+    public bool IsPlayerDead { get; private set; }
+
     private void Awake()
     {
-        
         DontDestroyOnLoad(this);
         LevelManager.Instance.LevelBegin += OnLevelBegin;
         LevelManager.Instance.LevelEnd += OnLevelEnd;
@@ -45,7 +47,6 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
         return TimestopTimeStamp + TimestopDuration > Time.unscaledTime;
     }
 
- 
 
     public void SetPlayerEvents(PlayerEvents events)
     {
@@ -59,8 +60,6 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
         LevelManager.Instance.LevelBegin -= OnLevelBegin;
         LevelManager.Instance.LevelEnd -= OnLevelEnd;
     }
-
-    public bool IsPlayerDead { get; private set; }
 
     private void PlayerEventsOnOnDeathEvent(object sender, OnDeathEventArgs args)
     {
@@ -90,9 +89,6 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     {
         PlayerInventory = inventory;
     }
-
-    private List<SecretArea> Secrets = new List<SecretArea>(); //clear this out between levels
-    private List<ActorHealth> Enemies = new List<ActorHealth>(); //clear this out between levels
 
     public void AddSecret(SecretArea secret)
     {
@@ -126,15 +122,4 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     {
         PlayerRoot = playerRoot;
     }
-}
-
-public delegate void LevelEndEvent(object sender, LevelEndEventArgs args);
-
-public class LevelEndEventArgs
-{
-    public LevelEndEventArgs(bool success)
-    {
-        Success = success;
-    }
-    public bool Success { get; set; }
 }

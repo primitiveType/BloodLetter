@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class KeyObject : Pickup<PlayerInventory>
 {
@@ -17,14 +14,4 @@ public class KeyObject : Pickup<PlayerInventory>
     {
         currentActor.AddKey(new Key(KeyType));
     }
-}
-
-public class Key : IKey
-{
-    public Key(KeyType keyType)
-    {
-        KeyType = keyType;
-    }
-
-    public KeyType KeyType { get; }
 }

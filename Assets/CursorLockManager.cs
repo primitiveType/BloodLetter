@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CursorLockManager : MonoBehaviourSingleton<CursorLockManager>
 {
@@ -8,7 +6,6 @@ public class CursorLockManager : MonoBehaviourSingleton<CursorLockManager>
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
     }
 
     public void Lock()

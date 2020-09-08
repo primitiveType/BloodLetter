@@ -8,8 +8,9 @@ public class HealthText : MonoBehaviour
     [SerializeField] private Text Text;
 
     private bool IsDirty { get; set; }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Events.OnHealthChangedEvent += HealthChanged;
         IsDirty = true;
@@ -21,12 +22,9 @@ public class HealthText : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (IsDirty)
-        {
-            Text.text = $"{Mathf.FloorToInt(Health.Health)} / {Mathf.FloorToInt(Health.MaxHealth)}";
-        }
+        if (IsDirty) Text.text = $"{Mathf.FloorToInt(Health.Health)} / {Mathf.FloorToInt(Health.MaxHealth)}";
     }
 
     private void OnDestroy()

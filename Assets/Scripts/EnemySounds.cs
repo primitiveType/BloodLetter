@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,17 +7,23 @@ public class EnemySounds : MonoBehaviour
 {
     [SerializeField] private List<AudioClip> aggroClips;
 
-    [FormerlySerializedAs("stepClip")] [SerializeField]
-    private List<AudioClip> stepClips;
-
-    [FormerlySerializedAs("hurtClip")] [SerializeField]
-    private List<AudioClip> hurtClips;
-
     [FormerlySerializedAs("attackClip")] [SerializeField]
     private List<AudioClip> attackClips;
 
     [FormerlySerializedAs("attackClip")] [SerializeField]
     private List<AudioClip> deathClips;
+
+    private IActorEvents Events;
+
+    [FormerlySerializedAs("hurtClip")] [SerializeField]
+    private List<AudioClip> hurtClips;
+
+    [SerializeField] private AudioSource m_attackSource;
+    [SerializeField] private AudioSource m_hurtSource;
+    [SerializeField] private AudioSource m_stepSource;
+
+    [FormerlySerializedAs("stepClip")] [SerializeField]
+    private List<AudioClip> stepClips;
 
     public AudioClip StepClip => stepClips.Random();
     public AudioClip HurtClip => hurtClips.Random();
@@ -45,11 +49,6 @@ public class EnemySounds : MonoBehaviour
         set => m_attackSource = value;
     } //I don't think its smart to have this many sources.
 
-    private IActorEvents Events;
-    [SerializeField] private AudioSource m_stepSource;
-    [SerializeField] private AudioSource m_hurtSource;
-    [SerializeField] private AudioSource m_attackSource;
-
     private void Start()
     {
         Events = GetComponent<IActorEvents>();
@@ -60,20 +59,11 @@ public class EnemySounds : MonoBehaviour
         Events.OnAggroEvent += OnEnemyAggro;
 
 
-        if (!StepSource)
-        {
-            StepSource = CreateAudioSource();
-        }
+        if (!StepSource) StepSource = CreateAudioSource();
 
-        if (!HurtSource)
-        {
-            HurtSource = CreateAudioSource();
-        }
+        if (!HurtSource) HurtSource = CreateAudioSource();
 
-        if (!AttackSource)
-        {
-            AttackSource = CreateAudioSource();
-        }
+        if (!AttackSource) AttackSource = CreateAudioSource();
     }
 
     private IEnumerable GetSources()
@@ -93,10 +83,7 @@ public class EnemySounds : MonoBehaviour
 
     private void OnEnemyAggro(object sender, OnAggroEventArgs args)
     {
-        if (!HurtSource.isPlaying)
-        {
-            HurtSource.PlayOneShot(AggroClip);
-        }
+        if (!HurtSource.isPlaying) HurtSource.PlayOneShot(AggroClip);
     }
 
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)
@@ -138,19 +125,5 @@ public class EnemySounds : MonoBehaviour
         Events.OnAttackEvent -= OnEnemyAttack;
         Events.OnDeathEvent -= OnEnemyDeath;
         Events.OnAggroEvent -= OnEnemyAggro;
-    }
-}
-
-public static class ListExtensions
-{
-    public static T Random<T>(this List<T> list)
-    {
-        if (list.Count == 0)
-        {
-            return default(T);
-        }
-
-        int index = UnityEngine.Random.Range(0, list.Count());
-        return list[index];
     }
 }

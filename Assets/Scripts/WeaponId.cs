@@ -9,5 +9,5 @@ public enum WeaponId
     Chainsaw = 0x0001000,
     Eye = 0x0010000,
     Lightning = 0x0100000,
-    ShotgunStaff = 0x1000000,
+    ShotgunStaff = 0x1000000
 }

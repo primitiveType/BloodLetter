@@ -1,23 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ArmorText : MonoBehaviour
 {
-    [SerializeField] private PlayerEvents Events;
+    [SerializeField] private ActorArmor Armor;
 
-  
-    [SerializeField]
-    private ActorArmor Armor;
+    [SerializeField] private PlayerEvents Events;
 
     [SerializeField] private Text Text;
 
     private bool IsDirty { get; set; }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Events.OnArmorChangedEvent += ArmorChanged;
         IsDirty = true;
@@ -29,12 +24,9 @@ public class ArmorText : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (IsDirty)
-        {
-            Text.text = $"{Armor.CurrentArmor} / {Armor.MaxArmor}";
-        }
+        if (IsDirty) Text.text = $"{Armor.CurrentArmor} / {Armor.MaxArmor}";
     }
 
     private void OnDestroy()

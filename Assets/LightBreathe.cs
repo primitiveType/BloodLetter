@@ -3,23 +3,23 @@ using UnityEngine;
 
 public class LightBreathe : MonoBehaviour
 {
-    
-    Light testLight;
-
     public float ChangeAmount = 1f;
     public float Frequency = 1f;
 
     private float startIntensity;
+
+    private Light testLight;
+
     // Use this for initialization
-    void Start () {
-        testLight = GetComponent<Light> ();
+    private void Start()
+    {
+        testLight = GetComponent<Light>();
         startIntensity = testLight.intensity;
-        StartCoroutine (Flashing ());
+        StartCoroutine(Flashing());
     }
 
 
-
-    IEnumerator Flashing()
+    private IEnumerator Flashing()
     {
         float t = 0;
 
@@ -29,14 +29,14 @@ public class LightBreathe : MonoBehaviour
             while (t <= 1f)
             {
                 yield return null;
-                testLight.intensity = Mathf.Lerp(startIntensity, startIntensity + (ChangeAmount), t);
+                testLight.intensity = Mathf.Lerp(startIntensity, startIntensity + ChangeAmount, t);
                 t += Time.deltaTime * Frequency;
             }
 
             while (t >= 0)
             {
                 yield return null;
-                testLight.intensity = Mathf.Lerp(startIntensity, startIntensity + (ChangeAmount), t);
+                testLight.intensity = Mathf.Lerp(startIntensity, startIntensity + ChangeAmount, t);
                 t -= Time.deltaTime * Frequency;
             }
         }

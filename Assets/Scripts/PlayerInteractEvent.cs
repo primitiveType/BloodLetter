@@ -1,0 +1,1 @@
+﻿public delegate void PlayerInteractEvent(object sender, PlayerInteractEventArgs args);

@@ -1,45 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Numerics;
-using UnityEngine;
-using Debug = UnityEngine.Debug;
-using Quaternion = UnityEngine.Quaternion;
-using Vector2 = UnityEngine.Vector2;
-using Vector3 = UnityEngine.Vector3;
+﻿using UnityEngine;
 
 public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
 {
-    public bool Piercing;
+    [SerializeField] private float m_Damage;
+
     // public GameObject OnHitPrefab;
     public GameObject OnHitWallPrefab;
-    [SerializeField] private float m_Damage;
+
+    protected ActorRoot ownerRoot;
+    public bool Piercing;
     public float Damage => m_Damage;
 
 
     protected static LayerMask EnvironmentLayers =>
         LayerMask.GetMask("Default", "Interactable");
 
+    public Damage GetDamage()
+    {
+        return new Damage(Damage, DamageType.Attack);
+    }
+
     public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot)
     {
         ownerRoot = actorRoot;
-        var damaged = GetHitObject(ownerPosition, ownerDirection, actorRoot, out RaycastHit hit);
+        var damaged = GetHitObject(ownerPosition, ownerDirection, actorRoot, out var hit);
         if (damaged != null && damaged != ownerRoot.HitscanCollider)
-        {
             damaged.OnShot(hit.textureCoord, hit.point, this);
-            //var hitEffect = CreateHitEffect(OnHitPrefab, damaged.transform, hit);
+        //var hitEffect = CreateHitEffect(OnHitPrefab, damaged.transform, hit);
 //            float adjustmentDistance = .1f;
-            //hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
-        }
+        //hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
     }
 
     protected virtual GameObject CreateHitEffect(GameObject prefab, Transform parent, RaycastHit hit)
     {
-        var hitEffect = GameObject.Instantiate(prefab, parent, true);
+        var hitEffect = Instantiate(prefab, parent, true);
         return hitEffect;
     }
-
-    protected ActorRoot ownerRoot;
 
     public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
     {
@@ -51,44 +47,38 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     protected IDamagedByHitscanProjectile GetHitObject(Vector3 ownerPosition, Vector3 ownerDirection,
         ActorRoot actorRoot, out RaycastHit hit)
     {
-        Ray ray = new Ray(ownerPosition, ownerDirection * Range);
+        var ray = new Ray(ownerPosition, ownerDirection * Range);
         Debug.DrawRay(ownerPosition, ownerDirection * Range, Color.blue, 10);
         var layerToCheckForDamage = GetLayerToCheckForDamage(actorRoot.EntityType);
 
         var raycastMask = GetRaycastMask(actorRoot.EntityType);
 
-        bool isDone = false;
+        var isDone = false;
         hit = new RaycastHit();
 
-        int maxChecks = 10;
-        int checks = 0;
+        var maxChecks = 10;
+        var checks = 0;
         while (!isDone)
-        {
             if (Physics.Raycast(ray, out hit, Range, raycastMask, QueryTriggerInteraction.Collide))
             {
-                bool potentialHit = false;
+                var potentialHit = false;
                 checks++;
-                int hitLayer = hit.collider.gameObject.layer;
-                if ((1 << hitLayer & layerToCheckForDamage) != 0)
-                {
-                    potentialHit = true;
-                }
+                var hitLayer = hit.collider.gameObject.layer;
+                if (((1 << hitLayer) & layerToCheckForDamage) != 0) potentialHit = true;
 
                 if (potentialHit) //we hit something that can be damaged, but could be self
                 {
                     var hitCoord = hit.textureCoord;
-                    IDamagedByHitscanProjectile damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
+                    var damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
                     if (damaged != null && damaged != actorRoot.HitscanCollider && damaged.IsHit(hitCoord))
-                    {
                         return damaged;
-                    }
                 }
 
                 //if we got here, the raycast was not considered a hit on something that can be damaged.
 
-                if ((1 << hitLayer & EnvironmentLayers) == 0) //we didn't hit the environment, so keep moving forward
+                if (((1 << hitLayer) & EnvironmentLayers) == 0) //we didn't hit the environment, so keep moving forward
                 {
-                    ray.origin = hit.point + (hit.normal * -.01f);
+                    ray.origin = hit.point + hit.normal * -.01f;
                 }
                 else if (OnHitWallPrefab) //we did hit the environment, spawn a hit visual and quit.
                 {
@@ -97,9 +87,9 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     var hitEffect = CreateHitEffect(OnHitWallPrefab, hit.collider.transform, hit);
                     hitEffect.transform.rotation = hitRotation;
 
-                    float adjustmentDistance = .001f;
+                    var adjustmentDistance = .001f;
 
-                    hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+                    hitEffect.transform.position = hit.point + hit.normal * adjustmentDistance;
 
                     // hitEffect.transform.localRotation = hitRotation;
                     isDone = true;
@@ -110,15 +100,12 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 }
 
                 if (checks > maxChecks) //HACK
-                {
                     isDone = true;
-                }
             }
             else //we hit nothing. stop raycasting.
             {
                 isDone = true;
             }
-        }
 
         return null;
     }
@@ -127,34 +114,21 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     protected static int GetRaycastMask(EntityType ownerType)
     {
         //always ignore this one, since its the enemy collider which we don't use for raycasts
-        int raycastMask = ~LayerMask.GetMask("Enemy");
+        var raycastMask = ~LayerMask.GetMask("Enemy");
 
         if (ownerType == EntityType.Player)
-        {
             //HACK to make player unable to shoot their feet lol
             raycastMask &= ~LayerMask.GetMask("Player");
-        }
 
         return raycastMask;
     }
 
     protected static LayerMask GetLayerToCheckForDamage(EntityType ownerType)
     {
-        string actorLayer = ownerType == EntityType.Player
+        var actorLayer = ownerType == EntityType.Player
             ? "EnemyRaycast"
             : "Player";
 
         return LayerMask.GetMask("Destructible", actorLayer);
     }
-
-    public Damage GetDamage()
-    {
-        return new Damage(Damage, DamageType.Attack);
-    }
-}
-
-public enum EntityType
-{
-    Enemy,
-    Player
 }

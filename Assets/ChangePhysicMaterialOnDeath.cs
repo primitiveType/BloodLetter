@@ -2,14 +2,15 @@
 
 public class ChangePhysicMaterialOnDeath : MonoBehaviour
 {
-    private IActorEvents Events => ActorRoot.ActorEvents;
-
-    private ActorRoot ActorRoot { get; set; }
     private Collider collider;
 
     [SerializeField] private PhysicMaterial material;
+    private IActorEvents Events => ActorRoot.ActorEvents;
+
+    private ActorRoot ActorRoot { get; set; }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         ActorRoot = GetComponentInParent<ActorRoot>();
         collider = GetComponent<Collider>();
@@ -25,5 +26,4 @@ public class ChangePhysicMaterialOnDeath : MonoBehaviour
     {
         Events.OnDeathEvent -= EventsOnOnDeathEvent;
     }
-    
 }

@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManager>
 {
-    [SerializeField] private Volume Invuln;
-    [SerializeField] private Volume GasMask;
     [SerializeField] private Volume Damage;
     [SerializeField] private Volume Death;
+    [SerializeField] private Volume GasMask;
 
-    Dictionary<Volume, int> HandlesPerEffect = new Dictionary<Volume, int>();
+    private readonly Dictionary<Volume, int> HandlesPerEffect = new Dictionary<Volume, int>();
+    [SerializeField] private Volume Invuln;
 
     protected override void Awake()
     {
@@ -25,16 +23,18 @@ public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManage
     {
         return EnableEffect(Invuln);
     }
+
     public IPostProcessHandle EnableGasMaskEffect()
     {
         return EnableEffect(GasMask);
     }
 
-    
+
     public IPostProcessHandle EnableDamagedEffect(float weight)
     {
         return EnableEffect(Damage, weight);
     }
+
     public IPostProcessHandle EnableDeathEffect()
     {
         return EnableEffect(Death);
@@ -51,15 +51,17 @@ public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManage
     public void DisposeEffectHandle(Volume go)
     {
         HandlesPerEffect[go] -= 1;
-        if (HandlesPerEffect[go] <= 0)
-        {
-            go.gameObject.SetActive(false);
-        }
+        if (HandlesPerEffect[go] <= 0) go.gameObject.SetActive(false);
+    }
+
+    private void SetWeight(Volume pp, float weight)
+    {
+        pp.weight = weight;
     }
 
     private class GameObjectActiveHandle : IPostProcessHandle
     {
-        private Volume GameObject;
+        private readonly Volume GameObject;
 
         public GameObjectActiveHandle(Volume go)
         {
@@ -68,22 +70,12 @@ public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManage
 
         public void Dispose()
         {
-            PostProcessingManager.Instance.DisposeEffectHandle(GameObject);
+            Instance.DisposeEffectHandle(GameObject);
         }
 
         public void SetWeight(float weight)
         {
-            PostProcessingManager.Instance.SetWeight(GameObject, weight);
+            Instance.SetWeight(GameObject, weight);
         }
     }
-
-    private void SetWeight(Volume pp, float weight)
-    {
-        pp.weight = weight;
-    }
-}
-
-public interface IPostProcessHandle : IDisposable
-{
-    void SetWeight(float weight);
 }

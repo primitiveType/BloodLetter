@@ -1,27 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ExplodeOnTrigger : MonoBehaviour
 {
-
     [SerializeField] private GameObject ExplosionPrefab;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
     }
 
     public void OnTrigger()
     {
-        var explosion = Instantiate(ExplosionPrefab, this.transform);
+        var explosion = Instantiate(ExplosionPrefab, transform);
         explosion.transform.localPosition = Vector3.zero;
-        
     }
 }

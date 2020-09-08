@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class EnableAggroTrigger : PlayerTrigger
@@ -16,6 +14,5 @@ public class EnableAggroTrigger : PlayerTrigger
             actorRoot.AggroHandler.enabled = true;
             actorRoot.AggroHandler.IsAggro = true;
         }
-        
     }
 }

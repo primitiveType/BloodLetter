@@ -1,8 +1,4 @@
-﻿using System;
-using System.Diagnostics.Tracing;
-using UnityEngine;
-
-public class PlayerEvents : ActorEvents
+﻿public class PlayerEvents : ActorEvents
 {
     public event PlayerShootEvent PlayerShootEvent;
     public event PlayerInteractEvent PlayerInteractEvent;
@@ -21,17 +17,5 @@ public class PlayerEvents : ActorEvents
     public void PlayerInteract(IInteractable target)
     {
         PlayerInteractEvent?.Invoke(this, new PlayerInteractEventArgs(target));
-    }
-}
-
-public delegate void PlayerInteractEvent(object sender, PlayerInteractEventArgs args);
-
-public class PlayerInteractEventArgs
-{
-    public IInteractable Target { get; }
-
-    public PlayerInteractEventArgs(IInteractable target)
-    {
-        Target = target;
     }
 }

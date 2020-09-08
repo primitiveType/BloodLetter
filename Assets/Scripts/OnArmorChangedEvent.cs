@@ -1,0 +1,1 @@
+﻿public delegate void OnArmorChangedEvent(object sender, OnArmorChangedEventArgs args);

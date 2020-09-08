@@ -1,23 +1,22 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Networking.Match;
 
 public class ActorHealth : MonoBehaviour
 {
-    public IActorEvents Events => ActorRoot.ActorEvents;
-    public bool IsAlive { get; set; } = true;
+    private static readonly int IsDead = Animator.StringToHash("IsDead");
+    private ActorRoot _actorRoot;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private ActorArmor m_Armor;
 
     [SerializeField] private float m_Health;
     [SerializeField] private float m_MaxHealth;
     [SerializeField] private float m_OverhealMaxHealth;
-    [SerializeField] private ActorArmor m_Armor;
-    [SerializeField] private Animator _animator;
-    private ActorRoot _actorRoot;
-    private static readonly int IsDead = Animator.StringToHash("IsDead");
+    public IActorEvents Events => ActorRoot.ActorEvents;
+    public bool IsAlive { get; set; } = true;
 
     private ActorRoot ActorRoot
     {
-        get => _actorRoot != null ? _actorRoot : (_actorRoot = GetComponentInParent<ActorRoot>());
+        get => _actorRoot != null ? _actorRoot : _actorRoot = GetComponentInParent<ActorRoot>();
         set => _actorRoot = value;
     }
 
@@ -37,10 +36,7 @@ public class ActorHealth : MonoBehaviour
             if (m_Health <= 0 && IsAlive) Die();
             var diff = Math.Abs(m_Health - prevHealth);
 
-            if (diff <= float.Epsilon)
-            {
-                return;
-            }
+            if (diff <= float.Epsilon) return;
 
             Events.OnHealthChanged(Mathf.Abs(diff), Health > prevHealth);
         }
@@ -66,10 +62,7 @@ public class ActorHealth : MonoBehaviour
     private void Start()
     {
         ActorRoot = GetComponentInParent<ActorRoot>();
-        if (Animator == null)
-        {
-            Animator = GetComponentInChildren<Animator>();
-        }
+        if (Animator == null) Animator = GetComponentInChildren<Animator>();
 
         UpdateAnimatorStates();
         Events.OnShotEvent += OnEnemyShot;
@@ -77,20 +70,14 @@ public class ActorHealth : MonoBehaviour
 
     private void UpdateAnimatorStates()
     {
-        if (Animator)
-        {
-            Animator.SetBool(IsDead, !IsAlive);
-        }
+        if (Animator) Animator.SetBool(IsDead, !IsAlive);
     }
 
     private void OnEnemyShot(object sender, OnShotEventArgs args)
     {
         var baseDamage = args.ProjectileInfo.GetDamage();
         var resultingDamage = baseDamage.Amount;
-        if (m_Armor)
-        {
-            resultingDamage = m_Armor.TakeDamage(baseDamage);
-        }
+        if (m_Armor) resultingDamage = m_Armor.TakeDamage(baseDamage);
 
         Health -= resultingDamage;
         UpdateAnimatorStates();
@@ -110,10 +97,7 @@ public class ActorHealth : MonoBehaviour
 
     public void Heal(float amount, bool canOverheal = false)
     {
-        if (Health >= MaxHealth && !canOverheal)
-        {
-            return;
-        }
+        if (Health >= MaxHealth && !canOverheal) return;
         var newHealth = Health;
         newHealth = Mathf.Clamp(newHealth + amount, 0, canOverheal ? OverhealMaxHealth : MaxHealth);
 

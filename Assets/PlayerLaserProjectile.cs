@@ -1,21 +1,27 @@
-﻿using System;
-using System.Collections;
-using C5;
-using UnityEngine;
-using Random = UnityEngine.Random;
+﻿using UnityEngine;
 
 public class PlayerLaserProjectile : HitscanProjectileInfo
 {
-    [SerializeField] private LineRenderer m_Line;
-    [SerializeField] private ParticleSystem HitPoint;
-    [SerializeField] private AudioSource HitAudio;
-
     [SerializeField] private float duration;
-    [SerializeField] private float sweepMagnitude;
-    [SerializeField] private bool updateTargetContinous;
     [SerializeField] private Transform ForwardTransform;
+    [SerializeField] private AudioSource HitAudio;
+    [SerializeField] private ParticleSystem HitPoint;
+    [SerializeField] private LineRenderer m_Line;
+    [SerializeField] private float sweepMagnitude;
+
+    private float t;
+    [SerializeField] private bool updateTargetContinous;
 
     private bool Active { get; set; }
+
+    private ActorRoot ActorRoot { get; set; }
+
+    private Transform Owner { get; set; }
+
+    private Vector3 TargetDirectionMod { get; set; }
+    private Vector3 SweepStart { get; set; }
+    private Vector3 SweepEnd { get; set; }
+    private Vector3 hitPoint { get; set; }
 
     private void SetActive(bool active)
     {
@@ -43,7 +49,7 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
             Random.Range(0, sweepMagnitude));
         var point = Owner.forward;
         var start = (point - slope).normalized;
-        var end = (point + (slope / 2f)).normalized;
+        var end = (point + slope / 2f).normalized;
         SweepStart = start;
         SweepEnd = end;
     }
@@ -60,10 +66,6 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
         TriggerShoot(Owner.position, Owner.forward, ActorRoot.EntityType);
     }
 
-    private ActorRoot ActorRoot { get; set; }
-
-    private Transform Owner { get; set; }
-
     private void Start()
     {
         Application.onBeforeRender += OnPreRender;
@@ -78,21 +80,11 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
         Application.onBeforeRender -= OnPreRender;
     }
 
-    private Vector3 TargetDirectionMod { get; set; }
-    private Vector3 SweepStart { get; set; }
-    private Vector3 SweepEnd { get; set; }
-    private Vector3 hitPoint { get; set; }
-
-    private float t;
-
     private void Update()
     {
         if (t < duration && Active)
         {
-            if (updateTargetContinous)
-            {
-                UpdateAim();
-            }
+            if (updateTargetContinous) UpdateAim();
             var fakeT = EasingFunction.Linear(0, 1, t / duration);
             t += Time.deltaTime;
 
@@ -107,10 +99,7 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
 
     private void FixedUpdate()
     {
-        if (t > duration)
-        {
-            return;
-        }
+        if (t > duration) return;
 
         if (Active)
             RaycastAndStuff();
@@ -121,21 +110,19 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
         var position = transform.position;
         var direction = TargetDirectionMod;
         Debug.DrawLine(position, position + direction);
-        var damaged = GetHitObject(position, direction, ActorRoot, out RaycastHit hit);
+        var damaged = GetHitObject(position, direction, ActorRoot, out var hit);
         if (damaged != null)
-        {
-            damaged.OnShot(hit.textureCoord, hit.point,this);
-            // if (OnHitPrefab)
-            // {
-            //     var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
-            //     float adjustmentDistance = .1f;
-            //     hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
-            // }
-        }
+            damaged.OnShot(hit.textureCoord, hit.point, this);
+        // if (OnHitPrefab)
+        // {
+        //     var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
+        //     float adjustmentDistance = .1f;
+        //     hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+        // }
 
         bool hitSomething = hit.transform;
 
-        bool hitEnv = hitSomething && (1 << hit.transform.gameObject.layer & EnvironmentLayers) != 0;
+        var hitEnv = hitSomething && ((1 << hit.transform.gameObject.layer) & EnvironmentLayers) != 0;
 
         m_Line.enabled = hitSomething;
         HitAudio.enabled = hitSomething;
@@ -158,7 +145,7 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
         hitPoint = hit.point;
     }
 
-    void OnPreRender()
+    private void OnPreRender()
     {
         //m_Line.SetPositions(new Vector3[] {transform.position, transform.position + (ForwardTransform.forward * 10)});
     }

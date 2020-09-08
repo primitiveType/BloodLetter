@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Mime;
+﻿using System.Collections.Generic;
 using E7.Introloop;
-using Unity.Collections;
-using UnityEngine;
+using UnityEditor;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviourSingleton<LevelManager>
 {
-    private List<string> Levels = new List<string>
+    private readonly List<string> Levels = new List<string>
     {
         "TheCageScene",
         "Overgrowth"
@@ -38,7 +35,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     {
         //handle saving to disk here, probably
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+        EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
@@ -50,15 +47,11 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         {
             var indexSceneToLoad = Levels.IndexOf(SceneToLoad) + 1;
             if (indexSceneToLoad > 0 && Levels.Count > indexSceneToLoad)
-            {
                 //ready to go to next level
                 SceneToLoad = Levels[indexSceneToLoad];
-            }
             else
-            {
                 //all levels complete, go to menu
                 SceneToLoad = "MenuScene";
-            }
         }
 
         Timer.Instance.PauseTimer();
@@ -77,10 +70,4 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         SceneManager.LoadScene(SceneToLoad);
         Timer.Instance.StartTimer();
     }
-}
-
-public delegate void LevelBeginEvent(object sender, LevelBeginEventArgs args);
-
-public class LevelBeginEventArgs
-{
 }

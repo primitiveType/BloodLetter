@@ -1,25 +1,26 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class EquipStatus : MonoBehaviour
 {
-    [FormerlySerializedAs("WeaponId")] [SerializeField] private WeaponId m_WeaponId;
+    private static readonly int Equipped = Animator.StringToHash("Equipped");
+
+    [SerializeField] private Animator Animator;
     [SerializeField] private WeaponEventsHandler Events;
+    private Transform m_transformToLerp;
+
+    [FormerlySerializedAs("WeaponId")] [SerializeField]
+    private WeaponId m_WeaponId;
+
+    private readonly float TimeToLerp = .2f;
 
     public WeaponId WeaponId => m_WeaponId;
-    private Vector3 EquippedPosition => new Vector3(0,0,0);
-    private Vector3 UnequippedPosition => new Vector3(0,-1,0);
-    private float TimeToLerp = .2f;
+    private Vector3 EquippedPosition => new Vector3(0, 0, 0);
+    private Vector3 UnequippedPosition => new Vector3(0, -1, 0);
     public bool IsEquipped { get; private set; }
 
     private Transform TransformToLerp => m_transformToLerp != null ? m_transformToLerp : m_transformToLerp = transform;
-
-    [SerializeField] private Animator Animator;
-    private Transform m_transformToLerp;
-    private static readonly int Equipped = Animator.StringToHash("Equipped");
 
     public void Start()
     {
@@ -30,13 +31,14 @@ public class EquipStatus : MonoBehaviour
     {
         return Toolbox.Instance.PlayerInventory.HasWeapon(m_WeaponId);
     }
+
     public IEnumerator Equip()
     {
         IsEquipped = true;
         yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, EquippedPosition));
         Animator.SetBool(Equipped, IsEquipped);
     }
-    
+
     public IEnumerator UnEquip()
     {
         IsEquipped = false;
@@ -51,7 +53,7 @@ public class EquipStatus : MonoBehaviour
 
     private IEnumerator LerpPosition(Vector3 startPosition, Vector3 endPosition)
     {
-        float speed = 1f / TimeToLerp;
+        var speed = 1f / TimeToLerp;
         float t = 0;
         while (t < 1)
         {
@@ -61,15 +63,11 @@ public class EquipStatus : MonoBehaviour
         }
 
         TransformToLerp.localPosition = endPosition;
-
     }
-    
+
     private void PlayerEventsOnOnWeaponsChangedEvent(object sender, OnWeaponsChangedEventArgs args)
     {
-        if ((args.NewValue ^ args.OldValue) == WeaponId)
-        {
-            Toolbox.Instance.PlayerInventory.EquipThing(this);
-        }
+        if ((args.NewValue ^ args.OldValue) == WeaponId) Toolbox.Instance.PlayerInventory.EquipThing(this);
     }
 
     private void OnDestroy()

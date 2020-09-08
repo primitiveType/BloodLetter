@@ -1,0 +1,1 @@
+﻿public delegate void OnEquippedWeaponChangedEvent(object sender, OnEquippedWeaponChangedEventArgs args);

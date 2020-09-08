@@ -1,21 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject NewGameMenu;
     [SerializeField] private GameObject TopLevel;
 
-    [SerializeField] private GameObject NewGameMenu;
-
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         CursorLockManager.Instance.Unlock();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
     }
 

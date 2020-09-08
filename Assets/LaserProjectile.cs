@@ -1,15 +1,21 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class LaserProjectile : HitscanProjectileInfo
 {
-    [SerializeField] private LineRenderer m_Line;
-    [SerializeField] private ParticleSystem HitPoint;
-    [SerializeField] private AudioSource HitAudio;
-
     [SerializeField] private float duration;
+    [SerializeField] private AudioSource HitAudio;
+    [SerializeField] private ParticleSystem HitPoint;
+    [SerializeField] private LineRenderer m_Line;
+
+    private float t;
+
+    private ActorRoot ActorRoot { get; set; }
+
+    private Vector3 TargetDirectionMod { get; set; }
+    private Vector3 SweepStart { get; set; }
+    private Vector3 SweepEnd { get; set; }
+    private Vector3 hitPoint { get; set; }
 
     public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, EntityType ownerType)
     {
@@ -18,13 +24,11 @@ public class LaserProjectile : HitscanProjectileInfo
         var slope = new Vector3(Random.Range(0, magnitude), Random.Range(0, magnitude), Random.Range(0, magnitude));
         var point = ownerDirection;
         var start = (point - slope).normalized;
-        var end = (point + (slope / 2f)).normalized;
+        var end = (point + slope / 2f).normalized;
         SweepStart = start;
         SweepEnd = end;
         RaycastAndStuff();
     }
-
-    private ActorRoot ActorRoot { get; set; }
 
     private void Start()
     {
@@ -34,13 +38,6 @@ public class LaserProjectile : HitscanProjectileInfo
         TriggerShoot(transform.position, transform.forward, EntityType.Enemy);
         StartCoroutine(UpdateCr());
     }
-
-    private Vector3 TargetDirectionMod { get; set; }
-    private Vector3 SweepStart { get; set; }
-    private Vector3 SweepEnd { get; set; }
-    private Vector3 hitPoint { get; set; }
-
-    private float t;
 
     private IEnumerator UpdateCr()
     {
@@ -52,7 +49,7 @@ public class LaserProjectile : HitscanProjectileInfo
             TargetDirectionMod = Vector3.Lerp(SweepStart, SweepEnd, fakeT);
             var position = transform.position;
 
-            m_Line.SetPositions(new Vector3[] {position, hitPoint});
+            m_Line.SetPositions(new[] {position, hitPoint});
             yield return null;
         }
 
@@ -61,20 +58,14 @@ public class LaserProjectile : HitscanProjectileInfo
 
         m_Line.enabled = false;
 
-        while (t < duration + 10)
-        {
-            yield return null;
-        }
+        while (t < duration + 10) yield return null;
 
         Destroy(gameObject);
     }
 
     private void FixedUpdate()
     {
-        if (t > duration)
-        {
-            return;
-        }
+        if (t > duration) return;
 
         RaycastAndStuff();
     }
@@ -84,21 +75,19 @@ public class LaserProjectile : HitscanProjectileInfo
         var position = transform.position;
         var direction = TargetDirectionMod;
         Debug.DrawLine(position, position + direction);
-        var damaged = GetHitObject(position, direction, ActorRoot, out RaycastHit hit);
+        var damaged = GetHitObject(position, direction, ActorRoot, out var hit);
         if (damaged != null)
-        {
-            damaged.OnShot(hit.textureCoord, hit.point,this);
-            // if (OnHitPrefab)
-            // {
-            //     var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
-            //     float adjustmentDistance = .1f;
-            //     hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
-            // }
-        }
+            damaged.OnShot(hit.textureCoord, hit.point, this);
+        // if (OnHitPrefab)
+        // {
+        //     var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
+        //     float adjustmentDistance = .1f;
+        //     hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+        // }
 
         bool hitSomething = hit.transform;
 
-        bool hitEnv = hitSomething && (1 << hit.transform.gameObject.layer & EnvironmentLayers) != 0;
+        var hitEnv = hitSomething && ((1 << hit.transform.gameObject.layer) & EnvironmentLayers) != 0;
 
         m_Line.enabled = hitSomething;
         HitAudio.enabled = hitSomething;

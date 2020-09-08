@@ -15,12 +15,9 @@ public class ChainHitscanProjectileInfo : HitscanProjectileInfo
         if (chain)
         {
             chain.NumHits = NumHits;
-            Collider[] hits = Physics.OverlapSphere(hit.point, Radius, LayerMask.GetMask("Enemy", "EnemyRaycast"),
+            var hits = Physics.OverlapSphere(hit.point, Radius, LayerMask.GetMask("Enemy", "EnemyRaycast"),
                 QueryTriggerInteraction.Collide);
-            if (hits.Length > 0)
-            {
-                chain.TriggerShoot(hit.point, hits[0].transform.position - hit.point, ownerRoot);
-            }
+            if (hits.Length > 0) chain.TriggerShoot(hit.point, hits[0].transform.position - hit.point, ownerRoot);
         }
 
         return effect;

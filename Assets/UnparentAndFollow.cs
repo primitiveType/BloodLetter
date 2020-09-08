@@ -1,14 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class UnparentAndFollow : MonoBehaviour
 {
-    [SerializeField]private Transform toFollow;
-    [SerializeField]private UnityEvent AfterUnparentAction;
+    [SerializeField] private UnityEvent AfterUnparentAction;
     private Transform myTransform;
-    void Start()
+    [SerializeField] private Transform toFollow;
+
+    private void Start()
     {
         StartCoroutine(ReparentCR());
     }
@@ -16,7 +16,7 @@ public class UnparentAndFollow : MonoBehaviour
     private IEnumerator ReparentCR()
     {
         yield return null;
-        
+
         myTransform = transform;
         toFollow = myTransform.parent;
         myTransform.parent = null;
@@ -24,7 +24,7 @@ public class UnparentAndFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (toFollow)
         {

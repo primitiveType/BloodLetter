@@ -5,21 +5,22 @@ using UnityEngine.Serialization;
 
 public class ThreeStageElevator : MonoBehaviour
 {
-    [SerializeField] private InteractableKey Key;
-
-    public float speed;
-
-    [SerializeField] private Transform StartTarget;
-
-    [SerializeField] private Transform EndTarget;
-    [SerializeField] private Transform MiddleTarget;
+    private AudioSource audiosource;
 
     [FormerlySerializedAs("rigidbody")] [SerializeField]
     private Transform elevator;
 
-    private AudioSource audiosource;
+    [SerializeField] private Transform EndTarget;
+    [SerializeField] private InteractableKey Key;
+    [SerializeField] private Transform MiddleTarget;
 
-    [SerializeField] private float predelay = 0f;
+    private Coroutine MoveCR;
+
+    [SerializeField] private float predelay;
+
+    public float speed;
+
+    [SerializeField] private Transform StartTarget;
 
     private void Start()
     {
@@ -40,10 +41,10 @@ public class ThreeStageElevator : MonoBehaviour
 
     private IEnumerator Move(Transform target)
     {
-        Vector3 start = elevator.transform.position;
+        var start = elevator.transform.position;
         // Vector3 start = transform.position;
         var targetPosition = target.position;
-        float distance = Vector3.Distance(start, targetPosition);
+        var distance = Vector3.Distance(start, targetPosition);
         float t = 0;
 
         yield return new WaitForFixedUpdate();
@@ -52,13 +53,11 @@ public class ThreeStageElevator : MonoBehaviour
             var currentTarget = Vector3.Lerp(start, targetPosition, t);
             elevator.transform.position = currentTarget;
             yield return new WaitForFixedUpdate();
-            t += (Time.deltaTime) / (distance / speed);
+            t += Time.deltaTime / (distance / speed);
         }
 
         elevator.transform.position = targetPosition;
     }
-
-    private Coroutine MoveCR;
 
     private void MoveToTransform(Transform target)
     {
@@ -75,7 +74,7 @@ public class ThreeStageElevator : MonoBehaviour
     {
         MoveToTransform(StartTarget);
     }
-    
+
     public void MoveTo(ElevatorState state)
     {
         switch (state)

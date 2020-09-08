@@ -1,40 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SC_MovingPlatform : MonoBehaviour
 {
+    private Vector3 activeGlobalPlatformPoint;
+    private Quaternion activeGlobalPlatformRotation;
+    private Vector3 activeLocalPlatformPoint;
+    private Quaternion activeLocalPlatformRotation;
     public Transform activePlatform;
 
-    CharacterController controller;
-    Vector3 moveDirection;
-    Vector3 activeGlobalPlatformPoint;
-    Vector3 activeLocalPlatformPoint;
-    Quaternion activeGlobalPlatformRotation;
-    Quaternion activeLocalPlatformRotation;
+    private CharacterController controller;
+    private Vector3 moveDirection;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (activePlatform != null)
         {
-            Vector3 newGlobalPlatformPoint = activePlatform.TransformPoint(activeLocalPlatformPoint);
+            var newGlobalPlatformPoint = activePlatform.TransformPoint(activeLocalPlatformPoint);
             moveDirection = newGlobalPlatformPoint - activeGlobalPlatformPoint;
-            if (moveDirection.magnitude > 0.01f)
-            {
-                controller.Move(moveDirection);
-            }
+            if (moveDirection.magnitude > 0.01f) controller.Move(moveDirection);
             if (activePlatform)
             {
                 // Support moving platform rotation
-                Quaternion newGlobalPlatformRotation = activePlatform.rotation * activeLocalPlatformRotation;
-                Quaternion rotationDiff = newGlobalPlatformRotation * Quaternion.Inverse(activeGlobalPlatformRotation);
+                var newGlobalPlatformRotation = activePlatform.rotation * activeLocalPlatformRotation;
+                var rotationDiff = newGlobalPlatformRotation * Quaternion.Inverse(activeGlobalPlatformRotation);
                 // Prevent rotation of the local up vector
                 rotationDiff = Quaternion.FromToRotation(rotationDiff * Vector3.up, Vector3.up) * rotationDiff;
                 transform.rotation = rotationDiff * transform.rotation;
@@ -53,7 +48,7 @@ public class SC_MovingPlatform : MonoBehaviour
         }
     }
 
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         // Make sure we are really standing on a straight platform *NEW*
         // Not on the underside of one and not falling down from it either!
@@ -71,7 +66,7 @@ public class SC_MovingPlatform : MonoBehaviour
         }
     }
 
-    void UpdateMovingPlatform()
+    private void UpdateMovingPlatform()
     {
         activeGlobalPlatformPoint = transform.position;
         activeLocalPlatformPoint = activePlatform.InverseTransformPoint(transform.position);

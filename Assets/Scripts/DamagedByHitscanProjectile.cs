@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using C5;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjectile
 {
@@ -16,20 +12,9 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
         set => _actorRoot = value;
     }
 
-    private void Start()
-    {
-        if (ActorRoot == null)
-        {
-            ActorRoot = GetComponentInParent<ActorRoot>();
-        }
-    }
-
     public bool IsHit(Vector2 textureCoord)
     {
-        if (!enabled)
-        {
-            return false;
-        }
+        if (!enabled) return false;
 
         return MaterialHelper.QueryAlpha(textureCoord);
     }
@@ -39,7 +24,7 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
         this.enabled = enabled;
     }
 
-    public virtual void OnShot(Vector2 textureCoord, Vector3 worldPos,  HitscanProjectileInfo projectileInfo)
+    public virtual void OnShot(Vector2 textureCoord, Vector3 worldPos, HitscanProjectileInfo projectileInfo)
     {
         Events.OnShot(projectileInfo, worldPos);
     }
@@ -47,5 +32,10 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
     public void OnShot(HitscanProjectileInfo projectileInfo, Vector3 worldPos)
     {
         Events.OnShot(projectileInfo, worldPos);
+    }
+
+    private void Start()
+    {
+        if (ActorRoot == null) ActorRoot = GetComponentInParent<ActorRoot>();
     }
 }

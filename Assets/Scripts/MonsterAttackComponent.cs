@@ -1,22 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using Random = System.Random;
-
 
 public class MonsterAttackComponent : MonoBehaviour
 {
-    [SerializeField] private IActorEvents m_Events;
-
-    [SerializeField] private List<ProjectileInfoBase> m_Attacks;
+    private static readonly int Attacking = Animator.StringToHash("Attacking");
+    [SerializeField] private EnemyAggroHandler AggroHandler;
 
     [SerializeField] private bool CooldownStartsOnAggro = true;
 
-    public float AttackCooldown => m_AttackCooldown;
+    [SerializeField] private Animator m_animator;
 
     [SerializeField] private float m_AttackCooldown = 3f;
     [SerializeField] private float m_AttackCooldownVariance = 1.5f;
+
+    [SerializeField] private List<ProjectileInfoBase> m_Attacks;
+    [SerializeField] private IActorEvents m_Events;
+
+    [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
+
+    public float AttackCooldown => m_AttackCooldown;
     private List<ProjectileInfoBase> Attacks { get; set; }
 
     private Animator Animator
@@ -28,14 +31,7 @@ public class MonsterAttackComponent : MonoBehaviour
     private Transform Target { get; set; }
     private Transform MonsterTransform { get; set; }
 
-    private float LastAttackTimeStamp { get; set; } = Single.NegativeInfinity;
-
-    private static readonly int Attacking = Animator.StringToHash("Attacking");
-
-    [SerializeField] private Animator m_animator;
-
-    [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
-    [SerializeField] private EnemyAggroHandler AggroHandler;
+    private float LastAttackTimeStamp { get; set; } = float.NegativeInfinity;
 
     private ProjectileInfoBase CurrentAttack { get; set; }
 
@@ -53,7 +49,7 @@ public class MonsterAttackComponent : MonoBehaviour
 
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
-        Vector3 position = MonsterTransform.position;
+        var position = MonsterTransform.position;
         CurrentAttack.TriggerShoot(MonsterTransform, Target.position - position, ActorRoot);
     }
 
@@ -64,18 +60,14 @@ public class MonsterAttackComponent : MonoBehaviour
             !AggroHandler.IsAggro)
         {
             Animator.SetBool(Attacking, false);
-            if (!AggroHandler.IsAggro && CooldownStartsOnAggro)
-            {
-                ResetAttackTimeStamp(); //hack to add delay when aggro'd
-            }
+            if (!AggroHandler.IsAggro && CooldownStartsOnAggro) ResetAttackTimeStamp(); //hack to add delay when aggro'd
 
             return;
         }
 
         var distance = Vector3.Distance(Target.position, transform.position);
 
-        foreach (ProjectileInfoBase attack in Attacks)
-        {
+        foreach (var attack in Attacks)
             if (distance <= attack.Range && distance >= attack.MinRange)
             {
                 CurrentAttack = attack;
@@ -87,12 +79,11 @@ public class MonsterAttackComponent : MonoBehaviour
             {
                 Animator.SetBool(Attacking, false);
             }
-        }
     }
 
     private void ResetAttackTimeStamp()
     {
-        LastAttackTimeStamp = Time.time + UnityEngine.Random.Range(0, m_AttackCooldownVariance);
+        LastAttackTimeStamp = Time.time + Random.Range(0, m_AttackCooldownVariance);
     }
 
 

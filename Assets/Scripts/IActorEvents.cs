@@ -14,7 +14,7 @@ public interface IActorEvents
     event OnEquippedWeaponChangedEvent OnEquippedWeaponChangedEvent;
 
     /// <summary>
-    /// Should really be called "OnDamaged"
+    ///     Should really be called "OnDamaged"
     /// </summary>
     /// <param name="projectileInfo"></param>
     void OnShot(IDamageSource projectileInfo, Vector3 worldPos);
@@ -29,4 +29,3 @@ public interface IActorEvents
     void OnWeaponsChanged(WeaponId oldValue, WeaponId newValue);
     void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue);
 }
-

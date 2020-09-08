@@ -1,0 +1,1 @@
+﻿public delegate void OnAmmoChangedEvent(object sender, OnAmmoChangedEventArgs args);

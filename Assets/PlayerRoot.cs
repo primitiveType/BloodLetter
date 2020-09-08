@@ -1,5 +1,4 @@
-﻿
-public class PlayerRoot : ActorRoot
+﻿public class PlayerRoot : ActorRoot
 {
     public override EntityType EntityType => EntityType.Player;
 

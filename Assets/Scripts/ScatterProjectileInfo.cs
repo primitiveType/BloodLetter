@@ -2,14 +2,14 @@
 
 public class ScatterProjectileInfo : ProjectileInfoBase
 {
-    [SerializeField] private HitscanProjectileInfo projectileInfo;
     [SerializeField] private float degreesScatter;
     [SerializeField] private int numProjectiles;
+    [SerializeField] private HitscanProjectileInfo projectileInfo;
 
     public void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, ActorRoot actorRoot)
     {
         //assume up vector is y axis
-        for (int i = 0; i < numProjectiles; i++)
+        for (var i = 0; i < numProjectiles; i++)
         {
             var x = Random.Range(-degreesScatter, degreesScatter);
             var y = Random.Range(-degreesScatter, degreesScatter);
@@ -20,9 +20,8 @@ public class ScatterProjectileInfo : ProjectileInfoBase
         }
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction,  ActorRoot actorRoot)
+    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
     {
         TriggerShoot(owner.position, direction, actorRoot);
     }
-
 }

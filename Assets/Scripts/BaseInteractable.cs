@@ -12,6 +12,7 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
             ToastHandler.Instance.PopToast($"{RequiredKeys} Key Required!");
             return false;
         }
+
         return DoInteraction();
     }
 

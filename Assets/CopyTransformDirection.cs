@@ -1,20 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CopyTransformDirection : MonoBehaviour
 {
+    private Transform myTransform;
+
     [SerializeField] private Transform toCopy;
 
-    private Transform myTransform;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         myTransform = transform;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         myTransform.rotation = toCopy.rotation;
     }

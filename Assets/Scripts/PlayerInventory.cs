@@ -6,12 +6,17 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField] private PlayerEvents Events;
-    private List<IInventoryItem> Items { get; } = new List<IInventoryItem>();
     private EquipStatus CurrentEquip; //will have to make changes if you can later equip multiple things
 
-    
+    private bool equipping;
+    [SerializeField] private PlayerEvents Events;
+    private List<IInventoryItem> Items { get; } = new List<IInventoryItem>();
+
+
     private PlayerInventoryData InventoryData { get; set; }
+
+
+    private KeyType currentKeys { get; set; }
 
     private void Awake()
     {
@@ -21,12 +26,9 @@ public class PlayerInventory : MonoBehaviour
         LevelManager.Instance.LevelEnd += InstanceOnLevelEnd;
     }
 
-    private void InstanceOnLevelEnd(object sender, LevelEndEventArgs args) 
+    private void InstanceOnLevelEnd(object sender, LevelEndEventArgs args)
     {
-        if (args.Success)
-        {
-            SaveState.Instance.SaveData.InventoryData = InventoryData;
-        }
+        if (args.Success) SaveState.Instance.SaveData.InventoryData = InventoryData;
     }
 
     private void OnDestroy()
@@ -34,9 +36,6 @@ public class PlayerInventory : MonoBehaviour
         LevelManager.Instance.LevelEnd -= InstanceOnLevelEnd;
     }
 
-
-    private KeyType currentKeys { get; set; }
-    
     public List<IInventoryItem> GetItems()
     {
         return Items.ToList();
@@ -47,17 +46,14 @@ public class PlayerInventory : MonoBehaviour
         var prevValue = InventoryData.Weapons;
         InventoryData.Weapons |= weapon;
 
-        if (prevValue != InventoryData.Weapons)
-        {
-            Events.OnWeaponsChanged(prevValue, InventoryData.Weapons);
-        }
+        if (prevValue != InventoryData.Weapons) Events.OnWeaponsChanged(prevValue, InventoryData.Weapons);
     }
 
     public bool HasWeapon(WeaponId weapon)
     {
         return InventoryData.Weapons.HasFlag(weapon);
     }
-    
+
 
     public void AddItem(IInventoryItem toAdd)
     {
@@ -76,7 +72,7 @@ public class PlayerInventory : MonoBehaviour
 
     public float GetAmmoAmount(AmmoType type)
     {
-        InventoryData.Ammo.TryGetValue(type, out float ammo);
+        InventoryData.Ammo.TryGetValue(type, out var ammo);
         return ammo;
     }
 
@@ -92,46 +88,30 @@ public class PlayerInventory : MonoBehaviour
 
     private void ChangeAmmoAmount(AmmoType type, float amount)
     {
-        if (!InventoryData.Ammo.TryGetValue(type, out float prevAmount))
-        {
-            InventoryData.Ammo.Add(type, 0);
-        }
-        InventoryData.Ammo[type] = Mathf.Clamp((float) InventoryData.Ammo[type] + amount, 0, GetMaxAmmoAmount(type));
+        if (!InventoryData.Ammo.TryGetValue(type, out var prevAmount)) InventoryData.Ammo.Add(type, 0);
+        InventoryData.Ammo[type] = Mathf.Clamp(InventoryData.Ammo[type] + amount, 0, GetMaxAmmoAmount(type));
         if (Math.Abs(InventoryData.Ammo[type] - prevAmount) > float.Epsilon)
-        {
             Events.OnAmmoChanged(prevAmount, InventoryData.Ammo[type], type);
-        }
     }
 
     public int GetMaxAmmoAmount(AmmoType ammoType)
     {
         return 100;
     }
-    
+
     public void EquipThing(EquipStatus thing)
     {
-        if (!equipping)
-        {
-            StartCoroutine(EquipThingCR(thing));
-        }
+        if (!equipping) StartCoroutine(EquipThingCR(thing));
     }
 
-    private bool equipping;
     private IEnumerator EquipThingCR(EquipStatus thing)
     {
-        
-        if (CurrentEquip == thing || !thing.CanEquip())
-        {
-            yield break;
-        }
+        if (CurrentEquip == thing || !thing.CanEquip()) yield break;
 
         equipping = true;
         var prev = CurrentEquip != null ? CurrentEquip.WeaponId : 0;
-        
-        if (CurrentEquip != null)
-        {
-            yield return StartCoroutine(CurrentEquip.UnEquip());
-        }
+
+        if (CurrentEquip != null) yield return StartCoroutine(CurrentEquip.UnEquip());
 
         Events.OnEquippedWeaponChanged(prev, thing.WeaponId);
         yield return StartCoroutine(thing.Equip());
@@ -139,48 +119,4 @@ public class PlayerInventory : MonoBehaviour
         InventoryData.EquippedWeapon = CurrentEquip.WeaponId;
         equipping = false;
     }
-}
-
-[Serializable]
-public class PlayerInventoryData
-{
-    [SerializeField] public WeaponId EquippedWeapon;
-    [SerializeField] public WeaponId Weapons;
-    [SerializeField] public AmmoDictionary Ammo;
-
-    public PlayerInventoryData(PlayerInventoryData toCopy)
-    {
-        EquippedWeapon = toCopy.EquippedWeapon;
-        Weapons = toCopy.Weapons;
-        Ammo = new AmmoDictionary();
-        foreach (var kvp in toCopy.Ammo)
-        {
-            Ammo.Add(kvp.Key, kvp.Value);
-        }
-    }
-}
-
-[Serializable]
-public enum AmmoType
-{
-    Lead,
-    Mana
-}
-
-public interface IInventoryItem
-{
-}
-
-public interface IKey : IInventoryItem
-{
-    KeyType KeyType { get; }
-}
-
-[Flags]
-public enum KeyType
-{
-    None = 0x0000,
-    Blue = 0x0001,
-    Red = 0x0010,
-    Yellow = 0x0100
 }

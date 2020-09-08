@@ -1,0 +1,1 @@
+﻿public delegate void OnAttackEvent(object sender, OnAttackEventArgs args);

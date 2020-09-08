@@ -1,24 +1,22 @@
-﻿using System;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 public class ActorEvents : MonoBehaviour, IActorEvents
 {
+    [SerializeField] private EnemySounds Sounds;
+    [SerializeField] private AudioSource Source;
     public event OnShotEvent OnShotEvent;
     public event OnHealthChangedEvent OnHealthChangedEvent;
     public event OnArmorChangedEvent OnArmorChangedEvent;
     public event OnStepEvent OnStepEvent;
     public event OnAttackEvent OnAttackEvent;
     public event OnDeathEvent OnDeathEvent;
-    [SerializeField] private EnemySounds Sounds;
-    [SerializeField] private AudioSource Source;
     public event OnAggroEvent OnAggroEvent;
     public event OnAmmoChangedEvent OnAmmoChangedEvent;
     public event OnWeaponsChangedEvent OnWeaponsChangedEvent;
     public event OnEquippedWeaponChangedEvent OnEquippedWeaponChangedEvent;
 
     /// <summary>
-    /// Should really be called "OnDamaged"
+    ///     Should really be called "OnDamaged"
     /// </summary>
     /// <param name="projectileInfo"></param>
     public void OnShot(IDamageSource projectileInfo, Vector3 worldPos)
@@ -71,132 +69,4 @@ public class ActorEvents : MonoBehaviour, IActorEvents
     {
         OnEquippedWeaponChangedEvent?.Invoke(this, new OnEquippedWeaponChangedEventArgs(oldValue, newValue));
     }
-}
-
-public delegate void OnEquippedWeaponChangedEvent(object sender, OnEquippedWeaponChangedEventArgs args);
-
-public class OnEquippedWeaponChangedEventArgs
-{
-    public OnEquippedWeaponChangedEventArgs(WeaponId oldValue, WeaponId newValue)
-    {
-        NewValue = newValue;
-        OldValue = oldValue;
-    }
-
-    public WeaponId NewValue { get; }
-    public WeaponId OldValue { get; }
-}
-
-public delegate void OnArmorChangedEvent(object sender, OnArmorChangedEventArgs args);
-
-public class OnArmorChangedEventArgs
-{
-}
-
-public delegate void OnWeaponsChangedEvent(object sender, OnWeaponsChangedEventArgs args);
-
-public class OnWeaponsChangedEventArgs
-{
-    public OnWeaponsChangedEventArgs(WeaponId oldValue, WeaponId newValue)
-    {
-        NewValue = newValue;
-        OldValue = oldValue;
-    }
-
-    public WeaponId NewValue { get; }
-    public WeaponId OldValue { get; }
-}
-
-public delegate void OnAmmoChangedEvent(object sender, OnAmmoChangedEventArgs args);
-
-public class OnAmmoChangedEventArgs
-{
-    public OnAmmoChangedEventArgs(float oldValue, float newValue, AmmoType type)
-    {
-        NewValue = newValue;
-        OldValue = oldValue;
-        Type = type;
-    }
-
-    public float NewValue { get; }
-    public float OldValue { get; }
-    public AmmoType Type { get; }
-}
-
-public delegate void OnHealthChangedEvent(object sender, OnHealthChangedEventArgs args);
-
-public class OnHealthChangedEventArgs
-{
-    public OnHealthChangedEventArgs(float amount, bool isHealing = false)
-    {
-        IsHealing = isHealing;
-        Amount = amount;
-    }
-
-    public float Amount { get; }
-    public bool IsHealing { get; }
-}
-
-public delegate void OnAggroEvent(object sender, OnAggroEventArgs args);
-
-public class OnAggroEventArgs
-{
-}
-
-public delegate void OnDeathEvent(object sender, OnDeathEventArgs args);
-
-public class OnDeathEventArgs
-{
-}
-
-public delegate void OnAttackEvent(object sender, OnAttackEventArgs args);
-
-public class OnAttackEventArgs
-{
-}
-
-public delegate void OnStepEvent(object sender, OnStepEventArgs args);
-
-public class OnStepEventArgs
-{
-}
-
-public delegate void OnShotEvent(object sender, OnShotEventArgs args);
-
-public class OnShotEventArgs
-{
-    public IDamageSource ProjectileInfo { get; }
-    public Vector3 WorldPos { get; }
-
-    public OnShotEventArgs(IDamageSource projectileInfo, Vector3 worldPos)
-    {
-        ProjectileInfo = projectileInfo;
-        WorldPos = worldPos;
-    }
-}
-
-public interface IDamageSource
-{
-    Damage GetDamage();
-}
-
-public struct Damage
-{
-    public float Amount { get; set; }
-    public DamageType Type { get; set; }
-
-    public Damage(float amount, DamageType type)
-    {
-        Amount = amount;
-        Type = type;
-    }
-}
-
-[Flags]
-public enum DamageType
-{
-    Attack = 0x0001,
-    Hazard = 0x0010,
-    Physical = 0x0100,
-    Magical = 0x1000
 }

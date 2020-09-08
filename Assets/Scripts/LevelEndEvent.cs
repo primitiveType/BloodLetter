@@ -1,0 +1,1 @@
+﻿public delegate void LevelEndEvent(object sender, LevelEndEventArgs args);

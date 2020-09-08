@@ -3,16 +3,13 @@ using UnityEngine;
 
 public class Timer : MonoBehaviourSingleton<Timer>
 {
+    private bool isPaused;
 
     private float seconds;
-    private bool isPaused;
 
     private void Update()
     {
-        if (!isPaused)
-        {
-            seconds += Time.deltaTime;
-        }
+        if (!isPaused) seconds += Time.deltaTime;
     }
 
     public void StartTimer()
@@ -23,14 +20,14 @@ public class Timer : MonoBehaviourSingleton<Timer>
 
     public TimeSpan GetTime()
     {
-        return new TimeSpan(0,0, (int)seconds);
+        return new TimeSpan(0, 0, (int) seconds);
     }
 
     public void PauseTimer()
     {
         isPaused = true;
     }
-    
+
     public void UnPauseTimer()
     {
         isPaused = false;

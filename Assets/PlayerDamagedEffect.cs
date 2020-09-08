@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class PlayerDamagedEffect : MonoBehaviour
 {
-    public PlayerRoot PlayerRoot { get; private set; }
+    private Coroutine FlashCoroutine;
     private IPostProcessHandle ppHandle;
+    public PlayerRoot PlayerRoot { get; private set; }
     private float ratio => (100f - Toolbox.Instance.PlayerRoot.Health.Health) / 100f;
 
     private void Start()
@@ -22,29 +23,21 @@ public class PlayerDamagedEffect : MonoBehaviour
     private void OnHealthChangedEvent(object sender, OnHealthChangedEventArgs args)
     {
         ppHandle?.SetWeight(ratio);
-        if (args.IsHealing)
-        {
-            return;
-        }
+        if (args.IsHealing) return;
 
-        if (FlashCoroutine != null)
-        {
-            StopCoroutine(FlashCoroutine);
-        }
+        if (FlashCoroutine != null) StopCoroutine(FlashCoroutine);
 
         FlashCoroutine = StartCoroutine(FlashCr());
     }
 
-    private Coroutine FlashCoroutine;
-
     private IEnumerator FlashCr()
     {
         ppHandle?.SetWeight(1);
-        float duration = .5f;
-        float time = Time.time;
+        var duration = .5f;
+        var time = Time.time;
         float t = 0;
-        float dest = ratio;
-        float start = Mathf.Clamp01(dest + .5f);
+        var dest = ratio;
+        var start = Mathf.Clamp01(dest + .5f);
         while (t <= duration)
         {
             ppHandle?.SetWeight(Mathf.Lerp(start, dest, t / duration));

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class ThreeStageElevatorIdService : MonoBehaviourSingleton<ThreeStageElevatorIdService>
 {
-    
-    private Dictionary<InteractableKey, List<ThreeStageElevator>> Elevators = new Dictionary<InteractableKey, List<ThreeStageElevator>>();
+    private readonly Dictionary<InteractableKey, List<ThreeStageElevator>> Elevators =
+        new Dictionary<InteractableKey, List<ThreeStageElevator>>();
 
     private void Start()
     {
@@ -18,25 +17,15 @@ public class ThreeStageElevatorIdService : MonoBehaviourSingleton<ThreeStageElev
 
     public void RegisterInteractable(ThreeStageElevator interactbale, InteractableKey key)
     {
-        if (!Elevators.ContainsKey(key))
-        {
-            Elevators.Add(key, new List<ThreeStageElevator>());
-        }
-        
+        if (!Elevators.ContainsKey(key)) Elevators.Add(key, new List<ThreeStageElevator>());
+
         Elevators[key].Add(interactbale);
     }
 
     public void TriggerAll(InteractableKey key, ElevatorState state)
     {
-        if (!Elevators.ContainsKey(key))
-        {
-            return;
-        }
+        if (!Elevators.ContainsKey(key)) return;
 
-        foreach (var elevator in Elevators[key])
-        {
-            elevator.MoveTo(state);
-        }
+        foreach (var elevator in Elevators[key]) elevator.MoveTo(state);
     }
-    
 }

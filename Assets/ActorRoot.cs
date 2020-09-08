@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ActorRoot : MonoBehaviour
 {
@@ -25,7 +24,7 @@ public class ActorRoot : MonoBehaviour
     public INavigationAgent Navigation { get; set; }
 
 
-    void Awake()
+    private void Awake()
     {
         Animator = GetComponentInChildren<Animator>();
         ActorEvents = GetComponentInChildren<IActorEvents>();
@@ -39,7 +38,7 @@ public class ActorRoot : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
     }
 }

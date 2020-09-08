@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class MonoBehaviourSingleton<T> : MonoBehaviour where T : MonoBehaviourSingleton<T> 
+public abstract class MonoBehaviourSingleton<T> : MonoBehaviour where T : MonoBehaviourSingleton<T>
 {
     private static T s_instance;
 
@@ -8,22 +8,15 @@ public abstract class MonoBehaviourSingleton<T> : MonoBehaviour where T : MonoBe
     {
         get
         {
-            if (s_instance == null)
-            {
-                s_instance = Object.FindObjectOfType<T>();
-            }
+            if (s_instance == null) s_instance = FindObjectOfType<T>();
 
             return s_instance;
         }
-        private set { s_instance = value; }
+        private set => s_instance = value;
     }
 
     protected virtual void Awake()
     {
-        if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-
+        if (Instance != this) Destroy(gameObject);
     }
 }

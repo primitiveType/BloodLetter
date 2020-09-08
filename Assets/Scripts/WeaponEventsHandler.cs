@@ -1,12 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WeaponEventsHandler : MonoBehaviour
 {
-    [SerializeField] public ProjectileInfoBase ProjectileInfo;
     [SerializeField] private Transform BarrelTransform;
+    [SerializeField] public ProjectileInfoBase ProjectileInfo;
     public WeaponSoundInfo SoundInfo;
-    
+
     public void Shoot()
     {
         ProjectileInfo.TriggerShoot(BarrelTransform, BarrelTransform.forward, Toolbox.Instance.PlayerRoot);
@@ -24,7 +23,7 @@ public class WeaponEventsHandler : MonoBehaviour
         SoundInfo.OnReload();
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
     }
 }

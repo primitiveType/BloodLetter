@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TimestopPickup : Pickup<PlayerInventory>
 {
+    protected override string toastMessage => "Picked up Time Stop Potion!";
 
-    protected override string toastMessage => $"Picked up Time Stop Potion!";
     protected override bool CanBePickedUp()
     {
         return true;
