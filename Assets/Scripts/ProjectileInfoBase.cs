@@ -4,9 +4,9 @@ public abstract class ProjectileInfoBase : MonoBehaviour
 {
     [SerializeField] private float m_MinRange = 10;
     [SerializeField] private float m_Range = 100;
-    [SerializeField] private ProjectileType type;
+    [SerializeField] private DamageType type;
 
-    public ProjectileType Type => type;
+    public DamageType Type => type;
 
     public float MinRange => m_MinRange;
 

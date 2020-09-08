@@ -17,7 +17,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
 
     public Damage GetDamage()
     {
-        return new Damage(Damage, DamageType.Attack);
+        return new Damage(Damage, Type);
     }
 
     public void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot)

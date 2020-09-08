@@ -2,7 +2,7 @@
 
 public class OnShotParticleSpawner : MonoBehaviour
 {
-    [SerializeField] private PlayerEvents Events;
+    [SerializeField] private ActorEvents Events;
     [SerializeField] private GameObject OnHitPrefab;
 
     private void Start()
