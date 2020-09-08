@@ -3,7 +3,13 @@ using UnityEngine;
 
 public class ActorRoot : MonoBehaviour
 {
-    public Animator Animator { get; private set; }
+    [SerializeField] private Animator _animator;
+
+    public Animator Animator
+    {
+        get => _animator;
+        private set => _animator = value;
+    }
 
     public IActorEvents ActorEvents { get; private set; }
 

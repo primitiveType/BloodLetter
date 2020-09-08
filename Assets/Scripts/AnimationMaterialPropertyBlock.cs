@@ -11,11 +11,13 @@ public class AnimationMaterialPropertyBlock
     [SerializeField] private Texture normalMap;
     [SerializeField] private Texture diffuseMap;
     [SerializeField] private Texture alphaMap;
+    [SerializeField] private float normalizedGroundPosition;
     public static readonly int RowsProperty = Shader.PropertyToID("Rows");
     public static readonly int FrameWidthProperty = Shader.PropertyToID("FrameWidth");
     public static readonly int FrameHeightProperty = Shader.PropertyToID("FrameHeight");
     public static readonly int ColumnsProperty = Shader.PropertyToID("Columns");
     public static readonly int NumFramesProperty = Shader.PropertyToID("NumFrames");
+    public static readonly int GroundPositionProperty = Shader.PropertyToID("GroundPosition");
     public static readonly int TexturesProperty = Shader.PropertyToID("Textures");
     public static readonly int AlphaProperty = Shader.PropertyToID("Alpha");
     public static readonly int NormalsProperty = Shader.PropertyToID("Normals");
@@ -42,6 +44,12 @@ public class AnimationMaterialPropertyBlock
     {
         get => numFrames;
         set => numFrames = value;
+    }
+
+    public float NormalizedGroundPosition
+    {
+        get => normalizedGroundPosition;
+        set => normalizedGroundPosition = value;
     }
 
     public Texture NormalMap
@@ -72,6 +80,7 @@ public class AnimationMaterialPropertyBlock
             block.SetTexture(NormalsProperty, NormalMap);
         }
 
+        block.SetFloat(GroundPositionProperty, NormalizedGroundPosition);
         block.SetTexture(AlphaProperty, AlphaMap);
         block.SetTexture(TexturesProperty, DiffuseMap);
         block.SetInt(FrameWidthProperty, diffuseMap.width / columns);

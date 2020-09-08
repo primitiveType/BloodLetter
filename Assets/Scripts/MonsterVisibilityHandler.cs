@@ -4,7 +4,7 @@ public class MonsterVisibilityHandler : MonoBehaviour
 {   
     private Transform Target { get; set; }
     
-    public Vector3? LastSeenPosition { get; private set; }
+    public Vector3? LastSeenPosition { get; set; }
 
 
     private float DegreesVisibility => _degreesVisibility;

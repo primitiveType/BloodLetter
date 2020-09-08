@@ -105,6 +105,7 @@ public class EnemyAggroHandler : MonoBehaviour
     private void OnEnemyShot(object sender, OnShotEventArgs args)
     {
         IsAggro = true; //do we need to check if alive?
+        VisibilityHandler.LastSeenPosition = Toolbox.Instance.PlayerHeadTransform.position;//hack, should be based on who shot them. 
     }
 
     private void OnDestroy()

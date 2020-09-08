@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -64,8 +66,25 @@ public class EnemyMovement : MonoBehaviour
     }
 
 
+    private bool isAttacking;
+    private float attackTime = .5f;
+    private Coroutine AttackRoutine;
+
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
+        if (AttackRoutine != null)
+        {
+            StopCoroutine(AttackRoutine);
+        }
+
+        AttackRoutine = StartCoroutine(AttackTimerCR());
+    }
+
+    private IEnumerator AttackTimerCR()
+    {
+        isAttacking = true;
+        yield return new WaitForSeconds(attackTime);
+        isAttacking = false;
     }
 
 
@@ -79,7 +98,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Agent.SetDestination(Target.position);
 
-            Agent.isStopped = !IsAggro;
+            Agent.isStopped = !IsAggro || isAttacking;
         }
 
 

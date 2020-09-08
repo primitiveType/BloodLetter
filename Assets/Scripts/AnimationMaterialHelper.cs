@@ -23,8 +23,9 @@ public class AnimationMaterialHelper : MonoBehaviour
     [SerializeField] private Transform anchorTransform;
     [SerializeField] private Collider anchorTransformCollider;
 
-    
+
     [SerializeField] private float yFudge = .01f;
+
     private Renderer MyRenderer =>
         m_MyRenderer != null ? m_MyRenderer : m_MyRenderer = materialGameObject.GetComponent<Renderer>();
 
@@ -36,22 +37,20 @@ public class AnimationMaterialHelper : MonoBehaviour
         {
             anchorTransform = materialGameObject.transform;
         }
-
-
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         if (EditorApplication.isPaused)
         {
             return;
         }
-        #endif
-        
-        if (Application.isEditor && !Application.isPlaying )
+#endif
+
+        if (Application.isEditor && !Application.isPlaying)
         {
             //no null ref, no null ref, stop!
             CurrentAnimation = "";
@@ -83,16 +82,15 @@ public class AnimationMaterialHelper : MonoBehaviour
             _dictionary.GetPropertyBlock(block, animationName);
 
             MyRenderer.SetPropertyBlock(block);
+            var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
 
-
+            var width = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameWidthProperty) /
+                        pxPerMeter;
+            var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
+                         pxPerMeter;
+            var offset = (height/2f) - (height * block.GetFloat(AnimationMaterialPropertyBlock.GroundPositionProperty));
             if (resize)
             {
-                var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
-
-                var width = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameWidthProperty) /
-                            pxPerMeter;
-                var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
-                             pxPerMeter;
                 anchorTransform.localScale =
                     new Vector3((float) width, (float) height, 1);
             }
@@ -104,7 +102,7 @@ public class AnimationMaterialHelper : MonoBehaviour
                     yFudge = anchorTransformCollider.bounds.size.y / 2f;
                 }
 
-                anchorTransform.localPosition = new Vector3(0, (anchorTransform.localScale.y / 2) - yFudge, 0);
+                anchorTransform.localPosition = new Vector3(0, offset, 0);
             }
         }
     }
@@ -121,7 +119,7 @@ public class AnimationMaterialHelper : MonoBehaviour
     public bool QueryAlpha(Vector2 textureCoord)
     {
         int perspective;
-         if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
+        if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
         {
             cachedPropertyBlock = new MaterialPropertyBlock();
             MyRenderer.GetPropertyBlock(cachedPropertyBlock);
