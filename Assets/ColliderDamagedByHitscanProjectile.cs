@@ -18,14 +18,14 @@ public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitsc
         return true;
     }
 
-    public void OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
+    public void OnShot(Vector2 textureCoord, Vector3 worldPos,  HitscanProjectileInfo projectileInfo)
     {
-        Events.OnShot(projectileInfo);
+        Events.OnShot(projectileInfo, worldPos);
     }
 
-    public void OnShot(HitscanProjectileInfo projectileInfo)
+    public void OnShot(HitscanProjectileInfo projectileInfo, Vector3 worldPos)
     {
-        Events.OnShot(projectileInfo);
+        Events.OnShot(projectileInfo, worldPos);
     }
 
     public void SetEnabled(bool enabled)

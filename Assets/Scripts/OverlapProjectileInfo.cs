@@ -21,23 +21,12 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
 
             var hit = hits[i];
             int hitLayer = hit.gameObject.layer;
-            // if (((hitLayer & layerToCheckForDamage) == 0))
-            // {
-            //     //isDone = true;
-            // }
-
-            // Debug.Log($"hit {hit.textureCoord} ");
 
             IDamagedByHitscanProjectile damaged = hit.GetComponent<IDamagedByHitscanProjectile>();
             if (damaged != null )
             {
-                damaged.OnShot(this);
+                damaged.OnShot(this, hit.ClosestPoint(ownerPosition));
                 isDone = true;
-                var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
-
-                float adjustmentDistance = .1f;
-
-                hitEffect.transform.position = hit.ClosestPoint(ownerPosition) + (direction * adjustmentDistance);
             }
             else if(OnHitWallPrefab)
             {

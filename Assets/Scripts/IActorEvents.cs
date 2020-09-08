@@ -1,4 +1,6 @@
-﻿public interface IActorEvents
+﻿using UnityEngine;
+
+public interface IActorEvents
 {
     event OnShotEvent OnShotEvent;
     event OnHealthChangedEvent OnHealthChangedEvent;
@@ -15,7 +17,7 @@
     /// Should really be called "OnDamaged"
     /// </summary>
     /// <param name="projectileInfo"></param>
-    void OnShot(IDamageSource projectileInfo);
+    void OnShot(IDamageSource projectileInfo, Vector3 worldPos);
 
     void OnStep();
     void OnAttack();

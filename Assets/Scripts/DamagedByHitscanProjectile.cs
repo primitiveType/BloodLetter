@@ -39,13 +39,13 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
         this.enabled = enabled;
     }
 
-    public virtual void OnShot(Vector2 textureCoord, HitscanProjectileInfo projectileInfo)
+    public virtual void OnShot(Vector2 textureCoord, Vector3 worldPos,  HitscanProjectileInfo projectileInfo)
     {
-        Events.OnShot(projectileInfo);
+        Events.OnShot(projectileInfo, worldPos);
     }
 
-    public void OnShot(HitscanProjectileInfo projectileInfo)
+    public void OnShot(HitscanProjectileInfo projectileInfo, Vector3 worldPos)
     {
-        Events.OnShot(projectileInfo);
+        Events.OnShot(projectileInfo, worldPos);
     }
 }

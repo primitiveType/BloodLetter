@@ -16,7 +16,8 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
     private void Start()
     {
         startTime = Time.time;
-        var overlapObjects = Physics.OverlapSphere(transform.position, Radius, ~LayerMask.NameToLayer("Default"));
+        var position = transform.position;
+        var overlapObjects = Physics.OverlapSphere(position, Radius, ~LayerMask.NameToLayer("Default"));
         foreach (Collider collider in overlapObjects)
         {
             if (hitObjects.Contains(collider))
@@ -34,7 +35,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
                 collider.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
             }
         
-            damaged?.OnShot(this);
+            damaged?.OnShot(this, collider.ClosestPoint(position));
         }
     }
 
@@ -59,13 +60,14 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
         
         Debug.Log($"hit {other.name}");
         var damaged = other.GetComponentInChildren<IActorEvents>();
+        var position = transform.position;
         if (other.attachedRigidbody)
         {
-            var direction = other.transform.position - transform.position;
+            var direction = other.transform.position - position;
             other.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
         }
 
-        damaged?.OnShot(this);
+        damaged?.OnShot(this, other.ClosestPoint(position));
     }
 
     private void OnDrawGizmos()
@@ -74,7 +76,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
     }
 
   
-    public Damage GetDamage(ActorHealth hitActor)
+    public Damage GetDamage()
     {
         return new Damage(DamageAmount, DamageType.Attack);
     }

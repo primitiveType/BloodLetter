@@ -85,7 +85,7 @@ public class ActorHealth : MonoBehaviour
 
     private void OnEnemyShot(object sender, OnShotEventArgs args)
     {
-        var baseDamage = args.ProjectileInfo.GetDamage(this);
+        var baseDamage = args.ProjectileInfo.GetDamage();
         var resultingDamage = baseDamage.Amount;
         if (m_Armor)
         {

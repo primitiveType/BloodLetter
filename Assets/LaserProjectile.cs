@@ -87,13 +87,13 @@ public class LaserProjectile : HitscanProjectileInfo
         var damaged = GetHitObject(position, direction, ActorRoot, out RaycastHit hit);
         if (damaged != null)
         {
-            damaged.OnShot(hit.textureCoord, this);
-            if (OnHitPrefab)
-            {
-                var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
-                float adjustmentDistance = .1f;
-                hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
-            }
+            damaged.OnShot(hit.textureCoord, hit.point,this);
+            // if (OnHitPrefab)
+            // {
+            //     var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
+            //     float adjustmentDistance = .1f;
+            //     hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+            // }
         }
 
         bool hitSomething = hit.transform;

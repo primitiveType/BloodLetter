@@ -21,10 +21,10 @@ public class ActorEvents : MonoBehaviour, IActorEvents
     /// Should really be called "OnDamaged"
     /// </summary>
     /// <param name="projectileInfo"></param>
-    public void OnShot(IDamageSource projectileInfo)
+    public void OnShot(IDamageSource projectileInfo, Vector3 worldPos)
     {
         //TODO: this should probably set an animator bool that fires an event
-        OnShotEvent?.Invoke(this, new OnShotEventArgs(projectileInfo));
+        OnShotEvent?.Invoke(this, new OnShotEventArgs(projectileInfo, worldPos));
     }
 
     public void OnStep()
@@ -166,16 +166,18 @@ public delegate void OnShotEvent(object sender, OnShotEventArgs args);
 public class OnShotEventArgs
 {
     public IDamageSource ProjectileInfo { get; }
+    public Vector3 WorldPos { get; }
 
-    public OnShotEventArgs(IDamageSource projectileInfo)
+    public OnShotEventArgs(IDamageSource projectileInfo, Vector3 worldPos)
     {
         ProjectileInfo = projectileInfo;
+        WorldPos = worldPos;
     }
 }
 
 public interface IDamageSource
 {
-    Damage GetDamage(ActorHealth actorToDamage);
+    Damage GetDamage();
 }
 
 public struct Damage
@@ -193,6 +195,8 @@ public struct Damage
 [Flags]
 public enum DamageType
 {
-    Attack = 0x001,
-    Hazard = 0x010
+    Attack = 0x0001,
+    Hazard = 0x0010,
+    Physical = 0x0100,
+    Magical = 0x1000
 }

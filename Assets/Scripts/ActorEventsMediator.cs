@@ -64,9 +64,9 @@ public class ActorEventsMediator : MonoBehaviour, IActorEvents
         remove => _actorEventsImplementation.OnEquippedWeaponChangedEvent -= value;
     }
 
-    public void OnShot(IDamageSource projectileInfo)
+    public void OnShot(IDamageSource projectileInfo, Vector3 worldPos)
     {
-        _actorEventsImplementation.OnShot(projectileInfo);
+        _actorEventsImplementation.OnShot(projectileInfo, worldPos);
     }
 
     public void OnStep()

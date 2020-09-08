@@ -11,10 +11,11 @@ using Vector3 = UnityEngine.Vector3;
 public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
 {
     public bool Piercing;
-    public GameObject OnHitPrefab;
+    // public GameObject OnHitPrefab;
     public GameObject OnHitWallPrefab;
     [SerializeField] private float m_Damage;
     public float Damage => m_Damage;
+
 
     protected static LayerMask EnvironmentLayers =>
         LayerMask.GetMask("Default", "Interactable");
@@ -25,10 +26,10 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         var damaged = GetHitObject(ownerPosition, ownerDirection, actorRoot, out RaycastHit hit);
         if (damaged != null && damaged != ownerRoot.HitscanCollider)
         {
-            damaged.OnShot(hit.textureCoord, this);
-            var hitEffect = CreateHitEffect(OnHitPrefab, damaged.transform, hit);
-            float adjustmentDistance = .1f;
-            hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
+            damaged.OnShot(hit.textureCoord, hit.point, this);
+            //var hitEffect = CreateHitEffect(OnHitPrefab, damaged.transform, hit);
+//            float adjustmentDistance = .1f;
+            //hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);
         }
     }
 
@@ -146,7 +147,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         return LayerMask.GetMask("Destructible", actorLayer);
     }
 
-    public Damage GetDamage(ActorHealth hitActor)
+    public Damage GetDamage()
     {
         return new Damage(Damage, DamageType.Attack);
     }
