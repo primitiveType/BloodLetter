@@ -17,7 +17,7 @@ public interface IActorEvents
     ///     Should really be called "OnDamaged"
     /// </summary>
     /// <param name="projectileInfo"></param>
-    void OnShot(IDamageSource projectileInfo, Vector3 worldPos);
+    void OnShot(IDamageSource projectileInfo, Vector3 worldPos, Vector3 hitNormal);
 
     void OnStep();
     void OnAttack();

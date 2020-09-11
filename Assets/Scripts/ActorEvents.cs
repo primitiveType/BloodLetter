@@ -19,10 +19,10 @@ public class ActorEvents : MonoBehaviour, IActorEvents
     ///     Should really be called "OnDamaged"
     /// </summary>
     /// <param name="projectileInfo"></param>
-    public void OnShot(IDamageSource projectileInfo, Vector3 worldPos)
+    public void OnShot(IDamageSource projectileInfo, Vector3 worldPos, Vector3 hitNormal)
     {
         //TODO: this should probably set an animator bool that fires an event
-        OnShotEvent?.Invoke(this, new OnShotEventArgs(projectileInfo, worldPos));
+        OnShotEvent?.Invoke(this, new OnShotEventArgs(projectileInfo, worldPos, hitNormal));
     }
 
     public void OnStep()

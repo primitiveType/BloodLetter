@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd5d14e65bead04ba72bfb8fa0cf52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toFollow: {fileID: 0}
   AfterUnparentAction:
     m_PersistentCalls:
       m_Calls:
@@ -59,6 +58,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  toFollow: {fileID: 0}
 --- !u!1 &847258852847000055
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,13 +148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57df4f147f914c49abede61958644726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Attacks: []
+  AggroHandler: {fileID: 7486875836196438498}
   CooldownStartsOnAggro: 1
+  m_animator: {fileID: 1105345834222380861}
   m_AttackCooldown: 3
   m_AttackCooldownVariance: 1.5
-  m_animator: {fileID: 1105345834222380861}
+  m_Attacks: []
   VisibilityHandler: {fileID: 678540891885456008}
-  AggroHandler: {fileID: 7486875836196438498}
 --- !u!114 &678540891885456008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae88e089cfc540f09cefbd6347c3c366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_monsterTransform: {fileID: 8171493255443565341}
   _degreesVisibility: 180
+  m_monsterTransform: {fileID: 8171493255443565341}
 --- !u!114 &7486875836196438498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,10 +181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db34b636d44611898f3c694e40a0f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VisibilityHandler: {fileID: 678540891885456008}
+  AggroDelayVariance: 0.5
   AggroRange: 30
   EarshotAggroRange: 50
-  AggroDelayVariance: 0.5
+  VisibilityHandler: {fileID: 678540891885456008}
 --- !u!1 &8171493255443565340
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,8 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f108e49401376684f8c46792dc8e4ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Max: 8
   materialGameObject: {fileID: 8228839469965635381}
+  Max: 8
 --- !u!195 &6392817097388422497
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -284,9 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e47536f1ec08e6478239c1e94ca18b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
   AggroHandler: {fileID: 7486875836196438498}
   Target: {fileID: 0}
-  _animator: {fileID: 0}
 --- !u!114 &467093247551489786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,11 +299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9fe46237834743887439fde2335e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  m_Armor: {fileID: 0}
   m_Health: 1
   m_MaxHealth: 0
   m_OverhealMaxHealth: 0
-  m_Armor: {fileID: 0}
-  _animator: {fileID: 0}
 --- !u!114 &4068027032379591258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,13 +380,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aggroClips: []
-  stepClips: []
-  hurtClips: []
   attackClips: []
   deathClips: []
-  m_stepSource: {fileID: 0}
-  m_hurtSource: {fileID: 0}
+  hurtClips: []
   m_attackSource: {fileID: 0}
+  m_hurtSource: {fileID: 0}
+  m_stepSource: {fileID: 0}
+  stepClips: []
 --- !u!114 &6510712830491665609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 8827640151640439171}
   - component: {fileID: 4212321718403499482}
   - component: {fileID: 3720509687200873003}
+  - component: {fileID: 7559552615466640902}
   m_Layer: 11
   m_Name: graphic
   m_TagString: Untagged
@@ -605,12 +606,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 9bf213797b0b56a4f9ab086804d8efbf, type: 2}
-  materialGameObject: {fileID: 8228839469965635381}
   anchorTransform: {fileID: 4023524117925132286}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 1
+  materialGameObject: {fileID: 8228839469965635381}
   reposition: 1
+  resize: 1
+  yFudge: 0.01
 --- !u!64 &6738097371801645790
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -659,3 +660,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actorEventsImplementation: {fileID: 6510712830491665609}
+--- !u!114 &7559552615466640902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228839469965635381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2fd37022a748faa4e80e58e3b05757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Events: {fileID: 6510712830491665609}
+  OnHitPrefab: {fileID: 7917214635672765982, guid: deb8983ad7b1f274f99256e5ee06a94b,
+    type: 3}

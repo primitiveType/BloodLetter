@@ -23,7 +23,7 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
             var damaged = hit.GetComponent<IDamagedByHitscanProjectile>();
             if (damaged != null)
             {
-                damaged.OnShot(this, hit.ClosestPoint(ownerPosition));
+                damaged.OnShot(this, hit.ClosestPoint(ownerPosition), direction);
                 isDone = true;
             }
             else if (OnHitWallPrefab)

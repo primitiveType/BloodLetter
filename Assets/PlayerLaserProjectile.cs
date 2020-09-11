@@ -112,7 +112,7 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
         Debug.DrawLine(position, position + direction);
         var damaged = GetHitObject(position, direction, ActorRoot, out var hit);
         if (damaged != null)
-            damaged.OnShot(hit.textureCoord, hit.point, this);
+            damaged.OnShot(hit.textureCoord, hit.point, this, direction);
         // if (OnHitPrefab)
         // {
         //     var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);

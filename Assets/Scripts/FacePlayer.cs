@@ -3,12 +3,16 @@
 [ExecuteInEditMode]
 public class FacePlayer : MonoBehaviour
 {
-    private Transform ToFace;
+    [SerializeField] private Transform ToFace;
 
     // Start is called before the first frame update
     private void Start()
     {
-        ToFace = Toolbox.Instance.PlayerHeadTransform;
+        if (ToFace == null)
+        {
+            ToFace = Toolbox.Instance.PlayerHeadTransform;
+        }
+
         FaceThePlayer();
     }
 

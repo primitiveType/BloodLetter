@@ -25,7 +25,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         ownerRoot = actorRoot;
         var damaged = GetHitObject(ownerPosition, ownerDirection, actorRoot, out var hit);
         if (damaged != null && damaged != ownerRoot.HitscanCollider)
-            damaged.OnShot(hit.textureCoord, hit.point, this);
+            damaged.OnShot(hit.textureCoord, hit.point, this, ownerDirection);
         //var hitEffect = CreateHitEffect(OnHitPrefab, damaged.transform, hit);
 //            float adjustmentDistance = .1f;
         //hitEffect.transform.position = hit.point + (hit.normal * adjustmentDistance);

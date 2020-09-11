@@ -55,7 +55,7 @@ public class DotVolume : MonoBehaviour, IDamageSource
         {
             TargetsByTime[other] -= SecondsPerTick;
             var actor = other.GetComponent<IActorEvents>();
-            actor.OnShot(this, other.ClosestPoint(transform.position));
+            actor.OnShot(this, other.ClosestPoint(transform.position), Vector3.down);
         }
     }
 

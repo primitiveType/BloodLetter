@@ -33,13 +33,14 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
 
             Debug.Log($"hit {collider.name}");
             var damaged = collider.GetComponent<IActorEvents>();
+            var direction = collider.transform.position - transform.position;
+
             if (collider.attachedRigidbody)
             {
-                var direction = collider.transform.position - transform.position;
                 collider.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
             }
 
-            damaged?.OnShot(this, collider.ClosestPoint(position));
+            damaged?.OnShot(this, collider.ClosestPoint(position), direction);
         }
     }
 
@@ -57,13 +58,14 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
         Debug.Log($"hit {other.name}");
         var damaged = other.GetComponentInChildren<IActorEvents>();
         var position = transform.position;
+        var direction = other.transform.position - position;
+
         if (other.attachedRigidbody)
         {
-            var direction = other.transform.position - position;
             other.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
         }
 
-        damaged?.OnShot(this, other.ClosestPoint(position));
+        damaged?.OnShot(this, other.ClosestPoint(position), direction);
     }
 
     private void OnDrawGizmos()
