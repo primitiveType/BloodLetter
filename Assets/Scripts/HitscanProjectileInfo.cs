@@ -49,6 +49,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     {
         var ray = new Ray(ownerPosition, ownerDirection * Range);
         Debug.DrawRay(ownerPosition, ownerDirection * Range, Color.blue, 10);
+        Debug.Log(actorRoot);
         var layerToCheckForDamage = GetLayerToCheckForDamage(actorRoot.EntityType);
 
         var raycastMask = GetRaycastMask(actorRoot.EntityType);

@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: GOBLIN_LEGACY_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: GOBLIN_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 542c1dcc674254a4dada207e76b4d780, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9ba8c4c9aca0b7c4b91442794b198f03, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2be26f7ac44233740ba488e2c619f0fa, type: 2}
+    normalizedGroundPosition: 0.0035724628
+  - rows: 3
+    columns: 3
+    animationName: GOBLIN_LEGACY_2HitComboDaggers
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: e95d046cdf7d5e54b97cd512e36dbfa7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bb86f21d40302294bb92dc0261603e60, type: 2}
+    alphaMap: {fileID: 18700000, guid: defdbf5dcb234e848b7e5649ee27834e, type: 2}
+    normalizedGroundPosition: 0.0025597876
+  - rows: 3
+    columns: 3
+    animationName: GOBLIN_LEGACY_2HitComboForwardDaggers
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: e44022e79183beb499780665b979643d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d364f5560e10b524bbd1258dc2555500, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1f3777bea591397419d29af1a00cfe9f, type: 2}
+    normalizedGroundPosition: 0.013149483
+  - rows: 3
+    columns: 3
+    animationName: GOBLIN_LEGACY_2HitComboForwardDaggers_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: d2713b89e0d5c624bb2d1adafb8d6916, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 78f7eb6e95bb918499fdd754966337ab, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9fa52cb6ebd7e4546bb952d4bedeee0e, type: 2}
+    normalizedGroundPosition: 0.026616877
+  - rows: 3
+    columns: 3
+    animationName: GOBLIN_LEGACY_2HitComboForwardSwordShield
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 46539406db949064789b8aa1c936cf22, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f3154be885d36904c979ec2a1454afa4, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4f2eb91f5dda5424c8aaca0ba281c1c9, type: 2}
+    normalizedGroundPosition: 0.013149248
+  - rows: 3
+    columns: 3
+    animationName: GOBLIN_LEGACY_2HitComboForwardSwordShield_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: c2f1f344d9f4a5649a13037bba896d68, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 4686ad3c91761004c9bc919d0028f230, type: 2}
+    alphaMap: {fileID: 18700000, guid: e7c7ca579d3628e4f9388325487f4b70, type: 2}
+    normalizedGroundPosition: 0.026855247
+  - rows: 3
+    columns: 4
+    animationName: GOBLIN_LEGACY_2HitComboSwordShield
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 56a4c55027c58054fbee54eaba3abdb9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 550c2da184325f247a5a1c91787cef58, type: 2}
+    alphaMap: {fileID: 18700000, guid: c866f086ad3d5a248b313e246832505b, type: 2}
+    normalizedGroundPosition: 0.0042842943
+  - rows: 3
+    columns: 5
+    animationName: GOBLIN_LEGACY_3HitComboDaggers
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: fa08e7f6114b83b489bff19ab6a9ca53, type: 2}
+    diffuseMap: {fileID: 18700000, guid: dbd57f53e21167d409d1b3cbd0d7190a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 392572da73bb5d640883443d2d501d37, type: 2}
+    normalizedGroundPosition: 0.020397108
+  - rows: 3
+    columns: 5
+    animationName: GOBLIN_LEGACY_3HitComboForwardDaggers
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: 7517c51ed724a6f4e891e4ddd6d2acc7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 977a336a14354504c97fb4d1d01ecbe9, type: 2}
+    alphaMap: {fileID: 18700000, guid: e7013e30d28b85b43a4c8868b166eb82, type: 2}
+    normalizedGroundPosition: 0.011757008
+  - rows: 3
+    columns: 5
+    animationName: GOBLIN_LEGACY_3HitComboForwardDaggers_RM
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: 395bff28e691a10499fa79a8f1838d63, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3fe5f4bfaf8edd448a0a43fafb2a2dc5, type: 2}
+    alphaMap: {fileID: 18700000, guid: 48c1424fe800a4147a4346d76093c8cf, type: 2}
+    normalizedGroundPosition: 0.009467471
+  - rows: 3
+    columns: 5
+    animationName: GOBLIN_LEGACY_3HitComboForwardSwordShield
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: d146f8b37e21e7f4aae79430b7e148ec, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e3b6758d3a98b6e4aa7596006ef8d80e, type: 2}
+    alphaMap: {fileID: 18700000, guid: c3f82a19fa1a570409801a9e235ca446, type: 2}
+    normalizedGroundPosition: 0.011810283
+  - rows: 3
+    columns: 5
+    animationName: GOBLIN_LEGACY_3HitComboForwardSwordShield_RM
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: 2393480d6fcce3448868380d63074e67, type: 2}
+    diffuseMap: {fileID: 18700000, guid: af996959c9087cc45aca13e4b7ce6c1a, type: 2}
+    alphaMap: {fileID: 18700000, guid: e9d1bc9172d75a64f8ff57bbca04f13a, type: 2}
+    normalizedGroundPosition: 0.009510469
+  - rows: 3
+    columns: 5
+    animationName: GOBLIN_LEGACY_3HitComboSwordShield
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 9b87003fc54c2654da5a2f49d9690ef1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2b81f2a084ff40e4da4e236f546b03d4, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0008de039332785499687c00e62425b7, type: 2}
+    normalizedGroundPosition: 0.0043009664
+  - rows: 2
+    columns: 3
+    animationName: GOBLIN_LEGACY_attack1Daggers
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: b48c63724eed95242a1908af70a986c6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a4cf46989d5ccf3439ffad789adab5e1, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4c1704be43cd0004f916135e352a7ebf, type: 2}
+    normalizedGroundPosition: 0.002600148
+  - rows: 2
+    columns: 3
+    animationName: GOBLIN_LEGACY_attack1ForwardDaggers
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: e5ea6f5cef882574bae545e260c49598, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 6afbffce0698774479fb7ca519ceeedb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6f54d7ad416c43e40aa10560cd912455, type: 2}
+    normalizedGroundPosition: 0.0055437065
+  - rows: 2
+    columns: 3
+    animationName: GOBLIN_LEGACY_attack1ForwardDaggers_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 1d45d11f40ec95449a030d574bdb04c3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 769097ea70d51194ea371789ddb1b2c3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4cbd7e52ea88cfc4d85346628d6dee94, type: 2}
+    normalizedGroundPosition: 0.024484912
+  - rows: 2
+    columns: 3
+    animationName: GOBLIN_LEGACY_attack1ForwardSwordShield
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 524ad21705ef09043b28387fc1f05a56, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 497ee5c8d83ecdd41a7e35ff3c387b7e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 665d16d0061b6b64e84e2831c3a39660, type: 2}
+    normalizedGroundPosition: 0.0055441875
+  - rows: 2
+    columns: 3
+    animationName: GOBLIN_LEGACY_attack1ForwardSwordShield_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 125da49cb68248341b7ea6b9c11f6123, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7e94e5c64a075c944b635880ac3acff6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2888ecf854145aa4bbb800d0d8d4e219, type: 2}
+    normalizedGroundPosition: 0.02448538
+  - rows: 2
+    columns: 3
+    animationName: GOBLIN_LEGACY_attack1SwordShield
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 6f391ed90e5af2c47a008ee55619e29a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a28594f1c0d328740858166bdc201af1, type: 2}
+    alphaMap: {fileID: 18700000, guid: 27d26699994a9094ba9adfb5d372a630, type: 2}
+    normalizedGroundPosition: 0.0026861764
+  - rows: 2
+    columns: 3
+    animationName: GOBLIN_LEGACY_attack2Daggers
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: bc606282572d4f1438a28a7ada971000, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 67f6876fa8f6212408614c4267fd3de2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 02bb5f922e3b7224b9ca897f0f34c342, type: 2}
+    normalizedGroundPosition: 0.0024992544
+  - rows: 2
+    columns: 4
+    animationName: GOBLIN_LEGACY_attack2ForwardDaggers
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 6ecd142a24fec4542bfe4fa44a058891, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a1ba6701b1a39fd4caa24e3e68071801, type: 2}
+    alphaMap: {fileID: 18700000, guid: 852db735080128e4a86012f5a38b7ae5, type: 2}
+    normalizedGroundPosition: 0.003774654
+  - rows: 2
+    columns: 4
+    animationName: GOBLIN_LEGACY_attack2ForwardDaggers_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 0b5b480bb15a34741836248245c573a9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 15d5663717174074a97fe5e9be4b9ca6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 97956bfe03f37944c9f3f7998228463e, type: 2}
+    normalizedGroundPosition: 0.026767744
+  - rows: 2
+    columns: 4
+    animationName: GOBLIN_LEGACY_attack2ForwardSwordShield
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: cefa3dabaf242f449a1834a6f58a0455, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a8a3d5df26575854185a3bb4372aa7dc, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6ce56b46c6ac5724b94fe79a30b94710, type: 2}
+    normalizedGroundPosition: 0.0039099837
+  - rows: 2
+    columns: 4
+    animationName: GOBLIN_LEGACY_attack2ForwardSwordShield_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 9626eaf74d1de6e49b49e3aa60e8d7ca, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9526742957203e346acb250995cd80d4, type: 2}
+    alphaMap: {fileID: 18700000, guid: b281028693980aa4b8b3d628516cd1a9, type: 2}
+    normalizedGroundPosition: 0.019710153
+  - rows: 2
+    columns: 4
+    animationName: GOBLIN_LEGACY_attack2SwordShield
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 75d504db43f1fea4a98ef534f7d51f12, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ff236b5beb9eb1f4783f05f38dad500f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3c8f79455ecd95345aae6206a6e30e7a, type: 2}
+    normalizedGroundPosition: 0.0027808861
+  - rows: 2
+    columns: 4
+    animationName: GOBLIN_LEGACY_attack3Daggers
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 26f6821e3496ed94da95a47fbf6615ac, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ce5cb91327fabfd4a90ed58df6c281f9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0c9f6ed1409e0524b89d0a5838998fb7, type: 2}
+    normalizedGroundPosition: 0.019934865

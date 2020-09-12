@@ -17,7 +17,9 @@ public class OnShotParticleSpawner : MonoBehaviour
             var hitEffect = CreateHitEffect(OnHitPrefab, null);
             var adjustmentDistance = .1f;
             hitEffect.transform.position = args.WorldPos + -transform.forward * adjustmentDistance;
-            hitEffect.GetComponent<Rigidbody>().AddForce(args.HitNormal * 2, ForceMode.Impulse);
+            hitEffect.GetComponent<Rigidbody>()
+                .AddForce((args.HitNormal * Random.Range(-4, 4)) + (Vector3.up * Random.Range(1, 4)),
+                    ForceMode.Impulse);
         }
     }
 
@@ -27,4 +29,3 @@ public class OnShotParticleSpawner : MonoBehaviour
         return hitEffect;
     }
 }
-

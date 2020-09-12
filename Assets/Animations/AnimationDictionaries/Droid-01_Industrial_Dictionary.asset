@@ -1,0 +1,743 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: Droid-01_Industrial_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: Droid-01_Industrial_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: c804036c1c6e300458f731493f4c1cbc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8efbf5fb33503234f925f14b7149f0d3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1a073af89066df94bb3df10019a3ae1f, type: 2}
+    normalizedGroundPosition: 0.012517242
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_2HitComboCombat
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 6727e4a16a6982648887b7b0e1caec29, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 634696c9933d29646825f7e574c758eb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 09024479e6178794b9711a52d5fb0b07, type: 2}
+    normalizedGroundPosition: 0.007573664
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_2HitComboCombat_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 4e4721dd2ea725e4f92a4a88aae06f91, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 56d15787024d7464eafbc3ab53ce78d1, type: 2}
+    alphaMap: {fileID: 18700000, guid: b799b8847d0086948b1d880f8f8e9792, type: 2}
+    normalizedGroundPosition: 0.007573664
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_Attack1Combat
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 1993b904340941343b785c276a14012e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2807e954c7f448846bb945dfded116cd, type: 2}
+    alphaMap: {fileID: 18700000, guid: b106b74025d101a469e6f4a615410b7f, type: 2}
+    normalizedGroundPosition: 0.0059011383
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_Attack1Combat_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 85573d60d4734f74ba42ece76f89eec8, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a7898cfd51ab33342a3222d73a5c2a53, type: 2}
+    alphaMap: {fileID: 18700000, guid: ebc77060d59fb974186094095bb83ebf, type: 2}
+    normalizedGroundPosition: 0.0058991434
+  - rows: 2
+    columns: 3
+    animationName: Droid-01_Industrial_Attack2Combat
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 39b00832137fcc74c9992fd7939eb4f8, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 41c042ef3bb6a3649a4b33ff5ad668ec, type: 2}
+    alphaMap: {fileID: 18700000, guid: b0fecb618dd5dfb43be5cc64f1c15abd, type: 2}
+    normalizedGroundPosition: 0.0073703215
+  - rows: 2
+    columns: 3
+    animationName: Droid-01_Industrial_Attack2Combat_RM
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: e3ef116c28b5d9a44b7b306eae4c38eb, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5bd0933a3d7d6864dac42e3c9467547a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6c5839db87681d447be882aa9a726e7d, type: 2}
+    normalizedGroundPosition: 0.0073705637
+  - rows: 3
+    columns: 3
+    animationName: Droid-01_Industrial_DeathAiming
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: dbf085c0e449688429383e5bc1da2848, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2008a0ec1d71bc947bcc94f16c07649b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0d028240331d0b0468226d814d2ce88e, type: 2}
+    normalizedGroundPosition: 0.039257698
+  - rows: 3
+    columns: 3
+    animationName: Droid-01_Industrial_DeathArmed
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 7f9784c3e29d5544d9c9ab657fb5115b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 494fa684469868349afefe9a618a4977, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8491c51e06629f445891c88cc568ff32, type: 2}
+    normalizedGroundPosition: 0.039262924
+  - rows: 3
+    columns: 3
+    animationName: Droid-01_Industrial_DeathCombat
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 4f368a2f7f732a84996b9b3c875ed200, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 96e1a79f4603f7f43a65c2b78ab3f0ec, type: 2}
+    alphaMap: {fileID: 18700000, guid: cbffabe820b84e9498258aa7ba6b9007, type: 2}
+    normalizedGroundPosition: 0.14070687
+  - rows: 3
+    columns: 3
+    animationName: Droid-01_Industrial_DeathNormal
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: abf993c404b0e9145991ce0d7df48a4c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 528647de5ab4b7a4c8ed559094137ed5, type: 2}
+    alphaMap: {fileID: 18700000, guid: c8043cb90fa0f0847972d9901a7188ee, type: 2}
+    normalizedGroundPosition: 0.1329771
+  - rows: 3
+    columns: 3
+    animationName: Droid-01_Industrial_DrawWeaponAiming
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 0a60cd258ba6ef1428d28bcb2bdef01e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 90a97ac9243a55f4d92cb912959899ee, type: 2}
+    alphaMap: {fileID: 18700000, guid: ff71230f0ae5bf0409ecaa81deb58136, type: 2}
+    normalizedGroundPosition: 0.0047742836
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_DrawWeaponArmed
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 90df8b6f655fa4b479ed32cf05c37a72, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 855ff2b79dd00af43a19e4eb994337ef, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1df8dd3e40eb34040b06bfaaad50e162, type: 2}
+    normalizedGroundPosition: 0.0048744236
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitBackAiming
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: f3e6cfd58bc5051489870c4067cde79e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 19f7226e5bd4a6e4b94084833460ad0b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4aa61b7fadc1d8e40b93dc65f14286cd, type: 2}
+    normalizedGroundPosition: 0.0029185405
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitBackArmed
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: f880e2a7c11ecfd4c88c1202ad7e5360, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e145a3f6407584e48b0266c9c0325113, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9435d7dc70d13fb4a87a28eba6f94607, type: 2}
+    normalizedGroundPosition: 0.0029189435
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitBackCombat
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: d35203f8509d37b4ba5f603f70932117, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a1463c4049371b848b3b5fe7f9d47b1a, type: 2}
+    alphaMap: {fileID: 18700000, guid: b82ef1a9679003d49b341ac0cd31ef0d, type: 2}
+    normalizedGroundPosition: 0.0002648585
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitBackNormal
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: fd5971216354c3e49a2c1a469869bad4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a5489f2e79dfb9e47b3f3635eab8aba9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1eccd6cd5828af54bbbd242aac59e73f, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitFrontAiming
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 1eb6d766368c9864eace8036352d2366, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 18f2870a23eb54f469705e3e1daf7283, type: 2}
+    alphaMap: {fileID: 18700000, guid: c6420daa3ed6ad147b8ee121008b25f5, type: 2}
+    normalizedGroundPosition: 0.0028420708
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitFrontArmed
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 32855589e275c2a4eb07760cc98db55e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 69d33eea9cbbfc7468f958aec8b100ab, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5f6ea5ecf2e417f4d99cff202792a693, type: 2}
+    normalizedGroundPosition: 0.0028505416
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitFrontCombat
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 300bd4951f1c5c54781d448ce00b5f5d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 19ba5a649d4c04e45bf7e2e775690ffe, type: 2}
+    alphaMap: {fileID: 18700000, guid: b44f8ee75fe0ab6419f2bf5bca3bed82, type: 2}
+    normalizedGroundPosition: 0.0002554488
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitFrontNormal
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: e8fc0c7af04d7914892e40bc59e9ebc5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a533a2d34779f1045865d2c31d8686bc, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1e3ce344696315349934136c02431591, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitLeftAiming
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 0e427dff68258674990ae0150f0a835e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 484ea0bd048ee8440b549aad8139aba6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 303172aeec8e746468bea00f5ee87acc, type: 2}
+    normalizedGroundPosition: 0.0028540026
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitLeftArmed
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: f7f4aea8ad8e13b489d6f6455ba730a8, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 884740ead369bd946b61282d9e54656f, type: 2}
+    alphaMap: {fileID: 18700000, guid: abbf9beb5d1ad3d418c5ceb04a9e656d, type: 2}
+    normalizedGroundPosition: 0.0028517593
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitLeftCombat
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 680905251bd99dd4991c5bb21a34a8a9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9c13df3f471d51241b1d6a5759f408b4, type: 2}
+    alphaMap: {fileID: 18700000, guid: 95962eccbd8139049a77952fe8fb7dc5, type: 2}
+    normalizedGroundPosition: 0.0002648585
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitLeftNormal
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 787492434bdd96e4681134b97451370c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b097946619900704587640bbe99b8130, type: 2}
+    alphaMap: {fileID: 18700000, guid: 79c13d77440e13e4aa35021cc916e337, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitRightAiming
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 981ca6582f9669c44aa795bacb0fd828, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2377f452dc785ed428e65268a55e9d67, type: 2}
+    alphaMap: {fileID: 18700000, guid: b21b25127ba076e46b229a6a2214abaa, type: 2}
+    normalizedGroundPosition: 0.0028445951
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitRightArmed
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 0d45decf84802ff4f8806a67d922a75d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c483a7ae469470f4fbc92665ad21232a, type: 2}
+    alphaMap: {fileID: 18700000, guid: c852af8c11443fa4d80bf85a7abcb36f, type: 2}
+    normalizedGroundPosition: 0.0028417031
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitRightCombat
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: b0c7709aefa391c4ab030f09777967bf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ead492f35c5e9e8468bdc96f25441e93, type: 2}
+    alphaMap: {fileID: 18700000, guid: f1c56474c3475b844a82c45a91586902, type: 2}
+    normalizedGroundPosition: 0.0002648585
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_GetHitRightNormal
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: 17f785a6c82ffc54bafab8cb264042d9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9ea1db27584eba14d800ed9c8c53af81, type: 2}
+    alphaMap: {fileID: 18700000, guid: c6ad314956e8fc547869e0b249a8791c, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 4
+    columns: 4
+    animationName: Droid-01_Industrial_IdleAiming
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 6f233599d0e13bb47b0c4716fa6d3d9f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e228fce017e37e647ae8fd366ed47196, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3694e5c8038f9ce46966dc1c0bf9fa3d, type: 2}
+    normalizedGroundPosition: 0.0029015532
+  - rows: 4
+    columns: 4
+    animationName: Droid-01_Industrial_IdleArmed
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 9b444f4f46d7a394ab5cb7512a7c3d9f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3cc09bd419715a34695a9bf425c5a50b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4acf905dabbe0db41b1142b3128e86da, type: 2}
+    normalizedGroundPosition: 0.002900446
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_IdleCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 71dce10ab630d684e91fe611fb615c3c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: cbb7d0ac8ab65f046adb952d4a037f01, type: 2}
+    alphaMap: {fileID: 18700000, guid: d8e73179cb46f0543b709b1019183117, type: 2}
+    normalizedGroundPosition: 0.0015790818
+  - rows: 8
+    columns: 8
+    animationName: Droid-01_Industrial_IdleLookAroundArmed
+    numFrames: 64
+    normalMap: {fileID: 18700000, guid: 9f1a3777394d4104d83b07e3861658b1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b5021228d0e2ac040b64dc6a2d207fd8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 85c9f4bb5e296514a9af6f57e0e4278f, type: 2}
+    normalizedGroundPosition: 0.0028677383
+  - rows: 8
+    columns: 8
+    animationName: Droid-01_Industrial_IdleLookAroundNormal
+    numFrames: 64
+    normalMap: {fileID: 18700000, guid: 630dd9e25f451734b955fc3f014b0576, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 862cdb3dce00a0a42bcc1887e3392bbd, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4e22bd460dc9226448b0d98816b21593, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 4
+    columns: 4
+    animationName: Droid-01_Industrial_IdleNormal
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 5ec6ba03c4936594e80f723e1348b08e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 776eda956b53b5c4ebb1ebd30b56f039, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3270872d3aba04c46ba4252531f03ff9, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_PutBackWeapon
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 7b1cc265db6a882468be4d47454f7358, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c98558a57ff114143833be660dce5160, type: 2}
+    alphaMap: {fileID: 18700000, guid: 11a405f7b09a2ad49b4572fc8fffa67b, type: 2}
+    normalizedGroundPosition: 0.003336404
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_RunArmed
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: ee1df199332cf7b4f871eac334fb432d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5f9ca99501f79e742ad8523ce72ad8a8, type: 2}
+    alphaMap: {fileID: 18700000, guid: f06cd0b73d1a4b74383e653a0808549c, type: 2}
+    normalizedGroundPosition: 0.0070808535
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_RunArmed_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: b4a37898686d5bd47b299046a9eb6e2f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 836c0775a557c984f906f3bbddeebb3a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 89e20744893aea147b5c79752df2d7af, type: 2}
+    normalizedGroundPosition: 0.0070808525
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_RunNormal
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: be7e1ad784bf3074e9892b8d0982ee9c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b1461dba5132bd54ea580cee5b7f6aef, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7f85b4664873a8540bcd705174c25141, type: 2}
+    normalizedGroundPosition: 0.006800644
+  - rows: 2
+    columns: 2
+    animationName: Droid-01_Industrial_RunNormal_RM
+    numFrames: 4
+    normalMap: {fileID: 18700000, guid: bab8d6d48d34977459a84f414ddf000f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7ed9eb1235a540348bc3360e14bd3ff7, type: 2}
+    alphaMap: {fileID: 18700000, guid: d61621eabb178e644b7e9edebe8488a1, type: 2}
+    normalizedGroundPosition: 0.0068006446
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsAiming
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: c7dc619bbd105dd4cba9ad859ed66032, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1abbdb93fb159e74ca7815fc842c12c6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7a0ca500bec022540a954073acae0d85, type: 2}
+    normalizedGroundPosition: 0.0040490413
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsAiming_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 406dce787fa575648a1a90176a34a423, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8cd713967af034047af91c93e9381b32, type: 2}
+    alphaMap: {fileID: 18700000, guid: bfbcf59e7137f904c83a4145c368b477, type: 2}
+    normalizedGroundPosition: 0.0040485514
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsArmed
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: b0bd98127a4944447afe9fd8c1fa3390, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ac47ee02ebe1c5148af31cff16975b28, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6c82c4657230c764382394d2866037dc, type: 2}
+    normalizedGroundPosition: 0.0040490413
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsArmed_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 3fa7ca1772d279b42a2d4653ac6924f0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c2862299c0b13c449b6d0987f4e170b9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0b690cc6203cffd489f7f7a56ff3880d, type: 2}
+    normalizedGroundPosition: 0.0040485514
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 8bc83afe213c3f84abd7d39addb26e7d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 04cbffcae3dd8744ca53141a8b53d900, type: 2}
+    alphaMap: {fileID: 18700000, guid: 159b943913c28084bb0e5e097778d7f3, type: 2}
+    normalizedGroundPosition: 0.0040426548
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsCombat_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 1fd492d7b818f0c4096cb3f17edfd930, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1fe8cca7686a9a04990e7b9b6e1b0157, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3f814f50566a5e04193de4b4f03b8772, type: 2}
+    normalizedGroundPosition: 0.004042165
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsLeftAiming
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 925b4b67ece0fb64488b3bf6a293f848, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c4a107d555d0d3c489e1731786db1042, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1b57f625e938c5845bf665a1951da81b, type: 2}
+    normalizedGroundPosition: 0.0037456302
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsLeftAiming_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 0f40d8ad660956445b8c54408dacbc5c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 05bd5dfc90751004a91d6e09bece3280, type: 2}
+    alphaMap: {fileID: 18700000, guid: e26807e6cdf3dc94488dc5e3885469ac, type: 2}
+    normalizedGroundPosition: 0.003745876
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsLeftArmed
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 2b87836bb3aa0b04297b3b34767c6f5c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5357c485ea3c11c4aa2afc41822d052a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0b5f37cf9c5c1494ca4090a038ae3ba9, type: 2}
+    normalizedGroundPosition: 0.0037456302
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsLeftArmed_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: b4d9f0fbb5b2fbc4baf09f9f41ba5949, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 198e533acd4e1894cac9d7e5d37365eb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 245dd4592e6c8a344a7bc41aeade4c5a, type: 2}
+    normalizedGroundPosition: 0.003745876
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsLeftCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 33177264889ba1e459393eaf54067b9e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 30515bed5e779494b97bcdbd181b08a6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5fe19607f37a55848997f0d5b64bff00, type: 2}
+    normalizedGroundPosition: 0.00373972
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsLeftCombat_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: be4df2dc68b3d944b96b10d674692782, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 70224e12bce9b3a47ab94b161b6c4559, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4976de7aaa21aa8479812cdb1e04aada, type: 2}
+    normalizedGroundPosition: 0.003739965
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsRightAiming
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: af034c11d67534c46883e1ca4b31a5a7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ef61b379f264d004d8e57247a562e2ce, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7acc6cc5972f45144a38f52aed06267d, type: 2}
+    normalizedGroundPosition: 0.007570446
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsRightAiming_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 5d87fdec67dcdc746847865bd84b66b2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5cf97b3b43ccf31429b96064c59c12c4, type: 2}
+    alphaMap: {fileID: 18700000, guid: aee1c4c2e2c2c8743b34848dd575d200, type: 2}
+    normalizedGroundPosition: 0.007570446
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsRightArmed
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: b856b4e94c20a5847a63182ab840f798, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8a19112de8357ca428ff5a47a295a674, type: 2}
+    alphaMap: {fileID: 18700000, guid: 53d334c1cc83548468e985de3251c28f, type: 2}
+    normalizedGroundPosition: 0.007570446
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsRightArmed_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: a8980a6ea9371fb4dba52a8429f4ad45, type: 2}
+    diffuseMap: {fileID: 18700000, guid: af712c6297a28e64da4684555a13e045, type: 2}
+    alphaMap: {fileID: 18700000, guid: da3355524dee1c543b1611260c5f8ded, type: 2}
+    normalizedGroundPosition: 0.007570446
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsRightCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: ae051062d04d7994288af972f7197fe3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ffc3a9d5ac8b4c545b78ca45b220ec86, type: 2}
+    alphaMap: {fileID: 18700000, guid: c0a7f187430c9dd4ea7361cbe896a63b, type: 2}
+    normalizedGroundPosition: 0.0075585465
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkBackwardsRightCombat_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 36365e7a5ccbc154e8c0c3ee51e24630, type: 2}
+    diffuseMap: {fileID: 18700000, guid: fd487ee4fea61024cb9259adbb7f3cb8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2323ac1bbbaca21439523995ade3874b, type: 2}
+    normalizedGroundPosition: 0.0075585456
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardAiming
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 9e25b72f4a08b1e4da1265b54a52b44b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 41166337ddfbd5f4fa5c40c47f0fe06e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 54401d089378fab4289845524c51426f, type: 2}
+    normalizedGroundPosition: 0.004049286
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardAiming_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 2052898fdf86a7b4fbf6e6cd3b6e5543, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 31d5fd06cf4944e4c963b0649ddb9998, type: 2}
+    alphaMap: {fileID: 18700000, guid: 88b0feed217aa3440bc5577ead6aa7b9, type: 2}
+    normalizedGroundPosition: 0.004049532
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardArmed
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 06ef9356ad166cb429279a07591abe0d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 008f75ea9352d3840ac0ad0216113ee3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 957dbba56bb73fd4f8ace8ecb2390f70, type: 2}
+    normalizedGroundPosition: 0.004049286
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardArmed_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 67ab6ec2ffbbd604eaa1b21cd7cc4729, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0cb9a30fb1ad11842b5f0d36c752485a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 54632ac2c1f2f3c4fad7f0ecb29f27ef, type: 2}
+    normalizedGroundPosition: 0.004049532
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: cb24add028c2ba449a04a7768787784b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 858009fa90623ba4e95541e6cb26299f, type: 2}
+    alphaMap: {fileID: 18700000, guid: bab9fb28286cc56438f6af6687714a80, type: 2}
+    normalizedGroundPosition: 0.0040428992
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardCombat_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: db3406a7223cc0340a968a3df07b3c41, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d36172825f829d44984077f363e934af, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3c2a4d00c0d1714498bd5dff070c626b, type: 2}
+    normalizedGroundPosition: 0.004043144
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardLeftAiming
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 67b1bbae1b2e00647a999fc5962bf6a9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d3c38ebdcd3b60845a1c85ac40affbb4, type: 2}
+    alphaMap: {fileID: 18700000, guid: bddb8d97d9e97524fb08e22870478d0b, type: 2}
+    normalizedGroundPosition: 0.0075702006
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardLeftAiming_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 20d97231be084c6488bfc31955ec5e4a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3f462e51ec013fc4abb3e04c6a29b5a5, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2cc3bff5a99d158459fbbb4e11169982, type: 2}
+    normalizedGroundPosition: 0.0075702025
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardLeftArmed
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 259e7543e5da17842bcedecb3cd4c1d0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5b98aeee102e39742a8adea1248235fb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5999b331976c8074a9e1e164cea4bbc6, type: 2}
+    normalizedGroundPosition: 0.0075702006
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardLeftArmed_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: e8ab883d729f3384daafc6a3c557a8fe, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3a9ffabbe0e08614090043e890d6d166, type: 2}
+    alphaMap: {fileID: 18700000, guid: ed58dce039b899d41ac7e58b278de216, type: 2}
+    normalizedGroundPosition: 0.0075702025
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardLeftCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: da5dd085be5de1149972775e39fed512, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 78b96dbd0b029a84394d0b33abedbcea, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9efb705d75e111a4980e272cd4672e16, type: 2}
+    normalizedGroundPosition: 0.0075583034
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardLeftCombat_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: f0182fe33ad1f3c43b39a318ae1faebc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1a2d53ea779830d4691a75680255c194, type: 2}
+    alphaMap: {fileID: 18700000, guid: b27a473f303196f45b4e6407a83b5bbb, type: 2}
+    normalizedGroundPosition: 0.0075583034
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardRightAiming
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: cde2a38dabddadb4daf01aabea1d0e29, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 6b44b8cad501ca0459f69e232ce2123d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 897e4452557f1d542bd7636e1ad1249d, type: 2}
+    normalizedGroundPosition: 0.0037453838
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardRightAiming_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 66c9144e68ac37041b204fe50c7478f3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2efd91a413912e146ab24a34c4097822, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4c95f914639cace4096d7821d34975b0, type: 2}
+    normalizedGroundPosition: 0.0037453843
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardRightArmed
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 0f36e96b8e28c3349b9c44545f377105, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 323a01c0dca19cb4d8b67b0442dc535c, type: 2}
+    alphaMap: {fileID: 18700000, guid: b55f40c85f24810498d2e7daad30487a, type: 2}
+    normalizedGroundPosition: 0.0037453838
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardRightArmed_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: daa8d2769f0b48641ad6f26578742c35, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ac2828742f51d2140beaa0b5b4cf6ea8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 233dc52584d2ad14e8288d0bccc9b333, type: 2}
+    normalizedGroundPosition: 0.0037453843
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardRightCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 805e2d9d17cecd944932de346dc3425e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d0c30a10c0fa8ca47a7147d5f2ac7948, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2e1be98c26fa61b45b0cbdb43a9e73b6, type: 2}
+    normalizedGroundPosition: 0.003739475
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkForwardRightCombat_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: fe76d81ecb8b5674c9c524e540be14f2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b9ea715afa9e91d449c02fb381e0e5c1, type: 2}
+    alphaMap: {fileID: 18700000, guid: c81b2917db8acb149b9187be1ede07ed, type: 2}
+    normalizedGroundPosition: 0.003739475
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkLeftAiming
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: be4fa571865a80c46abeab0b958ec0de, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f98fb2878c739e54789c75dcbae44215, type: 2}
+    alphaMap: {fileID: 18700000, guid: c120d9c6528b0b740bd5c133cfb63f14, type: 2}
+    normalizedGroundPosition: 0.0053291298
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkLeftAiming_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: cdd88fb69ed6b1d4fbc1881e694162cb, type: 2}
+    diffuseMap: {fileID: 18700000, guid: edbc80b68f89de8478ae9c6fe912a720, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6976030db8a808e4385fcbfe53fc9a33, type: 2}
+    normalizedGroundPosition: 0.0053284005
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkLeftArmed
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: cc2547bf3be6d4d4d9bf6e8a046f20a4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f068db7773c89ff4ca67e8e2e9231e26, type: 2}
+    alphaMap: {fileID: 18700000, guid: dce4901cf1f03a640938923ec4fd26e2, type: 2}
+    normalizedGroundPosition: 0.0053291298
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkLeftArmed_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: a967f46004f38324cbab80d2c39d6d77, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bcb7d2df80129ca4b8c817a8b03792af, type: 2}
+    alphaMap: {fileID: 18700000, guid: 567629e0a8dae4747bf19a05a8e2a5bf, type: 2}
+    normalizedGroundPosition: 0.0053284005
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkLeftCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 5101dc601adf7a548bff3ae9bd208a74, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 78673d30d0498a848851a564c6d292c6, type: 2}
+    alphaMap: {fileID: 18700000, guid: f91e6b42c1a16144a93aff79aac96dff, type: 2}
+    normalizedGroundPosition: 0.005321029
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkLeftCombat_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 9cf18a43e2f8f67489d169c206ea81d3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1a8825649fa5e9f4595cdeac03fa1c77, type: 2}
+    alphaMap: {fileID: 18700000, guid: 446db33f0b88d6049973a702f480e5e4, type: 2}
+    normalizedGroundPosition: 0.0053203003
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkNormal
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 2d3584616e6cc6c42be8210966c3c6e5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8689f14a560125547b69d602a8ae937e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8d540dfc0e69d7d498acfb708cd8c3c8, type: 2}
+    normalizedGroundPosition: 0.003059917
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkNormal_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 4cb6d1d552be84d4890e6f82e470814f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 82feaf56bb1405a47b661bc31a24b8d7, type: 2}
+    alphaMap: {fileID: 18700000, guid: d572875ff88e1e441b7649e62a92c3e5, type: 2}
+    normalizedGroundPosition: 0.0030596831
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkRightAiming
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 0c4655254bf960040b0b3760a3d87f44, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d358be90c5c99a84c988f33f55ad8710, type: 2}
+    alphaMap: {fileID: 18700000, guid: 43691ff151741664fb5718a0f33da1ee, type: 2}
+    normalizedGroundPosition: 0.005328887
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkRightAiming_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 27f71cc0ebe2fbf4a9608c7ec7ff51a5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a9f458a84706bf940b88ba3a48af692f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4242768c0a35b3f41906eaa7ef6be5e0, type: 2}
+    normalizedGroundPosition: 0.005329132
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkRightArmed
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 6a98eb58dd8c31745a00b2cd2164c5ea, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 198e7d344c5806048bcfc11b7e04eff2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5bfb17cdaff493c438a44d355f0b0935, type: 2}
+    normalizedGroundPosition: 0.005328887
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkRightArmed_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 991ff83b6a0af5d4c83a18589c4950cc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ae06b201f037e8042bd4183c04a38e9a, type: 2}
+    alphaMap: {fileID: 18700000, guid: bf13a6e41cfc4df4a9bd53ed75fa21ca, type: 2}
+    normalizedGroundPosition: 0.005329132
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkRightCombat
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: fade225980a842241b834cae60baf5f6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: caf20b68c479acf459916258b2b5f4d7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4ee102e93bcce064b92dd6b839744e4c, type: 2}
+    normalizedGroundPosition: 0.0053207865
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_WalkRightCombat_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: e1087aadd38936e4dbebcfcde4706567, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5a1f79078ae444143918c41b1055f44c, type: 2}
+    alphaMap: {fileID: 18700000, guid: 415238ad2bd51184a9d8d4eb339ebc35, type: 2}
+    normalizedGroundPosition: 0.005321029
+  - rows: 2
+    columns: 4
+    animationName: Droid-01_Industrial_Attack1Armed
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 54e8fee8016fe2c4987234c96f153e5e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2f22dce07e5cc734994e2b740d39a2a0, type: 2}
+    alphaMap: {fileID: 18700000, guid: 954d4db26fe3926428d9f0333c8385df, type: 2}
+    normalizedGroundPosition: 0.0054879677

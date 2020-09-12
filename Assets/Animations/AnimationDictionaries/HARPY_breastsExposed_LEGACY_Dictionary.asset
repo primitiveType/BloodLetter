@@ -1,0 +1,359 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: HARPY_breastsExposed_LEGACY_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: HARPY_breastsExposed_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 61d32de7dbc13c24d8979d2ee1a3b32e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5679aaace2ea88448bf62489bc753fdd, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0701b548089d1c941a1c5cbd7929f998, type: 2}
+    normalizedGroundPosition: 0.047541358
+  - rows: 3
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_2HitComboForward
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 140f0e090db964747b411145304daa70, type: 2}
+    diffuseMap: {fileID: 18700000, guid: aa5041575b154384587a4451dd700d4f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6b99639626ddfe64cab4d3099e103435, type: 2}
+    normalizedGroundPosition: 0.016085636
+  - rows: 3
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_2HitComboForward_RM
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: c4876e84473a742479b023bc0395fb94, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 6789e813fa601c84d877ee7f78b700f7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 856c47d2d87edfa4bac16e0baa91e1c4, type: 2}
+    normalizedGroundPosition: 0.016085833
+  - rows: 4
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_3HitComboForward
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: d6162deaf6c2ffa4f8df8733445a20b4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7dfcfb5cc74f2cb4aac0343414ab48ae, type: 2}
+    alphaMap: {fileID: 18700000, guid: c8dcbb1d658e3f04180655a9403f2ae8, type: 2}
+    normalizedGroundPosition: 0.016360478
+  - rows: 4
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_3HitComboForward_RM
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: a379717f1788caf40b5099b128a8fc34, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 827527e5ad20f174e98bf7e64e3562ed, type: 2}
+    alphaMap: {fileID: 18700000, guid: dede30bdd1a9f9a40bb250ce73c69cbc, type: 2}
+    normalizedGroundPosition: 0.016360482
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack1
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: cda810cd05fc0084990a7b8b336cbd6c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 873bc2ae20b8aa04182802e76af66312, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0497ab50fa809c949a9aaae1253ad3a3, type: 2}
+    normalizedGroundPosition: 0.0055237752
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack1Forward
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 8d97c02ec07fa1a47b20e79bf5c158a4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 83a8c7c136fc0d042b95e89b7027b59e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 161580c68c5bb4640a32080bca282606, type: 2}
+    normalizedGroundPosition: 0.039995663
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack1Forward_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 7d7ec427af844244887aa6c432cd6ee2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2e49fb530f1c3ca42aa2e66abf579f0f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 50358e69c873e0240ab94f01f383088d, type: 2}
+    normalizedGroundPosition: 0.039995484
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack2
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 52cf3b0a0e1206a468121789ed6d27e6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 86326e5064054d348bced917854f1b43, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1ab7ccfc515ab5646987f95d52ec9b58, type: 2}
+    normalizedGroundPosition: 0.005607141
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack2Forward
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 7d038ae6f97ec0548948d8a882a13008, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8046c556f3897454bb0a699ee1b1dd4f, type: 2}
+    alphaMap: {fileID: 18700000, guid: f33d1a7e255f1d74b8ff137a1fc8854a, type: 2}
+    normalizedGroundPosition: 0.021556875
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack2Forward_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: b1f08b044a5a5d54f8215f47932a4f18, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7a4a9c9f387be714196154433764f126, type: 2}
+    alphaMap: {fileID: 18700000, guid: c876302ada1b4984e8ef609ef863bf1b, type: 2}
+    normalizedGroundPosition: 0.021557288
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack3
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 82d96babe086dd54fbdbaef5e817fe35, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f7f3dfd46f0453f448f06635f161358f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4a7aa1e98407aae42b27b72668fb92ee, type: 2}
+    normalizedGroundPosition: 0.0061252206
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack3Forward
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 1faeec23d9c06a648a12cfc8f2559ea9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f8788a61b241d1640a0d17d5d4b349bb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1ee809215772ce84a82c97156bae2852, type: 2}
+    normalizedGroundPosition: 0.016866319
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_attack3Forward_RM
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 61707ad977b9c3f4d82bc5262e7e97a6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 29faaa2de1849e443a2926dcf4edf4b5, type: 2}
+    alphaMap: {fileID: 18700000, guid: ce4e17137d95957419711a5041675b0f, type: 2}
+    normalizedGroundPosition: 0.016866319
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_catchPrey
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: b18cf38a340e3f442ad44ca826324f55, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 39ad1984376517c4da192990eb0e2315, type: 2}
+    alphaMap: {fileID: 18700000, guid: b0a9ffd17f4b2a9419200bff29b77951, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 3
+    columns: 5
+    animationName: HARPY_breastsExposed_LEGACY_death
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: ba54f54ba9037564ab5a5a795405345b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 919ff6e6612bcee40850cad30a8102fc, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9eb0f8bb0d2ea37499bdebe7386889a6, type: 2}
+    normalizedGroundPosition: 0.2043365
+  - rows: 3
+    columns: 3
+    animationName: HARPY_breastsExposed_LEGACY_deathHitTheGround
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 6d171c30885aa464d96cc7172ec424ff, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1663c087a88a18448983a64991233ada, type: 2}
+    alphaMap: {fileID: 18700000, guid: 794b07e8de7bed74eb3c3b88d4a8e3bc, type: 2}
+    normalizedGroundPosition: 0.06931727
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_falling
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 1f1790f3bff236544bdcbaa79e666bb5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e2b901860f32e7c48818ec86b56d5218, type: 2}
+    alphaMap: {fileID: 18700000, guid: 357ebac729f8c44439ac42fc1f78b94f, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_fly
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 2b32c17d18e5fd84db9979a23ecc671b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 88bdf213d70989d4f8aee3fc7e82c5cc, type: 2}
+    alphaMap: {fileID: 18700000, guid: 52c46000491e09d47a973475d2cc256d, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_flyGetHit
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 7f55901516cbd4447837b240e1228630, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b31d22177be73c944a43f12092d66735, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1e814b7ef83869746999e5811819acef, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_flyWithPrey
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 53f38c3e88105f44d8d89fab1702c070, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 07c31045ad8148246a3cf665dc9eb82d, type: 2}
+    alphaMap: {fileID: 18700000, guid: fa76ae9db0833434eb17d68257881746, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_getHit1
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 89c115afdced002429d74b8f2d1d352d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9b1c45769610ff744b61518644348a13, type: 2}
+    alphaMap: {fileID: 18700000, guid: 32ff6f5ab219bef46b6bfc5081f04bb3, type: 2}
+    normalizedGroundPosition: 0.00504378
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_getHit2
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: c25f24a7574a0024787282b1b87eef42, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 634150552bb3bb749bcf8201ef1b4ed0, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9de5b9d673e4caf47aebc5cfbd6d7c5d, type: 2}
+    normalizedGroundPosition: 0.0053578215
+  - rows: 3
+    columns: 3
+    animationName: HARPY_breastsExposed_LEGACY_getHitToFall
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: da8062027e55d1646988546293abf450, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 79648ffb1b1f1b64cbe64cfc170e7876, type: 2}
+    alphaMap: {fileID: 18700000, guid: 82ae87fcff99ed244bd332891eef1ffb, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_glide
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 8e00c6d2f6ccf6b40b3a8ed751cec8ee, type: 2}
+    diffuseMap: {fileID: 18700000, guid: fee96ea9a6a890a409e749ef90996865, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2bd71c4abe608314c857f57fc6bb6c65, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 4
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_idle
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: d40e1779e09f47844985a8c178d2b81f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9213da4bb5f788647888da7f9e76e818, type: 2}
+    alphaMap: {fileID: 18700000, guid: 697b86d29d2e1bb4da7e022956e74fa2, type: 2}
+    normalizedGroundPosition: 0.0061752754
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_jump
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 04c61f9034147b445b63e9a98b2165fd, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8930fe2dfbc9ac24aa5d427fe34c1e8b, type: 2}
+    alphaMap: {fileID: 18700000, guid: fe0190ab00ab93044a824b9d55b69baf, type: 2}
+    normalizedGroundPosition: 0.0033088492
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_jump_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: bc00681346746764d87f770031c275aa, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 97b9e6038d23cf4449e027968ddc2498, type: 2}
+    alphaMap: {fileID: 18700000, guid: 31825e7298405454386d7bd45e4dade2, type: 2}
+    normalizedGroundPosition: 0.0033089733
+  - rows: 3
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_jumpClawsAttack
+    numFrames: 12
+    normalMap: {fileID: 18700000, guid: 94e753478bcad0645bc9e9eb9b7eca1c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8b7c8ac1f897466469a64fd8b321db41, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2c2482617a3e9b641ac6a036c59f6b76, type: 2}
+    normalizedGroundPosition: 0.0056738225
+  - rows: 3
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_jumpClawsAttack_RM
+    numFrames: 12
+    normalMap: {fileID: 18700000, guid: 3ca1f705c6dfdba4899ca4bee9009781, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 4adfd46b39857364bb708e2406aa414b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 20bf814a76acbc9428c5cc4076566ef5, type: 2}
+    normalizedGroundPosition: 0.005673313
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_landing
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: bd8ef35fcb3aeb049855c1213a1dcc94, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b2db04164cd8f994cb9301ec8e7559f8, type: 2}
+    alphaMap: {fileID: 18700000, guid: e10c34872984a3047b90898677123e44, type: 2}
+    normalizedGroundPosition: 0.0036222932
+  - rows: 2
+    columns: 3
+    animationName: HARPY_breastsExposed_LEGACY_run
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: 8e8009c44bfef2049b9cb696653dd1f5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c406616ed98c2524b872f644299b78f5, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9cb529d7dc11422489a6d8874a4f5b57, type: 2}
+    normalizedGroundPosition: 0.018717412
+  - rows: 2
+    columns: 3
+    animationName: HARPY_breastsExposed_LEGACY_run_RM
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: 73e560f698d9fc34b8d8257ee0ee0b92, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5cb14c8b88ee34a45967619a108146b0, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7fc4d7cdcb697ed4398c2db999b76be9, type: 2}
+    normalizedGroundPosition: 0.018718092
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_strafeL
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 3015b7ed824849546a7cf219b417dbc2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1254b02ca98fa644fb32d50379f598e7, type: 2}
+    alphaMap: {fileID: 18700000, guid: fc05a3d8a540e38439b3da44fa350699, type: 2}
+    normalizedGroundPosition: 0.012830411
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_strafeL_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 4c7a693cf84a3ce4bbd1402be1c680a5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2e24356b37878cd4daab2a371873b1fe, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3dee5b9d157625842808885ea539b256, type: 2}
+    normalizedGroundPosition: 0.012832293
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_strafeR
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: c29c3261c5e48914da4683aaa9c37d1b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 68fb102d6a217e5408f6a380aa4ceae8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 18d82e9c296d2c644b53cce45ffaf41c, type: 2}
+    normalizedGroundPosition: 0.012496158
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_strafeR_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 0738c8757fd0e64438508687022b9ae9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3eced6f9aba8e684f865feda35d7282c, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9d31c33b7ec9bb44e9e2c0a6de21b772, type: 2}
+    normalizedGroundPosition: 0.012495452
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_swoop
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: d115bec4ba6b186438d743d4a4dcdc65, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a6ff3d3e291eea448b9a281303941150, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6b8ea74434f7d8a41b2d4f7fa4d20b33, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 3
+    columns: 3
+    animationName: HARPY_breastsExposed_LEGACY_takeOff
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 7ac9f0d842528044bab61d08f873d3b4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7944534b099f3c34f93ceb5d409d7ef2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 89443474b6b08054083d9c6e34d7044b, type: 2}
+    normalizedGroundPosition: 0.018199647
+  - rows: 4
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_taunt
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 58dc97543294e8946b680cfaef8099ed, type: 2}
+    diffuseMap: {fileID: 18700000, guid: dad3ba8e8cb2c594d9c360938328a313, type: 2}
+    alphaMap: {fileID: 18700000, guid: 915aa0e94f470b14893e14ba6fe3628a, type: 2}
+    normalizedGroundPosition: 0.006065189
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_throwPreyAway
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 2a75d7bdcaa0cc5468c8d81c419fadaa, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e285fbe186b657341bf2be956ad6840c, type: 2}
+    alphaMap: {fileID: 18700000, guid: 243064530c1700d4b8490db64d3302ce, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_walk
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: a7b40f70f7b6cbe4f93cd166b7a095dc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7708527bd3ff07a4fa3052954f0483b3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2587773eb221409408db753c8aadf7a1, type: 2}
+    normalizedGroundPosition: 0.016899027
+  - rows: 2
+    columns: 4
+    animationName: HARPY_breastsExposed_LEGACY_walk_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 154a36b83837b7f439cc80b5590342d0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 278c1d5794b47114397855e25b85244d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9f99905293650ac44bfab9439ef9906c, type: 2}
+    normalizedGroundPosition: 0.016942503

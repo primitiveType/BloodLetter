@@ -198,12 +198,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
-  materialGameObject: {fileID: 42856470}
   anchorTransform: {fileID: 42856471}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 0
+  materialGameObject: {fileID: 42856470}
   reposition: 0
+  resize: 0
+  yFudge: 0.01
 --- !u!114 &42856472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,9 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BarrelTransform: {fileID: 7118814582898653110}
   ProjectileInfo: {fileID: -4413046863770435183, guid: 746c255cdf7ce614cac54d18ebb198d6,
     type: 3}
-  BarrelTransform: {fileID: 7118814582898653110}
   SoundInfo: {fileID: 261059351}
 --- !u!1 &113260224
 GameObject:
@@ -415,9 +415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BarrelTransform: {fileID: 7118814582898653110}
   ProjectileInfo: {fileID: 3793866244328430090, guid: 6c858c7fab144e044a605d22c7dbabf9,
     type: 3}
-  BarrelTransform: {fileID: 7118814582898653110}
   SoundInfo: {fileID: 947206933}
 --- !u!1 &261059349
 GameObject:
@@ -483,11 +483,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808f140e6b0c4018abe7e144bd2e7f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoopShootSound: 0
-  LoopIdleSound: 0
-  ShootSound: {fileID: 8300000, guid: 0d9f85d9ea69a734895afc382b692db2, type: 3}
-  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
   IdleSound: {fileID: 0}
+  LoopIdleSound: 0
+  LoopShootSound: 0
+  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
+  ShootSound: {fileID: 8300000, guid: 0d9f85d9ea69a734895afc382b692db2, type: 3}
   Source: {fileID: 261059352}
 --- !u!82 &261059352
 AudioSource:
@@ -613,8 +613,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipKey: 54
-  Equippable: {fileID: 261059353}
   equipOnStart: 0
+  Equippable: {fileID: 261059353}
 --- !u!114 &261059353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,9 +627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WeaponId: 1048576
-  Events: {fileID: 42856472}
   Animator: {fileID: 42856474}
+  Events: {fileID: 42856472}
+  m_WeaponId: 1048576
 --- !u!1 &275191401
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,12 +837,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
-  materialGameObject: {fileID: 321424110}
   anchorTransform: {fileID: 321424111}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 0
+  materialGameObject: {fileID: 321424110}
   reposition: 0
+  resize: 0
+  yFudge: 0.01
 --- !u!114 &321424112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,9 +855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BarrelTransform: {fileID: 7118814582898653110}
   ProjectileInfo: {fileID: 793953572406270968, guid: 4f227dac77328ef458d14325a5441d1d,
     type: 3}
-  BarrelTransform: {fileID: 7118814582898653110}
   SoundInfo: {fileID: 1651348172}
 --- !u!1 &348259046
 GameObject:
@@ -923,11 +923,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808f140e6b0c4018abe7e144bd2e7f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoopShootSound: 0
-  LoopIdleSound: 0
-  ShootSound: {fileID: 8300000, guid: c370d78ea9e980b448cadb1b33b4b1ba, type: 3}
-  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
   IdleSound: {fileID: 0}
+  LoopIdleSound: 0
+  LoopShootSound: 0
+  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
+  ShootSound: {fileID: 8300000, guid: c370d78ea9e980b448cadb1b33b4b1ba, type: 3}
   Source: {fileID: 348259049}
 --- !u!82 &348259049
 AudioSource:
@@ -1053,8 +1053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipKey: 55
-  Equippable: {fileID: 348259050}
   equipOnStart: 0
+  Equippable: {fileID: 348259050}
 --- !u!114 &348259050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,9 +1067,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WeaponId: 16777216
-  Events: {fileID: 659034503}
   Animator: {fileID: 659034505}
+  Events: {fileID: 659034503}
+  m_WeaponId: 16777216
 --- !u!114 &348259054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,11 +1582,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808f140e6b0c4018abe7e144bd2e7f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoopShootSound: 0
-  LoopIdleSound: 0
-  ShootSound: {fileID: 8300000, guid: 0d9f85d9ea69a734895afc382b692db2, type: 3}
-  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
   IdleSound: {fileID: 0}
+  LoopIdleSound: 0
+  LoopShootSound: 0
+  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
+  ShootSound: {fileID: 8300000, guid: 0d9f85d9ea69a734895afc382b692db2, type: 3}
   Source: {fileID: 528020359}
 --- !u!82 &528020359
 AudioSource:
@@ -1712,8 +1712,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipKey: 49
-  Equippable: {fileID: 1669245840}
   equipOnStart: 0
+  Equippable: {fileID: 1669245840}
 --- !u!114 &1669245840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,9 +1726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WeaponId: 1
-  Events: {fileID: 1187914151}
   Animator: {fileID: 1187914153}
+  Events: {fileID: 1187914151}
+  m_WeaponId: 1
 --- !u!1 &659034501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,12 +1844,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: e74ac6d99e0d40f42bd0e9dc0d70f1e3, type: 2}
-  materialGameObject: {fileID: 659034501}
   anchorTransform: {fileID: 659034502}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 0
+  materialGameObject: {fileID: 659034501}
   reposition: 0
+  resize: 0
+  yFudge: 0.01
 --- !u!114 &659034503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,9 +1862,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BarrelTransform: {fileID: 7118814582898653110}
   ProjectileInfo: {fileID: 9074444407148344736, guid: 77b7d865dcdf5a445a7d9175ee029b3d,
     type: 3}
-  BarrelTransform: {fileID: 7118814582898653110}
   SoundInfo: {fileID: 348259048}
 --- !u!1 &673588820
 GameObject:
@@ -2064,12 +2064,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: a04eb5d0cb29d4e4d9c6f55c217a75c7, type: 2}
-  materialGameObject: {fileID: 812513434}
   anchorTransform: {fileID: 812513435}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 0
+  materialGameObject: {fileID: 812513434}
   reposition: 0
+  resize: 0
+  yFudge: 0.01
 --- !u!114 &812513440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2082,9 +2082,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BarrelTransform: {fileID: 386397864}
   ProjectileInfo: {fileID: 3999468812405218162, guid: f10db0f09440bc2408749590faeec5f8,
     type: 3}
-  BarrelTransform: {fileID: 386397864}
   SoundInfo: {fileID: 1693454664}
 --- !u!1 &818799702
 GameObject:
@@ -2240,11 +2240,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808f140e6b0c4018abe7e144bd2e7f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoopShootSound: 1
-  LoopIdleSound: 1
-  ShootSound: {fileID: 8300000, guid: 0fd8fc1459247ea428a000e61ab3ca01, type: 3}
-  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
   IdleSound: {fileID: 8300000, guid: decd3638878e2ff4790dd744416ec59d, type: 3}
+  LoopIdleSound: 1
+  LoopShootSound: 1
+  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
+  ShootSound: {fileID: 8300000, guid: 0fd8fc1459247ea428a000e61ab3ca01, type: 3}
   Source: {fileID: 947206934}
 --- !u!82 &947206934
 AudioSource:
@@ -2355,8 +2355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipKey: 48
-  Equippable: {fileID: 947206935}
   equipOnStart: 0
+  Equippable: {fileID: 947206935}
 --- !u!114 &947206935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,9 +2369,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WeaponId: 4096
-  Events: {fileID: 228338363}
   Animator: {fileID: 228338365}
+  Events: {fileID: 228338363}
+  m_WeaponId: 4096
 --- !u!1 &1027849402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,12 +2848,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
-  materialGameObject: {fileID: 1187914149}
   anchorTransform: {fileID: 1187914150}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 0
+  materialGameObject: {fileID: 1187914149}
   reposition: 0
+  resize: 0
+  yFudge: 0.01
 --- !u!114 &1187914151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2866,9 +2866,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BarrelTransform: {fileID: 7118814582898653110}
   ProjectileInfo: {fileID: 1693377125502948229, guid: 9cbe9b3b1a9eff148b1a5500d9e01ec5,
     type: 3}
-  BarrelTransform: {fileID: 7118814582898653110}
   SoundInfo: {fileID: 528020358}
 --- !u!1 &1228035285
 GameObject:
@@ -3091,9 +3091,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75e56bc2eb14514eb1fb7ab936bfb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max: 5
   toastPrefab: {fileID: 11616406193128472, guid: b9ea61a37670a26458af9935bafbbbf0,
     type: 3}
-  max: 5
 --- !u!1 &1448022913
 GameObject:
   m_ObjectHideFlags: 0
@@ -3524,11 +3524,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808f140e6b0c4018abe7e144bd2e7f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoopShootSound: 0
-  LoopIdleSound: 0
-  ShootSound: {fileID: 8300000, guid: f5f89e66adbfcf141943ed995032182e, type: 3}
-  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
   IdleSound: {fileID: 0}
+  LoopIdleSound: 0
+  LoopShootSound: 0
+  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
+  ShootSound: {fileID: 8300000, guid: f5f89e66adbfcf141943ed995032182e, type: 3}
   Source: {fileID: 1651348173}
 --- !u!82 &1651348173
 AudioSource:
@@ -3654,8 +3654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipKey: 50
-  Equippable: {fileID: 2941494309551855848}
   equipOnStart: 0
+  Equippable: {fileID: 2941494309551855848}
 --- !u!114 &2941494309551855848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3668,9 +3668,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WeaponId: 16
-  Events: {fileID: 321424112}
   Animator: {fileID: 321424114}
+  Events: {fileID: 321424112}
+  m_WeaponId: 16
 --- !u!1 &1693454661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3735,11 +3735,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808f140e6b0c4018abe7e144bd2e7f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoopShootSound: 0
-  LoopIdleSound: 0
-  ShootSound: {fileID: 8300000, guid: 714654b6385e3234e9dbaaf85bc51d2a, type: 3}
-  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
   IdleSound: {fileID: 0}
+  LoopIdleSound: 0
+  LoopShootSound: 0
+  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
+  ShootSound: {fileID: 8300000, guid: 714654b6385e3234e9dbaaf85bc51d2a, type: 3}
   Source: {fileID: 1693454663}
 --- !u!82 &1693454663
 AudioSource:
@@ -3864,9 +3864,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WeaponId: 256
-  Events: {fileID: 812513440}
   Animator: {fileID: 812513438}
+  Events: {fileID: 812513440}
+  m_WeaponId: 256
 --- !u!114 &14563027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3880,8 +3880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipKey: 51
-  Equippable: {fileID: 14563026}
   equipOnStart: 0
+  Equippable: {fileID: 14563026}
 --- !u!1 &1705403856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3976,11 +3976,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808f140e6b0c4018abe7e144bd2e7f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoopShootSound: 1
-  LoopIdleSound: 1
-  ShootSound: {fileID: 0}
-  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
   IdleSound: {fileID: 0}
+  LoopIdleSound: 1
+  LoopShootSound: 1
+  ReloadSound: {fileID: 8300000, guid: 279f27971ffce90469a343baa2ac430e, type: 3}
+  ShootSound: {fileID: 0}
   Source: {fileID: 7546312483073000703}
 --- !u!82 &7546312483073000703
 AudioSource:
@@ -4091,8 +4091,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipKey: 52
-  Equippable: {fileID: 7031649744819756673}
   equipOnStart: 0
+  Equippable: {fileID: 7031649744819756673}
 --- !u!114 &7031649744819756673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4105,9 +4105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d15775859afcf64b9dfd05883758478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WeaponId: 65536
-  Events: {fileID: 2701789535915301915}
   Animator: {fileID: 7224330945669599017}
+  Events: {fileID: 2701789535915301915}
+  m_WeaponId: 65536
 --- !u!114 &7594967646747675955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4267,9 +4267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67647263ce40b2846908763057400cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingBobbingSpeed: 14
   bobbingAmount: 0.01
   controller: {fileID: 7118814582858810738}
+  walkingBobbingSpeed: 14
 --- !u!1 &1945688897071247750
 GameObject:
   m_ObjectHideFlags: 0
@@ -4439,8 +4439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa65bc6f501df9c48bfe1fa1a05b17a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Events: {fileID: 7118814582858810751}
   Armor: {fileID: 2092636035}
+  Events: {fileID: 7118814582858810751}
   Text: {fileID: 5572855829631738141}
 --- !u!1 &2892274502573384728
 GameObject:
@@ -4537,10 +4537,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b6f4fe5e91c44b9f107c92a0f4918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toChange: {fileID: 5674723493020333631}
   OffsetToAdd: {x: 0.01, y: 0.01}
-  TimeStep: 0.01
   ShaderPropertyId: UvOffset
+  TimeStep: 0.01
+  toChange: {fileID: 5674723493020333631}
 --- !u!114 &7008924699075658326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4553,10 +4553,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fcd6d6546fd964a8d940bca593aab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lineRenderer: {fileID: 5674723493020333631}
   Points:
   - {fileID: 5987188375368082718}
   - {fileID: 1027849403}
-  _lineRenderer: {fileID: 5674723493020333631}
 --- !u!1 &2979439357711810172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4760,19 +4760,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060ad65889961c642809a1837fa1e107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Range: 100
   m_MinRange: 10
-  Piercing: 0
-  OnHitPrefab: {fileID: 0}
-  OnHitWallPrefab: {fileID: 0}
+  m_Range: 100
+  type: 0
   m_Damage: 1
-  m_Line: {fileID: 5674723493020333631}
-  HitPoint: {fileID: 8456412394324740430}
-  HitAudio: {fileID: 8456412394906156903}
+  OnHitWallPrefab: {fileID: 0}
+  Piercing: 0
   duration: 0.1
+  ForwardTransform: {fileID: 386397864}
+  HitAudio: {fileID: 8456412394906156903}
+  HitPoint: {fileID: 8456412394324740430}
+  m_Line: {fileID: 5674723493020333631}
   sweepMagnitude: 0
   updateTargetContinous: 1
-  ForwardTransform: {fileID: 386397864}
 --- !u!1 &4956213683939008096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5204,6 +5204,7 @@ GameObject:
   - component: {fileID: 1274458032695617621}
   - component: {fileID: 1276236516}
   - component: {fileID: 1301743931}
+  - component: {fileID: 1455978499}
   m_Layer: 10
   m_Name: Head
   m_TagString: MainCamera
@@ -5261,7 +5262,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2095383
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5286,7 +5287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
+  m_RequiresDepthTextureOption: 1
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras:
@@ -5319,9 +5320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df80251b5d1a47546816fa69c9ec5bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractAudioSource: {fileID: 1301743931}
   interactDistance: 5
   PlayerEvents: {fileID: 7118814582858810751}
-  InteractAudioSource: {fileID: 1301743931}
 --- !u!114 &1276236516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5334,9 +5335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67647263ce40b2846908763057400cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingBobbingSpeed: 14
   bobbingAmount: 0.05
   controller: {fileID: 7118814582858810738}
+  walkingBobbingSpeed: 14
 --- !u!82 &1301743931
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5433,6 +5434,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1455978499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7118814582178681162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5636d372f01d24b4d85eb0ab4a09b445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stereoRenderingMode: 0
+  normalSmoothing: 0
+  forwardDepthNormals: 0
+  debugMode: 0
 --- !u!1 &7118814582697065353
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,14 +5673,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a1bb747d5885646af05d5e29b73705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 17
-  runningSpeed: 17
-  jumpSpeed: 8
+  canMove: 1
   gravity: 20
-  playerCamera: {fileID: 7317350254659761134}
+  jumpSpeed: 8
   lookSpeed: 1
   lookXLimit: 60
-  canMove: 1
+  playerCamera: {fileID: 7317350254659761134}
+  runningSpeed: 17
+  walkingSpeed: 17
 --- !u!114 &513454861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5702,11 +5719,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9fe46237834743887439fde2335e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  m_Armor: {fileID: 2092636035}
   m_Health: 100
   m_MaxHealth: 100
   m_OverhealMaxHealth: 200
-  m_Armor: {fileID: 2092636035}
-  _animator: {fileID: 0}
 --- !u!114 &1991182490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5720,7 +5737,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aggroClips: []
-  stepClips: []
+  attackClips: []
+  deathClips:
+  - {fileID: 8300000, guid: 89689ceb18361ae4bac60d78166da654, type: 3}
   hurtClips:
   - {fileID: 8300000, guid: a4e803a901dee444c82fbd45bba758a0, type: 3}
   - {fileID: 8300000, guid: 0cd1f22ca145bf343a56187c1f9ac087, type: 3}
@@ -5728,12 +5747,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f5557dc027b811c45a3021123e0591b4, type: 3}
   - {fileID: 8300000, guid: e32ceafbe67c43646b3474d50a888d81, type: 3}
   - {fileID: 8300000, guid: b1fc381d5d876f046b26c9df42b7e3fe, type: 3}
-  attackClips: []
-  deathClips:
-  - {fileID: 8300000, guid: 89689ceb18361ae4bac60d78166da654, type: 3}
-  m_stepSource: {fileID: 0}
-  m_hurtSource: {fileID: 0}
   m_attackSource: {fileID: 0}
+  m_hurtSource: {fileID: 0}
+  m_stepSource: {fileID: 0}
+  stepClips: []
 --- !u!114 &1991182498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5844,7 +5861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7118814582898653110
 Transform:
   m_ObjectHideFlags: 0
@@ -6234,8 +6251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21e3f45dcee4490baa7d4417866595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileInfo: {fileID: 1006489981}
   BarrelTransform: {fileID: 386397864}
+  ProjectileInfo: {fileID: 1006489981}
   SoundInfo: {fileID: 3782787657383788370}
 --- !u!114 &4748737781420801544
 MonoBehaviour:
@@ -6250,12 +6267,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 37ebfdda2688d4e4cb453f77a0eabaa5, type: 2}
-  materialGameObject: {fileID: 8260796801687138479}
   anchorTransform: {fileID: 3671062253430373267}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 0
+  materialGameObject: {fileID: 8260796801687138479}
   reposition: 0
+  resize: 0
+  yFudge: 0.01
 --- !u!1 &8643302138835086600
 GameObject:
   m_ObjectHideFlags: 0

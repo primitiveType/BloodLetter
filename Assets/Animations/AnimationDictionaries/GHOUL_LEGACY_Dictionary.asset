@@ -1,0 +1,260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: GHOUL_LEGACY_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: GHOUL_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 0527d7fdd70be444e964ca723f8296d2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ad47e79e01d562044a7687f3424380bd, type: 2}
+    alphaMap: {fileID: 18700000, guid: cecda56ef06a8b04b8549870521605c1, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack1
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: ddcc80ccdb0e89d4cb597c2572b0aaff, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 54d1d27540045cc43950f2fc26f9233d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 513d72322cff8e34a937574e88595ab8, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack1Forward
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 2d3be0d105e330f4891547bb6b7e6020, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 04454535b7bc57e47863523b28318abb, type: 2}
+    alphaMap: {fileID: 18700000, guid: e97baebe2d9fe1847aa99c14245ac5c3, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack1Forward_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 09f08410b7e8a3f48bd9838961fb48c5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: cf828efee15a029499b32186ca8a7da5, type: 2}
+    alphaMap: {fileID: 18700000, guid: d7f6c1231026edb499beb6371644fe29, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack2
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: ad97eba51ca91004a9cab631c2e3fb6b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 91b679dd835684d4cb5e56fdfe2957a9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 346b4603093b30c42a1adc25c34e64ac, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack2Forward
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: d98844721b5fc3e4e8af0413e34f80f9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ff7142a704c0ea144a7da64ff88e383e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5f7ad465c67ae10459a55c1f351da0c4, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_attack2Forward_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 3fa5dde4fb151d24a812d300f0cb6f82, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 150afdc65280fcd4ca9cca5dec18dd25, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0561c53425f18664daa9417c3c5fa66b, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: GHOUL_LEGACY_attack2HitCombo
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: d8e04f2fe9b37ca45bfd0992e3c0afcf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 078b3ff0afd0adf479ba09318348f3eb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 702e9d4011e267041b8f0143ec5617c2, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: GHOUL_LEGACY_attack2HitComboForward
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 970278f123de7c949a4bae0ddfc63140, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1a782dc55b82c7f4bba2a2ea09bb38cd, type: 2}
+    alphaMap: {fileID: 18700000, guid: b2554a2489955ca4f8a3295f9e37e6ca, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: GHOUL_LEGACY_attack2HitComboForward_RM
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: e425fec77b651f541868af8105300d7c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b8e8e152f1adbd64398b12e8ce53d653, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4a54cb615af4be1478a90adc3d498d17, type: 2}
+  - rows: 4
+    columns: 6
+    animationName: GHOUL_LEGACY_attack2HitComboToGrabBite
+    numFrames: 21
+    normalMap: {fileID: 18700000, guid: 2d2019ed7c5f2374dbaa52e0bd4621d0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0692c849b87de2241b1361ffd8d59dfe, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5f56ba8da4e716945a641f574398fb44, type: 2}
+  - rows: 4
+    columns: 6
+    animationName: GHOUL_LEGACY_attack2HitComboToGrabBiteForward
+    numFrames: 21
+    normalMap: {fileID: 18700000, guid: 3b16920f058a8ce42b529e4fc2cca08b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 82120b84417dc114d85b71458d81ff73, type: 2}
+    alphaMap: {fileID: 18700000, guid: 773cefaf4b7b94042be2907ab70b2cf6, type: 2}
+  - rows: 4
+    columns: 6
+    animationName: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_RM
+    numFrames: 21
+    normalMap: {fileID: 18700000, guid: 404e70724bfe7ba419f8bd40c96e0848, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 19338188cc2e9b841a5dabaf006ee567, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0e4492c3d6cfdb8438dbd3a5145a449e, type: 2}
+  - rows: 4
+    columns: 5
+    animationName: GHOUL_LEGACY_death
+    numFrames: 17
+    normalMap: {fileID: 18700000, guid: b5881842921025d4ea6e34dd51356faf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7e3a0721dc978c7459e0059a02865fb2, type: 2}
+    alphaMap: {fileID: 18700000, guid: fe75b8e1e266d854a942aa483f1d7386, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_getHit1
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: 1b55750789c23c44fa0480ff5d4fdc93, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c61e8ca9a87bb954fae756dd5d05d4fb, type: 2}
+    alphaMap: {fileID: 18700000, guid: c5781cc890662ba4a94a089e84eaddb7, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_getHit2
+    numFrames: 7
+    normalMap: {fileID: 18700000, guid: dbedcd3630e211149b32f57288d14cae, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5275d55e301545f41a35131ad6bcd9f8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1852e4b806582d04aa9bcdda1515cd1e, type: 2}
+  - rows: 3
+    columns: 3
+    animationName: GHOUL_LEGACY_grabBite
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 3412f02bb64226d42ae063099d843d06, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2d49f84d1fdbcf34f9a8b48000f80894, type: 2}
+    alphaMap: {fileID: 18700000, guid: b35f14a247423704fb68ed3953eb7bb0, type: 2}
+  - rows: 4
+    columns: 4
+    animationName: GHOUL_LEGACY_idle
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 0dce477fc463bc749852397dcde64a3c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 61ab46a20ae585e4490eab3fd4dbc7c4, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3382f4c695abd4c47b700dc48371db8d, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: GHOUL_LEGACY_jumpattack
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 3d0a28c52fb634f4ba5baa9c9e213ae6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d39458104703037479b3ba90c5ab63d8, type: 2}
+    alphaMap: {fileID: 18700000, guid: f6b3b2c3377e0ea42a98f8de8f5992d0, type: 2}
+  - rows: 3
+    columns: 4
+    animationName: GHOUL_LEGACY_jumpattack_RM
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: fa4c7a3ec8b728d48afb509f88f75003, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ea1159c12b9d4d946ada0536791c38b9, type: 2}
+    alphaMap: {fileID: 18700000, guid: 47569430ea848544a90a3d6645fa9b11, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_jumpBackwards
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: f3551bafe2f035b4ba48e8948770a0a9, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bb135e03723b0824ca53d67a59421c31, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4de087d26ce7e094ca3b4c473f3476fa, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_jumpBackwards_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 4b22ed3975362304e95dc4726299c780, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 96b8f46feadca9444ae003978718c08f, type: 2}
+    alphaMap: {fileID: 18700000, guid: f78ea977461492c4b949e1c87d1af3e6, type: 2}
+  - rows: 3
+    columns: 3
+    animationName: GHOUL_LEGACY_jumpForward
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: e9afcf22f4626794ea2a3f27daec6a04, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bbdb68cae0f53164fb0d85d7308e7f8e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1bcd9fc80731dd847bce9f6408747071, type: 2}
+  - rows: 3
+    columns: 3
+    animationName: GHOUL_LEGACY_jumpForward_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 6b2430c06430eaf4ea84d4227aa5e043, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 13c6193b055002d4f9cfe1f90e774734, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9e5826f4dfcbab044a1a6c1cdbb2922b, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: GHOUL_LEGACY_jumpGrabBite
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: f104b7793d7c94a43960a238f3a4daef, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d51c83d3e1cb0bf45969211e2cca3341, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2289f40a1903a0d4ab2605856dd083bf, type: 2}
+  - rows: 3
+    columns: 5
+    animationName: GHOUL_LEGACY_jumpGrabBite_RM
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: 9a57f916de26f434d97d7bb0535b7b26, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 336e395cbfea23a41bfed0dadc4742d9, type: 2}
+    alphaMap: {fileID: 18700000, guid: b386d8a1319c81f4eade69aaed962604, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_run
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: c9b2ce964dfdd524085d32e2be1b0a30, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 03dde54634d221344b4587494f0fa1df, type: 2}
+    alphaMap: {fileID: 18700000, guid: 29db9000103e71048aec16dfe46ef89c, type: 2}
+  - rows: 2
+    columns: 3
+    animationName: GHOUL_LEGACY_run_RM
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: fcee1461f40720249adbeed62a040bcd, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 862d450f9a06b39409ecfe0fb1605dba, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3c8282e9b4406d24aabaad4298c2fed0, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_strafeLeft
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: d9a43a0ac18d1d34aabdc43c30c05caf, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a8d0310ef993bb74f9579857fabd40bb, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9ce17588752d994458c691843facd2a4, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_strafeLeft_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 808da97c168e8ad4c9dfe2a5f1afe003, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b41c87025eccd064e9bb91b9976d778b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3704a1ba1024872488d15afb97277163, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_strafeRight
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: f860bdc9cfa41ce49ab07a5dd7a9de25, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ef345cdeae76be84ba708ab24917b49f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 33e690145da4a2544b61cc1fd47089a6, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_strafeRight_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: bccca417187791b4997959cc0fc37238, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 860b0ac30dd43394a86ec0c2ceb9678d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 310b9291a61539640b15c79c597e9a1b, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_walk
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 5e450b7c6e983374d9053c2d87c5f5b0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 36b4cb411d6a2064290915210a663373, type: 2}
+    alphaMap: {fileID: 18700000, guid: 81eda0860808a6347a305344cde94f43, type: 2}
+  - rows: 2
+    columns: 4
+    animationName: GHOUL_LEGACY_walk_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 2eff6375288018e4ba710ce1a97d0480, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a87431e6d23f94143a0c65756556e6c2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 0a5028bca4885c24da07aabb61c08e4b, type: 2}
+  - rows: 4
+    columns: 5
+    animationName: GHOUL_LEGACY_DeathWithGore
+    numFrames: 17
+    normalMap: {fileID: 18700000, guid: b07d8bc04afdbd24b92540a16caedd1a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 4f03839b0f7bb514593e4f4d38d47e79, type: 2}
+    alphaMap: {fileID: 18700000, guid: c29d94bed0ecab745bf67fbc0eeeded5, type: 2}

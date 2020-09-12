@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: FAT_OGRE_LEGACY_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: FAT_OGRE_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: bcea76aa1b7a3114fb2f8f4820b9de98, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8d3fd635664fb104ea2bf4dd6ec1dc51, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2e481e800f50ff249bc03697b9f9e613, type: 2}
+    normalizedGroundPosition: 0.011807813
+  - rows: 3
+    columns: 5
+    animationName: FAT_OGRE_LEGACY_2HitComboAttack
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: 291c39f14051e45499ac286174e13d6a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3e3067b2cedf56145aaa8cbc04c49501, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4f2af958e5403ae4891dff4a01e3602b, type: 2}
+    normalizedGroundPosition: 0.028027039
+  - rows: 3
+    columns: 5
+    animationName: FAT_OGRE_LEGACY_2HitComboAttackForward
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: ccecf19b665091748b4a631b6a77f584, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 496cebc3a4948b246ba2b36ec373c352, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8d0812fe0a9a0b143a55f42e0803a77d, type: 2}
+    normalizedGroundPosition: 0.030601345
+  - rows: 3
+    columns: 5
+    animationName: FAT_OGRE_LEGACY_2HitComboAttackForward_RM
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: 63ab1c206b8c62b47943864472e451ba, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5501be0a6f2a1074bb815d97ad2bbe7b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1cc500b2edcf0fe42bbea9501d1c9a6b, type: 2}
+    normalizedGroundPosition: 0.030534605
+  - rows: 4
+    columns: 6
+    animationName: FAT_OGRE_LEGACY_3HitComboAttack
+    numFrames: 21
+    normalMap: {fileID: 18700000, guid: 09415016aa39b6d4e85ecb0338041d44, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 208af7f7a1275ec42a74efdc39265820, type: 2}
+    alphaMap: {fileID: 18700000, guid: c1bca8b290ec72e4d8b8e962cf24e82d, type: 2}
+    normalizedGroundPosition: 0.08565132
+  - rows: 4
+    columns: 6
+    animationName: FAT_OGRE_LEGACY_3HitComboAttackForward
+    numFrames: 21
+    normalMap: {fileID: 18700000, guid: 98e1ebbceb6b351408ecbf88f9c2edb8, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 32ddcd041860d714288e0eb38951dd93, type: 2}
+    alphaMap: {fileID: 18700000, guid: f785f73a8ae455d4cae0dd2ffee9b6a8, type: 2}
+    normalizedGroundPosition: 0.076520346
+  - rows: 4
+    columns: 6
+    animationName: FAT_OGRE_LEGACY_3HitComboAttackForward_RM
+    numFrames: 21
+    normalMap: {fileID: 18700000, guid: 3544f34343a593d489ce2f8ef8f8c0c0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3efa0c8588380da45b1aed389a05ea00, type: 2}
+    alphaMap: {fileID: 18700000, guid: 92a5b0253af016a4f879812911507021, type: 2}
+    normalizedGroundPosition: 0.08969333
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack1
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: cb83d9606235bb146addfb3598ef49a1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 711e6ec4d49bd7c488fa7c29241bc62f, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9bf12fb5bff78ff4d9ca6efacef3d209, type: 2}
+    normalizedGroundPosition: 0.04009656
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack1Forward
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 36fd9982a337a4540b8839bd0b62ac30, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8bc41533286b4a945b47cd8dfdd660ca, type: 2}
+    alphaMap: {fileID: 18700000, guid: 98ac36a212ff871499ab44ed1b949ba5, type: 2}
+    normalizedGroundPosition: 0.04009645
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack1Forward_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: ebcd49ebdbef67c4cb659c9ee611bd46, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 66e0109d1fea4be4bb2b685afa7cf4cf, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2d416d9370eb8b045b27397594df1fc8, type: 2}
+    normalizedGroundPosition: 0.040096454
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack2
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 672b00381785c8d4fa4c2aa22b7619e6, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 6441999b433d3194dbe0a4078a9d14a2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 617c27dbea6238940bf47b546ca4aa0c, type: 2}
+    normalizedGroundPosition: 0.026037857
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack2Forward
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 7291b3c76e08b2246b620ab7749cd77a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 71d308e6f9a48074dbf412072039e37d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4bb32ac4343ee7a45a921187408bbb58, type: 2}
+    normalizedGroundPosition: 0.025914142
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack2Forward_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: d3576368975ed684d920f6d6b893b0ee, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a562e29ab9427fe4c81cd09108efbed8, type: 2}
+    alphaMap: {fileID: 18700000, guid: fd399141ab725f74bb68a6bc28a283d1, type: 2}
+    normalizedGroundPosition: 0.025920518
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack3
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 012be9cdd17771341812b21798396991, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bf64be8f6fcef254081f93074d5c726d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9c3eeb27e705ae54bad668bf92167c41, type: 2}
+    normalizedGroundPosition: 0.104032926
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack3Forward
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 004e1bc86f315d34595a3f8ff84ff77f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 56a7c905ea16a3d458257acd909f739e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 44d8b3198b27dac4d9959d98d3b99276, type: 2}
+    normalizedGroundPosition: 0.08813661
+  - rows: 3
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_attack3Forward_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 5cc624d61a921cd4880a211357ab8281, type: 2}
+    diffuseMap: {fileID: 18700000, guid: da305dba0aef34446a5564bafac8d719, type: 2}
+    alphaMap: {fileID: 18700000, guid: e3b22cc2c64dca648bda3d9fa6a5d551, type: 2}
+    normalizedGroundPosition: 0.08725946
+  - rows: 4
+    columns: 5
+    animationName: FAT_OGRE_LEGACY_death
+    numFrames: 19
+    normalMap: {fileID: 18700000, guid: a95f19a40d50af74e8048b239fc9ecdd, type: 2}
+    diffuseMap: {fileID: 18700000, guid: daad3b92e6b4dd4408e60447e51dc976, type: 2}
+    alphaMap: {fileID: 18700000, guid: 1ed3527bcf99fa741b1ebd3737a89279, type: 2}
+    normalizedGroundPosition: 0.07638191
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_getHit1
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 17fac9985811f864eb5773bcfe445143, type: 2}
+    diffuseMap: {fileID: 18700000, guid: dccfa55d6de147546a33b53823e25fae, type: 2}
+    alphaMap: {fileID: 18700000, guid: d31c8e653fc475a409e0401658c259d9, type: 2}
+    normalizedGroundPosition: 0.03935354
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_getHit2
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: c3dcaec7c48066c428afb0ea5dc01453, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 21e4e78f5a41aea448f23f13e3d0140c, type: 2}
+    alphaMap: {fileID: 18700000, guid: a3ef7859a2fe8f74b9f58e96cb6ef7ab, type: 2}
+    normalizedGroundPosition: 0.03971192
+  - rows: 4
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_idle
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: a9e5eb9ec9c6a2249961fda56f60b4f1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2b5f379854b527f49b812553f966d977, type: 2}
+    alphaMap: {fileID: 18700000, guid: a001ed5f8dfcec84dbb7b90fab498dfa, type: 2}
+    normalizedGroundPosition: 0.03992605
+  - rows: 4
+    columns: 6
+    animationName: FAT_OGRE_LEGACY_roarTaunt
+    numFrames: 21
+    normalMap: {fileID: 18700000, guid: 7a77974f4bcf0df439688b54f6691094, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b625a219519f1f54f9271099eb6b3e16, type: 2}
+    alphaMap: {fileID: 18700000, guid: 93c9a11cad11eb74ab1d37359138b8dc, type: 2}
+    normalizedGroundPosition: 0.035110418
+  - rows: 2
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_run
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: cdb521e39ab0ee24eaa1a0639574783f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 73b2498409545c343b86d1fb2a2af25e, type: 2}
+    alphaMap: {fileID: 18700000, guid: bafe966974a7af24f8ca2f6d6ad3676c, type: 2}
+    normalizedGroundPosition: 0.06148622
+  - rows: 2
+    columns: 3
+    animationName: FAT_OGRE_LEGACY_run_RM
+    numFrames: 6
+    normalMap: {fileID: 18700000, guid: 9d38247697a0aa940951fa1286a53829, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 71fcef41033a0304c8f4286da2a3c084, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6ce29beddf376ec43bdc24399d8c614f, type: 2}
+    normalizedGroundPosition: 0.061486084
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_strafeLeft
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: fb8dc99f7564f1444b98f101e5a44ab4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a8ab084f60ba8934b9f52b31657e971c, type: 2}
+    alphaMap: {fileID: 18700000, guid: b0d3689bfff713045a3ec1d55db61dfd, type: 2}
+    normalizedGroundPosition: 0.039933044
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_strafeLeft_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: d985d0bc12f41794d990a8c6f90ef783, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ed02f6a9b3b8be949b27b7eb74c3977e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 10d15450f408ce046a689b3791c5ab2b, type: 2}
+    normalizedGroundPosition: 0.03993307
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_strafeRight
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 016d9eb359cca074b94a164f785e3f8f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b5a886952ee97964dbfe58191db72a0d, type: 2}
+    alphaMap: {fileID: 18700000, guid: c7fd7e28ffcac1e40810aa59a94df72d, type: 2}
+    normalizedGroundPosition: 0.039933104
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_strafeRight_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 5bae3cd01cf05b64c8ee56c870d29423, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 07de6893590c79047b0416045bed75c1, type: 2}
+    alphaMap: {fileID: 18700000, guid: 986433bb71e86e146af25c84de3b8c9b, type: 2}
+    normalizedGroundPosition: 0.0399334
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_turn90Left
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 7256e6cb452a2c640bad48f9e7d35ae2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 359fa6a562d513a48b7b90724e9fd16a, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2db780cacb70b3348ba9f4d2f219e8c5, type: 2}
+    normalizedGroundPosition: 0.039928474
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_turn90Left_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 8695ca3d0b607ac4f99ffcba92f48f20, type: 2}
+    diffuseMap: {fileID: 18700000, guid: b99d34fecc64863419d5ad1142ab9917, type: 2}
+    alphaMap: {fileID: 18700000, guid: b9060fef54bbaee46a155c5a8818b0d7, type: 2}
+    normalizedGroundPosition: 0.039928563
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_turn90Right
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: f6ffe3c5552f9cd46b5aa864665a390c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: c40b160ce1f336f4e8a05d3d4a50e11c, type: 2}
+    alphaMap: {fileID: 18700000, guid: 93153108de520584f83087e2b01bff81, type: 2}
+    normalizedGroundPosition: 0.06447755
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_turn90Right_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: c00c5ca9a63952b478b4d5b4e84a9382, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0ab02d3ac36b0fd448652c14860be2a2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6d0acfd8b35f48547844e7e2813fa9d5, type: 2}
+    normalizedGroundPosition: 0.064969204
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_walk
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 21ee88120698e0e45a37a8845606620b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 9a329b2d82f91134aa574342581b1fa7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 658efb8ae72c9c24b876f39faff84e52, type: 2}
+    normalizedGroundPosition: 0.017480971
+  - rows: 2
+    columns: 4
+    animationName: FAT_OGRE_LEGACY_walk_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 7adb6570f3efe934585eeb30374876a0, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 92ce59ae04649f04bb25358b7c07141b, type: 2}
+    alphaMap: {fileID: 18700000, guid: 10ebf667b804f14499800ee7e8b7f407, type: 2}
+    normalizedGroundPosition: 0.0201784

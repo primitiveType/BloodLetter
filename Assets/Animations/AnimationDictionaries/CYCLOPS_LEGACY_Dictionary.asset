@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: CYCLOPS_LEGACY_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: CYCLOPS_LEGACY_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 0f003c60a9f34ca4d82ae59495dabe57, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f9c4002c9ba6d4b44bc33b6412e25199, type: 2}
+    alphaMap: {fileID: 18700000, guid: b4fa282613189d941ace8fdd6f2b01aa, type: 2}
+    normalizedGroundPosition: 0.0065965746
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsCrushAttack
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 0e4596cbe1a8e0743aa6186ceb829d78, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ca0aa0d6e027e244da7acbdfcde9deb6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 171ebbcb999e04647b899ac1710c13cb, type: 2}
+    normalizedGroundPosition: 0.0066186683
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsCrushAttackForward
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 68b4a53e11656814bad33f1281c62aa8, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 84a96c8f1bb665a479bfda99146f6e0a, type: 2}
+    alphaMap: {fileID: 18700000, guid: bde53eb4a3f607449bbecdc019eba694, type: 2}
+    normalizedGroundPosition: 0.008901251
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsCrushAttackForward_RM
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 280ecad72fe0558498ca3f38c25095b4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: fe129e58c7115e24cab7a21de85a1a08, type: 2}
+    alphaMap: {fileID: 18700000, guid: dc925464709d3c74b95d35a45bf6b96f, type: 2}
+    normalizedGroundPosition: 0.00889981
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsSmashAttack90Left
+    numFrames: 12
+    normalMap: {fileID: 18700000, guid: cb92cdd7a5b0f3449bacc724bc2e2906, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 51a291e28a0f7ae4996c8e951dff4236, type: 2}
+    alphaMap: {fileID: 18700000, guid: 321627d3467f3554a8cfd10854f33892, type: 2}
+    normalizedGroundPosition: 0.025061296
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsSmashAttack90Left_RM
+    numFrames: 12
+    normalMap: {fileID: 18700000, guid: 21fbb6f7197091346a08678b135b94d1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bf8c69da5a322f6499a2dfd3b33152ff, type: 2}
+    alphaMap: {fileID: 18700000, guid: adcbe07cb23495043b1892af2f9c28c0, type: 2}
+    normalizedGroundPosition: 0.011432678
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsSmashAttack90Right
+    numFrames: 12
+    normalMap: {fileID: 18700000, guid: 66c00df7cc7e78943ae1fd0bd9003d46, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 462e2d5c924681342b7eb9efa10caa58, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8b7ec9ac9e1c8c54f86f1d56fe23806a, type: 2}
+    normalizedGroundPosition: 0.011433585
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsSmashAttack90Right_RM
+    numFrames: 12
+    normalMap: {fileID: 18700000, guid: 43458da2d08221a4b93c086b55a7a8f3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 542326d27371e4f46be2fa9f7c832e66, type: 2}
+    alphaMap: {fileID: 18700000, guid: 825d8d135fbf1714cb5702ef24f28228, type: 2}
+    normalizedGroundPosition: 0.025061678
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsSmashAttackForward
+    numFrames: 12
+    normalMap: {fileID: 18700000, guid: 84e96137162f5ca4e9ee9076a196c5a3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5f18114f21748454fa4f0f142115f919, type: 2}
+    alphaMap: {fileID: 18700000, guid: fed128656cee02445936d806ebf2ec86, type: 2}
+    normalizedGroundPosition: 0.015911026
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2fistsSmashAttackForward_RM
+    numFrames: 12
+    normalMap: {fileID: 18700000, guid: d4593c549ba26de49b4aade7aa3cf410, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2239f141cd5b1664ba481206e6131647, type: 2}
+    alphaMap: {fileID: 18700000, guid: da151542566ded3468c789697334e603, type: 2}
+    normalizedGroundPosition: 0.015910784
+  - rows: 4
+    columns: 5
+    animationName: CYCLOPS_LEGACY_2HitComboAttack
+    numFrames: 17
+    normalMap: {fileID: 18700000, guid: 8b25575c8713c7d48bea90074d504c36, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 23d6b34ffa5012b4091c3567eaa6a03b, type: 2}
+    alphaMap: {fileID: 18700000, guid: a088e662110048b4780109d04180b5f7, type: 2}
+    normalizedGroundPosition: 0.0050691976
+  - rows: 4
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2HitComboAttackForward
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: f9fc7b605db53c34b8021f4ae6ab757e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8a5357f2b5653944392451b1648d4729, type: 2}
+    alphaMap: {fileID: 18700000, guid: 306a9920e84dfb14dbafcd6e64be2317, type: 2}
+    normalizedGroundPosition: 0.010050585
+  - rows: 4
+    columns: 4
+    animationName: CYCLOPS_LEGACY_2HitComboAttackForward_RM
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 94dbd24ee25327f44a665d903d5daf0a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 4b842dd151aec914c8801d95437295f0, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9b167c1a889e9c649bf59a6746d13170, type: 2}
+    normalizedGroundPosition: 0.010050506
+  - rows: 5
+    columns: 6
+    animationName: CYCLOPS_LEGACY_3HitComboAttack
+    numFrames: 27
+    normalMap: {fileID: 18700000, guid: 641f16ab2d1ae094cbf1c1d3589aa7bb, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e962b2b14c8fed5459341cca7b7b4678, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8b91f930a4891ba48886153fc4816e61, type: 2}
+    normalizedGroundPosition: 0.005648559
+  - rows: 4
+    columns: 6
+    animationName: CYCLOPS_LEGACY_3HitComboAttackForward
+    numFrames: 24
+    normalMap: {fileID: 18700000, guid: bea058b4479a3b246b549758c4980fe2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 74bdf8db8de3d2a43b881a99bb15f0c1, type: 2}
+    alphaMap: {fileID: 18700000, guid: c388c1667ecc39b4abfcf0dc2b4d661d, type: 2}
+    normalizedGroundPosition: 0.018452628
+  - rows: 4
+    columns: 6
+    animationName: CYCLOPS_LEGACY_3HitComboAttackForward_RM
+    numFrames: 24
+    normalMap: {fileID: 18700000, guid: f60bc05caa34e9e468b7cb47dbfac75d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e8baf5243f2175344802753016d6382d, type: 2}
+    alphaMap: {fileID: 18700000, guid: 99677d4226b832e43a8d8018ac1370d9, type: 2}
+    normalizedGroundPosition: 0.018453337
+  - rows: 5
+    columns: 6
+    animationName: CYCLOPS_LEGACY_death
+    numFrames: 29
+    normalMap: {fileID: 18700000, guid: 8371ebfe718c9884ebe31a69c659082d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ba6cc98df267f0343bf5e2959be1cc72, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5e2ff1f7a30fb614b9b4d9b18a4165ac, type: 2}
+    normalizedGroundPosition: 0.069337726
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_getHit1
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 6b7642af2b363a9429c62a749b0ffd80, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8551660c30a4514439fb4913a70a60df, type: 2}
+    alphaMap: {fileID: 18700000, guid: d82978ded34bfd64faa4d6348ee46e1b, type: 2}
+    normalizedGroundPosition: 0.0062306006
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_getHit2
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 32ba805e22abd094c845d1b0ce993dfc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d6b94937e9c6da34fb6d26ac31907822, type: 2}
+    alphaMap: {fileID: 18700000, guid: 73c02964932840944a66320c04b29afb, type: 2}
+    normalizedGroundPosition: 0.0072518904
+  - rows: 3
+    columns: 3
+    animationName: CYCLOPS_LEGACY_getHit2_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 43e3981f804fb68419d3cc821b769cd5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e02b529ef8783d04bb53a1477ac1b472, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6c206d2c5dbb39048a7e593e68fa7503, type: 2}
+    normalizedGroundPosition: 0.006357389
+  - rows: 3
+    columns: 3
+    animationName: CYCLOPS_LEGACY_getHit3
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 33f9e47610ace83418b2174707e26a71, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 93717948c9d2e8b4cb8ddd1afcdc8d99, type: 2}
+    alphaMap: {fileID: 18700000, guid: bc822bcb31e573a4a8288b12b63a508e, type: 2}
+    normalizedGroundPosition: 0.0061364756
+  - rows: 3
+    columns: 3
+    animationName: CYCLOPS_LEGACY_getHit4
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: b12a07e3604376646a4caa88b7da710d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 03695678c47b09b41b5c7b235df51395, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7b3438f83c1367d4cb98d621ebb5f04f, type: 2}
+    normalizedGroundPosition: 0.012764892
+  - rows: 3
+    columns: 3
+    animationName: CYCLOPS_LEGACY_getHit4_RM
+    numFrames: 9
+    normalMap: {fileID: 18700000, guid: 359660143e0cccf4093455c01cf78bfc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 60db7e136bba8154ba4a824198991610, type: 2}
+    alphaMap: {fileID: 18700000, guid: 888ab80b0cdf1b145802bda2136110c5, type: 2}
+    normalizedGroundPosition: 0.012764794
+  - rows: 3
+    columns: 5
+    animationName: CYCLOPS_LEGACY_getHit5
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: 693fa2ab6ca724a49bddf08cd329bb34, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 91843ef7422df75429f202013498e8e7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 721aa225ae0d2a64f9c139b9e7de515a, type: 2}
+    normalizedGroundPosition: 0.0060611763
+  - rows: 8
+    columns: 10
+    animationName: CYCLOPS_LEGACY_idleLookAround
+    numFrames: 80
+    normalMap: {fileID: 18700000, guid: 07259f2d6e550234aa156f79cb53aef3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: da7b61cbb349f10429379aaa196640a4, type: 2}
+    alphaMap: {fileID: 18700000, guid: 61fc4b966c4b025408558aa5e16f32ea, type: 2}
+    normalizedGroundPosition: 0.0069935736
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_leftHandAttack
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 246738f0bd06f6c42be5a699906f88a7, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 5b77e10b87478d84a9d66f63aed7d928, type: 2}
+    alphaMap: {fileID: 18700000, guid: cee4971f2bb1f8a4dbf27f37b60effa1, type: 2}
+    normalizedGroundPosition: 0.0050960453
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_leftHandAttackForward
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 63746a04372fbd040a8480b89fbb1cf2, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e16bc39590471d04f845f821b43f9230, type: 2}
+    alphaMap: {fileID: 18700000, guid: 57c2fd4e88d8dae4ba74e0f37a21ac20, type: 2}
+    normalizedGroundPosition: 0.013456565
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_leftHandAttackForward_RM
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 3d47a54bb19a93749bfb887f94843586, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e8534a562eb95f8499c9d200147e1fa3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 613def5fb45546d4d90c4fbdc7e59e8a, type: 2}
+    normalizedGroundPosition: 0.013455933
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_rightHandAttack
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 6dc96b9b0b161fb418e31d6849244f66, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ce5ab630ee02fcc49a139da69f4b0c39, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7f48fa5a85514f84aae4bbfb96f77cfc, type: 2}
+    normalizedGroundPosition: 0.0050854445
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_rightHandAttackForward
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 6417044ac97404445941f50ab1b9246f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8f363fc5846c6b542826657cbec7b16e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5355a9539123db9499af94ebb2c3bbe4, type: 2}
+    normalizedGroundPosition: 0.018034436
+  - rows: 3
+    columns: 4
+    animationName: CYCLOPS_LEGACY_rightHandAttackForward_RM
+    numFrames: 11
+    normalMap: {fileID: 18700000, guid: 77f9ef1984e41c1478d875791d612635, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d93c4eae896c47143952791d6a29e3fe, type: 2}
+    alphaMap: {fileID: 18700000, guid: 92e27bef87b72a246a3b2f0a33776092, type: 2}
+    normalizedGroundPosition: 0.018034514
+  - rows: 4
+    columns: 4
+    animationName: CYCLOPS_LEGACY_roar
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 4cd9f335e1338bb4d9b89fb1e6e07f0f, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d4f619cbfd5f0904885d928aebb7a179, type: 2}
+    alphaMap: {fileID: 18700000, guid: 76af51ab8d8fd554e8df6b8908f07213, type: 2}
+    normalizedGroundPosition: 0.00715921
+  - rows: 2
+    columns: 4
+    animationName: CYCLOPS_LEGACY_turn90Left
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: bbf2ce26f609b934aaeff68c5d1d3176, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7cfac1776e4828b4bb872acace466f5e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3043053498b518a438cfdb7557bcbe51, type: 2}
+    normalizedGroundPosition: 0.008261423
+  - rows: 2
+    columns: 4
+    animationName: CYCLOPS_LEGACY_turn90Left_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 18d16860855896245a62a5d907a45bcc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 225b497bb61a68d4b8f780ceb4bda7d6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7157645522faff54f829b7efb1ac484c, type: 2}
+    normalizedGroundPosition: 0.013517811
+  - rows: 2
+    columns: 4
+    animationName: CYCLOPS_LEGACY_turn90Right
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: a48764889f0c7994e9670093a9aaf2e3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 04a6b428d2f303d4b8d69826016f0e65, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7df32a4722670d540be39b799b2e72fb, type: 2}
+    normalizedGroundPosition: 0.0077597275
+  - rows: 2
+    columns: 4
+    animationName: CYCLOPS_LEGACY_turn90Right_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 9083b2ff6b7ff29448738ebf0fdfd39e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 0feb9fe2ed6804241add2c02d188aa86, type: 2}
+    alphaMap: {fileID: 18700000, guid: d9c4fdfc087f61745bcf008e7c2ea3fe, type: 2}
+    normalizedGroundPosition: 0.0084898565
+  - rows: 2
+    columns: 4
+    animationName: CYCLOPS_LEGACY_walk
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 3eca872e379f1104ab5ca6ca2d67d89a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ba1922e61b092924eb72b7852c311cd5, type: 2}
+    alphaMap: {fileID: 18700000, guid: 661fe2f874a5f194ba179f9e35deb77b, type: 2}
+    normalizedGroundPosition: 0.011426663
+  - rows: 2
+    columns: 4
+    animationName: CYCLOPS_LEGACY_walk_RM
+    numFrames: 8
+    normalMap: {fileID: 18700000, guid: 63c9e7b73b2ada646b33a1e67c03ebb3, type: 2}
+    diffuseMap: {fileID: 18700000, guid: fe88a0ffe08f0bf468f21a9ccff042d2, type: 2}
+    alphaMap: {fileID: 18700000, guid: c5a4c546125828a44870561e6e1e289e, type: 2}
+    normalizedGroundPosition: 0.011433306
