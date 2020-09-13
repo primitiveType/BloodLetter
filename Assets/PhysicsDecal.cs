@@ -11,6 +11,7 @@ public class PhysicsDecal : MonoBehaviour
     [SerializeField] private GameObject particleObject;
     [SerializeField] private UltimateDecal decal;
 
+    [SerializeField] private LayerMask CollidesWith;
 
     private void Awake()
     {
@@ -30,12 +31,13 @@ public class PhysicsDecal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Default"))
+        if (CollidesWith.ContainsLayer(other.gameObject.layer))
         {
             Destroy(rb);
             GetComponent<Collider>().enabled = false;
             decal.enabled = true;
             particleObject.SetActive(false);
+            transform.SetParent(other.transform);
         }
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1106582660102108151}
   - component: {fileID: 1106582660102108136}
   - component: {fileID: 1106582660102108137}
+  - component: {fileID: 1545869121114528434}
   m_Layer: 2
   m_Name: Blood Splatter
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1106582660102108148}
   m_LocalRotation: {x: 0, y: -0, z: 0.011894062, w: -0.9999293}
   m_LocalPosition: {x: 17.61, y: 5.25, z: -24.658}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8549980406765199452}
   m_Father: {fileID: 0}
@@ -95,6 +96,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleObject: {fileID: 3078503496360788746}
   decal: {fileID: 1106582660102108149}
+  CollidesWith:
+    serializedVersion: 2
+    m_Bits: 2049
+--- !u!114 &1545869121114528434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106582660102108148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ded3cc7aa96a234bacfc1e0fe42f36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decal: {fileID: 1106582660102108149}
+  min: 0
+  max: 63
+  minAlpha: 0
+  maxAlpha: 0.95
 --- !u!1 &3078503496360788746
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +140,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3078503496360788746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.003265498, y: -0.2745292, z: -0.011437011, w: -0.9615052}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -150,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6971578873457410696}
   - component: {fileID: 1090157010}
+  - component: {fileID: 2993126476332004362}
   m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
@@ -210,15 +232,40 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2126246720042785711, guid: 41404bf45a55fdf4bb201fcdfb168dae,
+  m_Sprite: {fileID: -459067215377903206, guid: 41404bf45a55fdf4bb201fcdfb168dae,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.53, y: 0.53}
+  m_DrawMode: 2
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2993126476332004362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3982657072618738224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8df5d4b674cc742b5e812e8f0d4e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 1090157010}
+  Sprites:
+  - {fileID: -2126246720042785711, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -174042169833062346, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: 8958670535985375444, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: 4711116328407865328, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -6004163327790186300, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: 2106409558847724506, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -622569401271481767, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -7939375495935351597, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: 7810166171057770953, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -5674331654957753723, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -459067215377903206, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
