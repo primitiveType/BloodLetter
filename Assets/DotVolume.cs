@@ -15,6 +15,8 @@ public class DotVolume : MonoBehaviour, IDamageSource
         return new Damage(Damage, DamageType.Hazard);
     }
 
+    public float Force { get; }
+
     private bool TryAddTrigger(Collider other)
     {
         var actor = other.GetComponent<IActorEvents>();

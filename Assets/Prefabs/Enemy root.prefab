@@ -83,7 +83,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847258852847000055}
-  m_LocalRotation: {x: -0, y: -0.74164814, z: -0, w: 0.6707891}
+  m_LocalRotation: {x: -0, y: 0.49004525, z: -0, w: 0.871697}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 467093247551489786}
   - component: {fileID: 4068027032379591258}
   - component: {fileID: 8533879305495763307}
+  - component: {fileID: 5488036821869758159}
   m_Layer: 8
   m_Name: Enemy root
   m_TagString: Untagged
@@ -333,6 +334,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &5488036821869758159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171493255443565340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd536a3993dcef04f84d6c4c273d46e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 3843004849081189840}
+  indexChanger: {fileID: 8171493255443565343}
 --- !u!1 &8171493255988436123
 GameObject:
   m_ObjectHideFlags: 0

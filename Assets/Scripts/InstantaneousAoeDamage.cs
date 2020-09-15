@@ -20,6 +20,8 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
         return new Damage(DamageAmount, DamageType.Attack);
     }
 
+    float IDamageSource.Force => Force;
+
     private void Start()
     {
         startTime = Time.time;

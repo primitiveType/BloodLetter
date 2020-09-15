@@ -319,29 +319,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
---- !u!1 &1390177817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5883707740076942857, guid: 3a535358ba3dc9a499de74fc76b2eca0,
-    type: 3}
-  m_PrefabInstance: {fileID: 750080635}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1390177818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390177817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1804ec660b85aa4fa0285deca949881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxPermanentMarks: 256
-  perDecalLightProbes: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  initError: 0
-  globalMipBias: 0
-  drawHandles: 1

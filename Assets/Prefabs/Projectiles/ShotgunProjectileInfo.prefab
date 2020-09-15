@@ -43,7 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b74017042454af69cf9fa32246eb206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileInfo: {fileID: 1693377125502948229, guid: 9cbe9b3b1a9eff148b1a5500d9e01ec5,
-    type: 3}
+  m_MinRange: 10
+  m_Range: 100
+  type: 0
+  m_Force: 8
   degreesScatter: 0.05
   numProjectiles: 10
+  projectileInfo: {fileID: 1693377125502948229, guid: 9cbe9b3b1a9eff148b1a5500d9e01ec5,
+    type: 3}

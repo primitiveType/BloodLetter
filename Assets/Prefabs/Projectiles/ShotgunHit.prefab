@@ -47,6 +47,7 @@ MonoBehaviour:
   controlObjectName: 1
   type: 2
   material: {fileID: 2100000, guid: 0f33d0d037a56374289c0613c7bb472d, type: 2}
+  alphaCutoff: 0.999
   atlasIndex: 11
 --- !u!1 &7917214635672765982
 GameObject:

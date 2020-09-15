@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 115979589318912338}
   - component: {fileID: 5460727409768576122}
   - component: {fileID: 3425376379481355449}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: barrel explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75663a7118504bd4abfd96c7694d78d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 2
   DamageAmount: 40
-  Force: 1
   Duration: 0.1
+  Force: 1
+  Radius: 2
 --- !u!135 &5460727409768576122
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -1,10 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ScatterProjectileInfo : ProjectileInfoBase
 {
     [SerializeField] private float degreesScatter;
     [SerializeField] private int numProjectiles;
     [SerializeField] private HitscanProjectileInfo projectileInfo;
+
+
+    private void Awake()
+    {
+        projectileInfo = Instantiate(projectileInfo);
+        projectileInfo.Force = Force;
+        Debug.Log(projectileInfo.Force);
+    }
 
     public void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, ActorRoot actorRoot)
     {
@@ -16,6 +26,7 @@ public class ScatterProjectileInfo : ProjectileInfoBase
             var z = Random.Range(-degreesScatter, degreesScatter);
             var position = playerDirection +
                            new Vector3(x, y, z);
+            projectileInfo.Force = Force;
             projectileInfo.TriggerShoot(playerPosition, position, actorRoot);
         }
     }

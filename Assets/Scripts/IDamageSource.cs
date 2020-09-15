@@ -1,4 +1,7 @@
-﻿public interface IDamageSource
+﻿using UnityEngine;
+
+public interface IDamageSource
 {
     Damage GetDamage();
+    float Force { get; }
 }

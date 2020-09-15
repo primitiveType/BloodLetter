@@ -11,9 +11,20 @@ public class ChangeShaderIndex : MonoBehaviour
 
     [SerializeField] private GameObject materialGameObject;
     public int Max = 8;
+    private int? _indexOverride;
 
     private Renderer MyRenderer =>
         m_MyRenderer != null ? m_MyRenderer : m_MyRenderer = materialGameObject.GetComponent<Renderer>();
+
+    public int? IndexOverride
+    {
+        get => _indexOverride;
+        set
+        {
+            _indexOverride = value;
+            FixedUpdate();
+        }
+    }
 
     // Start is called before the first frame update
     private void Start()
@@ -38,10 +49,20 @@ public class ChangeShaderIndex : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float index = 0;
+        if (IndexOverride != null)
+        {
+            index = IndexOverride.Value;
+        }
+        else
+        {
+            index = GetFacingIndex();
+        }
+
         // float index = MyRenderer.GetFloat(Perspective);
         var block = new MaterialPropertyBlock();
         MyRenderer.GetPropertyBlock(block);
-        block.SetFloat(Perspective, GetFacingIndex());
+        block.SetFloat(Perspective, index);
         MyRenderer.SetPropertyBlock(block);
         // MyMat.SetFloat(Perspective, GetFacingIndex());
         // transform.LookAt(mainCam.transform);

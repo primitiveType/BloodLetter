@@ -62,17 +62,17 @@ PrefabInstance:
     - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.54
+      value: 1.0123407
       objectReference: {fileID: 0}
     - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.1
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.1
+      value: 2.05
       objectReference: {fileID: 0}
     - target: {fileID: 4105811296551540431, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -85,6 +85,16 @@ PrefabInstance:
       propertyPath: anchorTransform
       value: 
       objectReference: {fileID: 4579196988362250041}
+    - target: {fileID: 5488036821869758159, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488036821869758159, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: hurtClips.Array.size

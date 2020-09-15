@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 115979589318912338}
   - component: {fileID: 8048990536416520220}
   - component: {fileID: 386722193316702245}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Flesh bomb explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4769,9 +4769,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75663a7118504bd4abfd96c7694d78d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 1
   DamageAmount: 10
+  Duration: 0.2
   Force: 0
+  Radius: 1
 --- !u!82 &8048990536416520220
 AudioSource:
   m_ObjectHideFlags: 0

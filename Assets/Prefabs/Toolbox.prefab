@@ -191,10 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e437fd9d703d7408819a32ea8c947c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Invuln: {fileID: 565338860}
-  GasMask: {fileID: 6732390210970848109}
   Damage: {fileID: 585631435}
   Death: {fileID: 192835218}
+  GasMask: {fileID: 6732390210970848109}
+  Invuln: {fileID: 565338860}
 --- !u!1 &5223053834312349842
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 5883707740076942851}
   - component: {fileID: 1763675026}
   - component: {fileID: 1248142936}
+  - component: {fileID: 1364293885912712569}
   m_Layer: 0
   m_Name: Toolbox
   m_TagString: Untagged
@@ -332,7 +333,9 @@ MonoBehaviour:
   obj:
   - {fileID: 11400000, guid: 9bf213797b0b56a4f9ab086804d8efbf, type: 2}
   - {fileID: 11400000, guid: 36b7ce5816766a24a8464f22820653b8, type: 2}
-  - {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
+  - {fileID: 11400000, guid: a408f88d0907ee948acd7eb9bbfa94ac, type: 2}
+  - {fileID: 11400000, guid: 9f852a8c60dc8a84bb282d2accaf8912, type: 2}
+  - {fileID: 11400000, guid: 631c255ac6520a64b89493efc160fb58, type: 2}
 --- !u!114 &5883707740076942851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,26 +360,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1547eec1f8eb4bd08c4837226bc4cf0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _saveData:
-    _inventoryData:
-      EquippedWeapon: 1
-      Weapons: 1
-      Ammo:
-        m_keys: 
-        m_values: []
-    _playerHealth: 111
-    _playerArmor: 11
   _newGameSaveData:
     _inventoryData:
-      EquippedWeapon: 1
-      Weapons: 1
       Ammo:
         m_keys: 0000000001000000
         m_values:
         - 40
         - 0
-    _playerHealth: 100
+      EquippedWeapon: 1
+      Weapons: 1
     _playerArmor: 0
+    _playerHealth: 100
+  _saveData:
+    _inventoryData:
+      Ammo:
+        m_keys: 
+        m_values: []
+      EquippedWeapon: 1
+      Weapons: 1
+    _playerArmor: 11
+    _playerHealth: 111
 --- !u!114 &1248142936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,3 +392,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c6caed99334f3f989de1477a482ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1364293885912712569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883707740076942857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1804ec660b85aa4fa0285deca949881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPermanentMarks: 256
+  perDecalLightProbes: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  initError: 0
+  globalMipBias: 0
+  drawHandles: 1
