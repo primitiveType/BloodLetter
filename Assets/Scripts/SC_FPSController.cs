@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class SC_FPSController : MonoBehaviour
@@ -19,6 +20,7 @@ public class SC_FPSController : MonoBehaviour
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+        MyCollider = GetComponent<Collider>();
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -46,15 +48,17 @@ public class SC_FPSController : MonoBehaviour
         var movementDirectionY = moveDirection.y;
         moveDirection = forward * curSpeedX + right * curSpeedY;
 
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        if (Input.GetButton("Jump") && canMove && (characterController.isGrounded || IsGrounded))
             moveDirection.y = jumpSpeed;
         else
             moveDirection.y = movementDirectionY;
 
+
+        Debug.Log(characterController.isGrounded);
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
-        if (!characterController.isGrounded) moveDirection.y -= gravity * Time.deltaTime;
+        if (!characterController.isGrounded && !IsGrounded) moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
@@ -66,6 +70,39 @@ public class SC_FPSController : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(Bottom, OverlapRadius);
+    }
+
+    private Collider[] collisions = new Collider[2];
+    private Collider MyCollider { get; set; }
+    
+    private Vector3 Bottom
+    {
+        get
+        {            var bounds = MyCollider.bounds;
+
+            return new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
+        }
+    }
+
+    private float OverlapRadius => 1f;
+
+    public bool IsGrounded
+    {
+        get
+        {
+            // Gizmos.color = Color.magenta;
+            // Gizmos.DrawWireSphere(bottom, radius);
+            if (Physics.OverlapSphereNonAlloc(Bottom, OverlapRadius, collisions, LayerMask.GetMask("Default")) > 0)
+                return true;
+
+            return false;
         }
     }
 }

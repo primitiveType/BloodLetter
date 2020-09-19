@@ -9,15 +9,15 @@ public class PhysicsDecal : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField] private GameObject particleObject;
-    [SerializeField] private UltimateDecal floorDecal;
-    [SerializeField] private UltimateDecal wallDecal;
+    [SerializeField] private UltimateDecal floorDecalPrefab;
+    [SerializeField] private UltimateDecal wallDecalPrefab;
 
     [SerializeField] private LayerMask CollidesWith;
 
     private void Awake()
     {
-        floorDecal.gameObject.SetActive(false);
-        wallDecal.gameObject.SetActive(false);
+    //     floorDecal.gameObject.SetActive(false);
+    //     wallDecal.gameObject.SetActive(false);
     }
 
     // Start is called before the first frame update
@@ -33,18 +33,18 @@ public class PhysicsDecal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CollidesWith.ContainsLayer(other.gameObject.layer))
+        if (CollidesWith.ContainsLayer(other.gameObject.layer) && !other.isTrigger)
         {
             Destroy(rb);
             GetComponent<Collider>().enabled = false;
-            var decal = floorDecal;
+            var decalPrefab = floorDecalPrefab;
 
             if (IsWall(other))
             {
-                decal = wallDecal;
+                decalPrefab = wallDecalPrefab;
             }
 
-            decal.gameObject.SetActive(true);
+            var decal = Instantiate(decalPrefab, transform);
             particleObject.SetActive(false);
             Transform transform1 = transform;
             transform1.SetParent(other.transform);
@@ -56,26 +56,27 @@ public class PhysicsDecal : MonoBehaviour
 
     private bool IsWall(Collider other)
     {
-        var position = transform.position;
+        var velocityDir = rb.velocity.normalized;
+        var rayPos = transform.position - (velocityDir / 2f);
 
-        var otherPoint = other.ClosestPointOnBounds(position);
-        Debug.Log(otherPoint - position);
-        if (other.Raycast(new Ray(position, (otherPoint - position).normalized),
+        if (other.Raycast(new Ray(rayPos, velocityDir),
             out RaycastHit info, 10f))
         {
             if (info.normal.y > .707f)
             {
                 transform.up = info.normal;
-                Debug.DrawRay(position, otherPoint - position, Color.blue, 10);
+                Debug.DrawRay(rayPos, velocityDir, Color.blue, 10);
                 return false;
             }
-            transform.rotation = Quaternion.LookRotation( Vector3.up, info.normal);//orientation for wall decals so blood drips down
-            Debug.DrawRay(position, otherPoint - position, Color.cyan, 10);
+
+            transform.rotation =
+                Quaternion.LookRotation(Vector3.up, info.normal); //orientation for wall decals so blood drips down
+            Debug.DrawRay(rayPos, velocityDir, Color.cyan, 10);
             return true;
         }
 
         Debug.Log("failed raycast");
-        Debug.DrawRay(position, otherPoint - position, Color.magenta, 10);
+        Debug.DrawRay(rayPos, velocityDir, Color.magenta, 10);
 
         return false;
     }

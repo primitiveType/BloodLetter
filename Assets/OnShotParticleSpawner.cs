@@ -14,6 +14,8 @@ public class OnShotParticleSpawner : MonoBehaviour
         Events.OnShotEvent += OnShot;
     }
 
+    private float Variance = .5f;
+
     private void OnShot(object sender, OnShotEventArgs args)
     {
         if (args.ProjectileInfo.GetDamage().Type.HasFlag(DamageType.Physical))
@@ -25,9 +27,11 @@ public class OnShotParticleSpawner : MonoBehaviour
                 var hitEffect = CreateHitEffect(OnHitPrefab, null);
                 var adjustmentDistance = .1f;
                 hitEffect.transform.position = args.WorldPos + -transform.forward * adjustmentDistance;
+                Vector3 adjustedNormal = args.HitNormal + new Vector3(Random.Range(-Variance, Variance),
+                    Random.Range(-Variance, Variance), Random.Range(-Variance, Variance));
                 Vector3 forceDirection = i % 2 == 0
-                    ? (args.HitNormal * Random.Range(0, force))
-                    : (args.HitNormal * Random.Range(0, -force));
+                    ? (adjustedNormal * Random.Range(0, force))
+                    : (adjustedNormal * Random.Range(0, -force));
                 hitEffect.GetComponent<Rigidbody>()
                     .AddForce(forceDirection + (Vector3.up * Random.Range(1, force/2f)),
                         ForceMode.Impulse);
