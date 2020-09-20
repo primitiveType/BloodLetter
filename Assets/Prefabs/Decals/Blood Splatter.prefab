@@ -225,11 +225,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1090157010}
   Up:
-  - {fileID: 3606305455369747534, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
-  - {fileID: -2259330005413415090, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
-  - {fileID: -1249579364461937331, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: 8757410716175938275, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -686269662542232098, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -5317900856027777816, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
   Down:
-  - {fileID: -2311160652183626158, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -686269662542232098, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -6118908592494165540, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: -6967516074476486206, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
   Sideways:
   - {fileID: -5105528046320137050, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
+  - {fileID: 9153867077686692282, guid: 41404bf45a55fdf4bb201fcdfb168dae, type: 3}
   _rigidbody: {fileID: 1106582660102108151}

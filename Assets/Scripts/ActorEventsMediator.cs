@@ -71,7 +71,11 @@ public class ActorEventsMediator : MonoBehaviour, IActorEvents
 
     public void OnStep()
     {
-        _actorEventsImplementation.OnStep();
+        OnStep(null, null);
+    }
+    public void OnStep(Vector3? lastPosition, Vector3? newPosition)
+    {
+        _actorEventsImplementation.OnStep(lastPosition, newPosition);//fix this later
     }
 
     public void OnAttack()

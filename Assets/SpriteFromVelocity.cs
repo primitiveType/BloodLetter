@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,15 @@ public class SpriteFromVelocity : MonoBehaviour
     [SerializeField] private List<Sprite> Sideways;
     [SerializeField] private Rigidbody _rigidbody;
 
+    private enum Direction
+    {
+        Up,
+        Down,
+        Sideways
+    }
+
+    private Direction currentDirection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +28,37 @@ public class SpriteFromVelocity : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Direction newDirection;
         if (_rigidbody.velocity.normalized.y > .707)
         {
-            spriteRenderer.sprite = Up.Random();
+            newDirection = Direction.Up;
         }
         else if (_rigidbody.velocity.normalized.y < .1) //arbitrary number that feels good
         {
-            spriteRenderer.sprite = Down.Random();
+            newDirection = Direction.Down;
         }
         else
         {
-            spriteRenderer.sprite = Sideways.Random();
+            newDirection = Direction.Sideways;
+        }
+
+        if (newDirection != currentDirection)
+        {
+            currentDirection = newDirection;
+            switch (currentDirection)
+            {
+                case Direction.Up:
+                    spriteRenderer.sprite = Up.Random();
+                    break;
+                case Direction.Down:
+                    spriteRenderer.sprite = Down.Random();
+                    break;
+                case Direction.Sideways:
+                    spriteRenderer.sprite = Sideways.Random();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 }

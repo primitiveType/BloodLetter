@@ -19,7 +19,7 @@ public interface IActorEvents
     /// <param name="projectileInfo"></param>
     void OnShot(IDamageSource projectileInfo, Vector3 worldPos, Vector3 hitNormal);
 
-    void OnStep();
+    void OnStep(Vector3? prevPosition, Vector3? newPosition);
     void OnAttack();
     void OnDeath();
     void OnAggro();

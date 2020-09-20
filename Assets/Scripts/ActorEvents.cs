@@ -25,9 +25,9 @@ public class ActorEvents : MonoBehaviour, IActorEvents
         OnShotEvent?.Invoke(this, new OnShotEventArgs(projectileInfo, worldPos, hitNormal));
     }
 
-    public void OnStep()
+    public void OnStep(Vector3? lastPosition, Vector3? newPosition)
     {
-        OnStepEvent?.Invoke(this, new OnStepEventArgs());
+        OnStepEvent?.Invoke(this, new OnStepEventArgs(lastPosition, newPosition));
     }
 
     public void OnAttack()
