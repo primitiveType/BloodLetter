@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using E7.Introloop;
 using UnityEditor;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviourSingleton<LevelManager>
@@ -36,6 +37,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         //handle saving to disk here, probably
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
+        Debug.Log(Application.companyName);//this is just here to keep a reference to application...
 #else
         Application.Quit();
 #endif

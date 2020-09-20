@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
+  - Emissive_to_baked
   layers:
   - Default
   - TransparentFX
@@ -14,19 +14,19 @@ TagManager:
   - UI
   - 
   - 
-  - Wall
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - PostProcess
+  - Player
+  - EnemyRaycast
+  - Interactable
+  - PlayerProjectile
+  - EnemyProjectile
+  - Pickup
+  - Hazard
+  - Destructible
+  - DeadEnemy
+  - BlockPlayer
+  - Pixelate
   - 
   - 
   - 

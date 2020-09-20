@@ -3,7 +3,7 @@
 public class HeadBob : MonoBehaviour
 {
     public float bobbingAmount = 0.05f;
-    public CharacterController controller;
+    public Rigidbody controller;
 
     private float defaultPosY;
     private float timer;

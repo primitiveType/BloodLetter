@@ -7,6 +7,7 @@ public class PauseMenuUi : MonoBehaviour
 
     public void Pause()
     {
+        isPaused = true;
         menuParent.SetActive(true);
         Time.timeScale = 0;
         CursorLockManager.Instance.Unlock();
@@ -14,6 +15,7 @@ public class PauseMenuUi : MonoBehaviour
 
     public void Unpause()
     {
+        isPaused = false;
         menuParent.SetActive(false);
         Time.timeScale = 1;
         CursorLockManager.Instance.Lock();
