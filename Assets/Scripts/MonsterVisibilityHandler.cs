@@ -67,7 +67,6 @@ public class MonsterVisibilityHandler : MonoBehaviour
             m_CanSeePlayer = hitInfo.transform == TargetCollider;
             if (m_CanSeePlayer)
             {
-                Debug.Log("Can see!");
                 Debug.DrawRay(ray.origin, ray.direction, Color.green, 20);
                 LastSeenPosition = hitInfo.transform.position;
             }

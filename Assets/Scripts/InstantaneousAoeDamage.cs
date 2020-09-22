@@ -43,17 +43,23 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
 
         var colliderMask = LayerMaskExtensions.LayerNumbersToMask(collider.gameObject.layer);
         var mask = colliderMask.AddToMask("Default");
-        if(Physics.Raycast(position, position - collider.transform.position, out RaycastHit info , 10,  mask))
+        var direction = collider.ClosestPoint(position) - position;
+
+        if(Physics.Raycast(position, direction, out RaycastHit info , 10,  mask))
         {
-            if (info.collider != collider)
+            Debug.DrawRay(position, direction, Color.green, 5);
+
+            
+            if (!ThroughWalls && info.collider.gameObject != collider.gameObject)
             {
+                Debug.Log($"{info.collider.name} was in the way of {collider.name} so no damage dealt");
                 return;//something is obstructing the explosion
             }
+            Debug.DrawRay(position, direction, Color.magenta, 5);
         }
         
 
         var damaged = collider.GetComponent<IActorEvents>();
-        var direction = collider.transform.position - transform.position;
 
         if (collider.attachedRigidbody)
         {

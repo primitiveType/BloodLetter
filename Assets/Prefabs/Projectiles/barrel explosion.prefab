@@ -48,7 +48,8 @@ MonoBehaviour:
   DamageAmount: 40
   Duration: 0.1
   Force: 1
-  Radius: 1.25
+  Radius: 2
+  ThroughWalls: 0
 --- !u!135 &5460727409768576122
 SphereCollider:
   m_ObjectHideFlags: 0
