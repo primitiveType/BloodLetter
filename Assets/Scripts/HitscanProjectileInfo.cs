@@ -120,6 +120,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
             //HACK to make player unable to shoot their feet lol
             raycastMask &= ~LayerMask.GetMask("Player");
 
+        raycastMask &= ~LayerMask.GetMask("Ignore Raycast");
         return raycastMask;
     }
 

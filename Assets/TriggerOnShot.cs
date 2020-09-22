@@ -2,23 +2,24 @@
 
 public class TriggerOnShot : MonoBehaviour
 {
-    private static readonly int Trigger = Animator.StringToHash("Trigger");
-    [SerializeField] private Animator Animator;
-    private IActorEvents Events;
-
-    private void Start()
-    {
-        Events = GetComponent<IActorEvents>();
-        Events.OnShotEvent += EventsOnOnShotEvent;
-    }
-
-    private void EventsOnOnShotEvent(object sender, OnShotEventArgs args)
-    {
-        Animator.SetTrigger(Trigger);
-    }
-
-    private void OnDestroy()
-    {
-        Events.OnShotEvent -= EventsOnOnShotEvent;
-    }
+    // private static readonly int HurtTrigger = Animator.StringToHash("Flin");
+    // [SerializeField] private Animator Animator;
+    // private ActorRoot Root;
+    //
+    // private void Start()
+    // {
+    //     Root= GetComponentInParent<ActorRoot>();
+    //     Root.ActorEvents.OnShotEvent += EventsOnOnShotEvent;
+    // }
+    //
+    // private void EventsOnOnShotEvent(object sender, OnShotEventArgs args)
+    // {
+    //     Debug.Log("Was shot");
+    //     Animator.SetTrigger("Hurt");
+    // }
+    //
+    // private void OnDestroy()
+    // {
+    //     Root.ActorEvents.OnShotEvent -= EventsOnOnShotEvent;
+    // }
 }

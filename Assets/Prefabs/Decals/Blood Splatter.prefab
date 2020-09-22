@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1106582660102108151}
   - component: {fileID: 1106582660102108136}
   - component: {fileID: 1106582660102108137}
+  - component: {fileID: -5066420730036903205}
   m_Layer: 2
   m_Name: Blood Splatter
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MonoBehaviour:
   CollidesWith:
     serializedVersion: 2
     m_Bits: 69633
+--- !u!114 &-5066420730036903205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106582660102108148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d0681f7f1d80746a8debf75d83c0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1106582660102108151}
+  force: {x: 0, y: -10, z: 0}
 --- !u!1 &3078503496360788746
 GameObject:
   m_ObjectHideFlags: 0

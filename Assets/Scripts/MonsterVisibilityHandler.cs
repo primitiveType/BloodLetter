@@ -9,6 +9,7 @@ public class MonsterVisibilityHandler : MonoBehaviour
 
     private bool m_CanSeePlayer;
     [SerializeField] private Transform m_monsterTransform;
+    [SerializeField] private Transform m_EyesTransform;
     private Transform Target { get; set; }
 
     public Vector3? LastSeenPosition { get; set; }
@@ -23,6 +24,12 @@ public class MonsterVisibilityHandler : MonoBehaviour
     }
 
     private Transform TargetCollider { get; set; }
+
+    public Transform EyesTransform
+    {
+        get => m_EyesTransform;
+        set => m_EyesTransform = value;
+    }
 
     private void Start()
     {
@@ -50,14 +57,24 @@ public class MonsterVisibilityHandler : MonoBehaviour
         }
 
         //might want to offset monster position so they can see over low walls, etc.
-        var ray = new Ray(MonsterTransform.position, Target.position - MonsterTransform.position);
+        var position = EyesTransform.position;
+        var ray = new Ray(position, Target.position - position);
         Debug.DrawRay(ray.origin, ray.direction, Color.red, 5f);
         if (Physics.Raycast(ray, out var hitInfo, 100,
             LayerMask.GetMask("Player", "Default", "Interactable", "Hazard", "Destructible")))
         {
             // Debug.Log(hitInfo.transform.name);
             m_CanSeePlayer = hitInfo.transform == TargetCollider;
-            if (m_CanSeePlayer) LastSeenPosition = hitInfo.transform.position;
+            if (m_CanSeePlayer)
+            {
+                Debug.Log("Can see!");
+                Debug.DrawRay(ray.origin, ray.direction, Color.green, 20);
+                LastSeenPosition = hitInfo.transform.position;
+            }
+            else
+            {
+                Debug.DrawRay(ray.origin, ray.direction, Color.grey, 20);
+            }
 
             return m_CanSeePlayer;
         }

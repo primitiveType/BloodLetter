@@ -11,6 +11,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
 
     private readonly List<Collider> hitObjects = new List<Collider>();
     [SerializeField] private float Radius;
+    [SerializeField] private bool ThroughWalls = true;
 
     private float startTime;
 
@@ -29,21 +30,37 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
         var overlapObjects = Physics.OverlapSphere(position, Radius, ~LayerMask.NameToLayer("Default"));
         foreach (var collider in overlapObjects)
         {
-            if (hitObjects.Contains(collider)) continue;
-
-            hitObjects.Add(collider);
-
-            Debug.Log($"hit {collider.name}");
-            var damaged = collider.GetComponent<IActorEvents>();
-            var direction = collider.transform.position - transform.position;
-
-            if (collider.attachedRigidbody)
-            {
-                collider.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
-            }
-
-            damaged?.OnShot(this, collider.ClosestPoint(position), direction);
+            TryHit(collider);
         }
+    }
+
+    private void TryHit(Collider collider)
+    {
+        if (hitObjects.Contains(collider)) return;
+        hitObjects.Add(collider);        
+        var position = transform.position;
+
+
+        var colliderMask = LayerMaskExtensions.LayerNumbersToMask(collider.gameObject.layer);
+        var mask = colliderMask.AddToMask("Default");
+        if(Physics.Raycast(position, position - collider.transform.position, out RaycastHit info , 10,  mask))
+        {
+            if (info.collider != collider)
+            {
+                return;//something is obstructing the explosion
+            }
+        }
+        
+
+        var damaged = collider.GetComponent<IActorEvents>();
+        var direction = collider.transform.position - transform.position;
+
+        if (collider.attachedRigidbody)
+        {
+            collider.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
+        }
+
+        damaged?.OnShot(this, collider.ClosestPoint(position), direction);
     }
 
     private void Update()
@@ -53,21 +70,9 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!enabled || hitObjects.Contains(other)) return;
+        if (!enabled) return;
 
-        hitObjects.Add(other);
-
-        Debug.Log($"hit {other.name}");
-        var damaged = other.GetComponentInChildren<IActorEvents>();
-        var position = transform.position;
-        var direction = other.transform.position - position;
-
-        if (other.attachedRigidbody)
-        {
-            other.attachedRigidbody.AddForce(direction * Force, ForceMode.Impulse);
-        }
-
-        damaged?.OnShot(this, other.ClosestPoint(position), direction);
+        TryHit(other);
     }
 
     private void OnDrawGizmos()

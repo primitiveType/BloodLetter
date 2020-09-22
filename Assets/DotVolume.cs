@@ -69,6 +69,8 @@ public class DotVolume : MonoBehaviour, IDamageSource
     private bool IsDirectlyAbove(Collider other)
     {
         Physics.Raycast(other.transform.position, Vector3.down, out var hit, LayerMask.GetMask("Default", "Hazard"));
+        if (hit.collider == null)
+            return false;
         if (hit.collider.gameObject == gameObject) return true;
 
         return false;

@@ -79,7 +79,7 @@ public class ChangeShaderIndex : MonoBehaviour
         var position = transform.position;
         var myPosition = new Vector3(position.x, 0, position.z);
         var camDirection = Vector3.Normalize(myPosition - camPosition);
-        Debug.DrawLine(position, position + camDirection);
+        //Debug.DrawLine(position, position + camDirection);
         // Debug.Log("CamDirection" + camDirection);
 
         // Debug.Log(camDirection);

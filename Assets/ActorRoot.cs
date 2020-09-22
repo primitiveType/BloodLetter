@@ -22,6 +22,7 @@ public class ActorRoot : MonoBehaviour
 
     public virtual EntityType EntityType => EntityType.Enemy;
     public INavigationAgent Navigation { get; set; }
+    public FlinchComponent Flinch { get; set; }
 
 
     private void Awake()
@@ -35,6 +36,7 @@ public class ActorRoot : MonoBehaviour
         Health = GetComponentInChildren<ActorHealth>();
         Armor = GetComponentInChildren<ActorArmor>();
         Navigation = GetComponentInChildren<INavigationAgent>();
+        Flinch = GetComponentInChildren<FlinchComponent>();
     }
 
     // Update is called once per frame

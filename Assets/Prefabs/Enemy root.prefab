@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _degreesVisibility: 180
   m_monsterTransform: {fileID: 8171493255443565341}
+  m_EyesTransform: {fileID: 1719011904598006074}
 --- !u!114 &7486875836196438498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   root: {fileID: 3843004849081189840}
   indexChanger: {fileID: 8171493255443565343}
+  index: 0
 --- !u!1 &8171493255988436123
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +532,7 @@ GameObject:
   - component: {fileID: 4212321718403499482}
   - component: {fileID: 3720509687200873003}
   - component: {fileID: 7559552615466640902}
+  - component: {fileID: 485600730842453200}
   m_Layer: 11
   m_Name: graphic
   m_TagString: Untagged
@@ -691,3 +694,19 @@ MonoBehaviour:
   Events: {fileID: 6510712830491665609}
   OnHitPrefab: {fileID: 1106582660102108148, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
     type: 3}
+--- !u!114 &485600730842453200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228839469965635381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ad9ab7a1004a7983d5da1ecf292e39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageRequired: 1
+  TimeToReset: 1
+  Animator: {fileID: 1105345834222380861}
+  FlinchDuration: 0.65

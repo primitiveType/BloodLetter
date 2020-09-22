@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -13,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     private Coroutine AttackRoutine;
     private readonly float attackTime = .5f;
 
+    //Set up flinch component and reference here?
 
     private bool isAttacking;
 
@@ -57,6 +59,7 @@ public class EnemyMovement : MonoBehaviour
         Toolbox.Instance.AddEnemy(Health);
     }
 
+
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)
     {
         gameObject.layer = LayerMask.NameToLayer("DeadEnemy");
@@ -91,12 +94,13 @@ public class EnemyMovement : MonoBehaviour
         {
             Agent.SetDestination(Target.position);
 
-            Agent.isStopped = !IsAggro || isAttacking;
+            Agent.isStopped = !IsAggro || isAttacking || ActorRoot.Flinch.IsFlinching;
         }
 
 
         UpdateAnimationStates();
     }
+
 
     private void UpdateAnimationStates()
     {

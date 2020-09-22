@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1168777955
 Transform:
   m_ObjectHideFlags: 0
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa35ae5173284bf39b1d535908c249bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RaycastDistance: 5
   NumRaysPerAxis: 5
+  RaycastDistance: 5
 --- !u!114 &1168777956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,12 +58,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07222ed8e3ed02a4487de3f15d895868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxRotationSpeed: 1000
-  BreakDistance: 10
-  AimForBreakDistance: 1
-  MaxAcceleration: 0.1
-  myTransform: {fileID: 7361890597492146673}
   _maxSpeed: 50
+  AimForBreakDistance: 1
+  BreakDistance: 10
+  MaxAcceleration: 0.1
+  MaxRotationSpeed: 1000
+  myTransform: {fileID: 7361890597492146673}
 --- !u!135 &7778312746031944532
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7361890597492146672}
-  m_Material: {fileID: 13400000, guid: 05fee89d8de8cb143b63c0ba9c1cfb2f, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -102,38 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172a598f250cdbc4f8e890cab638e437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2552845680951995274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361890597492146672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa35ae5173284bf39b1d535908c249bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RaycastDistance: 5
-  NumRaysPerAxis: 5
---- !u!114 &6835221132979595863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361890597492146672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07222ed8e3ed02a4487de3f15d895868, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxRotationSpeed: 1000
-  BreakDistance: 10
-  AimForBreakDistance: 1
-  MaxAcceleration: 0.1
-  myTransform: {fileID: 7361890597492146673}
-  _maxSpeed: 50
 --- !u!1001 &1678797764554132204
 PrefabInstance:
   m_ObjectHideFlags: 0
