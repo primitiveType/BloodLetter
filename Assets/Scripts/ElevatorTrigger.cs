@@ -6,6 +6,7 @@ public class ElevatorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Elevator.Trigger();
+        if (other.gameObject.layer ==LayerMask.NameToLayer("Player"))
+            Elevator.Trigger();
     }
 }

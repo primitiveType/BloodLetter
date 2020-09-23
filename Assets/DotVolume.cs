@@ -79,7 +79,7 @@ public class DotVolume : MonoBehaviour, IDamageSource
     private bool IsGroundedOn(Collider other)
     {
         var bounds = other.bounds;
-        var origin = new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
+        var origin = new Vector3(bounds.center.x, bounds.center.y, bounds.center.z);
         ;
         Physics.Raycast(origin, Vector3.down, out var hit, LayerMask.GetMask("Default", "Hazard"));
         if (hit.collider.gameObject != gameObject) return false;

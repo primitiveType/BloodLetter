@@ -11,6 +11,8 @@ public class Elevator : MonoBehaviour
     [FormerlySerializedAs("rigidbody")] [SerializeField]
     private Transform elevator;
 
+    private Rigidbody rb;
+
     [FormerlySerializedAs("TopTarget")] [SerializeField]
     private Transform EndTarget;
 
@@ -25,6 +27,7 @@ public class Elevator : MonoBehaviour
     private void Start()
     {
         audiosource = GetComponent<AudioSource>();
+        rb = elevator.GetComponent<Rigidbody>();
     }
 
     private void OnDrawGizmos()
@@ -35,24 +38,30 @@ public class Elevator : MonoBehaviour
 
     private IEnumerator Move(Transform target)
     {
+        yield return new WaitForFixedUpdate();
+
         var start = elevator.transform.position;
         // Vector3 start = transform.position;
         var targetPosition = target.position;
         var distance = Vector3.Distance(start, targetPosition);
         float t = 0;
-
-        yield return null;
+        var direction = (targetPosition - start).normalized;
+        var targetVelocity = direction * speed;
+        var approxTotalTime = distance / speed;
+        Debug.Log(approxTotalTime);
         while (t < 1f)
         {
+            yield return new WaitForFixedUpdate();
             var currentTarget = Vector3.Lerp(start, targetPosition, t);
-            elevator.transform.position = currentTarget;
-            // rigidbody.MovePosition(currentTarget);
-            yield return null;
-            t += Time.deltaTime / (distance / speed);
+            // rb.velocity = targetVelocity;
+            rb.MovePosition(currentTarget);
+            t += Time.fixedDeltaTime /approxTotalTime ;
         }
 
-        elevator.transform.position = targetPosition;
-
+        //elevator.transform.position = targetPosition;
+        rb.MovePosition(targetPosition);
+        rb.velocity = Vector3.zero;
+        
         // rigidbody.position = targetPosition;
     }
 
