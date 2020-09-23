@@ -9,34 +9,34 @@ public class Elevator : MonoBehaviour
     [SerializeField] private float delay = 2f;
 
     [FormerlySerializedAs("rigidbody")] [SerializeField]
-    private Transform elevator;
+    protected Transform elevator;
 
-    private Rigidbody rb;
+    protected Rigidbody rb;
 
     [FormerlySerializedAs("TopTarget")] [SerializeField]
-    private Transform EndTarget;
+    protected Transform EndTarget;
 
-    private Coroutine MoveCR;
-    [SerializeField] private float predelay;
-    [SerializeField] private bool returns = true;
+    protected Coroutine MoveCR;
+    [SerializeField] protected float predelay;
+    [SerializeField] protected bool returns = true;
     public float speed;
 
     [FormerlySerializedAs("BottomTarget")] [SerializeField]
-    private Transform StartTarget;
+    protected Transform StartTarget;
 
-    private void Start()
+    protected virtual void Start()
     {
         audiosource = GetComponent<AudioSource>();
         rb = elevator.GetComponent<Rigidbody>();
     }
 
-    private void OnDrawGizmos()
+    protected virtual void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(elevator.position, .5f);
         Gizmos.DrawLine(StartTarget.transform.position, EndTarget.transform.position);
     }
 
-    private IEnumerator Move(Transform target)
+    protected virtual IEnumerator Move(Transform target)
     {
         yield return new WaitForFixedUpdate();
 
@@ -96,7 +96,7 @@ public class Elevator : MonoBehaviour
         EnableAudio(false);
     }
 
-    private void EnableAudio(bool value)
+    protected void EnableAudio(bool value)
     {
         if (audiosource)
         {

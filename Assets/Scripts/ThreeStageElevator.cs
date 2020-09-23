@@ -3,61 +3,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ThreeStageElevator : MonoBehaviour
+public class ThreeStageElevator : Elevator
 {
-    private AudioSource audiosource;
-
-    [FormerlySerializedAs("rigidbody")] [SerializeField]
-    private Transform elevator;
-
-    [SerializeField] private Transform EndTarget;
     [SerializeField] private InteractableKey Key;
     [SerializeField] private Transform MiddleTarget;
 
-    private Coroutine MoveCR;
-
-    [SerializeField] private float predelay;
-
-    public float speed;
-
-    [SerializeField] private Transform StartTarget;
-
-    private void Start()
+    protected override void Start()
     {
-        audiosource = GetComponent<AudioSource>();
+        base.Start();
         ThreeStageElevatorIdService.Instance.RegisterInteractable(this, Key);
     }
 
-    private void OnDrawGizmos()
-    {
-        var color = Gizmos.color;
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(elevator.position, .5f);
-        Gizmos.DrawLine(StartTarget.transform.position, MiddleTarget.transform.position);
-        Gizmos.color = Color.gray;
-        Gizmos.DrawLine(MiddleTarget.transform.position, EndTarget.transform.position);
-        Gizmos.color = Gizmos.color;
-    }
-
-    private IEnumerator Move(Transform target)
-    {
-        var start = elevator.transform.position;
-        // Vector3 start = transform.position;
-        var targetPosition = target.position;
-        var distance = Vector3.Distance(start, targetPosition);
-        float t = 0;
-
-        yield return new WaitForFixedUpdate();
-        while (t < 1f)
-        {
-            var currentTarget = Vector3.Lerp(start, targetPosition, t);
-            elevator.transform.position = currentTarget;
-            yield return new WaitForFixedUpdate();
-            t += Time.deltaTime / (distance / speed);
-        }
-
-        elevator.transform.position = targetPosition;
-    }
 
     private void MoveToTransform(Transform target)
     {
@@ -70,10 +26,6 @@ public class ThreeStageElevator : MonoBehaviour
         MoveCR = StartCoroutine(TriggerCr(target));
     }
 
-    public void MoveToStart()
-    {
-        MoveToTransform(StartTarget);
-    }
 
     public void MoveTo(ElevatorState state)
     {
@@ -93,6 +45,10 @@ public class ThreeStageElevator : MonoBehaviour
         }
     }
 
+    public void MoveToStart()
+    {
+        MoveToTransform(StartTarget);
+    }
 
     public void MoveToMiddle()
     {
@@ -115,15 +71,14 @@ public class ThreeStageElevator : MonoBehaviour
         EnableAudio(false);
     }
 
-    private void EnableAudio(bool value)
+    protected override void OnDrawGizmos()
     {
-        if (audiosource)
-        {
-            audiosource.enabled = value;
-            if (value && !audiosource.isPlaying)
-            {
-                audiosource.Play();
-            }
-        }
+        var color = Gizmos.color;
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(elevator.position, .5f);
+        Gizmos.DrawLine(StartTarget.transform.position, MiddleTarget.transform.position);
+        Gizmos.color = Color.gray;
+        Gizmos.DrawLine(MiddleTarget.transform.position, EndTarget.transform.position);
+        Gizmos.color = color;
     }
 }

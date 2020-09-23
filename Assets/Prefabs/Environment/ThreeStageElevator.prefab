@@ -55,7 +55,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5858858712492501215}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -78,13 +78,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e60d7d928e4505b2563a8b38c7b2dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 0
+  delay: 2
+  elevator: {fileID: 5858858713013660794}
+  EndTarget: {fileID: 5858858713579173802}
+  predelay: 0
+  returns: 1
   speed: 10
   StartTarget: {fileID: 5858858712193442912}
-  EndTarget: {fileID: 5858858713579173802}
+  Key: 0
   MiddleTarget: {fileID: 5858858713925973149}
-  elevator: {fileID: 5858858713013660794}
-  predelay: 0
 --- !u!82 &4543632503759830064
 AudioSource:
   m_ObjectHideFlags: 0
@@ -505,7 +507,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &5858858713013660795
@@ -517,6 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5858858713013660794}
+  - component: {fileID: 1729830294}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -539,6 +542,22 @@ Transform:
   m_Father: {fileID: 5858858712492501214}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1729830294
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858858713013660795}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5858858713579173803
 GameObject:
   m_ObjectHideFlags: 0
