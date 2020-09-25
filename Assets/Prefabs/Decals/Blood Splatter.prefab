@@ -45,12 +45,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.25
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!135 &1106582660102108136
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -59,10 +59,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106582660102108148}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1106582660102108137
 MonoBehaviour:
@@ -77,9 +77,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleObject: {fileID: 3078503496360788746}
-  floorDecalPrefab: {fileID: 3230963904760386634, guid: a79b6e36bc247304496f4a61d999d641,
+  floorDecalPrefab: {fileID: 3230963904760386635, guid: a79b6e36bc247304496f4a61d999d641,
     type: 3}
-  wallDecalPrefab: {fileID: 8777132153264916153, guid: cd95d582e3a201048b821e4e1368aa15,
+  wallDecalPrefab: {fileID: 8777132153264916154, guid: cd95d582e3a201048b821e4e1368aa15,
     type: 3}
   CollidesWith:
     serializedVersion: 2
@@ -122,7 +122,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3078503496360788746}
-  m_LocalRotation: {x: -0.0065380093, y: 0.5496386, z: -0.009936195, w: -0.83531785}
+  m_LocalRotation: {x: 0.0033286975, y: -0.27984235, z: -0.0114187775, w: -0.9599723}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

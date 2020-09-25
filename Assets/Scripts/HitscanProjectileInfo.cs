@@ -48,7 +48,6 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     {
         var ray = new Ray(ownerPosition, ownerDirection * Range);
         Debug.DrawRay(ownerPosition, ownerDirection * Range, Color.blue, 10);
-        Debug.Log(actorRoot);
         var layerToCheckForDamage = GetLayerToCheckForDamage(actorRoot.EntityType);
 
         var raycastMask = GetRaycastMask(actorRoot.EntityType);
@@ -59,7 +58,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         var maxChecks = 10;
         var checks = 0;
         while (!isDone)
-            if (Physics.Raycast(ray, out hit, Range, raycastMask, QueryTriggerInteraction.Collide))
+            if (Physics.Raycast(ray, out hit, Range, raycastMask, QueryTriggerInteraction.Ignore))
             {
                 var potentialHit = false;
                 checks++;
@@ -71,7 +70,11 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     var hitCoord = hit.textureCoord;
                     var damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
                     if (damaged != null && damaged != actorRoot.HitscanCollider && damaged.IsHit(hitCoord))
+                    {
+                        
+                        Debug.Log($"{actorRoot} hit {damaged}");
                         return damaged;
+                    }
                 }
 
                 //if we got here, the raycast was not considered a hit on something that can be damaged.

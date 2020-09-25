@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: bulletHole decal
-  m_Shader: {fileID: 4800000, guid: edf91f91fc48be2419b7c1584af1c68e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7584a43f3d3459d4a95737af6348bd56, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _ALPHATEST_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -107,7 +107,7 @@ Material:
     - _AlphaClip: 1
     - _AngleLimit: 89
     - _AngleSmoothing: 0.311
-    - _Blend: 0
+    - _Blend: 1
     - _BlendOp: 0
     - _BumpScale: 1
     - _CameraFadingEnabled: 0
@@ -121,7 +121,7 @@ Material:
     - _DistortionEnabled: 0
     - _DistortionStrength: 1
     - _DistortionStrengthScaled: 0.1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EnableExternalAlpha: 0
     - _EnvironmentReflections: 1
     - _FlipbookBlending: 0
@@ -132,17 +132,17 @@ Material:
     - _Lifetime: 0
     - _LifetimePow: 1
     - _MaskSmoothing: 0
-    - _MaskThreshold: 0.999
+    - _MaskThreshold: 0.991
     - _Metallic: 0
     - _MipBias: -10
     - _Mode: 0
-    - _NormalScale: 0.248
+    - _NormalScale: 0.84
     - _NormalSmooth: 0.538
     - _Occlusion: 0
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SM: 0.833
+    - _SM: 0
     - _SR: 0
     - _Smoothness: 0.5
     - _SmoothnessSource: 0
@@ -151,7 +151,7 @@ Material:
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _StencilMask: 8
     - _StencilMode: 1
     - _StencilRef: 0
@@ -174,7 +174,7 @@ Material:
     - _ScaleOffset: {r: 1, g: 1, b: 0, a: 0}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Workflow: {r: 1, g: 1, b: 0, a: 0}
+    - _Workflow: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &3783200988660406082
 MonoBehaviour:
   m_ObjectHideFlags: 11

@@ -47,7 +47,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
 
         if(Physics.Raycast(position, direction, out RaycastHit info , 10,  mask))
         {
-            Debug.DrawRay(position, direction, Color.green, 5);
+            //Debug.DrawRay(position, direction, Color.green, 5);
 
             
             if (!ThroughWalls && info.collider.gameObject != collider.gameObject)
@@ -55,7 +55,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
                 Debug.Log($"{info.collider.name} was in the way of {collider.name} so no damage dealt");
                 return;//something is obstructing the explosion
             }
-            Debug.DrawRay(position, direction, Color.magenta, 5);
+            //Debug.DrawRay(position, direction, Color.magenta, 5);
         }
         
 

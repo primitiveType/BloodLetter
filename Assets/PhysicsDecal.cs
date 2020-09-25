@@ -9,15 +9,18 @@ public class PhysicsDecal : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField] private GameObject particleObject;
-    [SerializeField] private UltimateDecal floorDecalPrefab;
-    [SerializeField] private UltimateDecal wallDecalPrefab;
+    [SerializeField] private GameObject floorDecalPrefab;
+    [SerializeField] private GameObject wallDecalPrefab;
 
     [SerializeField] private LayerMask CollidesWith;
 
+    private Vector3 previousPosition;
+    private Vector3 rbPosition;
+
     private void Awake()
     {
-    //     floorDecal.gameObject.SetActive(false);
-    //     wallDecal.gameObject.SetActive(false);
+        //     floorDecal.gameObject.SetActive(false);
+        //     wallDecal.gameObject.SetActive(false);
     }
 
     // Start is called before the first frame update
@@ -27,19 +30,22 @@ public class PhysicsDecal : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        previousPosition = rbPosition;
+        rbPosition = rb.position;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (CollidesWith.ContainsLayer(other.gameObject.layer) && !other.isTrigger)
+        if (CollidesWith.ContainsLayer(other.gameObject.layer) && !other.collider.isTrigger)
         {
             Destroy(rb);
+            enabled = false;
             GetComponent<Collider>().enabled = false;
             var decalPrefab = floorDecalPrefab;
 
-            if (IsWall(other))
+            if (IsWall(other.GetContact(0)))
             {
                 decalPrefab = wallDecalPrefab;
             }
@@ -54,30 +60,72 @@ public class PhysicsDecal : MonoBehaviour
         }
     }
 
-    private bool IsWall(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        var velocityDir = rb.velocity.normalized;
-        var rayPos = transform.position - (velocityDir / 2f);
+        //
+        // if (CollidesWith.ContainsLayer(other.gameObject.layer) && !other.isTrigger)
+        // {
+        //     Destroy(rb);
+        //     enabled = false;
+        //     GetComponent<Collider>().enabled = false;
+        //     var decalPrefab = floorDecalPrefab;
+        //
+        //     if (IsWall(other.))
+        //     {
+        //         decalPrefab = wallDecalPrefab;
+        //     }
+        //
+        //     var decal = Instantiate(decalPrefab, transform);
+        //     particleObject.SetActive(false);
+        //     Transform transform1 = transform;
+        //     transform1.SetParent(other.transform);
+        //
+        //     // var position = transform1.position;
+        //     // transform1.up = -rb.velocity;
+        // }
+    }
 
-        if (other.Raycast(new Ray(rayPos, velocityDir),
-            out RaycastHit info, 10f))
+    private bool IsWall(ContactPoint other)
+    {
+        var velocityDir = (rb.position - previousPosition).normalized * .5f; // rb.velocity.normalized;
+        var rayPos = previousPosition; //transform.position - (velocityDir / 2f);
+
+        var normal = other.normal;
+        var point = other.point;
+
+        if (normal.y > .707f)
         {
-            if (info.normal.y > .707f)
-            {
-                transform.up = info.normal;
-                Debug.DrawRay(rayPos, velocityDir, Color.blue, 10);
-                return false;
-            }
-
-            transform.rotation =
-                Quaternion.LookRotation(Vector3.up, info.normal); //orientation for wall decals so blood drips down
-            Debug.DrawRay(rayPos, velocityDir, Color.cyan, 10);
-            return true;
+            transform.up = normal;
+            Debug.DrawRay(rayPos, velocityDir, Color.blue, 10);
+            return false;
         }
 
-        Debug.Log("failed raycast");
-        Debug.DrawRay(rayPos, velocityDir, Color.magenta, 10);
 
-        return false;
+        transform.rotation =
+            Quaternion.LookRotation(Vector3.up, normal); //orientation for wall decals so blood drips down
+        Debug.DrawRay(rayPos, velocityDir, Color.cyan, 10);
+        return true;
+        // Debug.Log($"{previousPosition}, {rb.position}");
+        // if (other.Raycast(new Ray(rayPos, velocityDir),
+        //     out RaycastHit info, 10f))
+        // {
+        //     transform.position = info.point;
+        //     if (info.normal.y > .707f)
+        //     {
+        //         transform.up = info.normal;
+        //        Debug.DrawRay(rayPos, velocityDir, Color.blue, 10);
+        //         return false;
+        //     }
+        //
+        //     transform.rotation =
+        //         Quaternion.LookRotation(Vector3.up, info.normal); //orientation for wall decals so blood drips down
+        //    Debug.DrawRay(rayPos, velocityDir, Color.cyan, 10);
+        //     return true;
+        // }
+        //
+        // Debug.Log("failed raycast");
+        // Debug.DrawRay(rayPos, velocityDir, Color.magenta, 10);
+        //
+        // return false;
     }
 }

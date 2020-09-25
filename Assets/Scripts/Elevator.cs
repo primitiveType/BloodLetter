@@ -48,7 +48,6 @@ public class Elevator : MonoBehaviour
         var direction = (targetPosition - start).normalized;
         var targetVelocity = direction * speed;
         var approxTotalTime = distance / speed;
-        Debug.Log(approxTotalTime);
         while (t < 1f)
         {
             yield return new WaitForFixedUpdate();
