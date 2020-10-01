@@ -255,7 +255,6 @@ GameObject:
   - component: {fileID: 5883707740076942856}
   - component: {fileID: 5883707740076942862}
   - component: {fileID: 5883707740076942861}
-  - component: {fileID: 5883707740076942860}
   - component: {fileID: 5883707740076942851}
   - component: {fileID: 1763675026}
   - component: {fileID: 1248142936}
@@ -318,24 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56238c15308799d458fbd9c108da4ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5883707740076942860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5883707740076942857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43bcf2dad297c9c4eabdfbc19feee898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj:
-  - {fileID: 11400000, guid: 9bf213797b0b56a4f9ab086804d8efbf, type: 2}
-  - {fileID: 11400000, guid: 36b7ce5816766a24a8464f22820653b8, type: 2}
-  - {fileID: 11400000, guid: a408f88d0907ee948acd7eb9bbfa94ac, type: 2}
-  - {fileID: 11400000, guid: 9f852a8c60dc8a84bb282d2accaf8912, type: 2}
-  - {fileID: 11400000, guid: 631c255ac6520a64b89493efc160fb58, type: 2}
 --- !u!114 &5883707740076942851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +390,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  initError: 0
+  initError: 3
   globalMipBias: 0
   drawHandles: 1

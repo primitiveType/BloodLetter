@@ -1,8 +1,9 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
-[ExecuteAlways]
+//[ExecuteAlways]
 public class AnimationMaterialHelper : MonoBehaviour
 {
     private static readonly int Alpha = Shader.PropertyToID("Alpha");
@@ -67,36 +68,48 @@ public class AnimationMaterialHelper : MonoBehaviour
         }
     }
 
-    public void AnimationStarted(string animationName)
+    public async void AnimationStarted(string animationName)
     {
         if (animationName != CurrentAnimation)
         {
-            CurrentAnimation = animationName;
-            // Debug.Log($"{animationName} started!");
             var block = new MaterialPropertyBlock();
-            MyRenderer.GetPropertyBlock(block);
-            _dictionary.GetPropertyBlock(block, animationName);
 
-            MyRenderer.SetPropertyBlock(block);
-            var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
-
-            var width = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameWidthProperty) /
-                        pxPerMeter;
-            var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
-                         pxPerMeter;
-            var offset = height / 2f - height * block.GetFloat(AnimationMaterialPropertyBlock.GroundPositionProperty);
-            if (resize)
-                anchorTransform.localScale =
-                    new Vector3(width, height, 1);
-
-            if (reposition)
+            await SetPropertyBlockAsync();
+            
+            
+            async Task SetPropertyBlockAsync()
             {
-                if (anchorTransformCollider) yFudge = anchorTransformCollider.bounds.size.y / 2f;
+                CurrentAnimation = animationName;
 
-                anchorTransform.localPosition = new Vector3(0, offset, 0);
+                MyRenderer.GetPropertyBlock(block);
+                block = await _dictionary.GetPropertyBlock(block, animationName);
+
+        
+                MyRenderer.SetPropertyBlock(block);
+                var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
+
+                var width = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameWidthProperty) /
+                            pxPerMeter;
+                var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
+                             pxPerMeter;
+                var offset = height / 2f - height * block.GetFloat(AnimationMaterialPropertyBlock.GroundPositionProperty);
+                if (resize)
+                    anchorTransform.localScale =
+                        new Vector3(width, height, 1);
+
+                if (reposition)
+                {
+                    if (anchorTransformCollider) yFudge = anchorTransformCollider.bounds.size.y / 2f;
+
+                    anchorTransform.localPosition = new Vector3(0, offset, 0);
+                }
             }
         }
+        
+        
     }
+
+    
 
     /// <summary>
     ///     returns true if the coordinate is alpha > .5f for the current anim frame

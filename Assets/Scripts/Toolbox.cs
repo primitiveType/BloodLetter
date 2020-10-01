@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class Toolbox : MonoBehaviourSingleton<Toolbox>
 {
@@ -26,7 +29,15 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
         DontDestroyOnLoad(this);
         LevelManager.Instance.LevelBegin += OnLevelBegin;
         LevelManager.Instance.LevelEnd += OnLevelEnd;
+        TaskScheduler.UnobservedTaskException -= TaskSchedulerOnUnobservedTaskException;
+        TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
     }
+
+    private void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
+    {
+        Debug.LogError($"Caught exception in unobserved task : {e.Exception.InnerException.Message}");
+    }
+
 
     private void OnLevelEnd(object sender, LevelEndEventArgs args)
     {
@@ -59,6 +70,7 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     {
         LevelManager.Instance.LevelBegin -= OnLevelBegin;
         LevelManager.Instance.LevelEnd -= OnLevelEnd;
+        TaskScheduler.UnobservedTaskException -= TaskSchedulerOnUnobservedTaskException;
     }
 
     private void PlayerEventsOnOnDeathEvent(object sender, OnDeathEventArgs args)

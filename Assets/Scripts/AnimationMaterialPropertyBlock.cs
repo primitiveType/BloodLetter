@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 [Serializable]
 public class AnimationMaterialPropertyBlock
@@ -13,12 +17,20 @@ public class AnimationMaterialPropertyBlock
     public static readonly int TexturesProperty = Shader.PropertyToID("Textures");
     public static readonly int AlphaProperty = Shader.PropertyToID("Alpha");
     public static readonly int NormalsProperty = Shader.PropertyToID("Normals");
-    [SerializeField] private Texture alphaMap;
+    private const string AlphaSuffix = "_Alpha_Array";
+    private const string DiffuseSuffix = "_FrameBuffer_Array";
+
+    private const string NormalSuffix = "_Normal_Array";
+
+    // [SerializeField] private Texture alphaMap;
     [SerializeField] private string animationName;
+
     [SerializeField] private int columns;
-    [SerializeField] private Texture diffuseMap;
+
+    // [SerializeField] private Texture diffuseMap;
     [SerializeField] private float normalizedGroundPosition;
-    [SerializeField] private Texture normalMap;
+
+    // [SerializeField] private Texture normalMap;
     [SerializeField] private int numFrames;
     [SerializeField] private int rows;
 
@@ -52,36 +64,65 @@ public class AnimationMaterialPropertyBlock
         set => normalizedGroundPosition = value;
     }
 
-    public Texture NormalMap
-    {
-        get => normalMap;
-        set => normalMap = value;
-    }
+    private const string prefix = "Assets/SpriteOutputs/Enemies/HARPY_breastsExposed_LEGACY/";
 
-    public Texture DiffuseMap
-    {
-        get => diffuseMap;
-        set => diffuseMap = value;
-    }
+    public AsyncOperationHandle<Texture> GetNormalMap() =>
+        Addressables.LoadAssetAsync<Texture>( AnimationName + NormalSuffix);
 
-    public Texture AlphaMap
-    {
-        get => alphaMap;
-        set => alphaMap = value;
-    }
 
-    public MaterialPropertyBlock GetMaterialPropertyBlock(MaterialPropertyBlock block)
+    public AsyncOperationHandle<Texture> GetDiffuseMap() =>
+        Addressables.LoadAssetAsync<Texture>( AnimationName + DiffuseSuffix);
+
+    public AsyncOperationHandle<Texture> GetAlphaMap() =>
+        Addressables.LoadAssetAsync<Texture>( AnimationName + AlphaSuffix);
+
+
+    // public MaterialPropertyBlock GetMaterialPropertyBlock(MaterialPropertyBlock block)
+    // {
+    //     block.SetInt(RowsProperty, Rows);
+    //     block.SetInt(ColumnsProperty, Columns);
+    //     block.SetInt(NumFramesProperty, NumFrames);
+    //     if (NormalMap != null) block.SetTexture(NormalsProperty, NormalMap);
+    //
+    //     block.SetFloat(GroundPositionProperty, NormalizedGroundPosition);
+    //     block.SetTexture(AlphaProperty, AlphaMap);
+    //     block.SetTexture(TexturesProperty, DiffuseMap);
+    //     block.SetInt(FrameWidthProperty, diffuseMap.width / columns);
+    //     block.SetInt(FrameHeightProperty, diffuseMap.height / rows);
+    //     return block;
+    // }
+    public async Task<MaterialPropertyBlock> GetMaterialPropertyBlock(MaterialPropertyBlock block)
     {
+        var normalMapTask = GetNormalMap().Task;
+        var alphaMapTask = GetAlphaMap().Task;
+        var diffuseMapTask = GetDiffuseMap().Task;
+
+
         block.SetInt(RowsProperty, Rows);
         block.SetInt(ColumnsProperty, Columns);
         block.SetInt(NumFramesProperty, NumFrames);
-        if (NormalMap != null) block.SetTexture(NormalsProperty, NormalMap);
 
         block.SetFloat(GroundPositionProperty, NormalizedGroundPosition);
-        block.SetTexture(AlphaProperty, AlphaMap);
-        block.SetTexture(TexturesProperty, DiffuseMap);
+
+        await Task.WhenAll(new List<Task>
+        {
+            normalMapTask, alphaMapTask, diffuseMapTask
+        });
+
+
+        var normalMap = normalMapTask.Result;
+        var diffuseMap = diffuseMapTask.Result;
+        var alphaMap = alphaMapTask.Result;
+        if (normalMap != null) block.SetTexture(NormalsProperty, normalMap);
+        if (alphaMap != null) block.SetTexture(AlphaProperty, alphaMap);
+        if (diffuseMap != null) block.SetTexture(TexturesProperty, diffuseMap);
+        else
+        {
+            Debug.Log($"diffuse map null for {animationName}");
+        }
         block.SetInt(FrameWidthProperty, diffuseMap.width / columns);
         block.SetInt(FrameHeightProperty, diffuseMap.height / rows);
+
         return block;
     }
 }
