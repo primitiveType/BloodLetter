@@ -2,6 +2,7 @@
 using E7.Introloop;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviourSingleton<LevelManager>
@@ -69,7 +70,8 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
 
     public void StartNextLevel()
     {
-        SceneManager.LoadScene(SceneToLoad);
+        Addressables.LoadSceneAsync(SceneToLoad);
+        //SceneManager.LoadScene(SceneToLoad);
         Timer.Instance.StartTimer();
     }
 }

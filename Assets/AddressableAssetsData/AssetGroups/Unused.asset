@@ -1,0 +1,1123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Unused
+  m_EditorClassIdentifier: 
+  m_GroupName: Unused
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b8e9d52d32f935e4b9392c3ea25627c7
+  m_SerializeEntries:
+  - m_GUID: 0090c1015a016764e8f629c40fcacc2f
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0090c1015a016764e8f629c40fcacc2f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0090c1015a016764e8f629c40fcacc2f, type: 2}
+  - m_GUID: 03695678c47b09b41b5c7b235df51395
+    m_Address: CYCLOPS_LEGACY_getHit4_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 03695678c47b09b41b5c7b235df51395, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 03695678c47b09b41b5c7b235df51395, type: 2}
+  - m_GUID: 03803b08e73c4d744bb9787eb45937d9
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 03803b08e73c4d744bb9787eb45937d9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 03803b08e73c4d744bb9787eb45937d9, type: 2}
+  - m_GUID: 04a6b428d2f303d4b8d69826016f0e65
+    m_Address: CYCLOPS_LEGACY_turn90Right_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 04a6b428d2f303d4b8d69826016f0e65, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 04a6b428d2f303d4b8d69826016f0e65, type: 2}
+  - m_GUID: 07259f2d6e550234aa156f79cb53aef3
+    m_Address: CYCLOPS_LEGACY_idleLookAround_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 07259f2d6e550234aa156f79cb53aef3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 07259f2d6e550234aa156f79cb53aef3, type: 2}
+  - m_GUID: 096facabc11e7024f9fcc5a03cfc9919
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 096facabc11e7024f9fcc5a03cfc9919, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 096facabc11e7024f9fcc5a03cfc9919, type: 2}
+  - m_GUID: 0a63f04e6276d8e40977f908b4836d1e
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0a63f04e6276d8e40977f908b4836d1e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0a63f04e6276d8e40977f908b4836d1e, type: 2}
+  - m_GUID: 0c1bae891e2f42f44bcaa89e1b358c6d
+    m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0c1bae891e2f42f44bcaa89e1b358c6d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0c1bae891e2f42f44bcaa89e1b358c6d, type: 2}
+  - m_GUID: 0c71c9cffcf84a64391e813f10458ffd
+    m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0c71c9cffcf84a64391e813f10458ffd, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0c71c9cffcf84a64391e813f10458ffd, type: 2}
+  - m_GUID: 0d41f67dbd5973941be050fc4cfd1e20
+    m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0d41f67dbd5973941be050fc4cfd1e20, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0d41f67dbd5973941be050fc4cfd1e20, type: 2}
+  - m_GUID: 0e4596cbe1a8e0743aa6186ceb829d78
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttack_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0e4596cbe1a8e0743aa6186ceb829d78, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0e4596cbe1a8e0743aa6186ceb829d78, type: 2}
+  - m_GUID: 0ed74e072d1cfdd4b90f48237dde0cb9
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0ed74e072d1cfdd4b90f48237dde0cb9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0ed74e072d1cfdd4b90f48237dde0cb9, type: 2}
+  - m_GUID: 0f003c60a9f34ca4d82ae59495dabe57
+    m_Address: CYCLOPS_LEGACY_TPose_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0f003c60a9f34ca4d82ae59495dabe57, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0f003c60a9f34ca4d82ae59495dabe57, type: 2}
+  - m_GUID: 0feb9fe2ed6804241add2c02d188aa86
+    m_Address: CYCLOPS_LEGACY_turn90Right_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 0feb9fe2ed6804241add2c02d188aa86, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0feb9fe2ed6804241add2c02d188aa86, type: 2}
+  - m_GUID: 13dd14441a479304dbcaeaf3d6ee1975
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 13dd14441a479304dbcaeaf3d6ee1975, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 13dd14441a479304dbcaeaf3d6ee1975, type: 2}
+  - m_GUID: 148f5b05d6ce9f844936110cd4eb9a52
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 148f5b05d6ce9f844936110cd4eb9a52, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 148f5b05d6ce9f844936110cd4eb9a52, type: 2}
+  - m_GUID: 171ebbcb999e04647b899ac1710c13cb
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttack_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 171ebbcb999e04647b899ac1710c13cb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 171ebbcb999e04647b899ac1710c13cb, type: 2}
+  - m_GUID: 1781e72dbf7cf1a488cb46c7f220179b
+    m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 1781e72dbf7cf1a488cb46c7f220179b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1781e72dbf7cf1a488cb46c7f220179b, type: 2}
+  - m_GUID: 18040e5fa6f244042bd4f4639abccf22
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 18040e5fa6f244042bd4f4639abccf22, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 18040e5fa6f244042bd4f4639abccf22, type: 2}
+  - m_GUID: 18d16860855896245a62a5d907a45bcc
+    m_Address: CYCLOPS_LEGACY_turn90Left_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 18d16860855896245a62a5d907a45bcc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 18d16860855896245a62a5d907a45bcc, type: 2}
+  - m_GUID: 21fbb6f7197091346a08678b135b94d1
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Left_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 21fbb6f7197091346a08678b135b94d1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 21fbb6f7197091346a08678b135b94d1, type: 2}
+  - m_GUID: 2239f141cd5b1664ba481206e6131647
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttackForward_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 2239f141cd5b1664ba481206e6131647, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2239f141cd5b1664ba481206e6131647, type: 2}
+  - m_GUID: 225b497bb61a68d4b8f780ceb4bda7d6
+    m_Address: CYCLOPS_LEGACY_turn90Left_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 225b497bb61a68d4b8f780ceb4bda7d6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 225b497bb61a68d4b8f780ceb4bda7d6, type: 2}
+  - m_GUID: 23acb916ee4ef7849bfdff8c9ec63ea8
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 23acb916ee4ef7849bfdff8c9ec63ea8, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 23acb916ee4ef7849bfdff8c9ec63ea8, type: 2}
+  - m_GUID: 23d6b34ffa5012b4091c3567eaa6a03b
+    m_Address: CYCLOPS_LEGACY_2HitComboAttack_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 23d6b34ffa5012b4091c3567eaa6a03b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 23d6b34ffa5012b4091c3567eaa6a03b, type: 2}
+  - m_GUID: 246738f0bd06f6c42be5a699906f88a7
+    m_Address: CYCLOPS_LEGACY_leftHandAttack_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 246738f0bd06f6c42be5a699906f88a7, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 246738f0bd06f6c42be5a699906f88a7, type: 2}
+  - m_GUID: 280ecad72fe0558498ca3f38c25095b4
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttackForward_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 280ecad72fe0558498ca3f38c25095b4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 280ecad72fe0558498ca3f38c25095b4, type: 2}
+  - m_GUID: 287c5e7a1f7006144a3dfc9b746606c4
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 287c5e7a1f7006144a3dfc9b746606c4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 287c5e7a1f7006144a3dfc9b746606c4, type: 2}
+  - m_GUID: 3043053498b518a438cfdb7557bcbe51
+    m_Address: CYCLOPS_LEGACY_turn90Left_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 3043053498b518a438cfdb7557bcbe51, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3043053498b518a438cfdb7557bcbe51, type: 2}
+  - m_GUID: 306a9920e84dfb14dbafcd6e64be2317
+    m_Address: CYCLOPS_LEGACY_2HitComboAttackForward_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 306a9920e84dfb14dbafcd6e64be2317, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 306a9920e84dfb14dbafcd6e64be2317, type: 2}
+  - m_GUID: 321627d3467f3554a8cfd10854f33892
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Left_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 321627d3467f3554a8cfd10854f33892, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 321627d3467f3554a8cfd10854f33892, type: 2}
+  - m_GUID: 32ba805e22abd094c845d1b0ce993dfc
+    m_Address: CYCLOPS_LEGACY_getHit2_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 32ba805e22abd094c845d1b0ce993dfc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 32ba805e22abd094c845d1b0ce993dfc, type: 2}
+  - m_GUID: 32e48752d1703244aa29c5f7d8215ea5
+    m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 32e48752d1703244aa29c5f7d8215ea5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 32e48752d1703244aa29c5f7d8215ea5, type: 2}
+  - m_GUID: 33f9e47610ace83418b2174707e26a71
+    m_Address: CYCLOPS_LEGACY_getHit3_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 33f9e47610ace83418b2174707e26a71, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 33f9e47610ace83418b2174707e26a71, type: 2}
+  - m_GUID: 359660143e0cccf4093455c01cf78bfc
+    m_Address: CYCLOPS_LEGACY_getHit4_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 359660143e0cccf4093455c01cf78bfc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 359660143e0cccf4093455c01cf78bfc, type: 2}
+  - m_GUID: 39862e820fb7ce940b1fd43f47286fd0
+    m_Address: DARKNESS_SPIDER_LEGACY_TPose_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 39862e820fb7ce940b1fd43f47286fd0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 39862e820fb7ce940b1fd43f47286fd0, type: 2}
+  - m_GUID: 39fdd2b881efef6489ad2336f1c8d307
+    m_Address: DARKNESS_SPIDER_LEGACY_Bite_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 39fdd2b881efef6489ad2336f1c8d307, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 39fdd2b881efef6489ad2336f1c8d307, type: 2}
+  - m_GUID: 3a3196e32ac19434b81ce82ae6ca3057
+    m_Address: DARKNESS_SPIDER_LEGACY_TPose_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 3a3196e32ac19434b81ce82ae6ca3057, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3a3196e32ac19434b81ce82ae6ca3057, type: 2}
+  - m_GUID: 3d47a54bb19a93749bfb887f94843586
+    m_Address: CYCLOPS_LEGACY_leftHandAttackForward_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 3d47a54bb19a93749bfb887f94843586, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3d47a54bb19a93749bfb887f94843586, type: 2}
+  - m_GUID: 3d6129071573d6f49b09798542bf6333
+    m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 3d6129071573d6f49b09798542bf6333, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3d6129071573d6f49b09798542bf6333, type: 2}
+  - m_GUID: 3dd57fa65a3a64f47ba0c4e5508d9f94
+    m_Address: DARKNESS_SPIDER_LEGACY_Bite_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 3dd57fa65a3a64f47ba0c4e5508d9f94, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3dd57fa65a3a64f47ba0c4e5508d9f94, type: 2}
+  - m_GUID: 3eca872e379f1104ab5ca6ca2d67d89a
+    m_Address: CYCLOPS_LEGACY_walk_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 3eca872e379f1104ab5ca6ca2d67d89a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3eca872e379f1104ab5ca6ca2d67d89a, type: 2}
+  - m_GUID: 424628953fb5ce343b7a1ea10fa93d34
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 424628953fb5ce343b7a1ea10fa93d34, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 424628953fb5ce343b7a1ea10fa93d34, type: 2}
+  - m_GUID: 43458da2d08221a4b93c086b55a7a8f3
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Right_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 43458da2d08221a4b93c086b55a7a8f3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 43458da2d08221a4b93c086b55a7a8f3, type: 2}
+  - m_GUID: 43e3981f804fb68419d3cc821b769cd5
+    m_Address: CYCLOPS_LEGACY_getHit2_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 43e3981f804fb68419d3cc821b769cd5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 43e3981f804fb68419d3cc821b769cd5, type: 2}
+  - m_GUID: 462e2d5c924681342b7eb9efa10caa58
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Right_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 462e2d5c924681342b7eb9efa10caa58, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 462e2d5c924681342b7eb9efa10caa58, type: 2}
+  - m_GUID: 4b842dd151aec914c8801d95437295f0
+    m_Address: CYCLOPS_LEGACY_2HitComboAttackForward_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 4b842dd151aec914c8801d95437295f0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4b842dd151aec914c8801d95437295f0, type: 2}
+  - m_GUID: 4b86342d85948514b9e296fcf77e9ea4
+    m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 4b86342d85948514b9e296fcf77e9ea4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4b86342d85948514b9e296fcf77e9ea4, type: 2}
+  - m_GUID: 4bdb9066d80bbe841a7f102c100602eb
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 4bdb9066d80bbe841a7f102c100602eb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4bdb9066d80bbe841a7f102c100602eb, type: 2}
+  - m_GUID: 4cd9f335e1338bb4d9b89fb1e6e07f0f
+    m_Address: CYCLOPS_LEGACY_roar_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 4cd9f335e1338bb4d9b89fb1e6e07f0f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4cd9f335e1338bb4d9b89fb1e6e07f0f, type: 2}
+  - m_GUID: 51a291e28a0f7ae4996c8e951dff4236
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Left_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 51a291e28a0f7ae4996c8e951dff4236, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 51a291e28a0f7ae4996c8e951dff4236, type: 2}
+  - m_GUID: 5355a9539123db9499af94ebb2c3bbe4
+    m_Address: CYCLOPS_LEGACY_rightHandAttackForward_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 5355a9539123db9499af94ebb2c3bbe4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5355a9539123db9499af94ebb2c3bbe4, type: 2}
+  - m_GUID: 542326d27371e4f46be2fa9f7c832e66
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Right_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 542326d27371e4f46be2fa9f7c832e66, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 542326d27371e4f46be2fa9f7c832e66, type: 2}
+  - m_GUID: 54d2eac2cbe126a489150621d76fe552
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 54d2eac2cbe126a489150621d76fe552, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 54d2eac2cbe126a489150621d76fe552, type: 2}
+  - m_GUID: 57c2fd4e88d8dae4ba74e0f37a21ac20
+    m_Address: CYCLOPS_LEGACY_leftHandAttackForward_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 57c2fd4e88d8dae4ba74e0f37a21ac20, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 57c2fd4e88d8dae4ba74e0f37a21ac20, type: 2}
+  - m_GUID: 57da67db8e2ddf74c86c496317b5b1f0
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 57da67db8e2ddf74c86c496317b5b1f0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 57da67db8e2ddf74c86c496317b5b1f0, type: 2}
+  - m_GUID: 5872cf6c18479c14b8c6f7fffd25ab1a
+    m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 5872cf6c18479c14b8c6f7fffd25ab1a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5872cf6c18479c14b8c6f7fffd25ab1a, type: 2}
+  - m_GUID: 5b77e10b87478d84a9d66f63aed7d928
+    m_Address: CYCLOPS_LEGACY_leftHandAttack_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 5b77e10b87478d84a9d66f63aed7d928, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5b77e10b87478d84a9d66f63aed7d928, type: 2}
+  - m_GUID: 5c6312dd887143e42878eb3df15af238
+    m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 5c6312dd887143e42878eb3df15af238, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5c6312dd887143e42878eb3df15af238, type: 2}
+  - m_GUID: 5e2ff1f7a30fb614b9b4d9b18a4165ac
+    m_Address: CYCLOPS_LEGACY_death_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 5e2ff1f7a30fb614b9b4d9b18a4165ac, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5e2ff1f7a30fb614b9b4d9b18a4165ac, type: 2}
+  - m_GUID: 5f18114f21748454fa4f0f142115f919
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttackForward_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 5f18114f21748454fa4f0f142115f919, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5f18114f21748454fa4f0f142115f919, type: 2}
+  - m_GUID: 60db7e136bba8154ba4a824198991610
+    m_Address: CYCLOPS_LEGACY_getHit4_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 60db7e136bba8154ba4a824198991610, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 60db7e136bba8154ba4a824198991610, type: 2}
+  - m_GUID: 613def5fb45546d4d90c4fbdc7e59e8a
+    m_Address: CYCLOPS_LEGACY_leftHandAttackForward_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 613def5fb45546d4d90c4fbdc7e59e8a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 613def5fb45546d4d90c4fbdc7e59e8a, type: 2}
+  - m_GUID: 61fc4b966c4b025408558aa5e16f32ea
+    m_Address: CYCLOPS_LEGACY_idleLookAround_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 61fc4b966c4b025408558aa5e16f32ea, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 61fc4b966c4b025408558aa5e16f32ea, type: 2}
+  - m_GUID: 632bd8d9af364084083e78224351cf5e
+    m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 632bd8d9af364084083e78224351cf5e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 632bd8d9af364084083e78224351cf5e, type: 2}
+  - m_GUID: 63746a04372fbd040a8480b89fbb1cf2
+    m_Address: CYCLOPS_LEGACY_leftHandAttackForward_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 63746a04372fbd040a8480b89fbb1cf2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 63746a04372fbd040a8480b89fbb1cf2, type: 2}
+  - m_GUID: 63c9e7b73b2ada646b33a1e67c03ebb3
+    m_Address: CYCLOPS_LEGACY_walk_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 63c9e7b73b2ada646b33a1e67c03ebb3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 63c9e7b73b2ada646b33a1e67c03ebb3, type: 2}
+  - m_GUID: 6417044ac97404445941f50ab1b9246f
+    m_Address: CYCLOPS_LEGACY_rightHandAttackForward_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 6417044ac97404445941f50ab1b9246f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6417044ac97404445941f50ab1b9246f, type: 2}
+  - m_GUID: 641f16ab2d1ae094cbf1c1d3589aa7bb
+    m_Address: CYCLOPS_LEGACY_3HitComboAttack_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 641f16ab2d1ae094cbf1c1d3589aa7bb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 641f16ab2d1ae094cbf1c1d3589aa7bb, type: 2}
+  - m_GUID: 661fe2f874a5f194ba179f9e35deb77b
+    m_Address: CYCLOPS_LEGACY_walk_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 661fe2f874a5f194ba179f9e35deb77b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 661fe2f874a5f194ba179f9e35deb77b, type: 2}
+  - m_GUID: 66b2782e4ec2cea4cbb1f36cb53e4a53
+    m_Address: DARKNESS_SPIDER_LEGACY_Bite_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 66b2782e4ec2cea4cbb1f36cb53e4a53, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 66b2782e4ec2cea4cbb1f36cb53e4a53, type: 2}
+  - m_GUID: 66c00df7cc7e78943ae1fd0bd9003d46
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Right_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 66c00df7cc7e78943ae1fd0bd9003d46, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 66c00df7cc7e78943ae1fd0bd9003d46, type: 2}
+  - m_GUID: 68b4a53e11656814bad33f1281c62aa8
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttackForward_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 68b4a53e11656814bad33f1281c62aa8, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 68b4a53e11656814bad33f1281c62aa8, type: 2}
+  - m_GUID: 6914d17403f30c94dacc1832892b8445
+    m_Address: DARKNESS_SPIDER_LEGACY_idleNormal_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 6914d17403f30c94dacc1832892b8445, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6914d17403f30c94dacc1832892b8445, type: 2}
+  - m_GUID: 693fa2ab6ca724a49bddf08cd329bb34
+    m_Address: CYCLOPS_LEGACY_getHit5_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 693fa2ab6ca724a49bddf08cd329bb34, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 693fa2ab6ca724a49bddf08cd329bb34, type: 2}
+  - m_GUID: 6b7642af2b363a9429c62a749b0ffd80
+    m_Address: CYCLOPS_LEGACY_getHit1_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 6b7642af2b363a9429c62a749b0ffd80, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6b7642af2b363a9429c62a749b0ffd80, type: 2}
+  - m_GUID: 6c206d2c5dbb39048a7e593e68fa7503
+    m_Address: CYCLOPS_LEGACY_getHit2_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 6c206d2c5dbb39048a7e593e68fa7503, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6c206d2c5dbb39048a7e593e68fa7503, type: 2}
+  - m_GUID: 6dc96b9b0b161fb418e31d6849244f66
+    m_Address: CYCLOPS_LEGACY_rightHandAttack_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 6dc96b9b0b161fb418e31d6849244f66, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6dc96b9b0b161fb418e31d6849244f66, type: 2}
+  - m_GUID: 7157645522faff54f829b7efb1ac484c
+    m_Address: CYCLOPS_LEGACY_turn90Left_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 7157645522faff54f829b7efb1ac484c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7157645522faff54f829b7efb1ac484c, type: 2}
+  - m_GUID: 721aa225ae0d2a64f9c139b9e7de515a
+    m_Address: CYCLOPS_LEGACY_getHit5_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 721aa225ae0d2a64f9c139b9e7de515a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 721aa225ae0d2a64f9c139b9e7de515a, type: 2}
+  - m_GUID: 73c02964932840944a66320c04b29afb
+    m_Address: CYCLOPS_LEGACY_getHit2_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 73c02964932840944a66320c04b29afb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 73c02964932840944a66320c04b29afb, type: 2}
+  - m_GUID: 74bdf8db8de3d2a43b881a99bb15f0c1
+    m_Address: CYCLOPS_LEGACY_3HitComboAttackForward_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 74bdf8db8de3d2a43b881a99bb15f0c1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 74bdf8db8de3d2a43b881a99bb15f0c1, type: 2}
+  - m_GUID: 76af51ab8d8fd554e8df6b8908f07213
+    m_Address: CYCLOPS_LEGACY_roar_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 76af51ab8d8fd554e8df6b8908f07213, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 76af51ab8d8fd554e8df6b8908f07213, type: 2}
+  - m_GUID: 77f9ef1984e41c1478d875791d612635
+    m_Address: CYCLOPS_LEGACY_rightHandAttackForward_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 77f9ef1984e41c1478d875791d612635, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 77f9ef1984e41c1478d875791d612635, type: 2}
+  - m_GUID: 7881cae7e9f9bd349976f790a47eee7b
+    m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 7881cae7e9f9bd349976f790a47eee7b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7881cae7e9f9bd349976f790a47eee7b, type: 2}
+  - m_GUID: 798245e8a028c164b8efb776ff2cef61
+    m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 798245e8a028c164b8efb776ff2cef61, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 798245e8a028c164b8efb776ff2cef61, type: 2}
+  - m_GUID: 79b990c8c1a0ed440a972d63525ed68e
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 79b990c8c1a0ed440a972d63525ed68e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 79b990c8c1a0ed440a972d63525ed68e, type: 2}
+  - m_GUID: 7b3438f83c1367d4cb98d621ebb5f04f
+    m_Address: CYCLOPS_LEGACY_getHit4_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 7b3438f83c1367d4cb98d621ebb5f04f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7b3438f83c1367d4cb98d621ebb5f04f, type: 2}
+  - m_GUID: 7cfac1776e4828b4bb872acace466f5e
+    m_Address: CYCLOPS_LEGACY_turn90Left_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 7cfac1776e4828b4bb872acace466f5e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7cfac1776e4828b4bb872acace466f5e, type: 2}
+  - m_GUID: 7df32a4722670d540be39b799b2e72fb
+    m_Address: CYCLOPS_LEGACY_turn90Right_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 7df32a4722670d540be39b799b2e72fb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7df32a4722670d540be39b799b2e72fb, type: 2}
+  - m_GUID: 7f48fa5a85514f84aae4bbfb96f77cfc
+    m_Address: CYCLOPS_LEGACY_rightHandAttack_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 7f48fa5a85514f84aae4bbfb96f77cfc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7f48fa5a85514f84aae4bbfb96f77cfc, type: 2}
+  - m_GUID: 825d8d135fbf1714cb5702ef24f28228
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Right_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 825d8d135fbf1714cb5702ef24f28228, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 825d8d135fbf1714cb5702ef24f28228, type: 2}
+  - m_GUID: 8371ebfe718c9884ebe31a69c659082d
+    m_Address: CYCLOPS_LEGACY_death_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8371ebfe718c9884ebe31a69c659082d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8371ebfe718c9884ebe31a69c659082d, type: 2}
+  - m_GUID: 84a96c8f1bb665a479bfda99146f6e0a
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttackForward_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 84a96c8f1bb665a479bfda99146f6e0a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 84a96c8f1bb665a479bfda99146f6e0a, type: 2}
+  - m_GUID: 84c94328579f81f4cb3be7667ca03e89
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 84c94328579f81f4cb3be7667ca03e89, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 84c94328579f81f4cb3be7667ca03e89, type: 2}
+  - m_GUID: 84cc2c879f3e71141808af2fc54234f9
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 84cc2c879f3e71141808af2fc54234f9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 84cc2c879f3e71141808af2fc54234f9, type: 2}
+  - m_GUID: 84e96137162f5ca4e9ee9076a196c5a3
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttackForward_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 84e96137162f5ca4e9ee9076a196c5a3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 84e96137162f5ca4e9ee9076a196c5a3, type: 2}
+  - m_GUID: 850a5152cde79134fb2897926d99438f
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 850a5152cde79134fb2897926d99438f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 850a5152cde79134fb2897926d99438f, type: 2}
+  - m_GUID: 8551660c30a4514439fb4913a70a60df
+    m_Address: CYCLOPS_LEGACY_getHit1_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8551660c30a4514439fb4913a70a60df, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8551660c30a4514439fb4913a70a60df, type: 2}
+  - m_GUID: 888ab80b0cdf1b145802bda2136110c5
+    m_Address: CYCLOPS_LEGACY_getHit4_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 888ab80b0cdf1b145802bda2136110c5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 888ab80b0cdf1b145802bda2136110c5, type: 2}
+  - m_GUID: 894d597c451bc2148914be515d63fe09
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 894d597c451bc2148914be515d63fe09, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 894d597c451bc2148914be515d63fe09, type: 2}
+  - m_GUID: 89504678acbad264c856eff157f21473
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 89504678acbad264c856eff157f21473, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 89504678acbad264c856eff157f21473, type: 2}
+  - m_GUID: 8a4a1f3a23030654ab851efc2b908476
+    m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8a4a1f3a23030654ab851efc2b908476, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8a4a1f3a23030654ab851efc2b908476, type: 2}
+  - m_GUID: 8a5357f2b5653944392451b1648d4729
+    m_Address: CYCLOPS_LEGACY_2HitComboAttackForward_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8a5357f2b5653944392451b1648d4729, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8a5357f2b5653944392451b1648d4729, type: 2}
+  - m_GUID: 8b25575c8713c7d48bea90074d504c36
+    m_Address: CYCLOPS_LEGACY_2HitComboAttack_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8b25575c8713c7d48bea90074d504c36, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8b25575c8713c7d48bea90074d504c36, type: 2}
+  - m_GUID: 8b7ec9ac9e1c8c54f86f1d56fe23806a
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Right_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8b7ec9ac9e1c8c54f86f1d56fe23806a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8b7ec9ac9e1c8c54f86f1d56fe23806a, type: 2}
+  - m_GUID: 8b91f930a4891ba48886153fc4816e61
+    m_Address: CYCLOPS_LEGACY_3HitComboAttack_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8b91f930a4891ba48886153fc4816e61, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8b91f930a4891ba48886153fc4816e61, type: 2}
+  - m_GUID: 8f363fc5846c6b542826657cbec7b16e
+    m_Address: CYCLOPS_LEGACY_rightHandAttackForward_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8f363fc5846c6b542826657cbec7b16e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8f363fc5846c6b542826657cbec7b16e, type: 2}
+  - m_GUID: 8f40b0a5dd49b0446803e4e72069a46a
+    m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 8f40b0a5dd49b0446803e4e72069a46a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8f40b0a5dd49b0446803e4e72069a46a, type: 2}
+  - m_GUID: 9083b2ff6b7ff29448738ebf0fdfd39e
+    m_Address: CYCLOPS_LEGACY_turn90Right_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 9083b2ff6b7ff29448738ebf0fdfd39e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9083b2ff6b7ff29448738ebf0fdfd39e, type: 2}
+  - m_GUID: 909d5fa3edc230b4abaa599a798a254e
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 909d5fa3edc230b4abaa599a798a254e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 909d5fa3edc230b4abaa599a798a254e, type: 2}
+  - m_GUID: 91843ef7422df75429f202013498e8e7
+    m_Address: CYCLOPS_LEGACY_getHit5_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 91843ef7422df75429f202013498e8e7, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 91843ef7422df75429f202013498e8e7, type: 2}
+  - m_GUID: 92e27bef87b72a246a3b2f0a33776092
+    m_Address: CYCLOPS_LEGACY_rightHandAttackForward_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 92e27bef87b72a246a3b2f0a33776092, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 92e27bef87b72a246a3b2f0a33776092, type: 2}
+  - m_GUID: 93717948c9d2e8b4cb8ddd1afcdc8d99
+    m_Address: CYCLOPS_LEGACY_getHit3_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 93717948c9d2e8b4cb8ddd1afcdc8d99, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 93717948c9d2e8b4cb8ddd1afcdc8d99, type: 2}
+  - m_GUID: 94dbd24ee25327f44a665d903d5daf0a
+    m_Address: CYCLOPS_LEGACY_2HitComboAttackForward_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 94dbd24ee25327f44a665d903d5daf0a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 94dbd24ee25327f44a665d903d5daf0a, type: 2}
+  - m_GUID: 986665f4806456f4ca02ec5501875745
+    m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 986665f4806456f4ca02ec5501875745, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 986665f4806456f4ca02ec5501875745, type: 2}
+  - m_GUID: 99677d4226b832e43a8d8018ac1370d9
+    m_Address: CYCLOPS_LEGACY_3HitComboAttackForward_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 99677d4226b832e43a8d8018ac1370d9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 99677d4226b832e43a8d8018ac1370d9, type: 2}
+  - m_GUID: 9b167c1a889e9c649bf59a6746d13170
+    m_Address: CYCLOPS_LEGACY_2HitComboAttackForward_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 9b167c1a889e9c649bf59a6746d13170, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9b167c1a889e9c649bf59a6746d13170, type: 2}
+  - m_GUID: 9d56f991d263f38469d4d6f5e35751b1
+    m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 9d56f991d263f38469d4d6f5e35751b1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9d56f991d263f38469d4d6f5e35751b1, type: 2}
+  - m_GUID: a088e662110048b4780109d04180b5f7
+    m_Address: CYCLOPS_LEGACY_2HitComboAttack_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: a088e662110048b4780109d04180b5f7, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a088e662110048b4780109d04180b5f7, type: 2}
+  - m_GUID: a1121e6a8ce9d024486183ff9f01a668
+    m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: a1121e6a8ce9d024486183ff9f01a668, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a1121e6a8ce9d024486183ff9f01a668, type: 2}
+  - m_GUID: a281f5b4f309ec649bbac4fa2978c52b
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: a281f5b4f309ec649bbac4fa2978c52b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a281f5b4f309ec649bbac4fa2978c52b, type: 2}
+  - m_GUID: a2b620b80de8f78489e91025f71106cc
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: a2b620b80de8f78489e91025f71106cc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a2b620b80de8f78489e91025f71106cc, type: 2}
+  - m_GUID: a48764889f0c7994e9670093a9aaf2e3
+    m_Address: CYCLOPS_LEGACY_turn90Right_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: a48764889f0c7994e9670093a9aaf2e3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a48764889f0c7994e9670093a9aaf2e3, type: 2}
+  - m_GUID: a54422fda5997ed49959cd97e9b5d9d1
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: a54422fda5997ed49959cd97e9b5d9d1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a54422fda5997ed49959cd97e9b5d9d1, type: 2}
+  - m_GUID: abbfa32d04c4c5740a44bd6337c00672
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: abbfa32d04c4c5740a44bd6337c00672, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: abbfa32d04c4c5740a44bd6337c00672, type: 2}
+  - m_GUID: adcbe07cb23495043b1892af2f9c28c0
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Left_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: adcbe07cb23495043b1892af2f9c28c0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: adcbe07cb23495043b1892af2f9c28c0, type: 2}
+  - m_GUID: af29024315afd8e4596cb2d9d04c00d5
+    m_Address: DARKNESS_SPIDER_LEGACY_idleNormal_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: af29024315afd8e4596cb2d9d04c00d5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: af29024315afd8e4596cb2d9d04c00d5, type: 2}
+  - m_GUID: b12a07e3604376646a4caa88b7da710d
+    m_Address: CYCLOPS_LEGACY_getHit4_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: b12a07e3604376646a4caa88b7da710d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b12a07e3604376646a4caa88b7da710d, type: 2}
+  - m_GUID: b31c307a0a814674dbc2a968fe71ec65
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: b31c307a0a814674dbc2a968fe71ec65, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b31c307a0a814674dbc2a968fe71ec65, type: 2}
+  - m_GUID: b4fa282613189d941ace8fdd6f2b01aa
+    m_Address: CYCLOPS_LEGACY_TPose_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: b4fa282613189d941ace8fdd6f2b01aa, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b4fa282613189d941ace8fdd6f2b01aa, type: 2}
+  - m_GUID: b98b97311dd8ad14f9290f0ba742691b
+    m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: b98b97311dd8ad14f9290f0ba742691b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b98b97311dd8ad14f9290f0ba742691b, type: 2}
+  - m_GUID: ba1922e61b092924eb72b7852c311cd5
+    m_Address: CYCLOPS_LEGACY_walk_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: ba1922e61b092924eb72b7852c311cd5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ba1922e61b092924eb72b7852c311cd5, type: 2}
+  - m_GUID: ba6cc98df267f0343bf5e2959be1cc72
+    m_Address: CYCLOPS_LEGACY_death_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: ba6cc98df267f0343bf5e2959be1cc72, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ba6cc98df267f0343bf5e2959be1cc72, type: 2}
+  - m_GUID: bbf2ce26f609b934aaeff68c5d1d3176
+    m_Address: CYCLOPS_LEGACY_turn90Left_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: bbf2ce26f609b934aaeff68c5d1d3176, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bbf2ce26f609b934aaeff68c5d1d3176, type: 2}
+  - m_GUID: bc822bcb31e573a4a8288b12b63a508e
+    m_Address: CYCLOPS_LEGACY_getHit3_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: bc822bcb31e573a4a8288b12b63a508e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bc822bcb31e573a4a8288b12b63a508e, type: 2}
+  - m_GUID: bde53eb4a3f607449bbecdc019eba694
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttackForward_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: bde53eb4a3f607449bbecdc019eba694, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bde53eb4a3f607449bbecdc019eba694, type: 2}
+  - m_GUID: bea058b4479a3b246b549758c4980fe2
+    m_Address: CYCLOPS_LEGACY_3HitComboAttackForward_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: bea058b4479a3b246b549758c4980fe2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bea058b4479a3b246b549758c4980fe2, type: 2}
+  - m_GUID: bf8c69da5a322f6499a2dfd3b33152ff
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Left_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: bf8c69da5a322f6499a2dfd3b33152ff, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bf8c69da5a322f6499a2dfd3b33152ff, type: 2}
+  - m_GUID: bfb1a741ded39bd4bb4ad2b7091e7e4b
+    m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: bfb1a741ded39bd4bb4ad2b7091e7e4b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bfb1a741ded39bd4bb4ad2b7091e7e4b, type: 2}
+  - m_GUID: c2eaf7d32a3391b43a441a73e9e789a6
+    m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: c2eaf7d32a3391b43a441a73e9e789a6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c2eaf7d32a3391b43a441a73e9e789a6, type: 2}
+  - m_GUID: c388c1667ecc39b4abfcf0dc2b4d661d
+    m_Address: CYCLOPS_LEGACY_3HitComboAttackForward_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: c388c1667ecc39b4abfcf0dc2b4d661d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c388c1667ecc39b4abfcf0dc2b4d661d, type: 2}
+  - m_GUID: c5a4c546125828a44870561e6e1e289e
+    m_Address: CYCLOPS_LEGACY_walk_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: c5a4c546125828a44870561e6e1e289e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c5a4c546125828a44870561e6e1e289e, type: 2}
+  - m_GUID: c5e44cd3d43b6924f9a5c4a60c46a453
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: c5e44cd3d43b6924f9a5c4a60c46a453, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c5e44cd3d43b6924f9a5c4a60c46a453, type: 2}
+  - m_GUID: ca0aa0d6e027e244da7acbdfcde9deb6
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttack_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: ca0aa0d6e027e244da7acbdfcde9deb6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ca0aa0d6e027e244da7acbdfcde9deb6, type: 2}
+  - m_GUID: ca2a2ef4900a0114098751d29a3d8a30
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: ca2a2ef4900a0114098751d29a3d8a30, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ca2a2ef4900a0114098751d29a3d8a30, type: 2}
+  - m_GUID: cb92cdd7a5b0f3449bacc724bc2e2906
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttack90Left_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: cb92cdd7a5b0f3449bacc724bc2e2906, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: cb92cdd7a5b0f3449bacc724bc2e2906, type: 2}
+  - m_GUID: cda3f49cae1624c438a115863f5c1359
+    m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: cda3f49cae1624c438a115863f5c1359, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: cda3f49cae1624c438a115863f5c1359, type: 2}
+  - m_GUID: ce5ab630ee02fcc49a139da69f4b0c39
+    m_Address: CYCLOPS_LEGACY_rightHandAttack_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: ce5ab630ee02fcc49a139da69f4b0c39, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ce5ab630ee02fcc49a139da69f4b0c39, type: 2}
+  - m_GUID: cee4971f2bb1f8a4dbf27f37b60effa1
+    m_Address: CYCLOPS_LEGACY_leftHandAttack_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: cee4971f2bb1f8a4dbf27f37b60effa1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: cee4971f2bb1f8a4dbf27f37b60effa1, type: 2}
+  - m_GUID: d0ebdd291b162e14c940fe6e6d04188a
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d0ebdd291b162e14c940fe6e6d04188a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d0ebdd291b162e14c940fe6e6d04188a, type: 2}
+  - m_GUID: d179a0bc3d977a144843abb0dd0c4460
+    m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d179a0bc3d977a144843abb0dd0c4460, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d179a0bc3d977a144843abb0dd0c4460, type: 2}
+  - m_GUID: d4593c549ba26de49b4aade7aa3cf410
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttackForward_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d4593c549ba26de49b4aade7aa3cf410, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d4593c549ba26de49b4aade7aa3cf410, type: 2}
+  - m_GUID: d4f619cbfd5f0904885d928aebb7a179
+    m_Address: CYCLOPS_LEGACY_roar_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d4f619cbfd5f0904885d928aebb7a179, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d4f619cbfd5f0904885d928aebb7a179, type: 2}
+  - m_GUID: d6b94937e9c6da34fb6d26ac31907822
+    m_Address: CYCLOPS_LEGACY_getHit2_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d6b94937e9c6da34fb6d26ac31907822, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d6b94937e9c6da34fb6d26ac31907822, type: 2}
+  - m_GUID: d82978ded34bfd64faa4d6348ee46e1b
+    m_Address: CYCLOPS_LEGACY_getHit1_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d82978ded34bfd64faa4d6348ee46e1b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d82978ded34bfd64faa4d6348ee46e1b, type: 2}
+  - m_GUID: d93c4eae896c47143952791d6a29e3fe
+    m_Address: CYCLOPS_LEGACY_rightHandAttackForward_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d93c4eae896c47143952791d6a29e3fe, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d93c4eae896c47143952791d6a29e3fe, type: 2}
+  - m_GUID: d9c4fdfc087f61745bcf008e7c2ea3fe
+    m_Address: CYCLOPS_LEGACY_turn90Right_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d9c4fdfc087f61745bcf008e7c2ea3fe, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d9c4fdfc087f61745bcf008e7c2ea3fe, type: 2}
+  - m_GUID: da151542566ded3468c789697334e603
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttackForward_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: da151542566ded3468c789697334e603, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: da151542566ded3468c789697334e603, type: 2}
+  - m_GUID: da7b61cbb349f10429379aaa196640a4
+    m_Address: CYCLOPS_LEGACY_idleLookAround_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: da7b61cbb349f10429379aaa196640a4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: da7b61cbb349f10429379aaa196640a4, type: 2}
+  - m_GUID: db22d37298ee2e64a8597888c3cd73b5
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: db22d37298ee2e64a8597888c3cd73b5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: db22d37298ee2e64a8597888c3cd73b5, type: 2}
+  - m_GUID: dc925464709d3c74b95d35a45bf6b96f
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttackForward_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: dc925464709d3c74b95d35a45bf6b96f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: dc925464709d3c74b95d35a45bf6b96f, type: 2}
+  - m_GUID: dead39c8500af2f4d877bf318137699f
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: dead39c8500af2f4d877bf318137699f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: dead39c8500af2f4d877bf318137699f, type: 2}
+  - m_GUID: e02b529ef8783d04bb53a1477ac1b472
+    m_Address: CYCLOPS_LEGACY_getHit2_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: e02b529ef8783d04bb53a1477ac1b472, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e02b529ef8783d04bb53a1477ac1b472, type: 2}
+  - m_GUID: e16bc39590471d04f845f821b43f9230
+    m_Address: CYCLOPS_LEGACY_leftHandAttackForward_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: e16bc39590471d04f845f821b43f9230, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e16bc39590471d04f845f821b43f9230, type: 2}
+  - m_GUID: e62d3c47438405b40bfa977becc96859
+    m_Address: DARKNESS_SPIDER_LEGACY_TPose_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: e62d3c47438405b40bfa977becc96859, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e62d3c47438405b40bfa977becc96859, type: 2}
+  - m_GUID: e8534a562eb95f8499c9d200147e1fa3
+    m_Address: CYCLOPS_LEGACY_leftHandAttackForward_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: e8534a562eb95f8499c9d200147e1fa3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e8534a562eb95f8499c9d200147e1fa3, type: 2}
+  - m_GUID: e8baf5243f2175344802753016d6382d
+    m_Address: CYCLOPS_LEGACY_3HitComboAttackForward_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: e8baf5243f2175344802753016d6382d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e8baf5243f2175344802753016d6382d, type: 2}
+  - m_GUID: e962b2b14c8fed5459341cca7b7b4678
+    m_Address: CYCLOPS_LEGACY_3HitComboAttack_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: e962b2b14c8fed5459341cca7b7b4678, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e962b2b14c8fed5459341cca7b7b4678, type: 2}
+  - m_GUID: eb21ff9b379bf894898160eac18a9142
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: eb21ff9b379bf894898160eac18a9142, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: eb21ff9b379bf894898160eac18a9142, type: 2}
+  - m_GUID: ec08685b38f38944a9758534c49de70d
+    m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: ec08685b38f38944a9758534c49de70d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ec08685b38f38944a9758534c49de70d, type: 2}
+  - m_GUID: ec2379cc085701140ac01b3d74ac311a
+    m_Address: DARKNESS_SPIDER_LEGACY_idleNormal_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: ec2379cc085701140ac01b3d74ac311a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ec2379cc085701140ac01b3d74ac311a, type: 2}
+  - m_GUID: ec77297b2408fc64e910bc3c0e96300e
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: ec77297b2408fc64e910bc3c0e96300e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ec77297b2408fc64e910bc3c0e96300e, type: 2}
+  - m_GUID: f44b7a1a40e70d54cb0390f6a34c1d94
+    m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: f44b7a1a40e70d54cb0390f6a34c1d94, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f44b7a1a40e70d54cb0390f6a34c1d94, type: 2}
+  - m_GUID: f60bc05caa34e9e468b7cb47dbfac75d
+    m_Address: CYCLOPS_LEGACY_3HitComboAttackForward_RM_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: f60bc05caa34e9e468b7cb47dbfac75d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f60bc05caa34e9e468b7cb47dbfac75d, type: 2}
+  - m_GUID: f8f38d6c84e9ba34d8468004232a6404
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: f8f38d6c84e9ba34d8468004232a6404, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f8f38d6c84e9ba34d8468004232a6404, type: 2}
+  - m_GUID: f9c4002c9ba6d4b44bc33b6412e25199
+    m_Address: CYCLOPS_LEGACY_TPose_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: f9c4002c9ba6d4b44bc33b6412e25199, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f9c4002c9ba6d4b44bc33b6412e25199, type: 2}
+  - m_GUID: f9fc7b605db53c34b8021f4ae6ab757e
+    m_Address: CYCLOPS_LEGACY_2HitComboAttackForward_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: f9fc7b605db53c34b8021f4ae6ab757e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f9fc7b605db53c34b8021f4ae6ab757e, type: 2}
+  - m_GUID: fd067b996cb19f44da1b49afe29e76a4
+    m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: fd067b996cb19f44da1b49afe29e76a4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fd067b996cb19f44da1b49afe29e76a4, type: 2}
+  - m_GUID: fe129e58c7115e24cab7a21de85a1a08
+    m_Address: CYCLOPS_LEGACY_2fistsCrushAttackForward_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: fe129e58c7115e24cab7a21de85a1a08, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fe129e58c7115e24cab7a21de85a1a08, type: 2}
+  - m_GUID: fe42811d9ecbe9d4ca65e622e9138ad6
+    m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: fe42811d9ecbe9d4ca65e622e9138ad6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fe42811d9ecbe9d4ca65e622e9138ad6, type: 2}
+  - m_GUID: fe88a0ffe08f0bf468f21a9ccff042d2
+    m_Address: CYCLOPS_LEGACY_walk_RM_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: fe88a0ffe08f0bf468f21a9ccff042d2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fe88a0ffe08f0bf468f21a9ccff042d2, type: 2}
+  - m_GUID: fed128656cee02445936d806ebf2ec86
+    m_Address: CYCLOPS_LEGACY_2fistsSmashAttackForward_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: fed128656cee02445936d806ebf2ec86, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fed128656cee02445936d806ebf2ec86, type: 2}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 64f49dbb5e1a8914eab3a9426351e51c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 366dfc03ac449814d8a8d0e973aa51ea, type: 2}
+    - {fileID: 11400000, guid: 299feeba82a749d419af8a94ff0eddc2, type: 2}

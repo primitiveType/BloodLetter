@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1106582660102108148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106582660102108150}
+  - component: {fileID: 2866323560649267191}
+  m_Layer: 2
+  m_Name: bloody footprint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106582660102108150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106582660102108148}
+  m_LocalRotation: {x: 0, y: -0, z: 0.011894062, w: -0.9999293}
+  m_LocalPosition: {x: 17.61, y: 5.25, z: -24.658}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -361.363}
+--- !u!114 &2866323560649267191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106582660102108148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70bdedb070f70f45aafffd3e528d446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderingMode: 0
+  controlObjectName: 0
+  type: 2
+  material: {fileID: 2100000, guid: 94ebd4ffa016351489e08c4b72d9829f, type: 2}
+  alphaCutoff: 0
+  atlasIndex: 7

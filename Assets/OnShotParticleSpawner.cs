@@ -20,12 +20,11 @@ public class OnShotParticleSpawner : MonoBehaviour
     {
         if (args.ProjectileInfo.GetDamage().Type.HasFlag(DamageType.Physical))
         {
-            var force = args.ProjectileInfo.Force;
-
+            var force = Mathf.Max(args.ProjectileInfo.Force, 1f);//always apply at least 1 to blood
             for (int i = 0; i < numToSpawn; i++)
             {
                 var hitEffect = CreateHitEffect(OnHitPrefab, null);
-                var adjustmentDistance = .1f;
+                var adjustmentDistance = .01f;
                 hitEffect.transform.position = args.WorldPos + -transform.forward * adjustmentDistance;
                 Vector3 adjustedNormal = args.HitNormal + new Vector3(Random.Range(-Variance, Variance),
                     Random.Range(-Variance, Variance), Random.Range(-Variance, Variance));

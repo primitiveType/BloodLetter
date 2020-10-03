@@ -50,11 +50,11 @@ public class AnimationMaterialDictionary : ScriptableObject
     //     EditorUtility.SetDirty(this);
     //     AssetDatabase.SaveAssets();
     // }
-    //
-    // public void DebugMe()
-    // {
-    //     foreach (var anim in PropertyBlocksByModelAnimation) Debug.Log(anim.AnimationName);
-    // }
+
+    public void DebugMe()
+    {
+        foreach (var anim in PropertyBlocksByModelAnimation) Debug.Log(anim.AnimationName);
+    }
 
 #endif
 }

@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3230963904760386635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3230963904760386628}
+  - component: {fileID: 3230963904760386634}
+  - component: {fileID: 3230963904760386629}
+  - component: {fileID: 3230963905496552816}
+  - component: {fileID: 3230963905496552817}
+  m_Layer: 2
+  m_Name: floor blood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3230963904760386628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230963904760386635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3230963904760386634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230963904760386635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70bdedb070f70f45aafffd3e528d446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderingMode: 0
+  controlObjectName: 0
+  type: 2
+  material: {fileID: 2100000, guid: 94ebd4ffa016351489e08c4b72d9829f, type: 2}
+  alphaCutoff: 0.8
+  atlasIndex: 31
+--- !u!114 &3230963904760386629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230963904760386635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ded3cc7aa96a234bacfc1e0fe42f36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decal: {fileID: 3230963904760386634}
+  min: 16
+  max: 31
+  minAlpha: 0.01
+  maxAlpha: 1
+  interpolateAlpha: 1
+  secondsInterpolation: 0.25
+  loops: 0
+--- !u!65 &3230963905496552816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230963904760386635}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.176489, z: 1}
+  m_Center: {x: -1.7351248e-10, y: 1.588245, z: 0}
+--- !u!114 &3230963905496552817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230963904760386635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d851ccd7bea02438f372eda22dd774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!54 &757678846817598725
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5342915099293334787}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &6191854001612304980
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975672916325494333}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1001 &1975672915299628205
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1161534100, guid: 8c6454199cf005a429d841faeeb18c1c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 594404131a67b7842b63939a6a652a8c, type: 2}
+    - target: {fileID: 1161534101, guid: 8c6454199cf005a429d841faeeb18c1c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161534102, guid: 8c6454199cf005a429d841faeeb18c1c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634198715712, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634198715719, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578680, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578681, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_Name
+      value: ThreeStageElevator blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022644634564578683, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: Key
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858858712214030755, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858858712214030756, guid: 8c6454199cf005a429d841faeeb18c1c,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c6454199cf005a429d841faeeb18c1c, type: 3}
+--- !u!1 &5342915099293334787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5858858712214030766, guid: 8c6454199cf005a429d841faeeb18c1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1975672915299628205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1975672916325494333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1161534096, guid: 8c6454199cf005a429d841faeeb18c1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1975672915299628205}
+  m_PrefabAsset: {fileID: 0}

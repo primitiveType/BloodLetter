@@ -1,9 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
-//[ExecuteAlways]
+[ExecuteAlways]
 public class AnimationMaterialHelper : MonoBehaviour
 {
     private static readonly int Alpha = Shader.PropertyToID("Alpha");
@@ -11,6 +13,8 @@ public class AnimationMaterialHelper : MonoBehaviour
     private static readonly int Columns = Shader.PropertyToID("Columns");
     private static readonly int Rows = Shader.PropertyToID("Rows");
     private static readonly int Frame = Shader.PropertyToID("Frame");
+    // [SerializeField] private AssetReference _dictionaryReference;
+
     [SerializeField] private AnimationMaterialDictionary _dictionary;
 
     [SerializeField] private Transform anchorTransform;
@@ -31,17 +35,29 @@ public class AnimationMaterialHelper : MonoBehaviour
 
 
     [SerializeField] private float yFudge = .01f;
+    [SerializeField] private string _currentAnimation;
 
     private Renderer MyRenderer =>
         m_MyRenderer != null ? m_MyRenderer : m_MyRenderer = materialGameObject.GetComponent<Renderer>();
 
-    private string CurrentAnimation { get; set; }
+    private string CurrentAnimation
+    {
+        get => _currentAnimation;
+        set => _currentAnimation = value;
+    }
 
 
     private void Awake()
     {
+        // _dictionaryReference.LoadAssetAsync<AnimationMaterialDictionary>().Completed +=
+        //     handle => _dictionary = handle.Result;
         // MyRenderer.material = new Material(MyRenderer.sharedMaterial);
         if (anchorTransform == null) anchorTransform = materialGameObject.transform;
+    }
+
+    private void OnDestroy()
+    {
+        // _dictionaryReference.ReleaseAsset();
     }
 
 
@@ -55,7 +71,6 @@ public class AnimationMaterialHelper : MonoBehaviour
         if (Application.isEditor && !Application.isPlaying)
         {
             //no null ref, no null ref, stop!
-            CurrentAnimation = "";
             var animator = materialGameObject.GetComponent<Animator>();
             if (animator != null && animator.isInitialized)
             {

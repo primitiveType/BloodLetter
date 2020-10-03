@@ -15,7 +15,7 @@ MonoBehaviour:
   m_MinRange: 0
   m_Range: 3
   type: 256
-  m_Force: 2
+  m_Force: 0
   m_Damage: 0.5
   OnHitWallPrefab: {fileID: 0}
   Piercing: 0

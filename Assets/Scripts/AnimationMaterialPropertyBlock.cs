@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -17,10 +18,9 @@ public class AnimationMaterialPropertyBlock
     public static readonly int TexturesProperty = Shader.PropertyToID("Textures");
     public static readonly int AlphaProperty = Shader.PropertyToID("Alpha");
     public static readonly int NormalsProperty = Shader.PropertyToID("Normals");
-    private const string AlphaSuffix = "_Alpha_Array";
-    private const string DiffuseSuffix = "_FrameBuffer_Array";
-
-    private const string NormalSuffix = "_Normal_Array";
+    private const string AlphaSuffix = "_Alpha";
+    private const string DiffuseSuffix = "_FrameBuffer";
+    private const string NormalSuffix = "_Normal";
 
     // [SerializeField] private Texture alphaMap;
     [SerializeField] private string animationName;
@@ -66,15 +66,44 @@ public class AnimationMaterialPropertyBlock
 
     private const string prefix = "Assets/SpriteOutputs/Enemies/HARPY_breastsExposed_LEGACY/";
 
-    public AsyncOperationHandle<Texture> GetNormalMap() =>
-        Addressables.LoadAssetAsync<Texture>( AnimationName + NormalSuffix);
+    private Task<Texture> GetTexture(string name)
+    {
+        if (Application.isPlaying)
+        {
+            return Addressables.LoadAssetAsync<Texture>(name).Task;
+        }
+#if UNITY_EDITOR
+        else
+        {
+            return EditorLoad(name);
+        }
+#endif
+        return null;
+    }
+
+#if UNITY_EDITOR
+
+    private Task<Texture> EditorLoad(string name)
+    {
+        var assets = AssetDatabase.FindAssets(name);
+        if (assets.Length == 0)
+        {
+            Debug.Log($"Unable to find texture for {name}");
+            return null;
+        }
+
+        var tex = AssetDatabase.LoadAssetAtPath<Texture>(AssetDatabase.GUIDToAssetPath(assets[0]));
+        return Task.FromResult(tex);
+    }
+#endif
+    public Task<Texture> GetNormalMap() => GetTexture(AnimationName + NormalSuffix);
 
 
-    public AsyncOperationHandle<Texture> GetDiffuseMap() =>
-        Addressables.LoadAssetAsync<Texture>( AnimationName + DiffuseSuffix);
+    public Task<Texture> GetDiffuseMap() =>
+        GetTexture(AnimationName + DiffuseSuffix);
 
-    public AsyncOperationHandle<Texture> GetAlphaMap() =>
-        Addressables.LoadAssetAsync<Texture>( AnimationName + AlphaSuffix);
+    public Task<Texture> GetAlphaMap() =>
+        GetTexture(AnimationName + AlphaSuffix);
 
 
     // public MaterialPropertyBlock GetMaterialPropertyBlock(MaterialPropertyBlock block)
@@ -93,9 +122,9 @@ public class AnimationMaterialPropertyBlock
     // }
     public async Task<MaterialPropertyBlock> GetMaterialPropertyBlock(MaterialPropertyBlock block)
     {
-        var normalMapTask = GetNormalMap().Task;
-        var alphaMapTask = GetAlphaMap().Task;
-        var diffuseMapTask = GetDiffuseMap().Task;
+        var normalMapTask = GetNormalMap();
+        var alphaMapTask = GetAlphaMap();
+        var diffuseMapTask = GetDiffuseMap();
 
 
         block.SetInt(RowsProperty, Rows);
@@ -120,6 +149,7 @@ public class AnimationMaterialPropertyBlock
         {
             Debug.Log($"diffuse map null for {animationName}");
         }
+
         block.SetInt(FrameWidthProperty, diffuseMap.width / columns);
         block.SetInt(FrameHeightProperty, diffuseMap.height / rows);
 

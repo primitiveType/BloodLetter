@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    [SerializeField] private int index;
+    [SerializeField] private string name;
 
     // Start is called before the first frame update
     private void Start()
     {
-        SceneManager.LoadSceneAsync(index);
+        Addressables.LoadSceneAsync(name);
     }
 
     // Update is called once per frame

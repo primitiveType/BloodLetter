@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Alpha:
-        m_Texture: {fileID: 18700000, guid: ae84876c7b2b274408d2cb59b2c6bef7, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - BloodTex:
@@ -42,11 +42,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Normals:
-        m_Texture: {fileID: 18700000, guid: f5d4d77d52abd764cb348ab6585cb3f3, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Textures:
-        m_Texture: {fileID: 18700000, guid: ed37849e0a48f6743871daa182ca5f84, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
