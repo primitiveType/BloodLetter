@@ -26,7 +26,6 @@ public class ScatterProjectileInfo : ProjectileInfoBase
             var z = Random.Range(-degreesScatter, degreesScatter);
             var position = playerDirection +
                            new Vector3(x, y, z);
-            projectileInfo.Force = Force;
             projectileInfo.TriggerShoot(playerPosition, position, actorRoot);
         }
     }

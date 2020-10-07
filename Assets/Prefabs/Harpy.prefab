@@ -85,6 +85,11 @@ PrefabInstance:
       propertyPath: anchorTransform
       value: 
       objectReference: {fileID: 4579196988362250041}
+    - target: {fileID: 4105811296551540431, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: _currentAnimation
+      value: HARPY_breastsExposed_LEGACY_idle
+      objectReference: {fileID: 0}
     - target: {fileID: 5488036821869758159, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Enabled

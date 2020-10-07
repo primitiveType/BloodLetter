@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1106582660102108136}
   - component: {fileID: 1106582660102108137}
   - component: {fileID: -5066420730036903205}
-  m_Layer: 2
+  m_Layer: 21
   m_Name: Blood Splatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8549980406765199452}
   - component: {fileID: 667134495}
-  m_Layer: 2
+  m_Layer: 21
   m_Name: Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 6971578873457410696}
   - component: {fileID: 1090157010}
   - component: {fileID: 1454415823}
-  m_Layer: 2
+  m_Layer: 21
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -21,6 +21,7 @@ public class OnShotParticleSpawner : MonoBehaviour
         if (args.ProjectileInfo.GetDamage().Type.HasFlag(DamageType.Physical))
         {
             var force = Mathf.Max(args.ProjectileInfo.Force, 1f);//always apply at least 1 to blood
+            force *= 3f;//magic multiplier
             for (int i = 0; i < numToSpawn; i++)
             {
                 var hitEffect = CreateHitEffect(OnHitPrefab, null);
