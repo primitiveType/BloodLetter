@@ -204,6 +204,7 @@ MonoBehaviour:
   reposition: 0
   resize: 0
   yFudge: 0.01
+  _currentAnimation: 
 --- !u!114 &42856472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,6 +844,7 @@ MonoBehaviour:
   reposition: 0
   resize: 0
   yFudge: 0.01
+  _currentAnimation: 
 --- !u!114 &321424112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1850,6 +1852,7 @@ MonoBehaviour:
   reposition: 0
   resize: 0
   yFudge: 0.01
+  _currentAnimation: 
 --- !u!114 &659034503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2070,6 +2073,7 @@ MonoBehaviour:
   reposition: 0
   resize: 0
   yFudge: 0.01
+  _currentAnimation: 
 --- !u!114 &812513440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2854,6 +2858,7 @@ MonoBehaviour:
   reposition: 0
   resize: 0
   yFudge: 0.01
+  _currentAnimation: 
 --- !u!114 &1187914151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5262,7 +5267,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2095383
+    m_Bits: 4192535
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6355,6 +6360,7 @@ MonoBehaviour:
   reposition: 0
   resize: 0
   yFudge: 0.01
+  _currentAnimation: 
 --- !u!1 &8643302138835086600
 GameObject:
   m_ObjectHideFlags: 0

@@ -169,6 +169,12 @@ Shader "UltimateDecals/Unlit" {
 
 				half4 col = tex2D(_MainTex, i.uv) * _Color;
 				half mask = tex2D(_Mask, i.uv).r;
+				
+				float _MaskMin = UNITY_ACCESS_INSTANCED_PROP(Props, _MaskThreshold);
+
+            	clip(mask - _MaskMin);
+
+
 				half3 emission = tex2D(_EmissionTex, i.uv) * _EmissionColor * 2;
 
 				col.rgb += emission;

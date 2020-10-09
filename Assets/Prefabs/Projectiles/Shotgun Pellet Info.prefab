@@ -46,7 +46,7 @@ MonoBehaviour:
   m_MinRange: 0
   m_Range: 100
   type: 257
-  m_Force: 1
+  m_Force: 100
   m_Damage: 3
   OnHitWallPrefab: {fileID: 7917214635672765982, guid: 2f9b1dc883fbba24b8eef46cdd87c3f8,
     type: 3}
