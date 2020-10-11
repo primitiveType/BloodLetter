@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FlyingNavigation : MonoBehaviour, INavigationAgent
 {
@@ -8,7 +9,10 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     [SerializeField] private float MaxAcceleration = 1f;
     [SerializeField] private float MaxRotationSpeed = 1f;
 
-    [SerializeField] private Transform myTransform;
+    [FormerlySerializedAs("myTransform")] [SerializeField]
+    private Transform myEyes;
+
+    [SerializeField] private Transform rigidBodyTransform;
 
     private Rigidbody rb;
     private FlyingSteeringComponent Steering { get; set; }
@@ -35,7 +39,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     {
         Steering = GetComponent<FlyingSteeringComponent>();
         rb = GetComponentInParent<Rigidbody>();
-        myTransform = transform;
+        myEyes = transform;
         ActorRoot = GetComponentInParent<ActorRoot>();
     }
 
@@ -45,7 +49,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
         var currentlyHasVision = ActorRoot.VisibilityHandler.CanSeePlayer();
 
-        var prevLocation = myTransform.position;
+        var prevLocation = myEyes.position;
 
         Vector3 dest;
         var lookDest = ActorRoot.VisibilityHandler.LastSeenPosition.Value;
@@ -68,7 +72,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     {
         var currentlyHasVision = ActorRoot.VisibilityHandler.CanSeePlayer();
 
-        if (currentlyHasVision && Vector3.Distance(myTransform.position, dest) <= BreakDistance)
+        if (currentlyHasVision && Vector3.Distance(myEyes.position, dest) <= BreakDistance)
         {
             TrySetVelocity(Vector3.zero);
         }
@@ -91,9 +95,9 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
     private void HandleRotation(Vector3 targetDestination)
     {
-        var prevLocation = myTransform.position;
+        var prevLocation = myEyes.position;
         var targetLook = (targetDestination - prevLocation).normalized;
-        var angleBetween = Vector3.Angle(targetLook, myTransform.forward);
+        var angleBetween = Vector3.Angle(targetLook, myEyes.forward);
         var tValue = Time.deltaTime;
         var maxRotationsThisframe = MaxRotationSpeed * tValue;
         var maxDegreesThisFrame = maxRotationsThisframe * 360f;
@@ -104,11 +108,11 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
             tValue *= diffRatio;
         }
 
-        var forward = myTransform.forward;
+        var forward = rigidBodyTransform.forward;
         forward = Vector3.Slerp(forward, targetLook, tValue);
 
         //forward = new Vector3(forward.x, newY, forward.z);
-        myTransform.forward = forward;
+        rigidBodyTransform.forward = forward;
         //    myTransform.rotation = Quaternion.Euler(0, myTransform.rotation.y, 0 );//HACK
     }
 

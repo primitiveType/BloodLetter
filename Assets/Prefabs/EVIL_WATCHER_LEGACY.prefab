@@ -63,7 +63,8 @@ MonoBehaviour:
   BreakDistance: 10
   MaxAcceleration: 0.1
   MaxRotationSpeed: 1000
-  myTransform: {fileID: 7361890597492146673}
+  myEyes: {fileID: 7361890597492146673}
+  rigidBodyTransform: {fileID: 7361890597492146673}
 --- !u!135 &7778312746031944532
 SphereCollider:
   m_ObjectHideFlags: 0

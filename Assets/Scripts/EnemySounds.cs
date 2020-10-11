@@ -110,7 +110,9 @@ public class EnemySounds : MonoBehaviour
 
     private void OnEnemyStepped(object sender, OnStepEventArgs args)
     {
-        StepSource.PlayOneShot(StepClip);
+        var clip = StepClip;
+        if (clip)
+            StepSource.PlayOneShot(clip);
     }
 
     private void OnDestroy()

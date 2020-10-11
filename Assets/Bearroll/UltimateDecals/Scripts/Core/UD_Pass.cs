@@ -52,12 +52,12 @@ namespace Bearroll.UltimateDecals
                 if (batch.count == 0) continue;
 
                 if (batch.material == null) continue;
+                commandBuffer.SetGlobalFloatArray("_MaskThreshold", batch.alphaCutoffs);
 
                 if (!batch.isLit) continue;
 
                 commandBuffer.SetGlobalVectorArray("_Size", batch.sizes);
                 commandBuffer.SetGlobalFloatArray("_AtlasIndexOffset", batch.atlasIndices);
-                commandBuffer.SetGlobalFloatArray("_MaskThreshold", batch.alphaCutoffs);
                 commandBuffer.SetGlobalFloatArray("_CreateTime", batch.ctimes);
 
 #if UD_LWRP || UD_URP
@@ -82,12 +82,13 @@ namespace Bearroll.UltimateDecals
                 if (batch.count == 0) continue;
 
                 if (batch.material == null) continue;
+                
+                commandBuffer.SetGlobalFloatArray("_MaskThreshold", batch.alphaCutoffs);
 
                 if (batch.isLit) continue;
 
                 commandBuffer.SetGlobalVectorArray("_Size", batch.sizes);
                 commandBuffer.SetGlobalFloatArray("_AtlasIndexOffset", batch.atlasIndices);
-                commandBuffer.SetGlobalFloatArray("_MaskThreshold", batch.alphaCutoffs);
                 commandBuffer.SetGlobalFloatArray("_CreateTime", batch.ctimes);
 
                 commandBuffer.DrawMeshInstanced(ResourceManager.instanceMesh, 0, batch.material, 0, batch.matrices,
