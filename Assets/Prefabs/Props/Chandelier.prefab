@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aa1697d3c28e748a0083b00080796d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ToFace: {fileID: 0}
 --- !u!1 &5189588656214282934
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,9 +139,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
+  anchorTransform: {fileID: 0}
+  anchorTransformCollider: {fileID: 0}
   materialGameObject: {fileID: 5189588656214282934}
-  resize: 1
   reposition: 0
+  resize: 1
+  yFudge: 0.01
+  _currentAnimation: 
 --- !u!95 &5189588656214282923
 Animator:
   serializedVersion: 3
@@ -205,8 +210,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.9811321, g: 0.80487084, b: 0.5507298, a: 1}
-  m_Intensity: 177.92
-  m_Range: 16.07721
+  m_Intensity: 233.68
+  m_Range: 17.080193
   m_SpotAngle: 114.40617
   m_InnerSpotAngle: 95.56103
   m_CookieSize: 10
@@ -244,7 +249,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -261,14 +266,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5189588656513619964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ca7c0d701563db48945eb1f043c2081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFlickerTime: 0.1
-  maxFlickerTime: 0.04
   FlickerAmount: 1
+  maxFlickerTime: 0.04
+  minFlickerTime: 0.1
 --- !u!114 &5189588656513619952
 MonoBehaviour:
   m_ObjectHideFlags: 0

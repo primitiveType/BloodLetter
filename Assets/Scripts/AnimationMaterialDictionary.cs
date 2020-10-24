@@ -12,6 +12,7 @@ public class AnimationMaterialDictionary : ScriptableObject
     public static readonly int NumPixelsPerMeter = 40;
     [SerializeField] private List<AnimationMaterialPropertyBlock> PropertyBlocksByModelAnimation;
 
+    public List<AnimationMaterialPropertyBlock> PropertyBlocks => PropertyBlocksByModelAnimation.ToList();
 
     public Task<MaterialPropertyBlock> GetPropertyBlock(MaterialPropertyBlock propertyBlock, string key)
     {

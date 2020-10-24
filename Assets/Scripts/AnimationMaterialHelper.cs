@@ -16,6 +16,8 @@ public class AnimationMaterialHelper : MonoBehaviour
     // [SerializeField] private AssetReference _dictionaryReference;
 
     [SerializeField] private AnimationMaterialDictionary _dictionary;
+    
+    
 
     [SerializeField] private Transform anchorTransform;
     [SerializeField] private Collider anchorTransformCollider;
@@ -53,6 +55,15 @@ public class AnimationMaterialHelper : MonoBehaviour
         //     handle => _dictionary = handle.Result;
         // MyRenderer.material = new Material(MyRenderer.sharedMaterial);
         if (anchorTransform == null) anchorTransform = materialGameObject.transform;
+        PreloadAssets();
+    }
+
+    private void PreloadAssets()
+    {
+        foreach (AnimationMaterialPropertyBlock block in _dictionary.PropertyBlocks)
+        {
+            block.GetDiffuseMap();
+        }
     }
 
     private void OnDestroy()

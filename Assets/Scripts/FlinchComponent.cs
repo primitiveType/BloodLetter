@@ -19,8 +19,11 @@ public class FlinchComponent : MonoBehaviour
         get => _isFlinching;
         private set
         {
-            _isFlinching = value;
-            Animator.SetBool(HurtBool, _isFlinching);
+            if (_isFlinching != value)
+            {
+                _isFlinching = value;
+                Animator.SetBool(HurtBool, _isFlinching);
+            }
         }
     }
 

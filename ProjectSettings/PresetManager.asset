@@ -13,3 +13,9 @@ PresetManager:
     - m_Preset: {fileID: 2655988077585873504, guid: 7f3b7da1cecc7124582558f5753b2360,
         type: 2}
       m_Filter: 
+    - m_Preset: {fileID: 2655988077585873504, guid: f081c66f221d72446bd3ddcdcc1c20f8,
+        type: 2}
+      m_Filter: _dir.png
+    - m_Preset: {fileID: 2655988077585873504, guid: f081c66f221d72446bd3ddcdcc1c20f8,
+        type: 2}
+      m_Filter: _light.exr

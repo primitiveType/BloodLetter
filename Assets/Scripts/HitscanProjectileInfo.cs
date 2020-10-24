@@ -72,7 +72,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                     if (damaged != null && damaged != actorRoot.HitscanCollider && damaged.IsHit(hitCoord))
                     {
                         
-                        Debug.Log($"{actorRoot} hit {damaged}");
+//                        Debug.Log($"{actorRoot} hit {damaged}");
                         return damaged;
                     }
                 }

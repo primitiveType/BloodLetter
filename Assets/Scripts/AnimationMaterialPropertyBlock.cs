@@ -63,8 +63,7 @@ public class AnimationMaterialPropertyBlock
         get => normalizedGroundPosition;
         set => normalizedGroundPosition = value;
     }
-
-    private const string prefix = "Assets/SpriteOutputs/Enemies/HARPY_breastsExposed_LEGACY/";
+    
 
     private Task<Texture> GetTexture(string name)
     {

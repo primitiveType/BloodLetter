@@ -24,6 +24,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: f3a54662291082b46a60e337e487e8af, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Alpha:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Emission_Map:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,10 +80,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_611AADEE_Out_0:
+        m_Texture: {fileID: 2800000, guid: 79d23170ba007c544a328a25b86ee364, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_C1E10AD5_Out_0:
+        m_Texture: {fileID: 2800000, guid: 79d23170ba007c544a328a25b86ee364, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - AlphaClip: 0.5
     - BOOLEAN_A0C15CD: 0
+    - LOD_Override: 3
+    - LightingPosterize: 8
     - PixelScale: 9.37
     - Quantize: 8
+    - Vector1_B5A9848C: 32
+    - VertexSnapDistanceAdjust: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -108,6 +125,7 @@ Material:
     m_Colors:
     - LightClampMax: {r: 1, g: 1, b: 1, a: 0}
     - Tiling: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - Tint: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

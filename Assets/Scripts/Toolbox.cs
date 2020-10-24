@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using Debug = UnityEngine.Debug;
 
 public class Toolbox : MonoBehaviourSingleton<Toolbox>

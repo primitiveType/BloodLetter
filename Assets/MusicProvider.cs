@@ -5,7 +5,7 @@ public class MusicProvider : MonoBehaviour
 {
     public IntroloopAudio Music;
 
-    private void Start()
+    private void OnEnable()
     {
         IntroloopPlayer.Instance.Play(Music);
     }
