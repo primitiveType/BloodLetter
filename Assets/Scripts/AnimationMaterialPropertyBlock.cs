@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.UI;
 
 [Serializable]
 public class AnimationMaterialPropertyBlock
@@ -63,7 +64,7 @@ public class AnimationMaterialPropertyBlock
         get => normalizedGroundPosition;
         set => normalizedGroundPosition = value;
     }
-    
+
 
     private Task<Texture> GetTexture(string name)
     {
@@ -82,16 +83,26 @@ public class AnimationMaterialPropertyBlock
 
 #if UNITY_EDITOR
 
-    private Task<Texture> EditorLoad(string name)
+    private static Dictionary<string, Texture> Textures = new Dictionary<string, Texture>();
+    private static Task<Texture> EditorLoad(string name)
     {
+        if (Textures.ContainsKey(name))
+        {
+            return Task.FromResult(Textures[name]);
+        }
+
         var assets = AssetDatabase.FindAssets(name);
+
         if (assets.Length == 0)
         {
             Debug.Log($"Unable to find texture for {name}");
+            Textures[name] = null;
             return null;
         }
 
+
         var tex = AssetDatabase.LoadAssetAtPath<Texture>(AssetDatabase.GUIDToAssetPath(assets[0]));
+        Textures[name] = tex;
         return Task.FromResult(tex);
     }
 #endif

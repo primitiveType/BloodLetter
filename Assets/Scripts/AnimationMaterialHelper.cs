@@ -55,16 +55,10 @@ public class AnimationMaterialHelper : MonoBehaviour
         //     handle => _dictionary = handle.Result;
         // MyRenderer.material = new Material(MyRenderer.sharedMaterial);
         if (anchorTransform == null) anchorTransform = materialGameObject.transform;
-        PreloadAssets();
+      
     }
 
-    private void PreloadAssets()
-    {
-        foreach (AnimationMaterialPropertyBlock block in _dictionary.PropertyBlocks)
-        {
-            block.GetDiffuseMap();
-        }
-    }
+  
 
     private void OnDestroy()
     {
