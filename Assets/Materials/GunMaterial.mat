@@ -84,10 +84,11 @@ Material:
     m_Floats:
     - Columns: 4
     - Frame: 0
-    - FrameHeight: 200
-    - FrameWidth: 200
-    - NumFrames: 10
+    - FrameHeight: 1
+    - FrameWidth: 1
+    - NumFrames: 2.1
     - Rows: 3
+    - Vector1_3FD8F751: 200
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1

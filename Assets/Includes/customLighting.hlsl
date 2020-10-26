@@ -55,7 +55,7 @@ void MainLight_half(float3 WorldPos, out half3 Direction, out half3 Color, out h
             DistanceAtten = mainLight.distanceAttenuation;
  
         #if !defined(_MAIN_LIGHT_SHADOWS) || defined(_RECEIVE_SHADOWS_OFF)
-            ShadowAtten = .5h;
+            ShadowAtten = 1.0h;
         #endif
  
         #if SHADOWS_SCREEN
@@ -94,7 +94,7 @@ void DirectSpecular_half(half3 Specular, half Smoothness, half3 Direction, half3
 #endif
 }
 
-void AdditionalLights_float(float3 SpecColor, float Smoothness, float3 WorldPosition, float3 WorldNormal, float3 WorldView, out float3 Diffuse, out float3 Specular, out float ShadowAtten)
+    void AdditionalLights_float(float3 SpecColor, float Smoothness, float3 WorldPosition, float3 WorldNormal, float3 WorldView, bool useShadows, out float3 Diffuse, out float3 Specular, out float ShadowAtten)
 {
     float3 diffuseColor = 0;
     float3 specularColor = 0;
@@ -108,7 +108,13 @@ void AdditionalLights_float(float3 SpecColor, float Smoothness, float3 WorldPosi
     for (int i = 0; i < pixelLightCount; ++i)
     {
         Light light = GetAdditionalLight(i, WorldPosition);
-        half3 attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+                half3 attenuatedLightColor;
+
+        if(!useShadows){
+            attenuatedLightColor = light.color * (light.distanceAttenuation);
+        }else{                  
+            attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+            }
         diffuseColor += LightingLambert(attenuatedLightColor, light.direction, WorldNormal);
         specularColor += LightingSpecular(attenuatedLightColor, light.direction, WorldNormal, WorldView, float4(SpecColor, 0), Smoothness);
         ShadowAtten = max(ShadowAtten, light.shadowAttenuation);
@@ -144,7 +150,7 @@ void TotalAttenuatedLightColor_float(float3 WorldPosition, out float3 LightColor
 #endif
 }
 
-void AdditionalLights_half(half3 SpecColor, half Smoothness, half3 WorldPosition, half3 WorldNormal, half3 WorldView, out half3 Diffuse, out half3 Specular, out half ShadowAtten)
+void AdditionalLights_half(half3 SpecColor, half Smoothness, half3 WorldPosition, half3 WorldNormal, half3 WorldView,bool useShadows, out half3 Diffuse, out half3 Specular, out half ShadowAtten)
 {
     half3 diffuseColor = 0;
     half3 specularColor = 0;
@@ -158,7 +164,14 @@ void AdditionalLights_half(half3 SpecColor, half Smoothness, half3 WorldPosition
     for (int i = 0; i < pixelLightCount; ++i)
     {
         Light light = GetAdditionalLight(i, WorldPosition);
-        half3 attenuatedLightColor = light.color *(light.distanceAttenuation * light.shadowAttenuation );
+        half3 attenuatedLightColor;
+        if(!useShadows){
+            attenuatedLightColor = light.color * (light.distanceAttenuation);
+        }else{                  
+            attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+            }
+
+        
         diffuseColor += LightingLambert(attenuatedLightColor, light.direction, WorldNormal);
         specularColor += LightingSpecular(attenuatedLightColor, light.direction, WorldNormal, WorldView, half4(SpecColor, 0), Smoothness);
                 ShadowAtten = min(ShadowAtten, light.shadowAttenuation);
