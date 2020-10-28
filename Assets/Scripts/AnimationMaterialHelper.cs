@@ -12,12 +12,12 @@ public class AnimationMaterialHelper : MonoBehaviour
     private static readonly int Perspective = Shader.PropertyToID("Perspective");
     private static readonly int Columns = Shader.PropertyToID("Columns");
     private static readonly int Rows = Shader.PropertyToID("Rows");
+
     private static readonly int Frame = Shader.PropertyToID("Frame");
     // [SerializeField] private AssetReference _dictionaryReference;
 
     [SerializeField] private AnimationMaterialDictionary _dictionary;
-    
-    
+
 
     [SerializeField] private Transform anchorTransform;
     [SerializeField] private Collider anchorTransformCollider;
@@ -55,10 +55,16 @@ public class AnimationMaterialHelper : MonoBehaviour
         //     handle => _dictionary = handle.Result;
         // MyRenderer.material = new Material(MyRenderer.sharedMaterial);
         if (anchorTransform == null) anchorTransform = materialGameObject.transform;
-      
+
+        if (Application.isPlaying)
+            CurrentAnimation = "";
+
+#if UNITY_EDITOR
+
+#else
+#endif
     }
 
-  
 
     private void OnDestroy()
     {
@@ -95,8 +101,8 @@ public class AnimationMaterialHelper : MonoBehaviour
             var block = new MaterialPropertyBlock();
 
             await SetPropertyBlockAsync();
-            
-            
+
+
             async Task SetPropertyBlockAsync()
             {
                 CurrentAnimation = animationName;
@@ -104,7 +110,7 @@ public class AnimationMaterialHelper : MonoBehaviour
                 MyRenderer.GetPropertyBlock(block);
                 block = await _dictionary.GetPropertyBlock(block, animationName);
 
-        
+
                 MyRenderer.SetPropertyBlock(block);
                 var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;
 
@@ -112,24 +118,21 @@ public class AnimationMaterialHelper : MonoBehaviour
                             pxPerMeter;
                 var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
                              pxPerMeter;
-                var offset = height / 2f - height * block.GetFloat(AnimationMaterialPropertyBlock.GroundPositionProperty);
+                var offset = 2*
+                             height * block.GetFloat(AnimationMaterialPropertyBlock.GroundPositionProperty);
                 if (resize)
                     anchorTransform.localScale =
                         new Vector3(width, height, 1);
 
                 if (reposition)
                 {
-                    if (anchorTransformCollider) yFudge = anchorTransformCollider.bounds.size.y / 2f;
 
                     anchorTransform.localPosition = new Vector3(0, offset, 0);
                 }
             }
         }
-        
-        
     }
 
-    
 
     /// <summary>
     ///     returns true if the coordinate is alpha > .5f for the current anim frame

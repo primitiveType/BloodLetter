@@ -274,6 +274,7 @@ MonoBehaviour:
   FlickerAmount: 1
   maxFlickerTime: 0.04
   minFlickerTime: 0.1
+  MovementAmount: 1
 --- !u!114 &5189588656513619952
 MonoBehaviour:
   m_ObjectHideFlags: 0

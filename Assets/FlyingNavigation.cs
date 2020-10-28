@@ -46,6 +46,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     private void FixedUpdate()
     {
         if (!ActorRoot.VisibilityHandler.LastSeenPosition.HasValue) return;
+        if (!ActorRoot.Health.IsAlive) return;
 
         var currentlyHasVision = ActorRoot.VisibilityHandler.CanSeePlayer();
 

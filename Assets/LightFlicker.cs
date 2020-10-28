@@ -12,12 +12,30 @@ public class LightFlicker : MonoBehaviour
 
     private Light testLight;
 
+    public float MovementAmount = 0f;
+    public float MovementSpeed = 1f;
+
+    private Vector3 startPosition;
+
     // Use this for initialization
     private void Start()
     {
         testLight = GetComponent<Light>();
+        startPosition = transform.position;
         startIntensity = testLight.intensity;
         StartCoroutine(Flashing());
+        StartCoroutine(Movement());
+    }
+
+    private IEnumerator Movement()
+    {
+        while (true)
+        {
+            yield return null;
+            var delta = Mathf.Sin(Time.time * MovementSpeed) * MovementAmount; 
+            transform.position = new Vector3(startPosition.x + delta, startPosition.y + delta,
+                startPosition.z + delta);
+        }
     }
 
     private IEnumerator Flashing()
