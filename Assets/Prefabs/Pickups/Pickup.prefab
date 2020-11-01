@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aa1697d3c28e748a0083b00080796d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ToFace: {fileID: 0}
 --- !u!1 &4820653037536580039
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,8 +72,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4820653037536580039}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.49, z: 0}
-  m_LocalScale: {x: 1.8, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5241606277932844886}
   m_RootOrder: 0
@@ -137,12 +138,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
-  materialGameObject: {fileID: 4820653037536580039}
   anchorTransform: {fileID: 5679389759790915248}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 1
+  materialGameObject: {fileID: 4820653037536580039}
   reposition: 1
+  resize: 1
+  yFudge: 0.01
+  _currentAnimation: pkup_ammo_sgun_sm_TPose
   InfoName: pkup_ammo_sgun_sm_TPose
 --- !u!1 &8938549416118754574
 GameObject:
@@ -200,7 +202,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 56d4ae8ebecb6b149897c33cfda140c7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

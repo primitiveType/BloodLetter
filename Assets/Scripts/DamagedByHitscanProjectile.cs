@@ -29,7 +29,8 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
         Events.OnShot(projectileInfo, worldPos, hitNormal);
     }
 
-    public void OnShot(HitscanProjectileInfo projectileInfo, Vector3 worldPos, Vector3 hitNormal)
+    public void 
+        OnShot(HitscanProjectileInfo projectileInfo, Vector3 worldPos, Vector3 hitNormal)
     {
         Events.OnShot(projectileInfo, worldPos, hitNormal);
     }

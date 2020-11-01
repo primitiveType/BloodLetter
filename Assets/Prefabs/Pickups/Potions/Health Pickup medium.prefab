@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toast: 1
-  HealAmount: 15
   CanOverheal: 1
+  HealAmount: 15
 --- !u!1001 &6423547227935155101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22,6 +22,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1666228708807988817, guid: 840132d33d5f54540a847823e764d2fd,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f00a930e8d8ba804fa663970336666eb, type: 3}
     - target: {fileID: 2832319209844191510, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: InfoName

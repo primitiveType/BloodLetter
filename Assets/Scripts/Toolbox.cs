@@ -22,6 +22,7 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     public float TimestopDuration { get; } = 15;
 
     public PlayerRoot PlayerRoot { get; private set; }
+    
 
     public bool IsPlayerDead { get; private set; }
 

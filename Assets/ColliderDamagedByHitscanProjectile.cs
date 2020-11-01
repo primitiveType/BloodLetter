@@ -1,8 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjectile
 {
-    [SerializeField] private IActorEvents Events;
+    private ActorRoot Root;
+
+    public Collider Collider { get; private set; }
+
+    private void Awake()
+    {
+        Collider = GetComponent<Collider>();
+    }
 
     public bool IsHit(Vector2 textureCoord)
     {
@@ -11,12 +19,12 @@ public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitsc
 
     public void OnShot(Vector2 textureCoord, Vector3 worldPos, HitscanProjectileInfo projectileInfo, Vector3 hitNormal)
     {
-        Events.OnShot(projectileInfo, worldPos, hitNormal);
+        Root.ActorEvents.OnShot(projectileInfo, Collider.ClosestPoint(worldPos), hitNormal);
     }
 
     public void OnShot(HitscanProjectileInfo projectileInfo, Vector3 worldPos, Vector3 hitNormal)
     {
-        Events.OnShot(projectileInfo, worldPos, hitNormal);
+        Root.ActorEvents.OnShot(projectileInfo, Collider.ClosestPoint(worldPos), hitNormal);
     }
 
     public void SetEnabled(bool enabled)
@@ -26,6 +34,6 @@ public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitsc
 
     private void Start()
     {
-        if (Events == null) Events = GetComponent<IActorEvents>();
+        if (Root == null) Root = GetComponent<ActorRoot>();
     }
 }

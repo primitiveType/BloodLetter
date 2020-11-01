@@ -10,8 +10,9 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
         Debug.DrawLine(ownerPosition, direction);
         var layerToCheckForDamage = GetLayerToCheckForDamage(actorRoot.EntityType);
 
-        var raycastMask = GetRaycastMask(actorRoot.EntityType);
-        var size = Physics.OverlapSphereNonAlloc(ownerPosition + direction, 1, hits, raycastMask);
+        var raycastMask = LayerMask.GetMask("Enemy", "DeadEnemy");
+        var position = ownerPosition + direction;
+        var size = Physics.OverlapSphereNonAlloc(position, 1, hits, raycastMask);
         var isDone = false;
         for (var i = 0; i < size; i++)
         {
@@ -23,7 +24,7 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
             var damaged = hit.GetComponent<IDamagedByHitscanProjectile>();
             if (damaged != null)
             {
-                damaged.OnShot(this, hit.transform.position, direction);
+                damaged.OnShot(this, hit.ClosestPoint(position), direction);
                 //isDone = true;
             }
             else if (OnHitWallPrefab)

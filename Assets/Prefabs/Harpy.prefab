@@ -103,23 +103,28 @@ PrefabInstance:
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: hurtClips.Array.size
-      value: 12
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: attackClips.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: deathClips.Array.size
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: aggroClips.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: hurtClips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: afcebb82f6d3e174aa15e1f48d49ca97, type: 3}
+      objectReference: {fileID: 8300000, guid: 030cdeb5961673646b3085d4a373b5b6, type: 3}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: hurtClips.Array.data[1]
@@ -179,7 +184,7 @@ PrefabInstance:
         type: 3}
       propertyPath: deathClips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: afb778a3de13a5141880cc854f5465b3, type: 3}
+      objectReference: {fileID: 8300000, guid: 486adecb9012f3b43b1bf2acb3f9b9ee, type: 3}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: deathClips.Array.data[1]
@@ -200,6 +205,16 @@ PrefabInstance:
       propertyPath: deathClips.Array.data[4]
       value: 
       objectReference: {fileID: 8300000, guid: a25f979e8dbd85549a1edb420ec1da52, type: 3}
+    - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: attackClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fcfaf47558f2a3b46acf1c70639c9395, type: 3}
+    - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: aggroClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9921fc10b263c654da63a35a2f2b0a7e, type: 3}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.y

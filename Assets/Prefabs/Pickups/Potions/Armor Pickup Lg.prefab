@@ -102,5 +102,10 @@ PrefabInstance:
       propertyPath: ArmorAmount
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6773528107824516946, guid: 845ef223be15e88408df6cd0cff0b120,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f00a930e8d8ba804fa663970336666eb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 845ef223be15e88408df6cd0cff0b120, type: 3}

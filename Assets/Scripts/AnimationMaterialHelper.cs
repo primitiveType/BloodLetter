@@ -118,7 +118,7 @@ public class AnimationMaterialHelper : MonoBehaviour
                             pxPerMeter;
                 var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
                              pxPerMeter;
-                var offset = 2*
+                var offset = (height / 2f) +
                              height * block.GetFloat(AnimationMaterialPropertyBlock.GroundPositionProperty);
                 if (resize)
                     anchorTransform.localScale =
@@ -126,7 +126,6 @@ public class AnimationMaterialHelper : MonoBehaviour
 
                 if (reposition)
                 {
-
                     anchorTransform.localPosition = new Vector3(0, offset, 0);
                 }
             }

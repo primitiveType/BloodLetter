@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &890110108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487683930769927172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72c8719653309a4cb810642dbda8dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toast: 1
+  damageToIgnore: -1
+  toastString: Picked Up a Bloodless Heart!
 --- !u!95 &890110111
 Animator:
   serializedVersion: 3
@@ -32,27 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: f14bf2908fccfff49b46f9bcd1ce9c46, type: 2}
-  materialGameObject: {fileID: 5413382418492760269}
   anchorTransform: {fileID: 5122679787047464890}
   anchorTransformCollider: {fileID: 0}
-  yFudge: 0.01
-  resize: 0
+  materialGameObject: {fileID: 5413382418492760269}
   reposition: 0
---- !u!114 &890110108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8487683930769927172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a72c8719653309a4cb810642dbda8dd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toast: 1
-  damageToIgnore: -1
-  toastString: Picked Up a Bloodless Heart!
+  resize: 0
+  yFudge: 0.01
+  _currentAnimation: Invuln Pickup_custom beat
 --- !u!1001 &704343598297886986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,6 +61,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1666228708807988817, guid: 840132d33d5f54540a847823e764d2fd,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 47795a726c9735c44ad32fa8124c45cf, type: 3}
     - target: {fileID: 5241606277932844886, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_LocalRotation.y
