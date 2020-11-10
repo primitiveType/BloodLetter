@@ -23,11 +23,13 @@ public class ActorRoot : MonoBehaviour
     public virtual EntityType EntityType => EntityType.Enemy;
     public INavigationAgent Navigation { get; set; }
     public FlinchComponent Flinch { get; set; }
+    public MonsterAttackComponent Attack { get; set; }
 
 
     private void Awake()
     {
         Animator = GetComponentInChildren<Animator>();
+        Attack = GetComponentInChildren<MonsterAttackComponent>();
         ActorEvents = GetComponentInChildren<IActorEvents>();
         AnimationMaterialHelper = GetComponentInChildren<AnimationMaterialHelper>();
         HitscanCollider = GetComponentInChildren<IDamagedByHitscanProjectile>();

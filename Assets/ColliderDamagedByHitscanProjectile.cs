@@ -9,6 +9,7 @@ public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitsc
 
     private void Awake()
     {
+        Root = GetComponentInParent<ActorRoot>();
         Collider = GetComponent<Collider>();
     }
 

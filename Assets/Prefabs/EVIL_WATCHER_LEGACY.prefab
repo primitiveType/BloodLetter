@@ -154,7 +154,7 @@ PrefabInstance:
     - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: CooldownStartsOnAggro
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -204,17 +204,22 @@ PrefabInstance:
     - target: {fileID: 7486875836196438498, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: AggroDelayVariance
-      value: 0.5
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486875836196438498, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: AggroRange
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70839196
+      value: 0.47455454
       objectReference: {fileID: 0}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7058193
+      value: 0.8802261
       objectReference: {fileID: 0}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

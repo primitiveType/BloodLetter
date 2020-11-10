@@ -7,6 +7,8 @@ public class LiquidSource : MonoBehaviour
 {
     //TODO:type for blood, oil, etc
     float totalLiquid = 100;
+    private LiquidType LiquidType { get; set; }
+
     private void OnTriggerEnter(Collider other)
     {
         var dragger = other.GetComponent < LiquidDragger>();
@@ -17,18 +19,18 @@ public class LiquidSource : MonoBehaviour
     
         var amountToTake = totalLiquid / 2f;
         totalLiquid -= amountToTake;
-        dragger.AddLiquid(amountToTake);
+        dragger.AddLiquid(amountToTake, LiquidType);
     
         if (totalLiquid < 1f)
         {
-            Destroy(this);
+            Destroy(this);//stop checking for collisions once we are out of liquid
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        LiquidType = GetComponent<LiquidTypeComponent>().LiquidType;
     }
 
     // Update is called once per frame

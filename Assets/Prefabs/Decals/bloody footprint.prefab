@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1106582660102108150}
   - component: {fileID: 2866323560649267191}
+  - component: {fileID: 6244098526520230813}
+  - component: {fileID: 4523253017568552482}
   m_Layer: 2
   m_Name: bloody footprint
   m_TagString: Untagged
@@ -49,3 +51,30 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 94ebd4ffa016351489e08c4b72d9829f, type: 2}
   alphaCutoff: 0
   atlasIndex: 7
+--- !u!114 &6244098526520230813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106582660102108148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7664b49b4946a3b92181c5a0024f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _liquidType: 0
+--- !u!114 &4523253017568552482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106582660102108148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1598533877a2bcb40838d1c8bc7fa78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BloodMaterial: {fileID: 2100000, guid: 94ebd4ffa016351489e08c4b72d9829f, type: 2}
+  OilMaterial: {fileID: 2100000, guid: e6e5ce09ac21fc448b639d6df3a37060, type: 2}

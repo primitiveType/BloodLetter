@@ -14,9 +14,11 @@ public class LiquidDragger : MonoBehaviour
 
     private float leftRightOffset = .5f;
 
-    public void AddLiquid(float amount) //and type
+    private LiquidType LiquidType { get; set; }
+    public void AddLiquid(float amount, LiquidType type) 
     {
         liquidAmount += amount;
+        LiquidType = type;//always use the most recent type
     }
 
     private void Start()
@@ -31,7 +33,7 @@ public class LiquidDragger : MonoBehaviour
         ActorRoot.ActorEvents.OnStepEvent -= ActorEventsOnOnStepEvent;
     }
 
-    private int index;
+    private int StepIndex { get; set; }
 
 
     private void ActorEventsOnOnStepEvent(object sender, OnStepEventArgs args)
@@ -41,8 +43,8 @@ public class LiquidDragger : MonoBehaviour
             if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit info, 3, LayerMask.GetMask("Default"),
                 QueryTriggerInteraction.Ignore))
             {
-                index++;
-                var isLeftFoot = index % 2 == 0;
+                StepIndex++;
+                var isLeftFoot = StepIndex % 2 == 0;
 
                 var amountToUse = (liquidAmount / 2.25f);
                 liquidAmount -= amountToUse;
@@ -61,7 +63,7 @@ public class LiquidDragger : MonoBehaviour
                 var tValue = 1 - (15f / amountToUse);
 
                 decal.alphaCutoff = Mathf.Lerp(1f, .01f, tValue);
-                UD_Manager.UpdateDecal(decal); //TODO:!
+                decal.GetComponent<LiquidTypeComponent>().LiquidType = LiquidType;
             }
         }
     }

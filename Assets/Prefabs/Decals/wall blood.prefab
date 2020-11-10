@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8777132153264916151}
   - component: {fileID: 8777132153264916153}
   - component: {fileID: 8777132153264916152}
+  - component: {fileID: -8910718235534724591}
+  - component: {fileID: 287165255868686332}
   m_Layer: 2
   m_Name: wall blood
   m_TagString: Untagged
@@ -70,3 +72,30 @@ MonoBehaviour:
   interpolateAlpha: 1
   secondsInterpolation: 5
   loops: 0
+--- !u!114 &-8910718235534724591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8777132153264916154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7664b49b4946a3b92181c5a0024f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _liquidType: 0
+--- !u!114 &287165255868686332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8777132153264916154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1598533877a2bcb40838d1c8bc7fa78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BloodMaterial: {fileID: 2100000, guid: 94ebd4ffa016351489e08c4b72d9829f, type: 2}
+  OilMaterial: {fileID: 2100000, guid: e6e5ce09ac21fc448b639d6df3a37060, type: 2}

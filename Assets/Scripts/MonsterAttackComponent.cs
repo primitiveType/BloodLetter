@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -19,6 +20,12 @@ public class MonsterAttackComponent : MonoBehaviour
 
     [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
 
+    private Coroutine AttackRoutine;
+    private readonly float attackTime = .5f;
+
+    public bool IsAttacking { get; private set; }
+
+    
     public float AttackCooldown => m_AttackCooldown;
     private List<ProjectileInfoBase> Attacks { get; set; }
 
@@ -29,7 +36,7 @@ public class MonsterAttackComponent : MonoBehaviour
     }
 
     private Transform Target { get; set; }
-    private Transform MonsterTransform { get; set; }
+    private Transform AttackSourceTransform { get; set; }
 
     private float LastAttackTimeStamp { get; set; } = float.NegativeInfinity;
 
@@ -44,13 +51,38 @@ public class MonsterAttackComponent : MonoBehaviour
         Attacks = m_Attacks.OrderBy(a => a.Range).ToList();
         Events.OnAttackEvent += OnEnemyAttack;
         Target = Toolbox.Instance.PlayerHeadTransform;
-        MonsterTransform = transform;
+        AttackSourceTransform = transform;
     }
 
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
-        var position = MonsterTransform.position;
-        CurrentAttack.TriggerShoot(MonsterTransform, Target.position - position, ActorRoot);
+        var position = AttackSourceTransform.position;
+        var targetPosition = Target.position;
+        CurrentAttack.TriggerShoot(AttackSourceTransform, targetPosition - position, ActorRoot);
+        
+        if (AttackRoutine != null) StopCoroutine(AttackRoutine);
+
+        AttackRoutine = StartCoroutine(AttackTimerCr());
+    }
+    
+    private IEnumerator AttackTimerCr()//this is still technically wrong because it doesn't start until the attack event, which could be near the end of the animation
+    {
+        IsAttacking = true;
+        var length = Animator.GetCurrentAnimatorStateInfo(0).length;
+        float startTime = Time.time;
+        float time = startTime;
+        yield return new WaitForEndOfFrame();
+        while (time < startTime + length)
+        {
+            yield return new WaitForEndOfFrame();
+            var position = ActorRoot.transform.position;
+            var targetPosition = Target.position;
+            var lookPosition = new Vector3(targetPosition.x, position.y, targetPosition.z);
+           ActorRoot.transform.LookAt(lookPosition);
+            time += Time.deltaTime;
+        }
+
+        IsAttacking = false;
     }
 
 

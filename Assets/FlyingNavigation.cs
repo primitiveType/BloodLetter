@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 using UnityEngine.Serialization;
 
 public class FlyingNavigation : MonoBehaviour, INavigationAgent
@@ -32,6 +33,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
     public void SetDestination(Vector3 targetPosition)
     {
+        //TargetPosition = targetPosition;
     }
 
     // Start is called before the first frame update
@@ -65,6 +67,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         }
 
         TargetPosition = dest;
+     
         HandleRotation(lookDest);
         HandleVelocity(dest);
     }
@@ -75,7 +78,8 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
         if (currentlyHasVision && Vector3.Distance(myEyes.position, dest) <= BreakDistance)
         {
-            TrySetVelocity(Vector3.zero);
+            return;
+            TrySetVelocity(Vector3.up);
         }
         else
         {
@@ -97,7 +101,8 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     private void HandleRotation(Vector3 targetDestination)
     {
         var prevLocation = myEyes.position;
-        var targetLook = (targetDestination - prevLocation).normalized;
+        var targetDestinationWithoutY = new Vector3(targetDestination.x, prevLocation.y, targetDestination.z);
+        var targetLook = (targetDestinationWithoutY - prevLocation).normalized;
         var angleBetween = Vector3.Angle(targetLook, myEyes.forward);
         var tValue = Time.deltaTime;
         var maxRotationsThisframe = MaxRotationSpeed * tValue;
@@ -118,8 +123,4 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     }
 
 
-    // Update is called once per frame
-    private void Update()
-    {
-    }
 }

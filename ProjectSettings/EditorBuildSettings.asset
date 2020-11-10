@@ -26,9 +26,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LevelEnd.unity
     guid: 61f38d0ccf6ec70439b752ce7fe97135
-  - enabled: 1
+  - enabled: 0
     path: Assets/Staging.unity
     guid: 6561931b49c85034b8a02beae63bae02
+  - enabled: 1
+    path: Assets/Prototype.unity
+    guid: 6a52c571603b94444b3a63f58625fee9
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c756899af84df8b49bcf128023095baf,
       type: 2}

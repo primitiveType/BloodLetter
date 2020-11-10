@@ -37,7 +37,7 @@ public abstract class Pickup<T> : MonoBehaviour where T : Component
     private void PlaySound()
     {
         if (audioSource)
-            audioSource.PlayOneShot(audioSource.clip);
+            Sounds.Instance.PlayOneShot(audioSource.clip);
     }
 
     protected abstract bool CanBePickedUp();

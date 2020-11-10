@@ -11,12 +11,6 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private INavigationAgent Agent;
 
     [SerializeField] private EnemyAggroHandler AggroHandler;
-    private Coroutine AttackRoutine;
-    private readonly float attackTime = .5f;
-
-    //Set up flinch component and reference here?
-
-    private bool isAttacking;
 
     private ActorHealth m_Health;
 
@@ -36,15 +30,14 @@ public class EnemyMovement : MonoBehaviour
 
     private bool IsAggro => AggroHandler.IsAggro && Health.IsAlive;
 
+    private bool IsAttacking => ActorRoot.Attack != null && ActorRoot.Attack.IsAttacking;
 
     private void Start()
     {
         ActorRoot = GetComponentInParent<ActorRoot>();
         Agent = ActorRoot.Navigation;
-
         Events.OnAggroEvent += OnEnemyAggro;
         Events.OnStepEvent += OnEnemyStepped;
-        Events.OnAttackEvent += OnEnemyAttack;
         Events.OnDeathEvent += OnEnemyDeath;
         if (Animator == null)
             Animator = GetComponentInChildren<Animator>();
@@ -69,20 +62,6 @@ public class EnemyMovement : MonoBehaviour
     {
     }
 
-    private void OnEnemyAttack(object sender, OnAttackEventArgs args)
-    {
-        if (AttackRoutine != null) StopCoroutine(AttackRoutine);
-
-        AttackRoutine = StartCoroutine(AttackTimerCR());
-    }
-
-    private IEnumerator AttackTimerCR()
-    {
-        isAttacking = true;
-        yield return new WaitForSeconds(attackTime);
-        isAttacking = false;
-    }
-
 
     private void OnEnemyStepped(object sender, OnStepEventArgs args)
     {
@@ -94,12 +73,14 @@ public class EnemyMovement : MonoBehaviour
         {
             Agent.SetDestination(Target.position);
 
-            Agent.isStopped = !IsAggro || isAttacking || ActorRoot.Flinch.IsFlinching;
+            Agent.isStopped = ShouldStop;
         }
 
 
         UpdateAnimationStates();
     }
+
+    public bool ShouldStop => !IsAggro || IsAttacking || ActorRoot.Flinch.IsFlinching;
 
 
     private void UpdateAnimationStates()
@@ -114,6 +95,5 @@ public class EnemyMovement : MonoBehaviour
     {
         Events.OnAggroEvent -= OnEnemyAggro;
         Events.OnStepEvent -= OnEnemyStepped;
-        Events.OnAttackEvent -= OnEnemyAttack;
     }
 }
