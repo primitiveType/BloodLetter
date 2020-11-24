@@ -201,6 +201,11 @@ PrefabInstance:
       propertyPath: hurtClips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: bc764130509095a40b3cae14d49e92a4, type: 3}
+    - target: {fileID: 6182658784827558151, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: lockYAxis
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7486875836196438498, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: AggroDelayVariance

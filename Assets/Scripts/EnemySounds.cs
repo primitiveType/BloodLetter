@@ -20,6 +20,7 @@ public class EnemySounds : MonoBehaviour
 
     [SerializeField] private AudioSource m_attackSource;
     [SerializeField] private AudioSource m_hurtSource;
+    [SerializeField] private AudioSource m_aggroSource;
     [SerializeField] private AudioSource m_stepSource;
 
     [FormerlySerializedAs("stepClip")] [SerializeField]
@@ -43,6 +44,12 @@ public class EnemySounds : MonoBehaviour
         set => m_hurtSource = value;
     }
 
+    private AudioSource AggroSource
+    {
+        get => m_aggroSource;
+        set => m_aggroSource = value;
+    }
+
     private AudioSource AttackSource
     {
         get => m_attackSource;
@@ -60,10 +67,9 @@ public class EnemySounds : MonoBehaviour
 
 
         if (!StepSource) StepSource = CreateAudioSource();
-
         if (!HurtSource) HurtSource = CreateAudioSource();
-
         if (!AttackSource) AttackSource = CreateAudioSource();
+        if (!AggroSource) AggroSource = CreateAudioSource();
     }
 
     private IEnumerable GetSources()

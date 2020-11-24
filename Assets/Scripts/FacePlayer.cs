@@ -4,6 +4,7 @@
 public class FacePlayer : MonoBehaviour
 {
     [SerializeField] private Transform ToFace;
+    [SerializeField] private bool lockYAxis = true;
 
     private Transform ObjectToFace
     {
@@ -40,7 +41,7 @@ public class FacePlayer : MonoBehaviour
     {
         if (ObjectToFace == null) return;
         var playerPosition = ObjectToFace.position;
-        var position = new Vector3(playerPosition.x, transform.position.y, playerPosition.z);
+        var position = new Vector3(playerPosition.x, lockYAxis ? transform.position.y : playerPosition.y, playerPosition.z);
         transform.LookAt(position);
     }
 }

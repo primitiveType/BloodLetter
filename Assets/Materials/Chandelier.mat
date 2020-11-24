@@ -32,6 +32,10 @@ Material:
         m_Texture: {fileID: 18700000, guid: 174cde43b959ca84da2382db5f73ce41, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AddOutline_48CE3074_Texture2D6AD386FF_1630116048:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,9 +67,10 @@ Material:
     m_Floats:
     - Columns: 3
     - Frame: 0
-    - FrameHeight: 0
-    - FrameWidth: 0
+    - FrameHeight: 206
+    - FrameWidth: 540
     - NumFrames: 5
+    - OutlineThickness: 1
     - Perspective: 0
     - Rows: 2
     - _AlphaClip: 0
@@ -90,6 +95,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - OutlineColor: {r: 1, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
