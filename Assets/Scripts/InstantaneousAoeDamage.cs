@@ -15,6 +15,8 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
 
     private float startTime;
 
+    [SerializeField] private LayerMask LayersToAffect ;
+
 
     public Damage GetDamage()
     {
@@ -27,7 +29,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
     {
         startTime = Time.time;
         var position = transform.position;
-        var overlapObjects = Physics.OverlapSphere(position, Radius, ~LayerMask.NameToLayer("Default"));
+        var overlapObjects = Physics.OverlapSphere(position, Radius, LayersToAffect);
         foreach (var collider in overlapObjects)
         {
             TryHit(collider);
@@ -50,7 +52,7 @@ public class InstantaneousAoeDamage : MonoBehaviour, IDamageSource
             //Debug.DrawRay(position, direction, Color.green, 5);
 
             
-            if (!ThroughWalls && info.collider.gameObject != collider.gameObject)
+            if (!ThroughWalls && info.collider.gameObject.layer == LayerMask.NameToLayer("Default") && info.collider.gameObject != collider.gameObject)
             {
                 Debug.Log($"{info.collider.name} was in the way of {collider.name} so no damage dealt");
                 return;//something is obstructing the explosion

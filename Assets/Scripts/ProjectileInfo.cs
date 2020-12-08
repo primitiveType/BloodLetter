@@ -20,5 +20,10 @@ public class ProjectileInfo : ProjectileInfoBase
     {
         var proj = CreateProjectile(owner.position, direction, actorRoot.EntityType);
         proj.transform.SetParent(parentProjectileToBarrel ? owner : null);
+        var exploder = proj.GetComponent<ExplodeOnCollide>();
+        if (exploder)
+        {
+            exploder.SetIgnoreCollision(actorRoot.Collider.gameObject);
+        }
     }
 }

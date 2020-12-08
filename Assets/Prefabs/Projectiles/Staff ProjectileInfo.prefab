@@ -43,5 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8235b5ea9184a7bb2ac806d5d9ce93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MinRange: 10
+  m_Range: 100
+  type: 4096
+  m_Force: 0
+  parentProjectileToBarrel: 0
   ProjectilePrefab: {fileID: 5479396050471731650, guid: 49f31ca665a36644b833572f318c08a8,
     type: 3}

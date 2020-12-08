@@ -14,6 +14,8 @@ public class ActorRoot : MonoBehaviour
 
     public AnimationMaterialHelper AnimationMaterialHelper { get; private set; }
     public IDamagedByHitscanProjectile HitscanCollider { get; private set; }
+    
+    public Collider Collider { get; private set; }
 
     public EnemyAggroHandler AggroHandler { get; private set; }
     public MonsterVisibilityHandler VisibilityHandler { get; private set; }
@@ -39,6 +41,20 @@ public class ActorRoot : MonoBehaviour
         Armor = GetComponentInChildren<ActorArmor>();
         Navigation = GetComponentInChildren<INavigationAgent>();
         Flinch = GetComponentInChildren<FlinchComponent>();
+        Collider[] colliders = GetComponentsInChildren<Collider>();
+        foreach (Collider collider in colliders)
+        {
+            if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyRaycast"))
+            {
+                continue;
+            }
+
+            if (Collider)
+            {
+                Debug.LogWarning($"More than one collider found for {gameObject.name}! not good!");
+            }
+            Collider = collider;
+        }
     }
 
     // Update is called once per frame
