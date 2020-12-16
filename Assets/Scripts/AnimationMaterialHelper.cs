@@ -139,28 +139,28 @@ public class AnimationMaterialHelper : MonoBehaviour
     /// <returns></returns>
     public bool QueryAlpha(Vector2 textureCoord)
     {
+        textureCoord = new Vector2(1 - textureCoord.x, textureCoord.y);//HACK texture x is backwards now apparently
         int perspective;
+        cachedPropertyBlock = new MaterialPropertyBlock();
+        MyRenderer.GetPropertyBlock(cachedPropertyBlock);
         if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
         {
-            cachedPropertyBlock = new MaterialPropertyBlock();
-            MyRenderer.GetPropertyBlock(cachedPropertyBlock);
+           
             Debug.Log("getting texture array for alpha check");
             AnimationUsedForLastAlphaCheck = CurrentAnimation;
             cachedAlpha = (Texture2DArray) cachedPropertyBlock.GetTexture(Alpha);
 
-            perspective =
-                Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
-                    7); //it's actually possible to get back 8 from this which is invalid.
-            cachedAlphaPixels = cachedAlpha.GetPixels(perspective);
+          
         }
         else
         {
-            Debug.Log("Reusing texture array");
-            perspective =
-                Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
-                    7); //it's actually possible to get back 8 from this which is invalid.
+//            Debug.Log("Reusing texture array");
         }
-
+        
+        perspective =
+            Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
+                7); //it's actually possible to get back 8 from this which is invalid.
+        cachedAlphaPixels = cachedAlpha.GetPixels(perspective);
 
         var totalWidth = cachedAlpha.width;
         var totalHeight = cachedAlpha.height;
