@@ -51,7 +51,7 @@ public class ActorRoot : MonoBehaviour
 
             if (Collider)
             {
-                Debug.LogWarning($"More than one collider found for {gameObject.name}! not good!");
+                //Debug.LogWarning($"More than one collider found for {gameObject.name}!");
             }
             Collider = collider;
         }

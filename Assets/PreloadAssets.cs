@@ -21,15 +21,15 @@ public class PreloadAssets : MonoBehaviour
     {
         Time.timeScale = 0;
         List<Task> loadingTasks = new List<Task>();
-        foreach (var dictionary in Dictionaries)
-        {
-            foreach (AnimationMaterialPropertyBlock block in dictionary.PropertyBlocks)
-            {
-                loadingTasks.Add(block.GetDiffuseMap());
-                loadingTasks.Add(block.GetNormalMap());
-                loadingTasks.Add(block.GetAlphaMap());
-            }
-        }
+        // foreach (var dictionary in Dictionaries)
+        // {
+        //     foreach (AnimationMaterialPropertyBlock block in dictionary.PropertyBlocks)
+        //     {
+        //         loadingTasks.Add(block.GetDiffuseMap());
+        //         loadingTasks.Add(block.GetNormalMap());
+        //         loadingTasks.Add(block.GetAlphaMap());
+        //     }
+        // }
 
         var allTask = Task.WhenAll(loadingTasks);
         while (!allTask.IsCompleted)

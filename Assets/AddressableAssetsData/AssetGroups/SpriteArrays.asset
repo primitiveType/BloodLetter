@@ -156,11 +156,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 14596a3405bf5d142b5e496c5c6019f8
-    m_Address: chainsaw_Attacking_Alpha_0000
+    m_Address: chainsaw_Attacking_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 14596a3405bf5d142b5e496c5c6019f8, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 14596a3405bf5d142b5e496c5c6019f8, type: 3}
   - m_GUID: 150afdc65280fcd4ca9cca5dec18dd25
     m_Address: GHOUL_LEGACY_attack2Forward_RM_FrameBuffer
     m_ReadOnly: 0
@@ -204,11 +204,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 1879bb26ae712a8429c265878d08902b
-    m_Address: Shotgun staff_TPose_Normal
+    m_Address: Shotgun Staff_TPose_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 1879bb26ae712a8429c265878d08902b, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 1879bb26ae712a8429c265878d08902b, type: 2}
   - m_GUID: 18f2870a23eb54f469705e3e1daf7283
     m_Address: Droid-01_Industrial_GetHitFrontAiming_FrameBuffer
     m_ReadOnly: 0
@@ -234,11 +234,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 1b93f1934c0ee60429f3de5171236322
-    m_Address: chainsaw_Attacking_FrameBuffer_0000
+    m_Address: chainsaw_Attacking_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 1b93f1934c0ee60429f3de5171236322, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 1b93f1934c0ee60429f3de5171236322, type: 3}
   - m_GUID: 1bcd9fc80731dd847bce9f6408747071
     m_Address: GHOUL_LEGACY_jumpForward_Alpha
     m_ReadOnly: 0
@@ -276,17 +276,17 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 21d26447aa9a1664f9487311977e45b1
-    m_Address: Shotgun staff_TPose_FrameBuffer
+    m_Address: Shotgun Staff_TPose_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 21d26447aa9a1664f9487311977e45b1, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 21d26447aa9a1664f9487311977e45b1, type: 2}
   - m_GUID: 225e58deab0e3c64c88d73ee16896366
-    m_Address: Shotgun staff_TPose_Alpha_0000
+    m_Address: Shotgun staff_TPose_Alphaflat
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 225e58deab0e3c64c88d73ee16896366, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 225e58deab0e3c64c88d73ee16896366, type: 3}
   - m_GUID: 2289f40a1903a0d4ab2605856dd083bf
     m_Address: GHOUL_LEGACY_jumpGrabBite_Alpha
     m_ReadOnly: 0
@@ -294,23 +294,23 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 24881aef6e168f4469906d392bf21de9
-    m_Address: chainsaw_Idle_Alpha_0000
+    m_Address: chainsaw_Idle_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 24881aef6e168f4469906d392bf21de9, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 24881aef6e168f4469906d392bf21de9, type: 3}
   - m_GUID: 2526b2fba2e791d4bb679d492bd49ea9
-    m_Address: chainsaw_Idle_Normal_0000
+    m_Address: chainsaw_Idle_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 2526b2fba2e791d4bb679d492bd49ea9, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 2526b2fba2e791d4bb679d492bd49ea9, type: 3}
   - m_GUID: 2740e3a0e47597c4b931493223c2ba73
-    m_Address: Shotgun staff_Shoot_Alpha_0000
+    m_Address: Shotgun staff_Shoot_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 2740e3a0e47597c4b931493223c2ba73, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 2740e3a0e47597c4b931493223c2ba73, type: 3}
   - m_GUID: 2777633b32b0ed2409904eb3be7eb494
     m_Address: Pistol_TPose_FrameBuffer
     m_ReadOnly: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 2cf4dfa8ca292234e904386784ad6ac9
-    m_Address: Shotgun staff_TPose_Normal_0000
+    m_Address: Shotgun staff_TPose_Normalflat
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 2800000, guid: 2cf4dfa8ca292234e904386784ad6ac9, type: 3}
@@ -540,11 +540,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 3e79459d97ae7574d898ea4ebfdc9db5
-    m_Address: chainsaw_Attacking_Normal_0000
+    m_Address: chainsaw_Attacking_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 3e79459d97ae7574d898ea4ebfdc9db5, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 3e79459d97ae7574d898ea4ebfdc9db5, type: 3}
   - m_GUID: 3fa5dde4fb151d24a812d300f0cb6f82
     m_Address: GHOUL_LEGACY_attack2Forward_RM_Normal
     m_ReadOnly: 0
@@ -612,11 +612,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 4797a6b14f892d840b11adba63a8ce76
-    m_Address: Eye of the beholder_TPose_FrameBuffer_0000
+    m_Address: Eye of the beholder_TPose_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 4797a6b14f892d840b11adba63a8ce76, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 4797a6b14f892d840b11adba63a8ce76, type: 3}
   - m_GUID: 494fa684469868349afefe9a618a4977
     m_Address: Droid-01_Industrial_DeathArmed_FrameBuffer
     m_ReadOnly: 0
@@ -714,11 +714,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 53eead69da7891e46b2c35e96a255801
-    m_Address: Eye of the beholder_Shoot_Normal_0000
+    m_Address: Eye of the beholder_Shoot_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 53eead69da7891e46b2c35e96a255801, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 53eead69da7891e46b2c35e96a255801, type: 3}
   - m_GUID: 54401d089378fab4289845524c51426f
     m_Address: Droid-01_Industrial_WalkForwardAiming_Alpha
     m_ReadOnly: 0
@@ -726,11 +726,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 54c9be82d8a30394ea475868cfc5998e
-    m_Address: Eye of the beholder_Idle_FrameBuffer_0000
+    m_Address: Eye of the beholder_Idle_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 54c9be82d8a30394ea475868cfc5998e, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 54c9be82d8a30394ea475868cfc5998e, type: 3}
   - m_GUID: 54d1d27540045cc43950f2fc26f9233d
     m_Address: GHOUL_LEGACY_attack1_FrameBuffer
     m_ReadOnly: 0
@@ -792,17 +792,17 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 67ce285b476b8a14d8d11082593d40ec
-    m_Address: Shotgun staff_TPose_Alpha
+    m_Address: Shotgun Staff_TPose_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 67ce285b476b8a14d8d11082593d40ec, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 67ce285b476b8a14d8d11082593d40ec, type: 2}
   - m_GUID: 6922ffa7b2641ca42be27f0498b8cd17
-    m_Address: chainsaw_Attack_Normal_0000
+    m_Address: chainsaw_Attack_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 6922ffa7b2641ca42be27f0498b8cd17, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 6922ffa7b2641ca42be27f0498b8cd17, type: 3}
   - m_GUID: 6929cd9d6b72ac94e949d94f0c802df9
     m_Address: Eye of the beholder_TPose_Alpha
     m_ReadOnly: 0
@@ -876,17 +876,17 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 760d483088d90c1438a97e623bbb5b90
-    m_Address: Eye of the beholder_TPose_Normal_0000
+    m_Address: Eye of the beholder_TPose_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 760d483088d90c1438a97e623bbb5b90, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 760d483088d90c1438a97e623bbb5b90, type: 3}
   - m_GUID: 76277e26043dedd4798c38f8828c5b33
-    m_Address: chainsaw_TPose_FrameBuffer_0000
+    m_Address: chainsaw_TPose_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 76277e26043dedd4798c38f8828c5b33, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 76277e26043dedd4798c38f8828c5b33, type: 3}
   - m_GUID: 773cefaf4b7b94042be2907ab70b2cf6
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_Alpha
     m_ReadOnly: 0
@@ -917,6 +917,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 7c23cf637c72d2549a596b71668ab4fd
+    m_Address: Shotgun staff pickup_TPose_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: 7c23cf637c72d2549a596b71668ab4fd, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 7c23cf637c72d2549a596b71668ab4fd, type: 3}
   - m_GUID: 7c5617e5ef9a54c4f9335b1bc6a0e6bb
     m_Address: RingStaffStraight_Attack_FrameBuffer
     m_ReadOnly: 0
@@ -924,11 +930,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 7caaf106026bafb43b95850bdbac1800
-    m_Address: Shotgun staff_Shoot_FrameBuffer_0000
+    m_Address: Shotgun staff_Shoot_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 7caaf106026bafb43b95850bdbac1800, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 7caaf106026bafb43b95850bdbac1800, type: 3}
   - m_GUID: 7d788fc2170825d44a1f7c20a71f248d
     m_Address: Chandelier_TPose_FrameBuffer
     m_ReadOnly: 0
@@ -996,11 +1002,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 849e9fae0d60d404b8e98638fba1e9b9
-    m_Address: Shotgun staff_TPose_FrameBuffer_0000
+    m_Address: Shotgun staff_TPose_FrameBufferflat
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 849e9fae0d60d404b8e98638fba1e9b9, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 849e9fae0d60d404b8e98638fba1e9b9, type: 3}
   - m_GUID: 860b0ac30dd43394a86ec0c2ceb9678d
     m_Address: GHOUL_LEGACY_strafeRight_RM_FrameBuffer
     m_ReadOnly: 0
@@ -1017,8 +1023,8 @@ MonoBehaviour:
     m_Address: Shotgun_ShotgunIdle_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 2800000, guid: 87ce93d1eafc0a54e8316b932bfeb6f1, type: 2}
-    m_TargetAsset: {fileID: 2800000, guid: 87ce93d1eafc0a54e8316b932bfeb6f1, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 88bdf213d70989d4f8aee3fc7e82c5cc
     m_Address: HARPY_breastsExposed_LEGACY_fly_FrameBuffer
     m_ReadOnly: 0
@@ -1038,11 +1044,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 8a465cc0732e616488787fa72f6e3a0a
-    m_Address: chainsaw_TPose_Normal_0000
+    m_Address: chainsaw_TPose_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 8a465cc0732e616488787fa72f6e3a0a, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 8a465cc0732e616488787fa72f6e3a0a, type: 3}
   - m_GUID: 8a6b674cef67709499f730f599cf9be8
     m_Address: pkup_ammo_mgun_sm_TPose_FrameBuffer
     m_ReadOnly: 0
@@ -1098,11 +1104,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 94b3fb1aba9f81243aea1a9cfbe76fdb
-    m_Address: chainsaw_TPose_Alpha_0000
+    m_Address: chainsaw_TPose_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 94b3fb1aba9f81243aea1a9cfbe76fdb, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 94b3fb1aba9f81243aea1a9cfbe76fdb, type: 3}
   - m_GUID: 94ebd4ffa016351489e08c4b72d9829f
     m_Address: Drip blood
     m_ReadOnly: 0
@@ -1128,11 +1134,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 96bbbd15975aeca44bf036e541a21ddb
-    m_Address: Eye of the beholder_Shoot_FrameBuffer_0000
+    m_Address: Eye of the beholder_Shoot_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 96bbbd15975aeca44bf036e541a21ddb, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 96bbbd15975aeca44bf036e541a21ddb, type: 3}
   - m_GUID: 970278f123de7c949a4bae0ddfc63140
     m_Address: GHOUL_LEGACY_attack2HitComboForward_Normal
     m_ReadOnly: 0
@@ -1218,11 +1224,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: a86f1c531955f08499a09903196bf369
-    m_Address: chainsaw_Attack_FrameBuffer_0000
+    m_Address: chainsaw_Attack_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: a86f1c531955f08499a09903196bf369, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: a86f1c531955f08499a09903196bf369, type: 3}
   - m_GUID: a87431e6d23f94143a0c65756556e6c2
     m_Address: GHOUL_LEGACY_walk_RM_FrameBuffer
     m_ReadOnly: 0
@@ -1314,11 +1320,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: b50b2ff52dda40f409416745dd017b9c
-    m_Address: chainsaw_Idle_FrameBuffer_0000
+    m_Address: chainsaw_Idle_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: b50b2ff52dda40f409416745dd017b9c, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: b50b2ff52dda40f409416745dd017b9c, type: 3}
   - m_GUID: b5881842921025d4ea6e34dd51356faf
     m_Address: GHOUL_LEGACY_death_Normal
     m_ReadOnly: 0
@@ -1326,11 +1332,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: b5edf080a2be3e24dbe613d42358b974
-    m_Address: chainsaw_Attack_Alpha_0000
+    m_Address: chainsaw_Attack_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: b5edf080a2be3e24dbe613d42358b974, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: b5edf080a2be3e24dbe613d42358b974, type: 3}
   - m_GUID: b8e8e152f1adbd64398b12e8ce53d653
     m_Address: GHOUL_LEGACY_attack2HitComboForward_RM_FrameBuffer
     m_ReadOnly: 0
@@ -1422,11 +1428,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: c585bdf554f2aba47bda720c20da6a6b
-    m_Address: Eye of the beholder_Idle_Normal_0000
+    m_Address: Eye of the beholder_Idle_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: c585bdf554f2aba47bda720c20da6a6b, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: c585bdf554f2aba47bda720c20da6a6b, type: 3}
   - m_GUID: c61e8ca9a87bb954fae756dd5d05d4fb
     m_Address: GHOUL_LEGACY_getHit1_FrameBuffer
     m_ReadOnly: 0
@@ -1451,12 +1457,24 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: cb8793c05321c5c4b8477bd31adb764e
+    m_Address: Shotgun staff pickup_TPose_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: cb8793c05321c5c4b8477bd31adb764e, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: cb8793c05321c5c4b8477bd31adb764e, type: 3}
   - m_GUID: cbf038b7bc8c3af4890af689924f707c
     m_Address: EVIL_WATCHER_LEGACY_death_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: cc686e27222111846b2350741093095b
+    m_Address: Shotgun staff pickup_TPose_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: cc686e27222111846b2350741093095b, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: cc686e27222111846b2350741093095b, type: 3}
   - m_GUID: cdb521e39ab0ee24eaa1a0639574783f
     m_Address: FAT_OGRE_LEGACY_run_Normal
     m_ReadOnly: 0
@@ -1524,11 +1542,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: d7587339c0c0e60429d9d8d89e4a8b1d
-    m_Address: Eye of the beholder_Idle_Alpha_0000
+    m_Address: Eye of the beholder_Idle_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: d7587339c0c0e60429d9d8d89e4a8b1d, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: d7587339c0c0e60429d9d8d89e4a8b1d, type: 3}
   - m_GUID: d7f6c1231026edb499beb6371644fe29
     m_Address: GHOUL_LEGACY_attack1Forward_RM_Alpha
     m_ReadOnly: 0
@@ -1692,11 +1710,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: f823c86a27f97ae4c92a3ed7ed22b822
-    m_Address: Shotgun staff_Shoot_Normal_0000
+    m_Address: Shotgun staff_Shoot_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: f823c86a27f97ae4c92a3ed7ed22b822, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: f823c86a27f97ae4c92a3ed7ed22b822, type: 3}
   - m_GUID: f860bdc9cfa41ce49ab07a5dd7a9de25
     m_Address: GHOUL_LEGACY_strafeRight_Normal
     m_ReadOnly: 0
@@ -1728,11 +1746,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: faeedcfab96d02c40a78dcb1a13cb3c2
-    m_Address: Eye of the beholder_TPose_Alpha_0000
+    m_Address: Eye of the beholder_TPose_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: faeedcfab96d02c40a78dcb1a13cb3c2, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: faeedcfab96d02c40a78dcb1a13cb3c2, type: 3}
   - m_GUID: fc031d2e50c51e04c979527cf8232337
     m_Address: OAK_TREE_ENT_LEGACY_hide1_Alpha
     m_ReadOnly: 0
@@ -1752,11 +1770,11 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: ff5e8bf4254aa4a4bbe904ad839d7f9a
-    m_Address: Eye of the beholder_Shoot_Alpha_0000
+    m_Address: Eye of the beholder_Shoot_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: ff5e8bf4254aa4a4bbe904ad839d7f9a, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: ff5e8bf4254aa4a4bbe904ad839d7f9a, type: 3}
   - m_GUID: ff7142a704c0ea144a7da64ff88e383e
     m_Address: GHOUL_LEGACY_attack2Forward_FrameBuffer
     m_ReadOnly: 0
