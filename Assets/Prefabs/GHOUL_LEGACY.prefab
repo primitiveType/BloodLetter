@@ -96,6 +96,11 @@ PrefabInstance:
       propertyPath: anchorTransform
       value: 
       objectReference: {fileID: 391610877007395798}
+    - target: {fileID: 4105811296551540431, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: _currentAnimation
+      value: GHOUL_LEGACY_idle
+      objectReference: {fileID: 0}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: hurtClips.Array.size
@@ -194,17 +199,17 @@ PrefabInstance:
     - target: {fileID: 8171493255443565341, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2066894
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255443565341, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255443565341, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.264568
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255443565341, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

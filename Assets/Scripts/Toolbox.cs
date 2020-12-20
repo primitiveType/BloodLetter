@@ -1,10 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 using Debug = UnityEngine.Debug;
 
 public class Toolbox : MonoBehaviourSingleton<Toolbox>
@@ -26,8 +24,9 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
 
     public bool IsPlayerDead { get; private set; }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         DontDestroyOnLoad(this);
         LevelManager.Instance.LevelBegin += OnLevelBegin;
         LevelManager.Instance.LevelEnd += OnLevelEnd;

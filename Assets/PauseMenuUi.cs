@@ -11,6 +11,7 @@ public class PauseMenuUi : MonoBehaviour
         menuParent.SetActive(true);
         Time.timeScale = 0;
         CursorLockManager.Instance.Unlock();
+        AudioListener.pause = true;
     }
 
     public void Unpause()
@@ -19,6 +20,7 @@ public class PauseMenuUi : MonoBehaviour
         menuParent.SetActive(false);
         Time.timeScale = 1;
         CursorLockManager.Instance.Lock();
+        AudioListener.pause = false;
     }
 
     public void Quit()

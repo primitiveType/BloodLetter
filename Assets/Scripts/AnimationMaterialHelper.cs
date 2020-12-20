@@ -98,18 +98,24 @@ public class AnimationMaterialHelper : MonoBehaviour
     {
         if (animationName != CurrentAnimation)
         {
+            CurrentAnimation = animationName;
             var block = new MaterialPropertyBlock();
-
             await SetPropertyBlockAsync();
 
 
             async Task SetPropertyBlockAsync()
             {
-                CurrentAnimation = animationName;
 
+                if (animationName != CurrentAnimation)
+                {//A new task was started, we can effectively cancel this one.
+                    return;
+                }
                 MyRenderer.GetPropertyBlock(block);
                 block = await _dictionary.GetPropertyBlock(block, animationName);
-
+                if (animationName != CurrentAnimation)
+                {//A new task was started, we can effectively cancel this one.
+                    return;
+                }
 
                 MyRenderer.SetPropertyBlock(block);
                 var pxPerMeter = AnimationMaterialDictionary.NumPixelsPerMeter;

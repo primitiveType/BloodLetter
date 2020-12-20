@@ -50,6 +50,7 @@ public class EnemyMovement : MonoBehaviour
         }
 
         Toolbox.Instance.AddEnemy(Health);
+        StartCoroutine(UpdateAnimationStates());
     }
 
 
@@ -75,20 +76,43 @@ public class EnemyMovement : MonoBehaviour
 
             Agent.isStopped = ShouldStop;
         }
-
-
-        UpdateAnimationStates();
     }
 
     public bool ShouldStop => !IsAggro || IsAttacking || ActorRoot.Flinch.IsFlinching;
 
+    private bool AnimatorIsMoving { get; set; }
+    private float DelayBetweenUpdatingMovementState = .1f;
 
-    private void UpdateAnimationStates()
+    private IEnumerator UpdateAnimationStates()
     {
-        if (Agent.velocity.sqrMagnitude > 2f) //TODO: base this on something
-            Animator.SetBool(Moving, true);
-        else
-            Animator.SetBool(Moving, false);
+        while (true)
+        {
+            if (!Agent.isStopped ) //TODO: base this on something
+            {
+                if (AnimatorIsMoving)
+                {
+                    yield return null;
+                    continue;
+                }
+
+                AnimatorIsMoving = true;
+                Animator.SetBool(Moving, AnimatorIsMoving);
+                yield return new WaitForSeconds(DelayBetweenUpdatingMovementState);
+            }
+            else
+            {
+                if (!AnimatorIsMoving)
+                {
+                    yield return null;
+                    continue;
+                }
+                AnimatorIsMoving = false;
+                Animator.SetBool(Moving, AnimatorIsMoving);
+                yield return new WaitForSeconds(DelayBetweenUpdatingMovementState);
+            }
+
+            yield return null;
+        }
     }
 
     private void OnDestroy()
