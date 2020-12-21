@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4438506071852051068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1090157010, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8540a79d4d01dd442a54d4a45eb5d871, type: 2}
+    - target: {fileID: 1106582660102108137, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: floorDecalPrefab
+      value: 
+      objectReference: {fileID: 3467754998037981401, guid: c5a63bad5ed03614ca9aa009025db377,
+        type: 3}
+    - target: {fileID: 1106582660102108137, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: wallDecalPrefab
+      value: 
+      objectReference: {fileID: 461416527005567328, guid: 2e550243682ddc843b7002124b0bf54f,
+        type: 3}
+    - target: {fileID: 1106582660102108148, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_Name
+      value: Oil Splatter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.011894062
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9999293
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106582660102108150, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -361.363
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d, type: 3}
