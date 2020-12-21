@@ -3,6 +3,8 @@ using E7.Introloop;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviourSingleton<LevelManager>
@@ -38,7 +40,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         //handle saving to disk here, probably
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
-        Debug.Log(Application.companyName);//this is just here to keep a reference to application...
+        Debug.Log(Application.companyName); //this is just here to keep a reference to application...
 #else
         Application.Quit();
 #endif
@@ -70,8 +72,14 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
 
     public void StartNextLevel()
     {
-        Addressables.LoadSceneAsync(SceneToLoad);
+        var handle = Addressables.LoadSceneAsync(SceneToLoad);
+        handle.Completed += HandleOnCompleted;
         //SceneManager.LoadScene(SceneToLoad);
         Timer.Instance.StartTimer();
+    }
+
+    private void HandleOnCompleted(AsyncOperationHandle<SceneInstance> obj)
+    {
+        //Time.timeScale = 0;
     }
 }

@@ -20,1767 +20,2061 @@ MonoBehaviour:
   - m_GUID: 0182fe07fd8388c4ca71affa75dd5320
     m_Address: RingStaffStraight_Idle long_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 0182fe07fd8388c4ca71affa75dd5320, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 0182fe07fd8388c4ca71affa75dd5320, type: 2}
   - m_GUID: 0274b70ded4319a4abe7f0f0f2ed58f3
     m_Address: Shotgun_ShotgunIdle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 0274b70ded4319a4abe7f0f0f2ed58f3, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 0274b70ded4319a4abe7f0f0f2ed58f3, type: 2}
   - m_GUID: 03dde54634d221344b4587494f0fa1df
     m_Address: GHOUL_LEGACY_run_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 03dde54634d221344b4587494f0fa1df, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 03dde54634d221344b4587494f0fa1df, type: 2}
   - m_GUID: 03feb06efca31a64bb216bf275d4b9ad
     m_Address: Pistol_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 03feb06efca31a64bb216bf275d4b9ad, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 03feb06efca31a64bb216bf275d4b9ad, type: 2}
   - m_GUID: 04454535b7bc57e47863523b28318abb
     m_Address: GHOUL_LEGACY_attack1Forward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 04454535b7bc57e47863523b28318abb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 04454535b7bc57e47863523b28318abb, type: 2}
   - m_GUID: 0527d7fdd70be444e964ca723f8296d2
     m_Address: GHOUL_LEGACY_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 0527d7fdd70be444e964ca723f8296d2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0527d7fdd70be444e964ca723f8296d2, type: 2}
   - m_GUID: 0561c53425f18664daa9417c3c5fa66b
     m_Address: GHOUL_LEGACY_attack2Forward_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 0561c53425f18664daa9417c3c5fa66b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0561c53425f18664daa9417c3c5fa66b, type: 2}
   - m_GUID: 058b88f0a7fa9da429cf56c1085cb09e
     m_Address: RingStaffStraight_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 058b88f0a7fa9da429cf56c1085cb09e, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 058b88f0a7fa9da429cf56c1085cb09e, type: 2}
   - m_GUID: 068400d7a1c468240b745597c9226e56
     m_Address: pkup_ammo_nade_sm_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 068400d7a1c468240b745597c9226e56, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 068400d7a1c468240b745597c9226e56, type: 2}
   - m_GUID: 0692c849b87de2241b1361ffd8d59dfe
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBite_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 0692c849b87de2241b1361ffd8d59dfe, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0692c849b87de2241b1361ffd8d59dfe, type: 2}
   - m_GUID: 06d5fcd433dadb04ca6f33cee6431810
     m_Address: Shotgun staff_Shoot_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 06d5fcd433dadb04ca6f33cee6431810, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 06d5fcd433dadb04ca6f33cee6431810, type: 2}
   - m_GUID: 073f9341695a38d40a0b13fdb9edc2ff
     m_Address: OAK_TREE_ENT_LEGACY_getHit1_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 073f9341695a38d40a0b13fdb9edc2ff, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 073f9341695a38d40a0b13fdb9edc2ff, type: 2}
   - m_GUID: 078b3ff0afd0adf479ba09318348f3eb
     m_Address: GHOUL_LEGACY_attack2HitCombo_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 078b3ff0afd0adf479ba09318348f3eb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 078b3ff0afd0adf479ba09318348f3eb, type: 2}
   - m_GUID: 08868a681f5abd3479f79e4295c15183
     m_Address: pkup_ammo_rckt_sm_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 08868a681f5abd3479f79e4295c15183, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 08868a681f5abd3479f79e4295c15183, type: 2}
   - m_GUID: 09f08410b7e8a3f48bd9838961fb48c5
     m_Address: GHOUL_LEGACY_attack1Forward_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 09f08410b7e8a3f48bd9838961fb48c5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 09f08410b7e8a3f48bd9838961fb48c5, type: 2}
   - m_GUID: 0a5028bca4885c24da07aabb61c08e4b
     m_Address: GHOUL_LEGACY_walk_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 0a5028bca4885c24da07aabb61c08e4b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0a5028bca4885c24da07aabb61c08e4b, type: 2}
   - m_GUID: 0c86ffe754afbd14fa6372999e9a33bf
     m_Address: ceiling chain_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 0c86ffe754afbd14fa6372999e9a33bf, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0c86ffe754afbd14fa6372999e9a33bf, type: 2}
   - m_GUID: 0dce477fc463bc749852397dcde64a3c
     m_Address: GHOUL_LEGACY_idle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 0dce477fc463bc749852397dcde64a3c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0dce477fc463bc749852397dcde64a3c, type: 2}
   - m_GUID: 0e4492c3d6cfdb8438dbd3a5145a449e
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 0e4492c3d6cfdb8438dbd3a5145a449e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 0e4492c3d6cfdb8438dbd3a5145a449e, type: 2}
   - m_GUID: 0e8065e229746fa45ba9214720bed3a6
     m_Address: Eye of the beholder_Idle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 0e8065e229746fa45ba9214720bed3a6, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 0e8065e229746fa45ba9214720bed3a6, type: 2}
   - m_GUID: 11a050629fcae2847bc900e1c35cea3e
     m_Address: pkup_ammo_rckt_lg_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 11a050629fcae2847bc900e1c35cea3e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 11a050629fcae2847bc900e1c35cea3e, type: 2}
   - m_GUID: 13c6193b055002d4f9cfe1f90e774734
     m_Address: GHOUL_LEGACY_jumpForward_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 13c6193b055002d4f9cfe1f90e774734, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 13c6193b055002d4f9cfe1f90e774734, type: 2}
   - m_GUID: 140f0e090db964747b411145304daa70
     m_Address: HARPY_breastsExposed_LEGACY_2HitComboForward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 140f0e090db964747b411145304daa70, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 140f0e090db964747b411145304daa70, type: 2}
   - m_GUID: 14596a3405bf5d142b5e496c5c6019f8
     m_Address: chainsaw_Attacking_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 14596a3405bf5d142b5e496c5c6019f8, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 14596a3405bf5d142b5e496c5c6019f8, type: 3}
   - m_GUID: 150afdc65280fcd4ca9cca5dec18dd25
     m_Address: GHOUL_LEGACY_attack2Forward_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 150afdc65280fcd4ca9cca5dec18dd25, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 150afdc65280fcd4ca9cca5dec18dd25, type: 2}
   - m_GUID: 15e1debdd04b38e48878df65db5093b4
     m_Address: Shotgun_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 15e1debdd04b38e48878df65db5093b4, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 15e1debdd04b38e48878df65db5093b4, type: 2}
   - m_GUID: 1663c087a88a18448983a64991233ada
     m_Address: HARPY_breastsExposed_LEGACY_deathHitTheGround_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 1663c087a88a18448983a64991233ada, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1663c087a88a18448983a64991233ada, type: 2}
   - m_GUID: 16dd7294a8de37e45954a092500a8d06
     m_Address: Shotgun staff_Shoot_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 16dd7294a8de37e45954a092500a8d06, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 16dd7294a8de37e45954a092500a8d06, type: 2}
   - m_GUID: 174cde43b959ca84da2382db5f73ce41
     m_Address: Chandelier_WaitOneSecond_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 174cde43b959ca84da2382db5f73ce41, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 174cde43b959ca84da2382db5f73ce41, type: 2}
   - m_GUID: 17fac9985811f864eb5773bcfe445143
     m_Address: FAT_OGRE_LEGACY_getHit1_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 17fac9985811f864eb5773bcfe445143, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 17fac9985811f864eb5773bcfe445143, type: 2}
   - m_GUID: 1852e4b806582d04aa9bcdda1515cd1e
     m_Address: GHOUL_LEGACY_getHit2_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 1852e4b806582d04aa9bcdda1515cd1e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1852e4b806582d04aa9bcdda1515cd1e, type: 2}
   - m_GUID: 1879bb26ae712a8429c265878d08902b
     m_Address: Shotgun Staff_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 1879bb26ae712a8429c265878d08902b, type: 2}
     m_TargetAsset: {fileID: 2800000, guid: 1879bb26ae712a8429c265878d08902b, type: 2}
   - m_GUID: 18f2870a23eb54f469705e3e1daf7283
     m_Address: Droid-01_Industrial_GetHitFrontAiming_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 18f2870a23eb54f469705e3e1daf7283, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 18f2870a23eb54f469705e3e1daf7283, type: 2}
   - m_GUID: 19338188cc2e9b841a5dabaf006ee567
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 19338188cc2e9b841a5dabaf006ee567, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 19338188cc2e9b841a5dabaf006ee567, type: 2}
   - m_GUID: 1a782dc55b82c7f4bba2a2ea09bb38cd
     m_Address: GHOUL_LEGACY_attack2HitComboForward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 1a782dc55b82c7f4bba2a2ea09bb38cd, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1a782dc55b82c7f4bba2a2ea09bb38cd, type: 2}
   - m_GUID: 1b55750789c23c44fa0480ff5d4fdc93
     m_Address: GHOUL_LEGACY_getHit1_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 1b55750789c23c44fa0480ff5d4fdc93, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1b55750789c23c44fa0480ff5d4fdc93, type: 2}
   - m_GUID: 1b93f1934c0ee60429f3de5171236322
     m_Address: chainsaw_Attacking_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 1b93f1934c0ee60429f3de5171236322, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 1b93f1934c0ee60429f3de5171236322, type: 3}
   - m_GUID: 1bcd9fc80731dd847bce9f6408747071
     m_Address: GHOUL_LEGACY_jumpForward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 1bcd9fc80731dd847bce9f6408747071, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1bcd9fc80731dd847bce9f6408747071, type: 2}
   - m_GUID: 1be1bf481985c7543a78c5a6c6cb413a
     m_Address: OAK_TREE_ENT_LEGACY_getHit1_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 1be1bf481985c7543a78c5a6c6cb413a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1be1bf481985c7543a78c5a6c6cb413a, type: 2}
   - m_GUID: 1eb6d766368c9864eace8036352d2366
     m_Address: Droid-01_Industrial_GetHitFrontAiming_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 1eb6d766368c9864eace8036352d2366, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1eb6d766368c9864eace8036352d2366, type: 2}
   - m_GUID: 1ed3527bcf99fa741b1ebd3737a89279
     m_Address: FAT_OGRE_LEGACY_death_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 1ed3527bcf99fa741b1ebd3737a89279, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1ed3527bcf99fa741b1ebd3737a89279, type: 2}
   - m_GUID: 1f3692c8989bf3e4b8d261c03bd9c786
     m_Address: Eye of the beholder_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 1f3692c8989bf3e4b8d261c03bd9c786, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 1f3692c8989bf3e4b8d261c03bd9c786, type: 2}
   - m_GUID: 21ccf9840a931c6478c12df05ac00546
     m_Address: Pistol_PistolIdle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 21ccf9840a931c6478c12df05ac00546, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 21ccf9840a931c6478c12df05ac00546, type: 2}
   - m_GUID: 21d26447aa9a1664f9487311977e45b1
     m_Address: Shotgun Staff_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 21d26447aa9a1664f9487311977e45b1, type: 2}
     m_TargetAsset: {fileID: 2800000, guid: 21d26447aa9a1664f9487311977e45b1, type: 2}
   - m_GUID: 225e58deab0e3c64c88d73ee16896366
     m_Address: Shotgun staff_TPose_Alphaflat
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 225e58deab0e3c64c88d73ee16896366, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 225e58deab0e3c64c88d73ee16896366, type: 3}
   - m_GUID: 2289f40a1903a0d4ab2605856dd083bf
     m_Address: GHOUL_LEGACY_jumpGrabBite_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2289f40a1903a0d4ab2605856dd083bf, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2289f40a1903a0d4ab2605856dd083bf, type: 2}
   - m_GUID: 24881aef6e168f4469906d392bf21de9
     m_Address: chainsaw_Idle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 24881aef6e168f4469906d392bf21de9, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 24881aef6e168f4469906d392bf21de9, type: 3}
   - m_GUID: 2526b2fba2e791d4bb679d492bd49ea9
     m_Address: chainsaw_Idle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 2526b2fba2e791d4bb679d492bd49ea9, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 2526b2fba2e791d4bb679d492bd49ea9, type: 3}
   - m_GUID: 2740e3a0e47597c4b931493223c2ba73
     m_Address: Shotgun staff_Shoot_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 2740e3a0e47597c4b931493223c2ba73, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 2740e3a0e47597c4b931493223c2ba73, type: 3}
   - m_GUID: 2777633b32b0ed2409904eb3be7eb494
     m_Address: Pistol_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 2777633b32b0ed2409904eb3be7eb494, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 2777633b32b0ed2409904eb3be7eb494, type: 2}
   - m_GUID: 29db9000103e71048aec16dfe46ef89c
     m_Address: GHOUL_LEGACY_run_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 29db9000103e71048aec16dfe46ef89c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 29db9000103e71048aec16dfe46ef89c, type: 2}
   - m_GUID: 2b32c17d18e5fd84db9979a23ecc671b
     m_Address: HARPY_breastsExposed_LEGACY_fly_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2b32c17d18e5fd84db9979a23ecc671b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2b32c17d18e5fd84db9979a23ecc671b, type: 2}
   - m_GUID: 2b5a507988c21754f85eee77f005a94c
     m_Address: EVIL_WATCHER_LEGACY_getHit_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2b5a507988c21754f85eee77f005a94c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2b5a507988c21754f85eee77f005a94c, type: 2}
   - m_GUID: 2b5f379854b527f49b812553f966d977
     m_Address: FAT_OGRE_LEGACY_idle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2b5f379854b527f49b812553f966d977, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2b5f379854b527f49b812553f966d977, type: 2}
   - m_GUID: 2bbd4854fc1c7474b97499146a7eefe5
     m_Address: OAK_TREE_ENT_LEGACY_clawsAttackLForward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2bbd4854fc1c7474b97499146a7eefe5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2bbd4854fc1c7474b97499146a7eefe5, type: 2}
   - m_GUID: 2c37353b0f0d4e74eb3264fe0f7f1570
     m_Address: Chandelier_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2c37353b0f0d4e74eb3264fe0f7f1570, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2c37353b0f0d4e74eb3264fe0f7f1570, type: 2}
   - m_GUID: 2cf4dfa8ca292234e904386784ad6ac9
     m_Address: Shotgun staff_TPose_Normalflat
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 2cf4dfa8ca292234e904386784ad6ac9, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 2cf4dfa8ca292234e904386784ad6ac9, type: 3}
   - m_GUID: 2d2019ed7c5f2374dbaa52e0bd4621d0
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBite_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2d2019ed7c5f2374dbaa52e0bd4621d0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2d2019ed7c5f2374dbaa52e0bd4621d0, type: 2}
   - m_GUID: 2d3be0d105e330f4891547bb6b7e6020
     m_Address: GHOUL_LEGACY_attack1Forward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2d3be0d105e330f4891547bb6b7e6020, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2d3be0d105e330f4891547bb6b7e6020, type: 2}
   - m_GUID: 2d49f84d1fdbcf34f9a8b48000f80894
     m_Address: GHOUL_LEGACY_grabBite_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2d49f84d1fdbcf34f9a8b48000f80894, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2d49f84d1fdbcf34f9a8b48000f80894, type: 2}
   - m_GUID: 2eff6375288018e4ba710ce1a97d0480
     m_Address: GHOUL_LEGACY_walk_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2eff6375288018e4ba710ce1a97d0480, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2eff6375288018e4ba710ce1a97d0480, type: 2}
   - m_GUID: 2f260c0971e8ede46a3d5cdb957930e7
     m_Address: RingStaffStraight_Attack_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 2f260c0971e8ede46a3d5cdb957930e7, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 2f260c0971e8ede46a3d5cdb957930e7, type: 2}
   - m_GUID: 2fbc4ed4c61b628469516ae3e8a8fe03
     m_Address: EVIL_WATCHER_LEGACY_getHit_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2fbc4ed4c61b628469516ae3e8a8fe03, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2fbc4ed4c61b628469516ae3e8a8fe03, type: 2}
   - m_GUID: 2fd0f439dee9a4a49a12cef2b6b2e896
     m_Address: EVIL_WATCHER_LEGACY_dashForward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 2fd0f439dee9a4a49a12cef2b6b2e896, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2fd0f439dee9a4a49a12cef2b6b2e896, type: 2}
   - m_GUID: 30366198164bde54bb88ea9702815c7b
     m_Address: pkup_ammo_nade_lg_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 30366198164bde54bb88ea9702815c7b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 30366198164bde54bb88ea9702815c7b, type: 2}
   - m_GUID: 310b9291a61539640b15c79c597e9a1b
     m_Address: GHOUL_LEGACY_strafeRight_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 310b9291a61539640b15c79c597e9a1b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 310b9291a61539640b15c79c597e9a1b, type: 2}
   - m_GUID: 311ac626f7a32584d9777e7a54b6de18
     m_Address: ChainsawMaterial
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2100000, guid: 311ac626f7a32584d9777e7a54b6de18, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: 311ac626f7a32584d9777e7a54b6de18, type: 2}
   - m_GUID: 31600ff222bb37a419b4760c7e6cc1a9
     m_Address: OAK_TREE_ENT_LEGACY_hide2_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 31600ff222bb37a419b4760c7e6cc1a9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 31600ff222bb37a419b4760c7e6cc1a9, type: 2}
   - m_GUID: 336e395cbfea23a41bfed0dadc4742d9
     m_Address: GHOUL_LEGACY_jumpGrabBite_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 336e395cbfea23a41bfed0dadc4742d9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 336e395cbfea23a41bfed0dadc4742d9, type: 2}
   - m_GUID: 3382f4c695abd4c47b700dc48371db8d
     m_Address: GHOUL_LEGACY_idle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3382f4c695abd4c47b700dc48371db8d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3382f4c695abd4c47b700dc48371db8d, type: 2}
   - m_GUID: 33e690145da4a2544b61cc1fd47089a6
     m_Address: GHOUL_LEGACY_strafeRight_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 33e690145da4a2544b61cc1fd47089a6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 33e690145da4a2544b61cc1fd47089a6, type: 2}
   - m_GUID: 3412f02bb64226d42ae063099d843d06
     m_Address: GHOUL_LEGACY_grabBite_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3412f02bb64226d42ae063099d843d06, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3412f02bb64226d42ae063099d843d06, type: 2}
   - m_GUID: 34309a996a7f672428d8f21f7f15db72
     m_Address: Eye of the beholder_Idle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 34309a996a7f672428d8f21f7f15db72, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 34309a996a7f672428d8f21f7f15db72, type: 2}
   - m_GUID: 346b4603093b30c42a1adc25c34e64ac
     m_Address: GHOUL_LEGACY_attack2_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 346b4603093b30c42a1adc25c34e64ac, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 346b4603093b30c42a1adc25c34e64ac, type: 2}
   - m_GUID: 3646328cbbadbed4f90f79d94c71e3b9
     m_Address: OAK_TREE_ENT_LEGACY_hide2_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3646328cbbadbed4f90f79d94c71e3b9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3646328cbbadbed4f90f79d94c71e3b9, type: 2}
   - m_GUID: 3694e5c8038f9ce46966dc1c0bf9fa3d
     m_Address: Droid-01_Industrial_IdleAiming_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3694e5c8038f9ce46966dc1c0bf9fa3d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3694e5c8038f9ce46966dc1c0bf9fa3d, type: 2}
   - m_GUID: 36b4cb411d6a2064290915210a663373
     m_Address: GHOUL_LEGACY_walk_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 36b4cb411d6a2064290915210a663373, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 36b4cb411d6a2064290915210a663373, type: 2}
   - m_GUID: 36fd9982a337a4540b8839bd0b62ac30
     m_Address: FAT_OGRE_LEGACY_attack1Forward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 36fd9982a337a4540b8839bd0b62ac30, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 36fd9982a337a4540b8839bd0b62ac30, type: 2}
   - m_GUID: 3704a1ba1024872488d15afb97277163
     m_Address: GHOUL_LEGACY_strafeLeft_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3704a1ba1024872488d15afb97277163, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3704a1ba1024872488d15afb97277163, type: 2}
   - m_GUID: 3a9426df95663064484f57816b068772
     m_Address: pkup_ammo_mgun_sm_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3a9426df95663064484f57816b068772, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3a9426df95663064484f57816b068772, type: 2}
   - m_GUID: 3b16920f058a8ce42b529e4fc2cca08b
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3b16920f058a8ce42b529e4fc2cca08b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3b16920f058a8ce42b529e4fc2cca08b, type: 2}
   - m_GUID: 3c8282e9b4406d24aabaad4298c2fed0
     m_Address: GHOUL_LEGACY_run_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3c8282e9b4406d24aabaad4298c2fed0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3c8282e9b4406d24aabaad4298c2fed0, type: 2}
   - m_GUID: 3c8efa33d7402834ca56d61332e191b6
     m_Address: pkup_ammo_rckt_lg_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3c8efa33d7402834ca56d61332e191b6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3c8efa33d7402834ca56d61332e191b6, type: 2}
   - m_GUID: 3cc09bd419715a34695a9bf425c5a50b
     m_Address: Droid-01_Industrial_IdleArmed_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3cc09bd419715a34695a9bf425c5a50b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3cc09bd419715a34695a9bf425c5a50b, type: 2}
   - m_GUID: 3d01f6d424deceb4eb8eac9f1277453f
     m_Address: EVIL_WATCHER_LEGACY_idleLookAround_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3d01f6d424deceb4eb8eac9f1277453f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3d01f6d424deceb4eb8eac9f1277453f, type: 2}
   - m_GUID: 3d0a28c52fb634f4ba5baa9c9e213ae6
     m_Address: GHOUL_LEGACY_jumpattack_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3d0a28c52fb634f4ba5baa9c9e213ae6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3d0a28c52fb634f4ba5baa9c9e213ae6, type: 2}
   - m_GUID: 3d251b955d316e24cb350401f62980f0
     m_Address: RingStaffStraight_AttackStart_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 3d251b955d316e24cb350401f62980f0, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 3d251b955d316e24cb350401f62980f0, type: 2}
   - m_GUID: 3e79459d97ae7574d898ea4ebfdc9db5
     m_Address: chainsaw_Attacking_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 3e79459d97ae7574d898ea4ebfdc9db5, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 3e79459d97ae7574d898ea4ebfdc9db5, type: 3}
   - m_GUID: 3fa5dde4fb151d24a812d300f0cb6f82
     m_Address: GHOUL_LEGACY_attack2Forward_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3fa5dde4fb151d24a812d300f0cb6f82, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3fa5dde4fb151d24a812d300f0cb6f82, type: 2}
   - m_GUID: 3fd102fc7f087fb4494a695be001fe33
     m_Address: Chandelier_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 3fd102fc7f087fb4494a695be001fe33, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3fd102fc7f087fb4494a695be001fe33, type: 2}
   - m_GUID: 404e70724bfe7ba419f8bd40c96e0848
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 404e70724bfe7ba419f8bd40c96e0848, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 404e70724bfe7ba419f8bd40c96e0848, type: 2}
   - m_GUID: 41166337ddfbd5f4fa5c40c47f0fe06e
     m_Address: Droid-01_Industrial_WalkForwardAiming_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 41166337ddfbd5f4fa5c40c47f0fe06e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 41166337ddfbd5f4fa5c40c47f0fe06e, type: 2}
   - m_GUID: 4313519728efdad40bdd9d14854e6942
     m_Address: OAK_TREE_ENT_LEGACY_walk_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4313519728efdad40bdd9d14854e6942, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4313519728efdad40bdd9d14854e6942, type: 2}
   - m_GUID: 43217425f62606a4fba6c7990df1494d
     m_Address: Chandelier_WaitOneSecond_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 43217425f62606a4fba6c7990df1494d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 43217425f62606a4fba6c7990df1494d, type: 2}
   - m_GUID: 4504057614872834dbdda08d79b92751
     m_Address: OAK_TREE_ENT_LEGACY_death_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4504057614872834dbdda08d79b92751, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4504057614872834dbdda08d79b92751, type: 2}
   - m_GUID: 454991ac5461a64418199c30a5f4d6c4
     m_Address: Pistol_PistolShoot_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 454991ac5461a64418199c30a5f4d6c4, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 454991ac5461a64418199c30a5f4d6c4, type: 2}
   - m_GUID: 4609a9c4dfc4a224290c9126a3dbae76
     m_Address: Eye of the beholder_Idle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 4609a9c4dfc4a224290c9126a3dbae76, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 4609a9c4dfc4a224290c9126a3dbae76, type: 2}
   - m_GUID: 47569430ea848544a90a3d6645fa9b11
     m_Address: GHOUL_LEGACY_jumpattack_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 47569430ea848544a90a3d6645fa9b11, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 47569430ea848544a90a3d6645fa9b11, type: 2}
   - m_GUID: 47837195f2ba4274087342f8d39ded55
     m_Address: RingStaffStraight_Idle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 47837195f2ba4274087342f8d39ded55, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 47837195f2ba4274087342f8d39ded55, type: 2}
   - m_GUID: 4797a6b14f892d840b11adba63a8ce76
     m_Address: Eye of the beholder_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 4797a6b14f892d840b11adba63a8ce76, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 4797a6b14f892d840b11adba63a8ce76, type: 3}
   - m_GUID: 494fa684469868349afefe9a618a4977
     m_Address: Droid-01_Industrial_DeathArmed_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 494fa684469868349afefe9a618a4977, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 494fa684469868349afefe9a618a4977, type: 2}
   - m_GUID: 4a54cb615af4be1478a90adc3d498d17
     m_Address: GHOUL_LEGACY_attack2HitComboForward_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4a54cb615af4be1478a90adc3d498d17, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4a54cb615af4be1478a90adc3d498d17, type: 2}
   - m_GUID: 4a69a83eae139334a849fd5260dbb495
     m_Address: pkup_ammo_sgun_sm_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4a69a83eae139334a849fd5260dbb495, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4a69a83eae139334a849fd5260dbb495, type: 2}
   - m_GUID: 4acf905dabbe0db41b1142b3128e86da
     m_Address: Droid-01_Industrial_IdleArmed_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4acf905dabbe0db41b1142b3128e86da, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4acf905dabbe0db41b1142b3128e86da, type: 2}
   - m_GUID: 4b22ed3975362304e95dc4726299c780
     m_Address: GHOUL_LEGACY_jumpBackwards_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4b22ed3975362304e95dc4726299c780, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4b22ed3975362304e95dc4726299c780, type: 2}
   - m_GUID: 4c55d29c99e9e4444ba248603892c3d4
     m_Address: Pistol_PistolIdle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 4c55d29c99e9e4444ba248603892c3d4, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 4c55d29c99e9e4444ba248603892c3d4, type: 2}
   - m_GUID: 4d31ce77a15908d49acf0d3b0cf173d6
     m_Address: pkup_ammo_sgun_lg_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4d31ce77a15908d49acf0d3b0cf173d6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4d31ce77a15908d49acf0d3b0cf173d6, type: 2}
   - m_GUID: 4de087d26ce7e094ca3b4c473f3476fa
     m_Address: GHOUL_LEGACY_jumpBackwards_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4de087d26ce7e094ca3b4c473f3476fa, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4de087d26ce7e094ca3b4c473f3476fa, type: 2}
   - m_GUID: 4f03839b0f7bb514593e4f4d38d47e79
     m_Address: GHOUL_LEGACY_DeathWithGore_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 4f03839b0f7bb514593e4f4d38d47e79, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4f03839b0f7bb514593e4f4d38d47e79, type: 2}
   - m_GUID: 50ddc4f9105fcb54fa6023cf7833427e
     m_Address: pkup_ammo_mgun_sm_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 50ddc4f9105fcb54fa6023cf7833427e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 50ddc4f9105fcb54fa6023cf7833427e, type: 2}
   - m_GUID: 510155109fc53ec4288d5daad611147d
     m_Address: EVIL_WATCHER_LEGACY_idleLookAround_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 510155109fc53ec4288d5daad611147d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 510155109fc53ec4288d5daad611147d, type: 2}
   - m_GUID: 513d72322cff8e34a937574e88595ab8
     m_Address: GHOUL_LEGACY_attack1_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 513d72322cff8e34a937574e88595ab8, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 513d72322cff8e34a937574e88595ab8, type: 2}
   - m_GUID: 518b60f1627e0bc4aa87887e5452edb2
     m_Address: RingStaffStraight_Idle long_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 518b60f1627e0bc4aa87887e5452edb2, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 518b60f1627e0bc4aa87887e5452edb2, type: 2}
   - m_GUID: 5275d55e301545f41a35131ad6bcd9f8
     m_Address: GHOUL_LEGACY_getHit2_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 5275d55e301545f41a35131ad6bcd9f8, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5275d55e301545f41a35131ad6bcd9f8, type: 2}
   - m_GUID: 52c46000491e09d47a973475d2cc256d
     m_Address: HARPY_breastsExposed_LEGACY_fly_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 52c46000491e09d47a973475d2cc256d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 52c46000491e09d47a973475d2cc256d, type: 2}
   - m_GUID: 52dc90765e9ec714380416baeb221f42
     m_Address: pkup_ammo_nade_sm_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 52dc90765e9ec714380416baeb221f42, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 52dc90765e9ec714380416baeb221f42, type: 2}
   - m_GUID: 53eead69da7891e46b2c35e96a255801
     m_Address: Eye of the beholder_Shoot_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 53eead69da7891e46b2c35e96a255801, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 53eead69da7891e46b2c35e96a255801, type: 3}
   - m_GUID: 54401d089378fab4289845524c51426f
     m_Address: Droid-01_Industrial_WalkForwardAiming_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 54401d089378fab4289845524c51426f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 54401d089378fab4289845524c51426f, type: 2}
   - m_GUID: 54c9be82d8a30394ea475868cfc5998e
     m_Address: Eye of the beholder_Idle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 54c9be82d8a30394ea475868cfc5998e, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 54c9be82d8a30394ea475868cfc5998e, type: 3}
   - m_GUID: 54d1d27540045cc43950f2fc26f9233d
     m_Address: GHOUL_LEGACY_attack1_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 54d1d27540045cc43950f2fc26f9233d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 54d1d27540045cc43950f2fc26f9233d, type: 2}
   - m_GUID: 56006f82d6b7ed04e8f3f00049ef666a
     m_Address: RingStaffStraight_Attack_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 56006f82d6b7ed04e8f3f00049ef666a, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 56006f82d6b7ed04e8f3f00049ef666a, type: 2}
   - m_GUID: 56698c493f77bc444bc43458fe572c15
     m_Address: Pistol_PistolShoot_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 56698c493f77bc444bc43458fe572c15, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 56698c493f77bc444bc43458fe572c15, type: 2}
   - m_GUID: 590125cf1fb21954eb9eb0b5586d4d5f
     m_Address: ceiling chain_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 590125cf1fb21954eb9eb0b5586d4d5f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 590125cf1fb21954eb9eb0b5586d4d5f, type: 2}
   - m_GUID: 5d631fcde1132994584ef8c253d2d8b8
     m_Address: pkup_ammo_rckt_sm_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 5d631fcde1132994584ef8c253d2d8b8, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5d631fcde1132994584ef8c253d2d8b8, type: 2}
   - m_GUID: 5e450b7c6e983374d9053c2d87c5f5b0
     m_Address: GHOUL_LEGACY_walk_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 5e450b7c6e983374d9053c2d87c5f5b0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5e450b7c6e983374d9053c2d87c5f5b0, type: 2}
   - m_GUID: 5f56ba8da4e716945a641f574398fb44
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBite_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 5f56ba8da4e716945a641f574398fb44, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5f56ba8da4e716945a641f574398fb44, type: 2}
   - m_GUID: 5f7ad465c67ae10459a55c1f351da0c4
     m_Address: GHOUL_LEGACY_attack2Forward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 5f7ad465c67ae10459a55c1f351da0c4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5f7ad465c67ae10459a55c1f351da0c4, type: 2}
   - m_GUID: 613a65a48b944a14db8d5683f3f8c165
     m_Address: OAK_TREE_ENT_LEGACY_walk_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 613a65a48b944a14db8d5683f3f8c165, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 613a65a48b944a14db8d5683f3f8c165, type: 2}
   - m_GUID: 61ab46a20ae585e4490eab3fd4dbc7c4
     m_Address: GHOUL_LEGACY_idle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 61ab46a20ae585e4490eab3fd4dbc7c4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 61ab46a20ae585e4490eab3fd4dbc7c4, type: 2}
   - m_GUID: 67ce285b476b8a14d8d11082593d40ec
     m_Address: Shotgun Staff_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 67ce285b476b8a14d8d11082593d40ec, type: 2}
     m_TargetAsset: {fileID: 2800000, guid: 67ce285b476b8a14d8d11082593d40ec, type: 2}
   - m_GUID: 6922ffa7b2641ca42be27f0498b8cd17
     m_Address: chainsaw_Attack_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 6922ffa7b2641ca42be27f0498b8cd17, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 6922ffa7b2641ca42be27f0498b8cd17, type: 3}
   - m_GUID: 6929cd9d6b72ac94e949d94f0c802df9
     m_Address: Eye of the beholder_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 6929cd9d6b72ac94e949d94f0c802df9, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 6929cd9d6b72ac94e949d94f0c802df9, type: 2}
   - m_GUID: 697b86d29d2e1bb4da7e022956e74fa2
     m_Address: HARPY_breastsExposed_LEGACY_idle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 697b86d29d2e1bb4da7e022956e74fa2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 697b86d29d2e1bb4da7e022956e74fa2, type: 2}
   - m_GUID: 6ad752dfa7fa9ac478dba602efbd6313
     m_Address: RingStaffStraight_Idle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 6ad752dfa7fa9ac478dba602efbd6313, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 6ad752dfa7fa9ac478dba602efbd6313, type: 2}
   - m_GUID: 6b2430c06430eaf4ea84d4227aa5e043
     m_Address: GHOUL_LEGACY_jumpForward_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 6b2430c06430eaf4ea84d4227aa5e043, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6b2430c06430eaf4ea84d4227aa5e043, type: 2}
   - m_GUID: 6b99639626ddfe64cab4d3099e103435
     m_Address: HARPY_breastsExposed_LEGACY_2HitComboForward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 6b99639626ddfe64cab4d3099e103435, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6b99639626ddfe64cab4d3099e103435, type: 2}
   - m_GUID: 6d171c30885aa464d96cc7172ec424ff
     m_Address: HARPY_breastsExposed_LEGACY_deathHitTheGround_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 6d171c30885aa464d96cc7172ec424ff, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6d171c30885aa464d96cc7172ec424ff, type: 2}
   - m_GUID: 6f233599d0e13bb47b0c4716fa6d3d9f
     m_Address: Droid-01_Industrial_IdleAiming_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 6f233599d0e13bb47b0c4716fa6d3d9f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6f233599d0e13bb47b0c4716fa6d3d9f, type: 2}
   - m_GUID: 6fb9eb0c372f38b49a25a383d2cfa16d
     m_Address: OAK_TREE_ENT_LEGACY_death_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 6fb9eb0c372f38b49a25a383d2cfa16d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6fb9eb0c372f38b49a25a383d2cfa16d, type: 2}
   - m_GUID: 702e9d4011e267041b8f0143ec5617c2
     m_Address: GHOUL_LEGACY_attack2HitCombo_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 702e9d4011e267041b8f0143ec5617c2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 702e9d4011e267041b8f0143ec5617c2, type: 2}
   - m_GUID: 70fb2ccbe5f634e4aaed531705b88553
     m_Address: ceiling chain_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 70fb2ccbe5f634e4aaed531705b88553, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 70fb2ccbe5f634e4aaed531705b88553, type: 2}
   - m_GUID: 73b2498409545c343b86d1fb2a2af25e
     m_Address: FAT_OGRE_LEGACY_run_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 73b2498409545c343b86d1fb2a2af25e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 73b2498409545c343b86d1fb2a2af25e, type: 2}
   - m_GUID: 753bd4ebefb8c354fb70273e5b8a208d
     m_Address: OAK_TREE_ENT_LEGACY_getHit1_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 753bd4ebefb8c354fb70273e5b8a208d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 753bd4ebefb8c354fb70273e5b8a208d, type: 2}
   - m_GUID: 760d483088d90c1438a97e623bbb5b90
     m_Address: Eye of the beholder_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 760d483088d90c1438a97e623bbb5b90, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 760d483088d90c1438a97e623bbb5b90, type: 3}
   - m_GUID: 76277e26043dedd4798c38f8828c5b33
     m_Address: chainsaw_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 76277e26043dedd4798c38f8828c5b33, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 76277e26043dedd4798c38f8828c5b33, type: 3}
   - m_GUID: 773cefaf4b7b94042be2907ab70b2cf6
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 773cefaf4b7b94042be2907ab70b2cf6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 773cefaf4b7b94042be2907ab70b2cf6, type: 2}
   - m_GUID: 78fcb4827952db340b210196d7b70df3
     m_Address: Shotgun_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 78fcb4827952db340b210196d7b70df3, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 78fcb4827952db340b210196d7b70df3, type: 2}
   - m_GUID: 794b07e8de7bed74eb3c3b88d4a8e3bc
     m_Address: HARPY_breastsExposed_LEGACY_deathHitTheGround_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 794b07e8de7bed74eb3c3b88d4a8e3bc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 794b07e8de7bed74eb3c3b88d4a8e3bc, type: 2}
   - m_GUID: 79d69bb95a080c445b3e63851a9e0578
     m_Address: EnemyMaterial
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2100000, guid: 79d69bb95a080c445b3e63851a9e0578, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: 79d69bb95a080c445b3e63851a9e0578, type: 2}
   - m_GUID: 7b7a9b23f281df6438bd9c01b30f5e95
     m_Address: Shotgun_ShotgunIdle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 7b7a9b23f281df6438bd9c01b30f5e95, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 7b7a9b23f281df6438bd9c01b30f5e95, type: 2}
   - m_GUID: 7c23cf637c72d2549a596b71668ab4fd
     m_Address: Shotgun staff pickup_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 7c23cf637c72d2549a596b71668ab4fd, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 7c23cf637c72d2549a596b71668ab4fd, type: 3}
   - m_GUID: 7c5617e5ef9a54c4f9335b1bc6a0e6bb
     m_Address: RingStaffStraight_Attack_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 7c5617e5ef9a54c4f9335b1bc6a0e6bb, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 7c5617e5ef9a54c4f9335b1bc6a0e6bb, type: 2}
   - m_GUID: 7caaf106026bafb43b95850bdbac1800
     m_Address: Shotgun staff_Shoot_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 7caaf106026bafb43b95850bdbac1800, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 7caaf106026bafb43b95850bdbac1800, type: 3}
   - m_GUID: 7d788fc2170825d44a1f7c20a71f248d
     m_Address: Chandelier_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 7d788fc2170825d44a1f7c20a71f248d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7d788fc2170825d44a1f7c20a71f248d, type: 2}
   - m_GUID: 7e3a0721dc978c7459e0059a02865fb2
     m_Address: GHOUL_LEGACY_death_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 7e3a0721dc978c7459e0059a02865fb2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7e3a0721dc978c7459e0059a02865fb2, type: 2}
   - m_GUID: 7f9784c3e29d5544d9c9ab657fb5115b
     m_Address: Droid-01_Industrial_DeathArmed_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 7f9784c3e29d5544d9c9ab657fb5115b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7f9784c3e29d5544d9c9ab657fb5115b, type: 2}
   - m_GUID: 7fcd62132ba3e8648b7ba3f919b80e65
     m_Address: pkup_ammo_nade_lg_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 7fcd62132ba3e8648b7ba3f919b80e65, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7fcd62132ba3e8648b7ba3f919b80e65, type: 2}
   - m_GUID: 7fd50417ddf74b54f810334e7625af49
     m_Address: pkup_ammo_sgun_lg_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 7fd50417ddf74b54f810334e7625af49, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7fd50417ddf74b54f810334e7625af49, type: 2}
   - m_GUID: 808da97c168e8ad4c9dfe2a5f1afe003
     m_Address: GHOUL_LEGACY_strafeLeft_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 808da97c168e8ad4c9dfe2a5f1afe003, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 808da97c168e8ad4c9dfe2a5f1afe003, type: 2}
   - m_GUID: 80a8a17e44f12dd42b36415135ad7c55
     m_Address: RingStaffStraight_AttackStart_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 80a8a17e44f12dd42b36415135ad7c55, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 80a8a17e44f12dd42b36415135ad7c55, type: 2}
   - m_GUID: 81eda0860808a6347a305344cde94f43
     m_Address: GHOUL_LEGACY_walk_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 81eda0860808a6347a305344cde94f43, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 81eda0860808a6347a305344cde94f43, type: 2}
   - m_GUID: 82120b84417dc114d85b71458d81ff73
     m_Address: GHOUL_LEGACY_attack2HitComboToGrabBiteForward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 82120b84417dc114d85b71458d81ff73, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 82120b84417dc114d85b71458d81ff73, type: 2}
   - m_GUID: 827fa113fa721084e8e121fb1bf7f627
     m_Address: EVIL_WATCHER_LEGACY_idleLookAround_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 827fa113fa721084e8e121fb1bf7f627, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 827fa113fa721084e8e121fb1bf7f627, type: 2}
   - m_GUID: 8491c51e06629f445891c88cc568ff32
     m_Address: Droid-01_Industrial_DeathArmed_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 8491c51e06629f445891c88cc568ff32, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8491c51e06629f445891c88cc568ff32, type: 2}
   - m_GUID: 849e9fae0d60d404b8e98638fba1e9b9
     m_Address: Shotgun staff_TPose_FrameBufferflat
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 849e9fae0d60d404b8e98638fba1e9b9, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 849e9fae0d60d404b8e98638fba1e9b9, type: 3}
   - m_GUID: 860b0ac30dd43394a86ec0c2ceb9678d
     m_Address: GHOUL_LEGACY_strafeRight_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 860b0ac30dd43394a86ec0c2ceb9678d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 860b0ac30dd43394a86ec0c2ceb9678d, type: 2}
   - m_GUID: 862d450f9a06b39409ecfe0fb1605dba
     m_Address: GHOUL_LEGACY_run_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 862d450f9a06b39409ecfe0fb1605dba, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 862d450f9a06b39409ecfe0fb1605dba, type: 2}
   - m_GUID: 87ce93d1eafc0a54e8316b932bfeb6f1
     m_Address: Shotgun_ShotgunIdle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 87ce93d1eafc0a54e8316b932bfeb6f1, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 87ce93d1eafc0a54e8316b932bfeb6f1, type: 2}
   - m_GUID: 88bdf213d70989d4f8aee3fc7e82c5cc
     m_Address: HARPY_breastsExposed_LEGACY_fly_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 88bdf213d70989d4f8aee3fc7e82c5cc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 88bdf213d70989d4f8aee3fc7e82c5cc, type: 2}
   - m_GUID: 89947c1ca81b5e74da52137d4e719059
     m_Address: Shotgun_ShotgunShoot_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 89947c1ca81b5e74da52137d4e719059, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 89947c1ca81b5e74da52137d4e719059, type: 2}
   - m_GUID: 89cb863705ef10e49977840ddee9fdeb
     m_Address: Shotgun_ShotgunShoot_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 89cb863705ef10e49977840ddee9fdeb, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 89cb863705ef10e49977840ddee9fdeb, type: 2}
   - m_GUID: 8a465cc0732e616488787fa72f6e3a0a
     m_Address: chainsaw_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 8a465cc0732e616488787fa72f6e3a0a, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 8a465cc0732e616488787fa72f6e3a0a, type: 3}
   - m_GUID: 8a6b674cef67709499f730f599cf9be8
     m_Address: pkup_ammo_mgun_sm_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 8a6b674cef67709499f730f599cf9be8, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8a6b674cef67709499f730f599cf9be8, type: 2}
   - m_GUID: 8ae8f8aa722ae314aa12ea0c6a9b8c39
     m_Address: ceiling chain_WaitOneSecond_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 8ae8f8aa722ae314aa12ea0c6a9b8c39, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8ae8f8aa722ae314aa12ea0c6a9b8c39, type: 2}
   - m_GUID: 8bc41533286b4a945b47cd8dfdd660ca
     m_Address: FAT_OGRE_LEGACY_attack1Forward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 8bc41533286b4a945b47cd8dfdd660ca, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 8bc41533286b4a945b47cd8dfdd660ca, type: 2}
   - m_GUID: 8bf92b59b8f4f6948ac97ec25955c4ed
     m_Address: Eye of the beholder_Shoot_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 8bf92b59b8f4f6948ac97ec25955c4ed, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 8bf92b59b8f4f6948ac97ec25955c4ed, type: 2}
   - m_GUID: 90b26450217c59b458db2a44852e5a2f
     m_Address: pkup_ammo_sgun_sm_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 90b26450217c59b458db2a44852e5a2f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 90b26450217c59b458db2a44852e5a2f, type: 2}
   - m_GUID: 91b679dd835684d4cb5e56fdfe2957a9
     m_Address: GHOUL_LEGACY_attack2_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 91b679dd835684d4cb5e56fdfe2957a9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 91b679dd835684d4cb5e56fdfe2957a9, type: 2}
   - m_GUID: 92103a5f959c7fa40a1943d68b219853
     m_Address: EVIL_WATCHER_LEGACY_death_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 92103a5f959c7fa40a1943d68b219853, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 92103a5f959c7fa40a1943d68b219853, type: 2}
   - m_GUID: 9213da4bb5f788647888da7f9e76e818
     m_Address: HARPY_breastsExposed_LEGACY_idle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9213da4bb5f788647888da7f9e76e818, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9213da4bb5f788647888da7f9e76e818, type: 2}
   - m_GUID: 94014c18901cd664eb48833f607c2092
     m_Address: Shotgun_ShotgunShoot_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 94014c18901cd664eb48833f607c2092, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 94014c18901cd664eb48833f607c2092, type: 2}
   - m_GUID: 94b3fb1aba9f81243aea1a9cfbe76fdb
     m_Address: chainsaw_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 94b3fb1aba9f81243aea1a9cfbe76fdb, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 94b3fb1aba9f81243aea1a9cfbe76fdb, type: 3}
   - m_GUID: 94ebd4ffa016351489e08c4b72d9829f
     m_Address: Drip blood
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2100000, guid: 94ebd4ffa016351489e08c4b72d9829f, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: 94ebd4ffa016351489e08c4b72d9829f, type: 2}
   - m_GUID: 95483fb66097d5d4190539b860a9d434
     m_Address: RingStaffStraight_Idle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 95483fb66097d5d4190539b860a9d434, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 95483fb66097d5d4190539b860a9d434, type: 2}
   - m_GUID: 95b97950582c9c1498ee1d69239cfd69
     m_Address: RingStaffStraight_Idle long_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 95b97950582c9c1498ee1d69239cfd69, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 95b97950582c9c1498ee1d69239cfd69, type: 2}
   - m_GUID: 96b8f46feadca9444ae003978718c08f
     m_Address: GHOUL_LEGACY_jumpBackwards_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 96b8f46feadca9444ae003978718c08f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 96b8f46feadca9444ae003978718c08f, type: 2}
   - m_GUID: 96bbbd15975aeca44bf036e541a21ddb
     m_Address: Eye of the beholder_Shoot_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: 96bbbd15975aeca44bf036e541a21ddb, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: 96bbbd15975aeca44bf036e541a21ddb, type: 3}
   - m_GUID: 970278f123de7c949a4bae0ddfc63140
     m_Address: GHOUL_LEGACY_attack2HitComboForward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 970278f123de7c949a4bae0ddfc63140, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 970278f123de7c949a4bae0ddfc63140, type: 2}
   - m_GUID: 98ac36a212ff871499ab44ed1b949ba5
     m_Address: FAT_OGRE_LEGACY_attack1Forward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 98ac36a212ff871499ab44ed1b949ba5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 98ac36a212ff871499ab44ed1b949ba5, type: 2}
   - m_GUID: 9a57f916de26f434d97d7bb0535b7b26
     m_Address: GHOUL_LEGACY_jumpGrabBite_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9a57f916de26f434d97d7bb0535b7b26, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9a57f916de26f434d97d7bb0535b7b26, type: 2}
   - m_GUID: 9aa65d5a963242d469eefcdf372b9ffc
     m_Address: ceiling chain_WaitOneSecond_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9aa65d5a963242d469eefcdf372b9ffc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9aa65d5a963242d469eefcdf372b9ffc, type: 2}
   - m_GUID: 9b444f4f46d7a394ab5cb7512a7c3d9f
     m_Address: Droid-01_Industrial_IdleArmed_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9b444f4f46d7a394ab5cb7512a7c3d9f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9b444f4f46d7a394ab5cb7512a7c3d9f, type: 2}
   - m_GUID: 9bcfb067eb1d58840a47b24ac18b3a1e
     m_Address: EVIL_WATCHER_LEGACY_dashForward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9bcfb067eb1d58840a47b24ac18b3a1e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9bcfb067eb1d58840a47b24ac18b3a1e, type: 2}
   - m_GUID: 9be9be92b8a019c4e820b8c7b530384d
     m_Address: OAK_TREE_ENT_LEGACY_death_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9be9be92b8a019c4e820b8c7b530384d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9be9be92b8a019c4e820b8c7b530384d, type: 2}
   - m_GUID: 9c251a9e85e665a4989b01d0cb479e61
     m_Address: OAK_TREE_ENT_LEGACY_clawsAttackLForward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9c251a9e85e665a4989b01d0cb479e61, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9c251a9e85e665a4989b01d0cb479e61, type: 2}
   - m_GUID: 9ce17588752d994458c691843facd2a4
     m_Address: GHOUL_LEGACY_strafeLeft_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9ce17588752d994458c691843facd2a4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9ce17588752d994458c691843facd2a4, type: 2}
   - m_GUID: 9e05906a943260a4baec3500a0a2cc1e
     m_Address: RingStaffStraight_AttackStart_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: 9e05906a943260a4baec3500a0a2cc1e, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: 9e05906a943260a4baec3500a0a2cc1e, type: 2}
   - m_GUID: 9e25b72f4a08b1e4da1265b54a52b44b
     m_Address: Droid-01_Industrial_WalkForwardAiming_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9e25b72f4a08b1e4da1265b54a52b44b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9e25b72f4a08b1e4da1265b54a52b44b, type: 2}
   - m_GUID: 9e5826f4dfcbab044a1a6c1cdbb2922b
     m_Address: GHOUL_LEGACY_jumpForward_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9e5826f4dfcbab044a1a6c1cdbb2922b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9e5826f4dfcbab044a1a6c1cdbb2922b, type: 2}
   - m_GUID: 9f7d73a2940cf284d8d9ac0fcd6e72a6
     m_Address: EVIL_WATCHER_LEGACY_dashForward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: 9f7d73a2940cf284d8d9ac0fcd6e72a6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9f7d73a2940cf284d8d9ac0fcd6e72a6, type: 2}
   - m_GUID: a001ed5f8dfcec84dbb7b90fab498dfa
     m_Address: FAT_OGRE_LEGACY_idle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: a001ed5f8dfcec84dbb7b90fab498dfa, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a001ed5f8dfcec84dbb7b90fab498dfa, type: 2}
   - m_GUID: a86f1c531955f08499a09903196bf369
     m_Address: chainsaw_Attack_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: a86f1c531955f08499a09903196bf369, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: a86f1c531955f08499a09903196bf369, type: 3}
   - m_GUID: a87431e6d23f94143a0c65756556e6c2
     m_Address: GHOUL_LEGACY_walk_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: a87431e6d23f94143a0c65756556e6c2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a87431e6d23f94143a0c65756556e6c2, type: 2}
   - m_GUID: a8d0310ef993bb74f9579857fabd40bb
     m_Address: GHOUL_LEGACY_strafeLeft_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: a8d0310ef993bb74f9579857fabd40bb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a8d0310ef993bb74f9579857fabd40bb, type: 2}
   - m_GUID: a8eec4eeb9b6d174ea2ebb3bbc6cc717
     m_Address: RingStaffStraight_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: a8eec4eeb9b6d174ea2ebb3bbc6cc717, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: a8eec4eeb9b6d174ea2ebb3bbc6cc717, type: 2}
   - m_GUID: a92865ac08b6bce4a88be709d5138193
     m_Address: pkup_ammo_mgun_lg_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: a92865ac08b6bce4a88be709d5138193, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a92865ac08b6bce4a88be709d5138193, type: 2}
   - m_GUID: a95f19a40d50af74e8048b239fc9ecdd
     m_Address: FAT_OGRE_LEGACY_death_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: a95f19a40d50af74e8048b239fc9ecdd, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a95f19a40d50af74e8048b239fc9ecdd, type: 2}
   - m_GUID: a9e5eb9ec9c6a2249961fda56f60b4f1
     m_Address: FAT_OGRE_LEGACY_idle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: a9e5eb9ec9c6a2249961fda56f60b4f1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: a9e5eb9ec9c6a2249961fda56f60b4f1, type: 2}
   - m_GUID: aa5041575b154384587a4451dd700d4f
     m_Address: HARPY_breastsExposed_LEGACY_2HitComboForward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: aa5041575b154384587a4451dd700d4f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: aa5041575b154384587a4451dd700d4f, type: 2}
   - m_GUID: ad47e79e01d562044a7687f3424380bd
     m_Address: GHOUL_LEGACY_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ad47e79e01d562044a7687f3424380bd, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ad47e79e01d562044a7687f3424380bd, type: 2}
   - m_GUID: ad97eba51ca91004a9cab631c2e3fb6b
     m_Address: GHOUL_LEGACY_attack2_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ad97eba51ca91004a9cab631c2e3fb6b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ad97eba51ca91004a9cab631c2e3fb6b, type: 2}
   - m_GUID: ae8bb763f971a244a8db3a5078192c2c
     m_Address: OAK_TREE_ENT_LEGACY_clawsAttackLForward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ae8bb763f971a244a8db3a5078192c2c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ae8bb763f971a244a8db3a5078192c2c, type: 2}
   - m_GUID: b07d8bc04afdbd24b92540a16caedd1a
     m_Address: GHOUL_LEGACY_DeathWithGore_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: b07d8bc04afdbd24b92540a16caedd1a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b07d8bc04afdbd24b92540a16caedd1a, type: 2}
   - m_GUID: b2554a2489955ca4f8a3295f9e37e6ca
     m_Address: GHOUL_LEGACY_attack2HitComboForward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: b2554a2489955ca4f8a3295f9e37e6ca, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b2554a2489955ca4f8a3295f9e37e6ca, type: 2}
   - m_GUID: b35f14a247423704fb68ed3953eb7bb0
     m_Address: GHOUL_LEGACY_grabBite_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: b35f14a247423704fb68ed3953eb7bb0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b35f14a247423704fb68ed3953eb7bb0, type: 2}
   - m_GUID: b386d8a1319c81f4eade69aaed962604
     m_Address: GHOUL_LEGACY_jumpGrabBite_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: b386d8a1319c81f4eade69aaed962604, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b386d8a1319c81f4eade69aaed962604, type: 2}
   - m_GUID: b41c87025eccd064e9bb91b9976d778b
     m_Address: GHOUL_LEGACY_strafeLeft_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: b41c87025eccd064e9bb91b9976d778b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b41c87025eccd064e9bb91b9976d778b, type: 2}
   - m_GUID: b50b2ff52dda40f409416745dd017b9c
     m_Address: chainsaw_Idle_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: b50b2ff52dda40f409416745dd017b9c, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: b50b2ff52dda40f409416745dd017b9c, type: 3}
   - m_GUID: b5881842921025d4ea6e34dd51356faf
     m_Address: GHOUL_LEGACY_death_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: b5881842921025d4ea6e34dd51356faf, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b5881842921025d4ea6e34dd51356faf, type: 2}
   - m_GUID: b5edf080a2be3e24dbe613d42358b974
     m_Address: chainsaw_Attack_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: b5edf080a2be3e24dbe613d42358b974, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: b5edf080a2be3e24dbe613d42358b974, type: 3}
   - m_GUID: b8e8e152f1adbd64398b12e8ce53d653
     m_Address: GHOUL_LEGACY_attack2HitComboForward_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: b8e8e152f1adbd64398b12e8ce53d653, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b8e8e152f1adbd64398b12e8ce53d653, type: 2}
   - m_GUID: b8e8ee7cb81f86346b741617247f9144
     m_Address: Pistol_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: b8e8ee7cb81f86346b741617247f9144, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: b8e8ee7cb81f86346b741617247f9144, type: 2}
   - m_GUID: ba592bcbca4371b44963428b8aab7434
     m_Address: pkup_ammo_rckt_lg_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ba592bcbca4371b44963428b8aab7434, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ba592bcbca4371b44963428b8aab7434, type: 2}
   - m_GUID: bafe966974a7af24f8ca2f6d6ad3676c
     m_Address: FAT_OGRE_LEGACY_run_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: bafe966974a7af24f8ca2f6d6ad3676c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bafe966974a7af24f8ca2f6d6ad3676c, type: 2}
   - m_GUID: bb135e03723b0824ca53d67a59421c31
     m_Address: GHOUL_LEGACY_jumpBackwards_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: bb135e03723b0824ca53d67a59421c31, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bb135e03723b0824ca53d67a59421c31, type: 2}
   - m_GUID: bbc76e2dcdda10342af8e15887b98b04
     m_Address: Eye of the beholder_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: bbc76e2dcdda10342af8e15887b98b04, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: bbc76e2dcdda10342af8e15887b98b04, type: 2}
   - m_GUID: bbdb68cae0f53164fb0d85d7308e7f8e
     m_Address: GHOUL_LEGACY_jumpForward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: bbdb68cae0f53164fb0d85d7308e7f8e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bbdb68cae0f53164fb0d85d7308e7f8e, type: 2}
   - m_GUID: bccca417187791b4997959cc0fc37238
     m_Address: GHOUL_LEGACY_strafeRight_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: bccca417187791b4997959cc0fc37238, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bccca417187791b4997959cc0fc37238, type: 2}
   - m_GUID: bcfe58850bf918e4ba5355c88d648da1
     m_Address: pkup_ammo_rckt_sm_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: bcfe58850bf918e4ba5355c88d648da1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bcfe58850bf918e4ba5355c88d648da1, type: 2}
   - m_GUID: bea658c5109582c43bf2d3b2f3995eea
     m_Address: pkup_ammo_mgun_lg_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: bea658c5109582c43bf2d3b2f3995eea, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bea658c5109582c43bf2d3b2f3995eea, type: 2}
   - m_GUID: c29d94bed0ecab745bf67fbc0eeeded5
     m_Address: GHOUL_LEGACY_DeathWithGore_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: c29d94bed0ecab745bf67fbc0eeeded5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c29d94bed0ecab745bf67fbc0eeeded5, type: 2}
   - m_GUID: c329b80aca7628341bebe9ea24b10582
     m_Address: pkup_ammo_mgun_lg_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: c329b80aca7628341bebe9ea24b10582, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c329b80aca7628341bebe9ea24b10582, type: 2}
   - m_GUID: c4b058c542e6e8f4fad769b55cb6a4cf
     m_Address: Pistol_PistolIdle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: c4b058c542e6e8f4fad769b55cb6a4cf, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: c4b058c542e6e8f4fad769b55cb6a4cf, type: 2}
   - m_GUID: c56f10f26b0570b4385cb391273e9ec7
     m_Address: ceiling chain_WaitOneSecond_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: c56f10f26b0570b4385cb391273e9ec7, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c56f10f26b0570b4385cb391273e9ec7, type: 2}
   - m_GUID: c5781cc890662ba4a94a089e84eaddb7
     m_Address: GHOUL_LEGACY_getHit1_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: c5781cc890662ba4a94a089e84eaddb7, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c5781cc890662ba4a94a089e84eaddb7, type: 2}
   - m_GUID: c585bdf554f2aba47bda720c20da6a6b
     m_Address: Eye of the beholder_Idle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: c585bdf554f2aba47bda720c20da6a6b, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: c585bdf554f2aba47bda720c20da6a6b, type: 3}
   - m_GUID: c61e8ca9a87bb954fae756dd5d05d4fb
     m_Address: GHOUL_LEGACY_getHit1_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: c61e8ca9a87bb954fae756dd5d05d4fb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c61e8ca9a87bb954fae756dd5d05d4fb, type: 2}
   - m_GUID: c6420daa3ed6ad147b8ee121008b25f5
     m_Address: Droid-01_Industrial_GetHitFrontAiming_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: c6420daa3ed6ad147b8ee121008b25f5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c6420daa3ed6ad147b8ee121008b25f5, type: 2}
   - m_GUID: c647f6120093b90499f9695561cffe2d
     m_Address: OAK_TREE_ENT_LEGACY_walk_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: c647f6120093b90499f9695561cffe2d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c647f6120093b90499f9695561cffe2d, type: 2}
   - m_GUID: c9b2ce964dfdd524085d32e2be1b0a30
     m_Address: GHOUL_LEGACY_run_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: c9b2ce964dfdd524085d32e2be1b0a30, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: c9b2ce964dfdd524085d32e2be1b0a30, type: 2}
   - m_GUID: cb8793c05321c5c4b8477bd31adb764e
     m_Address: Shotgun staff pickup_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: cb8793c05321c5c4b8477bd31adb764e, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: cb8793c05321c5c4b8477bd31adb764e, type: 3}
   - m_GUID: cbf038b7bc8c3af4890af689924f707c
     m_Address: EVIL_WATCHER_LEGACY_death_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: cbf038b7bc8c3af4890af689924f707c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: cbf038b7bc8c3af4890af689924f707c, type: 2}
   - m_GUID: cc686e27222111846b2350741093095b
     m_Address: Shotgun staff pickup_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: cc686e27222111846b2350741093095b, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: cc686e27222111846b2350741093095b, type: 3}
   - m_GUID: cdb521e39ab0ee24eaa1a0639574783f
     m_Address: FAT_OGRE_LEGACY_run_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: cdb521e39ab0ee24eaa1a0639574783f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: cdb521e39ab0ee24eaa1a0639574783f, type: 2}
   - m_GUID: cecda56ef06a8b04b8549870521605c1
     m_Address: GHOUL_LEGACY_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: cecda56ef06a8b04b8549870521605c1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: cecda56ef06a8b04b8549870521605c1, type: 2}
   - m_GUID: cf828efee15a029499b32186ca8a7da5
     m_Address: GHOUL_LEGACY_attack1Forward_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: cf828efee15a029499b32186ca8a7da5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: cf828efee15a029499b32186ca8a7da5, type: 2}
   - m_GUID: d1167735f31cf7341a25b4e8aae5a710
     m_Address: RingStaffStraight_TPose_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: d1167735f31cf7341a25b4e8aae5a710, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: d1167735f31cf7341a25b4e8aae5a710, type: 2}
   - m_GUID: d2e806c4e63371c47a6b8db0f1db9df5
     m_Address: EVIL_WATCHER_LEGACY_getHit_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d2e806c4e63371c47a6b8db0f1db9df5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d2e806c4e63371c47a6b8db0f1db9df5, type: 2}
   - m_GUID: d31c8e653fc475a409e0401658c259d9
     m_Address: FAT_OGRE_LEGACY_getHit1_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d31c8e653fc475a409e0401658c259d9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d31c8e653fc475a409e0401658c259d9, type: 2}
   - m_GUID: d39458104703037479b3ba90c5ab63d8
     m_Address: GHOUL_LEGACY_jumpattack_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d39458104703037479b3ba90c5ab63d8, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d39458104703037479b3ba90c5ab63d8, type: 2}
   - m_GUID: d40e1779e09f47844985a8c178d2b81f
     m_Address: HARPY_breastsExposed_LEGACY_idle_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d40e1779e09f47844985a8c178d2b81f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d40e1779e09f47844985a8c178d2b81f, type: 2}
   - m_GUID: d51c83d3e1cb0bf45969211e2cca3341
     m_Address: GHOUL_LEGACY_jumpGrabBite_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d51c83d3e1cb0bf45969211e2cca3341, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d51c83d3e1cb0bf45969211e2cca3341, type: 2}
   - m_GUID: d5a3b095b284c664fbd2d8e56f7f3461
     m_Address: pkup_ammo_sgun_lg_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d5a3b095b284c664fbd2d8e56f7f3461, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d5a3b095b284c664fbd2d8e56f7f3461, type: 2}
   - m_GUID: d6abc5066bb27424a8e658bc2f1630b0
     m_Address: Pistol_PistolShoot_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: d6abc5066bb27424a8e658bc2f1630b0, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: d6abc5066bb27424a8e658bc2f1630b0, type: 2}
   - m_GUID: d7587339c0c0e60429d9d8d89e4a8b1d
     m_Address: Eye of the beholder_Idle_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: d7587339c0c0e60429d9d8d89e4a8b1d, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: d7587339c0c0e60429d9d8d89e4a8b1d, type: 3}
   - m_GUID: d7f6c1231026edb499beb6371644fe29
     m_Address: GHOUL_LEGACY_attack1Forward_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d7f6c1231026edb499beb6371644fe29, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d7f6c1231026edb499beb6371644fe29, type: 2}
   - m_GUID: d8e04f2fe9b37ca45bfd0992e3c0afcf
     m_Address: GHOUL_LEGACY_attack2HitCombo_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d8e04f2fe9b37ca45bfd0992e3c0afcf, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d8e04f2fe9b37ca45bfd0992e3c0afcf, type: 2}
   - m_GUID: d98844721b5fc3e4e8af0413e34f80f9
     m_Address: GHOUL_LEGACY_attack2Forward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d98844721b5fc3e4e8af0413e34f80f9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d98844721b5fc3e4e8af0413e34f80f9, type: 2}
   - m_GUID: d9a43a0ac18d1d34aabdc43c30c05caf
     m_Address: GHOUL_LEGACY_strafeLeft_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: d9a43a0ac18d1d34aabdc43c30c05caf, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d9a43a0ac18d1d34aabdc43c30c05caf, type: 2}
   - m_GUID: da6e5cf0a783e0f44b8918ca7c4c8c1b
     m_Address: OAK_TREE_ENT_LEGACY_hide2_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: da6e5cf0a783e0f44b8918ca7c4c8c1b, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: da6e5cf0a783e0f44b8918ca7c4c8c1b, type: 2}
   - m_GUID: daad3b92e6b4dd4408e60447e51dc976
     m_Address: FAT_OGRE_LEGACY_death_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: daad3b92e6b4dd4408e60447e51dc976, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: daad3b92e6b4dd4408e60447e51dc976, type: 2}
   - m_GUID: dbedcd3630e211149b32f57288d14cae
     m_Address: GHOUL_LEGACY_getHit2_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: dbedcd3630e211149b32f57288d14cae, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: dbedcd3630e211149b32f57288d14cae, type: 2}
   - m_GUID: dccfa55d6de147546a33b53823e25fae
     m_Address: FAT_OGRE_LEGACY_getHit1_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: dccfa55d6de147546a33b53823e25fae, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: dccfa55d6de147546a33b53823e25fae, type: 2}
   - m_GUID: ddcc80ccdb0e89d4cb597c2572b0aaff
     m_Address: GHOUL_LEGACY_attack1_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ddcc80ccdb0e89d4cb597c2572b0aaff, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ddcc80ccdb0e89d4cb597c2572b0aaff, type: 2}
   - m_GUID: dece78b990f988445a31a1b3ed6413e0
     m_Address: OAK_TREE_ENT_LEGACY_hide1_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: dece78b990f988445a31a1b3ed6413e0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: dece78b990f988445a31a1b3ed6413e0, type: 2}
   - m_GUID: dffb360c32476e045a38d03bc2b2e240
     m_Address: EVIL_WATCHER_LEGACY_death_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: dffb360c32476e045a38d03bc2b2e240, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: dffb360c32476e045a38d03bc2b2e240, type: 2}
   - m_GUID: e228fce017e37e647ae8fd366ed47196
     m_Address: Droid-01_Industrial_IdleAiming_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: e228fce017e37e647ae8fd366ed47196, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e228fce017e37e647ae8fd366ed47196, type: 2}
   - m_GUID: e2841f51fdd4f044ba33e0b63350e50e
     m_Address: Shotgun_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: e2841f51fdd4f044ba33e0b63350e50e, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: e2841f51fdd4f044ba33e0b63350e50e, type: 2}
   - m_GUID: e425fec77b651f541868af8105300d7c
     m_Address: GHOUL_LEGACY_attack2HitComboForward_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: e425fec77b651f541868af8105300d7c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e425fec77b651f541868af8105300d7c, type: 2}
   - m_GUID: e64ef3585bf58bf409e38a30e8b675ac
     m_Address: Shotgun staff_Shoot_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: e64ef3585bf58bf409e38a30e8b675ac, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: e64ef3585bf58bf409e38a30e8b675ac, type: 2}
   - m_GUID: e8b938d6ed442124aa860438d3d30f7a
     m_Address: pkup_ammo_nade_sm_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: e8b938d6ed442124aa860438d3d30f7a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e8b938d6ed442124aa860438d3d30f7a, type: 2}
   - m_GUID: e943829cf1d0a134486c2d8f7f98998d
     m_Address: Chandelier_WaitOneSecond_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: e943829cf1d0a134486c2d8f7f98998d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e943829cf1d0a134486c2d8f7f98998d, type: 2}
   - m_GUID: e97baebe2d9fe1847aa99c14245ac5c3
     m_Address: GHOUL_LEGACY_attack1Forward_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: e97baebe2d9fe1847aa99c14245ac5c3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e97baebe2d9fe1847aa99c14245ac5c3, type: 2}
   - m_GUID: e9afcf22f4626794ea2a3f27daec6a04
     m_Address: GHOUL_LEGACY_jumpForward_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: e9afcf22f4626794ea2a3f27daec6a04, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e9afcf22f4626794ea2a3f27daec6a04, type: 2}
   - m_GUID: ea1159c12b9d4d946ada0536791c38b9
     m_Address: GHOUL_LEGACY_jumpattack_RM_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ea1159c12b9d4d946ada0536791c38b9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ea1159c12b9d4d946ada0536791c38b9, type: 2}
   - m_GUID: ee4b79b4f12e2224ea8f54fd41643531
     m_Address: OAK_TREE_ENT_LEGACY_hide1_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ee4b79b4f12e2224ea8f54fd41643531, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ee4b79b4f12e2224ea8f54fd41643531, type: 2}
   - m_GUID: ef345cdeae76be84ba708ab24917b49f
     m_Address: GHOUL_LEGACY_strafeRight_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ef345cdeae76be84ba708ab24917b49f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ef345cdeae76be84ba708ab24917b49f, type: 2}
   - m_GUID: f104b7793d7c94a43960a238f3a4daef
     m_Address: GHOUL_LEGACY_jumpGrabBite_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: f104b7793d7c94a43960a238f3a4daef, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f104b7793d7c94a43960a238f3a4daef, type: 2}
   - m_GUID: f3551bafe2f035b4ba48e8948770a0a9
     m_Address: GHOUL_LEGACY_jumpBackwards_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: f3551bafe2f035b4ba48e8948770a0a9, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f3551bafe2f035b4ba48e8948770a0a9, type: 2}
   - m_GUID: f693f7742cd2df749b8b3f53a60c5758
     m_Address: Eye of the beholder_Shoot_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: f693f7742cd2df749b8b3f53a60c5758, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: f693f7742cd2df749b8b3f53a60c5758, type: 2}
   - m_GUID: f6b3b2c3377e0ea42a98f8de8f5992d0
     m_Address: GHOUL_LEGACY_jumpattack_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: f6b3b2c3377e0ea42a98f8de8f5992d0, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f6b3b2c3377e0ea42a98f8de8f5992d0, type: 2}
   - m_GUID: f78ea977461492c4b949e1c87d1af3e6
     m_Address: GHOUL_LEGACY_jumpBackwards_RM_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: f78ea977461492c4b949e1c87d1af3e6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f78ea977461492c4b949e1c87d1af3e6, type: 2}
   - m_GUID: f823c86a27f97ae4c92a3ed7ed22b822
     m_Address: Shotgun staff_Shoot_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: f823c86a27f97ae4c92a3ed7ed22b822, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: f823c86a27f97ae4c92a3ed7ed22b822, type: 3}
   - m_GUID: f860bdc9cfa41ce49ab07a5dd7a9de25
     m_Address: GHOUL_LEGACY_strafeRight_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: f860bdc9cfa41ce49ab07a5dd7a9de25, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f860bdc9cfa41ce49ab07a5dd7a9de25, type: 2}
   - m_GUID: f96aca4eabc831d45a24af91c4885b57
     m_Address: pkup_ammo_sgun_sm_TPose_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: f96aca4eabc831d45a24af91c4885b57, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: f96aca4eabc831d45a24af91c4885b57, type: 2}
   - m_GUID: fa4a32c799a40324f8f674254b9ad861
     m_Address: pkup_ammo_nade_lg_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: fa4a32c799a40324f8f674254b9ad861, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fa4a32c799a40324f8f674254b9ad861, type: 2}
   - m_GUID: fa4c7a3ec8b728d48afb509f88f75003
     m_Address: GHOUL_LEGACY_jumpattack_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: fa4c7a3ec8b728d48afb509f88f75003, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fa4c7a3ec8b728d48afb509f88f75003, type: 2}
   - m_GUID: fa4f41e5e933d594cbef7adf8a94b97d
     m_Address: Eye of the beholder_Shoot_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 2800000, guid: fa4f41e5e933d594cbef7adf8a94b97d, type: 2}
+    m_TargetAsset: {fileID: 2800000, guid: fa4f41e5e933d594cbef7adf8a94b97d, type: 2}
   - m_GUID: faeedcfab96d02c40a78dcb1a13cb3c2
     m_Address: Eye of the beholder_TPose_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: faeedcfab96d02c40a78dcb1a13cb3c2, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: faeedcfab96d02c40a78dcb1a13cb3c2, type: 3}
   - m_GUID: fc031d2e50c51e04c979527cf8232337
     m_Address: OAK_TREE_ENT_LEGACY_hide1_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: fc031d2e50c51e04c979527cf8232337, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fc031d2e50c51e04c979527cf8232337, type: 2}
   - m_GUID: fcee1461f40720249adbeed62a040bcd
     m_Address: GHOUL_LEGACY_run_RM_Normal
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: fcee1461f40720249adbeed62a040bcd, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fcee1461f40720249adbeed62a040bcd, type: 2}
   - m_GUID: fe75b8e1e266d854a942aa483f1d7386
     m_Address: GHOUL_LEGACY_death_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: fe75b8e1e266d854a942aa483f1d7386, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fe75b8e1e266d854a942aa483f1d7386, type: 2}
   - m_GUID: ff5e8bf4254aa4a4bbe904ad839d7f9a
     m_Address: Eye of the beholder_Shoot_Alpha
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - sprites
     m_MainAsset: {fileID: 2800000, guid: ff5e8bf4254aa4a4bbe904ad839d7f9a, type: 3}
     m_TargetAsset: {fileID: 2800000, guid: ff5e8bf4254aa4a4bbe904ad839d7f9a, type: 3}
   - m_GUID: ff7142a704c0ea144a7da64ff88e383e
     m_Address: GHOUL_LEGACY_attack2Forward_FrameBuffer
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - sprites
+    m_MainAsset: {fileID: 18700000, guid: ff7142a704c0ea144a7da64ff88e383e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: ff7142a704c0ea144a7da64ff88e383e, type: 2}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 64f49dbb5e1a8914eab3a9426351e51c, type: 2}
   m_SchemaSet:

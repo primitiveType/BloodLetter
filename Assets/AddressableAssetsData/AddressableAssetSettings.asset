@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 4f019658de4dec745a6af58d75bcfa0c
+  m_DefaultGroup: 4dbc13e501051b14bbf5eb8695a0011f
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -72,6 +72,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - sprites
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: b68a24f2445bb2f4e9b2e1ae39c0e2a7, type: 2}
