@@ -36,6 +36,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: ab4356e03aa817e4eb3e8900c7708851, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - PlanetMask:
+        m_Texture: {fileID: 2800000, guid: a5ef94bc6d313a24ebda7869a489ed55, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - WaterMap:
         m_Texture: {fileID: 2800000, guid: 8daa5fd766f643540ba6d11dd198202b, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -125,9 +129,10 @@ Material:
     - LightContribution: 1
     - LightingPosterize: 4
     - NormalMapContribution: 0.2
+    - NumSteps: 40
     - PlanetRotationSpeed: 0.1
     - Quantize: 32
-    - SpherizeStrength: 0
+    - SpherizeStrength: 5
     - Vector1_D1DDC031: 60
     - WaterAmount: 0.35
     - _AlphaClip: 0

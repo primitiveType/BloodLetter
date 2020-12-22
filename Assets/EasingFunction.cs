@@ -57,6 +57,7 @@
 
 using UnityEngine;
 
+
 public static class EasingFunction
 {
     public delegate float Function(float s, float e, float v);

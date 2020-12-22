@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Stars
+  m_Name: Stars3
   m_Shader: {fileID: -6465566751694194690, guid: 67f5106e2a9fa194e9a98bdc8802042b,
     type: 3}
   m_ShaderKeywords: 
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Albedo:
-        m_Texture: {fileID: 2800000, guid: 008c49310a4071345a28d85153109e0e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9ea453ffa2b5b0a46b05fe0f846beb66, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Alpha:
@@ -33,11 +33,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Normal:
-        m_Texture: {fileID: 2800000, guid: 751aeecc3c6a5854abac80c27da429f0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9bfc01e5f34cd1a4a9871af0bd444e73, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - PlanetMask:
+        m_Texture: {fileID: 2800000, guid: 6b14c1090b07695449ac80b044e37753, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - WaterMap:
-        m_Texture: {fileID: 2800000, guid: 057120a9b41b2714ab3709dcb67cc457, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8daa5fd766f643540ba6d11dd198202b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -112,24 +116,29 @@ Material:
         m_Texture: {fileID: 2800000, guid: 62e063c52da7a2c4290a4f7dbf45f91f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_B509998_Out_0:
+        m_Texture: {fileID: 2800000, guid: a5ef94bc6d313a24ebda7869a489ed55, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - AlphaClip: 0.5
+    - AlphaClip: 0.15
     - AmbientMultiplier: 0.05
     - BOOLEAN_A0C15CD: 0
     - CORNERS: 0
-    - CloudSize: 400
+    - CloudSize: 41.02
     - CloudSpeed: 0.05
-    - CloudsAmount: 0.01
-    - IslandSize: 0.65
+    - CloudsAmount: 0.4
+    - IslandSize: 1
     - LOD_Override: 3
     - LightContribution: 0
     - LightingPosterize: 4
     - NormalMapContribution: 1
+    - NumSteps: 100
     - PlanetRotationSpeed: 0.1
     - Quantize: 32
-    - SpherizeStrength: 0
+    - SpherizeStrength: 20
     - Vector1_D1DDC031: 500
-    - WaterAmount: 0.7
+    - WaterAmount: 0.42
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -154,16 +163,17 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - CloudDirectionBias: {r: 1, g: 1, b: 0, a: 0}
-    - CloudSpeed: {r: 0, g: 0, b: 0, a: 0}
-    - CloudsColor: {r: 1, g: 1, b: 1, a: 0.85882354}
+    - CloudSpeed: {r: 1, g: 1, b: 0, a: 0}
+    - CloudsColor: {r: 0, g: 0.23584908, b: 0.03854391, a: 0.27058825}
     - LightClampMax: {r: 1, g: 1, b: 1, a: 0}
     - PlanetRotationSpeed: {r: 0.01, g: 0, b: 0, a: 0}
     - Tiling: {r: 1, g: 1, b: 0, a: 0}
     - Tint: {r: 1, g: 1, b: 1, a: 0}
     - UvOffset: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_40409DA5: {r: 0, g: 0, b: 0, a: 0}
     - WaterColor: {r: 0.13394447, g: 0.28002265, b: 0.6603774, a: 0}
     - WaterColorDeep: {r: 0, g: 0, b: 0, a: 1}
-    - WaterColorShallow: {r: 0.3018868, g: 0, b: 0.26611128, a: 1}
+    - WaterColorShallow: {r: 0, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
