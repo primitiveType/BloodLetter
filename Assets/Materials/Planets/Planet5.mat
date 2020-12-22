@@ -119,14 +119,15 @@ Material:
     - CORNERS: 0
     - CloudSize: 5.66
     - CloudSpeed: 0.05
-    - CloudsAmount: 0.5
-    - IslandSize: 12.72
+    - CloudsAmount: 0.63
+    - IslandSize: 1
     - LOD_Override: 3
     - LightContribution: 1
     - LightingPosterize: 4
     - NormalMapContribution: 0.2
     - PlanetRotationSpeed: 0.1
     - Quantize: 32
+    - SpherizeStrength: 0
     - Vector1_D1DDC031: 60
     - WaterAmount: 0.35
     - _AlphaClip: 0
@@ -154,12 +155,13 @@ Material:
     m_Colors:
     - CloudDirectionBias: {r: -1, g: 1.6, b: 1, a: 0}
     - CloudSpeed: {r: 0.1, g: 0, b: 0, a: 0}
-    - CloudsColor: {r: 1, g: 1, b: 1, a: 0.54509807}
+    - CloudsColor: {r: 1, g: 1, b: 1, a: 0.5176471}
     - LightClampMax: {r: 1, g: 1, b: 1, a: 0}
     - PlanetRotationSpeed: {r: 0.1, g: 0, b: 0, a: 0}
     - Tiling: {r: 1, g: 1, b: 0, a: 0}
     - Tint: {r: 1, g: 1, b: 1, a: 0}
     - UvOffset: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_40409DA5: {r: 0, g: 0, b: 0, a: 0}
     - WaterColor: {r: 0.13394447, g: 0.28002265, b: 0.6603774, a: 0}
     - WaterColorDeep: {r: 0, g: 0, b: 0, a: 1}
     - WaterColorShallow: {r: 0, g: 0.35730124, b: 1, a: 1}
