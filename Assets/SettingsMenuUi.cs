@@ -10,17 +10,19 @@ public class SettingsMenuUi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_MusicVolumeSlider.value = SettingsManager.Instance.Settings.MusicVolume;
+        m_SfxVolumeSlider.value = SettingsManager.Instance.Settings.SfxVolume;
         m_MusicVolumeSlider.onValueChanged.AddListener(MusicVolumeChanged);
         m_SfxVolumeSlider.onValueChanged.AddListener(SfxVolumeChanged);
     }
 
     private void SfxVolumeChanged(float volume)
     {
-        SettingsManager.Instance.SetSfxVolume(Mathf.Log10(volume) * 20);
+        SettingsManager.Instance.SetSfxVolume(volume);
     }
 
     private void MusicVolumeChanged(float volume)
     {
-        SettingsManager.Instance.SetMusicVolume(Mathf.Log10(volume) * 20);
+        SettingsManager.Instance.SetMusicVolume(volume);
     }
 }

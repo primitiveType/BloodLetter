@@ -19,6 +19,6 @@ public class MusicProvider : MonoBehaviour
     private void Update()
     {//hack
         //IntroloopPlayer.Instance.InternalAudioSources.ForEach(ap => ap.volume = Volume);
-        IntroloopPlayer.Instance.InternalAudioSources.ForEach(ap => ap.outputAudioMixerGroup = SettingsManager.Instance.MusicMixerGroup);
+       // IntroloopPlayer.Instance.InternalAudioSources.ForEach(ap => ap.outputAudioMixerGroup = SettingsManager.Instance.MusicMixerGroup);
     }
 }

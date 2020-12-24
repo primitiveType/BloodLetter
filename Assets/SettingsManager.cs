@@ -3,31 +3,40 @@ using UnityEngine.Audio;
 
 public class SettingsManager : MonoBehaviourSingleton<SettingsManager>
 {
-    private class Settings
-    {
-        public float MusicVolume { get; set; }
-        public float SfxVolume { get; set; }
-    }
-
-    private Settings settings; 
+    public Settings Settings { get; private set; } 
     [SerializeField]public AudioMixerGroup MusicMixerGroup;
     [SerializeField]private AudioMixerGroup SfxMixerGroup;
 
     protected override void Awake()
     {
-        settings = new Settings();
+        Settings = new Settings();
+        Settings.MusicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        Settings.SfxVolume = PlayerPrefs.GetFloat("SfxVolume");
+        SetMusicVolume(Settings.MusicVolume);
+        SetSfxVolume(Settings.SfxVolume);
     }
+    
 
     public void SetMusicVolume(float volume)
     {
-        volume = Mathf.Clamp(volume, -80, 0);
-        settings.MusicVolume = volume;
-        MusicMixerGroup.audioMixer.SetFloat("Volume", volume);
+ 
+        Settings.MusicVolume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
+        
+        var logVolume = Mathf.Log10(volume) * 20;
+        logVolume = Mathf.Clamp(logVolume, -80, 0);
+        MusicMixerGroup.audioMixer.SetFloat("Volume", logVolume);
     }
     public void SetSfxVolume(float volume)
     {
-        volume = Mathf.Clamp(volume, -80, 0);
-        settings.SfxVolume = volume;
-        SfxMixerGroup.audioMixer.SetFloat("Volume", volume);
+    
+        Settings.SfxVolume = volume;
+        PlayerPrefs.SetFloat("SfxVolume", volume);
+        PlayerPrefs.Save();
+        
+        var logVolume = Mathf.Log10(volume) * 20;
+        logVolume = Mathf.Clamp(logVolume, -80, 0);
+        SfxMixerGroup.audioMixer.SetFloat("Volume", logVolume);
     }
 }
