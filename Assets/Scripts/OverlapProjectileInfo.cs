@@ -22,7 +22,7 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
             var hitLayer = hit.gameObject.layer;
 
             var damaged = hit.GetComponent<IDamagedByHitscanProjectile>();
-            if (damaged != null)
+            if (damaged != null && damaged.IsHit(Vector2.negativeInfinity))
             {
                 damaged.OnShot(this, hit.ClosestPoint(position), direction);
                 //isDone = true;

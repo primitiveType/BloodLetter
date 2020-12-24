@@ -13,7 +13,7 @@ public class ActorRoot : MonoBehaviour
     public IActorEvents ActorEvents { get; private set; }
 
     public AnimationMaterialHelper AnimationMaterialHelper { get; private set; }
-    public IDamagedByHitscanProjectile HitscanCollider { get; private set; }
+    public IDamagedByHitscanProjectile[] HitscanColliders { get; private set; }
     
     public Collider Collider { get; private set; }
 
@@ -34,7 +34,7 @@ public class ActorRoot : MonoBehaviour
         Attack = GetComponentInChildren<MonsterAttackComponent>();
         ActorEvents = GetComponentInChildren<IActorEvents>();
         AnimationMaterialHelper = GetComponentInChildren<AnimationMaterialHelper>();
-        HitscanCollider = GetComponentInChildren<IDamagedByHitscanProjectile>();
+        HitscanColliders = GetComponentsInChildren<IDamagedByHitscanProjectile>();
         AggroHandler = GetComponentInChildren<EnemyAggroHandler>();
         VisibilityHandler = GetComponentInChildren<MonsterVisibilityHandler>();
         Health = GetComponentInChildren<ActorHealth>();

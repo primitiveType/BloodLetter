@@ -28,6 +28,12 @@ public class PauseMenuUi : MonoBehaviour
         LevelManager.Instance.Quit();
     }
 
+    public void AbandonMission()
+    {
+        Time.timeScale = 1;
+        LevelManager.Instance.LoadLevelSelect();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

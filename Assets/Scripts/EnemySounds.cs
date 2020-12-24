@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Serialization;
 
 public class EnemySounds : MonoBehaviour
@@ -25,6 +26,8 @@ public class EnemySounds : MonoBehaviour
 
     [FormerlySerializedAs("stepClip")] [SerializeField]
     private List<AudioClip> stepClips;
+
+    [SerializeField] private AudioMixerGroup MixerGroup;
 
     public AudioClip StepClip => stepClips.Random();
     public AudioClip HurtClip => hurtClips.Random();
@@ -82,6 +85,7 @@ public class EnemySounds : MonoBehaviour
     private AudioSource CreateAudioSource()
     {
         var source = gameObject.AddComponent<AudioSource>();
+        source.outputAudioMixerGroup = MixerGroup;
         source.spatialize = true;
         source.spatialBlend = .75f;
         return source;

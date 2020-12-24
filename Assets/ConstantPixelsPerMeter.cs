@@ -12,7 +12,7 @@ public class ConstantPixelsPerMeter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Material = GetComponent<MeshRenderer>().sharedMaterial;
+        Material = GetComponent<MeshRenderer>().material;
         UpdatePpm();
     }
     

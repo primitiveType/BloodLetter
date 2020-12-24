@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Profiling;
 
 [ExecuteAlways]
 public class AnimationMaterialHelper : MonoBehaviour
@@ -23,7 +24,8 @@ public class AnimationMaterialHelper : MonoBehaviour
     [SerializeField] private Collider anchorTransformCollider;
     private string AnimationUsedForLastAlphaCheck;
     private Texture2DArray cachedAlpha;
-    private Color[] cachedAlphaPixels;
+    private Color[][] cachedAlphaPixels = new Color[8][];
+    private bool[] cachedAlphaPixelsDirty = new bool[8];
 
     private MaterialPropertyBlock cachedPropertyBlock;
 
@@ -105,15 +107,15 @@ public class AnimationMaterialHelper : MonoBehaviour
 
             async Task SetPropertyBlockAsync()
             {
-
                 if (animationName != CurrentAnimation)
-                {//A new task was started, we can effectively cancel this one.
+                { //A new task was started, we can effectively cancel this one.
                     return;
                 }
+
                 MyRenderer.GetPropertyBlock(block);
                 block = await _dictionary.GetPropertyBlock(block, animationName);
                 if (animationName != CurrentAnimation)
-                {//A new task was started, we can effectively cancel this one.
+                { //A new task was started, we can effectively cancel this one.
                     return;
                 }
 
@@ -145,28 +147,37 @@ public class AnimationMaterialHelper : MonoBehaviour
     /// <returns></returns>
     public bool QueryAlpha(Vector2 textureCoord)
     {
-        textureCoord = new Vector2(1 - textureCoord.x, textureCoord.y);//HACK texture x is backwards now apparently
+        textureCoord = new Vector2(1 - textureCoord.x, textureCoord.y); //HACK texture x is backwards now apparently
         int perspective;
         cachedPropertyBlock = new MaterialPropertyBlock();
         MyRenderer.GetPropertyBlock(cachedPropertyBlock);
         if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
         {
-           
             Debug.Log("getting texture array for alpha check");
             AnimationUsedForLastAlphaCheck = CurrentAnimation;
-            cachedAlpha = (Texture2DArray) cachedPropertyBlock.GetTexture(Alpha);
-
-          
+            //cachedAlpha = (Texture2DArray) cachedPropertyBlock.GetTexture(Alpha);
+            cachedAlpha = _dictionary.GetAlpha(CurrentAnimation);
+            for (int i = 0; i < 8; i++)
+            {
+                cachedAlphaPixelsDirty[i] = true;
+            }
         }
         else
         {
 //            Debug.Log("Reusing texture array");
         }
-        
+
         perspective =
             Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
                 7); //it's actually possible to get back 8 from this which is invalid.
-        cachedAlphaPixels = cachedAlpha.GetPixels(perspective);
+        Profiler.BeginSample("Get pixels");
+        if (cachedAlphaPixelsDirty[perspective])
+        {//should we consider just storing them forever instead of dirtying the array
+            cachedAlphaPixels[perspective] = cachedAlpha.GetPixels(perspective);
+            cachedAlphaPixelsDirty[perspective] = false;
+        }
+
+        Profiler.EndSample(); //("Get pixels");
 
         var totalWidth = cachedAlpha.width;
         var totalHeight = cachedAlpha.height;
@@ -196,9 +207,9 @@ public class AnimationMaterialHelper : MonoBehaviour
         var yPos = Mathf.FloorToInt(pixelCoord.y);
         var index = yPos * cachedAlpha.width + xPos;
         //.GetPixel( , );
-        if (index > cachedAlphaPixels.Count()) Debug.LogError("index out of range!");
+        if (index > cachedAlphaPixels[perspective].Count()) Debug.LogError("index out of range!");
 
-        var color = cachedAlphaPixels[index];
+        var color = cachedAlphaPixels[perspective][index];
         return color.r > .5f;
     }
 }

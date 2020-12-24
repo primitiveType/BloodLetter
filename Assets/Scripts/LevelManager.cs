@@ -1,39 +1,22 @@
-﻿using System.Collections.Generic;
-using E7.Introloop;
+﻿using E7.Introloop;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviourSingleton<LevelManager>
 {
-    private readonly List<string> Levels = new List<string>
-    {
-        "TheCageScene",
-        "Overgrowth"
-    };
-
-    private string SceneToLoad = "TheCageScene";
-
     public event LevelEndEvent LevelEnd;
     public event LevelBeginEvent LevelBegin;
 
-    protected override void Awake()
-    {
-        base.Awake();
-        //probably a bad idea!
-        // cachedInventory = Toolbox.Instance.PlayerInventory.GetPersistentData();
-    }
 
-    public void StartFromLevel(int index)
+    public void StartLevel(string name)
     {
-        SceneToLoad = Levels[index];
-        SaveState.Instance.StartNewGame();
         PreStartLevel();
-        StartNextLevel();
+        Addressables.LoadSceneAsync(name);
+        Timer.Instance.StartTimer();
     }
+    
 
     public void Quit()
     {
@@ -47,16 +30,10 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     }
 
     public void EndLevel(bool success)
-    {
+    {//TODO: handle end level screen and succes state...
         if (success)
         {
-            var indexSceneToLoad = Levels.IndexOf(SceneToLoad) + 1;
-            if (indexSceneToLoad > 0 && Levels.Count > indexSceneToLoad)
-                //ready to go to next level
-                SceneToLoad = Levels[indexSceneToLoad];
-            else
-                //all levels complete, go to menu
-                SceneToLoad = "MenuScene";
+            LoadLevelSelect();
         }
 
         Timer.Instance.PauseTimer();
@@ -70,16 +47,17 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         LevelBegin?.Invoke(this, new LevelBeginEventArgs());
     }
 
-    public void StartNextLevel()
+    
+
+    public void StartNewGame()
     {
-        var handle = Addressables.LoadSceneAsync(SceneToLoad);
-        handle.Completed += HandleOnCompleted;
-        //SceneManager.LoadScene(SceneToLoad);
-        Timer.Instance.StartTimer();
+        SaveState.Instance.StartNewGame();
+        LoadLevelSelect();
     }
 
-    private void HandleOnCompleted(AsyncOperationHandle<SceneInstance> obj)
+    public void LoadLevelSelect()
     {
-        //Time.timeScale = 0;
+        CursorLockManager.Instance.Unlock();
+        Addressables.LoadSceneAsync("Assets/LevelSelect.unity");
     }
 }

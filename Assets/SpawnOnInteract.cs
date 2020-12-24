@@ -10,6 +10,10 @@ public class SpawnOnInteract : BaseInteractable
 
     protected override bool DoInteraction()
     {
+        if (!isActiveAndEnabled)
+        {
+            return false;
+        }
         if (triggered)
         {
             return false;

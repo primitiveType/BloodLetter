@@ -133,7 +133,7 @@ Material:
     - LightContribution: 1
     - LightingPosterize: 4
     - NormalMapContribution: 1
-    - NumSteps: 20
+    - NumSteps: 100
     - PlanetRotationSpeed: 0.1
     - Quantize: 32
     - SpherizeStrength: 10

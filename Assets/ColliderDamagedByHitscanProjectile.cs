@@ -15,7 +15,7 @@ public class ColliderDamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitsc
 
     public bool IsHit(Vector2 textureCoord)
     {
-        return true;
+        return enabled;
     }
 
     public void OnShot(Vector2 textureCoord, Vector3 worldPos, HitscanProjectileInfo projectileInfo, Vector3 hitNormal)

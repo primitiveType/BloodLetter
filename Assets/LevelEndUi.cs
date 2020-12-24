@@ -34,7 +34,6 @@ public class LevelEndUi : MonoBehaviour
     private void LoadNextLevel()
     {
         CursorLockManager.Instance.Lock();
-        LevelManager.Instance.PreStartLevel();
-        LevelManager.Instance.StartNextLevel();
+        LevelManager.Instance.LoadLevelSelect();
     }
 }

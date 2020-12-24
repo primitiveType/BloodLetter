@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToFace: {fileID: 0}
+  lockYAxis: 1
 --- !u!1 &4820653037536580039
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +217,8 @@ AudioSource:
   m_GameObject: {fileID: 8938549416118754574}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b19ed9b3f23d61943b0c80cd9169569e,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 56d4ae8ebecb6b149897c33cfda140c7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

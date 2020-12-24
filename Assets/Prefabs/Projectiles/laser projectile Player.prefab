@@ -9667,7 +9667,7 @@ GameObject:
   - component: {fileID: 2030304096561037515}
   - component: {fileID: 1419432502}
   m_Layer: 0
-  m_Name: laser projectile
+  m_Name: laser projectile Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9701,16 +9701,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfd0a3d171311245a8fb6f0fd612988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Range: 100
   m_MinRange: 10
-  Piercing: 0
-  OnHitPrefab: {fileID: 0}
-  OnHitWallPrefab: {fileID: 0}
+  m_Range: 100
+  type: 0
+  m_Force: 0
   m_Damage: 1
-  m_Line: {fileID: 4295198983490076356}
-  HitPoint: {fileID: 1198440885}
-  HitAudio: {fileID: 1779857308}
+  OnHitWallPrefab: {fileID: 0}
+  Piercing: 0
   duration: 1
+  HitAudio: {fileID: 1779857308}
+  HitPoint: {fileID: 1198440885}
+  m_Line: {fileID: 4295198983490076356}
 --- !u!82 &1419432502
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9720,7 +9721,8 @@ AudioSource:
   m_GameObject: {fileID: 5479396050471731650}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b19ed9b3f23d61943b0c80cd9169569e,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 4082433c58940f94cba9ebd7d4c20d9c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -9856,7 +9858,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 87cb885db32572a49bb20508a49dee45, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

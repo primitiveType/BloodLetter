@@ -18,12 +18,16 @@ public class ExplodeOnCollide : MonoBehaviour
         }
         Explode();
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-            Debug.Log("Hit enemy!");
+        {
+            //Debug.Log("Hit enemy!");
+        }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-            Debug.Log("Hit Player!");
+        {
+            //Debug.Log("Hit Player!");
+        }
         else
         {
-            Debug.Log($"Hit environment! {other.gameObject.name}");
+            //Debug.Log($"Hit environment! {other.gameObject.name}");
             foreach (var contact in other.contacts)
             {
                 Debug.DrawRay(contact.point, Vector3.up, Color.yellow, 100);

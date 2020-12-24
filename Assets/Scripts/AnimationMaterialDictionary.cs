@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -58,4 +59,15 @@ public class AnimationMaterialDictionary : ScriptableObject
     }
 
 #endif
+    public Texture2DArray GetAlpha(string key)
+    {
+        var block = PropertyBlocksByModelAnimation.FirstOrDefault(item => item.AnimationName == key);
+        if (block == null)
+        {
+            Debug.LogError($"Block is null for {key}");
+            return null;
+        }
+
+        return block.GetAlphaMap().Result as Texture2DArray;
+    }
 }

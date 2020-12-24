@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CodingEssentials.Collections;
 using UnityEngine;
 
 public class EnableAggroTrigger : PlayerTrigger
@@ -10,9 +11,10 @@ public class EnableAggroTrigger : PlayerTrigger
     {
         foreach (var actorRoot in actorsToEnable)
         {
-            actorRoot.HitscanCollider.SetEnabled(true);
+            actorRoot.HitscanColliders.ForEach(hsc=>hsc.SetEnabled(true));
             actorRoot.AggroHandler.enabled = true;
             actorRoot.AggroHandler.IsAggro = true;
+            actorRoot.GetComponent<OnShotApplyForce>().enabled = true;
         }
     }
 }

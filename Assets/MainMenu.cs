@@ -20,12 +20,8 @@ public class MainMenu : MonoBehaviour
 
     public void NewGameClicked()
     {
-        TopLevel.SetActive(false);
-        NewGameMenu.SetActive(true);
+        LevelManager.Instance.StartNewGame();
     }
 
-    public void StartLevel(int index)
-    {
-        LevelManager.Instance.StartFromLevel(index);
-    }
+    
 }

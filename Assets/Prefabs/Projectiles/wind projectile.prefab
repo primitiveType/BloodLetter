@@ -67,6 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnOnCollide: {fileID: 6962804858628054579, guid: b1866f63219cb0b4fa80d65a0e0bbe95,
     type: 3}
+  IgnoreCollision: {fileID: 0}
 --- !u!114 &6818228424091109978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ForceToAdd: 1400
+  lobBias: 0
 --- !u!135 &272793241878232817
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -198,7 +200,8 @@ AudioSource:
   m_GameObject: {fileID: 5479396050471731650}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b19ed9b3f23d61943b0c80cd9169569e,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 27d66f1bd1800c6449964852ad8ed0d2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

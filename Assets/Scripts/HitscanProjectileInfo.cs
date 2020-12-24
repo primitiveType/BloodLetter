@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
 {
@@ -24,7 +25,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     {
         ownerRoot = actorRoot;
         var damaged = GetHitObject(ownerPosition, ownerDirection, actorRoot, out var hit);
-        if (damaged != null && damaged != ownerRoot.HitscanCollider)
+        if (damaged != null && !ownerRoot.HitscanColliders.Contains(damaged))
         {
             damaged.OnShot(hit.textureCoord, hit.point, this, ownerDirection);
         }
@@ -69,7 +70,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
                 {
                     var hitCoord = hit.textureCoord;
                     var damaged = hit.collider.GetComponent<IDamagedByHitscanProjectile>();
-                    if (damaged != null && damaged != actorRoot.HitscanCollider && damaged.IsHit(hitCoord))
+                    if (damaged != null && !actorRoot.HitscanColliders.Contains(damaged) && damaged.IsHit(hitCoord))
                     {
                         
 //                        Debug.Log($"{actorRoot} hit {damaged}");

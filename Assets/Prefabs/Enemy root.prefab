@@ -436,6 +436,7 @@ MonoBehaviour:
   m_aggroSource: {fileID: 332686356204034397}
   m_stepSource: {fileID: 0}
   stepClips: []
+  MixerGroup: {fileID: 24300002, guid: b19ed9b3f23d61943b0c80cd9169569e, type: 2}
 --- !u!114 &6510712830491665609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +460,8 @@ AudioSource:
   m_GameObject: {fileID: 8171493255988436123}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b19ed9b3f23d61943b0c80cd9169569e,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -555,7 +557,8 @@ AudioSource:
   m_GameObject: {fileID: 8171493255988436123}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b19ed9b3f23d61943b0c80cd9169569e,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
