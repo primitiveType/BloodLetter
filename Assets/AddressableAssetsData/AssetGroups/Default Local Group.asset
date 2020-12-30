@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 4dbc13e501051b14bbf5eb8695a0011f
   m_SerializeEntries:
   - m_GUID: 32ff6f5ab219bef46b6bfc5081f04bb3
-    m_Address: HARPY_breastsExposed_LEGACY_getHit1_Alpha_Array
+    m_Address: HARPY_breastsExposed_LEGACY_getHit1_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
@@ -31,14 +31,14 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 89c115afdced002429d74b8f2d1d352d
-    m_Address: HARPY_breastsExposed_LEGACY_getHit1_Normal_Array
+    m_Address: HARPY_breastsExposed_LEGACY_getHit1_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
     m_MainAsset: {fileID: 18700000, guid: 89c115afdced002429d74b8f2d1d352d, type: 2}
     m_TargetAsset: {fileID: 18700000, guid: 89c115afdced002429d74b8f2d1d352d, type: 2}
   - m_GUID: 9b1c45769610ff744b61518644348a13
-    m_Address: HARPY_breastsExposed_LEGACY_getHit1_FrameBuffer_Array
+    m_Address: HARPY_breastsExposed_LEGACY_getHit1_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
