@@ -7,7 +7,7 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
     public bool Interact()
     {
         Debug.Log($"Getting player inventory on toolbox {Toolbox.Instance.GetInstanceID()}");
-        if (!Toolbox.Instance.PlayerInventory.HasKey(RequiredKeys))
+        if (RequiredKeys != KeyType.None && !Toolbox.Instance.PlayerInventory.HasKey(RequiredKeys))
         {
             ToastHandler.Instance.PopToast($"{RequiredKeys} Key Required!");
             return false;

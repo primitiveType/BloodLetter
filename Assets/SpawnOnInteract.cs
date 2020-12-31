@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class SpawnOnInteract : BaseInteractable
@@ -28,5 +29,9 @@ public class SpawnOnInteract : BaseInteractable
     {
         yield return new WaitForSeconds(m_Delay);
         Instantiate(m_PrefabToSpawn, transform);
+    }
+
+    private void Update()
+    {
     }
 }
