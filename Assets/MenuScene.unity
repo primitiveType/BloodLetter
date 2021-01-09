@@ -858,7 +858,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22058
+  m_Name: pb_Mesh809866
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1505,7 +1505,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21984
+  m_Name: pb_Mesh809792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2449,6 +2449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NewGameMenu: {fileID: 1107926796}
   TopLevel: {fileID: 600841426}
+  m_camera: {fileID: 978619010}
 --- !u!1 &1363534187
 GameObject:
   m_ObjectHideFlags: 0

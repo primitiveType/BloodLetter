@@ -2,6 +2,8 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviourSingleton<LevelManager>
@@ -12,11 +14,19 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
 
     public void StartLevel(string name)
     {
+        // ScreenWipeManager.Instance.Capture(Camera.main);
+        // ScreenWipeManager.Instance.DoWipe();
+        // return;
+        ScreenWipeManager.Instance.Capture(Camera.main, true);
         PreStartLevel();
-        Addressables.LoadSceneAsync(name);
-        Timer.Instance.StartTimer();
+        AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync(name);
+        handle.Completed += operationHandle =>
+        {
+            ScreenWipeManager.Instance.DoWipe();
+            Timer.Instance.StartTimer();
+        };
     }
-    
+
 
     public void Quit()
     {
@@ -30,7 +40,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     }
 
     public void EndLevel(bool success)
-    {//TODO: handle end level screen and succes state...
+    { //TODO: handle end level screen and succes state...
         if (success)
         {
             LoadLevelSelect();
@@ -47,7 +57,6 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         LevelBegin?.Invoke(this, new LevelBeginEventArgs());
     }
 
-    
 
     public void StartNewGame()
     {
@@ -57,7 +66,9 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
 
     public void LoadLevelSelect()
     {
+        ScreenWipeManager.Instance.Capture(Camera.main, true);
         CursorLockManager.Instance.Unlock();
-        Addressables.LoadSceneAsync("Assets/LevelSelect.unity");
+        AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync("Assets/LevelSelect.unity");
+        handle.Completed += operationHandle => { ScreenWipeManager.Instance.DoWipe(); };
     }
 }

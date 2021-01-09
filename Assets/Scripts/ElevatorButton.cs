@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
-public class ElevatorButton : MonoBehaviour, IInteractable
+public class ElevatorButton : BaseInteractable, IInteractable
 {
-    [SerializeField] private Elevator Elevator;
+    [FormerlySerializedAs("Elevator")] [SerializeField] private Elevator m_Elevator;
+    
+    public Elevator Elevator
+    {
+        get => m_Elevator;
+        set => m_Elevator = value;
+    }
 
-    public virtual bool Interact()
+    protected override bool DoInteraction()
     {
         Elevator.Trigger();
         return true;

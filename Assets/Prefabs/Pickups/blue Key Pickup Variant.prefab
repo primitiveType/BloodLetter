@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2054903460, guid: 6b40dba65cddcd04caea15e08a6d1da3, type: 3}
       propertyPath: KeyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 709243851362033157, guid: 6b40dba65cddcd04caea15e08a6d1da3,
         type: 3}
@@ -29,7 +29,7 @@ PrefabInstance:
     - target: {fileID: 3258898593577090795, guid: 6b40dba65cddcd04caea15e08a6d1da3,
         type: 3}
       propertyPath: m_Name
-      value: blue Key Pickup
+      value: blue Key Pickup Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3258898593577090799, guid: 6b40dba65cddcd04caea15e08a6d1da3,
         type: 3}

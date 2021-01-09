@@ -1,1 +1,0 @@
-﻿public delegate void LevelSelectedEvent(object sender, LevelSelectedEventArgs args);

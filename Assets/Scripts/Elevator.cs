@@ -8,31 +8,49 @@ public class Elevator : MonoBehaviour
 
     [SerializeField] private float delay = 2f;
 
-    [FormerlySerializedAs("rigidbody")] [SerializeField]
-    protected Transform elevator;
+    [FormerlySerializedAs("elevator")] [FormerlySerializedAs("rigidbody")] [SerializeField]
+    protected Transform m_Elevator;
 
     protected Rigidbody rb;
 
-    [FormerlySerializedAs("TopTarget")] [SerializeField]
-    protected Transform EndTarget;
+    [FormerlySerializedAs("EndTarget")] [FormerlySerializedAs("TopTarget")] [SerializeField]
+    protected Transform m_EndTarget;
 
     protected Coroutine MoveCR;
     [SerializeField] protected float predelay;
-    [SerializeField] protected bool returns = true;
+    [SerializeField] public bool returns = true;
     public float speed;
 
-    [FormerlySerializedAs("BottomTarget")] [SerializeField]
-    protected Transform StartTarget;
+    [FormerlySerializedAs("StartTarget")] [FormerlySerializedAs("BottomTarget")] [SerializeField]
+    protected Transform m_StartTarget;
+
+    public Transform ElevatorTransform
+    {
+        get => m_Elevator;
+        set => m_Elevator = value;
+    }
+
+    public Transform EndTarget
+    {
+        get => m_EndTarget;
+        set => m_EndTarget = value;
+    }
+
+    public Transform StartTarget
+    {
+        get => m_StartTarget;
+        set => m_StartTarget = value;
+    }
 
     protected virtual void Start()
     {
         audiosource = GetComponent<AudioSource>();
-        rb = elevator.GetComponent<Rigidbody>();
+        rb = ElevatorTransform.GetComponent<Rigidbody>();
     }
 
     protected virtual void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(elevator.position, .5f);
+        Gizmos.DrawWireSphere(ElevatorTransform.position, .5f);
         Gizmos.DrawLine(StartTarget.transform.position, EndTarget.transform.position);
     }
 
@@ -40,7 +58,7 @@ public class Elevator : MonoBehaviour
     {
         yield return new WaitForFixedUpdate();
 
-        var start = elevator.transform.position;
+        var start = ElevatorTransform.transform.position;
         // Vector3 start = transform.position;
         var targetPosition = target.position;
         var distance = Vector3.Distance(start, targetPosition);

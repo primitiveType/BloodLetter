@@ -75,7 +75,7 @@ public class ThreeStageElevator : Elevator
     {
         var color = Gizmos.color;
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(elevator.position, .5f);
+        Gizmos.DrawWireSphere(ElevatorTransform.position, .5f);
         Gizmos.DrawLine(StartTarget.transform.position, MiddleTarget.transform.position);
         Gizmos.color = Color.gray;
         Gizmos.DrawLine(MiddleTarget.transform.position, EndTarget.transform.position);
