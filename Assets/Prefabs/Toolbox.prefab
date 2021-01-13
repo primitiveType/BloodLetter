@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 4160672577286249251}
   - component: {fileID: 3813386352318664078}
   - component: {fileID: 4450398594770135913}
+  - component: {fileID: 910427972581881159}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -337,6 +338,20 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &910427972581881159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059099966434620744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 4
+  m_AspectRatio: 1.7777778
 --- !u!1 &4229335993994002022
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +411,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &5422072597227372900
 MonoBehaviour:

@@ -9,9 +9,9 @@
         Toolbox.Instance.SetPlayerTransform(transform);
     }
 
-    public void PlayerShoot()
+    public void PlayerShoot(ProjectileInfoBase info)
     {
-        PlayerShootEvent?.Invoke(this, new PlayerShootEventArgs());
+        PlayerShootEvent?.Invoke(this, new PlayerShootEventArgs(info));
     }
 
     public void PlayerInteract(IInteractable target)

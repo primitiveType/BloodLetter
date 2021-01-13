@@ -1,4 +1,5 @@
-﻿using E7.Introloop;
+﻿using System.Collections;
+using E7.Introloop;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -17,29 +18,42 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         // ScreenWipeManager.Instance.Capture(Camera.main);
         // ScreenWipeManager.Instance.DoWipe();
         // return;
-        ScreenWipeManager.Instance.Capture(Camera.main, true);
         PreStartLevel();
         AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync(name);
+
         handle.Completed += operationHandle =>
         {
             ScreenWipeManager.Instance.DoWipe();
             Timer.Instance.StartTimer();
         };
+
+        StartCoroutine(UpdateRTCR(handle));
+    }
+
+    private IEnumerator UpdateRTCR(AsyncOperationHandle<SceneInstance> handle)
+    {
+        Camera camera = Camera.main;
+        while (!handle.IsDone)
+        {
+            ScreenWipeManager.Instance.Capture(camera, true);
+            yield return null;
+        }
     }
 
 
     public void Quit()
     {
         //handle saving to disk here, probably
+
 #if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
         Debug.Log(Application.companyName); //this is just here to keep a reference to application...
 #else
         Application.Quit();
 #endif
     }
 
-    public void EndLevel(bool success)
+    public void EndLevel(
+        bool success)
     { //TODO: handle end level screen and succes state...
         if (success)
         {
