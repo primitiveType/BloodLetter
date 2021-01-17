@@ -78,8 +78,10 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public bool ShouldStop => !IsAggro || IsAttacking || ActorRoot.Flinch.IsFlinching;
+    public bool ShouldStop => !IsAggro || IsAttacking || IsFlinching;
 
+    private bool IsFlinching => ActorRoot.Flinch != null && ActorRoot.Flinch.IsFlinching;
+    
     private bool AnimatorIsMoving { get; set; }
     private float DelayBetweenUpdatingMovementState = .1f;
 

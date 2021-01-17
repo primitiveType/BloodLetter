@@ -19,6 +19,7 @@ public class AnimationMaterialHelper : MonoBehaviour
 
     [SerializeField] private AnimationMaterialDictionary _dictionary;
 
+    [SerializeField] private Vector3 Offset;
 
     [SerializeField] private Transform anchorTransform;
     [SerializeField] private Collider anchorTransformCollider;
@@ -29,7 +30,6 @@ public class AnimationMaterialHelper : MonoBehaviour
 
     private MaterialPropertyBlock cachedPropertyBlock;
 
-    private Renderer m_MyRenderer;
 
     // [SerializeField] private string ModelName;
     [SerializeField] private GameObject materialGameObject;
@@ -38,8 +38,8 @@ public class AnimationMaterialHelper : MonoBehaviour
     public bool resize = true;
 
 
-    [SerializeField] private float yFudge = .01f;
     [SerializeField] private string _currentAnimation;
+    private Renderer m_MyRenderer;
 
     private Renderer MyRenderer =>
         m_MyRenderer != null ? m_MyRenderer : m_MyRenderer = materialGameObject.GetComponent<Renderer>();
@@ -73,6 +73,7 @@ public class AnimationMaterialHelper : MonoBehaviour
         // _dictionaryReference.ReleaseAsset();
     }
 
+    private Vector3 TexturePositionOffset;
 
     // Update is called once per frame
     private void Update()
@@ -93,6 +94,19 @@ public class AnimationMaterialHelper : MonoBehaviour
                 var animationName = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
                 AnimationStarted($"{modelName}_{animationName}");
             }
+        }
+        UpdatePosition();
+    }
+
+    private void UpdatePosition()
+    {
+        if (reposition)
+        {
+            anchorTransform.localPosition = Offset + TexturePositionOffset;
+        }
+        else
+        {
+            anchorTransform.localPosition = Offset;
         }
     }
 
@@ -134,8 +148,10 @@ public class AnimationMaterialHelper : MonoBehaviour
 
                 if (reposition)
                 {
-                    anchorTransform.localPosition = new Vector3(0, offset, 0);
+                    TexturePositionOffset = new Vector3(0, offset, 0);
                 }
+              
+                UpdatePosition();
             }
         }
     }

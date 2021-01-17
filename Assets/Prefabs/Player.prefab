@@ -203,7 +203,6 @@ MonoBehaviour:
   materialGameObject: {fileID: 42856470}
   reposition: 0
   resize: 0
-  yFudge: 0.01
   _currentAnimation: 
 --- !u!114 &42856472
 MonoBehaviour:
@@ -844,7 +843,6 @@ MonoBehaviour:
   materialGameObject: {fileID: 321424110}
   reposition: 0
   resize: 0
-  yFudge: 0.01
   _currentAnimation: Shotgun_ShotgunIdle
 --- !u!114 &321424112
 MonoBehaviour:
@@ -1855,7 +1853,6 @@ MonoBehaviour:
   materialGameObject: {fileID: 659034501}
   reposition: 0
   resize: 0
-  yFudge: 0.01
   _currentAnimation: Shotgun Staff_Idle
 --- !u!114 &659034503
 MonoBehaviour:
@@ -2076,7 +2073,6 @@ MonoBehaviour:
   materialGameObject: {fileID: 812513434}
   reposition: 0
   resize: 0
-  yFudge: 0.01
   _currentAnimation: RingStaffStraight_Idle
 --- !u!114 &812513440
 MonoBehaviour:
@@ -2843,7 +2839,6 @@ MonoBehaviour:
   materialGameObject: {fileID: 1187914149}
   reposition: 0
   resize: 0
-  yFudge: 0.01
   _currentAnimation: Pistol_PistolIdle
 --- !u!114 &1187914151
 MonoBehaviour:
@@ -6628,7 +6623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7337321059712576113
 Transform:
   m_ObjectHideFlags: 0
@@ -6869,7 +6864,6 @@ MonoBehaviour:
   materialGameObject: {fileID: 8260796801687138479}
   reposition: 0
   resize: 0
-  yFudge: 0.01
   _currentAnimation: Eye of the beholder_Idle
 --- !u!1 &8643302138835086600
 GameObject:

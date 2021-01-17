@@ -83,7 +83,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847258852847000055}
-  m_LocalRotation: {x: -0, y: 0.49004525, z: -0, w: 0.871697}
+  m_LocalRotation: {x: -0, y: 0.6573522, z: -0, w: 0.75358355}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 5488036821869758159}
   - component: {fileID: 4427063386069569985}
   - component: {fileID: 2082546195269642486}
+  - component: {fileID: 3367775808371640242}
   m_Layer: 8
   m_Name: Enemy root
   m_TagString: Untagged
@@ -379,6 +380,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095c4052b087444bb9f9d06f444ddd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3367775808371640242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171493255443565340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5473b5d7f2df6964b913fc8f3969c5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialGameObject: {fileID: 8228839469965635381}
 --- !u!1 &8171493255988436123
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +782,6 @@ MonoBehaviour:
   materialGameObject: {fileID: 8228839469965635381}
   reposition: 1
   resize: 1
-  yFudge: 0.01
   _currentAnimation: EVIL_WATCHER_LEGACY_idleLookAround
 --- !u!64 &6738097371801645790
 MeshCollider:

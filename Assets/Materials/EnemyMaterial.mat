@@ -89,12 +89,14 @@ Material:
     - Aspect: 1
     - BloodAmount: 0
     - Columns: 5
+    - DissolveAmount: -1000
     - Frame: 7.6
     - FrameHeight: 0
     - FrameWidth: 14.93
     - NumFrames: 20
     - Perspective: 2.05
     - Rows: 2.24
+    - Vector1_F4AF6126: 76.5
     - _AlphaClip: 0
     - _Blend: 0
     - _BlendOp: 0

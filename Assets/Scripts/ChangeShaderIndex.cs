@@ -84,7 +84,7 @@ public class ChangeShaderIndex : MonoBehaviour
 
         // Debug.Log(camDirection);
         var halfStep = 22.5F;
-        var angle = Vector3.SignedAngle(camDirection, transform.forward, Vector3.up) + 180 + halfStep;
+        var angle = -Vector3.SignedAngle(camDirection, transform.forward, Vector3.up) + 180 + halfStep;
         //if offsetting it caused it to be negative or more than 360, shift it to account.
         if (angle < 0)
             angle = 360 + angle;
