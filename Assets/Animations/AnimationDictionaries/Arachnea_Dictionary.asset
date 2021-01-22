@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: Arachnea_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: Arachnea_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: 177d5c1964a85c54eafb47b413d926dc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 32241b2f9a19344439854dbf0f3422fd, type: 2}
+    alphaMap: {fileID: 18700000, guid: 80dcf246e9a933443bf4c65a5727f0c7, type: 2}
+    normalizedGroundPosition: 0.0052665123
+  - rows: 3
+    columns: 4
+    animationName: Arachnea_Attack_01
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: db4d6fab1e693834e92401fc77ebb01d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 35798aa8bbab1124caa4a179d5bfc5bb, type: 2}
+    alphaMap: {fileID: 18700000, guid: fdc145f16cee4ec4dad95da1c4995fb5, type: 2}
+    normalizedGroundPosition: 0.01765563
+  - rows: 5
+    columns: 6
+    animationName: Arachnea_Casting
+    numFrames: 27
+    normalMap: {fileID: 18700000, guid: 3e414dc5a80ada643ab3865a1d419e4c, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 572aa5fd09abfb84cb8c6be3d48d2248, type: 2}
+    alphaMap: {fileID: 18700000, guid: 95d6e199dae4b2d4daa39adb08b285e1, type: 2}
+    normalizedGroundPosition: 0.0042351237
+  - rows: 3
+    columns: 5
+    animationName: Arachnea_Dance_NoWeapon
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 2854f5c7d8ba6a7478737825280fa806, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 1572397c4aa945846a36d2ee5a95bca6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 10d92660f0116a04294c0c3a2c988294, type: 2}
+    normalizedGroundPosition: 0.0031692802
+  - rows: 3
+    columns: 4
+    animationName: Arachnea_Dead
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: 32facbbe74976d6459b421ff018549c4, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2b499e36408b2b147b25152584af73b6, type: 2}
+    alphaMap: {fileID: 18700000, guid: 2377889572cb7864b975fc3ced35ccd8, type: 2}
+    normalizedGroundPosition: 0.020567821
+  - rows: 3
+    columns: 5
+    animationName: Arachnea_GoDown
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 28ecb86337361e2428a2d32e583a883a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: e7546e596c6d3c54d90e5ad37871b7ed, type: 2}
+    alphaMap: {fileID: 18700000, guid: b93c6601fcf5d8a44bdaf480caa80d14, type: 2}
+    normalizedGroundPosition: 0.00101865
+  - rows: 3
+    columns: 5
+    animationName: Arachnea_GoUp
+    numFrames: 15
+    normalMap: {fileID: 18700000, guid: 7d49a6ab8808b3f4dbada089cae73bcc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 6bc77dd99ae3c2142bce5a0909b2b56e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4e36469dcf20092448d57eede7c6cf1f, type: 2}
+    normalizedGroundPosition: 0.0019401053
+  - rows: 6
+    columns: 7
+    animationName: Arachnea_Idle_01
+    numFrames: 40
+    normalMap: {fileID: 18700000, guid: 889d3813d844bde4daca1ea45b103845, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 32f8c2c106851d34386bd4277ffffacd, type: 2}
+    alphaMap: {fileID: 18700000, guid: 547352913ccbad8459e3974931e5e187, type: 2}
+    normalizedGroundPosition: 0.0050837523
+  - rows: 10
+    columns: 10
+    animationName: Arachnea_Idle_02
+    numFrames: 100
+    normalMap: {fileID: 18700000, guid: 03dda61569a75f74e94661d006e3ff20, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 82ed12a31f5817e4a84603bfba0525b2, type: 2}
+    alphaMap: {fileID: 18700000, guid: 82eb06e41fa1b82448a59d17ba130e87, type: 2}
+    normalizedGroundPosition: 0.0049725217
+  - rows: 6
+    columns: 7
+    animationName: Arachnea_Idle_Up
+    numFrames: 40
+    normalMap: {fileID: 18700000, guid: 05f0cbc05986ca347be1bae891c7fe39, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 7368ab6906b103f4190fa08c016a21ea, type: 2}
+    alphaMap: {fileID: 18700000, guid: 07f7806f0b4623443917793aed0df498, type: 2}
+    normalizedGroundPosition: 0
+  - rows: 3
+    columns: 5
+    animationName: Arachnea_MagicAttack_01
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 24341baa5349a9d45b648ee1f38a79c5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: bbf5fca62613d7744b32048043bb4ed3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 005eb260aa401a844a4bc6c6cea6add7, type: 2}
+    normalizedGroundPosition: 0.0027721762
+  - rows: 3
+    columns: 5
+    animationName: Arachnea_Walk_01
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: e8e2fda2e06e79b4a94d31a584a5a4a1, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d10c1408a14d3cf4a8d54767427b4a27, type: 2}
+    alphaMap: {fileID: 18700000, guid: 9a83a16fbde6a7a4e9081ac29c9fa840, type: 2}
+    normalizedGroundPosition: 0.012639984
+  - rows: 3
+    columns: 5
+    animationName: Arachnea_Walk_02
+    numFrames: 13
+    normalMap: {fileID: 18700000, guid: 48a9e378ba27272408356d759ab1151d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: deec50cdf95acac46b93612ea76bd419, type: 2}
+    alphaMap: {fileID: 18700000, guid: d8fe7a2a2ec2c6748b6cb537514504d3, type: 2}
+    normalizedGroundPosition: 0.01357623
+  - rows: 3
+    columns: 4
+    animationName: Arachnea_Wounded_HeavyHit
+    numFrames: 10
+    normalMap: {fileID: 18700000, guid: b1d0f9369db24804494067dd83cdb06d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 3f834d47ff256ff42b2d0d9e7ab796ab, type: 2}
+    alphaMap: {fileID: 18700000, guid: 4d0fe3e27b28be74fa82a6c8c8f5fa74, type: 2}
+    normalizedGroundPosition: 0.0021751358
+  - rows: 1
+    columns: 3
+    animationName: Arachnea_Wounded_LightHit
+    numFrames: 3
+    normalMap: {fileID: 18700000, guid: 5dbfb5146ac664341b423290e7bf8e69, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 008e11d45b140734ebf82541b63fcadd, type: 2}
+    alphaMap: {fileID: 18700000, guid: 45f1ab08cfcfa7c4da357e1abc66c159, type: 2}
+    normalizedGroundPosition: 0.005339417

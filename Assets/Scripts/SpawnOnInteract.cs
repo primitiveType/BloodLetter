@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SpawnOnInteract : BaseInteractable
 {
@@ -28,7 +29,16 @@ public class SpawnOnInteract : BaseInteractable
     private IEnumerator SpawnAfterDelay()
     {
         yield return new WaitForSeconds(m_Delay);
-        Instantiate(m_PrefabToSpawn, transform);
+        var go = Instantiate(m_PrefabToSpawn);
+        var agent = go.GetComponentInChildren<NavMeshAgent>();
+        if(agent)
+        {
+            agent.Warp(transform.position);
+        }
+        else
+        {
+            go.transform.position = transform.position;
+        }
     }
 
     private void Update()

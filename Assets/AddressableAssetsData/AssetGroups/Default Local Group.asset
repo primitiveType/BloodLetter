@@ -17,111 +17,207 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 4dbc13e501051b14bbf5eb8695a0011f
   m_SerializeEntries:
+  - m_GUID: 005eb260aa401a844a4bc6c6cea6add7
+    m_Address: Arachnea_MagicAttack_01_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 005eb260aa401a844a4bc6c6cea6add7, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 005eb260aa401a844a4bc6c6cea6add7, type: 2}
+  - m_GUID: 008e11d45b140734ebf82541b63fcadd
+    m_Address: Arachnea_Wounded_LightHit_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 008e11d45b140734ebf82541b63fcadd, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 008e11d45b140734ebf82541b63fcadd, type: 2}
   - m_GUID: 0090c1015a016764e8f629c40fcacc2f
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 0090c1015a016764e8f629c40fcacc2f, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 0090c1015a016764e8f629c40fcacc2f, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 03803b08e73c4d744bb9787eb45937d9
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 03803b08e73c4d744bb9787eb45937d9, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 03803b08e73c4d744bb9787eb45937d9, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 03dda61569a75f74e94661d006e3ff20
+    m_Address: Arachnea_Idle_02_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 03dda61569a75f74e94661d006e3ff20, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 03dda61569a75f74e94661d006e3ff20, type: 2}
+  - m_GUID: 05f0cbc05986ca347be1bae891c7fe39
+    m_Address: Arachnea_Idle_Up_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 05f0cbc05986ca347be1bae891c7fe39, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 05f0cbc05986ca347be1bae891c7fe39, type: 2}
+  - m_GUID: 07f7806f0b4623443917793aed0df498
+    m_Address: Arachnea_Idle_Up_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 07f7806f0b4623443917793aed0df498, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 07f7806f0b4623443917793aed0df498, type: 2}
   - m_GUID: 096facabc11e7024f9fcc5a03cfc9919
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 096facabc11e7024f9fcc5a03cfc9919, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 096facabc11e7024f9fcc5a03cfc9919, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0a63f04e6276d8e40977f908b4836d1e
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 0a63f04e6276d8e40977f908b4836d1e, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 0a63f04e6276d8e40977f908b4836d1e, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0c1bae891e2f42f44bcaa89e1b358c6d
     m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 0c1bae891e2f42f44bcaa89e1b358c6d, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 0c1bae891e2f42f44bcaa89e1b358c6d, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0c71c9cffcf84a64391e813f10458ffd
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 0c71c9cffcf84a64391e813f10458ffd, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 0c71c9cffcf84a64391e813f10458ffd, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0d41f67dbd5973941be050fc4cfd1e20
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 0d41f67dbd5973941be050fc4cfd1e20, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 0d41f67dbd5973941be050fc4cfd1e20, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0ed74e072d1cfdd4b90f48237dde0cb9
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 0ed74e072d1cfdd4b90f48237dde0cb9, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 0ed74e072d1cfdd4b90f48237dde0cb9, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 10d92660f0116a04294c0c3a2c988294
+    m_Address: Arachnea_Dance_NoWeapon_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 10d92660f0116a04294c0c3a2c988294, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 10d92660f0116a04294c0c3a2c988294, type: 2}
   - m_GUID: 13dd14441a479304dbcaeaf3d6ee1975
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 13dd14441a479304dbcaeaf3d6ee1975, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 13dd14441a479304dbcaeaf3d6ee1975, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 148f5b05d6ce9f844936110cd4eb9a52
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 148f5b05d6ce9f844936110cd4eb9a52, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 148f5b05d6ce9f844936110cd4eb9a52, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1572397c4aa945846a36d2ee5a95bca6
+    m_Address: Arachnea_Dance_NoWeapon_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 1572397c4aa945846a36d2ee5a95bca6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 1572397c4aa945846a36d2ee5a95bca6, type: 2}
+  - m_GUID: 177d5c1964a85c54eafb47b413d926dc
+    m_Address: Arachnea_TPose_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 177d5c1964a85c54eafb47b413d926dc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 177d5c1964a85c54eafb47b413d926dc, type: 2}
   - m_GUID: 1781e72dbf7cf1a488cb46c7f220179b
     m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 1781e72dbf7cf1a488cb46c7f220179b, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 1781e72dbf7cf1a488cb46c7f220179b, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 18040e5fa6f244042bd4f4639abccf22
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 18040e5fa6f244042bd4f4639abccf22, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 18040e5fa6f244042bd4f4639abccf22, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2377889572cb7864b975fc3ced35ccd8
+    m_Address: Arachnea_Dead_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 2377889572cb7864b975fc3ced35ccd8, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2377889572cb7864b975fc3ced35ccd8, type: 2}
   - m_GUID: 23acb916ee4ef7849bfdff8c9ec63ea8
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 23acb916ee4ef7849bfdff8c9ec63ea8, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 23acb916ee4ef7849bfdff8c9ec63ea8, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 24341baa5349a9d45b648ee1f38a79c5
+    m_Address: Arachnea_MagicAttack_01_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 24341baa5349a9d45b648ee1f38a79c5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 24341baa5349a9d45b648ee1f38a79c5, type: 2}
+  - m_GUID: 2854f5c7d8ba6a7478737825280fa806
+    m_Address: Arachnea_Dance_NoWeapon_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 2854f5c7d8ba6a7478737825280fa806, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2854f5c7d8ba6a7478737825280fa806, type: 2}
   - m_GUID: 287c5e7a1f7006144a3dfc9b746606c4
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 287c5e7a1f7006144a3dfc9b746606c4, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 287c5e7a1f7006144a3dfc9b746606c4, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 28ecb86337361e2428a2d32e583a883a
+    m_Address: Arachnea_GoDown_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 28ecb86337361e2428a2d32e583a883a, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 28ecb86337361e2428a2d32e583a883a, type: 2}
+  - m_GUID: 2b499e36408b2b147b25152584af73b6
+    m_Address: Arachnea_Dead_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 2b499e36408b2b147b25152584af73b6, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 2b499e36408b2b147b25152584af73b6, type: 2}
+  - m_GUID: 32241b2f9a19344439854dbf0f3422fd
+    m_Address: Arachnea_TPose_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 32241b2f9a19344439854dbf0f3422fd, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 32241b2f9a19344439854dbf0f3422fd, type: 2}
   - m_GUID: 32e48752d1703244aa29c5f7d8215ea5
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 32e48752d1703244aa29c5f7d8215ea5, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 32e48752d1703244aa29c5f7d8215ea5, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 32f8c2c106851d34386bd4277ffffacd
+    m_Address: Arachnea_Idle_01_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 32f8c2c106851d34386bd4277ffffacd, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 32f8c2c106851d34386bd4277ffffacd, type: 2}
+  - m_GUID: 32facbbe74976d6459b421ff018549c4
+    m_Address: Arachnea_Dead_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 32facbbe74976d6459b421ff018549c4, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 32facbbe74976d6459b421ff018549c4, type: 2}
   - m_GUID: 32ff6f5ab219bef46b6bfc5081f04bb3
     m_Address: HARPY_breastsExposed_LEGACY_getHit1_Alpha
     m_ReadOnly: 0
@@ -129,34 +225,40 @@ MonoBehaviour:
     - sprites
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 35798aa8bbab1124caa4a179d5bfc5bb
+    m_Address: Arachnea_Attack_01_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 35798aa8bbab1124caa4a179d5bfc5bb, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 35798aa8bbab1124caa4a179d5bfc5bb, type: 2}
   - m_GUID: 39862e820fb7ce940b1fd43f47286fd0
     m_Address: DARKNESS_SPIDER_LEGACY_TPose_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 39862e820fb7ce940b1fd43f47286fd0, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 39862e820fb7ce940b1fd43f47286fd0, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 39fdd2b881efef6489ad2336f1c8d307
     m_Address: DARKNESS_SPIDER_LEGACY_Bite_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 39fdd2b881efef6489ad2336f1c8d307, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 39fdd2b881efef6489ad2336f1c8d307, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3a3196e32ac19434b81ce82ae6ca3057
     m_Address: DARKNESS_SPIDER_LEGACY_TPose_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 3a3196e32ac19434b81ce82ae6ca3057, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 3a3196e32ac19434b81ce82ae6ca3057, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3d6129071573d6f49b09798542bf6333
     m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 3d6129071573d6f49b09798542bf6333, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 3d6129071573d6f49b09798542bf6333, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3dd57fa65a3a64f47ba0c4e5508d9f94
     m_Address: DARKNESS_SPIDER_LEGACY_Bite_Alpha_Array
     m_ReadOnly: 0
@@ -164,76 +266,142 @@ MonoBehaviour:
     - sprites
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 3e414dc5a80ada643ab3865a1d419e4c
+    m_Address: Arachnea_Casting_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 3e414dc5a80ada643ab3865a1d419e4c, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3e414dc5a80ada643ab3865a1d419e4c, type: 2}
+  - m_GUID: 3f834d47ff256ff42b2d0d9e7ab796ab
+    m_Address: Arachnea_Wounded_HeavyHit_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 3f834d47ff256ff42b2d0d9e7ab796ab, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 3f834d47ff256ff42b2d0d9e7ab796ab, type: 2}
   - m_GUID: 424628953fb5ce343b7a1ea10fa93d34
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 424628953fb5ce343b7a1ea10fa93d34, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 424628953fb5ce343b7a1ea10fa93d34, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 45f1ab08cfcfa7c4da357e1abc66c159
+    m_Address: Arachnea_Wounded_LightHit_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 45f1ab08cfcfa7c4da357e1abc66c159, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 45f1ab08cfcfa7c4da357e1abc66c159, type: 2}
+  - m_GUID: 48a9e378ba27272408356d759ab1151d
+    m_Address: Arachnea_Walk_02_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 48a9e378ba27272408356d759ab1151d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 48a9e378ba27272408356d759ab1151d, type: 2}
   - m_GUID: 4b86342d85948514b9e296fcf77e9ea4
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 4b86342d85948514b9e296fcf77e9ea4, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 4b86342d85948514b9e296fcf77e9ea4, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 4bdb9066d80bbe841a7f102c100602eb
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 4bdb9066d80bbe841a7f102c100602eb, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 4bdb9066d80bbe841a7f102c100602eb, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4d0fe3e27b28be74fa82a6c8c8f5fa74
+    m_Address: Arachnea_Wounded_HeavyHit_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 4d0fe3e27b28be74fa82a6c8c8f5fa74, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4d0fe3e27b28be74fa82a6c8c8f5fa74, type: 2}
+  - m_GUID: 4e36469dcf20092448d57eede7c6cf1f
+    m_Address: Arachnea_GoUp_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 4e36469dcf20092448d57eede7c6cf1f, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 4e36469dcf20092448d57eede7c6cf1f, type: 2}
+  - m_GUID: 547352913ccbad8459e3974931e5e187
+    m_Address: Arachnea_Idle_01_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 547352913ccbad8459e3974931e5e187, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 547352913ccbad8459e3974931e5e187, type: 2}
   - m_GUID: 54d2eac2cbe126a489150621d76fe552
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 54d2eac2cbe126a489150621d76fe552, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 54d2eac2cbe126a489150621d76fe552, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 572aa5fd09abfb84cb8c6be3d48d2248
+    m_Address: Arachnea_Casting_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 572aa5fd09abfb84cb8c6be3d48d2248, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 572aa5fd09abfb84cb8c6be3d48d2248, type: 2}
   - m_GUID: 57da67db8e2ddf74c86c496317b5b1f0
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 57da67db8e2ddf74c86c496317b5b1f0, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 57da67db8e2ddf74c86c496317b5b1f0, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 5872cf6c18479c14b8c6f7fffd25ab1a
     m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 5872cf6c18479c14b8c6f7fffd25ab1a, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 5872cf6c18479c14b8c6f7fffd25ab1a, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 5c6312dd887143e42878eb3df15af238
     m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 5c6312dd887143e42878eb3df15af238, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 5c6312dd887143e42878eb3df15af238, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5dbfb5146ac664341b423290e7bf8e69
+    m_Address: Arachnea_Wounded_LightHit_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 5dbfb5146ac664341b423290e7bf8e69, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 5dbfb5146ac664341b423290e7bf8e69, type: 2}
   - m_GUID: 632bd8d9af364084083e78224351cf5e
     m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 632bd8d9af364084083e78224351cf5e, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 632bd8d9af364084083e78224351cf5e, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 66b2782e4ec2cea4cbb1f36cb53e4a53
     m_Address: DARKNESS_SPIDER_LEGACY_Bite_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 66b2782e4ec2cea4cbb1f36cb53e4a53, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 66b2782e4ec2cea4cbb1f36cb53e4a53, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 6914d17403f30c94dacc1832892b8445
     m_Address: DARKNESS_SPIDER_LEGACY_idleNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 6914d17403f30c94dacc1832892b8445, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 6914d17403f30c94dacc1832892b8445, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 6bc77dd99ae3c2142bce5a0909b2b56e
+    m_Address: Arachnea_GoUp_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 6bc77dd99ae3c2142bce5a0909b2b56e, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 6bc77dd99ae3c2142bce5a0909b2b56e, type: 2}
+  - m_GUID: 7368ab6906b103f4190fa08c016a21ea
+    m_Address: Arachnea_Idle_Up_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 7368ab6906b103f4190fa08c016a21ea, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7368ab6906b103f4190fa08c016a21ea, type: 2}
   - m_GUID: 7826c81c30af5654da997284c88c96d4
     m_Address: Assets/LevelSelect.unity
     m_ReadOnly: 0
@@ -245,57 +413,87 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 7881cae7e9f9bd349976f790a47eee7b, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 7881cae7e9f9bd349976f790a47eee7b, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 798245e8a028c164b8efb776ff2cef61
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 798245e8a028c164b8efb776ff2cef61, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 798245e8a028c164b8efb776ff2cef61, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 79b990c8c1a0ed440a972d63525ed68e
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 79b990c8c1a0ed440a972d63525ed68e, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 79b990c8c1a0ed440a972d63525ed68e, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7d49a6ab8808b3f4dbada089cae73bcc
+    m_Address: Arachnea_GoUp_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 7d49a6ab8808b3f4dbada089cae73bcc, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 7d49a6ab8808b3f4dbada089cae73bcc, type: 2}
+  - m_GUID: 80dcf246e9a933443bf4c65a5727f0c7
+    m_Address: Arachnea_TPose_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 80dcf246e9a933443bf4c65a5727f0c7, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 80dcf246e9a933443bf4c65a5727f0c7, type: 2}
+  - m_GUID: 82eb06e41fa1b82448a59d17ba130e87
+    m_Address: Arachnea_Idle_02_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 82eb06e41fa1b82448a59d17ba130e87, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 82eb06e41fa1b82448a59d17ba130e87, type: 2}
+  - m_GUID: 82ed12a31f5817e4a84603bfba0525b2
+    m_Address: Arachnea_Idle_02_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 82ed12a31f5817e4a84603bfba0525b2, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 82ed12a31f5817e4a84603bfba0525b2, type: 2}
   - m_GUID: 84c94328579f81f4cb3be7667ca03e89
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 84c94328579f81f4cb3be7667ca03e89, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 84c94328579f81f4cb3be7667ca03e89, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 84cc2c879f3e71141808af2fc54234f9
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 84cc2c879f3e71141808af2fc54234f9, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 84cc2c879f3e71141808af2fc54234f9, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 850a5152cde79134fb2897926d99438f
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 850a5152cde79134fb2897926d99438f, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 850a5152cde79134fb2897926d99438f, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 889d3813d844bde4daca1ea45b103845
+    m_Address: Arachnea_Idle_01_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 889d3813d844bde4daca1ea45b103845, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 889d3813d844bde4daca1ea45b103845, type: 2}
   - m_GUID: 894d597c451bc2148914be515d63fe09
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 894d597c451bc2148914be515d63fe09, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 894d597c451bc2148914be515d63fe09, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 89504678acbad264c856eff157f21473
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 89504678acbad264c856eff157f21473, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 89504678acbad264c856eff157f21473, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 89c115afdced002429d74b8f2d1d352d
     m_Address: HARPY_breastsExposed_LEGACY_getHit1_Normal
     m_ReadOnly: 0
@@ -308,29 +506,41 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 8a4a1f3a23030654ab851efc2b908476, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 8a4a1f3a23030654ab851efc2b908476, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 8f40b0a5dd49b0446803e4e72069a46a
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 8f40b0a5dd49b0446803e4e72069a46a, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 8f40b0a5dd49b0446803e4e72069a46a, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 909d5fa3edc230b4abaa599a798a254e
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 909d5fa3edc230b4abaa599a798a254e, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 909d5fa3edc230b4abaa599a798a254e, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 95d6e199dae4b2d4daa39adb08b285e1
+    m_Address: Arachnea_Casting_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 95d6e199dae4b2d4daa39adb08b285e1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 95d6e199dae4b2d4daa39adb08b285e1, type: 2}
   - m_GUID: 986665f4806456f4ca02ec5501875745
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 986665f4806456f4ca02ec5501875745, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 986665f4806456f4ca02ec5501875745, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9a83a16fbde6a7a4e9081ac29c9fa840
+    m_Address: Arachnea_Walk_01_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: 9a83a16fbde6a7a4e9081ac29c9fa840, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: 9a83a16fbde6a7a4e9081ac29c9fa840, type: 2}
   - m_GUID: 9b1c45769610ff744b61518644348a13
     m_Address: HARPY_breastsExposed_LEGACY_getHit1_FrameBuffer
     m_ReadOnly: 0
@@ -343,43 +553,43 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: 9d56f991d263f38469d4d6f5e35751b1, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 9d56f991d263f38469d4d6f5e35751b1, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: a1121e6a8ce9d024486183ff9f01a668
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: a1121e6a8ce9d024486183ff9f01a668, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: a1121e6a8ce9d024486183ff9f01a668, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: a281f5b4f309ec649bbac4fa2978c52b
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: a281f5b4f309ec649bbac4fa2978c52b, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: a281f5b4f309ec649bbac4fa2978c52b, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: a2b620b80de8f78489e91025f71106cc
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: a2b620b80de8f78489e91025f71106cc, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: a2b620b80de8f78489e91025f71106cc, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: a54422fda5997ed49959cd97e9b5d9d1
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: a54422fda5997ed49959cd97e9b5d9d1, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: a54422fda5997ed49959cd97e9b5d9d1, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: abbfa32d04c4c5740a44bd6337c00672
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: abbfa32d04c4c5740a44bd6337c00672, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: abbfa32d04c4c5740a44bd6337c00672, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: adf3af3b211404c4fa0c616a1dc37a6a
     m_Address: ruins of the necromancer
     m_ReadOnly: 0
@@ -391,148 +601,208 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: af29024315afd8e4596cb2d9d04c00d5, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: af29024315afd8e4596cb2d9d04c00d5, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b1d0f9369db24804494067dd83cdb06d
+    m_Address: Arachnea_Wounded_HeavyHit_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: b1d0f9369db24804494067dd83cdb06d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b1d0f9369db24804494067dd83cdb06d, type: 2}
   - m_GUID: b31c307a0a814674dbc2a968fe71ec65
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: b31c307a0a814674dbc2a968fe71ec65, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: b31c307a0a814674dbc2a968fe71ec65, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b93c6601fcf5d8a44bdaf480caa80d14
+    m_Address: Arachnea_GoDown_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: b93c6601fcf5d8a44bdaf480caa80d14, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: b93c6601fcf5d8a44bdaf480caa80d14, type: 2}
   - m_GUID: b98b97311dd8ad14f9290f0ba742691b
     m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: b98b97311dd8ad14f9290f0ba742691b, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: b98b97311dd8ad14f9290f0ba742691b, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bbf5fca62613d7744b32048043bb4ed3
+    m_Address: Arachnea_MagicAttack_01_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: bbf5fca62613d7744b32048043bb4ed3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: bbf5fca62613d7744b32048043bb4ed3, type: 2}
   - m_GUID: bfb1a741ded39bd4bb4ad2b7091e7e4b
     m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: bfb1a741ded39bd4bb4ad2b7091e7e4b, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: bfb1a741ded39bd4bb4ad2b7091e7e4b, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: c2eaf7d32a3391b43a441a73e9e789a6
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: c2eaf7d32a3391b43a441a73e9e789a6, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: c2eaf7d32a3391b43a441a73e9e789a6, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: c5e44cd3d43b6924f9a5c4a60c46a453
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: c5e44cd3d43b6924f9a5c4a60c46a453, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: c5e44cd3d43b6924f9a5c4a60c46a453, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ca2a2ef4900a0114098751d29a3d8a30
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: ca2a2ef4900a0114098751d29a3d8a30, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: ca2a2ef4900a0114098751d29a3d8a30, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: cda3f49cae1624c438a115863f5c1359
     m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: cda3f49cae1624c438a115863f5c1359, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: cda3f49cae1624c438a115863f5c1359, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: d0ebdd291b162e14c940fe6e6d04188a
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: d0ebdd291b162e14c940fe6e6d04188a, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: d0ebdd291b162e14c940fe6e6d04188a, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d10c1408a14d3cf4a8d54767427b4a27
+    m_Address: Arachnea_Walk_01_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d10c1408a14d3cf4a8d54767427b4a27, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d10c1408a14d3cf4a8d54767427b4a27, type: 2}
   - m_GUID: d179a0bc3d977a144843abb0dd0c4460
     m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: d179a0bc3d977a144843abb0dd0c4460, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: d179a0bc3d977a144843abb0dd0c4460, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d8fe7a2a2ec2c6748b6cb537514504d3
+    m_Address: Arachnea_Walk_02_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: d8fe7a2a2ec2c6748b6cb537514504d3, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: d8fe7a2a2ec2c6748b6cb537514504d3, type: 2}
   - m_GUID: db22d37298ee2e64a8597888c3cd73b5
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: db22d37298ee2e64a8597888c3cd73b5, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: db22d37298ee2e64a8597888c3cd73b5, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: db4d6fab1e693834e92401fc77ebb01d
+    m_Address: Arachnea_Attack_01_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: db4d6fab1e693834e92401fc77ebb01d, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: db4d6fab1e693834e92401fc77ebb01d, type: 2}
   - m_GUID: dead39c8500af2f4d877bf318137699f
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: dead39c8500af2f4d877bf318137699f, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: dead39c8500af2f4d877bf318137699f, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: deec50cdf95acac46b93612ea76bd419
+    m_Address: Arachnea_Walk_02_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: deec50cdf95acac46b93612ea76bd419, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: deec50cdf95acac46b93612ea76bd419, type: 2}
   - m_GUID: e62d3c47438405b40bfa977becc96859
     m_Address: DARKNESS_SPIDER_LEGACY_TPose_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: e62d3c47438405b40bfa977becc96859, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: e62d3c47438405b40bfa977becc96859, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e7546e596c6d3c54d90e5ad37871b7ed
+    m_Address: Arachnea_GoDown_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: e7546e596c6d3c54d90e5ad37871b7ed, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e7546e596c6d3c54d90e5ad37871b7ed, type: 2}
+  - m_GUID: e8e2fda2e06e79b4a94d31a584a5a4a1
+    m_Address: Arachnea_Walk_01_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: e8e2fda2e06e79b4a94d31a584a5a4a1, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: e8e2fda2e06e79b4a94d31a584a5a4a1, type: 2}
   - m_GUID: eb21ff9b379bf894898160eac18a9142
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: eb21ff9b379bf894898160eac18a9142, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: eb21ff9b379bf894898160eac18a9142, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ec08685b38f38944a9758534c49de70d
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: ec08685b38f38944a9758534c49de70d, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: ec08685b38f38944a9758534c49de70d, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ec2379cc085701140ac01b3d74ac311a
     m_Address: DARKNESS_SPIDER_LEGACY_idleNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: ec2379cc085701140ac01b3d74ac311a, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: ec2379cc085701140ac01b3d74ac311a, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ec77297b2408fc64e910bc3c0e96300e
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: ec77297b2408fc64e910bc3c0e96300e, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: ec77297b2408fc64e910bc3c0e96300e, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: f44b7a1a40e70d54cb0390f6a34c1d94
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: f44b7a1a40e70d54cb0390f6a34c1d94, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: f44b7a1a40e70d54cb0390f6a34c1d94, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: f8f38d6c84e9ba34d8468004232a6404
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: f8f38d6c84e9ba34d8468004232a6404, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: f8f38d6c84e9ba34d8468004232a6404, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: fd067b996cb19f44da1b49afe29e76a4
     m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: fd067b996cb19f44da1b49afe29e76a4, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: fd067b996cb19f44da1b49afe29e76a4, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: fdc145f16cee4ec4dad95da1c4995fb5
+    m_Address: Arachnea_Attack_01_Alpha
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 18700000, guid: fdc145f16cee4ec4dad95da1c4995fb5, type: 2}
+    m_TargetAsset: {fileID: 18700000, guid: fdc145f16cee4ec4dad95da1c4995fb5, type: 2}
   - m_GUID: fe42811d9ecbe9d4ca65e622e9138ad6
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 18700000, guid: fe42811d9ecbe9d4ca65e622e9138ad6, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: fe42811d9ecbe9d4ca65e622e9138ad6, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 64f49dbb5e1a8914eab3a9426351e51c, type: 2}
   m_SchemaSet:

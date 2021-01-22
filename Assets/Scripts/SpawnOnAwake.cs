@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class SpawnOnAwake : MonoBehaviour
 {
@@ -6,7 +7,16 @@ public class SpawnOnAwake : MonoBehaviour
 
     void Awake()
     {
-        Instantiate(m_PrefabToSpawn, transform);
+        var go = Instantiate(m_PrefabToSpawn);
+        var agent = go.GetComponentInChildren<NavMeshAgent>();
+        if(agent)
+        {
+            agent.Warp(transform.position);
+        }
+        else
+        {
+            go.transform.position = transform.position;
+        }
     }
 
 }

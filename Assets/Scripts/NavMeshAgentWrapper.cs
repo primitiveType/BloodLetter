@@ -30,6 +30,11 @@ public class NavMeshAgentWrapper : MonoBehaviour, INavigationAgent
         NavMeshAgent.SetDestination(targetPosition);
     }
 
+    public void Warp(Vector3 position)
+    {
+        NavMeshAgent.Warp(position);
+    }
+
     private void Awake()
     {
         NavMeshAgent = GetComponent<NavMeshAgent>();

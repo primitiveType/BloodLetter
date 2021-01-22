@@ -6,11 +6,12 @@ public class EnemyMovement : MonoBehaviour
 {
     //TODO:move animation state constants into new file?
     private static readonly int Moving = Animator.StringToHash("Moving");
-    [SerializeField] private Animator _animator;
+    [SerializeField] protected Animator _animator;
 
-    [SerializeField] private INavigationAgent Agent;
+    [SerializeField] protected INavigationAgent Agent;
 
     [SerializeField] private EnemyAggroHandler AggroHandler;
+    [SerializeField] private float TargetingVariance = 10;
 
     private ActorHealth m_Health;
 
@@ -32,13 +33,14 @@ public class EnemyMovement : MonoBehaviour
 
     private bool IsAttacking => ActorRoot.Attack != null && ActorRoot.Attack.IsAttacking;
 
-    private void Start()
+    protected virtual void Start()
     {
         ActorRoot = GetComponentInParent<ActorRoot>();
         Agent = ActorRoot.Navigation;
         Events.OnAggroEvent += OnEnemyAggro;
         Events.OnStepEvent += OnEnemyStepped;
         Events.OnDeathEvent += OnEnemyDeath;
+        Events.OnAttackEvent += OnEnemyAttack;
         if (Animator == null)
             Animator = GetComponentInChildren<Animator>();
         Target = Toolbox.Instance.PlayerTransform;
@@ -51,6 +53,10 @@ public class EnemyMovement : MonoBehaviour
 
         Toolbox.Instance.AddEnemy(Health);
         StartCoroutine(UpdateAnimationStates());
+    }
+
+    private void OnEnemyAttack(object sender, OnAttackEventArgs args)
+    {
     }
 
 
@@ -68,28 +74,41 @@ public class EnemyMovement : MonoBehaviour
     {
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (Agent != null && Target)
         {
-            Agent.SetDestination(Target.position);
+            Agent.SetDestination(GetDestination());
 
             Agent.isStopped = ShouldStop;
         }
     }
 
-    public bool ShouldStop => !IsAggro || IsAttacking || IsFlinching;
+    private void Awake()
+    {
+        Seed = GetInstanceID();
+    }
+
+    private int Seed { get; set; }
+    private Vector3 GetDestination()
+    {
+        float xOffset = (.5f - Mathf.PerlinNoise(Time.time,Seed)) * TargetingVariance;
+        float zOffset = (.5f - Mathf.PerlinNoise(Seed, Time.time)) * TargetingVariance;
+        return new Vector3(xOffset, 0, zOffset) + Target.position;
+    }
+
+    public virtual bool ShouldStop => !IsAggro || IsAttacking || IsFlinching;
 
     private bool IsFlinching => ActorRoot.Flinch != null && ActorRoot.Flinch.IsFlinching;
-    
+
     private bool AnimatorIsMoving { get; set; }
     private float DelayBetweenUpdatingMovementState = .1f;
 
-    private IEnumerator UpdateAnimationStates()
+    protected virtual IEnumerator UpdateAnimationStates()
     {
         while (true)
         {
-            if (!Agent.isStopped ) //TODO: base this on something
+            if (!Agent.isStopped)
             {
                 if (AnimatorIsMoving)
                 {
@@ -108,6 +127,7 @@ public class EnemyMovement : MonoBehaviour
                     yield return null;
                     continue;
                 }
+
                 AnimatorIsMoving = false;
                 Animator.SetBool(Moving, AnimatorIsMoving);
                 yield return new WaitForSeconds(DelayBetweenUpdatingMovementState);
@@ -121,5 +141,7 @@ public class EnemyMovement : MonoBehaviour
     {
         Events.OnAggroEvent -= OnEnemyAggro;
         Events.OnStepEvent -= OnEnemyStepped;
+        Events.OnDeathEvent -= OnEnemyDeath;
+        Events.OnAttackEvent -= OnEnemyAttack;
     }
 }

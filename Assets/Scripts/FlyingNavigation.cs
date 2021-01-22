@@ -36,6 +36,11 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         //TargetPosition = targetPosition;
     }
 
+    public void Warp(Vector3 position)
+    {
+        transform.position = position;
+    }
+
     // Start is called before the first frame update
     private void Start()
     {

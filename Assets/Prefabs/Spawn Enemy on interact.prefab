@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8365826695797480433}
   - component: {fileID: 8365826695797480430}
-  - component: {fileID: 8365826695797480432}
-  - component: {fileID: 8365826695797480434}
-  - component: {fileID: 8365826695797480435}
   - component: {fileID: 8365826695797480437}
   m_Layer: 0
   m_Name: Spawn Enemy on interact
@@ -47,47 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cd54df33b0ca649984f9fe87a7e6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequiredKeys: 0
+  m_RequiredKeys: 0
   m_PrefabToSpawn: {fileID: 4156276123093986724, guid: fa190d50fa0512e4e9091e14658cdd44,
     type: 3}
   m_Delay: 0
---- !u!114 &8365826695797480432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8365826695797480431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9535902cb1c1a544c94b3c7d74a95a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8365826695797480434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8365826695797480431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17ba5f4d22424d6da356cd3fccbfd6bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &8365826695797480435
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8365826695797480431}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.071949, y: 2.9432297, z: 8.475462}
-  m_Center: {x: 4.0359745, y: 0.97161484, z: 3.737731}
 --- !u!114 &8365826695797480437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cd54df33b0ca649984f9fe87a7e6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequiredKeys: 0
+  m_RequiredKeys: 0
   m_PrefabToSpawn: {fileID: 4890869651210651444, guid: 2a8f0b59d03005642b7fa14f641e1a40,
     type: 3}
   m_Delay: 1
