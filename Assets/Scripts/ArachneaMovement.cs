@@ -30,8 +30,21 @@ public class ArachneaMovement : EnemyMovement
     {
         base.Start();
         LineStartPosition = Line.GetPosition(0);
+        ActorRoot.ActorEvents.OnAggroEvent += OnAggro;
+        
+    }
+
+    private void OnAggro(object sender, OnAggroEventArgs args)
+    {
         StartCoroutine(UpDownLoop());
     }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        ActorRoot.ActorEvents.OnAggroEvent -= OnAggro;
+    }
+
 
     private IEnumerator UpDownLoop()
     {

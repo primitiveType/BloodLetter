@@ -92,6 +92,7 @@ public class ChangeShaderIndex : MonoBehaviour
             angle = angle % 360;
         //we now have the 0-360 angle where 0 and 360 are facing the player
         var index = angle / 360f * Max;
+        //Debug.Log(index);
         return index;
     }
 }

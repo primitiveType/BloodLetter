@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Transform Target;
 
     public IActorEvents Events => ActorRoot.ActorEvents;
-    private ActorRoot ActorRoot { get; set; }
+    protected ActorRoot ActorRoot { get; set; }
 
     private Animator Animator
     {
@@ -137,7 +137,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    protected virtual void OnDestroy()
     {
         Events.OnAggroEvent -= OnEnemyAggro;
         Events.OnStepEvent -= OnEnemyStepped;

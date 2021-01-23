@@ -630,6 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 42856474}
+  m_WeaponSprite: {fileID: 0}
   Events: {fileID: 42856472}
   m_WeaponId: 1048576
 --- !u!1 &275191401
@@ -1072,6 +1073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 659034505}
+  m_WeaponSprite: {fileID: 0}
   Events: {fileID: 659034503}
   m_WeaponId: 16777216
 --- !u!114 &348259054
@@ -1733,6 +1735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 1187914153}
+  m_WeaponSprite: {fileID: 0}
   Events: {fileID: 1187914151}
   m_WeaponId: 1
 --- !u!1 &659034501
@@ -2379,6 +2382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 228338365}
+  m_WeaponSprite: {fileID: 21300000, guid: d767bce0b4d368240a9d85cf1cf6bcef, type: 3}
   Events: {fileID: 228338363}
   m_WeaponId: 4096
 --- !u!1 &1027849402
@@ -3663,6 +3667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 321424114}
+  m_WeaponSprite: {fileID: 0}
   Events: {fileID: 321424112}
   m_WeaponId: 16
 --- !u!1 &1693454661
@@ -3860,6 +3865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 812513438}
+  m_WeaponSprite: {fileID: 0}
   Events: {fileID: 812513440}
   m_WeaponId: 256
 --- !u!114 &14563027
@@ -4102,6 +4108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 7224330945669599017}
+  m_WeaponSprite: {fileID: 0}
   Events: {fileID: 2701789535915301915}
   m_WeaponId: 65536
 --- !u!114 &7594967646747675955

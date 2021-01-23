@@ -7,6 +7,8 @@ public class EquipStatus : MonoBehaviour
     private static readonly int Equipped = Animator.StringToHash("Equipped");
 
     [SerializeField] private Animator Animator;
+    [SerializeField] private Sprite m_WeaponSprite;
+    public Sprite WeaponSprite => m_WeaponSprite;
     [SerializeField] private WeaponEventsHandler Events;
     private Transform m_transformToLerp;
 
