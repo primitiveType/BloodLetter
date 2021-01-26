@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ElevatorTrigger : MonoBehaviour
 {
-    [SerializeField] private Elevator Elevator;
+    [FormerlySerializedAs("Elevator")] [SerializeField] private Elevator m_Elevator;
+
+    public Elevator Elevator
+    {
+        get => m_Elevator;
+        set => m_Elevator = value;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer ==LayerMask.NameToLayer("Player"))
-            Elevator.Trigger();
+            m_Elevator.Trigger();
     }
 }

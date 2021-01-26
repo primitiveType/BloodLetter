@@ -30,6 +30,7 @@ public class TestUnequip : MonoBehaviour
     {
         RadialButtonInfo = new UltimateRadialButtonInfo();
         RadialButtonInfo.icon = Equippable.WeaponSprite;
+        RadialButtonInfo.name = WeaponPickup.GetWeaponName(Equippable.WeaponId);
         RadialButtonInfo.id = (int) Equippable.WeaponId;
         PlayerRoot = GetComponentInParent<PlayerRoot>();
         PlayerRoot.ActorEvents.OnEquippedWeaponChangedEvent += OnWeaponChanged;

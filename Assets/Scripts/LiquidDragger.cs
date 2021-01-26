@@ -46,7 +46,7 @@ public class LiquidDragger : MonoBehaviour
                 StepIndex++;
                 var isLeftFoot = StepIndex % 2 == 0;
 
-                var amountToUse = (liquidAmount / 2.25f);
+                var amountToUse = (liquidAmount / 2f);
                 liquidAmount -= amountToUse;
                 var rotation = transform.rotation;
                 var footPrintRotation = rotation;

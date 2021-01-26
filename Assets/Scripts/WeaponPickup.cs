@@ -15,10 +15,10 @@ public class WeaponPickup : Pickup<PlayerInventory>
         currentActor.GetWeapon(WeaponId);
     }
 
-    private string GetWeaponName(WeaponId id)
+    public static string GetWeaponName(WeaponId id)
     {
         if (id == WeaponId.Staff) return "Taipala Staff";
 
-        return WeaponId.ToString();
+        return id.ToString();
     }
 }

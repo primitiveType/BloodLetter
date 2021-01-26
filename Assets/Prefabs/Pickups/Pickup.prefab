@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406194807397614056}
   m_LocalRotation: {x: -0, y: 0.74121743, z: -0, w: 0.67126507}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5679389759790915248}
@@ -74,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4820653037536580039}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5241606277932844886}
@@ -140,12 +140,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 73f6770e2deb44644a47b37f0ab148ab, type: 2}
+  Offset: {x: 0, y: 0, z: 0}
   anchorTransform: {fileID: 5679389759790915248}
   anchorTransformCollider: {fileID: 0}
   materialGameObject: {fileID: 4820653037536580039}
   reposition: 1
   resize: 1
-  yFudge: 0.01
   _currentAnimation: pkup_ammo_sgun_sm_TPose
   InfoName: pkup_ammo_sgun_sm_TPose
 --- !u!114 &9154448447973597432

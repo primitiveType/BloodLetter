@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Elevator : MonoBehaviour
+public class Elevator : MonoBehaviour, IInteractable
 {
     private AudioSource audiosource;
 
@@ -24,6 +24,9 @@ public class Elevator : MonoBehaviour
     [FormerlySerializedAs("StartTarget")] [FormerlySerializedAs("BottomTarget")] [SerializeField]
     protected Transform m_StartTarget;
 
+    protected Vector3 StartPosition { get; set; }
+    protected Vector3 EndPosition { get; set; }
+
     public Transform ElevatorTransform
     {
         get => m_Elevator;
@@ -44,6 +47,8 @@ public class Elevator : MonoBehaviour
 
     protected virtual void Start()
     {
+        StartPosition = StartTarget.position;
+        EndPosition = EndTarget.position;
         audiosource = GetComponent<AudioSource>();
         rb = ElevatorTransform.GetComponent<Rigidbody>();
     }
@@ -54,29 +59,28 @@ public class Elevator : MonoBehaviour
         Gizmos.DrawLine(StartTarget.transform.position, EndTarget.transform.position);
     }
 
-    protected virtual IEnumerator Move(Transform target)
+    protected virtual IEnumerator Move(Vector3 target)
     {
         yield return new WaitForFixedUpdate();
 
         var start = ElevatorTransform.transform.position;
         // Vector3 start = transform.position;
-        var targetPosition = target.position;
-        var distance = Vector3.Distance(start, targetPosition);
+        var distance = Vector3.Distance(start, target);
         float t = 0;
-        var direction = (targetPosition - start).normalized;
+        var direction = (target - start).normalized;
         var targetVelocity = direction * speed;
         var approxTotalTime = distance / speed;
         while (t < 1f)
         {
             yield return new WaitForFixedUpdate();
-            var currentTarget = Vector3.Lerp(start, targetPosition, t);
+            var currentTarget = Vector3.Lerp(start, target, t);
             // rb.velocity = targetVelocity;
             rb.MovePosition(currentTarget);
             t += Time.fixedDeltaTime /approxTotalTime ;
         }
 
         //elevator.transform.position = targetPosition;
-        rb.MovePosition(targetPosition);
+        rb.MovePosition(target);
         rb.velocity = Vector3.zero;
         
         // rigidbody.position = targetPosition;
@@ -95,8 +99,8 @@ public class Elevator : MonoBehaviour
         yield return new WaitForSeconds(predelay);
         EnableAudio(true);
 
-        var target = EndTarget;
-        var returnTarget = StartTarget;
+        var target = EndPosition;
+        var returnTarget = StartPosition;
 
         yield return Move(target);
 
@@ -123,5 +127,11 @@ public class Elevator : MonoBehaviour
                 audiosource.Play();
             }
         }
+    }
+
+    public bool Interact()
+    {
+        Trigger();
+        return true;
     }
 }
