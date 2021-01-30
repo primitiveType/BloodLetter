@@ -1,64 +1,44 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class SpriteFromVelocity : MonoBehaviour
+
+public class SpriteFromVelocity : FromVelocity
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private List<Sprite> Up;
     [SerializeField] private List<Sprite> Down;
     [SerializeField] private List<Sprite> Sideways;
-    [SerializeField] private Rigidbody _rigidbody;
 
-    private enum Direction
+
+    protected override void VelocityChanged(Direction newDirection)
     {
-        Up,
-        Down,
-        Sideways
-    }
-
-    private Direction currentDirection;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        Direction newDirection;
-        if (_rigidbody.velocity.normalized.y > .707)
+        switch (newDirection)
         {
-            newDirection = Direction.Up;
-        }
-        else if (_rigidbody.velocity.normalized.y < .1) //arbitrary number that feels good
-        {
-            newDirection = Direction.Down;
-        }
-        else
-        {
-            newDirection = Direction.Sideways;
-        }
-
-        if (newDirection != currentDirection)
-        {
-            currentDirection = newDirection;
-            switch (currentDirection)
-            {
-                case Direction.Up:
+            case Direction.Up:
+                if (Up.Any())
+                {
                     spriteRenderer.sprite = Up.Random();
-                    break;
-                case Direction.Down:
+                }
+
+                break;
+            case Direction.Down:
+                if (Down.Any())
+                {
                     spriteRenderer.sprite = Down.Random();
-                    break;
-                case Direction.Sideways:
+                }
+
+                break;
+            case Direction.Sideways:
+                if (Sideways.Any())
+                {
                     spriteRenderer.sprite = Sideways.Random();
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+                }
+
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
 }

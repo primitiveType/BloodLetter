@@ -31,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
 
     private bool IsAggro => AggroHandler.IsAggro && Health.IsAlive;
 
-    private bool IsAttacking => ActorRoot.Attack != null && ActorRoot.Attack.IsAttacking;
+    protected bool IsAttacking => ActorRoot.Attack != null && ActorRoot.Attack.IsAttacking;
 
     protected virtual void Start()
     {

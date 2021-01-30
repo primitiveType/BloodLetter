@@ -7,6 +7,7 @@ public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManage
     [SerializeField] private Volume Damage;
     [SerializeField] private Volume Death;
     [SerializeField] private Volume GasMask;
+    [SerializeField] private Volume Webbed;
 
     private readonly Dictionary<Volume, int> HandlesPerEffect = new Dictionary<Volume, int>();
     [SerializeField] private Volume Invuln;
@@ -17,6 +18,7 @@ public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManage
         HandlesPerEffect.Add(GasMask, 0);
         HandlesPerEffect.Add(Damage, 0);
         HandlesPerEffect.Add(Death, 0);
+        HandlesPerEffect.Add(Webbed, 0);
     }
 
     public IPostProcessHandle EnableInvulnEffect()
@@ -77,5 +79,10 @@ public class PostProcessingManager : MonoBehaviourSingleton<PostProcessingManage
         {
             Instance.SetWeight(GameObject, weight);
         }
+    }
+
+    public IPostProcessHandle EnableWebEffect()
+    {
+       return  EnableEffect(Webbed);
     }
 }

@@ -20,8 +20,8 @@ public class ArachneaMovement : EnemyMovement
 
     private bool Grounded { get; set; } = true;
 
-    private float delayBetweenJumps = 5f;
-    private float ceilingTime = 2f;
+    [SerializeField] private float delayBetweenJumps = 5f;
+    [SerializeField]  private float ceilingTime = 2f;
     private Vector3 LineStartPosition { get; set; }
 
     private float timer { get; set; }
@@ -58,6 +58,7 @@ public class ArachneaMovement : EnemyMovement
             timer += Time.deltaTime;
             if (Grounded && timer > delayBetweenJumps)
             {
+                yield return new WaitUntil(()=> !IsAttacking);
                 yield return GoUp();
                 Teleport();
 
@@ -109,8 +110,11 @@ public class ArachneaMovement : EnemyMovement
     }
 
     private float CeilingHeight { get; } = 20;
-    private float AscendSpeed { get; } = 10;
+
+    private float AscendSpeed => m_ascendSpeed;
+
     [SerializeField] private Transform transformToMove;
+    [SerializeField] private float m_ascendSpeed = 10;
 
     private IEnumerator GoUp()
     {

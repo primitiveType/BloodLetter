@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7141724861258093893
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9945596
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.10416898
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -191.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 424828303922247208, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385987082506109085, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_Name
+      value: SpiderWeb 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395684632446147100, guid: 248c4ddcba56d0848822e06e349f1ac1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 35359405484b99c45b80c5becb719d67, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 248c4ddcba56d0848822e06e349f1ac1, type: 3}

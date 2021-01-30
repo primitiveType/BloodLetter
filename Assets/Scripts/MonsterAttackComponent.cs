@@ -25,7 +25,7 @@ public class MonsterAttackComponent : MonoBehaviour
 
     public bool IsAttacking { get; private set; }
 
-    
+
     public float AttackCooldown => m_AttackCooldown;
     private List<ProjectileInfoBase> Attacks { get; set; }
 
@@ -59,16 +59,19 @@ public class MonsterAttackComponent : MonoBehaviour
         var position = AttackSourceTransform.position;
         var targetPosition = Target.position;
         CurrentAttack.TriggerShoot(AttackSourceTransform, targetPosition - position, ActorRoot);
-        
+
         if (AttackRoutine != null) StopCoroutine(AttackRoutine);
 
         AttackRoutine = StartCoroutine(AttackTimerCr());
     }
-    
-    private IEnumerator AttackTimerCr()//this is still technically wrong because it doesn't start until the attack event, which could be near the end of the animation
+
+    private IEnumerator
+        AttackTimerCr() 
     {
         IsAttacking = true;
-        var length = Animator.GetCurrentAnimatorStateInfo(0).length;
+        AnimatorStateInfo currentAnimatorStateInfo = Animator.GetCurrentAnimatorStateInfo(0);
+
+        var length = currentAnimatorStateInfo.length * (1f - currentAnimatorStateInfo.normalizedTime);
         float startTime = Time.time;
         float time = startTime;
         yield return new WaitForEndOfFrame();
@@ -78,7 +81,7 @@ public class MonsterAttackComponent : MonoBehaviour
             var position = ActorRoot.transform.position;
             var targetPosition = Target.position;
             var lookPosition = new Vector3(targetPosition.x, position.y, targetPosition.z);
-           ActorRoot.transform.LookAt(lookPosition);
+            ActorRoot.transform.LookAt(lookPosition);
             time += Time.deltaTime;
         }
 
@@ -99,18 +102,18 @@ public class MonsterAttackComponent : MonoBehaviour
 
         var distance = Vector3.Distance(Target.position, transform.position);
 
-        foreach (var attack in Attacks)
-            if (distance <= attack.Range && distance >= attack.MinRange)
-            {
-                CurrentAttack = attack;
-                Animator.SetBool(Attacking, true);
-                ResetAttackTimeStamp();
-                break;
-            }
-            else
-            {
-                Animator.SetBool(Attacking, false);
-            }
+        var validAttacks = Attacks.Where(a => distance <= a.Range && distance >= a.MinRange).ToList();
+        var count = validAttacks.Count;
+        if (count == 0)
+        {
+            Animator.SetBool(Attacking, false);
+            return;
+        }
+
+        var random = Random.Range(0, count);
+        CurrentAttack = validAttacks[random];
+        Animator.SetBool(Attacking, true);
+        ResetAttackTimeStamp();
     }
 
     private void ResetAttackTimeStamp()
