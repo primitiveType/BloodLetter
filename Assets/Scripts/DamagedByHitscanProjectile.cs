@@ -6,10 +6,10 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
     private AnimationMaterialHelper MaterialHelper => ActorRoot.AnimationMaterialHelper;
     private IActorEvents Events => ActorRoot.ActorEvents;
 
-    private ActorRoot ActorRoot
+    public ActorRoot ActorRoot
     {
         get => _actorRoot;
-        set => _actorRoot = value;
+        private set => _actorRoot = value;
     }
 
     public bool IsHit(Vector2 textureCoord)
@@ -24,13 +24,13 @@ public class DamagedByHitscanProjectile : MonoBehaviour, IDamagedByHitscanProjec
         this.enabled = enabled;
     }
 
-    public virtual void OnShot(Vector2 textureCoord, Vector3 worldPos, HitscanProjectileInfo projectileInfo, Vector3 hitNormal)
+    public virtual void OnShot(Vector3 worldPos, IDamageSource projectileInfo, Vector3 hitNormal)
     {
         Events.OnShot(projectileInfo, worldPos, hitNormal);
     }
 
-    public void 
-        OnShot(HitscanProjectileInfo projectileInfo, Vector3 worldPos, Vector3 hitNormal)
+    public void
+        OnShot(IDamageSource projectileInfo, Vector3 worldPos, Vector3 hitNormal)
     {
         Events.OnShot(projectileInfo, worldPos, hitNormal);
     }

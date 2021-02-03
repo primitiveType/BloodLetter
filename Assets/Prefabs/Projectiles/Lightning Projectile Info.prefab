@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6737228618348125338}
-  - component: {fileID: -4413046863770435183}
+  - component: {fileID: 5404943137246174963}
   m_Layer: 0
   m_Name: Lightning Projectile Info
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4413046863770435183
+--- !u!114 &5404943137246174963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,14 +40,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3754873589044773126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e671aaaf25b046d1bde47a1a7ac11664, type: 3}
+  m_Script: {fileID: 11500000, guid: 69e8dc8a8a2b46589735fb644113d328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Range: 100
   m_MinRange: 10
+  m_Range: 100
+  type: 0
+  m_Force: 0
+  m_Damage: 10
+  OnHitWallPrefab: {fileID: 0}
   Piercing: 0
-  OnHitPrefab: {fileID: 3754873589044773126}
-  OnHitWallPrefab: {fileID: 3754873589044773126}
-  m_Damage: 15
-  NumHits: 2
-  Radius: 10
+  m_Radius: 10
+  m_Visual: {fileID: 5528675636339967481, guid: 4f9054c8257c52a4da6e23ba8a9bfffb,
+    type: 3}

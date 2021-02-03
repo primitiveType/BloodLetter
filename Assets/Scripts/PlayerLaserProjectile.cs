@@ -110,9 +110,9 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
         var position = transform.position;
         var direction = TargetDirectionMod;
         Debug.DrawLine(position, position + direction);
-        var damaged = GetHitObject(position, direction, ActorRoot, out var hit);
+        var damaged = HitscanUtils.GetHitObject(position, direction, ActorRoot, Range, OnHitWallPrefab, out var hit);
         if (damaged != null)
-            damaged.OnShot(hit.textureCoord, hit.point, this, direction);
+            damaged.OnShot( hit.point, this, direction);
         // if (OnHitPrefab)
         // {
         //     var hitEffect = GameObject.Instantiate(OnHitPrefab, damaged.transform, true);
@@ -122,7 +122,7 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
 
         bool hitSomething = hit.transform;
 
-        var hitEnv = hitSomething && ((1 << hit.transform.gameObject.layer) & EnvironmentLayers) != 0;
+        var hitEnv = hitSomething && ((1 << hit.transform.gameObject.layer) & HitscanUtils.EnvironmentLayers) != 0;
 
         m_Line.enabled = hitSomething;
         HitAudio.enabled = hitSomething;

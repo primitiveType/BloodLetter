@@ -1,25 +1,50 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class ChainHitscanProjectileInfo : HitscanProjectileInfo
 {
-    [SerializeField] public int NumHits = 2;
-    [SerializeField] public float Radius = 10;
+    Collider[] HitsArray = new Collider[20];
 
-    protected override GameObject CreateHitEffect(GameObject prefab, Transform parent, RaycastHit hit)
+    [SerializeField] private float m_Radius;
+    [SerializeField] private LineRenderer m_Visual; 
+
+    public override void TriggerShoot(Transform owner, Vector3 ownerDirection, ActorRoot actorRoot)
     {
-        var effect = base.CreateHitEffect(prefab, parent, hit);
-        NumHits--;
-        if (NumHits <= 0) return effect;
+        List<IDamagedByHitscanProjectile> alreadyHit = new List<IDamagedByHitscanProjectile>();
+        ownerRoot = actorRoot;
+        IDamagedByHitscanProjectile damaged = HitscanUtils.GetHitObject(owner.position, ownerDirection, actorRoot,
+            Range,
+            OnHitWallPrefab,
+            out RaycastHit hit);
 
-        var chain = effect.GetComponent<ChainHitscanProjectileInfo>();
-        if (chain)
+        if (damaged == null)
         {
-            chain.NumHits = NumHits;
-            var hits = Physics.OverlapSphere(hit.point, Radius, LayerMask.GetMask("Enemy", "EnemyRaycast"),
-                QueryTriggerInteraction.Collide);
-            if (hits.Length > 0) chain.TriggerShoot(hit.point, hits[0].transform.position - hit.point, ownerRoot);
+            return;
         }
 
-        return effect;
+        damaged.OnShot(hit.point, this, ownerDirection);
+        alreadyHit.Add(damaged);
+        ChainShoot(damaged.transform, actorRoot, alreadyHit, damaged.transform.position);
+    }
+
+    private void ChainShoot(Transform owner, ActorRoot actorRoot,
+        List<IDamagedByHitscanProjectile> alreadyHit, Vector3 overlapPosition)
+    {
+     
+        var victims =
+            HitscanUtils.CheckOverlap(overlapPosition, actorRoot, HitsArray, m_Radius);
+        foreach (IDamagedByHitscanProjectile victim in victims)
+        {
+            if (!alreadyHit.Contains(victim) || !victim.ActorRoot.Health.IsAlive)
+            {
+                alreadyHit.Add(victim);
+                var line = Instantiate(m_Visual);
+                Vector3 position = victim.ActorRoot.VisibilityHandler.transform.position;//more likely to be the head of creature
+                line.SetPositions(new Vector3[2]{overlapPosition, position});
+                victim.OnShot(this, position, victim.transform.forward);
+                ChainShoot(owner,
+                    actorRoot, alreadyHit, position);
+            }
+        }
     }
 }
