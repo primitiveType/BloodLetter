@@ -39,9 +39,7 @@ public class ShootTest : MonoBehaviour
         ShootTimestamp = Time.time;
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("shoot trigger");
-
-
+            // Debug.Log("shoot trigger");
             Animator.SetTrigger(Shoot);
         }
 

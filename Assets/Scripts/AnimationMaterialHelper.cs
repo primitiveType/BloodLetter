@@ -140,7 +140,7 @@ public class AnimationMaterialHelper : MonoBehaviour
                             pxPerMeter;
                 var height = (float) block.GetInt(AnimationMaterialPropertyBlock.FrameHeightProperty) /
                              pxPerMeter;
-                var offset = (height / 2f) +
+                var offset = (height / 2f) -
                              height * block.GetFloat(AnimationMaterialPropertyBlock.GroundPositionProperty);
                 if (resize)
                     anchorTransform.localScale =
@@ -169,7 +169,7 @@ public class AnimationMaterialHelper : MonoBehaviour
         MyRenderer.GetPropertyBlock(cachedPropertyBlock);
         if (AnimationUsedForLastAlphaCheck != CurrentAnimation)
         {
-            Debug.Log("getting texture array for alpha check");
+            // Debug.Log("getting texture array for alpha check");
             AnimationUsedForLastAlphaCheck = CurrentAnimation;
             //cachedAlpha = (Texture2DArray) cachedPropertyBlock.GetTexture(Alpha);
             cachedAlpha = _dictionary.GetAlpha(CurrentAnimation);

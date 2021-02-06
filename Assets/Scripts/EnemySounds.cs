@@ -93,13 +93,25 @@ public class EnemySounds : MonoBehaviour
 
     private void OnEnemyAggro(object sender, OnAggroEventArgs args)
     {
-        if (!HurtSource.isPlaying) HurtSource.PlayOneShot(AggroClip);
+        if (!HurtSource.isPlaying)
+        {
+            AudioClip clip = AggroClip;
+            if (clip)
+            {
+                HurtSource.PlayOneShot(clip);
+            }
+        }
     }
 
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)
     {
         DetachEvents();
-        HurtSource.PlayOneShot(DeathClip);
+        AudioClip clip = DeathClip;
+        if (clip)
+        {
+            HurtSource.PlayOneShot(clip);
+        }
+
         // HurtSource.Stop();
         // HurtSource.clip = DeathClip;
         // HurtSource.Play();
@@ -107,15 +119,23 @@ public class EnemySounds : MonoBehaviour
 
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {
-        AttackSource.PlayOneShot(AttackClip); //todo: only play if player hit by it?
+        AudioClip clip = AttackClip;
+        if (clip)
+        {
+            AttackSource.PlayOneShot(clip); //todo: only play if player hit by it?
+        }
     }
 
     private void OnEnemyDamaged(object sender, OnHealthChangedEventArgs args)
     {
         if (args.IsHealing)
             return;
-        HurtSource.clip = HurtClip;
-        HurtSource.Play();
+        AudioClip clip = HurtClip;
+        if (clip)
+        {
+            HurtSource.clip = clip;
+            HurtSource.Play();
+        }
     }
 
     private void OnEnemyStepped(object sender, OnStepEventArgs args)

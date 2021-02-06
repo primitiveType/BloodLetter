@@ -2,11 +2,15 @@
 {
     public override EntityType EntityType => EntityType.Player;
 
+    public override bool IsGrounded => MovementHandler.IsGrounded;
+    
+    private IMovementHandler MovementHandler { get; set; }
+
     protected override void Awake()
     {
         base.Awake();
         Toolbox.Instance.SetPlayerRoot(this);
-
+        MovementHandler = GetComponent<IMovementHandler>();
     }
 
     private void Start()

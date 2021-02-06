@@ -27,6 +27,8 @@ public class ActorRoot : MonoBehaviour
     public FlinchComponent Flinch { get; set; }
     public MonsterAttackComponent Attack { get; set; }
 
+    public virtual bool IsGrounded => Navigation?.IsGrounded ?? true;
+
 
     protected virtual void Awake()
     {

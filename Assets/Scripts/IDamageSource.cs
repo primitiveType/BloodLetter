@@ -4,4 +4,5 @@ public interface IDamageSource
 {
     Damage GetDamage();
     float Force { get; }
+    
 }

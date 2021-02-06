@@ -47,7 +47,7 @@ public class EnemyMovement : MonoBehaviour
         if (Agent != null && Target)
         {
             Agent.isStopped = true;
-            Agent.SetDestination(Target.position);
+            Agent.SetDestination(GetDestination());
             Agent.updateRotation = true;
         }
 

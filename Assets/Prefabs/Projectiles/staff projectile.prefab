@@ -65,6 +65,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnOnCollide: {fileID: 6962804858628054579, guid: 68a55c62b4303e34a8aa71fa549027cc,
     type: 3}
+  m_InheritScale: 0
+  IgnoreCollision: {fileID: 0}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 4194099
 --- !u!114 &6818228424091109978
 MonoBehaviour:
   m_ObjectHideFlags: 0

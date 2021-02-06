@@ -6,7 +6,11 @@ public class NavMeshAgentWrapper : MonoBehaviour, INavigationAgent
 {
     private NavMeshAgent NavMeshAgent;
 
-
+    public bool IsGrounded
+    {
+        get => NavMeshAgent.isOnNavMesh;
+    }
+    
     public bool isStopped
     {
         get => NavMeshAgent.isStopped;

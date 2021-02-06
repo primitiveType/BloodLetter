@@ -10,6 +10,8 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     [SerializeField] private float MaxAcceleration = 1f;
     [SerializeField] private float MaxRotationSpeed = 1f;
 
+    [SerializeField] private float TargetingVariance = 10;
+    
     [FormerlySerializedAs("myTransform")] [SerializeField]
     private Transform myEyes;
 
@@ -21,6 +23,8 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
     public Vector3 TargetPosition { get; private set; }
 
+    public bool IsGrounded => ActorRoot.Health.IsAlive;
+    
     public float MaxSpeed
     {
         get => _maxSpeed;
@@ -49,7 +53,19 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         myEyes = transform;
         ActorRoot = GetComponentInParent<ActorRoot>();
     }
+    private void Awake()
+    {
+        Seed = GetInstanceID();
+    }
 
+    private int Seed { get; set; }
+    
+    private Vector3 GetDestination(Vector3 targetPosition)
+    {
+        float xOffset = (.5f - Mathf.PerlinNoise(Time.time,Seed)) * TargetingVariance;
+        float zOffset = (.5f - Mathf.PerlinNoise(Seed, Time.time)) * TargetingVariance;
+        return new Vector3(xOffset, 0, zOffset) + targetPosition;
+    }
     private void FixedUpdate()
     {
         if (!ActorRoot.VisibilityHandler.LastSeenPosition.HasValue) return;
@@ -71,10 +87,10 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
             dest = lookDest;
         }
 
-        TargetPosition = dest;
+        TargetPosition = GetDestination(dest);
      
         HandleRotation(lookDest);
-        HandleVelocity(dest);
+        HandleVelocity(TargetPosition);
     }
 
     private void HandleVelocity(Vector3 dest)

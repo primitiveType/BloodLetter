@@ -15,6 +15,8 @@ public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler
 
     List<MovementModifierHandle> Modifiers = new List<MovementModifierHandle>();
 
+    public bool IsGrounded => Controller.isGrounded;
+    
     private void Awake()
     {
         SetRelativeSpeed(1);

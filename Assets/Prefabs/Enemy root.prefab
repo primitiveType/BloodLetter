@@ -293,6 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 0}
   AggroHandler: {fileID: 7486875836196438498}
+  TargetingVariance: 10
   Target: {fileID: 0}
 --- !u!114 &467093247551489786
 MonoBehaviour:
@@ -777,6 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dictionary: {fileID: 11400000, guid: 9bf213797b0b56a4f9ab086804d8efbf, type: 2}
+  Offset: {x: 0, y: 0, z: 0}
   anchorTransform: {fileID: 4023524117925132286}
   anchorTransformCollider: {fileID: 0}
   materialGameObject: {fileID: 8228839469965635381}

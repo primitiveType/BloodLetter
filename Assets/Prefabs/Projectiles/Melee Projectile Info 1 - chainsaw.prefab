@@ -19,6 +19,8 @@ MonoBehaviour:
   m_Damage: 1
   OnHitWallPrefab: {fileID: 0}
   Piercing: 0
+  m_Radius: 2
+  m_Offset: {x: 0, y: 0, z: 1}
 --- !u!1001 &1227065744569403415
 PrefabInstance:
   m_ObjectHideFlags: 0

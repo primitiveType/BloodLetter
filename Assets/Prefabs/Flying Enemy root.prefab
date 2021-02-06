@@ -25,22 +25,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172a598f250cdbc4f8e890cab638e437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7452109238931835366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035573511599213177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed598d796f4a46540b73679ddca36635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  debug: 0
-  VelocityUpdateInterval: 0.2
-  MaxSpeed: 10
 --- !u!1001 &7879388949366833509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63,6 +47,11 @@ PrefabInstance:
       propertyPath: m_animator
       value: 
       objectReference: {fileID: 7066091390831060568}
+    - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: hurtClips.Array.size
@@ -151,17 +140,17 @@ PrefabInstance:
     - target: {fileID: 8171493255988436116, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.54
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255988436116, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255988436116, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8171493255988436123, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

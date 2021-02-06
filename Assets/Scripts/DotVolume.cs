@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DotVolume : MonoBehaviour, IDamageSource
@@ -16,6 +17,7 @@ public class DotVolume : MonoBehaviour, IDamageSource
     }
 
     public float Force { get; }
+
 
     private bool TryAddTrigger(Collider other)
     {

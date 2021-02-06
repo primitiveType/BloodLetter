@@ -65,30 +65,40 @@ public class AnimationMaterialPropertyBlock
         set => normalizedGroundPosition = value;
     }
 
+    private static Dictionary<string, Task<Texture>> TextureTasks = new Dictionary<string, Task<Texture>>();
 
-    private Task<Texture> GetTexture(string name)
+    private AsyncOperationHandle<Texture> GetTexture(string name)
     {
         if (Application.isPlaying)
         {
-            return Addressables.LoadAssetAsync<Texture>(name).Task;
+            // if (TextureTasks.TryGetValue(name, out Task<Texture> task))
+            // {
+            //     return task;
+            // }
+            // else
+            // {
+            return Addressables.LoadAssetAsync<Texture>(name);
+            // }
         }
 #if UNITY_EDITOR
         else
         {
-            return EditorLoad(name);
+            var handle = new AsyncOperationHandle<UnityEngine.Texture>();
+            return handle;
+            // return EditorLoad(name);
         }
 #endif
-        return null;
+        return new AsyncOperationHandle<UnityEngine.Texture>();
     }
 
 #if UNITY_EDITOR
 
     private static Dictionary<string, Texture> Textures = new Dictionary<string, Texture>();
-    private static Task<Texture> EditorLoad(string name)
+    private static Texture EditorLoad(string name)
     {
         if (Textures.ContainsKey(name))
         {
-            return Task.FromResult(Textures[name]);
+            return Textures[name];
         }
 
         var assets = AssetDatabase.FindAssets(name);
@@ -103,17 +113,26 @@ public class AnimationMaterialPropertyBlock
 
         var tex = AssetDatabase.LoadAssetAtPath<Texture>(AssetDatabase.GUIDToAssetPath(assets[0]));
         Textures[name] = tex;
-        return Task.FromResult(tex);
+        return tex;
     }
 #endif
-    public Task<Texture> GetNormalMap() => GetTexture(AnimationName + NormalSuffix);
+    public AsyncOperationHandle<Texture> GetNormalMap() => GetTexture(AnimationName + NormalSuffix);
 
 
-    public Task<Texture> GetDiffuseMap() =>
+    public AsyncOperationHandle<Texture> GetDiffuseMap() =>
         GetTexture(AnimationName + DiffuseSuffix);
 
-    public Task<Texture> GetAlphaMap() =>
+    public AsyncOperationHandle<Texture> GetAlphaMap() =>
         GetTexture(AnimationName + AlphaSuffix);
+
+    public Texture EditorGetNormalMap() => EditorLoad(AnimationName + NormalSuffix);
+
+
+    public Texture EditorGetDiffuseMap() =>
+        EditorLoad(AnimationName + DiffuseSuffix);
+
+    public Texture EditorGetAlphaMap() =>
+        EditorLoad(AnimationName + AlphaSuffix);
 
 
     // public MaterialPropertyBlock GetMaterialPropertyBlock(MaterialPropertyBlock block)
@@ -132,26 +151,39 @@ public class AnimationMaterialPropertyBlock
     // }
     public async Task<MaterialPropertyBlock> GetMaterialPropertyBlock(MaterialPropertyBlock block)
     {
-        var normalMapTask = GetNormalMap();
-        var alphaMapTask = GetAlphaMap();
-        var diffuseMapTask = GetDiffuseMap();
-
-
-        block.SetInt(RowsProperty, Rows);
-        block.SetInt(ColumnsProperty, Columns);
-        block.SetInt(NumFramesProperty, NumFrames);
-
-        block.SetFloat(GroundPositionProperty, NormalizedGroundPosition);
-
-        await Task.WhenAll(new List<Task>
+        Texture normalMap;
+        Texture diffuseMap;
+        Texture alphaMap;
+        if (Application.isPlaying)
         {
-            normalMapTask, alphaMapTask, diffuseMapTask
-        });
+            var normalMapTask = GetNormalMap();
+            var alphaMapTask = GetAlphaMap();
+            var diffuseMapTask = GetDiffuseMap();
 
 
-        var normalMap = normalMapTask.Result;
-        var diffuseMap = diffuseMapTask.Result;
-        var alphaMap = alphaMapTask.Result;
+            block.SetInt(RowsProperty, Rows);
+            block.SetInt(ColumnsProperty, Columns);
+            block.SetInt(NumFramesProperty, NumFrames);
+
+            block.SetFloat(GroundPositionProperty, NormalizedGroundPosition);
+
+            while (!(alphaMapTask.IsDone && normalMapTask.IsDone && diffuseMapTask.IsDone))
+            {
+                await Task.Delay(1);
+            }
+
+            normalMap = normalMapTask.Result;
+            diffuseMap = diffuseMapTask.Result;
+            alphaMap = alphaMapTask.Result;
+        }
+        else
+        {
+            normalMap = EditorGetNormalMap();
+            diffuseMap = EditorGetDiffuseMap();
+            alphaMap = EditorGetAlphaMap();
+        }
+
+
         if (normalMap != null) block.SetTexture(NormalsProperty, normalMap);
         if (alphaMap != null) block.SetTexture(AlphaProperty, alphaMap);
         if (diffuseMap != null) block.SetTexture(TexturesProperty, diffuseMap);

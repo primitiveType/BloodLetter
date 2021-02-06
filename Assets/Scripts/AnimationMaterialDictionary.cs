@@ -68,6 +68,6 @@ public class AnimationMaterialDictionary : ScriptableObject
             return null;
         }
 
-        return block.GetAlphaMap().Result as Texture2DArray;
+        return block.GetAlphaMap().Result as Texture2DArray;//this is bad but it should already be loaded *fingers crossed emoji*
     }
 }

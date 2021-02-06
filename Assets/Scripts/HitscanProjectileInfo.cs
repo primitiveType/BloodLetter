@@ -17,6 +17,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         return new Damage(Damage, Type);
     }
 
+
     public virtual void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot)
     {
         ownerRoot = actorRoot;

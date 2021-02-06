@@ -143,14 +143,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75663a7118504bd4abfd96c7694d78d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 20
-  Duration: 1
-  Force: 15
-  Radius: 3
-  ThroughWalls: 1
   LayersToAffect:
     serializedVersion: 2
     m_Bits: 264449
+  Radius: 3
+  ThroughWalls: 1
+  Duration: 1
+  DamageAmount: 20
+  Force: 60
 --- !u!114 &6619670246701083051
 MonoBehaviour:
   m_ObjectHideFlags: 0
