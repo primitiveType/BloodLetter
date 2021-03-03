@@ -73,8 +73,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SamplePalette_987D158F_Texture2DFE440388_901271674:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_738E186A_Texture_1:
         m_Texture: {fileID: 2800000, guid: dba96fc5a36f3d94ea4a625714f7d2da, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_9AB8C969_Texture_1:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_CEA4F_Texture_1:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -94,6 +106,7 @@ Material:
     - FrameHeight: 0
     - FrameWidth: 14.93
     - NumFrames: 20
+    - OutlineThickness: 2
     - Perspective: 2.05
     - Rows: 2.24
     - Vector1_F4AF6126: 1
@@ -136,7 +149,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - OutlineColor: {r: 0.18039216, g: 0, b: 0, a: 0}
+    - OutlineColor: {r: 0.5019608, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}

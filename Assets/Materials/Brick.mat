@@ -36,6 +36,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 0bd36fff8b085564ea1c85e10ba03474, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Palette:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: f3a54662291082b46a60e337e487e8af, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -76,6 +80,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SamplePalette_89770ABB_Texture2DFE440388_901271674:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SamplePalette_D5161D34_Texture2DFE440388_901271674:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_9AB8C969_Texture_1:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_CA033BA9_Texture_1:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -84,20 +104,36 @@ Material:
         m_Texture: {fileID: 2800000, guid: 79d23170ba007c544a328a25b86ee364, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_898E967_Out_0:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_90C0EEF6_Out_0:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_C1E10AD5_Out_0:
         m_Texture: {fileID: 2800000, guid: 79d23170ba007c544a328a25b86ee364, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_CBDDC900_Out_0:
+        m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - AlphaClip: 0.5
     - BOOLEAN_A0C15CD: 0
     - LOD_Override: 3
+    - LightContribution: 1
     - LightingPosterize: 8
+    - NumSteps: 20
     - PixelScale: 9.37
     - Quantize: 8
+    - SaturationMultiplier: 0
     - Vector1_B5A9848C: 32
     - VertexSnapDistanceAdjust: 1
     - _AlphaClip: 0
+    - _AmbientMult: 0.05
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
@@ -126,6 +162,7 @@ Material:
     - LightClampMax: {r: 1, g: 1, b: 1, a: 0}
     - Tiling: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - Tint: {r: 1, g: 1, b: 1, a: 0}
+    - Vector2_3B4CC4D0: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

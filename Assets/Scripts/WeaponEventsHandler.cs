@@ -8,6 +8,7 @@ public class WeaponEventsHandler : MonoBehaviour
 
     public void Shoot()
     {
+        Debug.Log("shoot");
         ProjectileInfo.TriggerShoot(BarrelTransform, BarrelTransform.forward, Toolbox.Instance.PlayerRoot);
         SoundInfo.OnShoot();
         Toolbox.Instance.PlayerEvents.PlayerShoot(ProjectileInfo);

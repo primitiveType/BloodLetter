@@ -3,12 +3,15 @@
     public override EntityType EntityType => EntityType.Player;
 
     public override bool IsGrounded => MovementHandler.IsGrounded;
-    
+
     private IMovementHandler MovementHandler { get; set; }
+
+    private PlayerBlood PlayerBlood { get; set; }
 
     protected override void Awake()
     {
         base.Awake();
+        PlayerBlood = GetComponentInChildren<PlayerBlood>();
         Toolbox.Instance.SetPlayerRoot(this);
         MovementHandler = GetComponent<IMovementHandler>();
     }

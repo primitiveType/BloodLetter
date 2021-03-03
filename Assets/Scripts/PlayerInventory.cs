@@ -119,4 +119,8 @@ public class PlayerInventory : MonoBehaviour
         InventoryData.EquippedWeapon = CurrentEquip.WeaponId;
         equipping = false;
     }
+
+    public void GainBlood(int i)
+    {
+    }
 }
