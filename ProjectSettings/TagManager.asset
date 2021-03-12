@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ammo
-  - Adrenaline Pack
+  - Emissive_to_baked
   layers:
   - Default
   - TransparentFX
@@ -15,20 +14,20 @@ TagManager:
   - UI
   - 
   - 
-  - Post-Processing
-  - Viewmodel
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - PostProcess
+  - Player
+  - EnemyRaycast
+  - Interactable
+  - PlayerProjectile
+  - EnemyProjectile
+  - Pickup
+  - Hazard
+  - Destructible
+  - DeadEnemy
+  - BlockPlayer
+  - Pixelate
+  - Splatter
   - 
   - 
   - 
