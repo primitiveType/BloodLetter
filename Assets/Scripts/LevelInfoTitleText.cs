@@ -1,7 +1,9 @@
-﻿public class LevelInfoTitleText : BaseLevelInfoText
+﻿using UnityEngine;
+
+public class LevelInfoTitleText : BaseLevelInfoText
 {
     protected override void UpdateText(LevelInfo info)
     {
-        Text.text = info == null ? null : info.LevelName;
+        Text.text = info == null ? m_EmptyText : info.LevelName;
     }
 }

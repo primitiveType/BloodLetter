@@ -17,7 +17,7 @@ public class Elevator : MonoBehaviour, IInteractable
     protected Transform m_EndTarget;
 
     protected Coroutine MoveCR;
-    [SerializeField] protected float predelay = 1;
+    [SerializeField] protected float predelay = 0;
     [SerializeField] public bool returns = true;
     public float speed = 10;
 

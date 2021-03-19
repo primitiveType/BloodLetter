@@ -16,7 +16,7 @@ public class LoadScene : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator StartCR()
     {
-        Debug.Log("STart");
+        Debug.Log("Start");
         yield return new WaitForSeconds(1);
         Debug.Log("Initialize");
         Addressables.InitializeAsync();

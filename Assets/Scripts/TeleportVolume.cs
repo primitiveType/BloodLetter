@@ -5,6 +5,7 @@ using UnityEngine;
 public class TeleportVolume : MonoBehaviour
 {
     [SerializeField] private GameObject TargetPosition;
+    [SerializeField] private Transform Pivot;
 
 
     private List<Collider> GameObjectsToIgnore = new List<Collider>();
@@ -33,14 +34,13 @@ public class TeleportVolume : MonoBehaviour
             rb.velocity = Vector3.Reflect(rbVelocity, transform.forward);
         }
 
-        var transform1 = transform;
         if (actor != null)
         {
-            Teleport(actor, transform1.position, transform1.rotation);
+            Teleport(actor, Pivot.position, Pivot.rotation);
         }
         else
         {
-            Teleport(collider.transform, transform1.position, transform1.rotation);
+            Teleport(collider.transform, Pivot.position, Pivot.rotation);
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 
 public class ScreenWipeManager : MonoBehaviourSingleton<ScreenWipeManager>
@@ -10,6 +11,7 @@ public class ScreenWipeManager : MonoBehaviourSingleton<ScreenWipeManager>
 
     [SerializeField] private Material wipeMaterial;
     [SerializeField] private float wipeDuration;
+    [SerializeField] private RawImage Image;
     private static readonly int WipeAmount = Shader.PropertyToID("_WipeAmount");
     private static readonly int Seed = Shader.PropertyToID("Seed");
 
@@ -49,6 +51,7 @@ public class ScreenWipeManager : MonoBehaviourSingleton<ScreenWipeManager>
         toCapture.Render();
         toCapture.targetTexture = prevTarget;
         wipeMaterial.mainTexture = captureTexture;
+        Image.texture = captureTexture;
         if (applyImage)
         {
             wipeMaterial.SetFloat(WipeAmount, 0);

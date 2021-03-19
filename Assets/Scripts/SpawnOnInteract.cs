@@ -11,7 +11,7 @@ public class SpawnOnInteract : BaseInteractable
     private bool triggered;
 
     protected override bool DoInteraction()
-    {
+        {
         if (!isActiveAndEnabled)
         {
             return false;

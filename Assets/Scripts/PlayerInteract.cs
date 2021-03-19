@@ -27,7 +27,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 var interactables = hit.collider.GetComponentsInChildren<IInteractable>();
 
-                foundOne = true;
+                foundOne = interactables.Length > 0;
                 foreach (var interactable in interactables)
                 {
                     foundOne &= interactable.Interact();

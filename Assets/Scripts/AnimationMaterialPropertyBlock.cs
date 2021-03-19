@@ -94,6 +94,7 @@ public class AnimationMaterialPropertyBlock
 #if UNITY_EDITOR
 
     private static Dictionary<string, Texture> Textures = new Dictionary<string, Texture>();
+
     private static Texture EditorLoad(string name)
     {
         if (Textures.ContainsKey(name))
@@ -115,15 +116,6 @@ public class AnimationMaterialPropertyBlock
         Textures[name] = tex;
         return tex;
     }
-#endif
-    public AsyncOperationHandle<Texture> GetNormalMap() => GetTexture(AnimationName + NormalSuffix);
-
-
-    public AsyncOperationHandle<Texture> GetDiffuseMap() =>
-        GetTexture(AnimationName + DiffuseSuffix);
-
-    public AsyncOperationHandle<Texture> GetAlphaMap() =>
-        GetTexture(AnimationName + AlphaSuffix);
 
     public Texture EditorGetNormalMap() => EditorLoad(AnimationName + NormalSuffix);
 
@@ -133,6 +125,16 @@ public class AnimationMaterialPropertyBlock
 
     public Texture EditorGetAlphaMap() =>
         EditorLoad(AnimationName + AlphaSuffix);
+
+#endif
+    public AsyncOperationHandle<Texture> GetNormalMap() => GetTexture(AnimationName + NormalSuffix);
+
+
+    public AsyncOperationHandle<Texture> GetDiffuseMap() =>
+        GetTexture(AnimationName + DiffuseSuffix);
+
+    public AsyncOperationHandle<Texture> GetAlphaMap() =>
+        GetTexture(AnimationName + AlphaSuffix);
 
 
     // public MaterialPropertyBlock GetMaterialPropertyBlock(MaterialPropertyBlock block)
@@ -154,8 +156,18 @@ public class AnimationMaterialPropertyBlock
         Texture normalMap;
         Texture diffuseMap;
         Texture alphaMap;
-        if (Application.isPlaying)
+#if UNITY_EDITOR
+
+        if (!Application.isPlaying)
         {
+            normalMap = EditorGetNormalMap();
+            diffuseMap = EditorGetDiffuseMap();
+            alphaMap = EditorGetAlphaMap();
+        }
+        else
+        {
+#endif
+
             var normalMapTask = GetNormalMap();
             var alphaMapTask = GetAlphaMap();
             var diffuseMapTask = GetDiffuseMap();
@@ -175,14 +187,9 @@ public class AnimationMaterialPropertyBlock
             normalMap = normalMapTask.Result;
             diffuseMap = diffuseMapTask.Result;
             alphaMap = alphaMapTask.Result;
+#if UNITY_EDITOR
         }
-        else
-        {
-            normalMap = EditorGetNormalMap();
-            diffuseMap = EditorGetDiffuseMap();
-            alphaMap = EditorGetAlphaMap();
-        }
-
+#endif
 
         if (normalMap != null) block.SetTexture(NormalsProperty, normalMap);
         if (alphaMap != null) block.SetTexture(AlphaProperty, alphaMap);

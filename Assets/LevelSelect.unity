@@ -453,7 +453,6 @@ GameObject:
   - component: {fileID: 193257670}
   - component: {fileID: 193257669}
   - component: {fileID: 193257671}
-  - component: {fileID: 193257672}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -547,18 +546,6 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!114 &193257672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193257667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c570446e77103eb4e8e648698e11d727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &198498564
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +795,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d2cad7dfa82849044808f8e2aec83d57, type: 3}
+    m_Font: {fileID: 12800000, guid: 78606a036f3f49b42b2215c46f66e615, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -843,6 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276df7debcee40c3a38dae8ec36bae75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EmptyText: 
 --- !u!1 &308792594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1379,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c0b6eed40863c764c9c9f25cbe0fa0f4, type: 3}
+    m_Font: {fileID: 12800000, guid: 78606a036f3f49b42b2215c46f66e615, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -4335,6 +4323,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 353701123550959727, guid: 3a535358ba3dc9a499de74fc76b2eca0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160672577286249251, guid: 3a535358ba3dc9a499de74fc76b2eca0,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160672577286249251, guid: 3a535358ba3dc9a499de74fc76b2eca0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160672577286249251, guid: 3a535358ba3dc9a499de74fc76b2eca0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5883707740076942857, guid: 3a535358ba3dc9a499de74fc76b2eca0,
         type: 3}
       propertyPath: m_Name
@@ -4621,6 +4629,7 @@ GameObject:
   - component: {fileID: 1734454950}
   - component: {fileID: 1734454949}
   - component: {fileID: 1734454953}
+  - component: {fileID: 1734454954}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4763,6 +4772,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7706531afcebf1645969e4776f675a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1734454954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734454947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c570446e77103eb4e8e648698e11d727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1751272496
@@ -5535,6 +5556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a0fa45318f47dca952757eb084cee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EmptyText: Choose a Location to Inspect
 --- !u!222 &6775562884358600660
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5660,6 +5682,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6873743898215085047, guid: 2996671ca6d12ac4898bd719c6662509,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 78606a036f3f49b42b2215c46f66e615,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2996671ca6d12ac4898bd719c6662509, type: 3}
 --- !u!224 &7695501985133870614 stripped
@@ -5706,6 +5734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd98475c69e3e3b49acf440c3bcfcda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EmptyText: Phase Device Active
 --- !u!114 &8260751640837129622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5726,7 +5755,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d2cad7dfa82849044808f8e2aec83d57, type: 3}
+    m_Font: {fileID: 12800000, guid: 78606a036f3f49b42b2215c46f66e615, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0

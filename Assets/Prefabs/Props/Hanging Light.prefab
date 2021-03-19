@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 5189588656098688804, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.25983334
+      value: 0.851853
       objectReference: {fileID: 0}
     - target: {fileID: 5189588656098688804, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9656535
+      value: 0.52378094
       objectReference: {fileID: 0}
     - target: {fileID: 5189588656214282920, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: _currentAnimation
       value: ceiling chain_WaitOneSecond
       objectReference: {fileID: 0}
+    - target: {fileID: 5189588656214282921, guid: 6fef409cbfd883b4da577ecfd6afea1e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b766cc26f8421340b8a60f7f1f42788, type: 2}
     - target: {fileID: 5189588656214282923, guid: 6fef409cbfd883b4da577ecfd6afea1e,
         type: 3}
       propertyPath: m_Controller

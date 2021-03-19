@@ -2,6 +2,6 @@
 {
     protected override void UpdateText(LevelInfo info)
     {
-        Text.text = info == null ? null : info.LevelDescription;
+        Text.text = info == null ? m_EmptyText : info.LevelDescription;
     }
 }
