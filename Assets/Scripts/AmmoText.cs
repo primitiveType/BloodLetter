@@ -8,6 +8,7 @@ public class AmmoText : MonoBehaviour
     private IActorEvents Events;
     private PlayerInventory Inventory;
     [SerializeField] private Text Text;
+    [SerializeField] private Image Image;
 
     private bool IsDirty { get; set; }
 
@@ -33,6 +34,7 @@ public class AmmoText : MonoBehaviour
             Text.text =
                 $"{AmmoType} : {Mathf.FloorToInt(Inventory.GetAmmoAmount(AmmoType))} / {Mathf.FloorToInt(Inventory.GetMaxAmmoAmount(AmmoType))}";
             IsDirty = false;
+            Image.fillAmount = Inventory.GetAmmoAmount(AmmoType) / Inventory.GetMaxAmmoAmount(AmmoType);
         }
     }
 

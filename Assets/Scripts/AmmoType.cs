@@ -4,5 +4,5 @@
 public enum AmmoType
 {
     Lead,
-    Mana
+    Blood
 }

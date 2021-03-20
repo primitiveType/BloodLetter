@@ -74,7 +74,7 @@ public class PlayerInventory : MonoBehaviour
 
     public float GetAmmoAmount(AmmoType type)
     {
-        InventoryData.Ammo.TryGetValue(type, out var ammo);
+        InventoryData.Ammo.TryGetValue(type, out float ammo);
         return ammo;
     }
 
@@ -98,7 +98,18 @@ public class PlayerInventory : MonoBehaviour
 
     public int GetMaxAmmoAmount(AmmoType ammoType)
     {
-        return 100;
+        switch(ammoType)
+        {
+            case AmmoType.Lead:
+                return 10;
+                break;
+            case AmmoType.Blood:
+                return 100;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(ammoType), ammoType, null);
+        }
+
     }
 
     public void EquipThing(EquipStatus thing)
