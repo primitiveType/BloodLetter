@@ -13,6 +13,7 @@ public class ActorEvents : MonoBehaviour, IActorEvents
     public event OnDeathEvent OnDeathEvent;
     public event OnAggroEvent OnAggroEvent;
     public event OnAmmoChangedEvent OnAmmoChangedEvent;
+    public event OnKeysChangedEvent OnKeysChangedEvent;
     public event OnWeaponsChangedEvent OnWeaponsChangedEvent;
     public event OnEquippedWeaponChangedEvent OnEquippedWeaponChangedEvent;
 
@@ -58,6 +59,11 @@ public class ActorEvents : MonoBehaviour, IActorEvents
     public void OnAmmoChanged(float oldValue, float newValue, AmmoType type)
     {
         OnAmmoChangedEvent?.Invoke(this, new OnAmmoChangedEventArgs(oldValue, newValue, type));
+    }
+    
+    public void OnKeysChanged(KeyType oldValue, KeyType newValue)
+    {
+        OnKeysChangedEvent.Invoke(this, new OnKeysChangedEventArgs(oldValue, newValue));
     }
 
     public void OnWeaponsChanged(WeaponId oldValue, WeaponId newValue)

@@ -62,7 +62,9 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddKey(IKey toAdd)
     {
+        var prevKeys = currentKeys;
         currentKeys |= toAdd.KeyType;
+        Events.OnKeysChanged(prevKeys, currentKeys);
     }
 
     public bool HasKey(KeyType keyType)

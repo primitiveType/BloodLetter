@@ -5,10 +5,16 @@ internal class PlayerBlood : MonoBehaviour
     private float m_blood;
     private MovementModifierHandle Handle { get; } = new MovementModifierHandle();
 
+    public bool BloodGivesMovementSpeed = false;
+
     private ActorRoot Root { get; set; }
     private void Start()
     {
-        GetComponent<IMovementHandler>().AddMovementModifier(Handle);
+        if (BloodGivesMovementSpeed)
+        {
+            GetComponent<IMovementHandler>().AddMovementModifier(Handle);
+        }
+
         Root = GetComponent<PlayerRoot>();
         Toolbox.Instance.PlayerEvents.PlayerGainBloodEvent += OnBloodGained;
     }
@@ -16,6 +22,7 @@ internal class PlayerBlood : MonoBehaviour
     private void OnBloodGained(object sender, PlayerGainBloodEventArgs args)
     {
         Blood += 1;
+        Toolbox.Instance.PlayerInventory.GainAmmo(AmmoType.Mana, 1);
     }
 
     public float Blood
