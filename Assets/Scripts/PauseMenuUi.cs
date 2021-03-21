@@ -25,12 +25,13 @@ public class PauseMenuUi : MonoBehaviour
 
     public void Quit()
     {
+        Unpause();
         LevelManager.Instance.Quit();
     }
 
     public void AbandonMission()
     {
-        Time.timeScale = 1;
+        Unpause();
         LevelManager.Instance.LoadLevelSelect();
     }
 

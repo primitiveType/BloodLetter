@@ -21,8 +21,8 @@ MonoBehaviour:
     m_Address: FAT_OGRE_LEGACY_attack3Forward_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 18700000, guid: 004e1bc86f315d34595a3f8ff84ff77f, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 004e1bc86f315d34595a3f8ff84ff77f, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 005eb260aa401a844a4bc6c6cea6add7
     m_Address: Arachnea_MagicAttack_01_Alpha
     m_ReadOnly: 0
@@ -379,8 +379,8 @@ MonoBehaviour:
     m_Address: FAT_OGRE_LEGACY_attack3Forward_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 18700000, guid: 44d8b3198b27dac4d9959d98d3b99276, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 44d8b3198b27dac4d9959d98d3b99276, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 45f1ab08cfcfa7c4da357e1abc66c159
     m_Address: Arachnea_Wounded_LightHit_Alpha
     m_ReadOnly: 0
@@ -450,8 +450,8 @@ MonoBehaviour:
     m_Address: FAT_OGRE_LEGACY_attack3Forward_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 18700000, guid: 56a7c905ea16a3d458257acd909f739e, type: 2}
-    m_TargetAsset: {fileID: 18700000, guid: 56a7c905ea16a3d458257acd909f739e, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 572aa5fd09abfb84cb8c6be3d48d2248
     m_Address: Arachnea_Casting_FrameBuffer
     m_ReadOnly: 0
@@ -599,6 +599,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7c9bbf8e1766db84786cdd94acf7d66a
+    m_Address: lair
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 7d49a6ab8808b3f4dbada089cae73bcc

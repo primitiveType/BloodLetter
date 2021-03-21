@@ -17,6 +17,10 @@ public class ExplodeOnCollide : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.isTrigger)
+        {
+            return;
+        }
         OnEnter(other.gameObject);
     }
 
@@ -31,7 +35,9 @@ public class ExplodeOnCollide : MonoBehaviour
         {
             return;
         }
+        
 
+        Debug.Log($"Exploding after colliding with {other.name}");
         Explode();
     }
 

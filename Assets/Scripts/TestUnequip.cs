@@ -10,12 +10,18 @@ public class TestUnequip : MonoBehaviour
     private UltimateRadialButtonInfo RadialButtonInfo { get; set; }
 
     public PlayerRoot PlayerRoot { get; private set; }
-
+    
+    private WeaponId PreviousWeapon { get; set; }
 
     // Update is called once per frame
     private void Update()
     {
         if (Input.GetKeyDown(EquipKey))
+        {
+            Equip();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && PreviousWeapon == Equippable.WeaponId)
         {
             Equip();
         }
@@ -72,6 +78,8 @@ public class TestUnequip : MonoBehaviour
         {
             RadialButtonInfo.SelectButton();
         }
+
+        PreviousWeapon = args.OldValue;
     }
 
     private void RadialCallback()

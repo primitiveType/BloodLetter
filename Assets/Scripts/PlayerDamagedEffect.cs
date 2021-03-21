@@ -18,6 +18,7 @@ public class PlayerDamagedEffect : MonoBehaviour
     private void OnDestroy()
     {
         Toolbox.Instance.PlayerEvents.OnHealthChangedEvent -= OnHealthChangedEvent;
+        ppHandle?.Dispose();
     }
 
     private void OnHealthChangedEvent(object sender, OnHealthChangedEventArgs args)
@@ -45,4 +46,6 @@ public class PlayerDamagedEffect : MonoBehaviour
             yield return null;
         }
     }
+    
+    
 }

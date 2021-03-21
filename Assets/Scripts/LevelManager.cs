@@ -55,10 +55,10 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     public void EndLevel(
         bool success)
     { //TODO: handle end level screen and succes state...
-        if (success)
-        {
-            LoadLevelSelect();
-        }
+        // if (success)
+        // {
+        //     LoadLevelSelect();
+        // }
 
         Timer.Instance.PauseTimer();
         LevelEnd?.Invoke(this, new LevelEndEventArgs(success));

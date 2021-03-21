@@ -48,4 +48,9 @@ public class SlowMovement : MonoBehaviour
     {
         Duration -= Time.deltaTime;
     }
+
+    private void OnDestroy()
+    {
+        m_EffectHandle?.Dispose();
+    }
 }
