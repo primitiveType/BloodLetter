@@ -30,8 +30,8 @@
 
     private void OnLevelBegin()
     {
-        Health.Health = SaveState.Instance.SaveData.PlayerHealth;
-        Armor.CurrentArmor = SaveState.Instance.SaveData.PlayerArmor;
+        Health.Health = Health.MaxHealth;// SaveState.Instance.SaveData.PlayerHealth;
+        Armor.CurrentArmor = 0;// SaveState.Instance.SaveData.PlayerArmor;
         CursorLockManager.Instance.Lock();
     }
 

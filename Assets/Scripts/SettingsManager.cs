@@ -10,7 +10,7 @@ public class SettingsManager : MonoBehaviourSingleton<SettingsManager>
     private readonly string SfxVolumeKey = "SfxVolume";
     private readonly string ScreenShakeKey = "ScreenShake";
 
-    protected override void Awake()
+    protected void Start()
     {
         Settings = new Settings();
         if (PlayerPrefs.HasKey(MusicVolumeKey))

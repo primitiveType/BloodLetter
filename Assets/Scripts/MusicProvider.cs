@@ -9,10 +9,11 @@ public class MusicProvider : MonoBehaviour
     public IntroloopAudio Music;
     public float Volume = 1f;
  
-    private void OnEnable()
+    private void Start()
     {
         IntroloopPlayer.Instance.Play(Music);
-        IntroloopPlayer.Instance.InternalAudioSources.ForEach(ap => ap.outputAudioMixerGroup = SettingsManager.Instance.MusicMixerGroup);
+        IntroloopPlayer.Instance.TemplateSource.outputAudioMixerGroup = SettingsManager.Instance.MusicMixerGroup;
+        IntroloopPlayer.Instance.SetMixerGroup(SettingsManager.Instance.MusicMixerGroup);
 
     }
 

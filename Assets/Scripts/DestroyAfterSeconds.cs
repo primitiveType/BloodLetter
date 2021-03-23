@@ -8,7 +8,7 @@ public class DestroyAfterSeconds : MonoBehaviour
     public float TimeAlive = 1f;
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         m_spawnTime = Time.time;
     }
@@ -16,6 +16,9 @@ public class DestroyAfterSeconds : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Time.time - m_spawnTime > TimeAlive) Destroy(gameObject);
+        if (Time.time - m_spawnTime > TimeAlive)
+        {
+            Destroy(gameObject);
+        }
     }
 }

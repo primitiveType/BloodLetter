@@ -873,9 +873,10 @@ GameObject:
   - component: {fileID: 6001823904527458771}
   - component: {fileID: 4627947201551248288}
   - component: {fileID: 7540162908689282031}
+  - component: {fileID: 1570024674}
   m_Layer: 0
   m_Name: Toolbox
-  m_TagString: EditorOnly
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1017,7 +1018,8 @@ AudioSource:
   m_GameObject: {fileID: 5883707740076942857}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 02b947e622de90d4a90d41e4becf6f3d,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1144,6 +1146,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Invulnerable: 0
   InfiniteAmmo: 0
+--- !u!114 &1570024674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883707740076942857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc8c8251623b924ca09b54361e5db47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introloopSettings:
+    logInformation: 0
 --- !u!1 &7013412741017481426
 GameObject:
   m_ObjectHideFlags: 0
