@@ -104,6 +104,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 79d23170ba007c544a328a25b86ee364, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_667C1659_Out_0:
+        m_Texture: {fileID: 2800000, guid: 04436feaeb04e0847a8ff036225b886f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_898E967_Out_0:
         m_Texture: {fileID: 2800000, guid: a61898920a2f54b4b939400b52faeab5, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -123,6 +127,7 @@ Material:
     m_Floats:
     - AlphaClip: 0.5
     - BOOLEAN_A0C15CD: 0
+    - DissolveAmount: 0
     - LOD_Override: 3
     - LightContribution: 1
     - LightingPosterize: 8

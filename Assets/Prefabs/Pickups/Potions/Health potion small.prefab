@@ -32,6 +32,16 @@ PrefabInstance:
       propertyPath: anchorTransform
       value: 
       objectReference: {fileID: 782294187240792916}
+    - target: {fileID: 5241606277932844886, guid: 840132d33d5f54540a847823e764d2fd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.048759803
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241606277932844886, guid: 840132d33d5f54540a847823e764d2fd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9988105
+      objectReference: {fileID: 0}
     - target: {fileID: 5679389759790915248, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -51,7 +61,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 65a1710cfd69115428d06e5fe2b1bdff, type: 2}
+      objectReference: {fileID: 2100000, guid: 4d79fb2a303787f4bb0b5d5bea991642, type: 2}
     - target: {fileID: 8938549416118754570, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_LocalPosition.x

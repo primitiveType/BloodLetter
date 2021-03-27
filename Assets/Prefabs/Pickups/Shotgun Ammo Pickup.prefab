@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toast: 1
-  Type: 0
   Amount: 10
+  Type: 0
 --- !u!1001 &6889809658478964116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32,15 +32,20 @@ PrefabInstance:
       propertyPath: anchorTransform
       value: 
       objectReference: {fileID: 1246577373472994084}
+    - target: {fileID: 2832319209844191510, guid: 840132d33d5f54540a847823e764d2fd,
+        type: 3}
+      propertyPath: _currentAnimation
+      value: pkup_ammo_sgun_lg_TPose
+      objectReference: {fileID: 0}
     - target: {fileID: 5241606277932844886, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.44150582
+      value: 0.99604046
       objectReference: {fileID: 0}
     - target: {fileID: 5241606277932844886, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8972584
+      value: 0.0889013
       objectReference: {fileID: 0}
     - target: {fileID: 5241606277932844886, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
@@ -60,17 +65,17 @@ PrefabInstance:
     - target: {fileID: 5679389759790915248, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 5679389759790915248, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.8
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5679389759790915248, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6404762789280644576, guid: 840132d33d5f54540a847823e764d2fd,
         type: 3}
@@ -161,6 +166,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shotgun Ammo Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938549416118754574, guid: 840132d33d5f54540a847823e764d2fd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8938549416118754569, guid: 840132d33d5f54540a847823e764d2fd, type: 3}
