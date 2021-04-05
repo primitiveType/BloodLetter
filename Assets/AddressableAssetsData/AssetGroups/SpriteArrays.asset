@@ -155,8 +155,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 2800000, guid: 0e8065e229746fa45ba9214720bed3a6, type: 2}
-    m_TargetAsset: {fileID: 2800000, guid: 0e8065e229746fa45ba9214720bed3a6, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 11a050629fcae2847bc900e1c35cea3e
     m_Address: pkup_ammo_rckt_lg_TPose_Normal
     m_ReadOnly: 0
@@ -479,13 +479,6 @@ MonoBehaviour:
     - sprites
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 311ac626f7a32584d9777e7a54b6de18
-    m_Address: ChainsawMaterial
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 31600ff222bb37a419b4760c7e6cc1a9
     m_Address: OAK_TREE_ENT_LEGACY_hide2_FrameBuffer
     m_ReadOnly: 0
@@ -526,8 +519,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 2800000, guid: 34309a996a7f672428d8f21f7f15db72, type: 2}
-    m_TargetAsset: {fileID: 2800000, guid: 34309a996a7f672428d8f21f7f15db72, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 346b4603093b30c42a1adc25c34e64ac
     m_Address: GHOUL_LEGACY_attack2_Alpha
     m_ReadOnly: 0
@@ -694,8 +687,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 2800000, guid: 4609a9c4dfc4a224290c9126a3dbae76, type: 2}
-    m_TargetAsset: {fileID: 2800000, guid: 4609a9c4dfc4a224290c9126a3dbae76, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 47569430ea848544a90a3d6645fa9b11
     m_Address: GHOUL_LEGACY_jumpattack_RM_Alpha
     m_ReadOnly: 0

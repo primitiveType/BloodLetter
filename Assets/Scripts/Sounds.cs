@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Sounds : MonoBehaviourSingleton<Sounds>
 {
@@ -12,6 +13,9 @@ public class Sounds : MonoBehaviourSingleton<Sounds>
 
     public void PlayOneShot(AudioClip clip)
     {
+        source.enabled = true;//hack to get around introloop disabling my audio source.
         source.PlayOneShot(clip);
     }
+
+  
 }

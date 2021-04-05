@@ -147,10 +147,10 @@ MonoBehaviour:
   LayersToAffect:
     serializedVersion: 2
     m_Bits: 280832
-  Radius: 1
-  ThroughWalls: 0
-  Duration: 0.1
-  DamageAmount: 5
+  Radius: 2
+  ThroughWalls: 1
+  Duration: 0.5
+  DamageAmount: 8
   Force: 0
 --- !u!114 &6619670246701083051
 MonoBehaviour:

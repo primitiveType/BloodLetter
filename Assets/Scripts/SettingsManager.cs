@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
+// public class GameConstants : MonoBehaviourSingleton<GameConstants>
+// {
+//     
+// }
 public class SettingsManager : MonoBehaviourSingleton<SettingsManager>
 {
     public Settings Settings { get; private set; }

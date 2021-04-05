@@ -21,8 +21,8 @@ internal class PlayerBlood : MonoBehaviour
 
     private void OnBloodGained(object sender, PlayerGainBloodEventArgs args)
     {
-        Blood += 1;
-        Toolbox.Instance.PlayerInventory.GainAmmo(AmmoType.Blood, 1);
+        Blood += 2;
+        Toolbox.Instance.PlayerInventory.GainAmmo(AmmoType.Blood, 2);
     }
 
     public float Blood

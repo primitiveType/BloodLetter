@@ -23,6 +23,6 @@ public class UsesAmmo : MonoBehaviour
 
     public bool HasAmmo()
     {
-        return Inventory.GetAmmoAmount(AmmoType) > 0;
+        return Inventory.GetAmmoAmount(AmmoType) >= AmmoUsed;
     }
 }

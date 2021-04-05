@@ -8068,7 +8068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AmmoType: 1
-  AmmoUsed: 10
+  AmmoUsed: 5
   EquipStatus: {fileID: 144349590738453049}
 --- !u!114 &144349590738453049
 MonoBehaviour:
@@ -10942,12 +10942,12 @@ PrefabInstance:
     - target: {fileID: 3823459290985378762, guid: cd2b7ac47398f174fbd234c27eecadbf,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1296
+      value: 972
       objectReference: {fileID: 0}
     - target: {fileID: 3823459290985378762, guid: cd2b7ac47398f174fbd234c27eecadbf,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1296
+      value: 972
       objectReference: {fileID: 0}
     - target: {fileID: 3895912717656962701, guid: cd2b7ac47398f174fbd234c27eecadbf,
         type: 3}

@@ -130,7 +130,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 0f662122b2660dc48b096dc16f32480f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.755
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -174,7 +174,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.591
+      value: 0.85
       inSlope: 0
       outSlope: 0
       tangentMode: 0
