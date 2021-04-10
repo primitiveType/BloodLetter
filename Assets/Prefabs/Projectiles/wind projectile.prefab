@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 272793241878232817}
   - component: {fileID: 6482496144202228322}
   - component: {fileID: 1936252802847478044}
+  - component: {fileID: 6021664901384103542}
   m_Layer: 0
   m_Name: wind projectile
   m_TagString: Untagged
@@ -292,6 +293,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6021664901384103542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479396050471731650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8235b5ea9184a7bb2ac806d5d9ce93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinRange: 10
+  m_Range: 100
+  type: 0
+  m_Force: 0
+  parentProjectileToBarrel: 0
+  ProjectilePrefab: {fileID: 5479396050471731650}
 --- !u!1 &7864004476953986144
 GameObject:
   m_ObjectHideFlags: 0

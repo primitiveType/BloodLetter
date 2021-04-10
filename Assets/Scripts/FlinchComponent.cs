@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class FlinchComponent : MonoBehaviour
 {
@@ -25,6 +26,20 @@ public class FlinchComponent : MonoBehaviour
                 Animator.SetBool(HurtBool, _isFlinching);
             }
         }
+    }
+
+    private void Awake()
+    {
+        EnemyDataProvider dataProvider = GetComponentInParent<EnemyDataProvider>();
+        if (!dataProvider)
+        {
+            Debug.LogWarning($"Failed to find data provider for {name}.");
+        }
+
+        EnemyData data = dataProvider.Data;
+        FlinchDuration = data.FlinchDuration;
+        DamageRequired = data.DamageToFlinch;
+        TimeToReset = data.TimeToResetFlinch;
     }
 
     private void Start()

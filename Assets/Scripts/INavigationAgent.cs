@@ -8,4 +8,8 @@ public interface INavigationAgent
     bool IsGrounded { get; }
     void SetDestination(Vector3 targetPosition);
     void Warp(Vector3 position);
+    
+    float MoveSpeed { get; }
+    float StoppingDistance { get; }
+    float Acceleration { get; }
 }

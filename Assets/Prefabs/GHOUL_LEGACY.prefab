@@ -49,6 +49,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
+      propertyPath: AttackNames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_AttackNames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
       propertyPath: AttackProjectile
       value: 
       objectReference: {fileID: 3999468812405218162, guid: c2abc22dc803abe48b8bd9f109db6417,
@@ -70,10 +80,30 @@ PrefabInstance:
       propertyPath: m_AttackCooldown
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: AttackNames.Array.data[0]
+      value: flesh projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: AttackNames.Array.data[1]
+      value: Melee Projectile Info 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_AttackNames.Array.data[0]
+      value: flesh projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_AttackNames.Array.data[1]
+      value: Melee Projectile Info 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -169,12 +199,12 @@ PrefabInstance:
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.77329856
+      value: 0.89715165
       objectReference: {fileID: 0}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.63404214
+      value: 0.44172266
       objectReference: {fileID: 0}
     - target: {fileID: 7877181442286923358, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -267,6 +297,86 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 79d69bb95a080c445b3e63851a9e0578, type: 2}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_EnemyName
+      value: GHOUL_LEGACY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Name
+      value: GHOUL_LEGACY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.CanAggro
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.MaxHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.StartHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.CanBleed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.MoveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Acceleration
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.DamageToFlinch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.TimeToResetFlinch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.FlinchDuration
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.DegreesVisibility
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.AggroDelayVariance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.AggroRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.EarshotAggroRange
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8533879305495763307, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Mass

@@ -565,7 +565,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -805,7 +805,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: f8dbcc7656590404980d6f645241f9d5, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 43f13082af5a8554091c1bc8d12eb63e, type: 2}
 --- !u!1 &5235953976680233712
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,6 +45,10 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         transform.position = position;
     }
 
+    public float MoveSpeed => MaxSpeed;
+    public float StoppingDistance => BreakDistance;
+    public float Acceleration => MaxAcceleration;
+
     // Start is called before the first frame update
     private void Start()
     {

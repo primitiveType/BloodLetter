@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 968749474140394720}
   - component: {fileID: -5750225372075219785}
   - component: {fileID: -6734846482510320048}
+  - component: {fileID: -7764141800983796241}
   m_Layer: 18
   m_Name: spider egg projectile
   m_TagString: Untagged
@@ -137,7 +138,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnOnCollide: {fileID: 6962804858628054579, guid: 243ac02f02edd0f4189f751928726538,
     type: 3}
+  m_InheritScale: 0
   IgnoreCollision: {fileID: 0}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &6818228424091109978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,6 +420,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7764141800983796241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479396050471731650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8235b5ea9184a7bb2ac806d5d9ce93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinRange: 5
+  m_Range: 100
+  type: 257
+  m_Force: 5
+  parentProjectileToBarrel: 0
+  ProjectilePrefab: {fileID: 5479396050471731650}
 --- !u!1 &7864004476953986144
 GameObject:
   m_ObjectHideFlags: 0

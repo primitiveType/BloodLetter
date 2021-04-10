@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CustomEditor(typeof(ThreeStageElevator))]
-public class ThreeStageElevatorEditor : Editor
+public class ThreeStageElevatorEditor : UnityEditor.Editor
 {
     public override void OnInspectorGUI()
     {

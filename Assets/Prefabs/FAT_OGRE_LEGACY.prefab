@@ -48,6 +48,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
+      propertyPath: m_AttackNames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
       propertyPath: m_Attacks.Array.data[0]
       value: 
       objectReference: {fileID: 8525631730559829887, guid: 094c8974c63dbb04db9d3ed33e007023,
@@ -56,6 +61,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AttackCooldown
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_AttackNames.Array.data[0]
+      value: Ground Shake
       objectReference: {fileID: 0}
     - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -223,6 +233,56 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 79d69bb95a080c445b3e63851a9e0578, type: 2}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_EnemyName
+      value: Ogre
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Name
+      value: Ogre
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.MaxHealth
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.StartHealth
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.MoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Acceleration
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.AggroDelayVariance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Attacks.Array.data[0]
+      value: Ground Shake
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eea32565a61265b468d20f6c14e5a122, type: 3}
 --- !u!1 &4165725083588579313 stripped

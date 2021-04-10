@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class MonsterVisibilityHandler : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class MonsterVisibilityHandler : MonoBehaviour
     public Vector3? LastSeenPosition { get; set; }
 
 
-    private float DegreesVisibility => _degreesVisibility;
+    public float DegreesVisibility => _degreesVisibility;
 
     private Transform MonsterTransform
     {
@@ -29,6 +30,18 @@ public class MonsterVisibilityHandler : MonoBehaviour
     {
         get => m_EyesTransform;
         set => m_EyesTransform = value;
+    }
+
+    private void Awake()
+    {
+        EnemyDataProvider dataProvider = GetComponentInParent<EnemyDataProvider>();
+        if (!dataProvider)
+        {
+            Debug.LogWarning($"Failed to find data provider for {name}.");
+        }
+
+        EnemyData data = dataProvider.Data;
+        _degreesVisibility = data.DegreesVisibility;
     }
 
     private void Start()

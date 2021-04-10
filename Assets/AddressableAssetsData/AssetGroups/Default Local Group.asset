@@ -42,6 +42,12 @@ MonoBehaviour:
     - sprites
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 01f1fe69782cf13488b2e37b6dcddb5c
+    m_Address: plasma projectile enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 03803b08e73c4d744bb9787eb45937d9
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_Alpha
     m_ReadOnly: 0
@@ -169,6 +175,12 @@ MonoBehaviour:
     - sprites
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 17a14cbd9d49f624b9539a99396ed7d5
+    m_Address: Ground Shake
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 18040e5fa6f244042bd4f4639abccf22
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_Normal
     m_ReadOnly: 0
@@ -198,6 +210,12 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: 24341baa5349a9d45b648ee1f38a79c5
     m_Address: Arachnea_MagicAttack_01_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2723578686db3cd44af5b40f88fb3a40
+    m_Address: plasma projectile
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
@@ -321,6 +339,12 @@ MonoBehaviour:
     - sprites
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 3add20fdbc229c6449a7fdb976cd5358
+    m_Address: flesh projectile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3bf5ffcb5921c9e4e8adf1a4f22ee1ed
     m_Address: SK_Orb_01_GetHitBackCombat_Normal
     m_ReadOnly: 0
@@ -389,6 +413,12 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: 48a9e378ba27272408356d759ab1151d
     m_Address: Arachnea_Walk_02_Normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 48c436b6e48a6d14bb89eb171c6de341
+    m_Address: Plasma ProjectileInfo Enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
@@ -477,6 +507,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5b63428739c78ee41a6cf888521120a9
+    m_Address: Sweep Projectile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 5c6312dd887143e42878eb3df15af238
@@ -679,6 +715,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 88fddc2db5efe0d43bc21195d7ba7ff9
+    m_Address: Assets/Prefabs/Projectiles/Flesh bomb explosion.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 894d597c451bc2148914be515d63fe09
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_Normal
     m_ReadOnly: 0
@@ -754,11 +796,23 @@ MonoBehaviour:
     - sprites
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 9cbe9b3b1a9eff148b1a5500d9e01ec5
+    m_Address: Shotgun Pellet Info
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 9d56f991d263f38469d4d6f5e35751b1
     m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9fb4b3f24ad4ebd4cb51ce03ca158a28
+    m_Address: Melee Projectile Info 10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: a1121e6a8ce9d024486183ff9f01a668
@@ -890,6 +944,12 @@ MonoBehaviour:
     - sprites
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: c2c577624f1d9a94a9238efab65bed9c
+    m_Address: Flesh Bomb ProjectileInfo
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: c2eaf7d32a3391b43a441a73e9e789a6
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_Alpha
     m_ReadOnly: 0
@@ -909,6 +969,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: cb0b80adcaf484f4c92e0b35a6884747
+    m_Address: spider egg projectile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: ccf3bb2280f96e94d9661537963262a8
@@ -994,6 +1060,12 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: deec50cdf95acac46b93612ea76bd419
     m_Address: Arachnea_Walk_02_FrameBuffer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e485ae901b3d4e841a6db61e57ebbc28
+    m_Address: Spider web projectile multiple
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}

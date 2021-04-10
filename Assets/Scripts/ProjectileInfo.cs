@@ -7,7 +7,7 @@ public class ProjectileInfo : ProjectileInfoBase
 
     private GameObject CreateProjectile(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType)
     {
-        var projectile = Instantiate(ProjectilePrefab);
+        var projectile = Instantiate(gameObject);
         projectile.layer = ownerType == EntityType.Player
             ? LayerMask.NameToLayer("PlayerProjectile")
             : LayerMask.NameToLayer("EnemyProjectile");
@@ -18,9 +18,11 @@ public class ProjectileInfo : ProjectileInfoBase
 
     public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
     {
-        var proj = CreateProjectile(owner.position, direction, actorRoot.EntityType);
+        GameObject proj = CreateProjectile(owner.position, direction, actorRoot.EntityType);
         proj.transform.SetParent(parentProjectileToBarrel ? owner : null);
-        var exploder = proj.GetComponent<ExplodeOnCollide>();
+        proj.SetActive(true);
+
+        var exploder = proj.GetComponentInChildren<ExplodeOnCollide>();
         if (exploder)
         {
             exploder.SetIgnoreCollision(actorRoot.Collider.gameObject);

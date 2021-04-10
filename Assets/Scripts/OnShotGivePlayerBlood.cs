@@ -1,9 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class OnShotGivePlayerBlood : MonoBehaviour
 {
     [SerializeField] private ActorEvents m_Events;
     [SerializeField] private ActorHealth m_ActorHealth;
+
+
+    private void Awake()
+    {
+        EnemyDataProvider dataProvider = GetComponentInParent<EnemyDataProvider>();
+        if (!dataProvider)
+        {
+            Debug.LogWarning($"Failed to find data provider for {name}.");
+        }
+
+        EnemyData data = dataProvider.Data;
+        enabled = data.CanBleed;
+    }
 
     private void Start()
     {

@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.575
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023524117925132286, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -230,6 +230,46 @@ PrefabInstance:
         type: 3}
       propertyPath: yFudge
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_EnemyName
+      value: Ent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Name
+      value: Ent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.MaxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.StartHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.MoveSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Acceleration
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.AggroDelayVariance
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8533879305495763307, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ActorArmor : MonoBehaviour
 {
@@ -6,14 +7,27 @@ public class ActorArmor : MonoBehaviour
     [SerializeField] private float m_RemainingArmor;
     private readonly float reduc = .5f;
 
-    public float MaxArmor => 100;
-    public float OverhealMaxArmor => 100;
-
+    public float MaxArmor { get; set; }
+    public float OverhealMaxArmor { get; set; }
 
     public float CurrentArmor
     {
         get => m_RemainingArmor;
         set => m_RemainingArmor = value;
+    }
+
+    private void Awake()
+    {
+        EnemyDataProvider dataProvider = GetComponentInParent<EnemyDataProvider>();
+        if (!dataProvider)
+        {
+            return;
+        }
+
+        EnemyData data = dataProvider.Data;
+        MaxArmor = data.MaxArmor;
+        CurrentArmor = data.StartArmor;
+        OverhealMaxArmor = data.OverhealMaxArmor;
     }
 
     private void Start()

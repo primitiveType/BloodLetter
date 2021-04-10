@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SweepProjectile : ProjectileInfo
 {
@@ -18,6 +20,7 @@ public class SweepProjectile : ProjectileInfo
     
     public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
     {
+        gameObject.SetActive(true);
         var slope = new Vector3(Random.Range(0, m_SweepMagnitude), Random.Range(0, 0), Random.Range(0, m_SweepMagnitude));
         var point = direction;
         var start = (point - slope).normalized;
@@ -67,5 +70,37 @@ public class SweepProjectile : ProjectileInfo
         var direction = TargetDirectionMod;
         Debug.DrawLine(position, position + direction);
         m_ProjectileInfo.TriggerShoot(transform, direction, ActorRoot);
+    }
+
+    protected override void PopulateData(ProjectileData data)
+    {
+        base.PopulateData(data);
+
+        m_SweepMagnitude = data.SweepMagnitude;
+        m_NumToSpawn = data.NumToSpawn;
+        m_Duration = data.Duration;
+        var attackData = GameConstants.GetProjectileDataByName(data.SubProjectileName);
+        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(attackData.Prefab);
+
+        void OnHandleOnCompleted(AsyncOperationHandle<GameObject> operationHandle) => HandleOnCompleted(operationHandle);
+
+        handle.Completed += OnHandleOnCompleted;
+    }
+
+    private void HandleOnCompleted(AsyncOperationHandle<GameObject> operationHandle)
+    {
+        m_ProjectileInfo = operationHandle.Result.GetComponent<ProjectileInfo>();
+    }
+
+    public override ProjectileData GetData()
+    {
+        var data =  base.GetData();
+        var sub = m_ProjectileInfo.GetData().Name;
+
+        data.SubProjectileName = sub;
+        data.SweepMagnitude = m_SweepMagnitude;
+        data.NumToSpawn = m_NumToSpawn;
+        data.Duration = m_Duration;
+        return data;
     }
 }

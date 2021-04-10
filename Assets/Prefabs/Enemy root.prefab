@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 2082546195269642486}
   - component: {fileID: 3367775808371640242}
   - component: {fileID: 637491516543272785}
+  - component: {fileID: 8268886826098721658}
   m_Layer: 8
   m_Name: Enemy root
   m_TagString: Untagged
@@ -409,6 +410,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events: {fileID: 6510712830491665609}
   m_ActorHealth: {fileID: 467093247551489786}
+--- !u!114 &8268886826098721658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171493255443565340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7937bb3e292ed6478bdec4711ef4c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EnemyName: 
+  m_Data:
+    Name: 
+    CanAggro: 1
+    IsFlying: 0
+    MaxHealth: 0
+    StartHealth: 0
+    MaxArmor: 0
+    StartArmor: 0
+    CanBleed: 1
+    MoveSpeed: 0
+    Acceleration: 0
+    StoppingDistance: 0
+    DamageToFlinch: 0
+    TimeToResetFlinch: 0
+    FlinchDuration: 0
+    DegreesVisibility: 180
+    AggroDelayVariance: 0
+    AggroRange: 30
+    EarshotAggroRange: 50
+    OverhealMaxHealth: 0
+    OverhealMaxArmor: 0
 --- !u!1 &8171493255988436123
 GameObject:
   m_ObjectHideFlags: 0

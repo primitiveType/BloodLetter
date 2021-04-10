@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 355450872677367694}
+  - component: {fileID: -7880462193338189016}
   m_Layer: 0
   m_Name: Spider web projectile multiple
   m_TagString: Untagged
@@ -35,6 +36,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7880462193338189016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794818567051308955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8235b5ea9184a7bb2ac806d5d9ce93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinRange: 5
+  m_Range: 100
+  type: 257
+  m_Force: 5
+  parentProjectileToBarrel: 0
+  ProjectilePrefab: {fileID: 794818567051308955}
 --- !u!1001 &1331283339825552951
 PrefabInstance:
   m_ObjectHideFlags: 0

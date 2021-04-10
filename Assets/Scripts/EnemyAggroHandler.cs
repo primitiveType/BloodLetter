@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyAggroHandler : MonoBehaviour
 {
     private static readonly int Aggro = Animator.StringToHash("IsAggro");
 
-    [SerializeField] private float AggroDelayVariance = 1f;
+    [SerializeField] public float AggroDelayVariance = 1f;
 
-    [SerializeField] private float AggroRange;
-    [SerializeField] private float EarshotAggroRange = 20;
+    [SerializeField] public float AggroRange;
+    [SerializeField] public float EarshotAggroRange = 20;
 
 
     private bool isInitialized;
@@ -34,6 +36,21 @@ public class EnemyAggroHandler : MonoBehaviour
 
             PreAggro = value; //if un-aggro'd, reset this
         }
+    }
+
+    private void Awake()
+    {
+        EnemyDataProvider dataProvider = GetComponentInParent<EnemyDataProvider>();
+        if (!dataProvider)
+        {
+            Debug.LogWarning($"Failed to find data provider for {name}.");
+        }
+
+        EnemyData data = dataProvider.Data;
+        enabled = data.CanAggro;
+        AggroRange = data.AggroRange;
+        AggroDelayVariance = data.AggroDelayVariance;
+        EarshotAggroRange = data.EarshotAggroRange;
     }
 
     private bool PreAggro { get; set; }

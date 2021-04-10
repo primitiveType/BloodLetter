@@ -1,7 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using Random = UnityEngine.Random;
 
 public class MonsterAttackComponent : MonoBehaviour
 {
@@ -20,6 +24,10 @@ public class MonsterAttackComponent : MonoBehaviour
 
     [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
 
+    [SerializeField] private List<string> m_AttackNames;
+
+    public IReadOnlyList<string> AttackNames => m_AttackNames;
+    
     private Coroutine AttackRoutine;
     private readonly float attackTime = .5f;
 
@@ -45,14 +53,40 @@ public class MonsterAttackComponent : MonoBehaviour
     private ActorRoot ActorRoot { get; set; }
     public IActorEvents Events => ActorRoot.ActorEvents;
 
+
     private void Start()
     {
         ActorRoot = GetComponentInParent<ActorRoot>();
-        Attacks = m_Attacks.OrderBy(a => a.Range).ToList();
+
+        m_AttackNames = ActorRoot.GetComponent<EnemyDataProvider>().Data.Attacks;
+        Attacks = new List<ProjectileInfoBase>();
+        foreach (var attack in AttackNames)
+        {
+            var attackData = GameConstants.GetProjectileDataByName(attack);
+            AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(attackData.Prefab);
+
+            void OnHandleOnCompleted(AsyncOperationHandle<GameObject> operationHandle) => HandleOnCompleted(operationHandle, attack);
+
+            handle.Completed += OnHandleOnCompleted;
+        }
+
+        // Attacks = m_Attacks.OrderBy(a => a.Range).ToList();
         Events.OnAttackEvent += OnEnemyAttack;
         Target = Toolbox.Instance.PlayerHeadTransform;
         AttackSourceTransform = transform;
     }
+
+    private void HandleOnCompleted(AsyncOperationHandle<GameObject> obj, string name)
+    {
+       
+        ProjectileInfoBase clone = Instantiate(obj.Result, transform, false).GetComponent<ProjectileInfoBase>();
+        clone.gameObject.SetActive(false);
+        clone.PopulateValues(name);
+        Attacks.Add(clone);
+        Attacks.Sort((first, second) => first.Range.CompareTo(second.Range));
+    }
+
+   
 
     private void OnEnemyAttack(object sender, OnAttackEventArgs args)
     {

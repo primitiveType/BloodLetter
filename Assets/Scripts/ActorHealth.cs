@@ -58,6 +58,21 @@ public class ActorHealth : MonoBehaviour
     public bool IsFullHealth => MaxHealth - Health <= float.Epsilon;
     public bool IsFullOverHealth => OverhealMaxHealth - Health <= float.Epsilon;
 
+    private void Awake()
+    {
+        EnemyDataProvider dataProvider = GetComponentInParent<EnemyDataProvider>();
+        if (!dataProvider)
+        {
+            return;
+        }
+
+        EnemyData data = dataProvider.Data;
+
+        MaxHealth = data.MaxHealth;
+        Health = data.StartHealth;
+        OverhealMaxHealth = data.OverhealMaxHealth;
+
+    }
 
     private void Start()
     {

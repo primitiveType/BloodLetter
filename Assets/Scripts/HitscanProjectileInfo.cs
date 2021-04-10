@@ -24,9 +24,21 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         IDamagedByHitscanProjectile damaged = HitscanUtils.GetHitObject(ownerPosition, ownerDirection, actorRoot, Range,
             OnHitWallPrefab,
             out RaycastHit hit);
-        damaged?.OnShot( hit.point, this, ownerDirection);
+        damaged?.OnShot(hit.point, this, ownerDirection);
     }
 
+    protected override void PopulateData(ProjectileData projectile)
+    {
+        base.PopulateData(projectile);
+        m_Damage = projectile.Damage;
+    }
+
+    public override ProjectileData GetData()
+    {
+        var data = base.GetData();
+        data.Damage = Damage;
+        return data;
+    }
 
     public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
     {

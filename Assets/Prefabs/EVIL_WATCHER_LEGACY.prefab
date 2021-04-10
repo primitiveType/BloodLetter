@@ -104,112 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172a598f250cdbc4f8e890cab638e437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1980378414
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 42610010433475542}
-    m_Modifications:
-    - target: {fileID: 1918568636178596470, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_Name
-      value: Plasma Sweep ProjectileInfo Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -504.258
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -180.0191
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.937453
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 55.590008
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596472, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 12.4425
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596473, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_SweepMagnitude
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596473, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_NumToSpawn
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918568636178596473, guid: 5b63428739c78ee41a6cf888521120a9,
-        type: 3}
-      propertyPath: m_Duration
-      value: 0.25
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5b63428739c78ee41a6cf888521120a9, type: 3}
---- !u!114 &1918568634266660695 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1918568636178596473, guid: 5b63428739c78ee41a6cf888521120a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1980378414}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b55c75514ad48e5acac6cd31bedc12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1678797764554132204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254,9 +148,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
+      propertyPath: m_AttackNames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
       propertyPath: m_Attacks.Array.data[0]
       value: 
-      objectReference: {fileID: 1918568634266660695}
+      objectReference: {fileID: 0}
     - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: CooldownStartsOnAggro
@@ -266,6 +165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AttackCooldownVariance
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_AttackNames.Array.data[0]
+      value: Sweep Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 5629367456324301700, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -406,6 +310,71 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_EnemyName
+      value: Watcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Name
+      value: Watcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.IsFlying
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.MaxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.StartHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.MoveSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Acceleration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.StoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.DegreesVisibility
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.AggroDelayVariance
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.AggroRange
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Attacks.Array.data[0]
+      value: Sweep Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 8533879305495763307, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
