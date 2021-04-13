@@ -46,7 +46,7 @@ public class LiquidDragger : MonoBehaviour
                 StepIndex++;
                 var isLeftFoot = StepIndex % 2 == 0;
 
-                var amountToUse = (liquidAmount / 2f);
+                var amountToUse = (liquidAmount / 2.5f);
                 liquidAmount -= amountToUse;
                 var rotation = transform.rotation;
                 var footPrintRotation = rotation;
@@ -60,7 +60,7 @@ public class LiquidDragger : MonoBehaviour
                 var decal = Instantiate(footprintPrefab, info.point + ((footPrintRotation * Vector3.right) * offset),
                     footPrintRotation);
                 
-                var tValue = 1 - (15f / amountToUse);
+                var tValue = 1 - (10f / amountToUse);
 
                 decal.alphaCutoff = Mathf.Lerp(1f, .01f, tValue);
                 decal.GetComponent<LiquidTypeComponent>().LiquidType = LiquidType;

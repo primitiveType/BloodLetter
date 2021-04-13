@@ -60,17 +60,10 @@ public class ActorHealth : MonoBehaviour
 
     private void Awake()
     {
-        EnemyDataProvider dataProvider = GetComponentInParent<EnemyDataProvider>();
-        if (!dataProvider)
-        {
-            return;
-        }
-
-        EnemyData data = dataProvider.Data;
-
-        MaxHealth = data.MaxHealth;
-        Health = data.StartHealth;
-        OverhealMaxHealth = data.OverhealMaxHealth;
+        IHealthDataProvider dataProvider = GetComponentInParent<IHealthDataProvider>();
+        MaxHealth = dataProvider.MaxHealth;
+        Health = dataProvider.StartHealth;
+        OverhealMaxHealth = dataProvider.OverhealMaxHealth;
 
     }
 

@@ -18,16 +18,11 @@ public class ActorArmor : MonoBehaviour
 
     private void Awake()
     {
-        EnemyDataProvider dataProvider = GetComponentInParent<EnemyDataProvider>();
-        if (!dataProvider)
-        {
-            return;
-        }
+        IHealthDataProvider dataProvider = GetComponentInParent<IHealthDataProvider>();
 
-        EnemyData data = dataProvider.Data;
-        MaxArmor = data.MaxArmor;
-        CurrentArmor = data.StartArmor;
-        OverhealMaxArmor = data.OverhealMaxArmor;
+        MaxArmor = dataProvider.MaxArmor;
+        CurrentArmor = dataProvider.StartArmor;
+        OverhealMaxArmor = dataProvider.OverhealMaxArmor;
     }
 
     private void Start()

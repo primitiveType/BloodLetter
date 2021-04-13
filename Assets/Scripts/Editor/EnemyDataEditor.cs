@@ -41,7 +41,7 @@ namespace BloodLetterEditor
             //EnemyMovement movement = enemyDataProvider.GetComponentInChildren<EnemyMovement>();
             OnShotGivePlayerBlood canBleed = enemyDataProvider.GetComponentInChildren<OnShotGivePlayerBlood>();
             INavigationAgent navigation = enemyDataProvider.GetComponentInChildren<INavigationAgent>();
- 
+
 
             if (visibilityHandler)
             {
