@@ -1,0 +1,4361 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RightArmRingIdle
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 27.727156, y: 9.870271, z: -50.464233}
+        inSlope: {x: -0.20354812, y: 0.33826756, z: -0.084794216}
+        outSlope: {x: -0.20354812, y: 0.33826756, z: -0.084794216}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.62
+        value: {x: 27.202002, y: 10.743001, z: -50.683002}
+        inSlope: {x: -2.1984115, y: 3.7982273, z: 0.37061468}
+        outSlope: {x: -2.1984115, y: 3.7982273, z: 0.37061468}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: 12.861001, y: 35.566, z: -47.858}
+        inSlope: {x: -0.4520272, y: 0.78241897, z: 0.089043796}
+        outSlope: {x: -0.4520272, y: 0.78241897, z: 0.089043796}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 10.4
+        value: {x: 27.202002, y: 10.743001, z: -50.683002}
+        inSlope: {x: 1.6927013, y: -2.926595, z: -0.3039342}
+        outSlope: {x: 1.6927013, y: -2.926595, z: -0.3039342}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 27.727156, y: 9.870271, z: -50.464233}
+        inSlope: {x: 0.09618207, y: -0.1598407, z: 0.040067594}
+        outSlope: {x: 0.09618207, y: -0.1598407, z: 0.040067594}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 124.78863, y: -189.49411, z: -181.90489}
+        inSlope: {x: 0.7315377, y: -0.11042514, z: -0.076784834}
+        outSlope: {x: 0.7315377, y: -0.11042514, z: -0.076784834}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.62
+        value: {x: 126.675995, y: -189.779, z: -182.103}
+        inSlope: {x: -9.356745, y: 24.953854, z: 25.371693}
+        outSlope: {x: -9.356745, y: 24.953854, z: 25.371693}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: 60.174004, y: -18.717001, z: -8.298}
+        inSlope: {x: -14.10577, y: 25.799892, z: 25.630728}
+        outSlope: {x: -14.10577, y: 25.799892, z: 25.630728}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 10.4
+        value: {x: 21.952002, y: -11.821, z: -6.374}
+        inSlope: {x: 5.034016, y: -15.479606, z: -15.853617}
+        outSlope: {x: 5.034016, y: -15.479606, z: -15.853617}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 124.78863, y: -189.49411, z: -181.90489}
+        inSlope: {x: 18.834547, y: -32.540863, z: -32.148518}
+        outSlope: {x: 18.834547, y: -32.540863, z: -32.148518}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 25.764933, y: 8.527849, z: 9.640906}
+        inSlope: {x: -0.7640972, y: -3.2083182, z: -3.4170034}
+        outSlope: {x: -0.7640972, y: -3.2083182, z: -3.4170034}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.62
+        value: {x: 23.793562, y: 0.25038782, z: 0.8250383}
+        inSlope: {x: 2.4070508, y: 21.745348, z: 23.105381}
+        outSlope: {x: 2.4070508, y: 21.745348, z: 23.105381}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: 42.871002, y: 159.96101, z: 170.552}
+        inSlope: {x: 3.1278608, y: 5.1441135, z: 5.712391}
+        outSlope: {x: 3.1278608, y: 5.1441135, z: 5.712391}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 10.4
+        value: {x: 45.825, y: 1.21, z: 3.9870002}
+        inSlope: {x: -1.4982412, y: -17.53526, z: -18.583735}
+        outSlope: {x: -1.4982412, y: -17.53526, z: -18.583735}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 25.764933, y: 8.527849, z: 9.640906}
+        inSlope: {x: -3.674005, y: 1.3402654, z: 1.0355139}
+        outSlope: {x: -3.674005, y: 1.3402654, z: 1.0355139}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -40.651615, y: 50.914104, z: 46.54325}
+        inSlope: {x: -7.3343983, y: 9.085984, z: 8.296292}
+        outSlope: {x: -7.3343983, y: 9.085984, z: 8.296292}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: -84.658005, y: 105.43001, z: 96.32101}
+        inSlope: {x: -1.4265478, y: 1.7672331, z: 1.6136372}
+        outSlope: {x: -1.4265478, y: 1.7672331, z: 1.6136372}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -40.651615, y: 50.914104, z: 46.54325}
+        inSlope: {x: 4.4813027, y: -5.551518, z: -5.069018}
+        outSlope: {x: 4.4813027, y: -5.551518, z: -5.069018}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffLargeRing
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -8.33353, y: -30.440416, z: 9.313891}
+        inSlope: {x: -2.6192856, y: -9.501584, z: 3.0659802}
+        outSlope: {x: -2.6192856, y: -9.501584, z: 3.0659802}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 8.62
+        value: {x: -30.807001, y: -111.964005, z: 35.620003}
+        inSlope: {x: 0.24239254, y: 0.8792901, z: -0.28373027}
+        outSlope: {x: 0.24239254, y: 0.8792901, z: -0.28373027}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -8.33353, y: -30.440416, z: 9.313891}
+        inSlope: {x: 3.1040707, y: 11.260164, z: -3.6334407}
+        outSlope: {x: 3.1040707, y: 11.260164, z: -3.6334407}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffSmallRing
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -63.004, y: -94.69, z: 41.999}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: -63.004, y: -94.69, z: 41.999}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -63.004, y: -94.69, z: 41.999}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit11
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -12.083784, y: -28.550167, z: 2.737487}
+        inSlope: {x: -0.039860107, y: -0.030231476, z: -0.1085719}
+        outSlope: {x: -0.039860107, y: -0.030231476, z: -0.1085719}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: -12.193001, y: -28.633001, z: 2.44}
+        inSlope: {x: 0.834978, y: 0.91816664, z: 2.2607446}
+        outSlope: {x: 0.834978, y: 0.91816664, z: 2.2607446}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: -6.6190004, y: -22.548, z: 17.534}
+        inSlope: {x: 0.6182802, y: 6.7650657, z: 8.196039}
+        outSlope: {x: 0.6182802, y: 6.7650657, z: 8.196039}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 8.62
+        value: {x: -7.84, y: 7.544, z: 47.88}
+        inSlope: {x: -0.5297069, y: 3.3390923, z: 2.763431}
+        outSlope: {x: -0.5297069, y: 3.3390923, z: 2.763431}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -12.083784, y: -28.550167, z: 2.737487}
+        inSlope: {x: -0.58615804, y: -4.985382, z: -6.235154}
+        outSlope: {x: -0.58615804, y: -4.985382, z: -6.235154}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -0.61115676, y: 2.3600967, z: 22.982521}
+        inSlope: {x: -0.013811419, y: -0.07594763, z: -0.043620504}
+        outSlope: {x: -0.013811419, y: -0.07594763, z: -0.043620504}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: -0.64900005, y: 2.1520002, z: 22.863}
+        inSlope: {x: 0.4194747, y: 0.41908142, z: 1.3248156}
+        outSlope: {x: 0.4194747, y: 0.41908142, z: 1.3248156}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: 2.131, y: 5.1320004, z: 31.643002}
+        inSlope: {x: 0.28675938, y: 0.3159196, z: 0.90566456}
+        outSlope: {x: 0.28675938, y: 0.3159196, z: 0.90566456}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -0.61115676, y: 2.3600967, z: 22.982521}
+        inSlope: {x: -0.27924204, y: -0.28227127, z: -0.88192266}
+        outSlope: {x: -0.27924204, y: -0.28227127, z: -0.88192266}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -1.0095892, y: 7.1102276, z: -2.584848}
+        inSlope: {x: 0.030142026, y: 0.0075813625, z: -0.01100441}
+        outSlope: {x: 0.030142026, y: 0.0075813625, z: -0.01100441}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: -0.92700005, y: 7.1310005, z: -2.615}
+        inSlope: {x: -0.1551744, y: -0.2302584, z: 0.33422172}
+        outSlope: {x: -0.1551744, y: -0.2302584, z: 0.33422172}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: -2.0370002, y: 5.6050005, z: -0.4}
+        inSlope: {x: -0.11793326, y: -0.15740818, z: 0.22847912}
+        outSlope: {x: -0.11793326, y: -0.15740818, z: 0.22847912}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -1.0095892, y: 7.1102276, z: -2.584848}
+        inSlope: {x: 0.10462434, y: 0.1532818, z: -0.2224896}
+        outSlope: {x: 0.10462434, y: 0.1532818, z: -0.2224896}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22/CATRigRArmDigit23
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -0.312, y: -7.8580003, z: -0.44900003}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: -0.312, y: -7.8580003, z: -0.44900003}
+        inSlope: {x: -0.83578765, y: 1.2580479, z: 3.1719182}
+        outSlope: {x: -0.83578765, y: 1.2580479, z: 3.1719182}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 8.62
+        value: {x: -10.074, y: 6.8360004, z: 36.599003}
+        inSlope: {x: -0.16161638, y: 0.24326885, z: 0.6133542}
+        outSlope: {x: -0.16161638, y: 0.24326885, z: 0.6133542}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -0.312, y: -7.8580003, z: -0.44900003}
+        inSlope: {x: 1.3483425, y: -2.0295582, z: -5.117128}
+        outSlope: {x: 1.3483425, y: -2.0295582, z: -5.117128}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 1.077, y: -2.5040002, z: 18.531}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: 1.077, y: -2.5040002, z: 18.531}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 1.077, y: -2.5040002, z: 18.531}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 0.836, y: -2.6490002, z: 10.764001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: 0.836, y: -2.6490002, z: 10.764001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 0.836, y: -2.6490002, z: 10.764001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32/CATRigRArmDigit33
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 6.7390003, y: 11.338, z: 6.2230005}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: 6.7390003, y: 11.338, z: 6.2230005}
+        inSlope: {x: -0.41686645, y: 0.5563356, z: 0.7244007}
+        outSlope: {x: -0.41686645, y: 0.5563356, z: 0.7244007}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 8.62
+        value: {x: 1.8700001, y: 17.836, z: 14.684001}
+        inSlope: {x: -0.0806095, y: 0.107578695, z: 0.14007747}
+        outSlope: {x: -0.0806095, y: 0.107578695, z: 0.14007747}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 6.7390003, y: 11.338, z: 6.2230005}
+        inSlope: {x: 0.6725139, y: -0.89751387, z: -1.1686465}
+        outSlope: {x: 0.6725139, y: -0.89751387, z: -1.1686465}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 0.646, y: 2.707, z: 20.762001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: 0.646, y: 2.707, z: 20.762001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 0.646, y: 2.707, z: 20.762001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 0.201, y: -0.057000004, z: 0.60200006}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: 0.201, y: -0.057000004, z: 0.60200006}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 0.201, y: -0.057000004, z: 0.60200006}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42/CATRigRArmDigit43
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 13.691001, y: 22.122002, z: 7.1470003}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: 13.691001, y: 22.122002, z: 7.1470003}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 13.691001, y: 22.122002, z: 7.1470003}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 1.3520001, y: -0.45800003, z: 10.457001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: 1.3520001, y: -0.45800003, z: 10.457001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 1.3520001, y: -0.45800003, z: 10.457001}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: 1.172, y: -0.72, z: 3.7210002}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.78
+        value: {x: 1.172, y: -0.72, z: 3.7210002}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: 1.172, y: -0.72, z: 3.7210002}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52/CATRigRArmDigit53
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -0.30139068, y: -0.2007824, z: -0.0669545}
+        inSlope: {x: -0.00023616609, y: -0.00008434173, z: -0.00079282845}
+        outSlope: {x: -0.00023616609, y: -0.00008434173, z: -0.00079282845}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 2.62
+        value: {x: -0.302, y: -0.201, z: -0.069}
+        inSlope: {x: -0.000118083044, y: -0.000042170865, z: -0.00039641422}
+        outSlope: {x: -0.000118083044, y: -0.000042170865, z: -0.00039641422}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: -0.302, y: -0.201, z: -0.069}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 10.4
+        value: {x: -0.302, y: -0.201, z: -0.069}
+        inSlope: {x: 0.00029040332, y: -0.000037877548, z: 0.00070707046}
+        outSlope: {x: 0.00029040332, y: -0.000037877548, z: 0.00070707046}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 14.36
+        value: {x: -0.2997, y: -0.2013, z: -0.0634}
+        inSlope: {x: -0.0002731586, y: 0.00013465306, z: -0.00047776313}
+        outSlope: {x: -0.0002731586, y: 0.00013465306, z: -0.00047776313}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -0.30139068, y: -0.2007824, z: -0.0669545}
+        inSlope: {x: -0.0011271238, y: 0.0003450612, z: -0.0023696672}
+        outSlope: {x: -0.0011271238, y: 0.0003450612, z: -0.0023696672}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -0.17087725, y: -0.124819495, z: -0.02222142}
+        inSlope: {x: -0.0008149606, y: -0.0076865572, z: 0.0079200715}
+        outSlope: {x: -0.0008149606, y: -0.0076865572, z: 0.0079200715}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 8.78
+        value: {x: -0.178, y: -0.192, z: 0.047}
+        inSlope: {x: -0.00052596396, y: 0.0005406076, z: -0.0014902009}
+        outSlope: {x: -0.00052596396, y: 0.0005406076, z: -0.0014902009}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 13
+        value: {x: -0.179, y: -0.155, z: 0.001}
+        inSlope: {x: 0.001301579, y: 0.009660199, z: -0.009509926}
+        outSlope: {x: 0.001301579, y: 0.009660199, z: -0.009509926}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -0.17087725, y: -0.124819495, z: -0.02222142}
+        inSlope: {x: 0.0028401252, y: 0.010552626, z: -0.008119378}
+        outSlope: {x: 0.0028401252, y: 0.010552626, z: -0.008119378}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: {x: -0.18867719, y: 0.00062092557, z: -0.00014511123}
+        inSlope: {x: 0.0024461995, y: -0.00043682093, z: 0.0005241852}
+        outSlope: {x: 0.0024461995, y: -0.00043682093, z: 0.0005241852}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6.04
+        value: {x: -0.174, y: -0.002, z: 0.003}
+        inSlope: {x: 0.0004757883, y: -0.000084962114, z: 0.000101954545}
+        outSlope: {x: 0.0004757883, y: -0.000084962114, z: 0.000101954545}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 15.86
+        value: {x: -0.18867719, y: 0.00062092557, z: -0.00014511123}
+        inSlope: {x: -0.0014946229, y: 0.0002668967, z: -0.0003202761}
+        outSlope: {x: -0.0014946229, y: 0.0002668967, z: -0.0003202761}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 50
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 770394244
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2758580144
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3471782600
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 770394244
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3344385584
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2758580144
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1178865558
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1400079256
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 793382382
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1371205842
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3985860571
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 911293615
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2031135336
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 73883181
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 768015061
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 476549182
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2210646657
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2755288390
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1611373353
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 4290756742
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1439607459
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 15.86
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 27.727156
+        inSlope: -0.20354812
+        outSlope: -0.20354812
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: 27.202002
+        inSlope: -2.1984115
+        outSlope: -2.1984115
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 12.861001
+        inSlope: -0.4520272
+        outSlope: -0.4520272
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: 27.202002
+        inSlope: 1.6927013
+        outSlope: 1.6927013
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 27.727156
+        inSlope: 0.09618207
+        outSlope: 0.09618207
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 9.870271
+        inSlope: 0.33826756
+        outSlope: 0.33826756
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: 10.743001
+        inSlope: 3.7982273
+        outSlope: 3.7982273
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 35.566
+        inSlope: 0.78241897
+        outSlope: 0.78241897
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: 10.743001
+        inSlope: -2.926595
+        outSlope: -2.926595
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 9.870271
+        inSlope: -0.1598407
+        outSlope: -0.1598407
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -50.464233
+        inSlope: -0.084794216
+        outSlope: -0.084794216
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: -50.683002
+        inSlope: 0.37061468
+        outSlope: 0.37061468
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -47.858
+        inSlope: 0.089043796
+        outSlope: 0.089043796
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: -50.683002
+        inSlope: -0.3039342
+        outSlope: -0.3039342
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -50.464233
+        inSlope: 0.040067594
+        outSlope: 0.040067594
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.30139068
+        inSlope: -0.00023616609
+        outSlope: -0.00023616609
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: -0.302
+        inSlope: -0.000118083044
+        outSlope: -0.000118083044
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -0.302
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: -0.302
+        inSlope: 0.00029040332
+        outSlope: 0.00029040332
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 14.36
+        value: -0.2997
+        inSlope: -0.0002731586
+        outSlope: -0.0002731586
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.30139068
+        inSlope: -0.0011271238
+        outSlope: -0.0011271238
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.2007824
+        inSlope: -0.00008434173
+        outSlope: -0.00008434173
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: -0.201
+        inSlope: -0.000042170865
+        outSlope: -0.000042170865
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -0.201
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: -0.201
+        inSlope: -0.000037877548
+        outSlope: -0.000037877548
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 14.36
+        value: -0.2013
+        inSlope: 0.00013465306
+        outSlope: 0.00013465306
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.2007824
+        inSlope: 0.0003450612
+        outSlope: 0.0003450612
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.0669545
+        inSlope: -0.00079282845
+        outSlope: -0.00079282845
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: -0.069
+        inSlope: -0.00039641422
+        outSlope: -0.00039641422
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -0.069
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: -0.069
+        inSlope: 0.00070707046
+        outSlope: 0.00070707046
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 14.36
+        value: -0.0634
+        inSlope: -0.00047776313
+        outSlope: -0.00047776313
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.0669545
+        inSlope: -0.0023696672
+        outSlope: -0.0023696672
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 124.78863
+        inSlope: 0.7315377
+        outSlope: 0.7315377
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: 126.675995
+        inSlope: -9.356745
+        outSlope: -9.356745
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 60.174004
+        inSlope: -14.10577
+        outSlope: -14.10577
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: 21.952002
+        inSlope: 5.034016
+        outSlope: 5.034016
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 124.78863
+        inSlope: 18.834547
+        outSlope: 18.834547
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -189.49411
+        inSlope: -0.11042514
+        outSlope: -0.11042514
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: -189.779
+        inSlope: 24.953854
+        outSlope: 24.953854
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -18.717001
+        inSlope: 25.799892
+        outSlope: 25.799892
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: -11.821
+        inSlope: -15.479606
+        outSlope: -15.479606
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -189.49411
+        inSlope: -32.540863
+        outSlope: -32.540863
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -181.90489
+        inSlope: -0.076784834
+        outSlope: -0.076784834
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: -182.103
+        inSlope: 25.371693
+        outSlope: 25.371693
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -8.298
+        inSlope: 25.630728
+        outSlope: 25.630728
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: -6.374
+        inSlope: -15.853617
+        outSlope: -15.853617
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -181.90489
+        inSlope: -32.148518
+        outSlope: -32.148518
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.17087725
+        inSlope: -0.0008149606
+        outSlope: -0.0008149606
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.78
+        value: -0.178
+        inSlope: -0.00052596396
+        outSlope: -0.00052596396
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: -0.179
+        inSlope: 0.001301579
+        outSlope: 0.001301579
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.17087725
+        inSlope: 0.0028401252
+        outSlope: 0.0028401252
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.124819495
+        inSlope: -0.0076865572
+        outSlope: -0.0076865572
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.78
+        value: -0.192
+        inSlope: 0.0005406076
+        outSlope: 0.0005406076
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: -0.155
+        inSlope: 0.009660199
+        outSlope: 0.009660199
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.124819495
+        inSlope: 0.010552626
+        outSlope: 0.010552626
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.02222142
+        inSlope: 0.0079200715
+        outSlope: 0.0079200715
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.78
+        value: 0.047
+        inSlope: -0.0014902009
+        outSlope: -0.0014902009
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: 0.001
+        inSlope: -0.009509926
+        outSlope: -0.009509926
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.02222142
+        inSlope: -0.008119378
+        outSlope: -0.008119378
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 25.764933
+        inSlope: -0.7640972
+        outSlope: -0.7640972
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: 23.793562
+        inSlope: 2.4070508
+        outSlope: 2.4070508
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 42.871002
+        inSlope: 3.1278608
+        outSlope: 3.1278608
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: 45.825
+        inSlope: -1.4982412
+        outSlope: -1.4982412
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 25.764933
+        inSlope: -3.674005
+        outSlope: -3.674005
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 8.527849
+        inSlope: -3.2083182
+        outSlope: -3.2083182
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: 0.25038782
+        inSlope: 21.745348
+        outSlope: 21.745348
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 159.96101
+        inSlope: 5.1441135
+        outSlope: 5.1441135
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: 1.21
+        inSlope: -17.53526
+        outSlope: -17.53526
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 8.527849
+        inSlope: 1.3402654
+        outSlope: 1.3402654
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 9.640906
+        inSlope: -3.4170034
+        outSlope: -3.4170034
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.62
+        value: 0.8250383
+        inSlope: 23.105381
+        outSlope: 23.105381
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 170.552
+        inSlope: 5.712391
+        outSlope: 5.712391
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.4
+        value: 3.9870002
+        inSlope: -18.583735
+        outSlope: -18.583735
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 9.640906
+        inSlope: 1.0355139
+        outSlope: 1.0355139
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.18867719
+        inSlope: 0.0024461995
+        outSlope: 0.0024461995
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -0.174
+        inSlope: 0.0004757883
+        outSlope: 0.0004757883
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.18867719
+        inSlope: -0.0014946229
+        outSlope: -0.0014946229
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 0.00062092557
+        inSlope: -0.00043682093
+        outSlope: -0.00043682093
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -0.002
+        inSlope: -0.000084962114
+        outSlope: -0.000084962114
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 0.00062092557
+        inSlope: 0.0002668967
+        outSlope: 0.0002668967
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.00014511123
+        inSlope: 0.0005241852
+        outSlope: 0.0005241852
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 0.003
+        inSlope: 0.000101954545
+        outSlope: 0.000101954545
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.00014511123
+        inSlope: -0.0003202761
+        outSlope: -0.0003202761
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -40.651615
+        inSlope: -7.3343983
+        outSlope: -7.3343983
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -84.658005
+        inSlope: -1.4265478
+        outSlope: -1.4265478
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -40.651615
+        inSlope: 4.4813027
+        outSlope: 4.4813027
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffLargeRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 50.914104
+        inSlope: 9.085984
+        outSlope: 9.085984
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 105.43001
+        inSlope: 1.7672331
+        outSlope: 1.7672331
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 50.914104
+        inSlope: -5.551518
+        outSlope: -5.551518
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffLargeRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 46.54325
+        inSlope: 8.296292
+        outSlope: 8.296292
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 96.32101
+        inSlope: 1.6136372
+        outSlope: 1.6136372
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 46.54325
+        inSlope: -5.069018
+        outSlope: -5.069018
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffLargeRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -8.33353
+        inSlope: -2.6192856
+        outSlope: -2.6192856
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: -30.807001
+        inSlope: 0.24239254
+        outSlope: 0.24239254
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -8.33353
+        inSlope: 3.1040707
+        outSlope: 3.1040707
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffSmallRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -30.440416
+        inSlope: -9.501584
+        outSlope: -9.501584
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: -111.964005
+        inSlope: 0.8792901
+        outSlope: 0.8792901
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -30.440416
+        inSlope: 11.260164
+        outSlope: 11.260164
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffSmallRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 9.313891
+        inSlope: 3.0659802
+        outSlope: 3.0659802
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: 35.620003
+        inSlope: -0.28373027
+        outSlope: -0.28373027
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 9.313891
+        inSlope: -3.6334407
+        outSlope: -3.6334407
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffSmallRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -63.004
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -63.004
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -63.004
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit11
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -94.69
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -94.69
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -94.69
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit11
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 41.999
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 41.999
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 41.999
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit11
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -12.083784
+        inSlope: -0.039860107
+        outSlope: -0.039860107
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -12.193001
+        inSlope: 0.834978
+        outSlope: 0.834978
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -6.6190004
+        inSlope: 0.6182802
+        outSlope: 0.6182802
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: -7.84
+        inSlope: -0.5297069
+        outSlope: -0.5297069
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -12.083784
+        inSlope: -0.58615804
+        outSlope: -0.58615804
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -28.550167
+        inSlope: -0.030231476
+        outSlope: -0.030231476
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -28.633001
+        inSlope: 0.91816664
+        outSlope: 0.91816664
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -22.548
+        inSlope: 6.7650657
+        outSlope: 6.7650657
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: 7.544
+        inSlope: 3.3390923
+        outSlope: 3.3390923
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -28.550167
+        inSlope: -4.985382
+        outSlope: -4.985382
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 2.737487
+        inSlope: -0.1085719
+        outSlope: -0.1085719
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 2.44
+        inSlope: 2.2607446
+        outSlope: 2.2607446
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 17.534
+        inSlope: 8.196039
+        outSlope: 8.196039
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: 47.88
+        inSlope: 2.763431
+        outSlope: 2.763431
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 2.737487
+        inSlope: -6.235154
+        outSlope: -6.235154
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.61115676
+        inSlope: -0.013811419
+        outSlope: -0.013811419
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -0.64900005
+        inSlope: 0.4194747
+        outSlope: 0.4194747
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 2.131
+        inSlope: 0.28675938
+        outSlope: 0.28675938
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.61115676
+        inSlope: -0.27924204
+        outSlope: -0.27924204
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 2.3600967
+        inSlope: -0.07594763
+        outSlope: -0.07594763
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 2.1520002
+        inSlope: 0.41908142
+        outSlope: 0.41908142
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 5.1320004
+        inSlope: 0.3159196
+        outSlope: 0.3159196
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 2.3600967
+        inSlope: -0.28227127
+        outSlope: -0.28227127
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 22.982521
+        inSlope: -0.043620504
+        outSlope: -0.043620504
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 22.863
+        inSlope: 1.3248156
+        outSlope: 1.3248156
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 31.643002
+        inSlope: 0.90566456
+        outSlope: 0.90566456
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 22.982521
+        inSlope: -0.88192266
+        outSlope: -0.88192266
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -1.0095892
+        inSlope: 0.030142026
+        outSlope: 0.030142026
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -0.92700005
+        inSlope: -0.1551744
+        outSlope: -0.1551744
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -2.0370002
+        inSlope: -0.11793326
+        outSlope: -0.11793326
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -1.0095892
+        inSlope: 0.10462434
+        outSlope: 0.10462434
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22/CATRigRArmDigit23
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 7.1102276
+        inSlope: 0.0075813625
+        outSlope: 0.0075813625
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 7.1310005
+        inSlope: -0.2302584
+        outSlope: -0.2302584
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: 5.6050005
+        inSlope: -0.15740818
+        outSlope: -0.15740818
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 7.1102276
+        inSlope: 0.1532818
+        outSlope: 0.1532818
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22/CATRigRArmDigit23
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -2.584848
+        inSlope: -0.01100441
+        outSlope: -0.01100441
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -2.615
+        inSlope: 0.33422172
+        outSlope: 0.33422172
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6.04
+        value: -0.4
+        inSlope: 0.22847912
+        outSlope: 0.22847912
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -2.584848
+        inSlope: -0.2224896
+        outSlope: -0.2224896
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22/CATRigRArmDigit23
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.312
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -0.312
+        inSlope: -0.83578765
+        outSlope: -0.83578765
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: -10.074
+        inSlope: -0.16161638
+        outSlope: -0.16161638
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.312
+        inSlope: 1.3483425
+        outSlope: 1.3483425
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -7.8580003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -7.8580003
+        inSlope: 1.2580479
+        outSlope: 1.2580479
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: 6.8360004
+        inSlope: 0.24326885
+        outSlope: 0.24326885
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -7.8580003
+        inSlope: -2.0295582
+        outSlope: -2.0295582
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.44900003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -0.44900003
+        inSlope: 3.1719182
+        outSlope: 3.1719182
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: 36.599003
+        inSlope: 0.6133542
+        outSlope: 0.6133542
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.44900003
+        inSlope: -5.117128
+        outSlope: -5.117128
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 1.077
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 1.077
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 1.077
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -2.5040002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -2.5040002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -2.5040002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 18.531
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 18.531
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 18.531
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 0.836
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 0.836
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 0.836
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32/CATRigRArmDigit33
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -2.6490002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -2.6490002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -2.6490002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32/CATRigRArmDigit33
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 10.764001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 10.764001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 10.764001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32/CATRigRArmDigit33
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 6.7390003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 6.7390003
+        inSlope: -0.41686645
+        outSlope: -0.41686645
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: 1.8700001
+        inSlope: -0.0806095
+        outSlope: -0.0806095
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 6.7390003
+        inSlope: 0.6725139
+        outSlope: 0.6725139
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 11.338
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 11.338
+        inSlope: 0.5563356
+        outSlope: 0.5563356
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: 17.836
+        inSlope: 0.107578695
+        outSlope: 0.107578695
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 11.338
+        inSlope: -0.89751387
+        outSlope: -0.89751387
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 6.2230005
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 6.2230005
+        inSlope: 0.7244007
+        outSlope: 0.7244007
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8.62
+        value: 14.684001
+        inSlope: 0.14007747
+        outSlope: 0.14007747
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 6.2230005
+        inSlope: -1.1686465
+        outSlope: -1.1686465
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 0.646
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 0.646
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 0.646
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 2.707
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 2.707
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 2.707
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 20.762001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 20.762001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 20.762001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 0.201
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 0.201
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 0.201
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42/CATRigRArmDigit43
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.057000004
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -0.057000004
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.057000004
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42/CATRigRArmDigit43
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 0.60200006
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 0.60200006
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 0.60200006
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42/CATRigRArmDigit43
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 13.691001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 13.691001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 13.691001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 22.122002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 22.122002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 22.122002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 7.1470003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 7.1470003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 7.1470003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 1.3520001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 1.3520001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 1.3520001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.45800003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -0.45800003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.45800003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 10.457001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 10.457001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 10.457001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 1.172
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 1.172
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 1.172
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52/CATRigRArmDigit53
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: -0.72
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: -0.72
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: -0.72
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52/CATRigRArmDigit53
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.04
+        value: 3.7210002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.78
+        value: 3.7210002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15.86
+        value: 3.7210002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52/CATRigRArmDigit53
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffLargeRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffLargeRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffLargeRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52/CATRigRArmDigit53
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52/CATRigRArmDigit53
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52/CATRigRArmDigit53
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51/CATRigRArmDigit52
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22/CATRigRArmDigit23
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22/CATRigRArmDigit23
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21/CATRigRArmDigit22/CATRigRArmDigit23
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit21
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32/CATRigRArmDigit33
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32/CATRigRArmDigit33
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32/CATRigRArmDigit33
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit31/CATRigRArmDigit32
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42/CATRigRArmDigit43
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42/CATRigRArmDigit43
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42/CATRigRArmDigit43
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit41/CATRigRArmDigit42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit11
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit11
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit11
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/CATRigRArmDigit51
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffSmallRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffSmallRing
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: FPS Hands (Full Gloves)/CATRigHub001/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm21/CATRigRArm22/CATRigRArmPalm/GunAnchor/Ring/MetalstaffRings/MetalstaffSmallRing
+    classID: 4
+    script: {fileID: 0}
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events: []

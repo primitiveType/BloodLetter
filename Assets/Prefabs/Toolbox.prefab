@@ -964,8 +964,8 @@ MonoBehaviour:
         m_values:
         - 80
         - 0
-      EquippedWeapon: 1
-      Weapons: 1
+      EquippedWeapon: 16
+      Weapons: 16
     _playerArmor: 0
     _playerHealth: 100
   _saveData:
@@ -973,8 +973,8 @@ MonoBehaviour:
       Ammo:
         m_keys: 
         m_values: []
-      EquippedWeapon: 1
-      Weapons: 1
+      EquippedWeapon: 16
+      Weapons: 16
     _playerArmor: 11
     _playerHealth: 111
 --- !u!114 &1248142936

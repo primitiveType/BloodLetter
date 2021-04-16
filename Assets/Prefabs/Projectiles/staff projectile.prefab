@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7071296393417005220}
   - component: {fileID: 6818228424091109978}
   - component: {fileID: 272793241878232817}
+  - component: {fileID: 7831279071170676815}
   m_Layer: 0
   m_Name: staff projectile
   m_TagString: Untagged
@@ -97,6 +98,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7831279071170676815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479396050471731650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8235b5ea9184a7bb2ac806d5d9ce93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinRange: 10
+  m_Range: 100
+  type: 4096
+  m_Force: 0
+  parentProjectileToBarrel: 0
+  ProjectilePrefab: {fileID: 0}
 --- !u!1 &8323067039832165054
 GameObject:
   m_ObjectHideFlags: 0

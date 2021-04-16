@@ -21,8 +21,8 @@ public class ActorArmor : MonoBehaviour
         IHealthDataProvider dataProvider = GetComponentInParent<IHealthDataProvider>();
 
         MaxArmor = dataProvider.MaxArmor;
-        CurrentArmor = dataProvider.StartArmor;
         OverhealMaxArmor = dataProvider.OverhealMaxArmor;
+        CurrentArmor = dataProvider.StartArmor;
     }
 
     private void Start()

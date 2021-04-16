@@ -32,7 +32,11 @@ public class ActorRoot : MonoBehaviour
 
     protected virtual void Awake()
     {
-        Animator = GetComponentInChildren<Animator>();
+        if (Animator == null)
+        {
+            Animator = GetComponentInChildren<Animator>();
+        }
+
         Attack = GetComponentInChildren<MonsterAttackComponent>();
         ActorEvents = GetComponentInChildren<IActorEvents>();
         AnimationMaterialHelper = GetComponentInChildren<AnimationMaterialHelper>();
