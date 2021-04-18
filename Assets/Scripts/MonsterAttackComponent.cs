@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -92,7 +93,7 @@ public class MonsterAttackComponent : MonoBehaviour
     {
         var position = AttackSourceTransform.position;
         var targetPosition = Target.position;
-        CurrentAttack.TriggerShoot(AttackSourceTransform, targetPosition - position, ActorRoot);
+        CurrentAttack.TriggerShoot(AttackSourceTransform, targetPosition - position, ActorRoot, Toolbox.Instance.PlayerHeadTransform.gameObject);
 
         if (AttackRoutine != null) StopCoroutine(AttackRoutine);
 

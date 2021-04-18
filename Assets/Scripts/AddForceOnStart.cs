@@ -12,8 +12,9 @@ public class AddForceOnStart : MonoBehaviour
         var target = GetComponent<Target>();
         if (target)
         {
-            var rotation = AimRotation(transform.position, target.transform.position, ForceToAdd);
-            GetComponent<Rigidbody>().AddForce(ForceToAdd * rotation.eulerAngles);
+            Vector3 start = transform.position;
+            var rotation = AimRotation(start, target.Value.transform.position, ForceToAdd);
+            GetComponent<Rigidbody>().velocity = rotation * (Vector3.forward * ForceToAdd);
         }
         else
         {

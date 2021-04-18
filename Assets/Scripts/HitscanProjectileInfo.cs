@@ -18,7 +18,7 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
     }
 
 
-    public virtual void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot)
+    public virtual void TriggerShoot(Vector3 ownerPosition, Vector3 ownerDirection, ActorRoot actorRoot, GameObject target)
     {
         ownerRoot = actorRoot;
         IDamagedByHitscanProjectile damaged = HitscanUtils.GetHitObject(ownerPosition, ownerDirection, actorRoot, Range,
@@ -40,9 +40,9 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         return data;
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
+    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
         ownerRoot = actorRoot;
-        TriggerShoot(owner.position, direction, actorRoot);
+        TriggerShoot(owner.position, direction, actorRoot, target);
     }
 }

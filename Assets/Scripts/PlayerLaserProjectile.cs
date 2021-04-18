@@ -54,7 +54,7 @@ public class PlayerLaserProjectile : HitscanProjectileInfo
         SweepEnd = end;
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
+    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
         ActorRoot = actorRoot;
         Owner = owner;

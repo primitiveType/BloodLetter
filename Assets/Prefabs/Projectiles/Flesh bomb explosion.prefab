@@ -53,14 +53,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75663a7118504bd4abfd96c7694d78d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 10
-  Duration: 0.2
-  Force: 1
-  Radius: 1
-  ThroughWalls: 1
   LayersToAffect:
     serializedVersion: 2
     m_Bits: 0
+  Radius: 1
+  ThroughWalls: 1
+  Duration: 0.1
+  DamageAmount: 10
+  Force: 1
 --- !u!82 &8048990536416520220
 AudioSource:
   m_ObjectHideFlags: 0

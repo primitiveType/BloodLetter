@@ -16,22 +16,22 @@ public class ScatterProjectileInfo : ProjectileInfoBase
         Debug.Log(projectileInfo.Force);
     }
 
-    public void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, ActorRoot actorRoot)
+    public void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, ActorRoot actorRoot, GameObject target)
     {
         //assume up vector is y axis
-        for (var i = 0; i < numProjectiles; i++)
+        for (int i = 0; i < numProjectiles; i++)
         {
-            var x = Random.Range(-degreesScatter, degreesScatter);
-            var y = Random.Range(-degreesScatter, degreesScatter);
-            var z = Random.Range(-degreesScatter, degreesScatter);
-            var position = playerDirection +
-                           new Vector3(x, y, z);
-            projectileInfo.TriggerShoot(playerPosition, position, actorRoot);
+            float x = Random.Range(-degreesScatter, degreesScatter);
+            float y = Random.Range(-degreesScatter, degreesScatter);
+            float z = Random.Range(-degreesScatter, degreesScatter);
+            Vector3 position = playerDirection +
+                               new Vector3(x, y, z);
+            projectileInfo.TriggerShoot(playerPosition, position, actorRoot, target);
         }
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
+    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
-        TriggerShoot(owner.position, direction, actorRoot);
+        TriggerShoot(owner.position, direction, actorRoot, target);
     }
 }

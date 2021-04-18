@@ -14,7 +14,7 @@ public class WeaponEventsHandler : MonoBehaviour
             return;
         }
         Debug.Log("shoot");
-        ProjectileInfo.TriggerShoot(BarrelTransform, BarrelTransform.forward, Toolbox.Instance.PlayerRoot);
+        ProjectileInfo.TriggerShoot(BarrelTransform, BarrelTransform.forward, Toolbox.Instance.PlayerRoot, null);//null target for now.
         SoundInfo.OnShoot();
         Toolbox.Instance.PlayerEvents.PlayerShoot(ProjectileInfo, WeaponId);
     }

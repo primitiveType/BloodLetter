@@ -16,16 +16,24 @@ public class ProjectileInfo : ProjectileInfoBase
         return projectile;
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot)
+    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
         GameObject proj = CreateProjectile(owner.position, direction, actorRoot.EntityType);
-        proj.transform.SetParent(parentProjectileToBarrel ? owner : null);
-        proj.SetActive(true);
 
-        var exploder = proj.GetComponentInChildren<ExplodeOnCollide>();
+
+        ExplodeOnCollide exploder = proj.GetComponentInChildren<ExplodeOnCollide>();
         if (exploder)
         {
             exploder.SetIgnoreCollision(actorRoot.Collider.gameObject);
         }
+
+        Target targetComponent = proj.GetComponent<Target>();
+        if (targetComponent)
+        {
+            targetComponent.Value = target;
+        }
+
+        proj.transform.SetParent(parentProjectileToBarrel ? owner : null);
+        proj.SetActive(true);
     }
 }

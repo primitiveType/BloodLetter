@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4582051952407841162}
   - component: {fileID: 1480216330643657045}
   - component: {fileID: 584350318953637076}
+  - component: {fileID: 8132832845598436626}
   m_Layer: 0
   m_Name: flesh projectile
   m_TagString: Untagged
@@ -90,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dda0b3a27acd0f45a805557ba4f33aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceToAdd: 800
+  ForceToAdd: 12
   lobBias: 0
 --- !u!135 &272793241878232817
 SphereCollider:
@@ -4996,6 +4997,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Events: {fileID: 1480216330643657045}
+--- !u!114 &8132832845598436626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479396050471731650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b4fda2cb0f4ad9995cf55fba40a1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: {fileID: 0}
 --- !u!1 &8977684652370802051
 GameObject:
   m_ObjectHideFlags: 0
