@@ -17,6 +17,10 @@ public class UsesAmmo : MonoBehaviour
 
     private void OnPlayerShoot(object sender, PlayerShootEventArgs playerShootEventArgs)
     {
+        if (playerShootEventArgs.WeaponId != EquipStatus.WeaponId)
+        {
+            return;
+        }
         if (isActiveAndEnabled && EquipStatus.IsEquipped) //hope this is good enough for now!    
             Inventory.UseAmmo(AmmoType, AmmoUsed);
     }

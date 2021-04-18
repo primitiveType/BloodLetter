@@ -828,6 +828,7 @@ MonoBehaviour:
   EquipKey: 50
   equipOnStart: 1
   Equippable: {fileID: 1558278182246051241}
+  Slot: 0
 --- !u!114 &1558278182246051241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,7 +844,8 @@ MonoBehaviour:
   Animator: {fileID: 4592832993706649188}
   m_WeaponSprite: {fileID: 21300000, guid: 8b3e6ff8a9b618e4db1f1bd626d27337, type: 3}
   Events: {fileID: 5658240830617606235}
-  m_WeaponId: 16
+  m_WeaponId: 2
+  Slot: 0
 --- !u!1 &303391414165891509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,6 +2379,7 @@ MonoBehaviour:
   EquipKey: 54
   equipOnStart: 0
   Equippable: {fileID: 8591120083130049567}
+  Slot: 1
 --- !u!114 &8591120083130049567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,7 +2395,8 @@ MonoBehaviour:
   Animator: {fileID: 7832417343541576472}
   m_WeaponSprite: {fileID: 0}
   Events: {fileID: 1364933545084328406}
-  m_WeaponId: 1048576
+  m_WeaponId: 32
+  Slot: 1
 --- !u!1 &1322380994351782184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4946,7 +4950,7 @@ MonoBehaviour:
   ProjectileInfo: {fileID: 7831279071170676815, guid: 49f31ca665a36644b833572f318c08a8,
     type: 3}
   SoundInfo: {fileID: 6824861415142427201}
-  WeaponId: 256
+  WeaponId: 4
 --- !u!114 &5171194758713918821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4963,7 +4967,7 @@ MonoBehaviour:
   ProjectileInfo: {fileID: 793953572406270968, guid: 4f227dac77328ef458d14325a5441d1d,
     type: 3}
   SoundInfo: {fileID: 2268104426248388629}
-  WeaponId: 16
+  WeaponId: 2
 --- !u!114 &1356560291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6535,6 +6539,7 @@ MonoBehaviour:
   EquipKey: 48
   equipOnStart: 0
   Equippable: {fileID: 2357970468043231641}
+  Slot: 0
 --- !u!114 &2357970468043231641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6550,7 +6555,8 @@ MonoBehaviour:
   Animator: {fileID: 8181575061931840281}
   m_WeaponSprite: {fileID: 21300000, guid: f457938942425c94f960e77fa274ce4e, type: 3}
   Events: {fileID: 2063656074729178230}
-  m_WeaponId: 4096
+  m_WeaponId: 8
+  Slot: 0
 --- !u!1 &5510312279850164318
 GameObject:
   m_ObjectHideFlags: 0
@@ -7637,6 +7643,7 @@ MonoBehaviour:
   EquipKey: 55
   equipOnStart: 0
   Equippable: {fileID: 2811008913237413829}
+  Slot: 1
 --- !u!114 &2811008913237413829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7653,6 +7660,7 @@ MonoBehaviour:
   m_WeaponSprite: {fileID: 21300000, guid: 193c30d8db438414ab9e2d3c93fa6ac6, type: 3}
   Events: {fileID: 7307384052210582404}
   m_WeaponId: 16777216
+  Slot: 1
 --- !u!114 &7896920130847146614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7849,6 +7857,7 @@ MonoBehaviour:
   EquipKey: 52
   equipOnStart: 0
   Equippable: {fileID: 4457278899403883506}
+  Slot: 1
 --- !u!114 &4457278899403883506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7864,7 +7873,8 @@ MonoBehaviour:
   Animator: {fileID: 6752489439176782986}
   m_WeaponSprite: {fileID: 21300000, guid: 28662097fbd1b8244846705d1209b78f, type: 3}
   Events: {fileID: 5041589254550488046}
-  m_WeaponId: 65536
+  m_WeaponId: 16
+  Slot: 1
 --- !u!114 &6792588689725076346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8077,6 +8087,7 @@ MonoBehaviour:
   EquipKey: 49
   equipOnStart: 0
   Equippable: {fileID: 1912250448047673413}
+  Slot: 1
 --- !u!114 &1912250448047673413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8093,6 +8104,7 @@ MonoBehaviour:
   m_WeaponSprite: {fileID: 21300000, guid: c6c35e699394a7947abdce4d6757d89c, type: 3}
   Events: {fileID: 7134288244467391078}
   m_WeaponId: 1
+  Slot: 1
 --- !u!1 &7003791237322475693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8579,7 +8591,8 @@ MonoBehaviour:
   Animator: {fileID: 4592832993706649188}
   m_WeaponSprite: {fileID: 21300000, guid: 09dd05cf2ce2eb34db723e732dd5e382, type: 3}
   Events: {fileID: 6749217319896410466}
-  m_WeaponId: 256
+  m_WeaponId: 4
+  Slot: 1
 --- !u!114 &5443734565858831921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8595,6 +8608,7 @@ MonoBehaviour:
   EquipKey: 51
   equipOnStart: 0
   Equippable: {fileID: 144349590738453049}
+  Slot: 1
 --- !u!1 &7617839324681884868
 GameObject:
   m_ObjectHideFlags: 0
@@ -12213,7 +12227,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 10.60199
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8254116792645086475, guid: 8d316606555470e4abc4c6d58d4be8b1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d316606555470e4abc4c6d58d4be8b1, type: 3}
 --- !u!4 &4592832994502810676 stripped
 Transform:

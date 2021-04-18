@@ -71,8 +71,8 @@ public class ActorEvents : MonoBehaviour, IActorEvents
         OnWeaponsChangedEvent?.Invoke(this, new OnWeaponsChangedEventArgs(oldValue, newValue));
     }
 
-    public void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue)
+    public void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue, PlayerInventory.EquipmentSlot slot)
     {
-        OnEquippedWeaponChangedEvent?.Invoke(this, new OnEquippedWeaponChangedEventArgs(oldValue, newValue));
+        OnEquippedWeaponChangedEvent?.Invoke(this, new OnEquippedWeaponChangedEventArgs(oldValue, newValue, slot));
     }
 }

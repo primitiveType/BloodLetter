@@ -61,10 +61,12 @@ public class ActorHealth : MonoBehaviour
     private void Awake()
     {
         IHealthDataProvider dataProvider = GetComponentInParent<IHealthDataProvider>();
-        MaxHealth = dataProvider.MaxHealth;
-        Health = dataProvider.StartHealth;
-        OverhealMaxHealth = dataProvider.OverhealMaxHealth;
-
+        if (dataProvider != null)
+        {
+            MaxHealth = dataProvider.MaxHealth;
+            Health = dataProvider.StartHealth;
+            OverhealMaxHealth = dataProvider.OverhealMaxHealth;
+        }
     }
 
     private void Start()

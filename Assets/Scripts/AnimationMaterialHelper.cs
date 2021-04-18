@@ -189,7 +189,7 @@ public class AnimationMaterialHelper : MonoBehaviour
         Profiler.BeginSample("Get pixels");
         if (cachedAlphaPixelsDirty[perspective])
         {//should we consider just storing them forever instead of dirtying the array
-            cachedAlphaPixels[perspective] = cachedAlpha.GetPixels(perspective);
+            cachedAlphaPixels[perspective] = cachedAllpha.GetPixels(perspective);
             cachedAlphaPixelsDirty[perspective] = false;
         }
 

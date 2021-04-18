@@ -113,8 +113,8 @@ public class ActorEventsMediator : MonoBehaviour, IActorEvents
         _actorEventsImplementation.OnWeaponsChanged(oldValue, newValue);
     }
 
-    public void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue)
+    public void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue, PlayerInventory.EquipmentSlot slot)
     {
-        _actorEventsImplementation.OnEquippedWeaponChanged(oldValue, newValue);
+        _actorEventsImplementation.OnEquippedWeaponChanged(oldValue, newValue, slot);
     }
 }

@@ -6,9 +6,24 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    private EquipStatus CurrentEquip; //will have to make changes if you can later equip multiple things
+    private class EquipInfo
+    {
+        public bool equipping;
+        public EquipStatus current;
+    }
 
-    private bool equipping;
+    public enum EquipmentSlot
+    {
+        LeftHand,
+        RightHand
+    }
+
+    private Dictionary<EquipmentSlot, EquipInfo> EquippedItems = new Dictionary<EquipmentSlot, EquipInfo>
+    {
+    };
+
+
+    // private bool equipping;
     [SerializeField] private PlayerEvents Events;
     private List<IInventoryItem> Items { get; } = new List<IInventoryItem>();
 
@@ -98,7 +113,7 @@ public class PlayerInventory : MonoBehaviour
 
     public int GetMaxAmmoAmount(AmmoType ammoType)
     {
-        switch(ammoType)
+        switch (ammoType)
         {
             case AmmoType.Lead:
                 return 10;
@@ -109,28 +124,40 @@ public class PlayerInventory : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException(nameof(ammoType), ammoType, null);
         }
-
     }
 
-    public void EquipThing(EquipStatus thing)
+    public bool IsEquipped(EquipStatus thing, EquipmentSlot slot)
     {
-        if (!equipping) StartCoroutine(EquipThingCR(thing));
+        return EquippedItems[slot].current == thing;
     }
 
-    private IEnumerator EquipThingCR(EquipStatus thing)
+    public void EquipThing(EquipStatus thing, EquipmentSlot slot)
     {
-        if (CurrentEquip == thing || !thing.CanEquip()) yield break;
+        if (!EquippedItems.ContainsKey(slot))
+        {
+            EquippedItems.Add(slot, new EquipInfo());
+        }
 
-        equipping = true;
-        var prev = CurrentEquip != null ? CurrentEquip.WeaponId : 0;
+        if (!EquippedItems[slot].equipping)
+        {
+            StartCoroutine(EquipThingCR(thing, slot));
+        }
+    }
 
-        if (CurrentEquip != null) yield return StartCoroutine(CurrentEquip.UnEquip());
+    private IEnumerator EquipThingCR(EquipStatus thing, EquipmentSlot slot)
+    {
+        if (EquippedItems[slot].current == thing || !thing.CanEquip()) yield break;
 
-        Events.OnEquippedWeaponChanged(prev, thing.WeaponId);
+        EquippedItems[slot].equipping = true;
+        var prev = EquippedItems[slot].current != null ? EquippedItems[slot].current.WeaponId : 0;
+
+        if (EquippedItems[slot].current != null) yield return StartCoroutine(EquippedItems[slot].current.UnEquip());
+
+        Events.OnEquippedWeaponChanged(prev, thing.WeaponId, slot);
         yield return StartCoroutine(thing.Equip());
-        CurrentEquip = thing;
-        InventoryData.EquippedWeapon = CurrentEquip.WeaponId;
-        equipping = false;
+        EquippedItems[slot].current = thing;
+        InventoryData.EquippedWeapon = EquippedItems[slot].current.WeaponId;
+        EquippedItems[slot].equipping = false;
     }
 
     public void GainBlood(int i)

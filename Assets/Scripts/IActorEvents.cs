@@ -27,5 +27,5 @@ public interface IActorEvents
     void OnArmorChanged();
     void OnAmmoChanged(float oldValue, float newValue, AmmoType type);
     void OnWeaponsChanged(WeaponId oldValue, WeaponId newValue);
-    void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue);
+    void OnEquippedWeaponChanged(WeaponId oldValue, WeaponId newValue, PlayerInventory.EquipmentSlot slot);
 }

@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 public class EquipStatus : MonoBehaviour
 {
-    private static readonly int Equipped = Animator.StringToHash("Equipped");
+  
 
     [SerializeField] private Animator Animator;
     [SerializeField] private Sprite m_WeaponSprite;
@@ -15,12 +15,15 @@ public class EquipStatus : MonoBehaviour
     [FormerlySerializedAs("WeaponId")] [SerializeField]
     private WeaponId m_WeaponId;
 
+    [SerializeField] private PlayerInventory.EquipmentSlot Slot = PlayerInventory.EquipmentSlot.RightHand;
+
+
     private readonly float TimeToLerp = .2f;
 
     public WeaponId WeaponId => m_WeaponId;
     private Vector3 EquippedPosition => new Vector3(0, 0, 0);
     private Vector3 UnequippedPosition => new Vector3(0, -1, 0);
-    public bool IsEquipped { get; private set; }
+    public bool IsEquipped => Toolbox.Instance.PlayerInventory.IsEquipped(this, Slot);
 
     private Transform TransformToLerp => m_transformToLerp != null ? m_transformToLerp : m_transformToLerp = transform;
 
@@ -36,15 +39,11 @@ public class EquipStatus : MonoBehaviour
 
     public IEnumerator Equip()
     {
-        IsEquipped = true;
         yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, EquippedPosition));
-        Animator.SetBool(Equipped, IsEquipped);
     }
 
     public IEnumerator UnEquip()
     {
-        IsEquipped = false;
-        Animator.SetBool(Equipped, IsEquipped);
         yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, UnequippedPosition));
     }
 
@@ -69,7 +68,7 @@ public class EquipStatus : MonoBehaviour
 
     private void PlayerEventsOnOnWeaponsChangedEvent(object sender, OnWeaponsChangedEventArgs args)
     {
-        if ((args.NewValue ^ args.OldValue) == WeaponId) Toolbox.Instance.PlayerInventory.EquipThing(this);
+        if ((args.NewValue ^ args.OldValue) == WeaponId) Toolbox.Instance.PlayerInventory.EquipThing(this, Slot);
     }
 
     private void OnDestroy()

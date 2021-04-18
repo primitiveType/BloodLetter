@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+
 
 public class TestUnequip : MonoBehaviour
 {
@@ -6,6 +8,7 @@ public class TestUnequip : MonoBehaviour
     [SerializeField] private bool equipOnStart;
 
     [SerializeField] private EquipStatus Equippable;
+    [SerializeField] private PlayerInventory.EquipmentSlot Slot = PlayerInventory.EquipmentSlot.RightHand;
 
     private UltimateRadialButtonInfo RadialButtonInfo { get; set; }
 
@@ -29,7 +32,7 @@ public class TestUnequip : MonoBehaviour
 
     private void Equip()
     {
-        Toolbox.Instance.PlayerInventory.EquipThing(Equippable);
+        Toolbox.Instance.PlayerInventory.EquipThing(Equippable, Slot);
     }
 
     private void Start()
