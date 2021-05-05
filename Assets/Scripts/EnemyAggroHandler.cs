@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using SensorToolkit;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,7 +17,7 @@ public class EnemyAggroHandler : MonoBehaviour
     private bool isInitialized;
     private float m_distance;
     private bool m_isAggro;
-    [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
+    [SerializeField] private IMonsterVisibilityHandler VisibilityHandler;
     public IActorEvents Events => ActorRoot.ActorEvents;
 
     private ActorRoot ActorRoot { get; set; }
@@ -51,6 +52,7 @@ public class EnemyAggroHandler : MonoBehaviour
         AggroRange = data.AggroRange;
         AggroDelayVariance = data.AggroDelayVariance;
         EarshotAggroRange = data.EarshotAggroRange;
+        VisibilityHandler = GetComponent<IMonsterVisibilityHandler>();
     }
 
     private bool PreAggro { get; set; }
@@ -65,13 +67,37 @@ public class EnemyAggroHandler : MonoBehaviour
         if (VisibilityHandler.CanSeePlayer(true, true)) SetAggro();
     }
 
-    private void SetAggro()
+    
+    public void OnDetected(GameObject go, Sensor sensor)
+    {
+        if (ShouldAggroTo(go))
+        {
+            SetAggro();
+        }
+    }
+    
+    public void OnLostDetection(GameObject go, Sensor sensor)
+    {
+       
+    }
+
+    private bool ShouldAggroTo(GameObject go)
+    {
+        return go.transform == Toolbox.Instance.PlayerTransform;
+    }
+
+    public void SetAggro()
     {
         if (!PreAggro)
         {
             PreAggro = true;
             StartCoroutine(AggroAfterRandomDelay());
         }
+    }
+
+    public void LoseAggro()
+    {
+        
     }
 
     private IEnumerator AggroAfterRandomDelay()
@@ -102,7 +128,7 @@ public class EnemyAggroHandler : MonoBehaviour
     private void Update()
     {
         m_distance = Vector3.Distance(Target.transform.position, transform.position);
-        if (m_distance < AggroRange && VisibilityHandler.CanSeePlayer()) SetAggro();
+        //if (m_distance < AggroRange && VisibilityHandler.CanSeePlayer()) SetAggro();
     }
 
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)

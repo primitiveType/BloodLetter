@@ -18,7 +18,7 @@ public class ActorRoot : MonoBehaviour
     public Collider Collider { get; private set; }
 
     public EnemyAggroHandler AggroHandler { get; private set; }
-    public MonsterVisibilityHandler VisibilityHandler { get; private set; }
+    public IMonsterVisibilityHandler VisibilityHandler { get; private set; }
     public ActorHealth Health { get; private set; }
     public ActorArmor Armor { get; private set; }
 
@@ -42,7 +42,7 @@ public class ActorRoot : MonoBehaviour
         AnimationMaterialHelper = GetComponentInChildren<AnimationMaterialHelper>();
         HitscanColliders = GetComponentsInChildren<IDamagedByHitscanProjectile>();
         AggroHandler = GetComponentInChildren<EnemyAggroHandler>();
-        VisibilityHandler = GetComponentInChildren<MonsterVisibilityHandler>();
+        VisibilityHandler = GetComponentInChildren<IMonsterVisibilityHandler>();
         Health = GetComponentInChildren<ActorHealth>();
         Armor = GetComponentInChildren<ActorArmor>();
         Navigation = GetComponentInChildren<INavigationAgent>();

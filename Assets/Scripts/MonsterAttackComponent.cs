@@ -23,7 +23,7 @@ public class MonsterAttackComponent : MonoBehaviour
     [SerializeField] private List<ProjectileInfoBase> m_Attacks;
     [SerializeField] private IActorEvents m_Events;
 
-    [SerializeField] private MonsterVisibilityHandler VisibilityHandler;
+    [SerializeField] private IMonsterVisibilityHandler VisibilityHandler;
 
     [SerializeField] private List<string> m_AttackNames;
 
@@ -58,6 +58,7 @@ public class MonsterAttackComponent : MonoBehaviour
     private void Start()
     {
         ActorRoot = GetComponentInParent<ActorRoot>();
+        VisibilityHandler = GetComponent<IMonsterVisibilityHandler>();
 
         m_AttackNames = ActorRoot.GetComponent<EnemyDataProvider>().Data.Attacks;
         Attacks = new List<ProjectileInfoBase>();

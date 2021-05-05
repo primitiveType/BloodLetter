@@ -40,7 +40,7 @@ public class ChainHitscanProjectileInfo : HitscanProjectileInfo
             {
                 alreadyHit.Add(victim.ActorRoot);
                 var line = Instantiate(m_Visual);
-                Vector3 position = victim.ActorRoot.VisibilityHandler.transform.position;//more likely to be the head of creature
+                Vector3 position = victim.ActorRoot.VisibilityHandler.EyesTransform.position;//more likely to be the head of creature
                 line.SetPositions(new Vector3[2]{overlapPosition, position});
                 victim.OnShot(this, position, victim.transform.forward);
                 ChainShoot(owner,
