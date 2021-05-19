@@ -3,9 +3,14 @@
 public class WeaponEventsHandler : MonoBehaviour
 {
     [SerializeField] private Transform BarrelTransform;
+    [SerializeField] private ShootDirectionProvider ShootDirectionProvider;
     [SerializeField] public ProjectileInfoBase ProjectileInfo;
     public WeaponSoundInfo SoundInfo;
     [SerializeField] private WeaponId WeaponId;
+
+
+    private Vector3 ShootDirection => ShootDirectionProvider.ShootDirection;
+
 
     public void Shoot(WeaponId weaponId)
     {
@@ -13,8 +18,10 @@ public class WeaponEventsHandler : MonoBehaviour
         {
             return;
         }
+
         Debug.Log("shoot");
-        ProjectileInfo.TriggerShoot(BarrelTransform, BarrelTransform.forward, Toolbox.Instance.PlayerRoot, null);//null target for now.
+        ProjectileInfo.TriggerShoot(BarrelTransform, ShootDirection, Toolbox.Instance.PlayerRoot,
+            null); //null target for now.
         SoundInfo.OnShoot();
         Toolbox.Instance.PlayerEvents.PlayerShoot(ProjectileInfo, WeaponId);
     }

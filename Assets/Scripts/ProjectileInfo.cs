@@ -21,8 +21,8 @@ public class ProjectileInfo : ProjectileInfoBase
         GameObject proj = CreateProjectile(owner.position, direction, actorRoot.EntityType);
 
 
-        ExplodeOnCollide exploder = proj.GetComponentInChildren<ExplodeOnCollide>();
-        if (exploder)
+        ExplodeOnCollide[] exploders = proj.GetComponentsInChildren<ExplodeOnCollide>();
+        foreach (var exploder in exploders)
         {
             exploder.SetIgnoreCollision(actorRoot.Collider.gameObject);
         }

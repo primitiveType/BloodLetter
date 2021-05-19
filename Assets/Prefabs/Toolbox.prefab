@@ -965,8 +965,8 @@ MonoBehaviour:
         m_values:
         - 80
         - 0
-      EquippedWeapon: 16
-      Weapons: 16
+      EquippedWeapon: 2
+      Weapons: 2
     _playerArmor: 0
     _playerHealth: 100
   _saveData:
@@ -974,8 +974,8 @@ MonoBehaviour:
       Ammo:
         m_keys: 
         m_values: []
-      EquippedWeapon: 16
-      Weapons: 16
+      EquippedWeapon: 2
+      Weapons: 2
     _playerArmor: 11
     _playerHealth: 111
 --- !u!114 &1248142936
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5883707740076942857}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1804ec660b85aa4fa0285deca949881, type: 3}
   m_Name: 

@@ -6,6 +6,7 @@ public class AnimatePlayerEquipmentChanging : MonoBehaviour
     private static readonly int WeaponLeft = Animator.StringToHash("WeaponLeft");
     private static readonly int WeaponRight = Animator.StringToHash("WeaponRight");
     private Animator Animator { get; set; }
+
     private void Start()
     {
         PlayerRoot = GetComponentInParent<PlayerRoot>();
@@ -20,11 +21,11 @@ public class AnimatePlayerEquipmentChanging : MonoBehaviour
     {
         if (args.Slot == PlayerInventory.EquipmentSlot.LeftHand)
         {
-            Animator.SetInteger(WeaponLeft, (int)args.NewValue);
+            Animator.SetInteger(WeaponLeft, (int) args.NewValue);
         }
         else
         {
-            Animator.SetInteger(WeaponRight, (int)args.NewValue);
+            Animator.SetInteger(WeaponRight, (int) args.NewValue);
         }
     }
 }

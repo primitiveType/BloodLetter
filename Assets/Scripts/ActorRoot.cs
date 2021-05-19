@@ -50,21 +50,18 @@ public class ActorRoot : MonoBehaviour
         Collider[] colliders = GetComponentsInChildren<Collider>();
         foreach (Collider collider in colliders)
         {
-            if (collider.gameObject.layer == LayerMask.NameToLayer("EnemyRaycast"))
+            if (collider.gameObject.layer != LayerMask.NameToLayer("Enemy") && collider.gameObject.layer != LayerMask.NameToLayer("Player"))
             {
                 continue;
             }
 
-            if (Collider)
+            if (collider is MeshCollider)
             {
+                continue;
                 //Debug.LogWarning($"More than one collider found for {gameObject.name}!");
             }
             Collider = collider;
         }
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-    }
 }

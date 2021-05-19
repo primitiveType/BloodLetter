@@ -57,7 +57,7 @@ public class ShootTest : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             // Debug.Log("shoot trigger");
-            Animator.SetTrigger(Cast);
+                Animator.SetTrigger(Cast);
         }
 
         Animator.SetBool(Casting, true);

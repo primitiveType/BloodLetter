@@ -34,6 +34,7 @@ public class FlinchComponent : MonoBehaviour
         if (!dataProvider)
         {
             Debug.LogWarning($"Failed to find data provider for {name}.");
+            return;
         }
 
         EnemyData data = dataProvider.Data;
