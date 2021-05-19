@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5ed81596bf4962b32c2357ed34ea19, type: 3}
+  m_Name: SK_Orb_01_Dictionary
+  m_EditorClassIdentifier: 
+  PropertyBlocksByModelAnimation:
+  - rows: 1
+    columns: 1
+    animationName: SK_Orb_01_TPose
+    numFrames: 1
+    normalMap: {fileID: 18700000, guid: d4f36c0397e0e6d4f85c6ac566af9461, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 57b601e61985bae41bef1554bce54145, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7e58d9895b170424ab07b3b33af0c59e, type: 2}
+    normalizedGroundPosition: 0.015204639
+  - rows: 4
+    columns: 4
+    animationName: SK_Orb_01_IdleFlyCombat
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 16d1ad94f5acbd7469119625c04c7b6e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 2d5d24485c9ea084496ae7c5ba850fa6, type: 2}
+    alphaMap: {fileID: 18700000, guid: fed50dd1584de1a4ca2de35e0523e939, type: 2}
+    normalizedGroundPosition: 0.014217195
+  - rows: 4
+    columns: 4
+    animationName: SK_Orb_01_IdleFlyCombatToFlyNormal
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: ac0b0ea8488534d439e1d058b043df47, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 64ed4158919fb37418b856e8af010f43, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6f84061986a9bde46a7f3935c170b69a, type: 2}
+    normalizedGroundPosition: 0.014217198
+  - rows: 4
+    columns: 4
+    animationName: SK_Orb_01_IdleFlyNormal
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 49bf118ee590b8d448ae3e952705f63a, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 8d86e92ced4cb214fa9ae74e799ca903, type: 2}
+    alphaMap: {fileID: 18700000, guid: 8734ecf2cfca47f4abbe4944ba029cb3, type: 2}
+    normalizedGroundPosition: 0.014217195
+  - rows: 4
+    columns: 4
+    animationName: SK_Orb_01_FlyNormalToFlyCombat
+    numFrames: 16
+    normalMap: {fileID: 18700000, guid: 1f89fa8990101c04fa9f2cc7d8211cd8, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 66ee0deb0803d024ebab244b25751ca7, type: 2}
+    alphaMap: {fileID: 18700000, guid: 5117c5b911dea9142bf60f939f1bfc03, type: 2}
+    normalizedGroundPosition: 0.014217198
+  - rows: 2
+    columns: 3
+    animationName: SK_Orb_01_GetHitBackCombat
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 3bf5ffcb5921c9e4e8adf1a4f22ee1ed, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a5f5b175a155bb24e86a60a81a95f573, type: 2}
+    alphaMap: {fileID: 18700000, guid: be8ad2997758e7744b8435e54a85f9d1, type: 2}
+    normalizedGroundPosition: 0.04401039
+  - rows: 2
+    columns: 3
+    animationName: SK_Orb_01_GetHitBackNormal
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 0e80695cf9bea344484541ea9d99c521, type: 2}
+    diffuseMap: {fileID: 18700000, guid: d8debea17b2e75242a054bfea5aa7348, type: 2}
+    alphaMap: {fileID: 18700000, guid: 6a118f79ccdda464f998e3d69f090ae7, type: 2}
+    normalizedGroundPosition: 0.04401039
+  - rows: 2
+    columns: 3
+    animationName: SK_Orb_01_GetHitFrontCombat
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 2f51ebfcbed6b7b40a33dde0dd334954, type: 2}
+    diffuseMap: {fileID: 18700000, guid: f4eb6f08cce7f5547861f63ef3c5f048, type: 2}
+    alphaMap: {fileID: 18700000, guid: f6a9c0f07d9c7b44eab3d2110a69b89e, type: 2}
+    normalizedGroundPosition: 0.061211772
+  - rows: 2
+    columns: 3
+    animationName: SK_Orb_01_GetHitFrontNormal
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 42a0b5997e94bf443817d9e4c7a1782d, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a5e9096fc588d264f938af26271f2b8e, type: 2}
+    alphaMap: {fileID: 18700000, guid: 12086c1d670707f46b89bdb2318a7815, type: 2}
+    normalizedGroundPosition: 0.061211772
+  - rows: 2
+    columns: 3
+    animationName: SK_Orb_01_GetHitLeftCombat
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 30821a43a41d1d74e85e9a42642c47dc, type: 2}
+    diffuseMap: {fileID: 18700000, guid: 333d57cf293d49f4083a1dc2ff764a23, type: 2}
+    alphaMap: {fileID: 18700000, guid: 3248ce10a7d79174781ed01f461b1f53, type: 2}
+    normalizedGroundPosition: 0.05044773
+  - rows: 2
+    columns: 3
+    animationName: SK_Orb_01_GetHitLeftNormal
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 62b53385983b733448045a2bea36775e, type: 2}
+    diffuseMap: {fileID: 18700000, guid: dc3300e7e7d7b134f95b82917c2f69f3, type: 2}
+    alphaMap: {fileID: 18700000, guid: 7921f4f65329010438626e7d35314de0, type: 2}
+    normalizedGroundPosition: 0.05044773
+  - rows: 2
+    columns: 3
+    animationName: SK_Orb_01_GetHitRightCombat
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 7d52e4ba7aa88ba4ab8996e260c44b7b, type: 2}
+    diffuseMap: {fileID: 18700000, guid: a151a8f399131db479b46bf9a29cb568, type: 2}
+    alphaMap: {fileID: 18700000, guid: bbdf4da9597af074b987e9e83a51ce4f, type: 2}
+    normalizedGroundPosition: 0.05097755
+  - rows: 2
+    columns: 3
+    animationName: SK_Orb_01_GetHitRightNormal
+    numFrames: 5
+    normalMap: {fileID: 18700000, guid: 42c0f805fb29d6940a7ff59489a954e5, type: 2}
+    diffuseMap: {fileID: 18700000, guid: ccf3bb2280f96e94d9661537963262a8, type: 2}
+    alphaMap: {fileID: 18700000, guid: 656ebd5aa57bd3f42b78dbcc658a8fe4, type: 2}
+    normalizedGroundPosition: 0.05097755

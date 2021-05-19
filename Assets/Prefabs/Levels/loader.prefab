@@ -1,0 +1,766 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8903420913555209129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8903420913555209131}
+  - component: {fileID: 8903420913555209137}
+  - component: {fileID: 8903420913555209142}
+  - component: {fileID: 8903420913555209143}
+  - component: {fileID: 8903420913555209136}
+  - component: {fileID: 8903420913555209138}
+  - component: {fileID: 8903420913555209140}
+  - component: {fileID: 8903420913555209130}
+  - component: {fileID: 8903420913555209141}
+  m_Layer: 0
+  m_Name: loader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &8903420913555209131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8903420913555209137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c2b0934de0c2c46ad66eb7e2ff7776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoloadWad: ruins_of_the_necromancer.wad
+  autoloadMap: E1M1
+  gravity: 30
+  terminalVelocity: 100
+  deathmatch: 0
+  paused: 0
+  Player: []
+  BulletPuff: {fileID: 1149409105847742, guid: 8f13269e6e2ab7b4fad727d4b16e25e4, type: 3}
+  BloodDrop: {fileID: 1149409105847742, guid: 5216759aa2c9444498e0fa624363ff92, type: 3}
+  TeleportEffect: {fileID: 1149409105847742, guid: 24c35f5797b8d9c4896b8bc320a03b82,
+    type: 3}
+  TemporaryObjectsHolder: {fileID: 8903420913555209131}
+  PlayerDamageReceive: 0.5
+  m_DoCreate: 0
+  ChangeMap: 
+--- !u!114 &8903420913555209142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77101951ebeacd468e2278c0b4d3127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  illegal: {fileID: 2100000, guid: 79d434c4e2f5b924e9160a646a77d42a, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 5a87f6e0d0c7b944c8dadef50e2510d2, type: 2}
+  alphacutMaterial: {fileID: 2100000, guid: 95a42814b22861a40b2decbbc6b73e02, type: 2}
+  axisBillboardMaterial: {fileID: 2100000, guid: 9bc63b289e36037468ad53d492419d84,
+    type: 2}
+  transparentAxisBillboardMaterial: {fileID: 2100000, guid: 5ed286dd64f1e4049b413b5cdb113b92,
+    type: 2}
+  omniBillboardMaterial: {fileID: 2100000, guid: a7504cd7573ee4f4c848ed099412adc5,
+    type: 2}
+  transparentOmniBillboardMaterial: {fileID: 2100000, guid: c011b0e4b7d07dc409ceeaa4ff37a7ca,
+    type: 2}
+  _OverrideWallMaterials:
+  - overrideName: F_SKY1
+    material: {fileID: 2100000, guid: 6d92fd735ed651547973db977094ad5d, type: 2}
+    animation:
+      textureFrames: []
+      frameTime: 0
+    layer: 8
+  - overrideName: SLADRIP2
+    material: {fileID: 0}
+    animation:
+      textureFrames:
+      - SLADRIP1
+      - SLADRIP2
+      - SLADRIP3
+      frameTime: 0.25
+    layer: 0
+  - overrideName: METAL
+    material: {fileID: 2100000, guid: aa2d34e3047253b45bb7db272d750e2d, type: 2}
+    animation:
+      textureFrames:
+      - SLADRIP1
+      - SLADRIP2
+      - SLADRIP3
+      frameTime: 0.25
+    layer: 0
+  _OverrideFlatMaterials:
+  - overrideName: F_SKY1
+    material: {fileID: 2100000, guid: 6d92fd735ed651547973db977094ad5d, type: 2}
+    animation:
+      textureFrames: []
+      frameTime: 0
+    layer: 8
+  - overrideName: NUKAGE3
+    material: {fileID: 0}
+    animation:
+      textureFrames:
+      - NUKAGE1
+      - NUKAGE2
+      - NUKAGE3
+      frameTime: 0.25
+    layer: 0
+--- !u!114 &8903420913555209143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816067581bbc5714cade942f0e92f95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultFilterMode: 0
+  illegal: {fileID: 2800000, guid: bf9d04a201d282449aaf60e0282efe9d, type: 3}
+  OverrideParatemers:
+  - textureName: NUKE24
+    horizontalWrapMode: 0
+    verticalWrapMode: 1
+    filterMode: 0
+  _OverrideSprites: []
+--- !u!114 &8903420913555209136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b801be92355e5448a80cb3cfebafbc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ThingPrefabsNew:
+  - DoomName: AmmoClip
+    ThingId: 2007
+    Prefab: {fileID: 2563003611486957722, guid: ccac620c8161280449153cb5db846b36,
+      type: 3}
+  - DoomName: Backpack
+    ThingId: 8
+    Prefab: {fileID: 1912726000997017916, guid: 9886c3c171b41144b879481e2360d5b0,
+      type: 3}
+  - DoomName: BaronOfHell
+    ThingId: 3003
+    Prefab: {fileID: 7361890597492146672, guid: dccecb3b54f6990418d28b15f5123e44,
+      type: 3}
+  - DoomName: Barrel
+    ThingId: 2035
+    Prefab: {fileID: 7068729471902486529, guid: e5dd0f383f7b6c448a9d4994ebbdf704,
+      type: 3}
+  - DoomName: BloodyMess
+    ThingId: 10
+    Prefab: {fileID: 0}
+  - DoomName: BloodyMess 2
+    ThingId: 12
+    Prefab: {fileID: 0}
+  - DoomName: BlueArmor
+    ThingId: 2019
+    Prefab: {fileID: 8559698135112781880, guid: c8fc1b303e68bcf4097f0ee6c9e738e5,
+      type: 3}
+  - DoomName: BlueKeycard
+    ThingId: 5
+    Prefab: {fileID: 795666656659743596, guid: 1080578cbc5d5774180d00c91a9f580f, type: 3}
+  - DoomName: BoxOfAmmo
+    ThingId: 2048
+    Prefab: {fileID: 2563003611486957722, guid: ccac620c8161280449153cb5db846b36,
+      type: 3}
+  - DoomName: BoxOfRockets
+    ThingId: 2046
+    Prefab: {fileID: 1912726000997017916, guid: 4d01fae6dbfc3524a8f35d7c25cfa880,
+      type: 3}
+  - DoomName: BoxOfShells
+    ThingId: 2049
+    Prefab: {fileID: 2563003611486957722, guid: ccac620c8161280449153cb5db846b36,
+      type: 3}
+  - DoomName: Candelabra
+    ThingId: 35
+    Prefab: {fileID: 0}
+  - DoomName: Candle
+    ThingId: 34
+    Prefab: {fileID: 0}
+  - DoomName: Chaingun
+    ThingId: 2002
+    Prefab: {fileID: 7968842752683111382, guid: 2ab7d4f448c20884eaabf649bf0fb79c,
+      type: 3}
+  - DoomName: Chainsaw
+    ThingId: 2005
+    Prefab: {fileID: 4311643386532166259, guid: ced6c1b83fe5a1e4da41838d1c4b375d,
+      type: 3}
+  - DoomName: ComputerMap
+    ThingId: 2026
+    Prefab: {fileID: 0}
+  - DoomName: DeadPlayer
+    ThingId: 15
+    Prefab: {fileID: 0}
+  - DoomName: DeathmatchStart
+    ThingId: 11
+    Prefab: {fileID: 0}
+  - DoomName: Demon
+    ThingId: 3002
+    Prefab: {fileID: 8735865530429008859, guid: 27aa8cc9f38e95244996878c53e2ed3e,
+      type: 3}
+  - DoomName: FloorLamp
+    ThingId: 2028
+    Prefab: {fileID: 0}
+  - DoomName: FormerHumanSergeant
+    ThingId: 9
+    Prefab: {fileID: 4890869651210651444, guid: c32a3aab75e0ae74fa8d2178542cdcbe,
+      type: 3}
+  - DoomName: FormerHumanTrooper
+    ThingId: 3004
+    Prefab: {fileID: 3725603835625416366, guid: ab83a0032060b924db7eb26551c9a57c,
+      type: 3}
+  - DoomName: GreenArmor
+    ThingId: 2018
+    Prefab: {fileID: 5324934229423433948, guid: ba5f0f884570e68408fb51bd438447c6,
+      type: 3}
+  - DoomName: HealthPotion
+    ThingId: 2014
+    Prefab: {fileID: 4037021711660196074, guid: ed2b2c119a0ead846ad4428ca509adca,
+      type: 3}
+  - DoomName: Imp
+    ThingId: 3001
+    Prefab: {fileID: 8735865530429008859, guid: 27aa8cc9f38e95244996878c53e2ed3e,
+      type: 3}
+  - DoomName: Invisibility
+    ThingId: 2024
+    Prefab: {fileID: 8487683930769927172, guid: c3cc77adf084e28498b77246b2ef22e2,
+      type: 3}
+  - DoomName: LightAmplificationVisor
+    ThingId: 2045
+    Prefab: {fileID: 0}
+  - DoomName: Medikit
+    ThingId: 2012
+    Prefab: {fileID: 2677703882532830867, guid: 59fac4007fbe1c04e8425ecb7413782f,
+      type: 3}
+  - DoomName: Player1Start
+    ThingId: 1
+    Prefab: {fileID: 2786992207684085888, guid: eeffa96650bef9d4d98f242ce0c9cf0d,
+      type: 3}
+  - DoomName: Player2Start
+    ThingId: 2
+    Prefab: {fileID: 0}
+  - DoomName: Player3Start
+    ThingId: 3
+    Prefab: {fileID: 0}
+  - DoomName: Player4Start
+    ThingId: 4
+    Prefab: {fileID: 0}
+  - DoomName: PoolOfBloodAndFlesh
+    ThingId: 24
+    Prefab: {fileID: 0}
+  - DoomName: RadiationSuit
+    ThingId: 2025
+    Prefab: {fileID: 5786286525683811185, guid: 4048863a6f12dde4aac7f65aab7d6046,
+      type: 3}
+  - DoomName: RedKeycard
+    ThingId: 13
+    Prefab: {fileID: 7254192265768001067, guid: f61fb5ef58ef42d41b5e4b974b20d367,
+      type: 3}
+  - DoomName: Rocket
+    ThingId: 2010
+    Prefab: {fileID: 1912726000997017916, guid: 756915104015c474a918f013cf9838e3,
+      type: 3}
+  - DoomName: RocketLauncher
+    ThingId: 2003
+    Prefab: {fileID: 1705305653535347639, guid: ae969346278f8db479899b3ff4c5d1d9,
+      type: 3}
+  - DoomName: Shotgun
+    ThingId: 2001
+    Prefab: {fileID: 6112454145236065395, guid: 2ea058c0a063026478b1b4234f62adf5,
+      type: 3}
+  - DoomName: ShotgunShells
+    ThingId: 2008
+    Prefab: {fileID: 2563003611486957722, guid: ccac620c8161280449153cb5db846b36,
+      type: 3}
+  - DoomName: SoulSphere
+    ThingId: 2013
+    Prefab: {fileID: 4037021711660196074, guid: f8fdf63f068dbf844af6c3dd6771d53b,
+      type: 3}
+  - DoomName: Spectre
+    ThingId: 58
+    Prefab: {fileID: 7361890597492146672, guid: dccecb3b54f6990418d28b15f5123e44,
+      type: 3}
+  - DoomName: SpiritualArmor
+    ThingId: 2015
+    Prefab: {fileID: 5324934229423433948, guid: ba5f0f884570e68408fb51bd438447c6,
+      type: 3}
+  - DoomName: Stimpack
+    ThingId: 2011
+    Prefab: {fileID: 4037021711660196074, guid: ec45c1b31fe32da468005f5110f80829,
+      type: 3}
+  - DoomName: TallRedFirestick
+    ThingId: 46
+    Prefab: {fileID: 0}
+  - DoomName: TallTechnoPillar
+    ThingId: 48
+    Prefab: {fileID: 0}
+  - DoomName: TeleportLanding
+    ThingId: 14
+    Prefab: {fileID: 0}
+  - DoomName: YellowKeycard
+    ThingId: 6
+    Prefab: {fileID: 4141855262221728885, guid: 7150061d639e65a4783f2ee9f20a01d2,
+      type: 3}
+--- !u!114 &8903420913555209138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13160fd15b400ed4a9866727ffbbd1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OverrideSounds: []
+--- !u!114 &8903420913555209140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0082d209becd24bb983b939eb180c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelMusics: []
+  audioSource: {fileID: 0}
+--- !u!82 &8903420913555209130
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &8903420913555209141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903420913555209129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3d832fb13d4156877251c57d37a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaterialsByName:
+  - Key: ASHWALL
+    Material: {fileID: 2100000, guid: 7e5473714d65d584f95ee93cb69fdfe1, type: 2}
+  - Key: BIGDOOR1
+    Material: {fileID: 2100000, guid: 41829cf584aa715448931e50eab4d20c, type: 2}
+  - Key: BIGDOOR2
+    Material: {fileID: 2100000, guid: 41829cf584aa715448931e50eab4d20c, type: 2}
+  - Key: BIGDOOR3
+    Material: {fileID: 2100000, guid: d70af6c9e2df2cd46aa19fccbe058c94, type: 2}
+  - Key: BIGDOOR4
+    Material: {fileID: 2100000, guid: 47a874fdad6636740a72f88deaa1e43a, type: 2}
+  - Key: BROVINE
+    Material: {fileID: 2100000, guid: 43299600c1cfcf14c8c2623ea9f812a0, type: 2}
+  - Key: BROVINE2
+    Material: {fileID: 2100000, guid: 4b38790af16398e41b8142dbea55ed9a, type: 2}
+  - Key: BROWN1
+    Material: {fileID: 2100000, guid: 08233faa685381449a9eee2d43db8fe3, type: 2}
+  - Key: BROWN144
+    Material: {fileID: 2100000, guid: 943430cf32e4e0147b3eb1032b40ef9e, type: 2}
+  - Key: BROWN96
+    Material: {fileID: 2100000, guid: f58efc6fff6db9f4dae76a39ea8b9c6c, type: 2}
+  - Key: BROWNGRN
+    Material: {fileID: 2100000, guid: 3779baffd36ca0f41b325f6a4cdb2e24, type: 2}
+  - Key: BROWNHUG
+    Material: {fileID: 2100000, guid: bfababcd271600846a944b5dd33223ff, type: 2}
+  - Key: CEIL1_2
+    Material: {fileID: 2100000, guid: 2ae40e33c5bda134bbd8de43a7f54619, type: 2}
+  - Key: CEIL3_1
+    Material: {fileID: 2100000, guid: e29178f72e1cd2a4cafb70d67852e5e5, type: 2}
+  - Key: CEIL3_3
+    Material: {fileID: 2100000, guid: 33c0a0bc69fb01c4aab23b7da73cd2c1, type: 2}
+  - Key: CEIL3_5
+    Material: {fileID: 2100000, guid: c3bae4eba09bd304a9e15fc2fb1e708f, type: 2}
+  - Key: CEIL4_1
+    Material: {fileID: 2100000, guid: 24d1befb9ec90784aa14e1ae319621ed, type: 2}
+  - Key: CEIL4_2
+    Material: {fileID: 2100000, guid: 8157e8be0d2aad94f9ba87e88f5c42c4, type: 2}
+  - Key: CEIL4_3
+    Material: {fileID: 2100000, guid: 536278376b54ba24d964876f7a20d956, type: 2}
+  - Key: CEIL5_1
+    Material: {fileID: 2100000, guid: cfe93a71cbc1f5b43a659b4ef7d3f6b2, type: 2}
+  - Key: CEIL5_2
+    Material: {fileID: 2100000, guid: aa17c9803bbb2364a913203ad640735d, type: 2}
+  - Key: CEMENT2
+    Material: {fileID: 0}
+  - Key: CEMENT5
+    Material: {fileID: 2100000, guid: 9e9e8f9bfd9fc2749888e47b54385f17, type: 2}
+  - Key: COMPBLUE
+    Material: {fileID: 2100000, guid: 474689925c6066745967e7dfaa2530df, type: 2}
+  - Key: COMPSPAN
+    Material: {fileID: 2100000, guid: 2e25fa404f267f94d8149a0988a26d68, type: 2}
+  - Key: COMPSTA1
+    Material: {fileID: 2100000, guid: d70af6c9e2df2cd46aa19fccbe058c94, type: 2}
+  - Key: COMPSTA2
+    Material: {fileID: 2100000, guid: 935dbfbaad2986c45bd738e0938026c5, type: 2}
+  - Key: COMPTALL
+    Material: {fileID: 2100000, guid: 2f50da4ca35eec8479aec0d0bf9510a4, type: 2}
+  - Key: COMPTILE
+    Material: {fileID: 2100000, guid: 1367888d1c8475f4a86ac730b8fe52db, type: 2}
+  - Key: COMPUTE1
+    Material: {fileID: 2100000, guid: bb1b7f6785de04149910de252e8766f3, type: 2}
+  - Key: COMPWERD
+    Material: {fileID: 2100000, guid: fce328a839c5a6b4492b1d78e42037a8, type: 2}
+  - Key: CRATE1
+    Material: {fileID: 2100000, guid: fe79a653eaf77824e87544b6c9ec14d6, type: 2}
+  - Key: CRATE2
+    Material: {fileID: 2100000, guid: 513cc9da0a14a7c44b758d30a74d5d26, type: 2}
+  - Key: CRATELIT
+    Material: {fileID: 2100000, guid: fe79a653eaf77824e87544b6c9ec14d6, type: 2}
+  - Key: CRATOP1
+    Material: {fileID: 2100000, guid: fe79a653eaf77824e87544b6c9ec14d6, type: 2}
+  - Key: CRATOP2
+    Material: {fileID: 2100000, guid: 513cc9da0a14a7c44b758d30a74d5d26, type: 2}
+  - Key: CRATWIDE
+    Material: {fileID: 2100000, guid: fe79a653eaf77824e87544b6c9ec14d6, type: 2}
+  - Key: DEM1_5
+    Material: {fileID: 2100000, guid: fe79a653eaf77824e87544b6c9ec14d6, type: 2}
+  - Key: DOOR1
+    Material: {fileID: 2100000, guid: 9728d92e6da94d54d982de3ae4421432, type: 2}
+  - Key: DOOR3
+    Material: {fileID: 2100000, guid: 9728d92e6da94d54d982de3ae4421432, type: 2}
+  - Key: DOORBLU
+    Material: {fileID: 2100000, guid: 594404131a67b7842b63939a6a652a8c, type: 2}
+  - Key: DOORRED
+    Material: {fileID: 2100000, guid: 15ef62c0402698045a9b529a0ef4d987, type: 2}
+  - Key: DOORSTOP
+    Material: {fileID: 2100000, guid: 3c2a23a271d4f8449b2d7b2cd03eb6ca, type: 2}
+  - Key: DOORTRAK
+    Material: {fileID: 2100000, guid: 404f98a3bf37bb14880af5bc105c9eb1, type: 2}
+  - Key: DOORYEL
+    Material: {fileID: 2100000, guid: 5f94c92646bab0943bdf58ed6e980efd, type: 2}
+  - Key: EXITDOOR
+    Material: {fileID: 0}
+  - Key: EXITSIGN
+    Material: {fileID: 0}
+  - Key: EXITSTON
+    Material: {fileID: 0}
+  - Key: F_SKY1
+    Material: {fileID: 2100000, guid: 1c3affcdefb3a964aa5bd2e521671fd3, type: 2}
+  - Key: FLAT1
+    Material: {fileID: 2100000, guid: 13e494f2d732d71408bed04388983604, type: 2}
+  - Key: FLAT10
+    Material: {fileID: 2100000, guid: 02addce5dba6e394a8372f0ddad207c7, type: 2}
+  - Key: FLAT14
+    Material: {fileID: 2100000, guid: 80ed9f5b1c6900a4e967b233be1524a6, type: 2}
+  - Key: FLAT18
+    Material: {fileID: 2100000, guid: e4ebe965829b9fa4b9a2865e3c00d3c6, type: 2}
+  - Key: FLAT19
+    Material: {fileID: 2100000, guid: 97ffeb4fbc2ba3d4e91f14c79e946a83, type: 2}
+  - Key: FLAT20
+    Material: {fileID: 2100000, guid: 78410b0850d17e44c9ab320292bf8573, type: 2}
+  - Key: FLAT22
+    Material: {fileID: 2100000, guid: 3ae0bfd25adde2f42bf93bdb44e7c11d, type: 2}
+  - Key: FLAT23
+    Material: {fileID: 2100000, guid: 74412d60a4f27184f973553f752aef43, type: 2}
+  - Key: FLAT3
+    Material: {fileID: 2100000, guid: a7b22c73cd29e844e815b886be1f4ad5, type: 2}
+  - Key: FLAT4
+    Material: {fileID: 2100000, guid: 2cd1c3e1265ed784089b59ad2fe42d5e, type: 2}
+  - Key: FLAT5
+    Material: {fileID: 2100000, guid: cab801f3080c9434c820db61dbb5dd71, type: 2}
+  - Key: FLAT5_2
+    Material: {fileID: 0}
+  - Key: FLAT5_3
+    Material: {fileID: 0}
+  - Key: FLAT5_4
+    Material: {fileID: 2100000, guid: 1647f5698dbd52b408293468d5d91ce1, type: 2}
+  - Key: FLAT5_5
+    Material: {fileID: 2100000, guid: 2a8acc869367e6b47a124dfa1188eb8e, type: 2}
+  - Key: FLOOR0_1
+    Material: {fileID: 2100000, guid: 1d06a6b1c4388f745bdeb925ffaff36e, type: 2}
+  - Key: FLOOR0_2
+    Material: {fileID: 2100000, guid: cab801f3080c9434c820db61dbb5dd71, type: 2}
+  - Key: FLOOR0_3
+    Material: {fileID: 2100000, guid: d4ab387b9746a7949a7b07e3218f3782, type: 2}
+  - Key: FLOOR0_7
+    Material: {fileID: 2100000, guid: 62071e2cf64e64b47832e80ca50a863a, type: 2}
+  - Key: FLOOR1_1
+    Material: {fileID: 2100000, guid: ef7f8f534141a3146ab238a93c6d24e5, type: 2}
+  - Key: FLOOR1_7
+    Material: {fileID: 2100000, guid: 1647f5698dbd52b408293468d5d91ce1, type: 2}
+  - Key: FLOOR3_3
+    Material: {fileID: 2100000, guid: aa17c9803bbb2364a913203ad640735d, type: 2}
+  - Key: FLOOR4_1
+    Material: {fileID: 2100000, guid: 2a8acc869367e6b47a124dfa1188eb8e, type: 2}
+  - Key: FLOOR4_5
+    Material: {fileID: 2100000, guid: 8b705401519185246b610fd2b3c8bd53, type: 2}
+  - Key: FLOOR4_6
+    Material: {fileID: 2100000, guid: 02addce5dba6e394a8372f0ddad207c7, type: 2}
+  - Key: FLOOR4_8
+    Material: {fileID: 2100000, guid: d1198eb7410f890468018f3b700e6a8d, type: 2}
+  - Key: FLOOR5_1
+    Material: {fileID: 2100000, guid: ef683d7bb404e9444ac95b3b932be228, type: 2}
+  - Key: FLOOR5_2
+    Material: {fileID: 2100000, guid: d33288a8fb0fefd4a9a0f11c4128be8b, type: 2}
+  - Key: FLOOR5_4
+    Material: {fileID: 2100000, guid: b449f1b82ef70f548be1d44dbda6a296, type: 2}
+  - Key: FLOOR6_2
+    Material: {fileID: 2100000, guid: 3f25a240896aae9449de3f05b57118fb, type: 2}
+  - Key: FLOOR7_1
+    Material: {fileID: 2100000, guid: 8b705401519185246b610fd2b3c8bd53, type: 2}
+  - Key: FLOOR7_2
+    Material: {fileID: 2100000, guid: b77589a7f3fa84448b5aa4944a1a0b85, type: 2}
+  - Key: GATE4
+    Material: {fileID: 0}
+  - Key: GRAY1
+    Material: {fileID: 2100000, guid: 0f9683366a38dfc439c20a25ea4ce613, type: 2}
+  - Key: GRAY2
+    Material: {fileID: 2100000, guid: 13e494f2d732d71408bed04388983604, type: 2}
+  - Key: GRAY4
+    Material: {fileID: 2100000, guid: db255cbe54a53a043a8d5700f060741a, type: 2}
+  - Key: GRAY5
+    Material: {fileID: 2100000, guid: 7e5473714d65d584f95ee93cb69fdfe1, type: 2}
+  - Key: GRAY7
+    Material: {fileID: 2100000, guid: cfe93a71cbc1f5b43a659b4ef7d3f6b2, type: 2}
+  - Key: GRAYPOIS
+    Material: {fileID: 2100000, guid: 0bda5b2c87e314b49b0649f1a2d37da9, type: 2}
+  - Key: GRAYVINE
+    Material: {fileID: 2100000, guid: 782069fc546184e4eba1fb991cecad5e, type: 2}
+  - Key: ICKWALL1
+    Material: {fileID: 2100000, guid: bb48e8ae7154db646a3e79e74791b82c, type: 2}
+  - Key: ICKWALL3
+    Material: {fileID: 2100000, guid: 5b58801cfef100f4da4795bcad36757b, type: 2}
+  - Key: ICKWALL7
+    Material: {fileID: 2100000, guid: ddf23784f2d6df94bbaef020482fa210, type: 2}
+  - Key: LAVA1
+    Material: {fileID: 2100000, guid: be3e272559a53364281b3862bf3f0ff4, type: 2}
+  - Key: LIFTFLAT
+    Material: {fileID: 0}
+  - Key: LITE3
+    Material: {fileID: 2100000, guid: 8b21f351c74eb3b4297b086af37dd832, type: 2}
+  - Key: LITE4
+    Material: {fileID: 2100000, guid: fea78d5298f3f2d42b3daa5e04f992ba, type: 2}
+  - Key: LITE5
+    Material: {fileID: 2100000, guid: e2b796e13aee2d84d9b42767eb72e605, type: 2}
+  - Key: LITEBLU1
+    Material: {fileID: 2100000, guid: 411a46c2f7aab614ebeaaef9220402da, type: 2}
+  - Key: LITEBLU4
+    Material: {fileID: 2100000, guid: 9f4fcb0641f2de24681c745be45e8f66, type: 2}
+  - Key: METAL
+    Material: {fileID: 2100000, guid: 9026ffa09a3e0dd4eb269fc648a87708, type: 2}
+  - Key: METAL1
+    Material: {fileID: 2100000, guid: 3609224e262e3ec419d27a28e7d00554, type: 2}
+  - Key: MFLR8_1
+    Material: {fileID: 2100000, guid: 5ef071251afed104fb851d927b0b2700, type: 2}
+  - Key: MFLR8_2
+    Material: {fileID: 2100000, guid: b0b679328de95714bb3019b46f016a28, type: 2}
+  - Key: MFLR8_3
+    Material: {fileID: 2100000, guid: b369d2dbe0bbc8e43bca11ee5a6a6478, type: 2}
+  - Key: MIDGRATE
+    Material: {fileID: 0}
+  - Key: MIDVINE2
+    Material: {fileID: 2100000, guid: f366b9e2d515b6a4e8d9cf1ac22c2ade, type: 2}
+  - Key: NUKAGE1
+    Material: {fileID: 2100000, guid: b303aac86daca8649a54a8aedffc4965, type: 2}
+  - Key: O_BOLT
+    Material: {fileID: 0}
+  - Key: PLANET1
+    Material: {fileID: 2100000, guid: fd6aa8376fdb2554caa6a5a917be79cc, type: 2}
+  - Key: PLAT1
+    Material: {fileID: 0}
+  - Key: REDWALL
+    Material: {fileID: 0}
+  - Key: SHAWN1
+    Material: {fileID: 2100000, guid: 227f352d576ce3148a33c74a2bbb835b, type: 2}
+  - Key: SHAWN2
+    Material: {fileID: 2100000, guid: e2b796e13aee2d84d9b42767eb72e605, type: 2}
+  - Key: SHAWN3
+    Material: {fileID: 2100000, guid: a0d737ac0e3820c42a3c12879b4f9f80, type: 2}
+  - Key: SKINMET1
+    Material: {fileID: 2100000, guid: 91e29cb14f47df14788d67bc4e22e8e1, type: 2}
+  - Key: SLADWALL
+    Material: {fileID: 2100000, guid: cde77686f1abd834284b3fdd9cc2b1cc, type: 2}
+  - Key: SP_DUDE3
+    Material: {fileID: 2100000, guid: cde77686f1abd834284b3fdd9cc2b1cc, type: 2}
+  - Key: SP_ROCK1
+    Material: {fileID: 2100000, guid: df4fb5fb9d2712144b17c2b73c9f8f51, type: 2}
+  - Key: STARBR2
+    Material: {fileID: 2100000, guid: 92398cff9b39930449b11b114622c36a, type: 2}
+  - Key: STARG2
+    Material: {fileID: 2100000, guid: 92398cff9b39930449b11b114622c36a, type: 2}
+  - Key: STARG3
+    Material: {fileID: 2100000, guid: 92398cff9b39930449b11b114622c36a, type: 2}
+  - Key: STARGR2
+    Material: {fileID: 2100000, guid: 92398cff9b39930449b11b114622c36a, type: 2}
+  - Key: STARTAN2
+    Material: {fileID: 2100000, guid: 92398cff9b39930449b11b114622c36a, type: 2}
+  - Key: STARTAN3
+    Material: {fileID: 2100000, guid: d31375b1c68a20744882a4d76f5178f5, type: 2}
+  - Key: STEP1
+    Material: {fileID: 2100000, guid: 2d9813d79d1756248b62a2b30b2a4d1e, type: 2}
+  - Key: STEP2
+    Material: {fileID: 0}
+  - Key: STEP4
+    Material: {fileID: 2100000, guid: ec6a8c9722865964780f2f48599400a1, type: 2}
+  - Key: STEP5
+    Material: {fileID: 2100000, guid: 3c2a23a271d4f8449b2d7b2cd03eb6ca, type: 2}
+  - Key: STEP6
+    Material: {fileID: 2100000, guid: 404f98a3bf37bb14880af5bc105c9eb1, type: 2}
+  - Key: STEPTOP
+    Material: {fileID: 0}
+  - Key: STONE
+    Material: {fileID: 2100000, guid: 181064ec0bfbbb24bbf26300e96a52f4, type: 2}
+  - Key: STONE2
+    Material: {fileID: 2100000, guid: 5d45182721cbfcb41a03033c9a28ed2e, type: 2}
+  - Key: STONE3
+    Material: {fileID: 2100000, guid: c2a32cb3e56245a4a98f5d5c33b8ee8f, type: 2}
+  - Key: SUPPORT2
+    Material: {fileID: 0}
+  - Key: SUPPORT3
+    Material: {fileID: 2100000, guid: 1330319dcb3af9744a614846958fb496, type: 2}
+  - Key: SW1BLUE
+    Material: {fileID: 0}
+  - Key: SW1COMP
+    Material: {fileID: 0}
+  - Key: SW1GARG
+    Material: {fileID: 0}
+  - Key: SW1PIPE
+    Material: {fileID: 0}
+  - Key: SW1SLAD
+    Material: {fileID: 0}
+  - Key: SW1STRTN
+    Material: {fileID: 2100000, guid: 227f352d576ce3148a33c74a2bbb835b, type: 2}
+  - Key: TEKWALL1
+    Material: {fileID: 2100000, guid: 87a9b5d1c959a5f4b8d06176ea3dee37, type: 2}
+  - Key: TEKWALL4
+    Material: {fileID: 2100000, guid: cde77686f1abd834284b3fdd9cc2b1cc, type: 2}
+  - Key: TLITE6_5
+    Material: {fileID: 2100000, guid: 6247df5aacd53b44e9e438d5e884a528, type: 2}
+  - Key: TLITE6_6
+    Material: {fileID: 2100000, guid: 6247df5aacd53b44e9e438d5e884a528, type: 2}
+  - Key: WOOD1
+    Material: {fileID: 2100000, guid: 1fffdc2390f4e6a48850ba7ed31534e7, type: 2}
+  - Key: WOOD5
+    Material: {fileID: 2100000, guid: a137dc07aeceb574fa497b5b2a377ab3, type: 2}
+  m_InvalidMaterial: {fileID: 2100000, guid: 5cd5efc1a8a006b4fb2ea24735349257, type: 2}
