@@ -18,13 +18,13 @@ public class ShootTest : MonoBehaviour
 
     private float ShootTimestamp { get; set; } = -100;
 
-    private List<UsesAmmo> UsesAmmo { get; set; }
+    private List<IShootCondition> UsesAmmo { get; set; }
 
     // Start is called before the first frame update
     private void Start()
     {
         //_animator = GetComponentInChildren<Animator>();
-        UsesAmmo = GetComponents<UsesAmmo>().ToList();
+        UsesAmmo = GetComponents<IShootCondition>().ToList();
         Status = GetComponent<EquipStatus>();
     }
 
@@ -90,7 +90,7 @@ public class ShootTest : MonoBehaviour
     private bool HasAmmo()
     {
         var hasAmmo = true;
-        foreach (var usesAmmo in UsesAmmo) hasAmmo &= usesAmmo.HasAmmo();
+        foreach (var usesAmmo in UsesAmmo) hasAmmo &= usesAmmo.CanShoot();
 
         return hasAmmo;
     }

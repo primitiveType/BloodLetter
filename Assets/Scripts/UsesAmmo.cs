@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class UsesAmmo : MonoBehaviour
+public class UsesAmmo : MonoBehaviour, IShootCondition
 {
     [SerializeField] private AmmoType AmmoType;
     [SerializeField] private float AmmoUsed = 1;
@@ -29,4 +29,14 @@ public class UsesAmmo : MonoBehaviour
     {
         return Inventory.GetAmmoAmount(AmmoType) >= AmmoUsed;
     }
+
+    public bool CanShoot()
+    {
+        return HasAmmo();
+    }
+}
+
+public interface IShootCondition
+{
+    bool CanShoot();
 }
