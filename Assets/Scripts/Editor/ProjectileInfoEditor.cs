@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BloodLetterEditor
 {
     [CustomEditor(typeof(ProjectileInfoBase), true)]
-    public class ProjectileInfoEditor : Editor
+    public class ProjectileInfoEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {

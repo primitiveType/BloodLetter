@@ -83,7 +83,10 @@ public class DotVolume : MonoBehaviour, IDamageSource
         var bounds = other.bounds;
         var origin = new Vector3(bounds.center.x, bounds.center.y, bounds.center.z);
         ;
-        Physics.Raycast(origin, Vector3.down, out var hit, LayerMask.GetMask("Default", "Hazard"));
+        if (!Physics.Raycast(origin, Vector3.down, out var hit, LayerMask.GetMask("Default", "Hazard")))
+        {
+            return false;
+        }
         if (hit.collider.gameObject != gameObject) return false;
 
         if (hit.distance > .1f) //that's a heck of an assumption

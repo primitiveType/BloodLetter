@@ -33,17 +33,31 @@ public class LerpMaterialPropertyOnEquipmentChanging : MonoBehaviour
                 Materials.Add(material);
             }
         }
-
-        UpdateMaterials();
+        
+        if (Toolbox.Instance.PlayerInventory.IsEquipped(WeaponId, PlayerInventory.EquipmentSlot.RightHand) ||
+            Toolbox.Instance.PlayerInventory.IsEquipped(WeaponId, PlayerInventory.EquipmentSlot.LeftHand))
+        {
+            UpdateMaterials(WeaponId);
+        }
+        else
+        {
+            UpdateMaterials();
+        }
     }
 
     private void OnWeaponChanged(object sender, OnEquippedWeaponChangedEventArgs args)
     {
-        if (args.NewValue == WeaponId)
+        var weapon = args.NewValue;
+        UpdateMaterials(weapon);
+    }
+
+    private void UpdateMaterials(WeaponId weapon)
+    {
+        if (weapon.HasFlag(WeaponId))
         {
             Lerp(1);
         }
-        else if (args.OldValue == WeaponId)
+        else
         {
             Lerp(0);
         }

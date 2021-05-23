@@ -15,6 +15,11 @@ public class AnimatePlayerEquipmentChanging : MonoBehaviour
         {
             Animator = GetComponent<Animator>();
         }
+
+        Animator.SetInteger(WeaponLeft,
+            (int) Toolbox.Instance.PlayerInventory.CurrentEquip(PlayerInventory.EquipmentSlot.LeftHand));
+        Animator.SetInteger(WeaponRight,
+            (int) Toolbox.Instance.PlayerInventory.CurrentEquip(PlayerInventory.EquipmentSlot.RightHand));
     }
 
     private void OnWeaponChanged(object sender, OnEquippedWeaponChangedEventArgs args)

@@ -46,7 +46,7 @@ public class TestUnequip : MonoBehaviour
         PlayerRoot.ActorEvents.OnWeaponsChangedEvent += OnInventoryChanged;
         var savedWeapon = SaveState.Instance.SaveData.InventoryData.EquippedWeapon;
         if (savedWeapon != 0)
-            equipOnStart = SaveState.Instance.SaveData.InventoryData.EquippedWeapon == Equippable.WeaponId;
+            equipOnStart = SaveState.Instance.SaveData.InventoryData.EquippedWeapon.HasFlag(Equippable.WeaponId);
 
         if (equipOnStart)
             Equip();

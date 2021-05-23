@@ -6,7 +6,7 @@ using UnityEditor;
 using System.Linq;
 using ICSharpCode.NRefactory.Ast;
 
-public class CreateMaterialsForTextures : Editor
+public class CreateMaterialsForTextures : UnityEditor.Editor
 {
     private static readonly int Normalmap = Shader.PropertyToID("Normal");
     private static readonly int Albedo = Shader.PropertyToID("Albedo");

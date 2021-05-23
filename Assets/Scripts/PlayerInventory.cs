@@ -131,6 +131,32 @@ public class PlayerInventory : MonoBehaviour
         return EquippedItems[slot].current == thing;
     }
 
+    public WeaponId CurrentEquip(EquipmentSlot slot)
+    {
+        if (!EquippedItems.ContainsKey(slot))
+        {
+            return 0;
+        }
+
+        if (EquippedItems[slot].current == null)
+        {
+            return 0;
+        }
+
+        return EquippedItems[slot].current.WeaponId;
+    }
+
+    public bool IsEquipped(WeaponId weaponId, EquipmentSlot slot)
+    {
+        if (!EquippedItems.ContainsKey(slot))
+        {
+            return false;
+        }
+
+        var equipped = EquippedItems[slot]?.current?.WeaponId.HasFlag(weaponId);
+        return equipped ?? false;
+    }
+
     public void EquipThing(EquipStatus thing, EquipmentSlot slot)
     {
         if (!EquippedItems.ContainsKey(slot))
@@ -153,10 +179,11 @@ public class PlayerInventory : MonoBehaviour
 
         if (EquippedItems[slot].current != null) yield return StartCoroutine(EquippedItems[slot].current.UnEquip());
 
+        EquippedItems[slot].current = thing;
+        InventoryData.EquippedWeapon = EquippedItems[EquipmentSlot.LeftHand].current.WeaponId |
+                                       EquippedItems[EquipmentSlot.RightHand].current.WeaponId;
         Events.OnEquippedWeaponChanged(prev, thing.WeaponId, slot);
         yield return StartCoroutine(thing.Equip());
-        EquippedItems[slot].current = thing;
-        InventoryData.EquippedWeapon = EquippedItems[slot].current.WeaponId;
         EquippedItems[slot].equipping = false;
     }
 

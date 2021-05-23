@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-public class CreateMaterialsForPickupTextures : Editor
+public class CreateMaterialsForPickupTextures : UnityEditor.Editor
 {
     private static readonly int Normalmap = Shader.PropertyToID("Normals");
     private static readonly int AlphaMap = Shader.PropertyToID("Alpha");

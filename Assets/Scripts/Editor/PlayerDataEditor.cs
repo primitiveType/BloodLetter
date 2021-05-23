@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(PlayerDataProvider))]
-public class PlayerDataEditor : Editor
+public class PlayerDataEditor : UnityEditor.Editor
 {
     public override void OnInspectorGUI()
     {
