@@ -1,5 +1,10 @@
 ﻿using UnityEngine;
 
+public interface IPositionProvider
+{
+    Vector3 GetPosition();
+}
+
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private AudioSource InteractAudioSource;

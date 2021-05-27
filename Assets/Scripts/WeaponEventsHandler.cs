@@ -22,7 +22,11 @@ public class WeaponEventsHandler : MonoBehaviour
         Debug.Log("shoot");
         ProjectileInfo.TriggerShoot(BarrelTransform, ShootDirection, Toolbox.Instance.PlayerRoot,
             null); //null target for now.
-        SoundInfo.OnShoot();
+        if (SoundInfo != null)
+        {
+            SoundInfo.OnShoot();
+        }
+
         Toolbox.Instance.PlayerEvents.PlayerShoot(ProjectileInfo, WeaponId);
     }
 

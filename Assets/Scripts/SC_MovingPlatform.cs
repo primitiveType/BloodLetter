@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class SC_MovingPlatform : MonoBehaviour
 {
@@ -75,4 +76,6 @@ public class SC_MovingPlatform : MonoBehaviour
         activeGlobalPlatformRotation = transform.rotation;
         activeLocalPlatformRotation = Quaternion.Inverse(activePlatform.rotation) * transform.rotation;
     }
+
+   
 }

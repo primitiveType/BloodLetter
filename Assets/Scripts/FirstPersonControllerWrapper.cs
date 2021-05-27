@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using ECM.Controllers;
+using FPSBuilder.Core.Player;
 using UnityEngine;
 
 public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler
 {
-    [SerializeField] private BaseFirstPersonController m_Controller;
+    [SerializeField] private FirstPersonCharacterController m_Controller;
 
-    private BaseFirstPersonController Controller => m_Controller;
+    // private BaseFirstPersonController Controller => m_Controller;
+    private FirstPersonCharacterController Controller => m_Controller;
 
     private float BaseSpeed => m_BaseSpeed;
 
@@ -15,7 +17,7 @@ public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler
 
     List<MovementModifierHandle> Modifiers = new List<MovementModifierHandle>();
 
-    public bool IsGrounded => Controller.isGrounded;
+    public bool IsGrounded => Controller.Grounded;
     
     private void Awake()
     {
@@ -25,10 +27,11 @@ public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler
     public void SetRelativeSpeed(float percent)
     {
         var speed = BaseSpeed * percent;
-        Controller.backwardSpeed = speed;
-        Controller.forwardSpeed = speed;
-        Controller.strafeSpeed = speed;
-        Controller.speed = speed;
+        // Controller.
+        // Controller.backwardSpeed = speed;
+        // Controller.forwardSpeed = speed;
+        // Controller.strafeSpeed = speed;
+        // Controller.speed = speed;
     }
 
     public void AddMovementModifier(MovementModifierHandle handle)

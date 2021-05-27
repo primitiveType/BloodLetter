@@ -247,6 +247,11 @@ PrefabInstance:
       propertyPath: m_MaxHealth
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 710757042677816803, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: endReachedDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1105345834222380861, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Controller
@@ -596,7 +601,7 @@ PrefabInstance:
     - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Data.AggroDelayVariance
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

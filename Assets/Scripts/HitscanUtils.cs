@@ -101,6 +101,7 @@ public static class HitscanUtils
                 //isDone = true;
                 victims.Add(damaged);
             }
+
             // else if (onHitWallPrefab)
             // {
             //     var hitRotation = Quaternion.LookRotation(-direction);
@@ -130,6 +131,11 @@ public static class HitscanUtils
         if (ownerType == EntityType.Player)
             //HACK to make player unable to shoot their feet lol
             raycastMask &= ~LayerMask.GetMask("Player");
+
+        if (ownerType == EntityType.Enemy)
+        {
+            raycastMask &= ~LayerMask.GetMask("EnemyRaycast");
+        }
 
         raycastMask &= ~LayerMask.GetMask("Ignore Raycast");
         return raycastMask;

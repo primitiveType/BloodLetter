@@ -13,6 +13,7 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     private readonly List<SecretArea> Secrets = new List<SecretArea>(); //clear this out between levels
     public PlayerEvents PlayerEvents { get; private set; }
     public Transform PlayerTransform { get; private set; }
+    public IPositionProvider PlayerBody { get; private set; }
     public Transform PlayerHeadTransform { get; private set; }
 
     public PlayerInventory PlayerInventory { get; private set; }
@@ -134,5 +135,10 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
     public void SetPlayerRoot(PlayerRoot playerRoot)
     {
         PlayerRoot = playerRoot;
+    }
+
+    public void SetPlayerBodyPosition(IPositionProvider positionProvider)
+    {
+        PlayerBody = positionProvider;
     }
 }

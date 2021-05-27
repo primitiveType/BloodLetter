@@ -26,7 +26,8 @@ public class WeaponSoundInfo : MonoBehaviour
 
     private void PlayerEventsOnOnWeaponsChangedEvent(object sender, OnEquippedWeaponChangedEventArgs args)
     {
-        Source.enabled = (args.NewValue & EquipStatus.WeaponId) != 0;
+        if (EquipStatus.WeaponId != WeaponId.Shotgun)
+            Source.enabled = (args.NewValue & EquipStatus.WeaponId) != 0;
     }
 
     public void OnShoot()

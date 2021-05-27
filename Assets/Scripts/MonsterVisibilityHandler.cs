@@ -12,7 +12,7 @@ public class MonsterVisibilityHandler : MonoBehaviour, IMonsterVisibilityHandler
     private bool m_CanSeePlayer;
     [SerializeField] private Transform m_monsterTransform;
     [SerializeField] private Transform m_EyesTransform;
-    private Transform Target { get; set; }
+    private IPositionProvider Target { get; set; }
 
     public Vector3? LastSeenPosition { get; set; }
     private TriggerSensor Sensor;
@@ -48,7 +48,7 @@ public class MonsterVisibilityHandler : MonoBehaviour, IMonsterVisibilityHandler
 
     private void Start()
     {
-        Target = Toolbox.Instance.PlayerHeadTransform;
+        Target = Toolbox.Instance.PlayerBody;
         TargetCollider = Toolbox.Instance.PlayerTransform;
         //MonsterTransform = transform;
     }
@@ -66,7 +66,7 @@ public class MonsterVisibilityHandler : MonoBehaviour, IMonsterVisibilityHandler
         {
             //might want to offset monster position so they can see over low walls, etc.
             var position = EyesTransform.position;
-            var ray = new Ray(position, Target.position - position);
+            var ray = new Ray(position, Target.GetPosition() - position);
             Debug.DrawRay(ray.origin, ray.direction, Color.red, 5f);
             
             if (Physics.Raycast(ray, out var hitInfo, 100,
@@ -101,7 +101,7 @@ public class MonsterVisibilityHandler : MonoBehaviour, IMonsterVisibilityHandler
 
         if (!ignoreDirection)
         {
-            var direction = (MonsterTransform.position - Target.position).normalized;
+            var direction = (MonsterTransform.position - Target.GetPosition()).normalized;
             // Debug.Log(direction);
             var angle = Vector3.Dot(direction, MonsterTransform.forward);
 

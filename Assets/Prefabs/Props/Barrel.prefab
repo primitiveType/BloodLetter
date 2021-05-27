@@ -279,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionPrefab: {fileID: 6962804858628054579, guid: 576d95cd40f225d4cb3bb3485e6941d5,
     type: 3}
+  LocalOffset: {x: 0, y: 0.5, z: 0}
 --- !u!114 &3978648304492631337
 MonoBehaviour:
   m_ObjectHideFlags: 0

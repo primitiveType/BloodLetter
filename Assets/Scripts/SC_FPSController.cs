@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class SC_FPSController : MonoBehaviour
+public class SC_FPSController : MonoBehaviour, IMovementHandler
 {
     [HideInInspector] public bool canMove = true;
 
@@ -20,7 +20,7 @@ public class SC_FPSController : MonoBehaviour
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
-        MyCollider = GetComponent<Collider>();
+        MyCollider = GetComponent<CapsuleCollider>();
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -74,30 +74,37 @@ public class SC_FPSController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(Bottom, OverlapRadius);
+        if (Application.isPlaying)
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireSphere(Bottom, OverlapRadius);
+        }
     }
 
     private Collider[] collisions = new Collider[2];
-    private Collider MyCollider { get; set; }
-    
+    private CapsuleCollider MyCollider { get; set; }
+
     private Vector3 Bottom
     {
         get
-        {            var bounds = MyCollider.bounds;
+        {
+            var bounds = MyCollider.bounds;
 
             return new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
         }
     }
 
-    private float OverlapRadius => 1f;
+    private float OverlapRadius => MyCollider.radius / 2f;
+
+    public void AddMovementModifier(MovementModifierHandle handle)
+    {
+        throw new NotImplementedException();
+    }
 
     public bool IsGrounded
     {
         get
         {
-            // Gizmos.color = Color.magenta;
-            // Gizmos.DrawWireSphere(bottom, radius);
             if (Physics.OverlapSphereNonAlloc(Bottom, OverlapRadius, collisions, LayerMask.GetMask("Default")) > 0)
                 return true;
 

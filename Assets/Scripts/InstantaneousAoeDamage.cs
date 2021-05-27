@@ -18,7 +18,7 @@ public class InstantaneousAoeDamage : InstantaneousAoe, IDamageSource
 
     protected override void OnHit(Collider collider, Vector3 direction, Vector3 position)
     {
-        var damaged = collider.GetComponentInChildren<IActorEvents>();
+            var damaged = collider.GetComponentInChildren<IActorEvents>();
 
         if (collider.attachedRigidbody)
         {

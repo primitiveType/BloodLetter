@@ -45,11 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75663a7118504bd4abfd96c7694d78d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 40
-  Duration: 0.1
-  Force: 1
-  Radius: 2
+  LayersToAffect:
+    serializedVersion: 2
+    m_Bits: 199936
+  Radius: 4
   ThroughWalls: 0
+  Duration: 0.1
+  DamageAmount: 40
+  Force: 1
 --- !u!135 &5460727409768576122
 SphereCollider:
   m_ObjectHideFlags: 0

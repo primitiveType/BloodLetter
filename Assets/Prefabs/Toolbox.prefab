@@ -972,8 +972,9 @@ MonoBehaviour:
   _saveData:
     _inventoryData:
       Ammo:
-        m_keys: 
-        m_values: []
+        m_keys: 00000000
+        m_values:
+        - 10
       EquippedWeapon: 130
       Weapons: 130
     _playerArmor: 11

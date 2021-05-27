@@ -15,10 +15,10 @@ public abstract class InstantaneousAoe : MonoBehaviour
     {
         startTime = Time.time;
         var position = transform.position;
-        var overlapObjects = Physics.OverlapSphere(position, Radius, LayersToAffect);
+        var overlapObjects = Physics.OverlapSphere(position, Radius, LayersToAffect, QueryTriggerInteraction.Collide);
         foreach (var collider in overlapObjects)
         {
-            TryHit(collider);
+            TryHit(collider);    
         }
     }
 

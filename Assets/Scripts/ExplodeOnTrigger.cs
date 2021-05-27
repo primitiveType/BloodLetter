@@ -4,6 +4,7 @@ public class ExplodeOnTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject ExplosionPrefab;
 
+    [SerializeField] private Vector3 LocalOffset = Vector3.up;
     // Start is called before the first frame update
     private void Start()
     {
@@ -17,6 +18,6 @@ public class ExplodeOnTrigger : MonoBehaviour
     public void OnTrigger()
     {
         var explosion = Instantiate(ExplosionPrefab, transform);
-        explosion.transform.localPosition = Vector3.zero;
+        explosion.transform.localPosition = LocalOffset;
     }
 }

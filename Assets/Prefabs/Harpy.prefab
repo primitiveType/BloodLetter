@@ -354,7 +354,7 @@ PrefabInstance:
     - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Data.AggroDelayVariance
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8533879305495763307, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

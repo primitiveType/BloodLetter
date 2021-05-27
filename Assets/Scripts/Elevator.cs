@@ -61,7 +61,7 @@ public class Elevator : MonoBehaviour, IInteractable
 
     protected virtual IEnumerator Move(Vector3 target)
     {
-        yield return new WaitForFixedUpdate();
+        yield return null;
 
         var start = ElevatorTransform.transform.position;
         // Vector3 start = transform.position;
@@ -72,18 +72,17 @@ public class Elevator : MonoBehaviour, IInteractable
         var approxTotalTime = distance / speed;
         while (t < 1f)
         {
-            yield return new WaitForFixedUpdate();
+            yield return null;
             var currentTarget = Vector3.Lerp(start, target, t);
-            // rb.velocity = targetVelocity;
-            rb.MovePosition(currentTarget);
-            t += Time.fixedDeltaTime /approxTotalTime ;
+            // rb.MovePosition(currentTarget);
+            ElevatorTransform.position = currentTarget;
+
+            t += Time.deltaTime / approxTotalTime;
         }
 
-        //elevator.transform.position = targetPosition;
-        rb.MovePosition(target);
-        rb.velocity = Vector3.zero;
-        
-        // rigidbody.position = targetPosition;
+        ElevatorTransform.position = target;
+        // rb.MovePosition(target);
+        // rb.velocity = Vector3.zero;
     }
 
     public void Trigger()
