@@ -21,1163 +21,813 @@ MonoBehaviour:
     m_Address: FAT_OGRE_LEGACY_attack3Forward_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 005eb260aa401a844a4bc6c6cea6add7
     m_Address: Arachnea_MagicAttack_01_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 008e11d45b140734ebf82541b63fcadd
     m_Address: Arachnea_Wounded_LightHit_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 0090c1015a016764e8f629c40fcacc2f
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 01f1fe69782cf13488b2e37b6dcddb5c
     m_Address: plasma projectile enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 03803b08e73c4d744bb9787eb45937d9
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 03dda61569a75f74e94661d006e3ff20
     m_Address: Arachnea_Idle_02_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 05f0cbc05986ca347be1bae891c7fe39
     m_Address: Arachnea_Idle_Up_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 07f7806f0b4623443917793aed0df498
     m_Address: Arachnea_Idle_Up_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 096facabc11e7024f9fcc5a03cfc9919
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 0a63f04e6276d8e40977f908b4836d1e
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 0c1bae891e2f42f44bcaa89e1b358c6d
     m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 0c71c9cffcf84a64391e813f10458ffd
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 0d41f67dbd5973941be050fc4cfd1e20
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 0e80695cf9bea344484541ea9d99c521
     m_Address: SK_Orb_01_GetHitBackNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 0ed74e072d1cfdd4b90f48237dde0cb9
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 10d92660f0116a04294c0c3a2c988294
     m_Address: Arachnea_Dance_NoWeapon_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 12086c1d670707f46b89bdb2318a7815
     m_Address: SK_Orb_01_GetHitFrontNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 13dd14441a479304dbcaeaf3d6ee1975
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 148f5b05d6ce9f844936110cd4eb9a52
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 1572397c4aa945846a36d2ee5a95bca6
     m_Address: Arachnea_Dance_NoWeapon_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 16d1ad94f5acbd7469119625c04c7b6e
     m_Address: SK_Orb_01_IdleFlyCombat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 177d5c1964a85c54eafb47b413d926dc
     m_Address: Arachnea_TPose_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 1781e72dbf7cf1a488cb46c7f220179b
     m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 17a14cbd9d49f624b9539a99396ed7d5
     m_Address: Ground Shake
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 18040e5fa6f244042bd4f4639abccf22
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 1f89fa8990101c04fa9f2cc7d8211cd8
     m_Address: SK_Orb_01_FlyNormalToFlyCombat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 2377889572cb7864b975fc3ced35ccd8
     m_Address: Arachnea_Dead_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 23acb916ee4ef7849bfdff8c9ec63ea8
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 24341baa5349a9d45b648ee1f38a79c5
     m_Address: Arachnea_MagicAttack_01_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 2723578686db3cd44af5b40f88fb3a40
     m_Address: plasma projectile
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 2854f5c7d8ba6a7478737825280fa806
     m_Address: Arachnea_Dance_NoWeapon_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 287c5e7a1f7006144a3dfc9b746606c4
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 28ecb86337361e2428a2d32e583a883a
     m_Address: Arachnea_GoDown_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 2b499e36408b2b147b25152584af73b6
     m_Address: Arachnea_Dead_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 2d5d24485c9ea084496ae7c5ba850fa6
     m_Address: SK_Orb_01_IdleFlyCombat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 2f51ebfcbed6b7b40a33dde0dd334954
     m_Address: SK_Orb_01_GetHitFrontCombat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 30821a43a41d1d74e85e9a42642c47dc
     m_Address: SK_Orb_01_GetHitLeftCombat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 32241b2f9a19344439854dbf0f3422fd
     m_Address: Arachnea_TPose_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3248ce10a7d79174781ed01f461b1f53
     m_Address: SK_Orb_01_GetHitLeftCombat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 32e48752d1703244aa29c5f7d8215ea5
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 32f8c2c106851d34386bd4277ffffacd
     m_Address: Arachnea_Idle_01_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 32facbbe74976d6459b421ff018549c4
     m_Address: Arachnea_Dead_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 32ff6f5ab219bef46b6bfc5081f04bb3
     m_Address: HARPY_breastsExposed_LEGACY_getHit1_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 333d57cf293d49f4083a1dc2ff764a23
     m_Address: SK_Orb_01_GetHitLeftCombat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 35798aa8bbab1124caa4a179d5bfc5bb
     m_Address: Arachnea_Attack_01_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 39862e820fb7ce940b1fd43f47286fd0
     m_Address: DARKNESS_SPIDER_LEGACY_TPose_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 39fdd2b881efef6489ad2336f1c8d307
     m_Address: DARKNESS_SPIDER_LEGACY_Bite_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3a3196e32ac19434b81ce82ae6ca3057
     m_Address: DARKNESS_SPIDER_LEGACY_TPose_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3add20fdbc229c6449a7fdb976cd5358
     m_Address: flesh projectile
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3bf5ffcb5921c9e4e8adf1a4f22ee1ed
     m_Address: SK_Orb_01_GetHitBackCombat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3d6129071573d6f49b09798542bf6333
     m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3dd57fa65a3a64f47ba0c4e5508d9f94
     m_Address: DARKNESS_SPIDER_LEGACY_Bite_Alpha_Array
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3e414dc5a80ada643ab3865a1d419e4c
     m_Address: Arachnea_Casting_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3f834d47ff256ff42b2d0d9e7ab796ab
     m_Address: Arachnea_Wounded_HeavyHit_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 424628953fb5ce343b7a1ea10fa93d34
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 42a0b5997e94bf443817d9e4c7a1782d
     m_Address: SK_Orb_01_GetHitFrontNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 42c0f805fb29d6940a7ff59489a954e5
     m_Address: SK_Orb_01_GetHitRightNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 44d8b3198b27dac4d9959d98d3b99276
     m_Address: FAT_OGRE_LEGACY_attack3Forward_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 45f1ab08cfcfa7c4da357e1abc66c159
     m_Address: Arachnea_Wounded_LightHit_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 48a9e378ba27272408356d759ab1151d
     m_Address: Arachnea_Walk_02_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 48c436b6e48a6d14bb89eb171c6de341
     m_Address: Plasma ProjectileInfo Enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 49bf118ee590b8d448ae3e952705f63a
     m_Address: SK_Orb_01_IdleFlyNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 4b86342d85948514b9e296fcf77e9ea4
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 4bdb9066d80bbe841a7f102c100602eb
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 4d0fe3e27b28be74fa82a6c8c8f5fa74
     m_Address: Arachnea_Wounded_HeavyHit_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 4e36469dcf20092448d57eede7c6cf1f
     m_Address: Arachnea_GoUp_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 5117c5b911dea9142bf60f939f1bfc03
     m_Address: SK_Orb_01_FlyNormalToFlyCombat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 547352913ccbad8459e3974931e5e187
     m_Address: Arachnea_Idle_01_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 54d2eac2cbe126a489150621d76fe552
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 56a7c905ea16a3d458257acd909f739e
     m_Address: FAT_OGRE_LEGACY_attack3Forward_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 572aa5fd09abfb84cb8c6be3d48d2248
     m_Address: Arachnea_Casting_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 57b601e61985bae41bef1554bce54145
     m_Address: SK_Orb_01_TPose_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 57da67db8e2ddf74c86c496317b5b1f0
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 5872cf6c18479c14b8c6f7fffd25ab1a
     m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 5b63428739c78ee41a6cf888521120a9
     m_Address: Sweep Projectile
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 5c6312dd887143e42878eb3df15af238
     m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 5dbfb5146ac664341b423290e7bf8e69
     m_Address: Arachnea_Wounded_LightHit_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 62b53385983b733448045a2bea36775e
     m_Address: SK_Orb_01_GetHitLeftNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 632bd8d9af364084083e78224351cf5e
     m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 64ed4158919fb37418b856e8af010f43
     m_Address: SK_Orb_01_IdleFlyCombatToFlyNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 656ebd5aa57bd3f42b78dbcc658a8fe4
     m_Address: SK_Orb_01_GetHitRightNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 66b2782e4ec2cea4cbb1f36cb53e4a53
     m_Address: DARKNESS_SPIDER_LEGACY_Bite_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 66ee0deb0803d024ebab244b25751ca7
     m_Address: SK_Orb_01_FlyNormalToFlyCombat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 6914d17403f30c94dacc1832892b8445
     m_Address: DARKNESS_SPIDER_LEGACY_idleNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 6a118f79ccdda464f998e3d69f090ae7
     m_Address: SK_Orb_01_GetHitBackNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 6bc77dd99ae3c2142bce5a0909b2b56e
     m_Address: Arachnea_GoUp_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 6f84061986a9bde46a7f3935c170b69a
     m_Address: SK_Orb_01_IdleFlyCombatToFlyNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7368ab6906b103f4190fa08c016a21ea
     m_Address: Arachnea_Idle_Up_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7826c81c30af5654da997284c88c96d4
     m_Address: Assets/LevelSelect.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7881cae7e9f9bd349976f790a47eee7b
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7921f4f65329010438626e7d35314de0
     m_Address: SK_Orb_01_GetHitLeftNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 798245e8a028c164b8efb776ff2cef61
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 79b990c8c1a0ed440a972d63525ed68e
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7c9bbf8e1766db84786cdd94acf7d66a
     m_Address: lair
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7d49a6ab8808b3f4dbada089cae73bcc
     m_Address: Arachnea_GoUp_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7d52e4ba7aa88ba4ab8996e260c44b7b
     m_Address: SK_Orb_01_GetHitRightCombat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7e58d9895b170424ab07b3b33af0c59e
     m_Address: SK_Orb_01_TPose_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 80dcf246e9a933443bf4c65a5727f0c7
     m_Address: Arachnea_TPose_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 82eb06e41fa1b82448a59d17ba130e87
     m_Address: Arachnea_Idle_02_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 82ed12a31f5817e4a84603bfba0525b2
     m_Address: Arachnea_Idle_02_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 84c94328579f81f4cb3be7667ca03e89
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 84cc2c879f3e71141808af2fc54234f9
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThreat_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 850a5152cde79134fb2897926d99438f
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 8734ecf2cfca47f4abbe4944ba029cb3
     m_Address: SK_Orb_01_IdleFlyNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 889d3813d844bde4daca1ea45b103845
     m_Address: Arachnea_Idle_01_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 88fddc2db5efe0d43bc21195d7ba7ff9
     m_Address: Assets/Prefabs/Projectiles/Flesh bomb explosion.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 894d597c451bc2148914be515d63fe09
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 89504678acbad264c856eff157f21473
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 89c115afdced002429d74b8f2d1d352d
     m_Address: HARPY_breastsExposed_LEGACY_getHit1_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 8a4a1f3a23030654ab851efc2b908476
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 8d86e92ced4cb214fa9ae74e799ca903
     m_Address: SK_Orb_01_IdleFlyNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 8f40b0a5dd49b0446803e4e72069a46a
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 909d5fa3edc230b4abaa599a798a254e
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 95d6e199dae4b2d4daa39adb08b285e1
     m_Address: Arachnea_Casting_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 986665f4806456f4ca02ec5501875745
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 9a83a16fbde6a7a4e9081ac29c9fa840
     m_Address: Arachnea_Walk_01_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 9b1c45769610ff744b61518644348a13
     m_Address: HARPY_breastsExposed_LEGACY_getHit1_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 9cbe9b3b1a9eff148b1a5500d9e01ec5
     m_Address: Shotgun Pellet Info
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 9d56f991d263f38469d4d6f5e35751b1
     m_Address: DARKNESS_SPIDER_LEGACY_deathNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 9fb4b3f24ad4ebd4cb51ce03ca158a28
     m_Address: Melee Projectile Info 10
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a1121e6a8ce9d024486183ff9f01a668
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a151a8f399131db479b46bf9a29cb568
     m_Address: SK_Orb_01_GetHitRightCombat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a281f5b4f309ec649bbac4fa2978c52b
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a2b620b80de8f78489e91025f71106cc
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a54422fda5997ed49959cd97e9b5d9d1
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a5e9096fc588d264f938af26271f2b8e
     m_Address: SK_Orb_01_GetHitFrontNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a5f5b175a155bb24e86a60a81a95f573
     m_Address: SK_Orb_01_GetHitBackCombat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: abbfa32d04c4c5740a44bd6337c00672
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: ac0b0ea8488534d439e1d058b043df47
     m_Address: SK_Orb_01_IdleFlyCombatToFlyNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: adf3af3b211404c4fa0c616a1dc37a6a
     m_Address: ruins of the necromancer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: af29024315afd8e4596cb2d9d04c00d5
     m_Address: DARKNESS_SPIDER_LEGACY_idleNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: b1d0f9369db24804494067dd83cdb06d
     m_Address: Arachnea_Wounded_HeavyHit_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: b31c307a0a814674dbc2a968fe71ec65
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: b93c6601fcf5d8a44bdaf480caa80d14
     m_Address: Arachnea_GoDown_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: b98b97311dd8ad14f9290f0ba742691b
     m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: bbdf4da9597af074b987e9e83a51ce4f
     m_Address: SK_Orb_01_GetHitRightCombat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: bbf5fca62613d7744b32048043bb4ed3
     m_Address: Arachnea_MagicAttack_01_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: be8ad2997758e7744b8435e54a85f9d1
     m_Address: SK_Orb_01_GetHitBackCombat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: bfb1a741ded39bd4bb4ad2b7091e7e4b
     m_Address: DARKNESS_SPIDER_LEGACY_deathThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: c2c577624f1d9a94a9238efab65bed9c
     m_Address: Flesh Bomb ProjectileInfo
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: c2eaf7d32a3391b43a441a73e9e789a6
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: c5e44cd3d43b6924f9a5c4a60c46a453
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: ca2a2ef4900a0114098751d29a3d8a30
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: cb0b80adcaf484f4c92e0b35a6884747
     m_Address: spider egg projectile
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: ccf3bb2280f96e94d9661537963262a8
     m_Address: SK_Orb_01_GetHitRightNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: cda3f49cae1624c438a115863f5c1359
     m_Address: DARKNESS_SPIDER_LEGACY_Bite3HitCombo_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: d0ebdd291b162e14c940fe6e6d04188a
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: d10c1408a14d3cf4a8d54767427b4a27
     m_Address: Arachnea_Walk_01_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: d179a0bc3d977a144843abb0dd0c4460
     m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: d4f36c0397e0e6d4f85c6ac566af9461
     m_Address: SK_Orb_01_TPose_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: d8debea17b2e75242a054bfea5aa7348
     m_Address: SK_Orb_01_GetHitBackNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: d8fe7a2a2ec2c6748b6cb537514504d3
     m_Address: Arachnea_Walk_02_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: db22d37298ee2e64a8597888c3cd73b5
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: db4d6fab1e693834e92401fc77ebb01d
     m_Address: Arachnea_Attack_01_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: dc3300e7e7d7b134f95b82917c2f69f3
     m_Address: SK_Orb_01_GetHitLeftNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: dead39c8500af2f4d877bf318137699f
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: deec50cdf95acac46b93612ea76bd419
     m_Address: Arachnea_Walk_02_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: e485ae901b3d4e841a6db61e57ebbc28
     m_Address: Spider web projectile multiple
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: e6020e7bb0d44354e98258e5a6b2e5d9
-    m_Address: wind projectile.prefab
+    m_Address: wind projectile
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: e62d3c47438405b40bfa977becc96859
     m_Address: DARKNESS_SPIDER_LEGACY_TPose_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: e7546e596c6d3c54d90e5ad37871b7ed
     m_Address: Arachnea_GoDown_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: e8e2fda2e06e79b4a94d31a584a5a4a1
     m_Address: Arachnea_Walk_01_Normal
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: eb21ff9b379bf894898160eac18a9142
     m_Address: DARKNESS_SPIDER_LEGACY_crawlNormal_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: ec08685b38f38944a9758534c49de70d
     m_Address: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: ec2379cc085701140ac01b3d74ac311a
     m_Address: DARKNESS_SPIDER_LEGACY_idleNormal_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: ec77297b2408fc64e910bc3c0e96300e
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: f44b7a1a40e70d54cb0390f6a34c1d94
     m_Address: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: f4eb6f08cce7f5547861f63ef3c5f048
     m_Address: SK_Orb_01_GetHitFrontCombat_FrameBuffer
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: f6a9c0f07d9c7b44eab3d2110a69b89e
     m_Address: SK_Orb_01_GetHitFrontCombat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: f8f38d6c84e9ba34d8468004232a6404
     m_Address: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: fd067b996cb19f44da1b49afe29e76a4
     m_Address: DARKNESS_SPIDER_LEGACY_idleThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: fdc145f16cee4ec4dad95da1c4995fb5
     m_Address: Arachnea_Attack_01_Alpha
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: fe42811d9ecbe9d4ca65e622e9138ad6
     m_Address: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_Normal
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: fed50dd1584de1a4ca2de35e0523e939
     m_Address: SK_Orb_01_IdleFlyCombat_Alpha
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 64f49dbb5e1a8914eab3a9426351e51c, type: 2}
   m_SchemaSet:

@@ -11,7 +11,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     [SerializeField] private float MaxRotationSpeed = 1f;
 
     [SerializeField] private float TargetingVariance = 10;
-    
+
     [FormerlySerializedAs("myTransform")] [SerializeField]
     private Transform myEyes;
 
@@ -24,7 +24,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
     public Vector3 TargetPosition { get; private set; }
 
     public bool IsGrounded => ActorRoot.Health.IsAlive;
-    
+
     public float MaxSpeed
     {
         get => _maxSpeed;
@@ -57,19 +57,21 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         myEyes = transform;
         ActorRoot = GetComponentInParent<ActorRoot>();
     }
+
     private void Awake()
     {
         Seed = GetInstanceID();
     }
 
     private int Seed { get; set; }
-    
+
     private Vector3 GetDestination(Vector3 targetPosition)
     {
-        float xOffset = (.5f - Mathf.PerlinNoise(Time.time,Seed)) * TargetingVariance;
+        float xOffset = (.5f - Mathf.PerlinNoise(Time.time, Seed)) * TargetingVariance;
         float zOffset = (.5f - Mathf.PerlinNoise(Seed, Time.time)) * TargetingVariance;
         return new Vector3(xOffset, 0, zOffset) + targetPosition;
     }
+
     private void FixedUpdate()
     {
         if (!ActorRoot.VisibilityHandler.LastSeenPosition.HasValue) return;
@@ -83,7 +85,9 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         var lookDest = ActorRoot.VisibilityHandler.LastSeenPosition.Value;
         if (AimForBreakDistance && currentlyHasVision)
         {
-            var offset = (prevLocation - ActorRoot.VisibilityHandler.LastSeenPosition.Value).normalized * BreakDistance;
+            Vector3 difference = (prevLocation - ActorRoot.VisibilityHandler.LastSeenPosition.Value);
+            var offset =
+                new Vector3(difference.x, 0, difference.z).normalized * BreakDistance;
             dest = offset + ActorRoot.VisibilityHandler.LastSeenPosition.Value;
         }
         else
@@ -92,7 +96,7 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         }
 
         TargetPosition = GetDestination(dest);
-     
+
         HandleRotation(lookDest);
         HandleVelocity(TargetPosition);
     }
@@ -103,6 +107,8 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
 
         if (currentlyHasVision && Vector3.Distance(myEyes.position, dest) <= BreakDistance)
         {
+            TrySetVelocity(Vector3.zero);
+
             return;
             TrySetVelocity(Vector3.up);
         }
@@ -146,6 +152,4 @@ public class FlyingNavigation : MonoBehaviour, INavigationAgent
         rigidBodyTransform.forward = forward;
         //    myTransform.rotation = Quaternion.Euler(0, myTransform.rotation.y, 0 );//HACK
     }
-
-
 }

@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler
 {
-    [SerializeField] private FirstPersonCharacterController m_Controller;
+    [SerializeField] private SC_FPSController m_Controller;
 
     // private BaseFirstPersonController Controller => m_Controller;
-    private FirstPersonCharacterController Controller => m_Controller;
+    private SC_FPSController Controller => m_Controller;
 
     private float BaseSpeed => m_BaseSpeed;
 
@@ -17,7 +17,7 @@ public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler
 
     List<MovementModifierHandle> Modifiers = new List<MovementModifierHandle>();
 
-    public bool IsGrounded => Controller.Grounded;
+    public bool IsGrounded => Controller.IsGrounded;
     
     private void Awake()
     {

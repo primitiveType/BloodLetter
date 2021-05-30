@@ -56,7 +56,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Attacks.Array.data[0]
       value: 
-      objectReference: {fileID: 3999468812405218162, guid: 812e039bb637d214290566a460a2aaa8,
+      objectReference: {fileID: 6021664901384103542, guid: e6020e7bb0d44354e98258e5a6b2e5d9,
         type: 3}
     - target: {fileID: 3929751026080770742, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
@@ -318,6 +318,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
+      propertyPath: m_Data.Attacks.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
       propertyPath: m_EnemyName
       value: Harpy
       objectReference: {fileID: 0}
@@ -339,22 +344,32 @@ PrefabInstance:
     - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Data.MoveSpeed
-      value: 4
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Data.Acceleration
-      value: 1000
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Data.StoppingDistance
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Data.AggroDelayVariance
-      value: 0
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Attacks.Array.data[0]
+      value: wind projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268886826098721658, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: m_Data.Attacks.Array.data[1]
+      value: Melee Projectile Info 10
       objectReference: {fileID: 0}
     - target: {fileID: 8533879305495763307, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}

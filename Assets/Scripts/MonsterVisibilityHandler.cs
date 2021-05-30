@@ -91,6 +91,7 @@ public class MonsterVisibilityHandler : MonoBehaviour, IMonsterVisibilityHandler
         if (Sensor.DetectedObjects.Contains(TargetCollider.gameObject))
         {
             m_CanSeePlayer = true;
+            LastSeenPosition = TargetCollider.position;
             return true;
         }
         else

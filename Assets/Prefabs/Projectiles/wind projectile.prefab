@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MinRange: 10
   m_Range: 100
-  type: 0
+  type: 1
   m_Force: 0
   parentProjectileToBarrel: 0
   ProjectilePrefab: {fileID: 5479396050471731650}

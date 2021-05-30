@@ -60,7 +60,7 @@ public class FlyingSteeringComponent : MonoBehaviour
                 count++;
             }
 
-        if (count == 0) return target; //errrrrr
+        if (count == 0) return (target - myTransform.position).normalized; //errrrrr
 
         avgVector /= count;
         Debug.DrawRay(myTransform.position, avgVector, Color.magenta);
