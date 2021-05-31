@@ -36,6 +36,6 @@ public class UsesAmmoOnAllEnemies : MonoBehaviour, IShootCondition
 
     public bool CanShoot()
     {
-        return HasAmmo();
+        return HasAmmo() && !Toolbox.Instance.IsPlayerDead;
     }
 }

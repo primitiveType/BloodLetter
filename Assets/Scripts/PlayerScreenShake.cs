@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerScreenShake : MonoBehaviour
 {
@@ -14,12 +13,19 @@ public class PlayerScreenShake : MonoBehaviour
         Events.PlayerShootEvent += OnPlayerShoot;
         Events.OnShotEvent += OnPlayerShot;
         Events.OnHealthChangedEvent += OnPlayerHealthChanged;
+        Events.OnDeathEvent += OnPlayerDeath;
+    }
+
+    private void OnPlayerDeath(object sender, OnDeathEventArgs args)
+    {
+        enabled = false;
+        Shaker.ResetTrauma();
     }
 
     private void OnPlayerHealthChanged(object sender, OnHealthChangedEventArgs args)
     {
         float damageToMaxTrauma = 20;
-        if (!args.IsHealing)
+        if (!args.IsHealing && !Toolbox.Instance.IsPlayerDead)
         {
             Shaker.AddTrauma(args.Amount / damageToMaxTrauma);
         }
@@ -36,16 +42,15 @@ public class PlayerScreenShake : MonoBehaviour
     {
         var force = args.Info.Force / 2000f;
         var yzMultiplier = .5f;
-        Shaker.AddTrauma(new Vector3(force, force*yzMultiplier, force*yzMultiplier));
+        Shaker.AddTrauma(new Vector3(force, force * yzMultiplier, force * yzMultiplier));
     }
 
     private void OnPlayerShot(object sender, OnShotEventArgs args)
     {
-        Shaker.AddTrauma(args.ProjectileInfo.Force / 1000f);
+        if (!Toolbox.Instance.IsPlayerDead)
+        {
+            Shaker.AddTrauma(args.ProjectileInfo.Force / 1000f);
+        }
     }
-
-    private void OnScreenShakeSettingsChanged(float maxAngle)
-    {
-        // Shaker.MaxAngle = maxAngle;
-    }
+    
 }

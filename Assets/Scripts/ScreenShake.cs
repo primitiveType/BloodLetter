@@ -17,6 +17,11 @@ public class ScreenShake : MonoBehaviour
             Mathf.Clamp01(trauma.z + Trauma.z));
     }
 
+    public void ResetTrauma()
+    {
+        Trauma = new Vector3();
+    }
+
     public void AddTrauma(float trauma)
     {
         Trauma = new Vector3(Mathf.Clamp01(trauma + Trauma.x), Mathf.Clamp01(trauma + Trauma.y),

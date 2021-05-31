@@ -13,7 +13,7 @@ public class ElevatorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer ==LayerMask.NameToLayer("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && !other.isTrigger)
             m_Elevator.Trigger();
     }
 }

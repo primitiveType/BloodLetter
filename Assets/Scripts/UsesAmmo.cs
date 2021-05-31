@@ -32,7 +32,7 @@ public class UsesAmmo : MonoBehaviour, IShootCondition
 
     public bool CanShoot()
     {
-        return HasAmmo();
+        return HasAmmo() && !Toolbox.Instance.IsPlayerDead;
     }
 }
 

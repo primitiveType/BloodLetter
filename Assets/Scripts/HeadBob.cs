@@ -18,6 +18,13 @@ public class HeadBob : MonoBehaviour
         Transform = transform;
 
         defaultPosY = Transform.localPosition.y;
+       Toolbox.Instance.PlayerEvents.OnDeathEvent += OnPlayerDeath;
+    }
+
+    private void OnPlayerDeath(object sender, OnDeathEventArgs args)
+    {
+        Transform.localPosition = new Vector3(); 
+        enabled = false;
     }
 
     // Update is called once per frame

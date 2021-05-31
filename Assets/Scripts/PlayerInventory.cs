@@ -43,7 +43,14 @@ public class PlayerInventory : MonoBehaviour
 
     private void InstanceOnLevelEnd(object sender, LevelEndEventArgs args)
     {
-        if (args.Success) SaveState.Instance.SaveData.InventoryData = InventoryData;
+        if (args.Success)
+        {
+            SaveState.Instance.SaveData.InventoryData = InventoryData;
+            if(!SaveState.Instance.SaveData.BeatenLevels.Contains(args.LevelName))
+            {
+                SaveState.Instance.SaveData.BeatenLevels.Add(args.LevelName);
+            }
+        }
     }
 
     private void OnDestroy()

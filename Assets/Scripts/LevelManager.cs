@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         // }
 
         Timer.Instance.PauseTimer();
-        LevelEnd?.Invoke(this, new LevelEndEventArgs(success));
+        LevelEnd?.Invoke(this, new LevelEndEventArgs(success, SceneManager.GetActiveScene().name));
         IntroloopPlayer.Instance.Stop();
         SceneManager.LoadScene("LevelEnd");
     }

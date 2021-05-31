@@ -230,6 +230,11 @@ PrefabInstance:
       propertyPath: aggroClips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 9921fc10b263c654da63a35a2f2b0a7e, type: 3}
+    - target: {fileID: 6726504917568226269, guid: eea32565a61265b468d20f6c14e5a122,
+        type: 3}
+      propertyPath: TargetingVariance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7446850650176560738, guid: eea32565a61265b468d20f6c14e5a122,
         type: 3}
       propertyPath: m_Mesh
