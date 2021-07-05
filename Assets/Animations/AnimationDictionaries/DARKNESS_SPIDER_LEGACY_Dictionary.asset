@@ -13,187 +13,118 @@ MonoBehaviour:
   m_Name: DARKNESS_SPIDER_LEGACY_Dictionary
   m_EditorClassIdentifier: 
   PropertyBlocksByModelAnimation:
-  - rows: 1
+  - animationName: DARKNESS_SPIDER_LEGACY_TPose
     columns: 1
-    animationName: DARKNESS_SPIDER_LEGACY_TPose
-    numFrames: 1
-    normalMap: {fileID: 18700000, guid: 39862e820fb7ce940b1fd43f47286fd0, type: 2}
-    diffuseMap: {fileID: 18700000, guid: e62d3c47438405b40bfa977becc96859, type: 2}
-    alphaMap: {fileID: 18700000, guid: 3a3196e32ac19434b81ce82ae6ca3057, type: 2}
     normalizedGroundPosition: 0.025778346
-  - rows: 2
+    numFrames: 1
+    rows: 1
+  - animationName: DARKNESS_SPIDER_LEGACY_Bite
     columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_Bite
-    numFrames: 5
-    normalMap: {fileID: 18700000, guid: 66b2782e4ec2cea4cbb1f36cb53e4a53, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 39fdd2b881efef6489ad2336f1c8d307, type: 2}
-    alphaMap: {fileID: 18700000, guid: 3dd57fa65a3a64f47ba0c4e5508d9f94, type: 2}
     normalizedGroundPosition: 0.024654606
-  - rows: 3
+    numFrames: 5
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_Bite3HitCombo
     columns: 5
-    animationName: DARKNESS_SPIDER_LEGACY_Bite3HitCombo
-    numFrames: 13
-    normalMap: {fileID: 18700000, guid: 1781e72dbf7cf1a488cb46c7f220179b, type: 2}
-    diffuseMap: {fileID: 18700000, guid: cda3f49cae1624c438a115863f5c1359, type: 2}
-    alphaMap: {fileID: 18700000, guid: 5c6312dd887143e42878eb3df15af238, type: 2}
     normalizedGroundPosition: 0.025324343
-  - rows: 2
+    numFrames: 13
+    rows: 3
+  - animationName: DARKNESS_SPIDER_LEGACY_crawlBiteThreat
     columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_crawlBiteThreat
-    numFrames: 5
-    normalMap: {fileID: 18700000, guid: ec77297b2408fc64e910bc3c0e96300e, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 850a5152cde79134fb2897926d99438f, type: 2}
-    alphaMap: {fileID: 18700000, guid: a54422fda5997ed49959cd97e9b5d9d1, type: 2}
     normalizedGroundPosition: 0.026370632
-  - rows: 2
-    columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: 54d2eac2cbe126a489150621d76fe552, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 4bdb9066d80bbe841a7f102c100602eb, type: 2}
-    alphaMap: {fileID: 18700000, guid: f8f38d6c84e9ba34d8468004232a6404, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_crawlBiteThreat_RM
+    columns: 3
     normalizedGroundPosition: 0.026370592
-  - rows: 2
-    columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_crawlNormal
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: c5e44cd3d43b6924f9a5c4a60c46a453, type: 2}
-    diffuseMap: {fileID: 18700000, guid: a2b620b80de8f78489e91025f71106cc, type: 2}
-    alphaMap: {fileID: 18700000, guid: 0090c1015a016764e8f629c40fcacc2f, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_crawlNormal
+    columns: 3
     normalizedGroundPosition: 0.034096923
-  - rows: 2
-    columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_crawlNormal_RM
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: 148f5b05d6ce9f844936110cd4eb9a52, type: 2}
-    diffuseMap: {fileID: 18700000, guid: abbfa32d04c4c5740a44bd6337c00672, type: 2}
-    alphaMap: {fileID: 18700000, guid: eb21ff9b379bf894898160eac18a9142, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_crawlNormal_RM
+    columns: 3
     normalizedGroundPosition: 0.034096908
-  - rows: 2
-    columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_crawlThreat
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: 18040e5fa6f244042bd4f4639abccf22, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 0ed74e072d1cfdd4b90f48237dde0cb9, type: 2}
-    alphaMap: {fileID: 18700000, guid: 03803b08e73c4d744bb9787eb45937d9, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_crawlThreat
+    columns: 3
     normalizedGroundPosition: 0.02605601
-  - rows: 2
-    columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_crawlThreat_RM
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: 096facabc11e7024f9fcc5a03cfc9919, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 84cc2c879f3e71141808af2fc54234f9, type: 2}
-    alphaMap: {fileID: 18700000, guid: 57da67db8e2ddf74c86c496317b5b1f0, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_crawlThreat_RM
+    columns: 3
     normalizedGroundPosition: 0.026056025
-  - rows: 2
-    columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat
     numFrames: 5
-    normalMap: {fileID: 18700000, guid: fe42811d9ecbe9d4ca65e622e9138ad6, type: 2}
-    diffuseMap: {fileID: 18700000, guid: ca2a2ef4900a0114098751d29a3d8a30, type: 2}
-    alphaMap: {fileID: 18700000, guid: db22d37298ee2e64a8597888c3cd73b5, type: 2}
-    normalizedGroundPosition: 0.026547048
-  - rows: 2
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat
     columns: 3
-    animationName: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM
-    numFrames: 5
-    normalMap: {fileID: 18700000, guid: dead39c8500af2f4d877bf318137699f, type: 2}
-    diffuseMap: {fileID: 18700000, guid: d0ebdd291b162e14c940fe6e6d04188a, type: 2}
-    alphaMap: {fileID: 18700000, guid: 13dd14441a479304dbcaeaf3d6ee1975, type: 2}
     normalizedGroundPosition: 0.026547048
-  - rows: 3
+    numFrames: 5
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_crawlThrowSpiderWebThreat_RM
+    columns: 3
+    normalizedGroundPosition: 0.026547048
+    numFrames: 5
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_deathNormal
     columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_deathNormal
-    numFrames: 12
-    normalMap: {fileID: 18700000, guid: 0c1bae891e2f42f44bcaa89e1b358c6d, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 9d56f991d263f38469d4d6f5e35751b1, type: 2}
-    alphaMap: {fileID: 18700000, guid: 632bd8d9af364084083e78224351cf5e, type: 2}
     normalizedGroundPosition: 0.05819486
-  - rows: 3
-    columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_deathThreat
     numFrames: 12
-    normalMap: {fileID: 18700000, guid: 5872cf6c18479c14b8c6f7fffd25ab1a, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 3d6129071573d6f49b09798542bf6333, type: 2}
-    alphaMap: {fileID: 18700000, guid: bfb1a741ded39bd4bb4ad2b7091e7e4b, type: 2}
-    normalizedGroundPosition: 0.040121276
-  - rows: 4
+    rows: 3
+  - animationName: DARKNESS_SPIDER_LEGACY_deathThreat
     columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal
-    numFrames: 16
-    normalMap: {fileID: 18700000, guid: ec08685b38f38944a9758534c49de70d, type: 2}
-    diffuseMap: {fileID: 18700000, guid: a1121e6a8ce9d024486183ff9f01a668, type: 2}
-    alphaMap: {fileID: 18700000, guid: 8f40b0a5dd49b0446803e4e72069a46a, type: 2}
+    normalizedGroundPosition: 0.45
+    numFrames: 12
+    rows: 3
+  - animationName: DARKNESS_SPIDER_LEGACY_idleLookAroundNormal
+    columns: 4
     normalizedGroundPosition: 0.07002921
-  - rows: 4
-    columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat
     numFrames: 16
-    normalMap: {fileID: 18700000, guid: 0d41f67dbd5973941be050fc4cfd1e20, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 986665f4806456f4ca02ec5501875745, type: 2}
-    alphaMap: {fileID: 18700000, guid: 4b86342d85948514b9e296fcf77e9ea4, type: 2}
+    rows: 4
+  - animationName: DARKNESS_SPIDER_LEGACY_idleLookAroundThreat
+    columns: 4
     normalizedGroundPosition: 0.024348985
-  - rows: 4
-    columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_idleNormal
     numFrames: 16
-    normalMap: {fileID: 18700000, guid: 6914d17403f30c94dacc1832892b8445, type: 2}
-    diffuseMap: {fileID: 18700000, guid: ec2379cc085701140ac01b3d74ac311a, type: 2}
-    alphaMap: {fileID: 18700000, guid: af29024315afd8e4596cb2d9d04c00d5, type: 2}
+    rows: 4
+  - animationName: DARKNESS_SPIDER_LEGACY_idleNormal
+    columns: 4
     normalizedGroundPosition: 0.035042804
-  - rows: 4
-    columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_idleThreat
     numFrames: 16
-    normalMap: {fileID: 18700000, guid: fd067b996cb19f44da1b49afe29e76a4, type: 2}
-    diffuseMap: {fileID: 18700000, guid: d179a0bc3d977a144843abb0dd0c4460, type: 2}
-    alphaMap: {fileID: 18700000, guid: b98b97311dd8ad14f9290f0ba742691b, type: 2}
+    rows: 4
+  - animationName: DARKNESS_SPIDER_LEGACY_idleThreat
+    columns: 4
     normalizedGroundPosition: 0.024362013
-  - rows: 2
+    numFrames: 16
+    rows: 4
+  - animationName: DARKNESS_SPIDER_LEGACY_jumpBiteNormal
     columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_jumpBiteNormal
-    numFrames: 7
-    normalMap: {fileID: 18700000, guid: a281f5b4f309ec649bbac4fa2978c52b, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 23acb916ee4ef7849bfdff8c9ec63ea8, type: 2}
-    alphaMap: {fileID: 18700000, guid: 287c5e7a1f7006144a3dfc9b746606c4, type: 2}
     normalizedGroundPosition: 0.02592416
-  - rows: 2
-    columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM
     numFrames: 7
-    normalMap: {fileID: 18700000, guid: 424628953fb5ce343b7a1ea10fa93d34, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 84c94328579f81f4cb3be7667ca03e89, type: 2}
-    alphaMap: {fileID: 18700000, guid: 89504678acbad264c856eff157f21473, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_jumpBiteNormal_RM
+    columns: 4
     normalizedGroundPosition: 0.02592415
-  - rows: 2
-    columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_jumpBiteThreat
     numFrames: 7
-    normalMap: {fileID: 18700000, guid: b31c307a0a814674dbc2a968fe71ec65, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 909d5fa3edc230b4abaa599a798a254e, type: 2}
-    alphaMap: {fileID: 18700000, guid: c2eaf7d32a3391b43a441a73e9e789a6, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_jumpBiteThreat
+    columns: 4
     normalizedGroundPosition: 0.1106887
-  - rows: 2
-    columns: 4
-    animationName: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM
     numFrames: 7
-    normalMap: {fileID: 18700000, guid: 894d597c451bc2148914be515d63fe09, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 0a63f04e6276d8e40977f908b4836d1e, type: 2}
-    alphaMap: {fileID: 18700000, guid: 79b990c8c1a0ed440a972d63525ed68e, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_RM
+    columns: 4
     normalizedGroundPosition: 0.11069055
-  - rows: 2
+    numFrames: 7
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal
     columns: 2
-    animationName: DARKNESS_SPIDER_LEGACY_throwSpiderWebNormal
-    numFrames: 4
-    normalMap: {fileID: 18700000, guid: 798245e8a028c164b8efb776ff2cef61, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 0c71c9cffcf84a64391e813f10458ffd, type: 2}
-    alphaMap: {fileID: 18700000, guid: f44b7a1a40e70d54cb0390f6a34c1d94, type: 2}
     normalizedGroundPosition: 0.02333986
-  - rows: 2
-    columns: 2
-    animationName: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat
     numFrames: 4
-    normalMap: {fileID: 18700000, guid: 7881cae7e9f9bd349976f790a47eee7b, type: 2}
-    diffuseMap: {fileID: 18700000, guid: 32e48752d1703244aa29c5f7d8215ea5, type: 2}
-    alphaMap: {fileID: 18700000, guid: 8a4a1f3a23030654ab851efc2b908476, type: 2}
+    rows: 2
+  - animationName: DARKNESS_SPIDER_LEGACY_throwSpiderWebThreat
+    columns: 2
     normalizedGroundPosition: 0.024356058
+    numFrames: 4
+    rows: 2

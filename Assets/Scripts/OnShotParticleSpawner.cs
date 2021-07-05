@@ -1,18 +1,35 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.Rendering.UI;
+﻿using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class OnShotParticleSpawner : MonoBehaviour
 {
     [SerializeField] private ActorEvents Events;
-    [SerializeField] private GameObject OnHitPrefab;
+
+    [FormerlySerializedAs("OnHitPrefab")] [SerializeField]
+    private GameObject m_OnHitPrefab;
+
+    public GameObject OnHitPrefab
+    {
+        get
+        {
+            if (Override != null && Override.ShouldOverride)
+            {
+                return Override.Prefab;
+            }
+
+            return m_OnHitPrefab;
+        }
+    }
 
     private int numToSpawn = 2;
+
+    private IParticleSpawnOverride Override;
 
     private void Start()
     {
         Events.OnShotEvent += OnShot;
+        Override = GetComponent<IParticleSpawnOverride>();
     }
 
     private float Variance = .75f;

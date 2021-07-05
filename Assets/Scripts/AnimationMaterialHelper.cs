@@ -29,6 +29,8 @@ public class AnimationMaterialHelper : MonoBehaviour
     private bool[] cachedAlphaPixelsDirty = new bool[8];
 
     private MaterialPropertyBlock cachedPropertyBlock;
+    
+    public Vector3 ScaleMultiplier { get; set; } = Vector3.one;
 
 
     // [SerializeField] private string ModelName;
@@ -144,7 +146,7 @@ public class AnimationMaterialHelper : MonoBehaviour
                              height * block.GetFloat(AnimationMaterialPropertyBlock.GroundPositionProperty);
                 if (resize)
                     anchorTransform.localScale =
-                        new Vector3(width, height, 1);
+                        new Vector3(width * ScaleMultiplier.x, height*ScaleMultiplier.y, 1*ScaleMultiplier.z);
 
                 if (reposition)
                 {
@@ -187,7 +189,7 @@ public class AnimationMaterialHelper : MonoBehaviour
             Mathf.Clamp(cachedPropertyBlock.GetInt(Perspective), 0,
                 7); //it's actually possible to get back 8 from this which is invalid.
         Profiler.BeginSample("Get pixels");
-        if (cachedAlphaPixelsDirty[perspective])
+        if (cachedAlphaPixelsDirty[perspective] && cachedAlpha)
         {//should we consider just storing them forever instead of dirtying the array
             cachedAlphaPixels[perspective] = cachedAlpha.GetPixels(perspective);
             cachedAlphaPixelsDirty[perspective] = false;

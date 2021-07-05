@@ -21,134 +21,69 @@ MonoBehaviour:
     m_Address: rb Player
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 7118814582858810740, guid: 0822b42d90c2b8b4d829c4e24b6ee453,
-      type: 3}
-    m_TargetAsset: {fileID: 7118814582858810740, guid: 0822b42d90c2b8b4d829c4e24b6ee453,
-      type: 3}
   - m_GUID: 0fa1ddd383cece642b54edbe7453d5ed
     m_Address: FAT_OGRE_LEGACY
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 4165725083588579313, guid: 0fa1ddd383cece642b54edbe7453d5ed,
-      type: 3}
-    m_TargetAsset: {fileID: 4165725083588579313, guid: 0fa1ddd383cece642b54edbe7453d5ed,
-      type: 3}
   - m_GUID: 25e1a82d5a75b5349ad28ef3b20c7960
     m_Address: OAK_TREE_ENT_LEGACY
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 9049474274640978736, guid: 25e1a82d5a75b5349ad28ef3b20c7960,
-      type: 3}
-    m_TargetAsset: {fileID: 9049474274640978736, guid: 25e1a82d5a75b5349ad28ef3b20c7960,
-      type: 3}
   - m_GUID: 27aa8cc9f38e95244996878c53e2ed3e
     m_Address: Harpy
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 8735865530429008859, guid: 27aa8cc9f38e95244996878c53e2ed3e,
-      type: 3}
-    m_TargetAsset: {fileID: 8735865530429008859, guid: 27aa8cc9f38e95244996878c53e2ed3e,
-      type: 3}
   - m_GUID: 2a8f0b59d03005642b7fa14f641e1a40
     m_Address: GHOUL_LEGACY
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 4890869651210651444, guid: 2a8f0b59d03005642b7fa14f641e1a40,
-      type: 3}
-    m_TargetAsset: {fileID: 4890869651210651444, guid: 2a8f0b59d03005642b7fa14f641e1a40,
-      type: 3}
   - m_GUID: 3a535358ba3dc9a499de74fc76b2eca0
     m_Address: Toolbox
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 5883707740076942857, guid: 3a535358ba3dc9a499de74fc76b2eca0,
-      type: 3}
-    m_TargetAsset: {fileID: 5883707740076942857, guid: 3a535358ba3dc9a499de74fc76b2eca0,
-      type: 3}
   - m_GUID: 5ea5246fe4b46b544a8effae09e411da
     m_Address: OAK_TREE_ENT_LEGACY Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 7949420196840473487, guid: 5ea5246fe4b46b544a8effae09e411da,
-      type: 3}
-    m_TargetAsset: {fileID: 7949420196840473487, guid: 5ea5246fe4b46b544a8effae09e411da,
-      type: 3}
   - m_GUID: 6419bd3b232a61c4fb858ef4dc107a03
     m_Address: Player
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 7118814582858810740, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-      type: 3}
-    m_TargetAsset: {fileID: 7118814582858810740, guid: 6419bd3b232a61c4fb858ef4dc107a03,
-      type: 3}
   - m_GUID: 7612f8722fbf5db42813d345625ceb76
     m_Address: CHIMERA_LEGACY
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 4165725083588579313, guid: 7612f8722fbf5db42813d345625ceb76,
-      type: 3}
-    m_TargetAsset: {fileID: 4165725083588579313, guid: 7612f8722fbf5db42813d345625ceb76,
-      type: 3}
   - m_GUID: 7dcc012d78323ce4887f442cdefb5676
     m_Address: Door
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 3935068874922980251, guid: 7dcc012d78323ce4887f442cdefb5676,
-      type: 3}
-    m_TargetAsset: {fileID: 3935068874922980251, guid: 7dcc012d78323ce4887f442cdefb5676,
-      type: 3}
   - m_GUID: 81e1d6095514fe0469c6694925d7feaa
     m_Address: Flying Enemy root
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 2035573511599213177, guid: 81e1d6095514fe0469c6694925d7feaa,
-      type: 3}
-    m_TargetAsset: {fileID: 2035573511599213177, guid: 81e1d6095514fe0469c6694925d7feaa,
-      type: 3}
   - m_GUID: ab83a0032060b924db7eb26551c9a57c
     m_Address: DARKNESS_SPIDER_LEGACY
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 3725603835625416366, guid: ab83a0032060b924db7eb26551c9a57c,
-      type: 3}
-    m_TargetAsset: {fileID: 3725603835625416366, guid: ab83a0032060b924db7eb26551c9a57c,
-      type: 3}
   - m_GUID: bc5cbec3601116144b7d16d13295673c
     m_Address: Secret Area Trigger
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 7722490739217650153, guid: bc5cbec3601116144b7d16d13295673c,
-      type: 3}
-    m_TargetAsset: {fileID: 7722490739217650153, guid: bc5cbec3601116144b7d16d13295673c,
-      type: 3}
   - m_GUID: c32a3aab75e0ae74fa8d2178542cdcbe
     m_Address: Droid-01
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 4890869651210651444, guid: c32a3aab75e0ae74fa8d2178542cdcbe,
-      type: 3}
-    m_TargetAsset: {fileID: 4890869651210651444, guid: c32a3aab75e0ae74fa8d2178542cdcbe,
-      type: 3}
   - m_GUID: dccecb3b54f6990418d28b15f5123e44
     m_Address: EVIL_WATCHER_LEGACY
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 7361890597492146672, guid: dccecb3b54f6990418d28b15f5123e44,
-      type: 3}
-    m_TargetAsset: {fileID: 7361890597492146672, guid: dccecb3b54f6990418d28b15f5123e44,
-      type: 3}
   - m_GUID: eea32565a61265b468d20f6c14e5a122
     m_Address: Enemy root
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 8171493255443565340, guid: eea32565a61265b468d20f6c14e5a122,
-      type: 3}
-    m_TargetAsset: {fileID: 8171493255443565340, guid: eea32565a61265b468d20f6c14e5a122,
-      type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 64f49dbb5e1a8914eab3a9426351e51c, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: ae3d8e2b3f434cc4385b3dccbc9c9af8, type: 2}
     - {fileID: 11400000, guid: aa79014b316d1b447ae504f7df609729, type: 2}
-    - {fileID: 11400000, guid: 5b24ac7922a17bc4ba7c36c62627a787, type: 2}

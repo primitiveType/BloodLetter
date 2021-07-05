@@ -10,6 +10,7 @@ public class SettingsManager : MonoBehaviourSingleton<SettingsManager>
     private readonly string MusicVolumeKey = "MusicVolume";
     private readonly string SfxVolumeKey = "SfxVolume";
     private readonly string ScreenShakeKey = "ScreenShake";
+    private readonly string PaintballModeKey = "PaintballMode";
 
     protected void Start()
     {
@@ -28,6 +29,12 @@ public class SettingsManager : MonoBehaviourSingleton<SettingsManager>
         {
             Settings.ScreenShake = PlayerPrefs.GetFloat(ScreenShakeKey);
         }
+        
+        if (PlayerPrefs.HasKey(PaintballModeKey))
+        {
+            Settings.PaintballMode = PlayerPrefs.GetInt(PaintballModeKey) == 1;
+        }
+
 
         SetMusicVolume(Settings.MusicVolume);
         SetSfxVolume(Settings.SfxVolume);
@@ -61,6 +68,13 @@ public class SettingsManager : MonoBehaviourSingleton<SettingsManager>
     {
         Settings.ScreenShake = shake;
         PlayerPrefs.SetFloat(ScreenShakeKey, shake);
+        PlayerPrefs.Save();
+    }
+
+    public void SetPaintballMode(bool arg0)
+    {
+        Settings.PaintballMode = arg0;
+        PlayerPrefs.SetInt(PaintballModeKey, arg0 ? 1 : 0);
         PlayerPrefs.Save();
     }
 }

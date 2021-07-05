@@ -7,16 +7,24 @@ public class SettingsMenuUi : MonoBehaviour
 
     [SerializeField] private Slider m_SfxVolumeSlider;
     [SerializeField] private Slider m_ScreenShakeSlider;
+    [SerializeField] private Toggle m_PaintballToggle;
 
     // Start is called before the first frame update
     void Start()
     {
         m_MusicVolumeSlider.value = SettingsManager.Instance.Settings.MusicVolume;
         m_SfxVolumeSlider.value = SettingsManager.Instance.Settings.SfxVolume;
+        m_PaintballToggle.isOn = SettingsManager.Instance.Settings.PaintballMode;
         m_ScreenShakeSlider.value = SettingsManager.Instance.Settings.ScreenShake;
         m_MusicVolumeSlider.onValueChanged.AddListener(MusicVolumeChanged);
         m_SfxVolumeSlider.onValueChanged.AddListener(SfxVolumeChanged);
         m_ScreenShakeSlider.onValueChanged.AddListener(ScreenShakeChanged);
+        m_PaintballToggle.onValueChanged.AddListener(PaintballModeChanged);
+    }
+
+    private void PaintballModeChanged(bool arg0)
+    {
+        SettingsManager.Instance.SetPaintballMode(arg0);
     }
 
     private void ScreenShakeChanged(float arg0)

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using ECM.Controllers;
-using FPSBuilder.Core.Player;
 using UnityEngine;
 
 public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler

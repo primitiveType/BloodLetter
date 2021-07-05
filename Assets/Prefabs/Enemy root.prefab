@@ -942,6 +942,7 @@ GameObject:
   - component: {fileID: 3720509687200873003}
   - component: {fileID: 7559552615466640902}
   - component: {fileID: 485600730842453200}
+  - component: {fileID: 6430605200355643320}
   m_Layer: 11
   m_Name: graphic
   m_TagString: Untagged
@@ -1102,7 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Events: {fileID: 6510712830491665609}
-  OnHitPrefab: {fileID: 1106582660102108148, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
+  m_OnHitPrefab: {fileID: 1106582660102108148, guid: dcdd6f11e0e8d2c47b9c17a3a885fa0d,
     type: 3}
 --- !u!114 &485600730842453200
 MonoBehaviour:
@@ -1120,3 +1121,17 @@ MonoBehaviour:
   TimeToReset: 1
   Animator: {fileID: 1105345834222380861}
   FlinchDuration: 0.65
+--- !u!114 &6430605200355643320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228839469965635381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c26ff9d620a1443ae277bf08e7dee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Prefab: {fileID: 2123804197688474342, guid: 7e661231ae0f5474bbe64c9795a016d1,
+    type: 3}

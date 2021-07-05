@@ -664,10 +664,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
-  - m_GUID: c2c577624f1d9a94a9238efab65bed9c
-    m_Address: Flesh Bomb ProjectileInfo
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: c2eaf7d32a3391b43a441a73e9e789a6
     m_Address: DARKNESS_SPIDER_LEGACY_jumpBiteThreat_Alpha
     m_ReadOnly: 0
@@ -834,4 +830,3 @@ MonoBehaviour:
     m_Schemas:
     - {fileID: 11400000, guid: e26dd51b8c8c4d545894dea0702e7ac8, type: 2}
     - {fileID: 11400000, guid: 5bf717e50e38cf94d809f7e8d2a88f8c, type: 2}
-    - {fileID: 11400000, guid: 185537762101f194080d7377e8879559, type: 2}
