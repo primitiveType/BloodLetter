@@ -2,7 +2,9 @@
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-
+namespace BloodLetterEditor
+{
+}
 namespace BloodLetterEditor
 {
     [CustomEditor(typeof(EnemyDataProvider))]

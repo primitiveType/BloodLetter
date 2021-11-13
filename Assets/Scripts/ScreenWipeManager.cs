@@ -13,7 +13,7 @@ public class ScreenWipeManager : MonoBehaviourSingleton<ScreenWipeManager>
     [SerializeField] private float wipeDuration;
     [SerializeField] private RawImage Image;
     private static readonly int WipeAmount = Shader.PropertyToID("_WipeAmount");
-    private static readonly int Seed = Shader.PropertyToID("Seed");
+    private static readonly int Seed = Shader.PropertyToID("Seed");    
 
 
     private Coroutine wipeRoutine;
@@ -37,6 +37,9 @@ public class ScreenWipeManager : MonoBehaviourSingleton<ScreenWipeManager>
 
     public void Capture(Camera toCapture, bool applyImage)
     {
+        if (toCapture == null)
+            return;
+        
         if (captureTexture == null || captureTexture.height != Screen.height || captureTexture.width != Screen.width)
         {
             Debug.Log("creating screen texture for wipe.");

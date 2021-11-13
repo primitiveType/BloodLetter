@@ -105,7 +105,7 @@ public class SC_FPSController : MonoBehaviour, IMovementHandler
     {
         get
         {
-            if (Physics.OverlapSphereNonAlloc(Bottom, OverlapRadius, collisions, LayerMask.GetMask("Default")) > 0)
+            if (Physics.OverlapSphereNonAlloc(Bottom, OverlapRadius, collisions, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) > 0)
                 return true;
 
             return false;

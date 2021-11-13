@@ -69,7 +69,7 @@ public class GameConstants : MonoBehaviourSingleton<GameConstants>
 
         if (!File.Exists(path))
         {
-            Debug.LogException(new Exception($"Enemy data not found at path : {path}"));
+            Debug.LogException(new Exception($"Projectile data not found at path : {path}"));
         }
 
         string json = File.ReadAllText(path);

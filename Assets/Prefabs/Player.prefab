@@ -6458,7 +6458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   gravity: 20
-  jumpSpeed: 8
+  jumpSpeed: 6.5
   lookSpeed: 2
   lookXLimit: 45
   playerCamera: {fileID: 5026614862836775227}
