@@ -15,4 +15,9 @@ public class PlayerInventoryData
         Ammo = new AmmoDictionary();
         foreach (var kvp in toCopy.Ammo) Ammo.Add(kvp.Key, kvp.Value);
     }
+
+    public PlayerInventoryData()
+    {
+        
+    }
 }

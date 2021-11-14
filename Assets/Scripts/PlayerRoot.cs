@@ -30,8 +30,8 @@
 
     private void OnLevelBegin()
     {
-        Health.Health = Health.MaxHealth;// SaveState.Instance.SaveData.PlayerHealth;
-        Armor.CurrentArmor = 0;// SaveState.Instance.SaveData.PlayerArmor;
+        Health.Health = Health.MaxHealth; // SaveState.Instance.SaveData.PlayerHealth;
+        Armor.CurrentArmor = 0; // SaveState.Instance.SaveData.PlayerArmor;
         CursorLockManager.Instance.Lock();
     }
 
@@ -48,6 +48,12 @@
         {
             SaveState.Instance.SaveData.PlayerHealth = Health.Health;
             SaveState.Instance.SaveData.PlayerArmor = Armor.CurrentArmor;
+            if (!SaveState.Instance.SaveData.BeatenLevels.Contains(args.LevelName))
+            {
+                SaveState.Instance.SaveData.BeatenLevels.Add(args.LevelName);
+            }
+
+            SaveState.Instance.Save();
         }
     }
 }

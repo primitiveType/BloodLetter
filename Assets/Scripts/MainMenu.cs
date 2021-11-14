@@ -25,5 +25,8 @@ public class MainMenu : MonoBehaviour
         LevelManager.Instance.StartNewGame();
     }
 
-    
+    public void ContinueClicked()
+    {
+        LevelManager.Instance.LoadGame();
+    }
 }

@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class LevelInfoTitleText : BaseLevelInfoText
+﻿public class LevelInfoTitleText : BaseLevelInfoText
 {
     protected override void UpdateText(LevelInfo info)
     {

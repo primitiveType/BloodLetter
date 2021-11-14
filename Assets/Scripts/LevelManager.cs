@@ -78,6 +78,12 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
         LoadLevelSelect();
     }
 
+    public void LoadGame()
+    {
+        SaveState.Instance.LoadSave();
+        LoadLevelSelect();
+    }
+
     public void LoadLevelSelect()
     {
         ScreenWipeManager.Instance.Capture(Camera.main, true);

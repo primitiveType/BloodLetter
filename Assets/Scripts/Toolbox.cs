@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bearroll.UltimateDecals;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 
 public class Toolbox : MonoBehaviourSingleton<Toolbox>
@@ -33,6 +35,8 @@ public class Toolbox : MonoBehaviourSingleton<Toolbox>
         LevelManager.Instance.LevelEnd += OnLevelEnd;
         TaskScheduler.UnobservedTaskException -= TaskSchedulerOnUnobservedTaskException;
         TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+        SceneManager.sceneLoaded += (arg0, mode) => UD_Manager.Restart();
+        UD_Manager.Restart();
     }
 
     private void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)

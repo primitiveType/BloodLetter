@@ -50,6 +50,8 @@ public class PlayerInventory : MonoBehaviour
             {
                 SaveState.Instance.SaveData.BeatenLevels.Add(args.LevelName);
             }
+
+            SaveState.Instance.Save();
         }
     }
 

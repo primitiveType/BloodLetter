@@ -999,16 +999,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5883707740076942857}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1804ec660b85aa4fa0285deca949881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxPermanentMarks: 256
-  perDecalLightProbes: 1
+  perDecalLightProbes: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967295
   initError: 3
   globalMipBias: 0
   drawHandles: 1

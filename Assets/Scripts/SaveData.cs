@@ -11,6 +11,10 @@ public class SaveData
     [SerializeField] private float _playerHealth;
     [SerializeField] private List<string> m_BeatenLevels;
 
+    public SaveData()
+    {
+    }
+
     public SaveData(SaveData newGameSaveData)
     {
         _playerArmor = newGameSaveData._playerArmor;
