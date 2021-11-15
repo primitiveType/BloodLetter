@@ -15,7 +15,7 @@ public class EquipStatus : MonoBehaviour
     [FormerlySerializedAs("WeaponId")] [SerializeField]
     private WeaponId m_WeaponId;
 
-    [SerializeField] private PlayerInventory.EquipmentSlot Slot = PlayerInventory.EquipmentSlot.RightHand;
+    [SerializeField] public PlayerInventory.EquipmentSlot Slot = PlayerInventory.EquipmentSlot.RightHand;
 
 
     private readonly float TimeToLerp = .2f;

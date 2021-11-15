@@ -189,10 +189,10 @@ public class PlayerInventory : MonoBehaviour
         if (EquippedItems[slot].current != null) yield return StartCoroutine(EquippedItems[slot].current.UnEquip());
 
         EquippedItems[slot].current = thing;
-        InventoryData.EquippedWeapon = EquippedItems[EquipmentSlot.LeftHand].current.WeaponId |
-                                       EquippedItems[EquipmentSlot.RightHand].current.WeaponId;
+        // InventoryData.EquippedWeapon = EquippedItems[EquipmentSlot.LeftHand].current.WeaponId |
+        //                                EquippedItems[EquipmentSlot.RightHand].current.WeaponId;
         Events.OnEquippedWeaponChanged(prev, thing.WeaponId, slot);
-        yield return StartCoroutine(thing.Equip());
+        // yield return StartCoroutine(thing.Equip());
         EquippedItems[slot].equipping = false;
     }
 

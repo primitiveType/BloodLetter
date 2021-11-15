@@ -11,6 +11,6 @@ public class LevelBeatenIndicator : MonoBehaviour
 
     private void InstanceOnOnLevelSelected(object sender, LevelSelectedEventArgs args)
     {
-        gameObject.SetActive(SaveState.Instance.SaveData.BeatenLevels.Contains(args.Level.LevelName));
+        gameObject.SetActive(SaveState.Instance.SaveData.BeatenLevels.Contains(args.Level.LevelKey));
     }
 }

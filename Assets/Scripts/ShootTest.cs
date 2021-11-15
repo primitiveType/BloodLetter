@@ -33,7 +33,7 @@ public class ShootTest : MonoBehaviour
     {
         if (Time.timeScale <= 0 || !Status.IsEquipped) return;
 
-        if (Status.WeaponId.HasFlag(WeaponId.Shotgun))
+        if (Status.Slot == PlayerInventory.EquipmentSlot.LeftHand)
         {
             HandleShoot();
         }

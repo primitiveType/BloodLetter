@@ -21,8 +21,15 @@ public class LerpMaterialPropertyOnEquipmentChanging : MonoBehaviour
     private List<Material> Materials { get; } = new List<Material>();
     [SerializeField] private float m_TimeToLerp = .5f;
 
+    private EquipStatus Weapon { get; set; }
+
     private void Start()
     {
+        Weapon = GetComponentInParent<EquipStatus>();
+        if (!Weapon)
+        {
+            Debug.LogError($"Weapon not found on {this.name}");
+        }
         PlayerRoot = GetComponentInParent<PlayerRoot>();
         PlayerRoot.ActorEvents.OnEquippedWeaponChangedEvent += OnWeaponChanged;
         var renderers = GetComponentsInChildren<Renderer>();
@@ -33,7 +40,7 @@ public class LerpMaterialPropertyOnEquipmentChanging : MonoBehaviour
                 Materials.Add(material);
             }
         }
-        
+
         if (Toolbox.Instance.PlayerInventory.IsEquipped(WeaponId, PlayerInventory.EquipmentSlot.RightHand) ||
             Toolbox.Instance.PlayerInventory.IsEquipped(WeaponId, PlayerInventory.EquipmentSlot.LeftHand))
         {
@@ -48,7 +55,10 @@ public class LerpMaterialPropertyOnEquipmentChanging : MonoBehaviour
     private void OnWeaponChanged(object sender, OnEquippedWeaponChangedEventArgs args)
     {
         var weapon = args.NewValue;
-        UpdateMaterials(weapon);
+        if (args.Slot == Weapon.Slot)
+        {
+            UpdateMaterials(weapon);
+        }
     }
 
     private void UpdateMaterials(WeaponId weapon)

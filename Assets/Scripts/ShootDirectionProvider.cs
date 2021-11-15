@@ -34,7 +34,7 @@ public class ShootDirectionProvider : MonoBehaviour, IShootDirectionProvider
             foreach (var obj in Sensor.DetectedObjectsOrderedByDistance.Select(go => go.GetComponentInParent<ActorRoot>()))
             {
                 Vector3 position = transform.position;
-                ShootDirections.Add((obj.Collider.ClosestPoint(position) - position).normalized);
+                ShootDirections.Add((obj.Collider.bounds.center - position).normalized);
             }
 
             return ShootDirections;
