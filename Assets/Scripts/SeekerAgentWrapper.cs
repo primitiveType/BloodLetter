@@ -8,7 +8,11 @@ public class SeekerAgentWrapper : MonoBehaviour, INavigationAgent
     public bool isStopped
     {
         get => Seeker.isStopped;
-        set => Seeker.isStopped = value;
+        set
+        {
+            Seeker.isStopped = value;
+            Seeker.enabled = !value;
+        }
     }
 
     public bool updateRotation { get; set; }

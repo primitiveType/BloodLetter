@@ -39,17 +39,21 @@ public class EquipStatus : MonoBehaviour
 
     public IEnumerator Equip()
     {
-        yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, EquippedPosition));
+        yield break;
+        // yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, EquippedPosition));
     }
 
     public IEnumerator UnEquip()
     {
-        yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, UnequippedPosition));
+        yield break;
+        ;
+        // yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, UnequippedPosition));
     }
 
     public void UnEquipInstant()
     {
-        TransformToLerp.localPosition = UnequippedPosition;
+        return;
+        // TransformToLerp.localPosition = UnequippedPosition;
     }
 
     private IEnumerator LerpPosition(Vector3 startPosition, Vector3 endPosition)

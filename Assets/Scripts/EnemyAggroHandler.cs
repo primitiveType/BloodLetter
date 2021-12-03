@@ -47,8 +47,12 @@ public class EnemyAggroHandler : MonoBehaviour
             Debug.LogWarning($"Failed to find data provider for {name}.");
         }
 
+        if (!enabled)
+        {
+            OnDisable();
+        }
         EnemyData data = dataProvider.Data;
-        enabled = data.CanAggro;
+        enabled = enabled && data.CanAggro;
         AggroRange = data.AggroRange;
         AggroDelayVariance = data.AggroDelayVariance;
         EarshotAggroRange = data.EarshotAggroRange;
@@ -67,7 +71,11 @@ public class EnemyAggroHandler : MonoBehaviour
         if (VisibilityHandler.CanSeePlayer(true, true)) SetAggro();
     }
 
-    
+    private void OnDisable()
+    {
+        IsAggro = false;
+    }
+
     public void OnDetected(GameObject go, Sensor sensor)
     {
         if (ShouldAggroTo(go))
@@ -83,9 +91,14 @@ public class EnemyAggroHandler : MonoBehaviour
 
     private bool ShouldAggroTo(GameObject go)
     {
-        return go.transform == Toolbox.Instance.PlayerTransform;
+        return this.enabled && go.transform == Toolbox.Instance.PlayerTransform;
     }
 
+    public void OnEnable()
+    {
+        Debug.Log("enabled.");
+    }
+    
     public void SetAggro()
     {
         if (!PreAggro)

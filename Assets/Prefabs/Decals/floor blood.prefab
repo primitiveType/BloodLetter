@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3230963905496552817}
   - component: {fileID: -2779572235074273995}
   - component: {fileID: 9099243096161643920}
-  m_Layer: 2
+  m_Layer: 21
   m_Name: floor blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,3 +126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BloodMaterial: {fileID: 2100000, guid: 94ebd4ffa016351489e08c4b72d9829f, type: 2}
   OilMaterial: {fileID: 2100000, guid: e6e5ce09ac21fc448b639d6df3a37060, type: 2}
+  PaintMaterial: {fileID: 0}

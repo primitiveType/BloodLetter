@@ -11,7 +11,7 @@ public static class HitscanUtils
         ActorRoot actorRoot, float range, GameObject onHitWallPrefab, out RaycastHit hit)
     {
         var ray = new Ray(ownerPosition, ownerDirection * range);
-        Debug.DrawRay(ownerPosition, ownerDirection * range, Color.blue, 10);
+        //Debug.DrawRay(ownerPosition, ownerDirection * range, Color.blue, 10);
         var layerToCheckForDamage = GetLayerToCheckForDamage(actorRoot.EntityType);
 
         var raycastMask = GetRaycastMask(actorRoot.EntityType);
@@ -44,7 +44,8 @@ public static class HitscanUtils
 
                 if (((1 << hitLayer) & EnvironmentLayers) == 0) //we didn't hit the environment, so keep moving forward
                 {
-                    ray.origin = hit.point + hit.normal * -.01f;
+                    ray.origin = hit.point + hit.normal * .1f;
+                    Debug.DrawRay(ray.origin, ray.direction, Color.cyan, 10);
                 }
                 else if (onHitWallPrefab) //we did hit the environment, spawn a hit visual and quit.
                 {
