@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d14ca04b3224182b211aab7915416d6, type: 3}
+  m_Name: Overgrowth
+  m_EditorClassIdentifier: 
+  m_LevelKey: Overgrowth
+  m_LevelName: The Laboratory
+  m_LevelLocation: Rigor-7C (~1.72892E9)
+  m_LevelDescription: "This level probably not worth playing. \nThis research laboratory
+    was used to develop bio-tech from creatures discovered across the 'scape. There
+    could be something useful here. No phase activity has been detected on site,
+    but caution is advised."
