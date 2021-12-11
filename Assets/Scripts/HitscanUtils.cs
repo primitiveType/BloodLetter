@@ -22,6 +22,8 @@ public static class HitscanUtils
         var maxChecks = 10;
         var checks = 0;
         while (!isDone)
+        {
+            Debug.DrawLine(ray.origin, ray.origin + Vector3.up, Color.red, 10);
             if (Physics.Raycast(ray, out hit, range, raycastMask, QueryTriggerInteraction.Ignore))
             {
                 var potentialHit = false;
@@ -44,7 +46,7 @@ public static class HitscanUtils
 
                 if (((1 << hitLayer) & EnvironmentLayers) == 0) //we didn't hit the environment, so keep moving forward
                 {
-                    ray.origin = hit.point + hit.normal * .1f;
+                    ray.origin = hit.point + (ray.direction * .1f);
                     Debug.DrawRay(ray.origin, ray.direction, Color.cyan, 10);
                 }
                 else if (onHitWallPrefab) //we did hit the environment, spawn a hit visual and quit.
@@ -73,6 +75,7 @@ public static class HitscanUtils
             {
                 isDone = true;
             }
+        }
 
         return null;
     }

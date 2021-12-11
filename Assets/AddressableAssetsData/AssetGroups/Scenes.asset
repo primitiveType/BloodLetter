@@ -21,20 +21,18 @@ MonoBehaviour:
     m_Address: MenuScene
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 102900000, guid: 71b6ca579ffbc164097f7e64e39f6d21, type: 3}
-    m_TargetAsset: {fileID: 102900000, guid: 71b6ca579ffbc164097f7e64e39f6d21, type: 3}
   - m_GUID: 77e9443e2473fda418c06a995a9b073d
     m_Address: TheCageScene
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 7fe6e2e2ed3974647ad4eb4a2db528e2
     m_Address: Overgrowth
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7826c81c30af5654da997284c88c96d4
+    m_Address: Assets/LevelSelect.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 64f49dbb5e1a8914eab3a9426351e51c, type: 2}
   m_SchemaSet:
