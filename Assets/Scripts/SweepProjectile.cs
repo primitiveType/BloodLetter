@@ -18,7 +18,7 @@ public class SweepProjectile : ProjectileInfo
 
     private Coroutine ShootCoroutine { get; set; }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
+    public override bool TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
         gameObject.SetActive(true);
         Vector3 slope = new Vector3(Random.Range(0, m_SweepMagnitude), Random.Range(0, 0),
@@ -34,6 +34,7 @@ public class SweepProjectile : ProjectileInfo
         }
 
         ShootCoroutine = StartCoroutine(UpdateCr());
+        return true;
     }
 
     private void Start()

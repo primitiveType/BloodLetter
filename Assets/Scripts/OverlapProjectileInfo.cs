@@ -6,7 +6,7 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
     [SerializeField] private float m_Radius = 1;
     [SerializeField] private Vector3 m_Offset;
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
+    public override bool TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
         Transform ownerTransform = owner.transform;
         var position = ownerTransform.TransformPoint(m_Offset);
@@ -14,5 +14,7 @@ public class OverlapProjectileInfo : HitscanProjectileInfo
 
         foreach (var damaged in victims)
             damaged.OnShot(this, damaged.transform.position, direction);
+
+        return true;
     }
 }

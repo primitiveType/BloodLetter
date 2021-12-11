@@ -9,7 +9,7 @@ public class ChainHitscanProjectileInfo : HitscanProjectileInfo
     [SerializeField] private LineRenderer m_Visual;
     readonly List<ActorRoot> alreadyHit = new List<ActorRoot>();
 
-    public override void TriggerShoot(Transform owner, Vector3 ownerDirection, ActorRoot actorRoot, GameObject target)
+    public override bool TriggerShoot(Transform owner, Vector3 ownerDirection, ActorRoot actorRoot, GameObject target)
     {
         alreadyHit.Clear();
         ownerRoot = actorRoot;
@@ -20,12 +20,13 @@ public class ChainHitscanProjectileInfo : HitscanProjectileInfo
         
         if (damaged == null)
         {
-            return;
+            return true;
         }
 
         damaged.OnShot(hit.point, this, ownerDirection);
         alreadyHit.Add(damaged.ActorRoot);
         ChainShoot(owner, actorRoot, alreadyHit, damaged.transform.position);
+        return true;
     }
 
     private void ChainShoot(Transform owner, ActorRoot actorRoot,

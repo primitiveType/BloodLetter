@@ -31,48 +31,11 @@ public class EquipStatus : MonoBehaviour
     {
         Toolbox.Instance.PlayerEvents.OnWeaponsChangedEvent += PlayerEventsOnOnWeaponsChangedEvent;
     }
-
-    public bool CanEquip()
-    {
-        return Toolbox.Instance.PlayerInventory.HasWeapon(m_WeaponId);
-    }
-
-    public IEnumerator Equip()
-    {
-        yield break;
-        // yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, EquippedPosition));
-    }
-
-    public IEnumerator UnEquip()
-    {
-        yield break;
-        ;
-        // yield return StartCoroutine(LerpPosition(TransformToLerp.localPosition, UnequippedPosition));
-    }
-
-    public void UnEquipInstant()
-    {
-        return;
-        // TransformToLerp.localPosition = UnequippedPosition;
-    }
-
-    private IEnumerator LerpPosition(Vector3 startPosition, Vector3 endPosition)
-    {
-        var speed = 1f / TimeToLerp;
-        float t = 0;
-        while (t < 1)
-        {
-            TransformToLerp.localPosition = Vector3.Lerp(startPosition, endPosition, t);
-            t += Time.deltaTime * speed;
-            yield return null;
-        }
-
-        TransformToLerp.localPosition = endPosition;
-    }
+    
 
     private void PlayerEventsOnOnWeaponsChangedEvent(object sender, OnWeaponsChangedEventArgs args)
     {
-        if ((args.NewValue ^ args.OldValue) == WeaponId) Toolbox.Instance.PlayerInventory.EquipThing(this, Slot);
+        if ((args.NewValue ^ args.OldValue) == WeaponId) Toolbox.Instance.PlayerInventory.EquipThing(this.m_WeaponId, Slot);
     }
 
     private void OnDestroy()

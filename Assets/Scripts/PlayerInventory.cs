@@ -8,8 +8,8 @@ public class PlayerInventory : MonoBehaviour
 {
     private class EquipInfo
     {
-        public bool equipping;
-        public EquipStatus current;
+        // public bool equipping;
+        public WeaponId current;
     }
 
     public enum EquipmentSlot
@@ -46,7 +46,7 @@ public class PlayerInventory : MonoBehaviour
         if (args.Success)
         {
             SaveState.Instance.SaveData.InventoryData = InventoryData;
-            if(!SaveState.Instance.SaveData.BeatenLevels.Contains(args.LevelName))
+            if (!SaveState.Instance.SaveData.BeatenLevels.Contains(args.LevelName))
             {
                 SaveState.Instance.SaveData.BeatenLevels.Add(args.LevelName);
             }
@@ -137,7 +137,7 @@ public class PlayerInventory : MonoBehaviour
 
     public bool IsEquipped(EquipStatus thing, EquipmentSlot slot)
     {
-        return EquippedItems[slot].current == thing;
+        return EquippedItems[slot].current == thing.WeaponId;
     }
 
     public WeaponId CurrentEquip(EquipmentSlot slot)
@@ -152,7 +152,7 @@ public class PlayerInventory : MonoBehaviour
             return 0;
         }
 
-        return EquippedItems[slot].current.WeaponId;
+        return EquippedItems[slot].current;
     }
 
     public bool IsEquipped(WeaponId weaponId, EquipmentSlot slot)
@@ -162,41 +162,101 @@ public class PlayerInventory : MonoBehaviour
             return false;
         }
 
-        var equipped = EquippedItems[slot]?.current?.WeaponId.HasFlag(weaponId);
+        var equipped = EquippedItems[slot]?.current.HasFlag(weaponId);
         return equipped ?? false;
     }
 
-    public void EquipThing(EquipStatus thing, EquipmentSlot slot)
+    public void EquipThing(WeaponId thing, EquipmentSlot slot)
     {
         if (!EquippedItems.ContainsKey(slot))
         {
             EquippedItems.Add(slot, new EquipInfo());
         }
 
-        if (!EquippedItems[slot].equipping)
+        if (EquippedItems[slot].current == thing || !InventoryData.Weapons.HasFlag(thing))
         {
-            StartCoroutine(EquipThingCR(thing, slot));
+            return;
         }
-    }
 
-    private IEnumerator EquipThingCR(EquipStatus thing, EquipmentSlot slot)
-    {
-        if (EquippedItems[slot].current == thing || !thing.CanEquip()) yield break;
-
-        EquippedItems[slot].equipping = true;
-        var prev = EquippedItems[slot].current != null ? EquippedItems[slot].current.WeaponId : 0;
-
-        if (EquippedItems[slot].current != null) yield return StartCoroutine(EquippedItems[slot].current.UnEquip());
-
+        var prev = EquippedItems[slot].current;
         EquippedItems[slot].current = thing;
-        // InventoryData.EquippedWeapon = EquippedItems[EquipmentSlot.LeftHand].current.WeaponId |
-        //                                EquippedItems[EquipmentSlot.RightHand].current.WeaponId;
-        Events.OnEquippedWeaponChanged(prev, thing.WeaponId, slot);
-        // yield return StartCoroutine(thing.Equip());
-        EquippedItems[slot].equipping = false;
+
+        Events.OnEquippedWeaponChanged(prev, thing, slot);
     }
+
 
     public void GainBlood(int i)
     {
+    }
+
+    public void EquipNextWeapon(EquipmentSlot slot)
+    {
+        WeaponId currentWeaponId = EquippedItems[slot].current;
+        Func<WeaponId, WeaponId> iterator;
+        if (slot == EquipmentSlot.LeftHand)
+        {
+            iterator = NextLeftWeaponIds;
+        }
+        else
+        {
+            iterator = NextRightWeaponIds;
+        }
+
+        WeaponId nextWeapon = iterator.Invoke(currentWeaponId);
+        while (nextWeapon != currentWeaponId)
+        {
+            if (HasWeapon(nextWeapon))
+            {
+                EquippedItems[slot].current = nextWeapon;
+                Events.OnEquippedWeaponChanged(currentWeaponId, nextWeapon, slot);
+            }
+
+            nextWeapon = iterator.Invoke(nextWeapon);
+        }
+    }
+
+
+    private WeaponId NextLeftWeaponIds(WeaponId current)
+    {
+        switch (current)
+        {
+            case WeaponId.Eye:
+            case WeaponId.Lightning:
+            case WeaponId.ShotgunStaff:
+            case WeaponId.Syringe:
+            case WeaponId.Pistol:
+            case WeaponId.Shotgun:
+                return WeaponId.Chainsaw;
+                break;
+            case WeaponId.Staff:
+            case WeaponId.Chainsaw:
+                return WeaponId.Shotgun;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(current), current, null);
+        }
+    }
+
+    private WeaponId NextRightWeaponIds(WeaponId current)
+    {
+        switch (current)
+        {
+            case WeaponId.Eye:
+                return WeaponId.Syringe;
+                break;
+            case WeaponId.Lightning:
+            case WeaponId.ShotgunStaff:
+            case WeaponId.Syringe:
+            case WeaponId.Pistol:
+            case WeaponId.Shotgun:
+                return WeaponId.Staff;
+                break;
+            case WeaponId.Staff:
+            case WeaponId.Chainsaw:
+                return WeaponId.Eye;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(current), current, null);
+        }
     }
 }

@@ -40,9 +40,10 @@ public class HitscanProjectileInfo : ProjectileInfoBase, IDamageSource
         return data;
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
+    public override bool TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
         ownerRoot = actorRoot;
         TriggerShoot(owner.position, direction, actorRoot, target);
+        return true;
     }
 }

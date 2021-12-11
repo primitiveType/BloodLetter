@@ -23,7 +23,7 @@ public abstract class ProjectileInfoBase : MonoBehaviour
     public float Range => m_Range;
 
     //public abstract void TriggerShoot(Vector3 playerPosition, Vector3 playerDirection, EntityType ownerType);
-    public abstract void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target);
+    public abstract bool TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target);
 
     public void PopulateValues(string projectileName)
     {

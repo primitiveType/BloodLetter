@@ -16,7 +16,7 @@ public class ProjectileInfo : ProjectileInfoBase
         return projectile;
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
+    public override bool TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
         GameObject proj = CreateProjectile(owner.position, direction, actorRoot.EntityType);
 
@@ -35,5 +35,6 @@ public class ProjectileInfo : ProjectileInfoBase
 
         proj.transform.SetParent(parentProjectileToBarrel ? owner : null);
         proj.SetActive(true);
+        return true;
     }
 }

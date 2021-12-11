@@ -30,8 +30,9 @@ public class ScatterProjectileInfo : ProjectileInfoBase
         }
     }
 
-    public override void TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
+    public override bool TriggerShoot(Transform owner, Vector3 direction, ActorRoot actorRoot, GameObject target)
     {
         TriggerShoot(owner.position, direction, actorRoot, target);
+        return true;
     }
 }

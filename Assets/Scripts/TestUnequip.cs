@@ -19,20 +19,20 @@ public class TestUnequip : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(EquipKey))
-        {
-            Equip();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q) && PreviousWeapon == Equippable.WeaponId)
-        {
-            Equip();
-        }
+        // if (Input.GetKeyDown(EquipKey))
+        // {
+        //     Equip();
+        // }
+        //
+        // if (Input.GetKeyDown(KeyCode.Q) && PreviousWeapon == Equippable.WeaponId)
+        // {
+        //     Equip();
+        // }
     }
 
     private void Equip()
     {
-        Toolbox.Instance.PlayerInventory.EquipThing(Equippable, Slot);
+        Toolbox.Instance.PlayerInventory.EquipThing(Equippable.WeaponId, Slot);
     }
 
     private void Start()
@@ -50,9 +50,6 @@ public class TestUnequip : MonoBehaviour
 
         if (equipOnStart)
             Equip();
-        else
-            Equippable.UnEquipInstant();
-
 
         UpdateButtonVisibility();
     }

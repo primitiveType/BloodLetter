@@ -26,8 +26,10 @@ public class WeaponSoundInfo : MonoBehaviour
 
     private void PlayerEventsOnOnWeaponsChangedEvent(object sender, OnEquippedWeaponChangedEventArgs args)
     {
-        if (EquipStatus.WeaponId != WeaponId.Shotgun)
-            Source.enabled = (args.NewValue & EquipStatus.WeaponId) != 0;
+        if (args.Slot != EquipStatus.Slot)
+            return;
+
+        Source.enabled = (args.NewValue & EquipStatus.WeaponId) != 0;
     }
 
     public void OnShoot()
@@ -58,6 +60,10 @@ public class WeaponSoundInfo : MonoBehaviour
             Source.clip = IdleSound;
             Source.loop = true;
             if (!Source.isPlaying) Source.Play();
+        }
+        else if (IdleSound == null)
+        {
+            Source.Stop();
         }
         else
         {

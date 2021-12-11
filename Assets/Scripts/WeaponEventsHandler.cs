@@ -20,14 +20,17 @@ public class WeaponEventsHandler : MonoBehaviour
         }
 
         Debug.Log("shoot");
-        ProjectileInfo.TriggerShoot(BarrelTransform, ShootDirection, Toolbox.Instance.PlayerRoot,
-            null); //null target for now.
+
+        bool didShoot =
+            ProjectileInfo.TriggerShoot(BarrelTransform, ShootDirection, Toolbox.Instance.PlayerRoot,
+                null); //null target for now.
         if (SoundInfo != null)
         {
             SoundInfo.OnShoot();
         }
 
-        Toolbox.Instance.PlayerEvents.PlayerShoot(ProjectileInfo, WeaponId);
+        if (didShoot)//a bit of a hack. Just for the syringe. Might use for chainsaw as well.
+            Toolbox.Instance.PlayerEvents.PlayerShoot(ProjectileInfo, WeaponId);
     }
 
     public void Idle()
