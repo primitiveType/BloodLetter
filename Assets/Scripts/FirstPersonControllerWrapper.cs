@@ -11,7 +11,7 @@ public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler
 
     private float BaseSpeed => m_BaseSpeed;
 
-    [SerializeField] private float m_BaseSpeed = 40;
+    [SerializeField] private float m_BaseSpeed = 20;
 
     List<MovementModifierHandle> Modifiers = new List<MovementModifierHandle>();
 
@@ -25,6 +25,8 @@ public class FirstPersonControllerWrapper : MonoBehaviour, IMovementHandler
     public void SetRelativeSpeed(float percent)
     {
         var speed = BaseSpeed * percent;
+        Controller.runningSpeed = speed;
+        Controller.walkingSpeed = speed;
         // Controller.
         // Controller.backwardSpeed = speed;
         // Controller.forwardSpeed = speed;

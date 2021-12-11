@@ -51,6 +51,7 @@ public class EnemyAggroHandler : MonoBehaviour
         {
             OnDisable();
         }
+
         EnemyData data = dataProvider.Data;
         enabled = enabled && data.CanAggro;
         AggroRange = data.AggroRange;
@@ -83,10 +84,9 @@ public class EnemyAggroHandler : MonoBehaviour
             SetAggro();
         }
     }
-    
+
     public void OnLostDetection(GameObject go, Sensor sensor)
     {
-       
     }
 
     private bool ShouldAggroTo(GameObject go)
@@ -94,11 +94,7 @@ public class EnemyAggroHandler : MonoBehaviour
         return this.enabled && go.transform == Toolbox.Instance.PlayerTransform;
     }
 
-    public void OnEnable()
-    {
-        Debug.Log("enabled.");
-    }
-    
+
     public void SetAggro()
     {
         if (!PreAggro)
@@ -110,7 +106,6 @@ public class EnemyAggroHandler : MonoBehaviour
 
     public void LoseAggro()
     {
-        
     }
 
     private IEnumerator AggroAfterRandomDelay()

@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnOnCollide: {fileID: 6962804858628054579, guid: 180d059efe3e5f349b7f424c7b6eca2e,
     type: 3}
+  m_InheritScale: 0
   IgnoreCollision: {fileID: 0}
   Mask:
     serializedVersion: 2
@@ -314,6 +315,7 @@ MonoBehaviour:
   m_Health: 1
   m_MaxHealth: 1
   m_OverhealMaxHealth: 0
+  m_UseDataProvider: 0
 --- !u!114 &968749474140394720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PrefabToSpawn: {fileID: 5479396050471731650, guid: 2fe9aa47fb990a442abee78816fef465,
     type: 3}
+  m_InheritScale: 0
 --- !u!1 &6114216511237287230
 GameObject:
   m_ObjectHideFlags: 0
