@@ -17,12 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 417f59fde5cf7db43803c29d93bebb95
   m_SerializeEntries:
-  - m_GUID: 71b6ca579ffbc164097f7e64e39f6d21
-    m_Address: MenuScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 77e9443e2473fda418c06a995a9b073d
     m_Address: TheCageScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7c9bbf8e1766db84786cdd94acf7d66a
+    m_Address: lair
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7fe6e2e2ed3974647ad4eb4a2db528e2
@@ -30,7 +30,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7826c81c30af5654da997284c88c96d4
-    m_Address: Assets/LevelSelect.unity
+    m_Address: LevelSelect
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

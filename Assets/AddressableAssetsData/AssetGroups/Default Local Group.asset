@@ -41,10 +41,6 @@ MonoBehaviour:
     m_Address: Sweep Projectile
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 7c9bbf8e1766db84786cdd94acf7d66a
-    m_Address: lair
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 88fddc2db5efe0d43bc21195d7ba7ff9
     m_Address: Assets/Prefabs/Projectiles/Flesh bomb explosion.prefab
     m_ReadOnly: 0
@@ -87,6 +83,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d8ce8f91a5baefc4b8141087f2f990b7
     m_Address: spider web projectile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 71b6ca579ffbc164097f7e64e39f6d21
+    m_Address: MenuScene
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

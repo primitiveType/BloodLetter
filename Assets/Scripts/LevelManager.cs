@@ -72,9 +72,9 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     }
 
 
-    public void StartNewGame()
+    public void StartNewGame(string difficulty)
     {
-        SaveState.Instance.StartNewGame();
+        SaveState.Instance.StartNewGame(difficulty);
         LoadLevelSelect();
     }
 
@@ -88,7 +88,7 @@ public class LevelManager : MonoBehaviourSingleton<LevelManager>
     {
         ScreenWipeManager.Instance.Capture(Camera.main, true);
         CursorLockManager.Instance.Unlock();
-        AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync("Assets/LevelSelect.unity");
+        AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync("LevelSelect");
         handle.Completed += operationHandle => { ScreenWipeManager.Instance.DoWipe(); };
     }
 }

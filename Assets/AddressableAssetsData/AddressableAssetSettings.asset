@@ -13,25 +13,14 @@ MonoBehaviour:
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
   m_DefaultGroup: 4dbc13e501051b14bbf5eb8695a0011f
-  m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
-  m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
-  m_IgnoreUnsupportedFilesInBuild: 0
   m_UniqueBundleIds: 0
-  m_NonRecursiveBuilding: 0
-  m_maxConcurrentWebRequests: 500
-  m_ContiguousBundles: 0
-  m_ShaderBundleNaming: 0
-  m_ShaderBundleCustomNaming: 
-  m_MonoScriptBundleNaming: 0
-  m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
     m_Id: 
   m_RemoteCatalogLoadPath:
     m_Id: 
-  m_ContentStateBuildPath: 
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 4ca76987ee454e14a958e0f9b46201ab, type: 2}

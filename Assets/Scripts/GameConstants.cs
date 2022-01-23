@@ -9,9 +9,9 @@ public class GameConstants : MonoBehaviourSingleton<GameConstants>
     private static Dictionary<string, ProjectileData> CachedProjectileData = new Dictionary<string, ProjectileData>();
     private static Dictionary<string, PlayerData> CachedPlayerData = new Dictionary<string, PlayerData>();
 
-    public static string GetEnemyDataPath(string enemyName)
+    public static string GetEnemyDataPath(string enemyName, string difficulty)
     {
-        string dataPath = Path.Combine(Application.streamingAssetsPath, "Game Data", "Enemies");
+        string dataPath = Path.Combine(Application.streamingAssetsPath, "Game Data", "Enemies", difficulty);
         string path = Path.Combine(dataPath, enemyName);
         return path;
     }
@@ -25,7 +25,7 @@ public class GameConstants : MonoBehaviourSingleton<GameConstants>
 
     public static EnemyData GetEnemyDataByName(string name, string difficulty)
     {
-        string path = GetEnemyDataPath(name);
+        string path = GetEnemyDataPath(name, difficulty);
         return GetEnemyData(path);
     }
 

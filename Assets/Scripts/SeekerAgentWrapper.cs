@@ -1,4 +1,5 @@
-﻿using Pathfinding;
+﻿using System;
+using Pathfinding;
 using UnityEngine;
 
 [RequireComponent(typeof(AIPath))]
@@ -22,6 +23,7 @@ public class SeekerAgentWrapper : MonoBehaviour, INavigationAgent
     public void SetDestination(Vector3 targetPosition)
     {
         Seeker.destination = targetPosition;
+        Seeker.repathRate = Mathf.Max((transform.position - targetPosition).magnitude / 10, .5f);
     }
 
     public void Warp(Vector3 position)

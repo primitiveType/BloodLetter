@@ -22,11 +22,11 @@ public class PlayerDataEditor : UnityEditor.Editor
     }
 
 
-    private void LoadFromDisk(PlayerDataProvider enemyDataProvider)
+    private void LoadFromDisk(PlayerDataProvider dataProvider)
     {
         Debug.Log("Loading from disk.");
 
-        enemyDataProvider.Data = GameConstants.GetPlayerData("Normal");
+        dataProvider.Data = GameConstants.GetPlayerData("Normal");
     }
 
     private void SaveToDisk(PlayerDataProvider dataProvider)

@@ -15,12 +15,14 @@ public class FloatPropertyPingPong : MonoBehaviour
 
     private bool reverse;
     private float time;
+    private Renderer m_Renderer;
 
     void Start()
     {
         PropertyHash = Shader.PropertyToID(m_PropertyName);
-        Material = GetComponent<Renderer>().material;
-        Material.SetFloat(PropertyHash, m_Min);
+        m_Renderer = GetComponent<Renderer>();
+        Material = m_Renderer.material;
+        SetValue(m_Min);
     }
 
     // Update is called once per frame
@@ -43,6 +45,14 @@ public class FloatPropertyPingPong : MonoBehaviour
             value = EasingFunction.GetEasingFunction(EasingMethod)(m_Min, m_Max, time);
         }
 
-        Material.SetFloat(PropertyHash, value);
+        SetValue(value);
+    }
+
+    private void SetValue(float value)
+    {
+        MaterialPropertyBlock materialPropertyBlock = new MaterialPropertyBlock();
+        m_Renderer.GetPropertyBlock(materialPropertyBlock);
+        materialPropertyBlock.SetFloat(PropertyHash, value);
+        m_Renderer.SetPropertyBlock(materialPropertyBlock);
     }
 }

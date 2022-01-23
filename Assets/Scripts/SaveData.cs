@@ -10,16 +10,20 @@ public class SaveData
 
     [SerializeField] private float _playerHealth;
     [SerializeField] private List<string> m_BeatenLevels;
+    [SerializeField] private string m_difficulty = "I Found A Gun!";
+
+    public string Difficulty => m_difficulty;
 
     public SaveData()
     {
     }
 
-    public SaveData(SaveData newGameSaveData)
+    public SaveData(SaveData newGameSaveData, string difficulty)
     {
         _playerArmor = newGameSaveData._playerArmor;
         _playerHealth = newGameSaveData._playerHealth;
         BeatenLevels = newGameSaveData.BeatenLevels;
+        m_difficulty = difficulty;
         InventoryData = new PlayerInventoryData(newGameSaveData.InventoryData);
     }
 

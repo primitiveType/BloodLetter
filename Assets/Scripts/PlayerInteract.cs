@@ -21,7 +21,7 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             var foundOne = false;
             var transform1 = transform;

@@ -7,6 +7,7 @@ public class UnparentAndFollow : MonoBehaviour
     [SerializeField] private UnityEvent AfterUnparentAction;
     private Transform myTransform;
     [SerializeField] private Transform toFollow;
+    private bool m_initalized;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class UnparentAndFollow : MonoBehaviour
         toFollow = myTransform.parent;
         myTransform.parent = null;
         AfterUnparentAction?.Invoke();
+        m_initalized = true;
     }
 
     // Update is called once per frame
@@ -31,6 +33,10 @@ public class UnparentAndFollow : MonoBehaviour
             myTransform.position = toFollow.position;
             myTransform.rotation = toFollow.rotation;
             myTransform.localScale = toFollow.lossyScale;
+        }
+        else if (m_initalized)
+        {
+            Destroy(gameObject);
         }
     }
 }

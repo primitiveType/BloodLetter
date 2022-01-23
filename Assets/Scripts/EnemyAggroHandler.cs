@@ -67,9 +67,20 @@ public class EnemyAggroHandler : MonoBehaviour
 
     private void OnPlayerShoot(object sender, PlayerShootEventArgs args)
     {
-        if (Vector3.Distance(Target.position, transform.position) > EarshotAggroRange) return;
+        if (gameObject == null || !enabled)
+        {
+            return;
+        }
 
-        if (VisibilityHandler.CanSeePlayer(true, true)) SetAggro();
+        if (Vector3.Distance(Target.position, transform.position) > EarshotAggroRange)
+        {
+            return;
+        }
+
+        if (VisibilityHandler.CanSeePlayer(true, true))
+        {
+            SetAggro();
+        }
     }
 
     private void OnDisable()
@@ -127,6 +138,8 @@ public class EnemyAggroHandler : MonoBehaviour
 
         Target = Toolbox.Instance.PlayerTransform;
     }
+    
+    
 
     private void Start()
     {
@@ -142,6 +155,7 @@ public class EnemyAggroHandler : MonoBehaviour
     private void OnEnemyDeath(object sender, OnDeathEventArgs args)
     {
         IsAggro = false;
+        Unsubscribe();
     }
 
     private void OnEnemyShot(object sender, OnShotEventArgs args)
@@ -153,7 +167,13 @@ public class EnemyAggroHandler : MonoBehaviour
 
     private void OnDestroy()
     {
+        Unsubscribe();
+    }
+
+    private void Unsubscribe()
+    {
         Events.OnShotEvent -= OnEnemyShot;
         Events.OnDeathEvent -= OnEnemyDeath;
+        Toolbox.Instance.PlayerEvents.PlayerShootEvent -= OnPlayerShoot;
     }
 }

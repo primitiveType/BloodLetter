@@ -11,7 +11,7 @@ public class MusicProvider : MonoBehaviour
  
     private void Start()
     {
-        IntroloopPlayer.Instance.Play(Music);
+        IntroloopPlayer.Instance.Play(Music, 1);
         IntroloopPlayer.Instance.TemplateSource.outputAudioMixerGroup = SettingsManager.Instance.MusicMixerGroup;
         IntroloopPlayer.Instance.SetMixerGroup(SettingsManager.Instance.MusicMixerGroup);
 

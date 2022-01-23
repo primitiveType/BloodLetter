@@ -14,15 +14,27 @@ public class MainMenu : MonoBehaviour
         CursorLockManager.Instance.Unlock();
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-    }
 
     public void NewGameClicked()
     {
         //ScreenWipeManager.Instance.DoWipe(m_camera);
-        LevelManager.Instance.StartNewGame();
+        NewGameMenu.SetActive(true);
+        TopLevel.SetActive(false);
+    }
+
+    public void StartEasyGame()
+    {
+        LevelManager.Instance.StartNewGame("I Found A Gun!");
+    }
+
+    public void StartMediumGame()
+    {
+        LevelManager.Instance.StartNewGame("Yeah, I'm Tough");
+    }
+
+    public void StartHardGame()
+    {
+        LevelManager.Instance.StartNewGame("Born To Kill");
     }
 
     public void ContinueClicked()

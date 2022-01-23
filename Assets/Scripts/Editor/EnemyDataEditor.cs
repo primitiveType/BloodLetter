@@ -15,10 +15,10 @@ namespace BloodLetterEditor
             DrawDefaultInspector();
             var t = target as EnemyDataProvider;
 
-            if (GUILayout.Button("Save To Disk"))
-            {
-                SaveToDisk(t);
-            }
+            // if (GUILayout.Button("Save To Disk"))
+            // {
+            //     SaveToDisk(t);
+            // }
 
             if (GUILayout.Button("Load From Disk"))
             {
@@ -92,18 +92,18 @@ namespace BloodLetterEditor
         {
             Debug.Log("Loading from disk.");
 
-            enemyDataProvider.Data = GameConstants.GetEnemyDataByName(enemyDataProvider.EnemyName, "Normal");
+            enemyDataProvider.Data = GameConstants.GetEnemyDataByName(enemyDataProvider.EnemyName, SaveState.Instance.SaveData.Difficulty);
         }
 
-        private void SaveToDisk(EnemyDataProvider dataProvider)
-        {
-            string path = GameConstants.GetEnemyDataPath(dataProvider.EnemyName);
-            Debug.Log($"Saving to disk: {path}");
-
-            var json = JsonUtility.ToJson(dataProvider.Data);
-            File.WriteAllText(path
-                ,
-                json);
-        }
+        // private void SaveToDisk(EnemyDataProvider dataProvider)
+        // {
+            // string path = GameConstants.GetEnemyDataPath(dataProvider.EnemyName, SaveState.Instance.SaveData.Difficulty);
+            // Debug.Log($"Saving to disk: {path}");
+            //
+            // var json = JsonUtility.ToJson(dataProvider.Data);
+            // File.WriteAllText(path
+            //     ,
+            //     json);
+        // }
     }
 }

@@ -9,7 +9,7 @@ public class SC_FPSController : MonoBehaviour, IMovementHandler
     private CharacterController characterController;
     public float gravity = 20.0f;
     public float jumpSpeed = 8.0f;
-    public float lookSpeed = 2.0f;
+    public float lookSpeed => (4.0f * SettingsManager.Instance.Settings.Sensitivity) + .1f;
     public float lookXLimit = 45.0f;
     private Vector3 moveDirection = Vector3.zero;
     public Camera playerCamera;

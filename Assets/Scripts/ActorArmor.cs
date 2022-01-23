@@ -7,6 +7,9 @@ public class ActorArmor : MonoBehaviour
     [SerializeField] private float m_RemainingArmor;
     private readonly float reduc = .5f;
 
+    [SerializeField] private float m_InvincibilityTime;
+    private float m_DamageTimeStamp = -100;
+
     public float MaxArmor { get; set; }
     public float OverhealMaxArmor { get; set; }
 
@@ -32,6 +35,13 @@ public class ActorArmor : MonoBehaviour
 
     public float TakeDamage(Damage baseDamage)
     {
+        if (Time.time - m_DamageTimeStamp < m_InvincibilityTime)
+        {
+            return 0;
+        }
+
+        m_DamageTimeStamp = Time.time;
+        
         var amount = baseDamage.Amount;
         var invulnerable = GetComponent<Invulnerable>();
         if (invulnerable && invulnerable.DamageToIgnore.HasFlag(baseDamage.Type)) return 0;

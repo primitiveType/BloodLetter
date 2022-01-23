@@ -33,8 +33,12 @@ public class WeaponEventsHandler : MonoBehaviour
             Toolbox.Instance.PlayerEvents.PlayerShoot(ProjectileInfo, WeaponId);
     }
 
-    public void Idle()
+    public void Idle(WeaponId weaponId)
     {
+        if (!WeaponId.HasFlag(weaponId))
+        {
+            return;
+        }
         SoundInfo.OnIdle();
     }
 

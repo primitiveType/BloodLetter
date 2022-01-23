@@ -7,6 +7,7 @@ public class SettingsMenuUi : MonoBehaviour
 
     [SerializeField] private Slider m_SfxVolumeSlider;
     [SerializeField] private Slider m_ScreenShakeSlider;
+    [SerializeField] private Slider m_SensitivitySlider;
     [SerializeField] private Toggle m_PaintballToggle;
 
     // Start is called before the first frame update
@@ -16,10 +17,17 @@ public class SettingsMenuUi : MonoBehaviour
         m_SfxVolumeSlider.value = SettingsManager.Instance.Settings.SfxVolume;
         m_PaintballToggle.isOn = SettingsManager.Instance.Settings.PaintballMode;
         m_ScreenShakeSlider.value = SettingsManager.Instance.Settings.ScreenShake;
+        m_SensitivitySlider.value = SettingsManager.Instance.Settings.Sensitivity;
         m_MusicVolumeSlider.onValueChanged.AddListener(MusicVolumeChanged);
         m_SfxVolumeSlider.onValueChanged.AddListener(SfxVolumeChanged);
         m_ScreenShakeSlider.onValueChanged.AddListener(ScreenShakeChanged);
+        m_SensitivitySlider.onValueChanged.AddListener(SensitivityChanged);
         m_PaintballToggle.onValueChanged.AddListener(PaintballModeChanged);
+    }
+
+    private void SensitivityChanged(float arg0)
+    {
+        SettingsManager.Instance.SetSensitivity(arg0);
     }
 
     private void PaintballModeChanged(bool arg0)

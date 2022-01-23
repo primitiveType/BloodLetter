@@ -10,9 +10,9 @@ public class SaveState : MonoBehaviourSingleton<SaveState>
 
     public SaveData SaveData => _saveData;
 
-    public void StartNewGame()
+    public void StartNewGame(string difficulty)
     {
-        _saveData = new SaveData(_newGameSaveData);
+        _saveData = new SaveData(_newGameSaveData, difficulty);
         Save();
     }
 

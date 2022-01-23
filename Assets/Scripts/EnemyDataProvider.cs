@@ -18,7 +18,7 @@ public class EnemyDataProvider : MonoBehaviour, IHealthDataProvider
             if (!Populated && Application.isPlaying)
             {
                 Populated = true;
-                Data = GameConstants.GetEnemyDataByName(m_EnemyName, "THis does nothing right now.");
+                Data = GameConstants.GetEnemyDataByName(m_EnemyName, SaveState.Instance.SaveData.Difficulty);
             }
 
             return m_Data;

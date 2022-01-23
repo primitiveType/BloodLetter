@@ -1,7 +1,5 @@
 ﻿using System;
-using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class ActorHealth : MonoBehaviour
 {
@@ -27,11 +25,7 @@ public class ActorHealth : MonoBehaviour
         get => _animator;
         set => _animator = value;
     }
-
-    public void OnDisable()
-    {
-        Debug.Log("tester");
-    }
+    
 
     public float Health
     {
@@ -73,9 +67,9 @@ public class ActorHealth : MonoBehaviour
         IHealthDataProvider dataProvider = GetComponentInParent<IHealthDataProvider>();
         if (dataProvider != null)
         {
-            MaxHealth = dataProvider.MaxHealth;
-            Health = dataProvider.StartHealth;
-            OverhealMaxHealth = dataProvider.OverhealMaxHealth;
+            m_MaxHealth = dataProvider.MaxHealth;
+            m_Health = dataProvider.StartHealth;
+            m_OverhealMaxHealth = dataProvider.OverhealMaxHealth;
         }
     }
 
